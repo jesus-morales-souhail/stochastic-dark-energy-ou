@@ -64,11 +64,11 @@ warnings.filterwarnings('ignore')
 # Source: DESI DR1, arXiv:2404.03000, Table 3
 # Replace these arrays with DR2 values (arXiv:2503.14738) when available.
 # ============================================================
-DATA_SOURCE = "DESI DR1 (arXiv:2404.03000)"
+DATA_SOURCE = "DESI DR2 (arXiv:2503.14738)"
 
 z_eff  = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
-alpha  = np.array([0.9857, 0.9911, 0.9749, 0.9886, 0.9911, 1.0032, 0.9971])
-sigma  = np.array([0.0093, 0.0077, 0.0067, 0.0046, 0.0071, 0.0153, 0.0082])
+alpha  = np.array([1.0030, 0.9947, 1.0016, 0.9960, 1.0020, 0.9963, 1.0008])
+sigma  = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
 
 # Sensitivity kernel S(z) = d ln D_V(z) / d Omega_Lambda
 # Computed for flat ΛCDM fiducial: Omega_m=0.315, H0=67.4 km/s/Mpc
