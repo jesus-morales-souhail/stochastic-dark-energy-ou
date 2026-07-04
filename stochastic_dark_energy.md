@@ -2,8 +2,6 @@
 
 **Author:** Jesús Morales Souhail  
 **Date:** July 2026  
-**Version:** v3.0 (Unified Master Manuscript)  
-**Status:** Preprint — not peer reviewed
 
 ---
 
