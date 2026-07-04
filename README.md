@@ -1,4 +1,5 @@
 Stochastic Dark Energy: Finite Information Network Analysis
+
 Author: Jesús Morales Souhail  
 Contact: jmskjym@gmail.com  
 
