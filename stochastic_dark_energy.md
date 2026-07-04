@@ -185,7 +185,6 @@ Using the public DESI DR2 BAO data (arXiv:2503.14738), the Maximum Likelihood Es
 
 **Interpretation:** The optimizer drives the stochastic amplitude to zero (\(\sigma_X \to 0\)) and the QNM frequency to zero (\(\omega_R \to 0\)). The data are fully consistent with smooth CPL evolution plus instrumental noise. There is **no evidence** for stochastic fluctuations in the DESI DR2 BAO data. This supersedes the preliminary DR1 results, which had suggested a weak signal (\(\Delta\log L = +6.75\)) that is not confirmed by DR2.
 
-> **Note:** This result is based on DESI DR1 and does not affect the DR2 BAO null result reported in this work. The cross-correlation signal is a separate preliminary test that requires DR2 imaging systematics (`WEIGHT_SYS`) for confirmation.
 ---
 
 ## 5. Test 2: Angular Cross‑Correlation δ_g × δΩ_Λ
@@ -201,6 +200,7 @@ $$r_{\text{cross}} = 0.1673 \pm 0.0613 \quad (Z \approx 2.73\sigma \text{ excess
 
 > **Important caveat:** With only **67 overlapping pixels**, the statistical power is limited. **Systematic effects (Galactic dust, imaging systematics) have not been controlled.** This is a preliminary motivation for DESI DR2 analysis with imaging weights, **not a confirmed detection.**
 
+> **Note:** This result is based on DESI DR1 and does not affect the DR2 BAO null result reported in this work. The cross-correlation signal is a separate preliminary test that requires DR2 imaging systematics (`WEIGHT_SYS`) for confirmation.
 ---
 
 ## 6. Test 3: Redshift Lag Correlations in BAO Residuals (The Critical Test)
