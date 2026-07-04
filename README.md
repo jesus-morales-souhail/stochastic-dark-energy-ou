@@ -1,7 +1,8 @@
 Stochastic Dark Energy: Finite Information Network Analysis
 Author: Jesús Morales Souhail  
 Contact: jmskjym@gmail.com  
-Version: v3.0 (July 2026) | Status: Preprint — not peer reviewed
+
+
 This repository contains the numerical tools, statistical analysis scripts, and
 technical documentation to evaluate the Stochastic Dark Energy (SDE)
 framework. This phenomenological model postulates that the cosmological constant
