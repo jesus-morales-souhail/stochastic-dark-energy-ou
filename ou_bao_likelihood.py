@@ -553,4 +553,35 @@ ax4.legend(fontsize=8); ax4.grid(alpha=0.3); ax4.set_ylim(-1.25, 1.25)
 plt.tight_layout()
 os.makedirs('plots', exist_ok=True)
 plt.savefig('plots/test_desi_QNM.png', dpi=150, bbox_inches='tight')
+# ============================================================
+# SECTION 11: EXCLUSION PLOT (2D grid scan)
+# ============================================================
+
+def generate_exclusion_plot():
+    """Generates a 2D contour plot of ΔlogL vs θ and σ_X."""
+    theta_grid = np.linspace(0.1, 3.0, 30)
+    sigma_grid = np.linspace(0.001, 0.05, 30)
+    
+    logL_grid = np.zeros((len(theta_grid), len(sigma_grid)))
+    for i, th in enumerate(theta_grid):
+        for j, sig in enumerate(sigma_grid):
+            C_tot = build_cov_total(z_eff, sigma, S_z, th, sig**2, omega_R=0.0)
+            logL_grid[i, j] = log_likelihood_gaussian(residuals, C_tot)
+    
+    # ΔlogL vs ΛCDM (which is sigma=0)
+    dlogL_grid = logL_grid - logL_LCDM
+    
+    # Plotting
+    fig, ax = plt.subplots(1, 1, figsize=(8, 6))
+    contour = ax.contourf(theta_grid, sigma_grid, dlogL_grid.T, levels=50, cmap='coolwarm')
+    ax.contour(theta_grid, sigma_grid, dlogL_grid.T, levels=[-2, -1, 0, 1, 2], colors='black', linestyles='dashed')
+    ax.axvline(0.765, color='green', linestyle='--', label='θ=0.765 (best fit from DR1)')
+    ax.scatter(0.001, 5e-5, color='red', s=100, label='MLE best fit (DR2)')
+    ax.set_xlabel(r'$\theta$ (mean-reversion rate)')
+    ax.set_ylabel(r'$\sigma_X$ (amplitude)')
+    ax.set_title('Exclusion Plot: $\Delta\log L$ vs $\Lambda$CDM')
+    ax.legend()
+    plt.colorbar(contour, label=r'$\Delta\log L$')
+    plt.savefig('plots/exclusion_plot.png', dpi=150)
+    print("Exclusion plot saved: plots/exclusion_plot.png")
 print("Figure saved: plots/test_desi_QNM.png")
