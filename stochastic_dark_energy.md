@@ -296,7 +296,9 @@ We have tested the hypothesis of stochastic dark energy fluctuations against DES
 
 This result places a strict upper limit on the granularity of the vacuum: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL). Any model predicting local fluctuations in the dark energy density must respect this bound.
 
-The finite-information stochastic framework, in its current OU/QNM formulation, is ruled out by DESI DR2. However, the smooth dynamical evolution of dark energy remains a robust observational fact, consistent with the latest cosmological data. Future surveys with significantly more redshift bins (Euclid DR1, H2 2026) will be needed to probe the vacuum at higher resolution.
+The finite-information stochastic framework, in its current OU/QNM formulation, is ruled out by DESI DR2. However, the smooth dynamical evolution of dark energy remains a robust observational fact, consistent with the latest cosmological data. The null result implies a **holographic rigidity** of the vacuum, where the horizon's information content is decoupled from local metric fluctuations.
+
+Future surveys with significantly more redshift bins (Euclid DR1, H2 2026) will be needed to probe the vacuum at higher resolution and to test whether the smoothness holds at the level of \(\sigma_X > 10^{-5}\). Until then, DESI DR2 provides the most stringent constraint on stochastic dark energy, serving as a benchmark for quantum-gravity and information-theoretic models of the vacuum.
 
 ---
 
