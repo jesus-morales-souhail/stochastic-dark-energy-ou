@@ -18,7 +18,7 @@ We derive three observational tests using public DESI and Pantheon+ data:
 
 3. **Redshift lag correlations in BAO residuals.** The OU kernel predicts ρ_1 ≈ 0.78, ρ_2 ≈ 0.62, ρ_3 ≈ 0.49. DESI DR2 shows mixed results: lag-1 positive (consistent), lags 2–3 negative (inconsistent). **With N=7 bins and 95% CI ≈ ±1.0, no lag is individually significant.**
 
-**Conclusion:** The finite‑information stochastic framework is **not falsified** by current data. The OU likelihood improves the fit, but the model remains degenerate with only 7 bins. The decisive test requires >20 bins from Euclid DR1 (October 2026).
+**Conclusion:** The finite‑information stochastic framework is **not falsified** by current data. The OU likelihood improves the fit, but the model remains degenerate with only 7 bins. The decisive test requires >20 bins from Euclid DR1 (expected H2 2026).
 
 ---
 
@@ -200,13 +200,15 @@ This apparent inconsistency with the positive BAO likelihood (Δlog𝓛 = +6.75)
 
 ## 9. Near‑Term Observational Program: Euclid DR1
 
-Euclid Data Release 1 (expected 21 October 2026) will provide >20 redshift bins, resolving the current degeneracies. The pipeline is ready.
+Euclid Data Release 1 (expected H2 2026) will provide >20 redshift bins, resolving the current degeneracies with unprecedented statistical power. The analysis pipeline is fully ready.
+
+**Notably, Euclid DR1's narrower redshift baseline (z ∈ [0.9, 1.8]) yields a higher Rayleigh frequency limit (ω_R,min ≈ 16.2) than DESI (6.66), meaning Euclid cannot geometrically resolve intermediate-frequency quasi-normal mode (QNM) oscillations that DESI could potentially detect (Appendix D). The decisive contribution of Euclid will be statistical power through >20 bins, not oscillatory frequency resolution.** Upon release, we will re-run the lag-correlation test and precision-floor measurement with this enhanced sample.
 
 ---
 
 ## 10. Conclusion
 
-The finite‑information stochastic framework is **not falsified** by DESI DR2 data. The OU likelihood improves the fit and no criterion decisively excludes the model. However, **with only 7 BAO bins, the framework is not yet confirmed**. The pure OU kernel may require refinement (redshift‑dependent θ, oscillatory components). The decisive test requires Euclid DR1 (>20 bins).
+The finite‑information stochastic framework is **not falsified** by DESI DR2 data. The OU likelihood improves the fit and no criterion decisively excludes the model. However, **with only 7 BAO bins, the framework is not yet confirmed**. The pure OU kernel may require refinement (redshift‑dependent θ, oscillatory components). The decisive test requires Euclid DR1 (>20 bins, expected H2 2026).
 
 ---
 
