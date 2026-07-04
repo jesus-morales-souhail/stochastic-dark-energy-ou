@@ -3,8 +3,6 @@ Fecha: 2026-06-30
 ============================================================
 
 - Cross correlation con datos reales completos
-----------------------------------------------------
-Archivos:
 - data/desi/LRG_NGC_clustering_DR1_full.dat.fits (136.56 MB, 1.476M filas)
 - data/desi/LRG_SGC_clustering_DR1_full.dat.fits (61.3 MB, 662k filas)
 - data/pantheon/Pantheon+SH0ES.dat (completo, 1701 SNe)
