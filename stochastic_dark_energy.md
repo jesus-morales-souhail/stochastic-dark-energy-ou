@@ -1,4 +1,4 @@
-# Stochastic Dark Energy from a Finite Information Network: BAO Covariance, Cross-Correlation Evidence, and the Case for a Refined Kernel
+# "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations"
 
 **Author:** Jesús Morales Souhail  
 **Date:** July 2026  
