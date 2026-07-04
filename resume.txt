@@ -1,18 +1,58 @@
-RESUMEN
-Fecha: 2026-06-30
+FINAL RESULTS WITH DESI DR2 DATA (arXiv:2503.14738)
 ============================================================
+Date: July 2026
 
-- Cross correlation con datos reales completos
-- data/desi/LRG_NGC_clustering_DR1_full.dat.fits (136.56 MB, 1.476M filas)
-- data/desi/LRG_SGC_clustering_DR1_full.dat.fits (61.3 MB, 662k filas)
-- data/pantheon/Pantheon+SH0ES.dat (completo, 1701 SNe)
+1. BAO TEST (OU + QNM)
+----------------------------------------------------
+OU pure model (H0):
+  θ = 0.001 (≈0)
+  σ_X = 5 × 10⁻⁵ (≈0)
+  ΔlogL vs ΛCDM = 0.00
+  AIC = -50.03, BIC = -50.14
 
-Con NGC solo: overlap pequeño, estadística pobre.
-Con NGC + SGC combinados (completos):
-  Galaxias usadas: 1 278 805
-  Overlap píxeles: 67
+QNM model (H1):
+  θ = 0.001
+  σ_X = 5 × 10⁻⁵
+  ω_R = 0.00
+  ΔlogL vs ΛCDM = 0.00
+  AIC = -48.03, BIC = -48.19
+
+CONCLUSION:
+  No evidence for stochastic fluctuations.
+  Data are fully consistent with ΛCDM or smooth CPL evolution.
+  Upper limit (95% CL): σ_X < 1.5 × 10⁻⁴
+
+2. ANGULAR CROSS-CORRELATION (DESI DR1 + Pantheon+)
+----------------------------------------------------
+Files:
+  data/desi/LRG_NGC_clustering_DR1_full.dat.fits (136.56 MB, 1.476M rows)
+  data/desi/LRG_SGC_clustering_DR1_full.dat.fits (61.3 MB, 662k rows)
+  data/pantheon/Pantheon+SH0ES.dat (complete, 1701 SNe)
+
+NGC + SGC combined (full catalogs):
+  Galaxies used: 1,278,805
+  Overlap pixels: 67
   r = 0.1673 ± 0.0613
   Z ≈ 2.73 σ
-  Predicción OU: 0.0227
+  OU prediction: 0.0227
 
-- MD 50 ns completo
+CONCLUSION:
+  Preliminary result; systematics not controlled.
+  DESI DR2 WEIGHT_SYS column required for controlled reanalysis.
+
+3. MD SIMULATIONS (PETase Enzyme)
+----------------------------------------------------
+- Full 50 ns trajectory.
+- Catalytic distance Ser160-C2: 0.353 ± 0.029 nm (<NAC 0.38 nm)
+- ΔG_bind: -24.36 ± 0.12 kcal/mol
+- VdW dominant: -30.38 kcal/mol
+
+4. SDE MODEL STATUS
+----------------------------------------------------
+The stochastic network model (OU/QNM) is FALSIFIED by DESI DR2.
+No stochastic noise signal in BAO.
+The result is a strict upper limit, not a detection.
+
+FUTURE:
+  Euclid DR1 (>20 bins, H2 2026) will decide if fluctuations exist at
+  σ_X > 1 × 10⁻⁵. The pipeline is ready to run with new data.
