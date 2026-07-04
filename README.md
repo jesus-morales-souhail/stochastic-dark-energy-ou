@@ -157,7 +157,7 @@ systematic analysis.
 ## Citation
 
 ```bibtex
-@misc{moralesssouhail2026,
+@misc{moralesssouhail,
   author = {Morales Souhail, Jesús},
   title  = {Stochastic Dark Energy from a Finite Information Network},
   year   = {2026},
