@@ -29,9 +29,8 @@ Rather than attempting a full quantum‑gravity derivation, we work at the pheno
 
 ---
 
-======================================================================
-STOCHASTIC DARK ENERGY — OU + QNM KERNEL TEST
-======================================================================
+## STOCHASTIC DARK ENERGY — OU + QNM KERNEL TEST
+
   Data source : DESI DR2 (arXiv:2503.14738)
   N bins      : 7
   z range     : [0.295, 2.330]
