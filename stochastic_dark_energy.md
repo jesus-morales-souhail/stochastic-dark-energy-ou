@@ -235,7 +235,7 @@ The absence of signal in both the likelihood and the lag correlations decisively
 
 ---
 
-## 7. Discussion: Stochastic Fluctuations are Ruled Out by DESI DR2
+## 7. Discussion: The Smoothness of Dark Energy and the Holographic Rigidity of the Vacuum
 
 Our MLE analysis reveals a definitive null result: \(\sigma_X \to 0\) and \(\omega_R \to 0\) when using the DESI DR2 BAO data. The Ornstein-Uhlenbeck stochastic component is not needed to explain the data; the best-fit model is the smooth CPL evolution \(w_0 \approx -0.87, w_a \approx -0.41\).
 
@@ -251,12 +251,21 @@ The MLE fit sets the stochastic amplitude to \(\sigma_X \approx 5 \times 10^{-5}
 
 This is a factor of \(\sim 100\) lower than the illustrative calibration used in earlier versions of this work (\(\sigma_X \sim 0.018\)). Any quantum-gravity or information-theoretic model that predicts stochastic fluctuations in the dark energy density must produce fluctuations with an amplitude below this threshold to be consistent with DESI DR2.
 
-### 7.2 The Smoothness of Dark Energy
+### 7.2 The Smoothness of Dark Energy: A Theoretical Constraint
 
-The vacuum, at the scale probed by DESI DR2, behaves like a perfectly smooth fluid. There is no detectable "granularity" or "memory noise" from a finite-information horizon. The data favor a smooth, deterministic evolution of the dark energy equation of state over a noisy one. This suggests that if the universe is an information network, its thermodynamic fluctuations are either frozen or completely decoupled from the BAO observable at current precision.
+The null result obtained here imposes a strong constraint on the microscopic nature of dark energy. If dark energy were a classical fluid with internal degrees of freedom, one would expect local density fluctuations of the same order as the background evolution, producing detectable noise in BAO residuals. The absence of such noise indicates that dark energy behaves as a **deterministic, homogeneous scalar field** (quintessence) or an effective geometric term, rather than a granular medium.
 
-The decisive test for any residual granularity will require the \(>20\) redshift bins of Euclid DR1. With its improved statistical power, Euclid could detect fluctuations with \(\sigma_X > 1 \times 10^{-5}\) if they exist. Until then, DESI DR2 provides the strongest constraint on stochastic dark energy.
+The evolution of dark energy, as seen by DESI DR2, is smooth and deterministic, with no detectable "roughness" at the scale of BAO measurements. This is consistent with a **holographic rigidity** of the vacuum: the horizon stores information without injecting stochastic noise into the local metric. In practice, this means that any physical mechanism behind dark energy must suppress local fluctuations below the threshold \(\sigma_X < 1.5 \times 10^{-4}\).
 
+This result is compatible with standard quintessence models, where a scalar field \(\phi\) with potential \(V(\phi)\) evolves homogeneously, producing a smooth equation of state \(w(z)\). The quantum fluctuations of the scalar field, if present, are naturally suppressed by the smallness of the field's mass or by the Hubble damping during inflation. The null result does not rule out quintessence; it rules out **noisy quintessence** or any model where the dark energy sector possesses detectable stochastic degrees of freedom.
+
+### 7.3 Implications for Quantum Gravity and Information-Theoretic Models
+
+The finite-information stochastic framework, in its current OU/QNM formulation, is ruled out by DESI DR2. Models that postulate spacetime as emergent from a discrete information network (e.g., causal sets, spin networks, or holographic entanglement) must be compatible with the observed smoothness of the vacuum.
+
+Specifically, any such model must ensure that fluctuations in \(\Omega_\Lambda\) are suppressed by a factor of at least \(10^{-4}\) relative to the background. This places a severe constraint on the "granularity scale" of spacetime: the discrete elements must be either extremely small or arranged in a rigid topological phase that decouples from the local metric.
+
+The decisive test for any residual granularity will require the \(>20\) redshift bins of Euclid DR1. With its improved statistical power, Euclid could detect fluctuations with \(\sigma_X > 1 \times 10^{-5}\) if they exist. Until then, DESI DR2 provides the strongest constraint on stochastic dark energy and serves as a benchmark for future models.
 ---
 
 ## 8. Falsification Criteria (Data‑Kills‑Model)
