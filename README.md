@@ -116,7 +116,6 @@ DESI DR2 LRG catalogs with imaging systematic weights (WEIGHT_SYS) have been
 requested from NSF NOIRLab Astro Data Lab for the cross-correlation
 systematic analysis.
 
-
 Falsification Criteria
 Criterion	Condition	Status
 F1 — Variance floor	σ²_obs < σ²_floor in multiple bins	Alive
