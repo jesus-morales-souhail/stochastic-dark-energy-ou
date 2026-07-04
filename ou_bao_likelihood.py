@@ -579,7 +579,7 @@ def generate_exclusion_plot():
     ax.scatter(0.001, 5e-5, color='red', s=100, label='MLE best fit (DR2)')
     ax.set_xlabel(r'$\theta$ (mean-reversion rate)')
     ax.set_ylabel(r'$\sigma_X$ (amplitude)')
-    ax.set_title('Exclusion Plot: $\Delta\log L$ vs $\Lambda$CDM')
+    ax.set_title('rExclusion Plot: $\Delta\log L$ vs $\Lambda$CDM')
     ax.legend()
     plt.colorbar(contour, label=r'$\Delta\log L$')
     plt.savefig('plots/exclusion_plot.png', dpi=150)
