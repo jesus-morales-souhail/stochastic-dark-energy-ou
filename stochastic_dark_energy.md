@@ -13,9 +13,9 @@ Recent DESI DR2 data, when combined with CMB and supernovae, show a significant 
 
 In this paper, we test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. We model late-time fluctuations in \(\Omega_\Lambda\) as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, we perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude \(\sigma_X\) of these fluctuations.
 
-We find that the MLE forces the stochastic amplitude to zero: \(\sigma_X \to 0\) and \(\omega_R \to 0\). The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a strict upper limit on the "roughness" of the vacuum: \(\sigma_X < 5 \times 10^{-5}\) (95% CL). Any information-theoretic or quantum-gravity model predicting local fluctuations in the dark energy density must respect this bound.
+We find a definitive null result: the MLE forces the stochastic amplitude to zero (\(\sigma_X \to 0\)) and the QNM frequency to zero (\(\omega_R \to 0\)). The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a strict upper limit on the "roughness" of the vacuum: \(\sigma_X < 5 \times 10^{-5}\) (95% CL).
 
-We conclude that, while dark energy is dynamical, it evolves smoothly. The vacuum exhibits a "holographic rigidity" that suppresses stochastic fluctuations at the level of current BAO precision. The decisive test for any residual granularity will require the >20 bins of Euclid DR1 (expected H2 2026).
+We interpret this null result as evidence for the **holographic rigidity** of the vacuum: dark energy behaves as a deterministic, homogeneous scalar field (quintessence) or an effective geometric term, rather than a granular medium. The absence of local stochastic noise imposes a strong constraint on quantum-gravity models predicting spacetime from discrete information networks. The decisive test for any residual granularity will require the >20 bins of Euclid DR1 (expected H2 2026).
 
 ---
 
