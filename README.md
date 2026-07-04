@@ -21,17 +21,11 @@ in x = ln a, with mean-reversion rate θ and diffusion amplitude σ.
 
 ```
 stochastic-dark-energy-ou/
-├── paper/
-│   └── stochastic_dark_energy_v3.md   ← full preprint (v3.0)
 ├── code/
 │   ├── ou_bao_likelihood.py           ← BAO likelihood + lag-correlation test
 │   └── cross_correlation_DESI.py      ← HEALPix cross-correlation pipeline
 ├── docs/
 │   ├── sensitivity_kernel_table.md    ← S(z) for all DESI tracers
-│   └── INSTRUCCIONES_EXPERIMENTO.md   ← full protocol
-├── results/
-│   └── RESUMEN_COMPLETO_FASES.txt     ← verified results (DR1)
-├── requirements.txt
 └── README.md
 ```
 
