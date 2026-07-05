@@ -34,7 +34,7 @@ m
 −5
  eV, placing it in the ultralight boson regime."
 
-## "Our result does not resolve the absolute cosmological constant problem
+## Our result does not resolve the absolute cosmological constant problem
 10
 120
 10 
