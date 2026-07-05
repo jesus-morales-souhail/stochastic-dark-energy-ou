@@ -443,17 +443,35 @@ Our MLE analysis reveals a definitive null result: \(\sigma_X \to 0\) and \(\ome
 
 This result must be interpreted in the context of the latest DESI DR2 cosmological constraints. The combination of BAO, CMB, and supernovae shows a 2.5σ to 4.2σ deviation from \(\Lambda\)CDM, favoring a dynamical dark energy. This smooth evolution absorbs any variance that could have been attributed to stochastic noise. The optimizer correctly identifies that adding a local fluctuation kernel does not improve the fit once the background is allowed to evolve.
 
-### 7.1 A Strict Upper Limit on Vacuum Granularity
+### 7.1 A Strict Upper Limit on Vacuum Granularity and Scalar Mass
 
-The MLE fit sets the stochastic amplitude to \(\sigma_X \approx 5 \times 10^{-5}\). Conservatively, this translates to a 95% confidence upper limit:
+The Maximum Likelihood Estimation (MLE) drives the stochastic noise parameter to the numerical floor, yielding a conservative \(95\%\) confidence level upper limit of \(\sigma_X < 1.5 \times 10^{-4}\). While this phenomenological bound limits the macroscopic "roughness" of the dark energy density, it maps directly onto the fundamental parameters of a canonical quintessence field \(\phi\).
+
+Assuming late-time dark energy is governed by a scalar field rolling down a potential where \(V(\phi) \gg \frac{1}{2}\dot{\phi}^2\), the observed dark energy density tracks the minimum of the potential, \(V_{\text{min}} \equiv \rho_{\Lambda}\). Given the DESI DR2 baseline parameterization (\(\Omega_{\Lambda} \approx 0.685\), \(H_0 \approx 67.4 \text{ km/s/Mpc}\)), the critical density \(\rho_{\text{crit}} = \frac{3H_0^2}{8\pi G} \approx 8.52 \times 10^{-30} \text{ g/cm}^3\) implies a vacuum energy density of \(\rho_{\Lambda} \approx 5.84 \times 10^{-30} \text{ g/cm}^3\). In natural particle physics units (\(\hbar = c = 1\)), this matches:
 
 \[
-\sigma_X < 1.5 \times 10^{-4}.
+V_{\text{min}} \approx 3.28 \times 10^{-11} \text{ eV}^4 \implies V_{\text{min}}^{1/4} \approx 2.4 \times 10^{-3} \text{ eV}.
 \]
 
-This is a factor of \(\sim 100\) lower than the illustrative calibration used in earlier versions of this work (\(\sigma_X \sim 0.018\)). Any quantum-gravity or information-theoretic model that predicts stochastic fluctuations in the dark energy density must produce fluctuations with an amplitude below this threshold to be consistent with DESI DR2.
+If the field possesses a non-zero mass \(m_{\phi}\), it inevitably experiences quantum fluctuations during cosmic expansion. The typical amplitude of these field modes stretching across the Hubble horizon scales as \(\delta\phi \sim H_0/(2\pi)\). The resulting first-order perturbation in the energy density is given by \(\delta\rho_{\Lambda} \sim V'(\phi)\delta\phi \sim m_{\phi}^2 \phi \delta\phi\). In natural quintessence scenarios, the field value itself is of the order of the reduced Planck mass (\(\phi \sim M_{\text{Pl}} \approx 2.4 \times 10^{18} \text{ GeV}\)).
 
-> Fig. X shows the 2D exclusion plot in the (\(\theta, \sigma_X\)) plane, with the MLE best fit marked in red and the 95% CL contour shaded.
+Relating these field-level fluctuations to our macroscopic stochastic parameter \(\sigma_X \equiv \delta\rho_{\Lambda}/\rho_{\Lambda}\), we establish:
+
+\[
+\sigma_X \sim \frac{m_{\phi}^2 M_{\text{Pl}} H_0}{2\pi \rho_{\Lambda}}.
+\]
+
+Evaluating this expression in energy units (\(\text{GeV}\)) where \(H_0 \approx 1.45 \times 10^{-42} \text{ GeV}\) and \(\rho_{\Lambda} \approx 3.3 \times 10^{-47} \text{ GeV}^4\), and imposing our empirical upper bound \(\sigma_X < 1.5 \times 10^{-4}\), we isolate the upper bound for the scalar mass:
+
+\[
+m_{\phi}^2 < \frac{2\pi \cdot \sigma_X \cdot \rho_{\Lambda}}{M_{\text{Pl}} \cdot H_0} \approx 8.94 \times 10^{-27} \text{ GeV}^2,
+\]
+
+\[
+m_{\phi} < 9.45 \times 10^{-14} \text{ GeV} \implies m_{\phi} \lesssim 9.45 \times 10^{-5} \text{ eV}.
+\]
+
+This result demonstrates that for the vacuum to remain as smooth as demanded by DESI DR2 data, the underlying field must be ultralight (\(m_{\phi} \lesssim 10^{-5} \text{ eV}\)). This explicitly constrains the dark energy candidate to the ultra-low-frequency boson regime, indicating a high degree of spatial coherence (a macroscopically large Compton wavelength \(\lambda_C \gtrsim 2.1 \text{ mm}\)) that effectively screens out any stochastic granularity within the 7 observed BAO bins.
 
 ### 7.2 Implications for Models of Dark Energy
 
