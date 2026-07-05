@@ -338,6 +338,200 @@ $$\sigma_{\text{eff}}(z) = \sigma \, g(z), \qquad g(z) = \frac{1}{1 + \exp[-(x -
 
 where x = ln(1/(1+z)). However, for the redshift range probed by DESI (z ≲ 2.3) and Euclid (z ≲ 2.0), g(z) is essentially unconstrained by data. We set z_* = 1.5 (illustrative), with the understanding that this parameter is degenerate with σ and cannot be independently calibrated. For all numerical results in Sections 4–6, g(z) ≈ 1 in the observed range, meaning the effective amplitude σ_X absorbs any early‑time suppression.
 
+Section 2.5: The Continuity Equation as the Covariant Form of the OU Process
+
+2.2 Covariant Foundation: From Global Symmetry Breaking to Stochastic Dynamics
+
+2.3 The Hierarchy of Conservation Laws in Expanding Spacetime
+
+The relationship between symmetry and conservation in General Relativity operates
+at three distinct levels that must not be conflated:
+
+Level 1 — Global conservation (broken by expansion).
+In Minkowski spacetime, invariance under time translation gives exact global
+energy conservation via Noether's theorem. In FLRW cosmology, the metric
+
+ds2=−dt2+a(t)2[dr21−kr2+r2dΩ2]ds^2 = -dt^2 + a(t)^2\left[\frac{dr^2}{1-kr^2} + r^2 d\Omega^2\right]ds2=−dt2+a(t)2[1−kr2dr2​+r2dΩ2]
+does not admit a global timelike Killing vector (since $\mathcal{L}\xi g{\mu\nu}
+\neq 0$ for ξμ=(1,0,0,0)\xi^\mu = (1,0,0,0)
+ξμ=(1,0,0,0) when a˙≠0\dot{a} \neq 0
+a˙=0). Global energy
+conservation is broken. Photons lose energy to redshift; the cosmological
+fluid exchanges energy with the expanding geometry.
+
+Level 2 — Local conservation (exact, covariant).
+General Relativity preserves energy-momentum locally through the contracted
+Bianchi identity:
+
+∇μTμν=0.\nabla_\mu T^{\mu\nu} = 0.∇μ​Tμν=0.
+This is not a conservation law in the Noetherian sense — it is a geometric
+identity that holds in any spacetime. For a perfect fluid with equation of
+state w=p/ρw = p/\rho
+w=p/ρ, this gives the continuity equation:
+
+$$\dot{\rho} + 3H(\rho + p) = 0 \quad \Longleftrightarrow \quad
+\dot{\rho} + 3H(1+w)\rho = 0.$$
+
+Level 3 — Asymptotic conservation (BMS symmetries).
+Although the interior of an expanding spacetime lacks global Killing vectors,
+the boundary at null infinity carries an infinite-dimensional symmetry group:
+the BMS (Bondi-van der Burg-Metzner-Sachs) group, which generalizes Poincaré
+translations to include supertranslations. Each BMS generator corresponds to
+a conserved charge on the boundary. In the holographic framework (Axiom A1),
+when the cosmic horizon expands, the BMS charges on the horizon boundary
+change — and it is precisely this variation of boundary charges that provides
+the microscopic justification for the Sorkin fluctuation $\delta\Lambda \sim
+1/\sqrt{N}$ of Axiom A2.
+
+
+2.4 The Standard Continuity Equation for Dark Energy
+
+For a cosmological fluid with equation of state wΛw_\Lambda
+wΛ​, the continuity
+equation gives:
+
+ρ˙Λ+3H(1+wΛ)ρΛ=0.\dot{\rho}_\Lambda + 3H(1 + w_\Lambda)\rho_\Lambda = 0.ρ˙​Λ​+3H(1+wΛ​)ρΛ​=0.
+For a pure cosmological constant, wΛ=−1w_\Lambda = -1
+wΛ​=−1, so ρ˙Λ=0\dot{\rho}_\Lambda = 0
+ρ˙​Λ​=0:
+the density is exactly constant, and no fluctuations are permitted.
+
+For the CPL parameterization w(z)=w0+waz/(1+z)w(z) = w_0 + w_a z/(1+z)
+w(z)=w0​+wa​z/(1+z), the solution is:
+
+$$\rho_\Lambda(z) = \rho_{\Lambda,0} \cdot (1+z)^{3(1+w_0+w_a)} \cdot
+\exp!\left[-\frac{3w_a z}{1+z}\right],$$
+
+which is a smooth, deterministic evolution — no stochastic component.
+
+
+2.5 The Stochastic Continuity Equation: OU as Physical Dynamics
+
+The OU process dX=−θX dx+σ dWxdX = -\theta X\,dx + \sigma\,dW_x
+dX=−θXdx+σdWx​ (Axiom A3) is not merely
+a phenomenological choice. It is the unique solution to the stochastic
+continuity equation obtained by adding a noise term to the standard fluid
+equation. In physical time, setting x=ln⁡ax = \ln a
+x=lna and X≡δΩΛX \equiv \delta\Omega_\Lambda
+X≡δΩΛ​:
+
+$$\frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda =
+\xi(t),$$
+
+where ξ(t)\xi(t)
+ξ(t) is a Gaussian white noise with:
+
+$$\langle \xi(t) \rangle = 0, \qquad
+\langle \xi(t),\xi(t') \rangle = \frac{\sigma^2 H^2 \rho_{\Lambda,0}^2}{2\theta}
+\cdot \delta_D(t - t').$$
+
+Converting to the logarithmic scale factor x=ln⁡ax = \ln a
+x=lna (using dt=dx/Hdt = dx/H
+dt=dx/H
+and defining X=δρΛ/ρΛ,0X = \delta\rho_\Lambda / \rho_{\Lambda,0}
+X=δρΛ​/ρΛ,0​), this becomes:
+
+dX=−θ X dx+σ dWx,dX = -\theta\,X\,dx + \sigma\,dW_x,dX=−θXdx+σdWx​,
+which is exactly Axiom A3. The mean-reversion rate θ\theta
+θ is the effective
+damping of fluctuations by the Hubble friction term 3H(1+wΛ)3H(1+w_\Lambda)
+3H(1+wΛ​); the
+diffusion amplitude σ\sigma
+σ encodes the strength of the microscopic noise
+source from Axiom A2.
+
+The stationary solution has variance:
+
+Var(X)=σ22θ,\text{Var}(X) = \frac{\sigma^2}{2\theta},Var(X)=2θσ2​,
+which is finite only when θ>0\theta > 0
+θ>0 — i.e., when the dark energy fluid
+has a non-trivial equation of state that provides effective damping. For
+wΛ=−1w_\Lambda = -1
+wΛ​=−1 exactly, the damping vanishes (θ→0\theta \to 0
+θ→0), and the
+stationary variance diverges unless σ=0\sigma = 0
+σ=0 simultaneously. This is
+the covariant statement that a pure cosmological constant cannot sustain
+finite stochastic fluctuations: either the equation of state departs from
+−1-1
+−1 (as DESI DR2 suggests), or the noise amplitude must vanish.
+
+
+2.6 Asymptotic Symmetries and the Origin of the Noise Term
+
+The noise source ξ(t)\xi(t)
+ξ(t) has a natural interpretation in terms of the
+BMS symmetry structure at the cosmic horizon. As the horizon expands,
+new degrees of freedom cross it, each carrying a BMS charge proportional
+to 1/N1/\sqrt{N}
+1/N​ (Axiom A2, Sorkin mechanism). The cumulative effect of
+N∼10122N \sim 10^{122}
+N∼10122 such crossings produces a shot-noise spectrum:
+
+Sξ(ω)=σ22θ⋅11+(ω/θ)2,S_\xi(\omega) = \frac{\sigma^2}{2\theta} \cdot \frac{1}{1 + (\omega/\theta)^2},Sξ​(ω)=2θσ2​⋅1+(ω/θ)21​,
+which is the Lorentzian power spectrum of the OU process — red noise that
+becomes white (Sξ→constS_\xi \to \text{const}
+Sξ​→const) at frequencies below θ\theta
+θ and
+falls off above it. The corner frequency θ\theta
+θ is set by the ratio of
+the Hubble damping to the noise injection rate.
+
+This provides a physically motivated hierarchy: the spatial BMS symmetries
+(corresponding to momentum conservation) are preserved — the noise is
+isotropic (⟨dWx⟩=0\langle dW_x \rangle = 0
+⟨dWx​⟩=0, no preferred direction), consistent
+with the observed homogeneity of the CMB and the DESI BAO measurements.
+Only the temporal BMS symmetry is broken, allowing σ≠0\sigma \neq 0
+σ=0.
+
+
+2.7 Connection to the Current Data and Upper Limit
+
+The null result of Section 4.2 (σX→0\sigma_X \to 0
+σX​→0 under free MLE with DESI DR2)
+has a direct interpretation in terms of the stochastic continuity equation:
+the data are consistent with the deterministic limit ξ(t)→0\xi(t) \to 0
+ξ(t)→0. The
+phenomenological upper limit σX<1.5×10−4\sigma_X < 1.5 \times 10^{-4}
+σX​<1.5×10−4 (95% CL)
+constrains the amplitude of the noise source:
+
+$$|\xi(t)| < 1.5 \times 10^{-4} \cdot \rho_{\Lambda,0} \cdot H \quad
+\text{(per Hubble time)}.$$
+
+This means that whatever mechanism generates the BMS charge fluctuations
+at the horizon — whether causal-set discreteness, holographic entanglement,
+or unimodular gravity — it must operate with an efficiency that suppresses
+the noise by at least four orders of magnitude relative to the background
+density per Hubble time.
+
+The decisive test (Euclid DR1, >20>20
+>20 bins) will determine whether this
+suppression is exact (σX=0\sigma_X = 0
+σX​=0, pure cosmological constant or smooth
+quintessence) or merely below current detection threshold
+(0<σX<10−50 < \sigma_X < 10^{-5}
+0<σX​<10−5, consistent with ultralight boson scenarios).
+
+
+Summary of the Covariant Structure
+
+LevelSymmetryConservation lawStatus in FLRWGlobalTimelike Killing vectorEnergy conserved globallyBroken by expansionLocalBianchi identity∇μTμν=0\nabla_\mu T^{\mu\nu} = 0
+∇μ​Tμν=0Exact, always holdsAsymptoticBMS supertranslationsHorizon chargesActive, drives σ\sigma
+σStatisticalSpatial isotropyMomentum conservedPreserved, noise isotropic
+
+The OU process in Axiom A3 is the minimal stochastic closure consistent
+with all four levels simultaneously: it preserves local covariance
+(∇μTμν=0\nabla_\mu T^{\mu\nu} = 0
+∇μ​Tμν=0 holds in expectation), respects spatial
+symmetries (isotropic noise), is driven by the asymptotic BMS mechanism
+(finite σ\sigma
+σ), and reduces to the deterministic limit when the global
+symmetry breaking is negligible (σ→0\sigma \to 0
+σ→0, wΛ→−1w_\Lambda \to -1
+wΛ​→−1).
+
 ---
 
 ## 3. BAO Sensitivity Kernel and Precision Floor
