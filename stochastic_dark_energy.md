@@ -359,7 +359,15 @@ We summarize the status of the model based on the current analysis:
 | Criterion | Condition for Exclusion | Status under DESI DR2 |
 |:---|:---|:---|
 | **F1** (Variance floor) | \(\sigma_X \to 0\) under free MLE | **Consistent with null.** The amplitude is driven to the numerical floor, indicating no evidence for a stochastic component. |
-| **F2** (QNM frequency) | \(\omega_R \to 0\) under free MLE | **Consistent with null.** The oscillatory kernel collapses to a monotonic state. |
+| **F2** (QNM frequency) | \(\omega_R \to 0\) under free MLE | **Consistent with null.** Consistent with null. The fit approaches the 
+σ
+X
+=
+0
+σ 
+X
+​
+ =0 limit, making the QNM extension effectively degenerate with the OU/null case. |
 | **F3** (Lag correlations) | Predicted positive lags are absent | **Inconclusive.** The observed lags are highly oscillatory and consistent with zero within large error bars. |
 | **F4** (AIC/BIC) | \(\Delta\text{AIC} > 2\) in favour of ΛCDM | **Inconclusive.** AIC/BIC marginally prefer the OU model over QNM, but the difference is within the statistical noise for N=7. |
 | **F5** (Degeneracy) | \(\sigma_X\) remains zero when \(w_0, w_a\) are free | **Not checked.** The simultaneous fit \(\{w_0, w_a, \sigma_X\}\) is required to break degeneracies. |
