@@ -503,10 +503,15 @@ Our upper bound \(\sigma_X < 1.5 \times 10^{-4}\) therefore implies
 
 This constraint applies to the product of the coupling strength and the potential slope. The ratio \(V/V'\) has dimensions of mass; its numerical value is only meaningful after fixing the normalization of \(\phi\) (e.g., writing \(\delta \phi\) in units of \(M_{Pl}\)). For example, in Planck-suppressed models where \(\beta \sim 1/M_{Pl}\), the bound is naturally weak, while models with \(\beta \sim 1\) require \(V/V' \lesssim 10^{-1}\) to be compatible with astrophysical constraints on \(\Delta \alpha/\alpha\).
 
+Conceptually, this is analogous to a field (the "wave" on the ramp) connected to the Standard Model via a "cable" of strength \(\beta\). If the field fluctuates, it pulls the cable and alters the fine-structure constant. Our limit on \(\sigma_X\) means that either:
+- the ramp is extremely flat (small \(V/V'\)), so the field cannot produce large fluctuations, or
+- the cable is very weak (small \(\beta\)), decoupling the field from the matter sector.
+
+Any model with \(|\beta| \sim 1\) and \(|V/V'| \sim O(1)\) is strongly disfavored unless additional screening mechanisms suppress the observable variation.
+
 Crucially, this relation does not by itself distinguish between potentials with a finite minimum and runaway potentials. It only constrains the combination \(\beta (V/V')\). A finite-minimum potential with \(V'(\phi_0) = 0\) will have \(V/V'\) diverging at the minimum, but in that same limit \(\delta \phi \to 0\) (if no excitations are present). A runaway potential can also be compatible if the coupling \(\beta\) is sufficiently suppressed or if the potential slope is very shallow.
 
 Combined with the stringent astrophysical bounds on \(\Delta \alpha/\alpha\) from quasar absorption spectroscopy (e.g., Wilczyńska et al. 2020, \(|\Delta \alpha/\alpha| \lesssim 10^{-5}\) at \(z \sim 7\)), our limit disfavors models with \(|\beta| \sim 1\) and \(|V/V'| \sim O(1)\) unless additional screening mechanisms suppress the observable variation.
-**Statement for the paper:** *“Our phenomenological upper limit \(\sigma_X < 1.5 \times 10^{-4}\), when combined with stringent astrophysical bounds on \(\Delta \alpha/\alpha\) and \(\Delta \mu/\mu\), disfavors quintessence models that produce \(O(10^{-4})\) or larger local fluctuations in the scalar field unless the couplings to the Standard Model are suppressed below observational sensitivity. It does not, however, by itself determine whether the scalar potential possesses a finite minimum or resolves naturalness.”*
 
 ## 8. Status of the Stochastic Model
 
