@@ -13,6 +13,23 @@ Recent DESI DR2 data, when combined with CMB and supernovae, show a significant 
 
 In this paper, we test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. We model late-time fluctuations in \(\Omega_\Lambda\) as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, we perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude \(\sigma_X\) of these fluctuations, assuming the CPL background is fixed to the best-fit values.
 
+**We clarify that while the standard DESI DR2 BAO analysis 
+constrains the homogeneous isotropic background metric 
+(preserving spatial symmetries), our stochastic framework 
+models the formal breaking of global time-translation 
+invariance inherent to all expanding FLRW spacetimes. 
+Because the expanding background lacks a timelike Killing 
+vector (L_ξ g_μν ≠ 0 for ξ^μ = (1,0,0,0) when ȧ ≠ 0), 
+energy conservation via Noether's theorem is globally 
+broken. This non-conservation provides the theoretical 
+opening for late-time vacuum fluctuations. Our 
+Ornstein-Uhlenbeck process treats δΩ_Λ(x) not as a 
+modification of the background spatial symmetries, but 
+as a stochastic perturbation fueled by this cosmic 
+time-asymmetry, testing whether the vacuum exhibits 
+measurable variance as it is dragged along the cosmic 
+expansion.**
+
 We find that the MLE drives the stochastic amplitude to the numerical floor: \(\sigma_X \to 0\) and \(\omega_R \to 0\). The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a phenomenological upper limit on the amplitude of such fluctuations: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL).
 
 We caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the \(>20\) bins of Euclid DR1 (expected H2 2026).
