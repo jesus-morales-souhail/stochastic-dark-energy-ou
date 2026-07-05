@@ -11,28 +11,11 @@
 
 Recent DESI DR2 data, when combined with CMB and supernovae, show a significant preference for dynamical dark energy over a cosmological constant. Within the Chevallier-Polarski-Linder (CPL) parameterization, the best-fit values are \(w_0 = -0.87 \pm 0.05\), \(w_a = -0.41 \pm 0.28\) (2.5σ) or \(w_0 = -0.785 \pm 0.047\), \(w_a = -0.43 \pm 0.095\) (4.2σ) depending on the dataset combination.
 
-In this paper, we test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. We model late-time fluctuations in \(\Omega_\Lambda\) as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, we perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude \(\sigma_X\) of these fluctuations.
+In this paper, we test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. We model late-time fluctuations in \(\Omega_\Lambda\) as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, we perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude \(\sigma_X\) of these fluctuations, assuming the CPL background is fixed to the best-fit values.
 
-We find a definitive null result: the MLE forces the stochastic amplitude to zero (\(\sigma_X \to 0\)) and the QNM frequency to zero (\(\omega_R \to 0\)). The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a strict upper limit on the "roughness" of the vacuum: \(\sigma_X < 5 \times 10^{-5}\) (95% CL).
+We find that the MLE drives the stochastic amplitude to the numerical floor: \(\sigma_X \to 0\) and \(\omega_R \to 0\). The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a phenomenological upper limit on the amplitude of such fluctuations: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL).
 
-We interpret this null result as evidence for the **holographic rigidity** of the vacuum: dark energy behaves as a deterministic, homogeneous scalar field (quintessence) or an effective geometric term, rather than a granular medium. The absence of local stochastic noise imposes a strong constraint on quantum-gravity models predicting spacetime from discrete information networks. The decisive test for any residual granularity will require the >20 bins of Euclid DR1 (expected H2 2026).
-
-"This limit translates into a constraint on the mass of a possible scalar field mediating dark energy: 
-m
-ϕ
-≲
-10
-−
-5
- 
-e
-V
-m 
-ϕ
-​
- ≲10 
-−5
- eV, placing it in the ultralight boson regime."
+We caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the \(>20\) bins of Euclid DR1 (expected H2 2026).
 
 ## Our result does not resolve the absolute cosmological constant problem
 10
@@ -354,11 +337,11 @@ This is a factor of \(\sim 100\) lower than the illustrative calibration used in
 
 ### 7.2 The Smoothness of Dark Energy: A Theoretical Constraint
 
-The null result obtained here imposes a strong constraint on the microscopic nature of dark energy. If dark energy were a classical fluid with internal degrees of freedom, one would expect local density fluctuations of the same order as the background evolution, producing detectable noise in BAO residuals. The absence of such noise indicates that dark energy behaves as a **deterministic, homogeneous scalar field** (quintessence) or an effective geometric term, rather than a granular medium.
+### 7.2 Implications for Models of Dark Energy
 
-The evolution of dark energy, as seen by DESI DR2, is smooth and deterministic, with no detectable "roughness" at the scale of BAO measurements. This is consistent with a **holographic rigidity** of the vacuum: the horizon stores information without injecting stochastic noise into the local metric. In practice, this means that any physical mechanism behind dark energy must suppress local fluctuations below the threshold \(\sigma_X < 1.5 \times 10^{-4}\).
+The null result obtained here is consistent with models where dark energy is a smooth, deterministic field (quintessence) or a cosmological constant. It places a phenomenological constraint on models that predict additional stochastic variance: any such model must have an amplitude \(\sigma_X < 1.5 \times 10^{-4}\) to be compatible with DESI DR2.
 
-This result is compatible with standard quintessence models, where a scalar field \(\phi\) with potential \(V(\phi)\) evolves homogeneously, producing a smooth equation of state \(w(z)\). The quantum fluctuations of the scalar field, if present, are naturally suppressed by the smallness of the field's mass or by the Hubble damping during inflation. The null result does not rule out quintessence; it rules out **noisy quintessence** or any model where the dark energy sector possesses detectable stochastic degrees of freedom.
+We emphasize that this constraint applies specifically to the additive OU/QNM kernel tested here, assuming a fixed CPL background. The results do not rule out stochastic models that are degenerate with the background evolution or that operate on scales not probed by BAO. Future analyses that jointly fit \(\{w_0, w_a, \sigma_X\}\) will be needed to resolve this degeneracy and to test the broader class of stochastic dark energy models.
 
 ### 7.3 Implications for Quantum Gravity and Information-Theoretic Models
 
@@ -369,22 +352,21 @@ Specifically, any such model must ensure that fluctuations in \(\Omega_\Lambda\)
 The decisive test for any residual granularity will require the \(>20\) redshift bins of Euclid DR1. With its improved statistical power, Euclid could detect fluctuations with \(\sigma_X > 1 \times 10^{-5}\) if they exist. Until then, DESI DR2 provides the strongest constraint on stochastic dark energy and serves as a benchmark for future models.
 ---
 
-## 8. Falsification Status: The Stochastic Model is Ruled Out by DESI DR2
+## 8. Status of the Stochastic Model
 
-With only 7 BAO bins, the model space is highly degenerate, and the lag-correlation test lacks individual significance (95% CI ≈ ±1.0). However, the combined evidence from the MLE fit, the AIC/BIC comparison, and the absence of the predicted lag pattern constitutes a definitive falsification of the OU/QNM stochastic model in its current formulation.
+With only 7 BAO bins and using a diagonal covariance approximation, the model space is highly degenerate. The lag-correlation test lacks individual significance (95% CI ≈ ±1.0). While the MLE drives \(\sigma_X \to 0\) and \(\omega_R \to 0\) for the specific case of a fixed CPL background, this does not constitute a definitive falsification of stochastic dark energy generically.
 
-The following criteria are now met:
+We summarize the status of the model based on the current analysis:
 
 | Criterion | Condition for Exclusion | Status under DESI DR2 |
 |:---|:---|:---|
-| **F1** (Variance floor) | \(\sigma_X \to 0\) under free MLE | **MET.** The stochastic amplitude is driven to the numerical floor (\(\sigma_X \approx 5\times10^{-5}\)). |
-| **F2** (QNM frequency) | \(\omega_R \to 0\) under free MLE | **MET.** The QNM frequency vanishes; the oscillatory kernel collapses into a degenerate monotonic state. |
-| **F3** (Lag correlations) | Predicted positive lags are absent | **MET.** The predicted positive lag pattern (\(\rho_1 \approx 0.83\), \(\rho_2 \approx 0.85\), \(\rho_3 \approx 0.85\)) is not observed. |
-| **F4** (AIC/BIC) | \(\Delta\text{AIC} > 2\) in favour of ΛCDM | **PARTIAL.** AIC/BIC prefer H0 (OU) over H1 (QNM) by 2 points, but this is indicative with 7 bins. |
-| **F5** (Bayesian evidence) | \(\ln K > 5\) favouring ΛCDM | **NOT COMPUTED.** Requires full MCMC chains. |
+| **F1** (Variance floor) | \(\sigma_X \to 0\) under free MLE | **Consistent with null.** The amplitude is driven to the numerical floor, indicating no evidence for a stochastic component. |
+| **F2** (QNM frequency) | \(\omega_R \to 0\) under free MLE | **Consistent with null.** The oscillatory kernel collapses to a monotonic state. |
+| **F3** (Lag correlations) | Predicted positive lags are absent | **Inconclusive.** The observed lags are highly oscillatory and consistent with zero within large error bars. |
+| **F4** (AIC/BIC) | \(\Delta\text{AIC} > 2\) in favour of ΛCDM | **Inconclusive.** AIC/BIC marginally prefer the OU model over QNM, but the difference is within the statistical noise for N=7. |
+| **F5** (Degeneracy) | \(\sigma_X\) remains zero when \(w_0, w_a\) are free | **Not checked.** The simultaneous fit \(\{w_0, w_a, \sigma_X\}\) is required to break degeneracies. |
 
-**Conclusion:** The finite-information stochastic framework, in its current OU/QNM formulation, is **ruled out** by DESI DR2 BAO data. The decisive test for any residual granularity will require the \(>20\) redshift bins of Euclid DR1 (expected H2 2026).
-
+**Conclusion:** The stochastic model is **not favored** by the current DESI DR2 BAO data, and we place a phenomenological upper limit on its amplitude. However, a definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the \(>20\) bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.
 ---
 
 ## 9. Near‑Term Observational Program: Euclid DR1
@@ -397,13 +379,9 @@ Euclid Data Release 1 (expected H2 2026) will provide >20 redshift bins, resolvi
 
 ## 10. Conclusion
 
-We have tested the hypothesis of stochastic dark energy fluctuations against DESI DR2 BAO data. Our MLE analysis yields a null result: the stochastic amplitude is \(\sigma_X \to 0\), and the QNM frequency is \(\omega_R \to 0\). The data are fully consistent with a smooth CPL evolution of dark energy (\(w_0 \approx -0.87, w_a \approx -0.41\)) plus instrumental noise.
+We have tested a specific class of stochastic dark energy models (OU and QNM) against DESI DR2 BAO data, assuming a fixed CPL background. The MLE drives the stochastic amplitude to the numerical floor: \(\sigma_X \to 0\) and \(\omega_R \to 0\). The data are fully consistent with a smooth CPL evolution plus instrumental noise.
 
-This result places a strict upper limit on the granularity of the vacuum: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL). Any model predicting local fluctuations in the dark energy density must respect this bound.
-
-The finite-information stochastic framework, in its current OU/QNM formulation, is ruled out by DESI DR2. However, the smooth dynamical evolution of dark energy remains a robust observational fact, consistent with the latest cosmological data. The null result implies a **holographic rigidity** of the vacuum, where the horizon's information content is decoupled from local metric fluctuations.
-
-Future surveys with significantly more redshift bins (Euclid DR1, H2 2026) will be needed to probe the vacuum at higher resolution and to test whether the smoothness holds at the level of \(\sigma_X > 10^{-5}\). Until then, DESI DR2 provides the most stringent constraint on stochastic dark energy, serving as a benchmark for quantum-gravity and information-theoretic models of the vacuum.
+This result places a phenomenological upper limit on the amplitude of such fluctuations: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL). While the stochastic model is not favored by the current data, a definitive conclusion requires a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the \(>20\) redshift bins of Euclid DR1 (expected H2 2026). Our analysis pipeline is ready for this future test. Until then, this work serves as a benchmark limit and a validation of the methodology.
 
 ---
 
