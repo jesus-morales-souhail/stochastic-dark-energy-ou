@@ -17,26 +17,47 @@ We find that the MLE drives the stochastic amplitude to the numerical floor: \(\
 
 We caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the \(>20\) bins of Euclid DR1 (expected H2 2026).
 
-"In a scalar-field dark energy model with a coupling to the electromagnetic sector, 
+"In a scalar-field dark energy model with electromagnetic coupling 
 Δ
-α
+𝛼
 /
-α
-≈
-β
+𝛼
+≃
+𝛽
  
-δ
-ϕ
-Δα/α≈βδϕ, and the fluctuation amplitude 
-σ
-X
+𝛿
+𝜙
+Δα/α≃βδϕ, and assuming 
+𝜌
+Λ
+≈
+𝑉
+(
+𝜙
+)
+ρ 
+Λ
+​
+ ≈V(ϕ), one obtains 
+𝜎
+𝑋
 ≡
-δ
-ρ
+𝛿
+𝜌
 Λ
 /
-ρ
+𝜌
 Λ
+≈
+(
+𝑉
+′
+/
+𝑉
+)
+ 
+𝛿
+𝜙
 σ 
 X
 ​
@@ -46,27 +67,11 @@ X
  /ρ 
 Λ
 ​
-  satisfies 
-σ
-X
-=
-(
-V
+ ≈(V 
 ′
-/
-V
-)
- 
-δ
-ϕ
-σ 
-X
-​
- =(V 
-′
- /V)δϕ. Our upper limit 
-σ
-X
+ /V)δϕ. Our upper bound 
+𝜎
+𝑋
 <
 1.5
 ×
@@ -78,25 +83,24 @@ X
 ​
  <1.5×10 
 −4
-  therefore translates into:
-
+  therefore implies 
 ∣
 Δ
-α
-α
+𝛼
+/
+𝛼
 ∣
 ≲
-β
+∣
+𝛽
+∣
  
-V
-(
-ϕ
-)
-V
+∣
+𝑉
+/
+𝑉
 ′
-(
-ϕ
-)
+∣
  
 (
 1.5
@@ -105,67 +109,33 @@ V
 −
 4
 )
-.
-​
-  
-α
-Δα
-​
-  
-​
- ≲β 
-V 
+∣Δα/α∣≲∣β∣∣V/V 
 ′
- (ϕ)
-V(ϕ)
-​
- (1.5×10 
+ ∣(1.5×10 
 −4
- ).
-Combined with astrophysical constraints (e.g., 
+ ). This constrains only the coupling–slope combination; it does not by itself distinguish between finite-minimum and runaway potentials. Models with 
 ∣
-Δ
-α
-/
-α
+𝛽
 ∣
-≲
-10
-−
-5
-∣Δα/α∣≲10 
-−5
-  from quasar spectroscopy), this requires either a small coupling 
-β
-β or a small ratio 
-V
-/
-V
-′
-V/V 
-′
-  (i.e. a very flat potential). This constraint does not determine whether 
-V
-(
-ϕ
-)
-V(ϕ) has a finite minimum or a runaway form; it only bounds the product of the coupling and the potential slope. Models with 
-β
 ∼
 1
-β∼1 and 
-V
+∣β∣∼1 and 
+∣
+𝑉
 /
-V
+𝑉
 ′
+∣
 ∼
-O
+𝑂
 (
 1
 )
-V/V 
+∣V/V 
 ′
- ∼O(1) are excluded unless additional screening mechanisms are present."
+ ∣∼O(1) are strongly disfavored unless screening mechanisms suppress the observable variation.
+
+
 
 ## Our result does not resolve the absolute cosmological constant problem
 10
