@@ -446,11 +446,11 @@ We computed the whitened BAO residuals using the publicly released isotropic \(\
 
 ### 6.3 Interpretation
 
-For N = 7 bins, the standard error is \(\sigma_\rho \approx 1/\sqrt{N-3} \approx 0.5\), giving a 95% confidence interval of approximately **±1.0**. The observed lag correlations in DR2 fluctuate wildly (\(-0.96\), \(+0.92\), \(-0.92\)), but all are consistent with zero within the large error bars. **None of the measured lags are individually significant at 95% confidence.**
+For N = 7 bins, the standard error is \(\sigma_\rho \approx 1/\sqrt{N-3} \approx 0.5\), giving a 95% confidence interval of approximately ±1.0. The observed lag correlations in DR2 fluctuate wildly ((-0.96), (+0.92), (-0.92)), but all are consistent with zero within the large error bars. None of the measured lags are individually significant at 95% confidence.
 
-Crucially, these values are not positive and decaying as the OU model predicted (\(\rho_1 \approx 0.83\), \(\rho_2 \approx 0.85\), \(\rho_3 \approx 0.85\)). The predicted pattern of positive lag correlations is **falsified** by the data. This is fully consistent with the MLE result \(\sigma_X \to 0\): the data show no correlated stochastic noise.
+Crucially, the alternating pattern (−0.96, +0.92, −0.92) is consistent with a numerical artifact of the whitening procedure when \(\sigma_X \approx 0\): the covariance matrix reduces to \(C_{\rm std}\), and the whitened residuals carry the same oscillatory structure as the raw BAO measurements. When \(\sigma_X = 0\), the OU and QNM kernels vanish, so the total covariance reduces to \(C_{\rm std}\). The whitened residuals are therefore those of ΛCDM, and the lag correlations are simply the correlations of the raw data after whitening. The predicted positive correlations of the OU model are absent, which is fully consistent with the MLE result \(\sigma_X \to 0\). The data show no correlated stochastic noise.
 
-The absence of signal in both the likelihood and the lag correlations decisively rules out the OU/QNM stochastic model with current DESI DR2 precision. This conclusion is independent of the large uncertainties: the model predicts a specific sign and structure that is not observed.
+The absence of signal in both the likelihood and the lag correlations rules out the OU/QNM stochastic model with current DESI DR2 precision. This conclusion is independent of the large uncertainties: the model predicts a specific sign and structure that is not observed.
 
 ---
 
