@@ -566,6 +566,8 @@ We summarize the status of the model based on the current analysis:
 | **F4** (AIC/BIC) | \(\Delta\text{AIC} > 2\) in favour of ΛCDM | **Inconclusive.** AIC/BIC marginally prefer the OU model over QNM, but the difference is within the statistical noise for \(N=7\). |
 | **F5** (Degeneracy) | \(\sigma_X\) remains zero when \(w_0, w_a\) are free | **Not checked.** A simultaneous fit of \(\{w_0, w_a, \sigma_X\}\) is required to break degeneracies. |
 
+> **Note on systematic false positives:** The interpretation of the null result as a phenomenological upper limit is reinforced by the Bayesian analysis of systematic false positives (Section 7.3). With only one probe, a detected signal would be intrinsically degenerate with instrumental noise; a definitive detection would require cross-validation by independent probes (Euclid, Rubin, Planck) with orthogonal systematics.
+
 **Conclusion:** The stochastic model is **not favored** by the current DESI DR2 BAO data, and we place a phenomenological upper limit on its amplitude. However, a definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the \(>20\) bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.
 ---
 
