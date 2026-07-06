@@ -477,35 +477,11 @@ Our MLE analysis reveals a definitive null result: \(\sigma_X \to 0\) and \(\ome
 
 This result must be interpreted in the context of the latest DESI DR2 cosmological constraints. The combination of BAO, CMB, and supernovae shows a 2.5σ to 4.2σ deviation from \(\Lambda\)CDM, favoring a dynamical dark energy. This smooth evolution absorbs any variance that could have been attributed to stochastic noise. The optimizer correctly identifies that adding a local fluctuation kernel does not improve the fit once the background is allowed to evolve.
 
-### 7.1 A Strict Upper Limit on Vacuum Granularity and Scalar Mass
+### 7.1 A Strict Upper Limit on Vacuum Granularity
 
-The Maximum Likelihood Estimation (MLE) drives the stochastic noise parameter to the numerical floor, yielding a conservative \(95\%\) confidence level upper limit of \(\sigma_X < 1.5 \times 10^{-4}\). While this phenomenological bound limits the macroscopic "roughness" of the dark energy density, it maps directly onto the fundamental parameters of a canonical quintessence field \(\phi\).
+The Maximum Likelihood Estimation (MLE) drives the stochastic noise parameter to the numerical floor, yielding a conservative \(95\%\) confidence level upper limit of \(\sigma_X < 1.5 \times 10^{-4}\). This limit applies to the specific OU/QNM kernel tested here, assuming a fixed CPL background. It represents the strongest current constraint on the amplitude of late-time stochastic fluctuations in \(\Omega_\Lambda\) at BAO scales.
 
-Assuming late-time dark energy is governed by a scalar field rolling down a potential where \(V(\phi) \gg \frac{1}{2}\dot{\phi}^2\), the observed dark energy density tracks the minimum of the potential, \(V_{\text{min}} \equiv \rho_{\Lambda}\). Given the DESI DR2 baseline parameterization (\(\Omega_{\Lambda} \approx 0.685\), \(H_0 \approx 67.4 \text{ km/s/Mpc}\)), the critical density \(\rho_{\text{crit}} = \frac{3H_0^2}{8\pi G} \approx 8.52 \times 10^{-30} \text{ g/cm}^3\) implies a vacuum energy density of \(\rho_{\Lambda} \approx 5.84 \times 10^{-30} \text{ g/cm}^3\). In natural particle physics units (\(\hbar = c = 1\)), this matches:
-
-\[
-V_{\text{min}} \approx 3.28 \times 10^{-11} \text{ eV}^4 \implies V_{\text{min}}^{1/4} \approx 2.4 \times 10^{-3} \text{ eV}.
-\]
-
-If the field possesses a non-zero mass \(m_{\phi}\), it inevitably experiences quantum fluctuations during cosmic expansion. The typical amplitude of these field modes stretching across the Hubble horizon scales as \(\delta\phi \sim H_0/(2\pi)\). The resulting first-order perturbation in the energy density is given by \(\delta\rho_{\Lambda} \sim V'(\phi)\delta\phi \sim m_{\phi}^2 \phi \delta\phi\). In natural quintessence scenarios, the field value itself is of the order of the reduced Planck mass (\(\phi \sim M_{\text{Pl}} \approx 2.4 \times 10^{18} \text{ GeV}\)).
-
-Relating these field-level fluctuations to our macroscopic stochastic parameter \(\sigma_X \equiv \delta\rho_{\Lambda}/\rho_{\Lambda}\), we establish:
-
-\[
-\sigma_X \sim \frac{m_{\phi}^2 M_{\text{Pl}} H_0}{2\pi \rho_{\Lambda}}.
-\]
-
-Evaluating this expression in energy units (\(\text{GeV}\)) where \(H_0 \approx 1.45 \times 10^{-42} \text{ GeV}\) and \(\rho_{\Lambda} \approx 3.3 \times 10^{-47} \text{ GeV}^4\), and imposing our empirical upper bound \(\sigma_X < 1.5 \times 10^{-4}\), we isolate the upper bound for the scalar mass:
-
-\[
-m_{\phi}^2 < \frac{2\pi \cdot \sigma_X \cdot \rho_{\Lambda}}{M_{\text{Pl}} \cdot H_0} \approx 8.94 \times 10^{-27} \text{ GeV}^2,
-\]
-
-\[
-m_{\phi} < 9.45 \times 10^{-14} \text{ GeV} \implies m_{\phi} \lesssim 9.45 \times 10^{-5} \text{ eV}.
-\]
-
-This result demonstrates that for the vacuum to remain as smooth as demanded by DESI DR2 data, the underlying field must be ultralight (\(m_{\phi} \lesssim 10^{-5} \text{ eV}\)). This explicitly constrains the dark energy candidate to the ultra-low-frequency boson regime, indicating a high degree of spatial coherence (a macroscopically large Compton wavelength \(\lambda_C \gtrsim 2.1 \text{ mm}\)) that effectively screens out any stochastic granularity within the 7 observed BAO bins.
+**Interpretation:** If dark energy is a scalar field, this limit can be translated into a constraint on its mass under additional assumptions (see Appendix E for details). However, we emphasize that this translation is model-dependent and should not be interpreted as a direct measurement of the field mass from DESI data.
 
 The upper limit \(\sigma_X < 1.5 \times 10^{-4}\) is a conservative estimate based on the numerical floor of the MLE (\(\sigma_X \approx 5 \times 10^{-5}\)), multiplied by a factor of 3 to account for the flatness of the likelihood in \(\sigma_X\) with only 7 bins. A formal 95% CL profile likelihood scan over \(\sigma_X\) is deferred to Euclid DR1; with the current dataset, the likelihood is dominated by the optimizer's numerical floor.
 
@@ -696,6 +672,31 @@ Any oscillation with ω_R < ω_R,min produces <1 visible cycle and is indistingu
 **Implication:** If the true kernel is QNM with ω_R ~ 8, DESI can detect it but Euclid cannot (geometric limit, not noise).
 
 ---
+
+## Appendix E — Model-Dependent Interpretations of the Upper Limit
+
+The following sections provide theoretical interpretations of the phenomenological limit \(\sigma_X < 1.5 \times 10^{-4}\). These interpretations require additional assumptions beyond the data and should be treated as speculative.
+
+### E.1 Scalar Field Mass (Canonical Quintessence)
+
+Assuming that dark energy is a canonical scalar field \(\phi\) with \(\rho_\Lambda \approx V(\phi)\) and \(\phi \sim M_{Pl}\), the limit \(\sigma_X < 1.5 \times 10^{-4}\) implies:
+
+\[
+m_\phi \lesssim 9.45 \times 10^{-5} \, \text{eV}.
+\]
+
+This is consistent with ultralight boson scenarios. However, this translation depends on the assumed normalization of \(\phi\) and the relation between \(\sigma_X\) and \(\delta\phi\). It is not a direct measurement from DESI data.
+
+### E.2 Symmetries and Stochastic Dynamics (BMS, Sorkin)
+
+The theoretical framework of Axioms A1–A4 (Bekenstein-Hawking entropy, Sorkin mechanism, BMS symmetries) provides a motivation for the stochastic model used in this work. The data do not confirm or refute this framework; they only constrain the amplitude of the stochastic component if it exists. The connection between the observational limit and these theoretical ideas is a matter of interpretation, not empirical evidence.
+
+For completeness, the key equations are reproduced here:
+- The OU process: \(dX = -\theta X dx + \sigma dW_x\).
+- The stochastic continuity equation: \(\frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t)\).
+- The BMS charge fluctuations: \(S_\xi(\omega) = \frac{\sigma^2}{2\theta} \cdot \frac{1}{1 + (\omega/\theta)^2}\).
+
+These are formal structures that are compatible with the data when \(\sigma_X \to 0\), but they are not derived from the data.
 
 ## References
 
