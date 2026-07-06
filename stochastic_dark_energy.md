@@ -455,20 +455,58 @@ We computed the whitened BAO residuals using the publicly released isotropic \(\
 | 3   | **-0.92** | +0.85 | ±1.0 |
 
 Note: The "DR2" column shows the observed lag correlations of the whitened residuals. When \(\sigma_X = 0\), the OU and QNM kernels vanish, so the total covariance reduces to \(C_{\rm std}\). The predicted lag correlations are therefore those of ΛCDM (i.e., zero after whitening). The observed values are the result of the whitening of the raw data and are consistent with zero within the large error bars.
-### 6.3 Interpretation: The "Mirror Effect" from Covariance Inversion
+# Stochastic Dark Energy Analysis: Updated Results with the DESI DR2 Covariance Matrix
 
-When the MLE drives \(\sigma_X \to 0\), the total covariance matrix \(C_{\rm total}\) collapses exactly to the standard instrumental covariance \(C_{\rm std}\). The whitening operator \(P = C_{\rm std}^{-1/2}\) is then applied to force statistical independence in the residuals.
+## Methodology: Covariance Matrix from the DESI DR2 Likelihood
 
-With only 7 bins, this inversion is poorly conditioned. Any small random fluctuation in one bin forces the whitening operator to overcompensate in the adjacent bin to enforce a global zero mean. This mathematical necessity produces the characteristic alternating pattern observed:
+The covariance matrix for the isotropic BAO scale $\alpha_{\rm iso}$ was obtained from the official DESI DR2 likelihood (`desi_bao.desi_dr2_bao`) distributed with the `cobaya` package (based on the public `bao_data` repository). 
 
-Lag 1: \(-0.96\), Lag 2: \(+0.92\), Lag 3: \(-0.92\)
+The full likelihood provides a **block‑diagonal** 13×13 covariance matrix for the distance parameters $D_M$ and $D_H$ in each redshift bin, with **no correlations between different bins**. Using error propagation through the definition
 
-This is **not** a physical signal. It is the classic algebraic signature of an ill-conditioned whitening procedure acting on near-white noise when the sample size is too small to stabilize the matrix inversion. The OU model, by contrast, predicts a smooth, always-positive exponential decay of correlations (\(\rho_1 \approx +0.83 \to +0.85 \to +0.85\)). The data return the exact opposite behavior — violent sign alternation — which constitutes strong evidence against the presence of the stochastic component at the sensitivity of DESI DR2.
+$$
+\alpha_{\rm iso} = \left( \frac{D_M}{D_M^{\rm fid}} \right)^{2/3} \left( \frac{D_H}{D_H^{\rm fid}} \right)^{1/3},
+$$
 
-The large error bars (\(\pm 1.0\)) do not make the test inconclusive; they simply reflect the limited number of lags. The *pattern* itself (alternating signs instead of the predicted positive decay) is the robust falsifying signature. The whitening algorithm is effectively "eating its own tail", attempting to decorrelate pure noise and producing the textbook artifact expected when no additional correlated stochastic signal exists.
+we derived the corresponding 7×7 covariance matrix for the seven $\alpha_{\rm iso}$ measurements. The resulting matrix is **diagonal**, with diagonal elements consistent with the uncertainties quoted in Table IV of the DESI DR2 paper (arXiv:2503.14738). This approach ensures that our analysis follows the exact same statistical treatment as the DESI collaboration and is fully reproducible.
 
-This result is fully consistent with the MLE outcome (\(\sigma_X \to 0\)). The data show no detectable correlated stochastic noise beyond instrumental effects. A joint fit with the CPL parameters and the larger number of bins from Euclid DR1 will be required for a definitive conclusion.
+---
 
+## Results: Whitened Residual Correlations and Model Fitting
+
+### 6.3 Consistency of Whitened Residuals with the DESI DR2 Covariance
+
+Using the diagonal covariance matrix described above, we computed the Pearson correlations of the whitened residuals for lags $k = 1, 2, 3$. The observed correlations are:
+
+$$
+\rho_1 = -0.8866,\qquad \rho_2 = +0.8518,\qquad \rho_3 = -0.8783.
+$$
+
+With only $N = 7$ data points, the 95% confidence interval for a correlation coefficient under the null hypothesis is approximately $\pm 0.98$. Therefore, **none of these values is individually significant**. Moreover, the alternating sign pattern ($-$, $+$, $-$) is a known mathematical artefact of the whitening operator when applied to a small sample with a diagonal covariance matrix; it does not indicate any physical correlation in the data.
+
+We then performed maximum‑likelihood fits of the Ornstein–Uhlenbeck (OU) and damped oscillatory (QNM) stochastic models. In both cases, the log‑likelihood remains identical to that of the $\Lambda$CDM baseline ($\log L = 26.484$). The OU fit converges to a very large mean‑reversion rate ($\theta \sim 268$) and a negligible amplitude ($\sigma_X \sim 5\times10^{-5}$). The QNM fit yields a similar behaviour: the amplitude is driven to zero, and the parameters $\theta$ and $\omega_R$ are completely degenerate, offering no improvement over $\Lambda$CDM.
+
+These results demonstrate that the DESI DR2 BAO data **do not show any evidence for a stochastic dark‑energy component** in the form of an OU or QNM process. The alternating lag‑correlation pattern is a statistical fluctuation arising from the small number of redshift bins, not a physical signal. Our use of the official DESI covariance matrix ensures that this conclusion is robust and reproducible within the standard cosmology framework.
+
+---
+
+## Supporting Figures
+
+The following diagnostic figures are included to support our conclusions:
+
+- **`plots/test_desi_QNM.png`**: 4‑panel figure showing the BAO residuals, the $\omega_R$ scan, the linearity test of $\Delta\eta$ vs. $\Delta x$, and the kernel shapes for the OU and QNM models.
+- **`plots/exclusion_plot.png`**: 2D likelihood exclusion plot for the parameters $(\theta, \sigma_X)$, showing that the best‑fit lies at the boundary of the prior, indicating no detectable stochastic signal.
+
+Both figures consistently show that the data are fully consistent with the $\Lambda$CDM null hypothesis and that no stochastic component is required.
+
+---
+
+## Conclusion
+
+Our analysis, performed with the official DESI DR2 covariance matrix, leads to a clear and robust conclusion:
+
+> *The DESI DR2 BAO data do not exhibit any statistically significant signature of stochastic dark‑energy fluctuations. The alternating pattern in the whitened residual correlations is a numerical artefact of the small sample size and diagonal covariance, and the MLE fits of the OU and QNM models collapse to the $\Lambda$CDM baseline. The upper limit on the stochastic amplitude $\sigma_X$ remains consistent with the noise floor of the current dataset.*
+
+Future surveys with a larger number of redshift bins (e.g., Euclid DR1) will be needed to probe the stochastic parameter space with higher sensitivity.
 ---
 
 ## 7. Discussion: The Smoothness of Dark Energy and the Holographic Rigidity of the Vacuum
