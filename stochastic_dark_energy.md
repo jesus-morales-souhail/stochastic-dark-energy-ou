@@ -17,8 +17,6 @@ We find that the MLE drives the stochastic amplitude to the numerical floor: \(\
 
 We caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the \(>20\) bins of Euclid DR1 (expected H2 2026).
 
-
-
 ---
 
 ## 1. Introduction
