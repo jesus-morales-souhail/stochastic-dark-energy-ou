@@ -716,7 +716,7 @@ These are formal structures that are compatible with the data when \(\sigma_X \t
 [8] Ashtekar, A. et al., "BMS supertranslations and Weinberg's soft graviton theorem," 
     JHEP 2015, 152 (2015).
     
-[8] Wald, R. M., *General Relativity*, University of Chicago Press (1984).
+[9] Wald, R. M., *General Relativity*, University of Chicago Press (1984).
 
 Note: The connection between BMS charges and the Sorkin fluctuation 
 mechanism is presented as theoretical motivation, not a derived result. 
