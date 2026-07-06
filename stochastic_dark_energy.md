@@ -261,95 +261,15 @@ For the numerical results in Sections 4–6, we use the discrete sensitivity
 kernel $S(z)$ computed numerically for a flat $\Lambda$CDM fiducial
 ($\Omega_m = 0.315$, $H_0 = 67.4$ km/s/Mpc). This yields:
 
-|
- $z_\text{eff}$ 
-|
- Tracer     
-|
- $
-|
-S(z)
-|
-/
-|
-S(0.706)
-|
-$ 
-|
- $\sigma_{\alpha,\text{floor}}$ 
-|
-|
-:--------------:
-|
-:-----------
-|
-:-------------------:
-|
-:------------------------------:
-|
-|
- 0.295          
-|
- BGS        
-|
- 0.477               
-|
- $2.22 \times 10^{-3}$          
-|
-|
- 0.510          
-|
- LRG1       
-|
- 0.777               
-|
- $3.61 \times 10^{-3}$          
-|
-|
- 0.706          
-|
- LRG2       
-|
- 1.000               
-|
- $4.65 \times 10^{-3}$          
-|
-|
- 0.934          
-|
- LRG3+ELG1  
-|
- 1.208               
-|
- $5.62 \times 10^{-3}$          
-|
-|
- 1.321          
-|
- ELG2       
-|
- 1.462               
-|
- $6.80 \times 10^{-3}$          
-|
-|
- 1.484          
-|
- QSO        
-|
- 1.541               
-|
- $7.17 \times 10^{-3}$          
-|
-|
- 2.330          
-|
- Ly$\alpha$ 
-|
- 1.798               
-|
- $8.36 \times 10^{-3}$          
-|
+| $z_\text{eff}$ | Tracer     | $|S(z)|/|S(0.706)|$ | $\sigma_{\alpha,\text{floor}}$ |
+|:--------------:|:-----------|:-------------------:|:------------------------------:|
+| 0.295          | BGS        | 0.477               | $2.22 \times 10^{-3}$          |
+| 0.510          | LRG1       | 0.777               | $3.61 \times 10^{-3}$          |
+| 0.706          | LRG2       | 1.000               | $4.65 \times 10^{-3}$          |
+| 0.934          | LRG3+ELG1  | 1.208               | $5.62 \times 10^{-3}$          |
+| 1.321          | ELG2       | 1.462               | $6.80 \times 10^{-3}$          |
+| 1.484          | QSO        | 1.541               | $7.17 \times 10^{-3}$          |
+| 2.330          | Ly$\alpha$ | 1.798               | $8.36 \times 10^{-3}$          |
 
 *Note: An exact integral susceptibility kernel $\chi(z,z')$ is presented in
 Appendix C for theoretical completeness. It is not used in this version but
@@ -387,81 +307,11 @@ residuals from the $\Lambda$CDM prediction ($\alpha = 1$).
 Using the public DESI DR2 BAO data (arXiv:2503.14738, Table 1), the Maximum
 Likelihood Estimation (MLE) yields a definitive null result:
 
-|
- Model           
-|
- $\theta$ 
-|
- $\sigma_X$         
-|
- $\omega_R$ 
-|
- $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM 
-|
- AIC    
-|
- BIC    
-|
-|
-:----------------
-|
-:--------:
-|
-:------------------:
-|
-:----------:
-|
-:--------------------------------------:
-|
-:------:
-|
-:------:
-|
-|
- $\Lambda$CDM    
-|
- —        
-|
- —                  
-|
- —          
-|
- 0.00 (ref)                             
-|
- ref    
-|
- ref    
-|
-|
- H0: OU free MLE 
-|
- 0.0010   
-|
- $5 \times 10^{-5}$ 
-|
- 0 (fixed)  
-|
- 0.00                                   
-|
- −50.03 
-|
- −50.14 
-|
-|
- H1: QNM free MLE
-|
- 0.0010   
-|
- $5 \times 10^{-5}$ 
-|
- 0.0000     
-|
- 0.00                                   
-|
- −48.03 
-|
- −48.19 
-|
+| Model           | $\theta$ | $\sigma_X$         | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | AIC    | BIC    |
+|:----------------|:--------:|:------------------:|:----------:|:--------------------------------------:|:------:|:------:|
+| $\Lambda$CDM    | —        | —                  | —          | 0.00 (ref)                             | ref    | ref    |
+| H0: OU free MLE | 0.0010   | $5 \times 10^{-5}$ | 0 (fixed)  | 0.00                                   | −50.03 | −50.14 |
+| H1: QNM free MLE| 0.0010   | $5 \times 10^{-5}$ | 0.0000     | 0.00                                   | −48.03 | −48.19 |
 
 **Interpretation:** The optimizer drives the stochastic amplitude to the
 numerical floor ($\sigma_X \to 0$) and the QNM frequency to zero
@@ -521,51 +371,11 @@ We computed the whitened BAO residuals $\mathbf{y} = L^{-1}\mathbf{r}$, where
 $C_\text{std} = LL^\top$ (Cholesky), using the publicly released isotropic
 $\alpha$ values from DESI DR2 (7 bins):
 
-|
- Lag 
-|
- Observed (DR2) 
-|
- OU Prediction ($\theta = 1.2$) 
-|
- 95% CI  
-|
-|
-:---:
-|
-:--------------:
-|
-:------------------------------:
-|
-:-------:
-|
-|
- 1   
-|
- $-0.9579$      
-|
- $+0.83$                        
-|
- $\pm 0.98$ 
-|
-|
- 2   
-|
- $+0.9198$      
-|
- $+0.85$                        
-|
- $\pm 0.98$ 
-|
-|
- 3   
-|
- $-0.9195$      
-|
- $+0.85$                        
-|
- $\pm 0.98$ 
-|
+| Lag | Observed (DR2) | OU Prediction ($\theta = 1.2$) | 95% CI  |
+|:---:|:--------------:|:------------------------------:|:-------:|
+| 1   | $-0.9579$      | $+0.83$                        | $\pm 0.98$ |
+| 2   | $+0.9198$      | $+0.85$                        | $\pm 0.98$ |
+| 3   | $-0.9195$      | $+0.85$                        | $\pm 0.98$ |
 
 ### 6.3 Interpretation
 
@@ -680,55 +490,13 @@ unless additional screening mechanisms suppress the observable variation.
 
 ## 8. Status of the Stochastic Model
 
-|
- Criterion 
-|
- Condition for Exclusion 
-|
- Status under DESI DR2 
-|
-|
-:----------
-|
-:-----------------------:
-|
-:---------------------:
-|
-|
- F1 (Variance floor) 
-|
- $\sigma_X \to 0$ under free MLE 
-|
- Consistent with null 
-|
-|
- F2 (QNM frequency) 
-|
- $\omega_R \to 0$ under free MLE 
-|
- Consistent with null 
-|
-|
- F3 (Lag correlations) 
-|
- Predicted positive lags absent 
-|
- Consistent with null (artefact confirmed) 
-|
-|
- F4 (AIC/BIC) 
-|
- $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM 
-|
- Inconclusive ($N=7$) 
-|
-|
- F5 (Degeneracy) 
-|
- $\sigma_X = 0$ when $w_0, w_a$ are free 
-|
- Not checked 
-|
+| Criterion | Condition for Exclusion | Status under DESI DR2 |
+|:----------|:-----------------------:|:---------------------:|
+| F1 (Variance floor) | $\sigma_X \to 0$ under free MLE | Consistent with null |
+| F2 (QNM frequency) | $\omega_R \to 0$ under free MLE | Consistent with null |
+| F3 (Lag correlations) | Predicted positive lags absent | Consistent with null (artefact confirmed) |
+| F4 (AIC/BIC) | $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM | Inconclusive ($N=7$) |
+| F5 (Degeneracy) | $\sigma_X = 0$ when $w_0, w_a$ are free | Not checked |
 
 **Conclusion:** The stochastic model is not favored by the current DESI DR2 BAO
 data, and we place a phenomenological upper limit on its amplitude. A definitive
@@ -902,50 +670,10 @@ $$\omega_{R,\text{min}} = \frac{2\pi}{\Delta x}.$$
 Any oscillation with $\omega_R < \omega_{R,\text{min}}$ produces less than one
 visible cycle and is indistinguishable from a pure OU trend.
 
-|
- Survey       
-|
- $z$ range        
-|
- $\Delta x$ 
-|
- $\omega_{R,\text{min}}$ 
-|
- Can see $\omega_R = 8$? 
-|
-|
-:-------------
-|
-:----------------:
-|
-:----------:
-|
-:-----------------------:
-|
-:-----------------------:
-|
-|
- DESI DR2     
-|
- $[0.295, 2.330]$ 
-|
- 0.944      
-|
- 6.66                    
-|
- ✓ Yes                   
-|
-|
- Euclid DR1   
-|
- $[0.9, 1.8]$     
-|
- 0.388      
-|
- 16.2                    
-|
- ✗ No (geometric limit)  
-|
+| Survey       | $z$ range        | $\Delta x$ | $\omega_{R,\text{min}}$ | Can see $\omega_R = 8$? |
+|:-------------|:----------------:|:----------:|:-----------------------:|:-----------------------:|
+| DESI DR2     | $[0.295, 2.330]$ | 0.944      | 6.66                    | ✓ Yes                   |
+| Euclid DR1   | $[0.9, 1.8]$     | 0.388      | 16.2                    | ✗ No (geometric limit)  |
 
 **Implication:** If the true dark-energy kernel is QNM with $\omega_R \sim 8$,
 DESI can detect it but Euclid DR1 geometrically cannot — regardless of
