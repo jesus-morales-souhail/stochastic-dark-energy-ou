@@ -642,7 +642,7 @@ For N = 7 bins, the standard error is \(\sigma_\rho \approx 1/\sqrt{N-3} \approx
 
 Crucially, the alternating pattern (−0.96, +0.92, −0.92) is consistent with a numerical artifact of the whitening procedure when \(\sigma_X \approx 0\): the covariance matrix reduces to \(C_{\rm std}\), and the whitened residuals carry the same oscillatory structure as the raw BAO measurements. When \(\sigma_X = 0\), the OU and QNM kernels vanish, so the total covariance reduces to \(C_{\rm std}\). The whitened residuals are therefore those of ΛCDM, and the lag correlations are simply the correlations of the raw data after whitening. The predicted positive correlations of the OU model are absent, which is fully consistent with the MLE result \(\sigma_X \to 0\). The data show no correlated stochastic noise.
 
-The absence of signal in both the likelihood and the lag correlations rules out the OU/QNM stochastic model with current DESI DR2 precision. This conclusion is independent of the large uncertainties: the model predicts a specific sign and structure that is not observed.
+"The absence of signal in both the likelihood and the lag correlations is inconsistent with the predictions of the OU/QNM stochastic model. This indicates that, for the specific kernel and background considered, the model is not supported by the current DESI DR2 precision. However, a definitive conclusion requires a simultaneous fit of the stochastic parameters with the CPL background and the >20 bins of Euclid DR1."
 
 ---
 
