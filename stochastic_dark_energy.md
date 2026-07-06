@@ -634,15 +634,14 @@ We computed the whitened BAO residuals using the publicly released isotropic \(\
 | 2   | **+0.92** | +0.85 | ±1.0 |
 | 3   | **-0.92** | +0.85 | ±1.0 |
 
-**Note:** The "DR2" column shows the observed lag correlations of the whitened residuals. Since the MLE fit gives \(\sigma_X = 0\), the OU and QNM models predict exactly the same lag correlations as ΛCDM (i.e., they are identical to the observed values because they just replicate the data covariance). The predicted positive correlations of the OU model are completely absent.
-
+Note: The "DR2" column shows the observed lag correlations of the whitened residuals. When \(\sigma_X = 0\), the OU and QNM kernels vanish, so the total covariance reduces to \(C_{\rm std}\). The predicted lag correlations are therefore those of ΛCDM (i.e., zero after whitening). The observed values are the result of the whitening of the raw data and are consistent with zero within the large error bars.
 ### 6.3 Interpretation
 
 For N = 7 bins, the standard error is \(\sigma_\rho \approx 1/\sqrt{N-3} \approx 0.5\), giving a 95% confidence interval of approximately ±1.0. The observed lag correlations in DR2 fluctuate wildly ((-0.96), (+0.92), (-0.92)), but all are consistent with zero within the large error bars. None of the measured lags are individually significant at 95% confidence.
 
 Crucially, the alternating pattern (−0.96, +0.92, −0.92) is consistent with a numerical artifact of the whitening procedure when \(\sigma_X \approx 0\): the covariance matrix reduces to \(C_{\rm std}\), and the whitened residuals carry the same oscillatory structure as the raw BAO measurements. When \(\sigma_X = 0\), the OU and QNM kernels vanish, so the total covariance reduces to \(C_{\rm std}\). The whitened residuals are therefore those of ΛCDM, and the lag correlations are simply the correlations of the raw data after whitening. The predicted positive correlations of the OU model are absent, which is fully consistent with the MLE result \(\sigma_X \to 0\). The data show no correlated stochastic noise.
 
-"The absence of signal in both the likelihood and the lag correlations is inconsistent with the predictions of the OU/QNM stochastic model. This indicates that, for the specific kernel and background considered, the model is not supported by the current DESI DR2 precision. However, a definitive conclusion requires a simultaneous fit of the stochastic parameters with the CPL background and the >20 bins of Euclid DR1."
+The absence of signal in both the likelihood and the lag correlations is inconsistent with the predictions of the OU/QNM stochastic model. This indicates that, for the specific kernel and background considered, the model is not supported by the current DESI DR2 precision. However, a definitive conclusion requires a simultaneous fit of the stochastic parameters with the CPL background and the >20 bins of Euclid DR1.
 
 ---
 
@@ -681,6 +680,8 @@ m_{\phi} < 9.45 \times 10^{-14} \text{ GeV} \implies m_{\phi} \lesssim 9.45 \tim
 \]
 
 This result demonstrates that for the vacuum to remain as smooth as demanded by DESI DR2 data, the underlying field must be ultralight (\(m_{\phi} \lesssim 10^{-5} \text{ eV}\)). This explicitly constrains the dark energy candidate to the ultra-low-frequency boson regime, indicating a high degree of spatial coherence (a macroscopically large Compton wavelength \(\lambda_C \gtrsim 2.1 \text{ mm}\)) that effectively screens out any stochastic granularity within the 7 observed BAO bins.
+
+The upper limit \(\sigma_X < 1.5 \times 10^{-4}\) is a conservative estimate based on the numerical floor of the MLE (\(\sigma_X \approx 5 \times 10^{-5}\)), multiplied by a factor of 3 to account for the flatness of the likelihood in \(\sigma_X\) with only 7 bins. A formal 95% CL profile likelihood scan over \(\sigma_X\) is deferred to Euclid DR1; with the current dataset, the likelihood is dominated by the optimizer's numerical floor.
 
 ### 7.2 Implications for Models of Dark Energy
 
