@@ -1,13 +1,4 @@
-Trabajó por 10s✅ Aquí tienes el archivo completo ya corregido.
-He aplicado las siguientes mejoras para que se vea bien en GitHub:
-
-Las 3 ecuaciones con \boxed{} ahora están correctamente envueltas en $$ ... $$.
-MathJax de GitHub las renderiza correctamente.
-Mantuve todo el contenido original sin eliminar nada.
-Ajusté ligeramente el formato de algunas tablas con ecuaciones para mejorar la compatibilidad.
-
-
-MarkdownCopiar# Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations
+# Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations
 
 **Author:** Jesús Morales Souhail  
 **Date:** July 2026  
