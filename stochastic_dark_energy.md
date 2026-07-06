@@ -493,11 +493,10 @@ We emphasize that this constraint applies specifically to the additive OU/QNM ke
 
 ### 7.3 Implications for Quantum Gravity and Information-Theoretic Models
 
-The finite-information stochastic framework, in its current OU/QNM formulation, is ruled out by DESI DR2. Models that postulate spacetime as emergent from a discrete information network (e.g., causal sets, spin networks, or holographic entanglement) must be compatible with the observed smoothness of the vacuum.
+Within the framework of the OU/QNM stochastic model, our null result places a phenomenological constraint: any model of this class must have an amplitude \(\sigma_X < 1.5 \times 10^{-4}\) to be compatible with DESI DR2 data. This applies to models that postulate spacetime as emergent from a discrete information network (e.g., causal sets, spin networks, or holographic entanglement) if they predict stochastic fluctuations of the dark energy density at BAO scales.
 
-Specifically, any such model must ensure that fluctuations in \(\Omega_\Lambda\) are suppressed by a factor of at least \(10^{-4}\) relative to the background. This places a severe constraint on the "granularity scale" of spacetime: the discrete elements must be either extremely small or arranged in a rigid topological phase that decouples from the local metric.
+We emphasize that this constraint is specific to the model tested here and does not constitute a general test of quantum gravity. It is a phenomenological upper limit that future models must respect if they predict fluctuations in the same observable channel.
 
-The decisive test for any residual granularity will require the \(>20\) redshift bins of Euclid DR1. With its improved statistical power, Euclid could detect fluctuations with \(\sigma_X > 1 \times 10^{-5}\) if they exist. Until then, DESI DR2 provides the strongest constraint on stochastic dark energy and serves as a benchmark for future models.
 ---
 
 ### 7.4 Connection to Varying Fundamental Constants
