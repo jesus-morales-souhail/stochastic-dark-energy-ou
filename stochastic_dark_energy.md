@@ -699,172 +699,203 @@ Any oscillation with ω_R < ω_R,min produces <1 visible cycle and is indistingu
 
 ## Appendix E — Model-Dependent Interpretations of the Upper Limit
 
-The following sections provide theoretical interpretations of the phenomenological limit \(\sigma_X < 1.5 \times 10^{-4}\). These interpretations require additional assumptions beyond the data and should be treated as speculative.
+The following sections provide theoretical interpretations of the phenomenological limit $\sigma_X < 1.5 \times 10^{-4}$. These interpretations require additional assumptions beyond the data and should be treated as **speculative**.
 
 ### E.1 Scalar Field Mass (Canonical Quintessence)
 
-Assuming that dark energy is a canonical scalar field \(\phi\) with \(\rho_\Lambda \approx V(\phi)\) and \(\phi \sim M_{Pl}\), the limit \(\sigma_X < 1.5 \times 10^{-4}\) implies:
+Assuming that dark energy is a canonical scalar field $\phi$ with $\rho_\Lambda \approx V(\phi)$ and $\phi \sim M_{\rm Pl}$, the limit $\sigma_X < 1.5 \times 10^{-4}$ implies:
 
-\[
+$$
 m_\phi \lesssim 9.45 \times 10^{-5} \, \text{eV}.
-\]
+$$
 
-This is consistent with ultralight boson scenarios. However, this translation depends on the assumed normalization of \(\phi\) and the relation between \(\sigma_X\) and \(\delta\phi\). It is not a direct measurement from DESI data.
+This is consistent with ultralight boson scenarios. However, this translation depends on the assumed normalization of $\phi$ and the relation between $\sigma_X$ and $\delta\phi$. It is not a direct measurement from DESI data.
 
 ### E.2 Symmetries and Stochastic Dynamics (BMS, Sorkin)
 
-The theoretical framework of Axioms A1–A4 (Bekenstein-Hawking entropy, Sorkin mechanism, BMS symmetries) provides a motivation for the stochastic model used in this work. The data do not confirm or refute this framework; they only constrain the amplitude of the stochastic component if it exists. The connection between the observational limit and these theoretical ideas is a matter of interpretation, not empirical evidence.
+The theoretical framework of Axioms A1–A4 (Bekenstein–Hawking entropy, Sorkin mechanism, BMS symmetries) provides a motivation for the stochastic model used in this work. The data do not confirm or refute this framework; they only constrain the amplitude of the stochastic component if it exists. The connection between the observational limit and these theoretical ideas is a matter of interpretation, not empirical evidence.
 
 For completeness, the key equations are reproduced here:
-- The OU process: \(dX = -\theta X dx + \sigma dW_x\).
-- The stochastic continuity equation: \(\frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t)\).
-- The BMS charge fluctuations: \(S_\xi(\omega) = \frac{\sigma^2}{2\theta} \cdot \frac{1}{1 + (\omega/\theta)^2}\).
 
-These are formal structures that are compatible with the data when \(\sigma_X \to 0\), but they are not derived from the data.
+- The OU process:  
+  $$
+  dX = -\theta \, X \, dx + \sigma \, dW_x.
+  $$
 
+- The stochastic continuity equation:  
+  $$
+  \frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t).
+  $$
+
+- The BMS charge fluctuation spectrum:  
+  $$
+  S_\xi(\omega) = \frac{\sigma^2}{2\theta} \, \frac{1}{1 + (\omega/\theta)^2}.
+  $$
+
+These are formal structures that are compatible with the data when $\sigma_X \to 0$, but they are not derived from the data.
 ---
 
 ## Appendix F — Exact Correlation Function of Dark Energy Fluctuations
 
-This appendix derives the exact two-point correlation function of the stochastic dark energy field \(\delta\rho_\Lambda(t, \mathbf{x})\) under the minimal assumptions of the model: spatial isotropy, microcausality, and the fluctuation-dissipation theorem applied to the expanding FLRW background.
+This appendix derives the exact two-point correlation function of the stochastic dark energy field $\delta\rho_\Lambda(t, \mathbf{x})$ under the minimal assumptions of the model: spatial isotropy, microcausality, and the fluctuation–dissipation theorem applied to the expanding FLRW background.
 
 ### F.1 Definition of the Field and Symmetry Conditions
 
 Define the fractional fluctuation field:
 
-\[
+$$
 X(x, \mathbf{x}) \equiv \frac{\delta\rho_\Lambda(x, \mathbf{x})}{\rho_{\Lambda,0}},
-\]
+$$
 
-where \(x = \ln a\) is the logarithmic scale factor. The two-point correlation function is:
+where $x = \ln a$ is the logarithmic scale factor. The two-point correlation function is:
 
-\[
-\Xi(x_1, x_2; \mathbf{r}) \equiv \langle X(x_1, \mathbf{x}_1) X(x_2, \mathbf{x}_2) \rangle, \qquad \mathbf{r} = \mathbf{x}_1 - \mathbf{x}_2.
-\]
+$$
+\Xi(x_1, x_2; \mathbf{r}) \equiv \langle X(x_1, \mathbf{x}_1) \, X(x_2, \mathbf{x}_2) \rangle,
+\qquad \mathbf{r} = \mathbf{x}_1 - \mathbf{x}_2.
+$$
 
 The field must satisfy:
 
-1. **Spatial isotropy and homogeneity:** \(\Xi\) depends only on the comoving distance \(r = |\mathbf{r}|\), not on the direction.
-2. **Microcausality:** \(\Xi(x_1, x_2; r) = 0\) if the interval is spacelike, i.e., if \(\Delta x^2 - (aH)^2 r^2 > 0\) (in the limit of small fluctuations).
-3. **Fluctuation-dissipation balance:** The field obeys a linear Langevin equation with damping \(\theta\) and white noise \(\sigma\).
+1. **Spatial isotropy and homogeneity:** $\Xi$ depends only on the comoving distance $r = |\mathbf{r}|$, not on the direction.
+2. **Microcausality:** $\Xi(x_1, x_2; r) = 0$ if the interval is spacelike, i.e., if $\Delta x^2 - (aH)^2 r^2 > 0$ (in the limit of small fluctuations).
+3. **Fluctuation–dissipation balance:** The field obeys a linear Langevin equation with damping $\theta$ and white noise $\sigma$.
 
 ### F.2 Stochastic Continuity Equation in Fourier Space
 
 Due to spatial homogeneity, we Fourier transform:
 
-\[
+$$
 X(x, \mathbf{x}) = \int \frac{d^3k}{(2\pi)^3} \, X_k(x) \, e^{i\mathbf{k}\cdot\mathbf{x}}.
-\]
+$$
 
 The modes decouple statistically:
 
-\[
-\langle X_{k_1}(x_1) X_{k_2}(x_2) \rangle = (2\pi)^3 \delta_D(\mathbf{k}_1 + \mathbf{k}_2) \, P_X(x_1, x_2, k),
-\]
+$$
+\langle X_{k_1}(x_1) \, X_{k_2}(x_2) \rangle
+= (2\pi)^3 \, \delta_D(\mathbf{k}_1 + \mathbf{k}_2) \, P_X(x_1, x_2, k),
+$$
 
-where \(P_X\) is the temporal power spectrum. The linear Langevin equation for each mode is:
+where $P_X$ is the temporal power spectrum. The linear Langevin equation for each mode is:
 
-\[
+$$
 \frac{\partial X_k}{\partial x} + \theta(k) X_k = \sigma \, W_k(x),
-\]
+$$
 
-with \(\theta(k) = \sqrt{\theta_0^2 + (k/aH)^2}\), and \(W_k(x)\) a Gaussian white noise:
+with
 
-\[
-\langle W_{k_1}(x_1) W_{k_2}(x_2) \rangle = \delta_D(x_1 - x_2) \, \delta_D(\mathbf{k}_1 + \mathbf{k}_2).
-\]
+$$
+\theta(k) = \sqrt{\theta_0^2 + \left(\frac{k}{aH}\right)^2},
+$$
 
-The damping term \(\theta_0\) is related to the effective equation of state of dark energy via the Hubble friction, and the diffusion amplitude \(\sigma\) is the noise strength from the microscopic Sorkin mechanism.
+and $W_k(x)$ a Gaussian white noise:
+
+$$
+\langle W_{k_1}(x_1) \, W_{k_2}(x_2) \rangle
+= \delta_D(x_1 - x_2) \, \delta_D(\mathbf{k}_1 + \mathbf{k}_2).
+$$
+
+The damping term $\theta_0$ is related to the effective equation of state of dark energy via the Hubble friction, and the diffusion amplitude $\sigma$ is the noise strength from the microscopic Sorkin mechanism.
 
 ### F.3 Solution for the Power Spectrum
 
-Using the integrating factor method, the solution for \(x_2 \ge x_1\) is:
+Using the integrating factor method, the solution for $x_2 \ge x_1$ is:
 
-\[
-X_k(x_2) = X_k(x_1) e^{-\int_{x_1}^{x_2} \theta(k, x') dx'} + \sigma \int_{x_1}^{x_2} e^{-\int_{x'}^{x_2} \theta(k, x'') dx''} W_k(x') dx'.
-\]
+$$
+X_k(x_2) = X_k(x_1) e^{-\int_{x_1}^{x_2} \theta(k, x') dx'}
++ \sigma \int_{x_1}^{x_2} e^{-\int_{x'}^{x_2} \theta(k, x'') dx''} W_k(x') dx'.
+$$
 
 Under the assumption of local stationarity (fluctuations have reached equilibrium with the horizon), the two-point correlator reduces to the Green's function of the damped harmonic oscillator. The stationary power spectrum is:
 
-\[
+$$
 P_X(x_1, x_2, k) = \frac{\sigma^2}{2\theta(k)} \, \exp\left[-\theta(k) |\Delta x| \right],
-\]
+$$
 
-where \(\Delta x = x_2 - x_1\). This is the characteristic exponential decay of the Ornstein-Uhlenbeck process in the logarithmic scale.
+where $\Delta x = x_2 - x_1$. This is the characteristic exponential decay of the Ornstein–Uhlenbeck process in the logarithmic scale.
 
 ### F.4 Inverse Fourier Transform: The Exact Correlation Function
 
 We now perform the inverse Fourier transform to obtain the real-space correlation:
 
-\[
+$$
 \Xi(\Delta x, r) = \int \frac{d^3k}{(2\pi)^3} \, P_X(\Delta x, k) \, e^{i\mathbf{k}\cdot\mathbf{r}}.
-\]
+$$
 
-Using spherical coordinates in \(k\)-space:
+Using spherical coordinates in $k$-space:
 
-\[
+$$
 \Xi(\Delta x, r) = \frac{1}{2\pi^2 r} \int_0^\infty P_X(\Delta x, k) \, k \sin(kr) \, dk.
-\]
+$$
 
-Substituting \(P_X(\Delta x, k) = \frac{\sigma^2}{2\theta(k)} e^{-\theta(k)|\Delta x|}\) with \(\theta(k) = \sqrt{\theta_0^2 + (k/aH)^2}\):
+Substituting $P_X(\Delta x, k) = \frac{\sigma^2}{2\theta(k)} e^{-\theta(k)|\Delta x|}$ with $\theta(k) = \sqrt{\theta_0^2 + (k/aH)^2}$:
 
-\[
-\Xi(\Delta x, r) = \frac{\sigma^2}{4\pi^2 r} \int_0^\infty \frac{k \sin(kr)}{\sqrt{\theta_0^2 + (k/aH)^2}} \exp\left(-\sqrt{\theta_0^2 + (k/aH)^2} |\Delta x|\right) dk.
-\]
+$$
+\Xi(\Delta x, r) = \frac{\sigma^2}{4\pi^2 r}
+\int_0^\infty
+\frac{k \sin(kr)}{\sqrt{\theta_0^2 + (k/aH)^2}}
+\exp\left(-\sqrt{\theta_0^2 + (k/aH)^2} \, |\Delta x|\right) dk.
+$$
 
-This integral is a standard Laplace-Fourier transform that evaluates to a modified Bessel function of the second kind, \(K_1\). The result is:
+This integral is a standard Laplace–Fourier transform that evaluates to a modified Bessel function of the second kind, $K_1$. The result is:
 
-\[
+$$
 \boxed{
-\Xi(\Delta x, r) = \frac{\sigma^2 (aH)^2}{4\pi^2} \cdot \frac{\theta_0}{\sqrt{\Delta x^2 + (aH)^2 r^2}} \, K_1\!\left(\theta_0 \sqrt{\Delta x^2 + (aH)^2 r^2}\right).
+\Xi(\Delta x, r) =
+\frac{\sigma^2 (aH)^2}{4\pi^2}
+\cdot
+\frac{\theta_0}{\sqrt{\Delta x^2 + (aH)^2 r^2}}
+\,
+K_1\!\left(\theta_0 \sqrt{\Delta x^2 + (aH)^2 r^2}\right).
 }
-\]
+$$
 
 This is the exact correlation function of the stochastic dark energy field under the minimal linear, Gaussian, stationary assumptions.
 
 ### F.5 Limiting Cases and Physical Interpretation
 
-**Temporal limit (\(r \to 0\)):** The correlation becomes:
+**Temporal limit ($r \to 0$):** The correlation becomes:
 
-\[
-\Xi(\Delta x, 0) = \frac{\sigma^2 (aH)^2}{4\pi^2} \cdot \frac{K_1(\theta_0 |\Delta x|)}{|\Delta x|}.
-\]
+$$
+\Xi(\Delta x, 0) = \frac{\sigma^2 (aH)^2}{4\pi^2} \,
+\frac{K_1(\theta_0 |\Delta x|)}{|\Delta x|}.
+$$
 
-For large \(\Delta x\), \(K_1(z) \sim \sqrt{\pi/(2z)} e^{-z}\), so:
+For large $\Delta x$, $K_1(z) \sim \sqrt{\pi/(2z)} e^{-z}$, so:
 
-\[
+$$
 \Xi(\Delta x, 0) \propto \frac{e^{-\theta_0 |\Delta x|}}{|\Delta x|^{3/2}},
-\]
+$$
 
 recovering the exponential decay of the OU process modulated by a power-law tail from the 3D Fourier transform.
 
-**Spatial limit (\(\Delta x = 0\)):** The correlation is:
+**Spatial limit ($\Delta x = 0$):** The correlation is:
 
-\[
-\Xi(0, r) = \frac{\sigma^2 (aH)^2 \theta_0}{4\pi^2} \cdot \frac{K_1(\theta_0 aH r)}{aH r}.
-\]
+$$
+\Xi(0, r) = \frac{\sigma^2 (aH)^2 \theta_0}{4\pi^2} \,
+\frac{K_1(\theta_0 aH r)}{aH r}.
+$$
 
-For short distances (\(r \to 0\)), \(K_1(z) \sim 1/z\), so:
+For short distances ($r \to 0$), $K_1(z) \sim 1/z$, so:
 
-\[
+$$
 \Xi(0, r) \propto \frac{1}{r^2},
-\]
+$$
 
-which is the Coulomb/Newtonian propagator for a massless field in three spatial dimensions. For large distances, the exponential decay sets the correlation length \( \xi \sim 1/(\theta_0 aH)\).
+which is the Coulomb/Newtonian propagator for a massless field in three spatial dimensions. For large distances, the exponential decay sets the correlation length $\xi \sim 1/(\theta_0 aH)$.
 
 ### F.6 Extension to the QNM Oscillatory Kernel
 
 If the field has a secondary oscillatory response (e.g., the quasi-normal mode extension), the Langevin equation becomes second-order in time, introducing a complex frequency. The resulting correlation function acquires an oscillatory factor:
 
-\[
+$$
 \Xi_{\text{QNM}}(\Delta x, r) = \Xi(\Delta x, r) \cdot \cos(\omega_R \Delta x),
-\]
+$$
 
-with the same \(K_1\) radial dependence. This is the complete correlation function for the QNM extension.
+with the same $K_1$ radial dependence. This is the complete correlation function for the QNM extension.
 
 ---
 
-**Note:** The function derived above is the prediction of the minimal stochastic model. It is falsifiable with future data. If Euclid DR1 measures a correlation function that deviates from this form, it would indicate either non-linear self-interactions of the field, a breakdown of local equilibrium (time-dependent \(\theta\)), or a violation of spatial isotropy. Each scenario would point to new physics beyond the model presented here.
+**Note:** The function derived above is the prediction of the minimal stochastic model. It is falsifiable with future data. If Euclid DR1 measures a correlation function that deviates from this form, it would indicate either non-linear self-interactions of the field, a breakdown of local equilibrium (time-dependent $\theta$), or a violation of spatial isotropy. Each scenario would point to new physics beyond the model presented here.
 
 ## References
 
