@@ -724,7 +724,7 @@ For completeness, the key equations are reproduced here:
 
 - The stochastic continuity equation:  
   $$
-  \frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t).
+  \frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\,\delta\rho_\Lambda = \xi(t).
   $$
 
 - The BMS charge fluctuation spectrum:  
