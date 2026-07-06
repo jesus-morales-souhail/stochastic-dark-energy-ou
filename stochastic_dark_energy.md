@@ -369,7 +369,7 @@ where \(K_1\) is the modified Bessel function of the second kind. Any significan
 
 The kernel \(S(z) = \partial\ln D_V(z)/\partial\Omega_\Lambda\) is computed numerically along the flat direction \(\Omega_m = 1 - \Omega_\Lambda\):
 
-```python
+
 import numpy as np
 
 C_KMS = 299792.458  # km/s
