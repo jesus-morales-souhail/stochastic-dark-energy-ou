@@ -404,7 +404,7 @@ if __name__ == "__main__":
     for z in [0.51, 0.71, 0.93, 1.50]:
         print(f"z={z:.2f}, S(z)={kernel_S_iso(z):+.4f}")
 
-Appendix B — Reproducibility and Data Access
+**Appendix B — Reproducibility and Data Access
 All scripts are publicly available in the repository:
 
 ou_bao_likelihood.py — BAO likelihood, MLE fitting, lag correlations
@@ -433,6 +433,32 @@ $\Delta x = \ln(1+z_\text{max}) - \ln(1+z_\text{min}),$
 the minimum resolvable oscillation frequency is:
 $\omega_{R,\text{min}} = \frac{2\pi}{\Delta x}.$
 Any oscillation with (\omega_R < \omega_{R,\text{min}}) produces less than one visible cycle and is indistinguishable from a pure OU trend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Survey(z) range(\Delta x)(\omega_{R,\text{min}})Can see (\omega_R = 8)?DESI DR2([0.295, 2.330])0.9446.66✓ YesEuclid DR1([0.9, 1.8])0.38816.2✗ No (geometric limit)
 Implication: If the true dark-energy kernel is QNM with (\omega_R \sim 8), DESI can detect it but Euclid DR1 geometrically cannot — regardless of photometric precision. The decisive contribution of Euclid will be the amplitude (\sigma_X) and decay rate (\theta), not the oscillatory frequency.
 
@@ -593,3 +619,4 @@ References
 [9] Wald, R. M., General Relativity, University of Chicago Press (1984).
 
 Note on BMS symmetries: The connection between BMS charges [8] and the Sorkin fluctuation mechanism [4] is presented as theoretical motivation, not a derived result. A rigorous derivation is deferred to future work.
+textCopiar**
