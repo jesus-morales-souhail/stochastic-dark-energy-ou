@@ -68,7 +68,7 @@ $$
 with stationary variance
 
 $$
-\mathrm{Var}(X) = \frac{\sigma^2}{2\theta}.
+\operatorname{Var}(X) = \frac{\sigma^2}{2\theta}.
 $$
 
 The OU process captures finite memory and yields analytic redshift correlations. It is adopted as a minimal phenomenological closure.
@@ -151,7 +151,7 @@ Converting to the logarithmic scale factor \(x = \ln a\) (using \(dt = dx/H\) an
 The stationary solution has variance:
 
 $$
-\mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
+\operatorname{Var}(X) = \frac{\sigma^2}{2\theta},
 $$
 
 which is finite only when \(\theta > 0\) — i.e., when the dark energy fluid has a non-trivial equation of state that provides effective damping. For \(w_\Lambda = -1\) exactly, the damping vanishes (\(\theta \to 0\)), and the stationary variance diverges unless \(\sigma = 0\) simultaneously. This is the covariant statement that a pure cosmological constant cannot sustain finite stochastic fluctuations: either the equation of state departs from \(-1\) (as DESI DR2 suggests), or the noise amplitude must vanish.
@@ -204,7 +204,7 @@ For the numerical results in Sections 4–6, we use the discrete sensitivity ker
 | 1.484           | QSO          | 1.541                 | \(7.17 \times 10^{-3}\)       |
 | 2.330           | Ly\(\alpha\) | 1.798                 | \(8.36 \times 10^{-3}\)       |
 
-> **Note:** An exact integral susceptibility kernel \(\chi(z, z')\) is presented in Appendix C for theoretical completeness. It is **not** used in this version but provides a roadmap for v3.1.
+> **Note:** An exact integral susceptibility kernel \(\chi(z, z')\) is presented in Appendix C for theoretical completeness. It is **not** used in this version but provides a roadmap for future work.
 
 ---
 
@@ -221,13 +221,13 @@ $$
 where
 
 $$
-(C_{\text{OU}})_{ij} = S(z_i) \, S(z_j) \, \mathrm{Cov}[X(x_i), X(x_j)],
+(C_{\text{OU}})_{ij} = S(z_i) \, S(z_j) \, \operatorname{Cov}[X(x_i), X(x_j)],
 $$
 
 and
 
 $$
-\mathrm{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \, \exp\left[-\theta |x_i - x_j|\right],
+\operatorname{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \, \exp\left[-\theta |x_i - x_j|\right],
 $$
 
 modulated by the activation factor \(g(z)\).
@@ -380,7 +380,7 @@ We summarize the status of the model based on the current analysis:
 | **F2** (QNM frequency) | \(\omega_R \to 0\) under free MLE | **Consistent with null.** The fit approaches the \(\sigma_X = 0\) limit, making the QNM extension effectively degenerate with the OU/null case. |
 | **F3** (Lag correlations) | Predicted positive lags are absent | **Consistent with null.** The observed alternating pattern is the expected algebraic artifact of whitening with \(N=7\) when \(\sigma_X = 0\). |
 | **F4** (AIC/BIC) | \(\Delta\text{AIC} > 2\) favouring \(\Lambda\)CDM | **Satisfied:** \(\Delta\text{AIC} = +4.00\) (H0), \(+6.00\) (H1). The Occam penalty correctly penalizes the stochastic extension. |
-| **F5** (Degeneracy) | \(\sigma_X = 0\) when \(w_0, w_a\) are free | **Preliminary / Not robust.** When the background is left free, \(\sigma_X\) remains at the numerical floor. However, when the background is fixed to the external CPL best-fit values, a non-negligible amplitude appears (\(\sigma_X \approx 9.2 \times 10^{-3}\)). See Appendix I for details. |
+| **F5** (Degeneracy) | \(\sigma_X = 0\) when \(w_0, w_a\) are free | **Robust when background is free.** Joint MLE on the same 7 BAO bins with free \(\{w_0, w_a, \theta, \sigma_X\}\) yields best-fit near \(w_0 \approx -0.99\), \(w_a \approx -0.02\) (essentially \(\Lambda\)CDM) and \(\sigma_X \approx 4.5 \times 10^{-5}\) (numerical floor). The null result is therefore not an artifact of fixing the background. However, when the background is fixed to the external CPL values preferred by CMB+SNe, a larger amplitude appears. See Appendix I for details. |
 
 **Conclusion:** The stochastic model is not favored by the current DESI DR2 BAO data when the background is allowed to vary, and we place a phenomenological upper limit on its amplitude. A definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the \(>20\) bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.
 
@@ -466,6 +466,7 @@ def kernel_S_iso(z, H0=67.4, Ol0=0.685, delta=1e-4):
 if __name__ == "__main__":
     for z in [0.51, 0.71, 0.93, 1.50]:
         print(f"z={z:.2f}, S(z)={kernel_S_iso(z):+.4f}")
+
 This implementation is self-contained and reproduces the kernel values used in the main text.
 Appendix B — Reproducibility and Data Access
 All scripts are publicly available in the repository associated with this preprint:
@@ -494,6 +495,32 @@ $$\Delta x = \ln(1 + z_{\rm max}) - \ln(1 + z_{\rm min}),$$
 the minimum resolvable oscillation frequency is:
 $$\omega_{R, \rm min} = \frac{2\pi}{\Delta x}.$$
 Any oscillation with (\omega_R < \omega_{R, \rm min}) produces less than one visible cycle and is indistinguishable from a monotonic (pure OU) trend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Survey(z) range(\Delta x)(\omega_{R, \rm min})Can see (\omega_R = 8)?DESI DR2[0.295, 2.330]0.9446.66✓ YesEuclid DR1[0.9, 1.8]0.38816.2✗ No (geometric limit)
 Implication: If the true dark-energy kernel is QNM with (\omega_R \sim 8), DESI can detect it but Euclid DR1 geometrically cannot — regardless of photometric precision. The decisive contribution of Euclid will be the amplitude (\sigma_X) and decay rate (\theta), not the oscillatory frequency.
 Appendix E — Model-Dependent Interpretations of the Upper Limit
