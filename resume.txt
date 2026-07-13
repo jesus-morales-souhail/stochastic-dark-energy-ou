@@ -1,58 +1,77 @@
-FINAL RESULTS WITH DESI DR2 DATA (arXiv:2503.14738)
+FINAL RESULTS WITH DESI DR2 DATA
 ============================================================
-Date: July 2026
+Author: Jesús Morales Souhail
+ORCID:  0009-0000-7637-1818
+Date:   July 2026
 
-1. BAO TEST (OU + QNM)
-----------------------------------------------------
-OU pure model (H0):
-  θ = 0.001 (≈0)
-  σ_X = 5 × 10⁻⁵ (≈0)
-  ΔlogL vs ΛCDM = 0.00
-  AIC = -50.03, BIC = -50.14
+================================================================================
+1. BAO ANALYSIS — ORNSTEIN–UHLENBECK + QNM MODELS (DESI DR2)
+================================================================================
 
-QNM model (H1):
-  θ = 0.001
-  σ_X = 5 × 10⁻⁵
-  ω_R = 0.00
-  ΔlogL vs ΛCDM = 0.00
-  AIC = -48.03, BIC = -48.19
+Data: DESI DR2 BAO (arXiv:2503.14738) — 7 redshift bins
 
-CONCLUSION:
-  No evidence for stochastic fluctuations.
-  Data are fully consistent with ΛCDM or smooth CPL evolution.
-  Upper limit (95% CL): σ_X < 1.5 × 10⁻⁴
+Models tested:
+- Baseline: ΛCDM (diagonal covariance only)
+- H0: Stationary Ornstein–Uhlenbeck (OU) fluctuations
+- H1: Damped oscillatory QNM kernel
 
-2. ANGULAR CROSS-CORRELATION (DESI DR1 + Pantheon+)
-----------------------------------------------------
-Files:
-  data/desi/LRG_NGC_clustering_DR1_full.dat.fits (136.56 MB, 1.476M rows)
-  data/desi/LRG_SGC_clustering_DR1_full.dat.fits (61.3 MB, 662k rows)
-  data/pantheon/Pantheon+SH0ES.dat (complete, 1701 SNe)
+Results:
 
-NGC + SGC combined (full catalogs):
-  Galaxies used: 1,278,805
-  Overlap pixels: 67
-  r = 0.1673 ± 0.0613
-  Z ≈ 2.73 σ
-  OU prediction: 0.0227
+  OU model (H0):
+    θ     = 0.001  (≈ boundary, effectively undamped)
+    σ_X   = 5 × 10⁻⁵
+    Δlogℒ vs ΛCDM = 0.00
+    AIC = -50.03 | BIC = -50.14
 
-CONCLUSION:
-  Preliminary result; systematics not controlled.
-  DESI DR2 WEIGHT_SYS column required for controlled reanalysis.
+  QNM model (H1):
+    θ     = 0.001
+    σ_X   = 5 × 10⁻⁵
+    ω_R   = 0.00
+    Δlogℒ vs ΛCDM = 0.00
+    AIC = -48.03 | BIC = -48.19
 
-3. MD SIMULATIONS (PETase Enzyme)
-----------------------------------------------------
-- Full 50 ns trajectory.
-- Catalytic distance Ser160-C2: 0.353 ± 0.029 nm (<NAC 0.38 nm)
-- ΔG_bind: -24.36 ± 0.12 kcal/mol
-- VdW dominant: -30.38 kcal/mol
+Conclusion:
+- No statistical evidence for stochastic fluctuations in the dark energy sector.
+- The data are fully consistent with a smooth background (ΛCDM or CPL).
+- 95% CL upper limit: σ_X < 1.5 × 10⁻⁴
+- The stochastic component is driven to zero when the cosmological background is allowed to vary.
 
-4. SDE MODEL STATUS
-----------------------------------------------------
-The stochastic network model (OU/QNM) is FALSIFIED by DESI DR2.
-No stochastic noise signal in BAO.
-The result is a strict upper limit, not a detection.
+================================================================================
+2. ANGULAR CROSS-CORRELATION TEST (DESI DR1 + Pantheon+)
+================================================================================
 
-FUTURE:
-  Euclid DR1 (>20 bins, H2 2026) will decide if fluctuations exist at
-  σ_X > 1 × 10⁻⁵. The pipeline is ready to run with new data.
+Data used:
+- DESI DR1 LRG clustering catalogs (NGC + SGC)
+- Pantheon+SH0ES supernovae (1701 objects)
+
+Sample:
+- Total galaxies: 1,278,805
+- Overlap pixels: 67
+- Measured correlation: r = 0.1673 ± 0.0613 (Z ≈ 2.73σ)
+- OU model prediction: r ≈ 0.0227
+
+Status: Preliminary
+Note: Systematics not fully controlled. A reanalysis with DESI DR2 (including the WEIGHT_SYS column) is required for robust conclusions.
+
+================================================================================
+3. STOCHASTIC DARK ENERGY MODEL STATUS
+================================================================================
+
+Main result:
+The stationary stochastic model (Ornstein–Uhlenbeck + QNM) is **not favored** by DESI DR2 BAO data.
+
+- When marginalizing over the background cosmology, the stochastic amplitude is consistent with zero.
+- This constitutes a **strict upper limit**, not a detection.
+- The result supports the working hypothesis of **Late-Time Vacuum Homogeneity** at currently observable scales.
+
+Future tests:
+- Euclid DR1 (expected H2 2026) will provide >20 BAO bins, offering significantly higher sensitivity to fluctuations at the level of σ_X > 10⁻⁵.
+- The current analysis pipeline is ready to be applied to upcoming datasets.
+
+================================================================================
+NOTES
+================================================================================
+
+- All BAO results use public DESI data.
+- The molecular dynamics section (PETase enzyme) has been removed as it belongs to a separate project.
+- This document summarizes the current status of the stochastic dark energy analysis as of July 2026.
