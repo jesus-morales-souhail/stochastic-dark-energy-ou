@@ -3,7 +3,7 @@
 **Author:** Jesús Morales Souhail  
 **Date:** July 2026  
 **ORCID:** 0009-0000-7637-1818  
-**Repository:** https://github.com/AshPokemonTCG/stochastic-dark-energy-ou  
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/  
 **Status:** Preprint — not peer reviewed  
 **Type:** Theoretical synthesis
 
