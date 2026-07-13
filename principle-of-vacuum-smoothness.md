@@ -189,9 +189,9 @@ The author thanks the DESI collaboration for making the DR2 BAO data publicly av
 
 ## References
 
-[1] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations," arXiv:xxxx.xxxxx (2026).
+[1] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations," (https://github.com/AshPokemonTCG/stochastic-dark-energy-ou) (2026).
 
-[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from Quantum Fluid Instabilities and DESI DR2 Baryon Acoustic Oscillations," arXiv:yyyy.yyyyy (2026).
+[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from Quantum Fluid Instabilities and DESI DR2 Baryon Acoustic Oscillations,"(2026).
 
 [3] DESI Collaboration, "DESI DR2 Results II: Measurements of BAO and Cosmological Constraints," arXiv:2503.14738 (2025).
 
