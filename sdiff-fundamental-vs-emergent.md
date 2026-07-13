@@ -2,7 +2,7 @@
 
 **Author:** Jesús Morales Souhail  
 **Date:** July 2026  
-**Repository:** stochastic-dark-energy-ou
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ---
 
