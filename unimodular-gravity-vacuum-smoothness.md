@@ -187,7 +187,7 @@ where $V_4 = \int d^4x \sqrt{-g}$ is the total four-volume of spacetime.
 
 It is worth emphasizing the precise scope of this result. The unimodular structure ensures that local vacuum energy contributions of the form \(T_{\mu\nu} \propto g_{\mu\nu}\) are projected out by the trace-free Einstein equations. This provides a natural mechanism for suppressing inhomogeneous fluctuations in the vacuum energy density. 
 
-However, this protection does not extend to the homogeneous background evolution. A time-dependent dark energy component with equation of state \(w(z) \neq -1\) remains compatible with unimodular gravity, as long as fluctuations around this background are sufficiently suppressed. In this sense, unimodular gravity constrains the *fluctuations* of the vacuum but does not, by itself, require the background energy density to be strictly constant. For a more detailed discussion on this distinction, see `sdiff-fundamental-vs-emergent.md` §3.3.
+However, this protection does not extend to the homogeneous background evolution. A time-dependent dark energy component with equation of state \(w(z) \neq -1\) remains compatible with unimodular gravity, as long as fluctuations around this background are sufficiently suppressed. In this sense, unimodular gravity constrains the *fluctuations* of the vacuum but does not, by itself, require the background energy density to be strictly constant. For a more detailed discussion on this distinction, see `sdiff-fundamental-vs-emergent.md`
 
 ---
 
