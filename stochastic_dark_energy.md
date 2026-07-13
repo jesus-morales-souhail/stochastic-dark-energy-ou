@@ -494,32 +494,6 @@ $$\Delta x = \ln(1 + z_{\rm max}) - \ln(1 + z_{\rm min}),$$
 the minimum resolvable oscillation frequency is:
 $$\omega_{R, \rm min} = \frac{2\pi}{\Delta x}.$$
 Any oscillation with (\omega_R < \omega_{R, \rm min}) produces less than one visible cycle and is indistinguishable from a monotonic (pure OU) trend.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Survey(z) range(\Delta x)(\omega_{R, \rm min})Can see (\omega_R = 8)?DESI DR2[0.295, 2.330]0.9446.66✓ YesEuclid DR1[0.9, 1.8]0.38816.2✗ No (geometric limit)
 Implication: If the true dark-energy kernel is QNM with (\omega_R \sim 8), DESI can detect it but Euclid DR1 geometrically cannot — regardless of photometric precision. The decisive contribution of Euclid will be the amplitude (\sigma_X) and decay rate (\theta), not the oscillatory frequency.
 Appendix E — Model-Dependent Interpretations of the Upper Limit
