@@ -62,7 +62,7 @@ $$
 $$
 
 Thus the characteristic collapse time of the quantum fluid is \(t_c = \hbar / (g |\psi_0|^2)\).
-
+**
 ---
 
 ## 4. Covariance Induced by Coherent Growth
