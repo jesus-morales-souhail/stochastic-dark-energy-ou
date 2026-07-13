@@ -1,42 +1,37 @@
 # stochastic-dark-energy-ou
 
-Ornstein-Uhlenbeck model for dark energy fluctuations tested against DESI DR2 BAO data, together with a quantum fluid instability analysis.
+Testing Ornstein-Uhlenbeck fluctuations in dark energy against DESI DR2 BAO data, plus a check for tachyonic instabilities in a quantum fluid model.
 
-## Overview
+## What this repo contains
 
-This repository contains research on stochastic components in dark energy using public DESI DR2 Baryon Acoustic Oscillation data.
+This is an independent analysis using public DESI DR2 Baryon Acoustic Oscillation measurements. The goal was to see whether the data prefer any kind of stochastic component on top of dynamical dark energy.
 
-**Main scientific results:**
-- Strong null result for stationary stochastic fluctuations modeled as an Ornstein–Uhlenbeck process.
-- Exclusion of globally coherent tachyonic quantum fluid instabilities.
-- Proposal of the **Principle of Late-Time Vacuum Homogeneity**: at observable cosmological scales, the dark energy sector behaves as a perfectly smooth, non-stochastic background.
+The main findings so far are:
 
-## Main Documents
+- No sign of stationary stochastic fluctuations (Ornstein–Uhlenbeck type). When the background cosmology is allowed to vary, the amplitude of fluctuations is driven to zero.
+- A globally coherent growing tachyonic mode (from a simple quantum fluid model) is strongly disfavored by the data.
+- This leads to a working hypothesis: at the redshifts and scales currently probed by BAO, the dark energy sector appears remarkably smooth. I call this the **Principle of Late-Time Vacuum Homogeneity**.
 
-| File                                | Description |
-|-------------------------------------|-----------|
-| `stochastic-dark-energy-desi-dr2.md`         | Main paper. Ornstein–Uhlenbeck + QNM analysis with DESI DR2. Includes corrected statistical tests and the Principle of Vacuum Homogeneity. |
-| `quantum-fluid-instabilities-desi-dr2.md`                          | Companion paper testing a tachyonic quantum fluid model with Bogoliubov instability using the correct rank-1 growing covariance. |
-| `principle-of-vacuum-smoothness.md` | Short document stating the proposed principle that future theoretical models should start from σ_X = 0. |
+## Main documents
 
-## Analysis Code
+| File | Content |
+|------|---------|
+| `stochastic-dark-energy-desi-dr2.md` | Main analysis: OU + QNM models fitted to DESI DR2 |
+| `quantum-fluid-instabilities-desi-dr2.md` | Test of tachyonic instability with rank-1 growing covariance |
+| `principle-of-vacuum-smoothness.md` | Short note on the proposed principle |
 
-- `ou_bao_likelihood.py` — Main analysis pipeline (BAO likelihood, MLE fitting, lag correlations, and sensitivity kernel).
+## Code
 
-## Key Findings
+- `ou_bao_stochastic_test.py` — Main likelihood pipeline (BAO covariance with OU/QNM kernels, MLE fitting)
 
-- When the cosmological background is allowed to vary, stationary stochastic models are not favored by DESI DR2 data.
-- A globally coherent growing tachyonic mode is strongly disfavored.
-- The data support treating **σ_X = 0** as a working principle for model building in dark energy and quantum gravity.
-
-## Data Sources
+## Data
 
 - DESI DR2 BAO: https://data.desi.lbl.gov/public/
-- Pantheon+ Supernovae: https://github.com/PantheonPlusSH0ES/DataRelease
+- Pantheon+ supernovae (for cross-checks)
 
 ## Status
 
-Preprint (not peer-reviewed). Actively developed.
+This is work in progress (July 2026). Not peer-reviewed. The analysis is being extended for future datasets like Euclid DR1.
 
 ## Author
 
