@@ -68,7 +68,7 @@ $$
 with stationary variance
 
 $$
-\operatorname{Var}(X) = \frac{\sigma^2}{2\theta}.
+\mathrm{Var}(X) = \frac{\sigma^2}{2\theta}.
 $$
 
 The OU process captures finite memory and yields analytic redshift correlations. It is adopted as a minimal phenomenological closure.
@@ -151,7 +151,7 @@ Converting to the logarithmic scale factor $x = \ln a$ (using $dt = dx/H$ and de
 The stationary solution has variance:
 
 $$
-\operatorname{Var}(X) = \frac{\sigma^2}{2\theta},
+\mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
 $$
 
 which is finite only when $\theta > 0$ — i.e., when the dark energy fluid has a non-trivial equation of state that provides effective damping. For $w_\Lambda = -1$ exactly, the damping vanishes ($\theta \to 0$), and the stationary variance diverges unless $\sigma = 0$ simultaneously. This is the covariant statement that a pure cosmological constant cannot sustain finite stochastic fluctuations: either the equation of state departs from $-1$ (as DESI DR2 suggests), or the noise amplitude must vanish.
@@ -221,13 +221,13 @@ $$
 where
 
 $$
-(C_{\text{OU}})_{ij} = S(z_i) \, S(z_j) \, \operatorname{Cov}[X(x_i), X(x_j)],
+(C_{\text{OU}})_{ij} = S(z_i) \, S(z_j) \, \mathrm{Cov}[X(x_i), X(x_j)],
 $$
 
 and
 
 $$
-\operatorname{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \, \exp\left[-\theta |x_i - x_j|\right],
+\mathrm{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \, \exp\left[-\theta |x_i - x_j|\right],
 $$
 
 modulated by the activation factor $g(z)$.
