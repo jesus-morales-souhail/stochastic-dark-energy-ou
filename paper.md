@@ -84,9 +84,6 @@ $$
 $$
 
 where $t_c$ is the characteristic collapse time of the quantum fluid.
-
----
-
 ## 4. Stochastic Evolution and Variance of $\Omega_\Lambda$
 
 In the linear regime, the density fluctuations evolve as
