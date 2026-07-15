@@ -1,11 +1,10 @@
 """
-Cosmological mapping FROM FIRST PRINCIPLES using ONLY:
-  - canonical numbers from stochastic-dark-energy-ou (GitHub + local paper)
-  - standard LCDM integrals with the paper fiducial (H0, Om)
-  - QuTiP law measured in this project: t_1/2(|<a^2>|) = ln2 / gamma
+Cosmological mapping of desqueezing half-life to OU mean-reversion.
 
-NO illustrative A0=0.01. Seed amplitude from repo Axiom A2 / quantum-fluid paper:
-  sigma_0 ~ 1/sqrt(N) ~ 10^{-61}  (N ~ 10^{122} Bekenstein-Hawking)
+Uses the published fiducial cosmology and DESI anchors of this repository,
+standard flat LCDM time integrals, and the QuTiP result
+t_1/2(|<a^2>|) = ln(2)/gamma. The vacuum seed amplitude is the
+Bekenstein-Hawking / Sorkin scale sigma_0 ~ 1/sqrt(N) ~ 10^{-61}.
 """
 
 from __future__ import annotations
@@ -16,7 +15,7 @@ import numpy as np
 from scipy.integrate import quad
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RESULTS = os.path.join(ROOT, "results", "cosmological_mapping_from_repo")
+RESULTS = os.path.join(ROOT, "results", "cosmological_mapping")
 DOCS = os.path.join(ROOT, "docs")
 os.makedirs(RESULTS, exist_ok=True)
 
@@ -300,20 +299,20 @@ def main():
             w.writeheader()
             w.writerows(rows)
 
-    write_csv(os.path.join(RESULTS, "table1_theta_from_repo.csv"), table1)
-    write_csv(os.path.join(RESULTS, "table2_A0_required_vs_Sorkin.csv"), table2)
-    write_csv(os.path.join(RESULTS, "table3_page_scrambling_repo_S.csv"), table3)
-    write_csv(os.path.join(RESULTS, "table4_DESI_S_z_repo.csv"), table4)
+    write_csv(os.path.join(RESULTS, "table1_theta.csv"), table1)
+    write_csv(os.path.join(RESULTS, "table2_A0_required.csv"), table2)
+    write_csv(os.path.join(RESULTS, "table3_page_scrambling.csv"), table3)
+    write_csv(os.path.join(RESULTS, "table4_DESI_S_z.csv"), table4)
 
-    summary_path = os.path.join(RESULTS, "FROM_REPO_mapping_resumen.txt")
+    summary_path = os.path.join(RESULTS, "mapping_summary.txt")
     with open(summary_path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
 
     # Update mapping_tables.md with FIRST PRINCIPLES version
-    md_path = os.path.join(DOCS, "mapping_tables_from_repo.md")
+    md_path = os.path.join(DOCS, "mapping_tables.md")
     with open(md_path, "w", encoding="utf-8") as f:
         f.write("# First-Principles Mapping Tables (repo anchors only)\n\n")
-        f.write("**No illustrative \(A_0=0.01\).** Seed: \(\\sigma_0\\sim 10^{-61}\) (repo Axiom A2 / GPE paper).\n\n")
+        f.write("**Seed \(A_0=0.01\).** Seed: \(\\sigma_0\\sim 10^{-61}\) (repo Axiom A2 / GPE paper).\n\n")
         f.write(f"Fiducial: \(H_0={H0_KMS}\), \(\\Omega_m={OM}\), \(t_0={t0:.3f}\\,\\mathrm{{Gyr}}\).\n\n")
         f.write("## Table 1 — \(\\theta\) from repo → \(\\gamma\), \(t_{1/2}\), Sorkin residual\n\n")
         f.write("| Case | \(\\theta\) | \(\\gamma\) [1/Gyr] | \(t_{1/2}\) [Gyr] | \(\\sigma_{\\rm res}\) (DESI path) |\n")

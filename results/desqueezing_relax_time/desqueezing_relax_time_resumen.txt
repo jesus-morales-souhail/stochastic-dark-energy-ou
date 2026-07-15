@@ -1,41 +1,18 @@
-=== Des-squeezing / tiempo de relajación ===
-N=150, r=1.5, omega=2.4
-Métrica: t_½ de |⟨a²⟩| (correlador anómalo; robusto a rotación q/p)
+Desqueezing relaxation time — summary
+=====================================
+Parameters: N = 150, r = 1.5, omega = 2.4
+Metric: half-life of |<a^2>|(t) (anomalous correlator)
 
-RESULTADO PRINCIPAL (simulación):
-  |⟨a²⟩|(t) ∝ exp(-γ t)     [independiente de n_th en el rango explorado]
-  t_½ = ln(2) / γ
-  Verificación: γ · t_½ = ln(2) = 0.6931  (error < 0.05% en todos los γ)
+Result:
+  |<a^2>|(t) ∝ exp(-gamma t)
+  t_1/2 = ln(2) / gamma
+  Verified: gamma * t_1/2 = ln(2) ≈ 0.6931  (relative error < 0.05%)
 
-Dependencia en n_th:
-  NO afecta t_½ del correlador anómalo (todas las curvas se superponen).
-  SÍ fija el suelo térmico: Var(q)_ss = n_th + 1/2
-  (baño más caliente → más ruido residual, misma tasa de pérdida de squeeze)
+n_th dependence:
+  Does not change t_1/2 of |<a^2>|.
+  Sets the thermal floor Var(q)_ss = n_th + 1/2.
 
---- Conexión con stochastic-dark-energy-ou ---
-OU: dX = -θ X dx + σ dW  →  tiempo de correlación τ_OU = 1/θ
-Diccionario de escalas:
-  θ  ↔  γ          (tasa de restauración / mean-reversion)
-  σ  ↔  ruido del baño (n_th; fija el floor, no el t_½ del squeeze)
-  σ_X residual cosmológico ↔  profundidad de perturbación residual del vacío
-SDiff emergente ⇒ τ_relax = ln2/γ finito tras perturbación del vacío.
-SDiff fundamental ⇒ σ_X=0 exacto (sin acoplar ruido local a la geometría).
-Límite cosmológico memorizado: σ_X < 1.5e-4 (95% CL, DESI DR2).
-Predicción cuantitativa: t_relax ∝ 1/γ  (confirmado; NO ∝ 1/[γ(1+2n_th)] para |a²|).
-
-Tabla (gamma, n_th, gamma_eff, t_half_a2, t_half_theory):
-  γ= 0.60  n_th=0.10  γ_eff= 0.720  t½=1.15525  t½_th=0.96270
-  γ= 1.20  n_th=0.10  γ_eff= 1.440  t½=0.57764  t½_th=0.48135
-  γ= 2.40  n_th=0.10  γ_eff= 2.880  t½=0.28883  t½_th=0.24068
-  γ= 3.60  n_th=0.10  γ_eff= 4.320  t½=0.19257  t½_th=0.16045
-  γ= 4.80  n_th=0.10  γ_eff= 5.760  t½=0.14446  t½_th=0.12034
-  γ= 2.40  n_th=0.00  γ_eff= 2.400  t½=0.28883  t½_th=0.28881
-  γ= 2.40  n_th=0.05  γ_eff= 2.640  t½=0.28883  t½_th=0.26256
-  γ= 2.40  n_th=0.30  γ_eff= 3.840  t½=0.28883  t½_th=0.18051
-  γ= 2.40  n_th=0.50  γ_eff= 4.800  t½=0.28883  t½_th=0.14441
-  γ= 2.40  n_th=1.00  γ_eff= 7.200  t½=0.28883  t½_th=0.09627
-
-figura: /home/ashpokemon/proyectos/simulaciones_cuanticas/results/desqueezing_relax_time/desqueezing_relax_time.png
-csv:    /home/ashpokemon/proyectos/simulaciones_cuanticas/results/desqueezing_relax_time/t_relax_tabla.csv
-npz:    /home/ashpokemon/proyectos/simulaciones_cuanticas/results/desqueezing_relax_time/t_relax_series.npz
-memoria repo: docs/MEMORIA_REPO_stochastic-dark-energy-ou.md
+Cosmological dictionary:
+  theta  <->  gamma     (mean-reversion / restoration rate)
+  n_th   <->  residual noise floor (not the half-life)
+  See notes/desqueezing-relaxation-vacuum-fluctuations-note.md

@@ -5,19 +5,19 @@ __pycache__/
 .Python
 *.egg-info/
 
-# OS / Windows junk
-*:Zone.Identifier
+# OS
 .DS_Store
 Thumbs.db
+*:Zone.Identifier
 
-# Local-only bulk (kept on disk for the author; not for GitHub visitors)
+# Local working material (not part of the public release)
 local_archive/
 data/
 drafts/
 literature/
 outreach/
 
-# Large binary results optional
+# Optional large binaries
 results/**/*.npz
 results/**/*_datos.npz
 

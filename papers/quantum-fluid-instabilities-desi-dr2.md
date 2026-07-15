@@ -175,7 +175,7 @@ The author thanks the DESI collaboration for making the DR2 BAO data publicly av
 
 [1] DESI Collaboration, "DESI DR2 Results II: Measurements of BAO and Cosmological Constraints," arXiv:2503.14738 (2025).
 
-[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein‑Uhlenbeck Fluctuations," arXiv:xxxx.xxxxx (2026).
+[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein‑Uhlenbeck Fluctuations," in preparation (2026).
 
 [3] Khamehchi, M. A. et al., "Negative‑Mass Hydrodynamics in a Spin‑Orbit–Coupled Bose‑Einstein Condensate," Phys. Rev. Lett. **118**, 155301 (2017).
 

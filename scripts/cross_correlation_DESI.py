@@ -13,7 +13,7 @@ from astropy.table import Table
 from astropy.cosmology import FlatLambdaCDM
 import astropy.units as u
 from scipy import stats, interpolate
-import os, sys, time  # moved up
+import os, sys, time
 
 # ============================================================
 # CONFIGURACIÓN GLOBAL

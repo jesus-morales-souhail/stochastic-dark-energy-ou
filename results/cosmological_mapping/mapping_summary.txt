@@ -1,0 +1,14 @@
+Cosmological mapping summary
+============================
+Fiducial: H0 = 67.4 km/s/Mpc, Omega_m = 0.315 (flat LCDM)
+QuTiP law: t_1/2 = ln(2) / gamma  (independent of n_th for |<a^2>|)
+
+Mapping A (z=0):  gamma = theta * H0
+Mapping B (OU):   Delta x_1/2 = ln(2) / theta
+
+DESI anchors (this repository):
+  sigma_X < 1.5e-4 (95% CL)
+  MLE floor: theta ~ 1e-3, sigma_X ~ 5e-5
+  Seed: sigma_0 ~ 1e-61 (Sorkin / Bekenstein-Hawking)
+
+See notes/mapping_tables.md and notes/desqueezing-relaxation-vacuum-fluctuations-note.md.

@@ -43,7 +43,6 @@ papers/       English scientific notes (primary reading)
 scripts/      Runnable analysis code
   desqueezing/   QuTiP Lindblad desqueezing + cosmological mapping
   gpe/           Gross–Pitaevskii / Bogoliubov numerics
-  legacy/        Older script variants (reference only)
 figures/      PNG figures referenced in the notes
 results/      Numerical tables and figure data for desqueezing
 notes/        Desqueezing synthesis note and mapping tables
@@ -87,7 +86,7 @@ python scripts/ou_bao_stochastic_test.py
 python scripts/desqueezing/desqueezing_relax_time.py
 
 # First-principles cosmological mapping tables
-python scripts/desqueezing/cosmological_mapping_from_repo.py
+python scripts/desqueezing/cosmological_mapping.py
 ```
 
 **Dependencies:** `numpy`, `scipy`, `matplotlib`, `astropy`, `healpy`, `qutip` (see `requirements.txt`).
@@ -97,7 +96,6 @@ python scripts/desqueezing/cosmological_mapping_from_repo.py
 ## Data sources (public)
 
 - DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · arXiv:2503.14738  
-- DESI DR1 BAO (legacy comparisons): arXiv:2404.03000  
 - Pantheon+ SN Ia (cross-correlation pipeline only)
 
 ---
