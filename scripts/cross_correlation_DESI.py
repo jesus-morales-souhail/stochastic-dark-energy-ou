@@ -1,19 +1,9 @@
 """
-TEST 2: Correlación cruzada δ_m × δΩΛ usando DESI DR2 + Pantheon+
-=================================================================
-Objetivo: detectar acoplamiento vacío-materia (extensión no-Markoviana)
+Angular cross-correlation test: galaxy overdensity × dark-energy residual proxy.
 
-Predicción del modelo OU: r_cross = 0.0227
-H_null:                   r_cross = 0
-
-Timeline estimada:
-  Día 1-2:   Descarga de datos (~5-15 GB)
-  Día 3-4:   Construcción de mapas HEALPix
-  Día 5-7:   Cross-correlación + bootstrap
-  Día 8-10:  Sistemáticos + validación
-
-Autores: [Ash + Claude Sonnet 4.6]
-Versión: 1.0
+Uses public DESI LRG clustering catalogs and Pantheon+ supernova residuals.
+See papers/stochastic-dark-energy-desi-dr2.md for scientific context.
+Author: Jesús Morales Souhail (ORCID 0009-0000-7637-1818)
 """
 
 import numpy as np

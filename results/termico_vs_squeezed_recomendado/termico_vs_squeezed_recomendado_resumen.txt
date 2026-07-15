@@ -1,0 +1,24 @@
+=== Térmico vs Squeezed (estrategia recomendada) ===
+N=150, omega=2.4, gamma=2.4, n_th=0.1
+Var(q) final térmico: 0.600000
+<n> final térmico:    0.100000
+
+--- r = 1.5 ---
+  sinh²(r) teórico:           4.533831
+  <n> inicial simulado:       4.533830
+  Var(q) teórica t=0:         0.024894
+  Var(q) simulada t=0:        0.024906
+  Error relativo Var(0):      0.0497%
+  Var(q) final squeezed:      0.600000
+  <n> final squeezed:         0.100000
+--- r = 1.8 ---
+  sinh²(r) teórico:           8.656390
+  <n> inicial simulado:       8.654801
+  Var(q) teórica t=0:         0.013662
+  Var(q) simulada t=0:        0.027272
+  Error relativo Var(0):      99.6202%
+  Var(q) final squeezed:      0.600000
+  <n> final squeezed:         0.100000
+
+figura: /home/ashpokemon/proyectos/simulaciones_cuanticas/results/termico_vs_squeezed_recomendado/termico_vs_squeezed_recomendado.png
+datos:  /home/ashpokemon/proyectos/simulaciones_cuanticas/results/termico_vs_squeezed_recomendado/termico_vs_squeezed_recomendado_datos.npz

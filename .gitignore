@@ -1,0 +1,27 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.Python
+*.egg-info/
+
+# OS / Windows junk
+*:Zone.Identifier
+.DS_Store
+Thumbs.db
+
+# Local-only bulk (kept on disk for the author; not for GitHub visitors)
+local_archive/
+data/
+drafts/
+literature/
+outreach/
+
+# Large binary results optional
+results/**/*.npz
+results/**/*_datos.npz
+
+# Editor
+.idea/
+.vscode/
+*.swp

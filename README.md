@@ -1,71 +1,135 @@
 # stochastic-dark-energy-ou
 
-Independent analysis of stochastic fluctuations in dark energy using public DESI DR2 BAO data, including tests for tachyonic quantum fluid instabilities and the gauge structure of spacetime.
+**Author:** Jesús Morales Souhail  
+**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
+**Contact:** jesus_thesimpson@hotmail.com  
+**Status:** Independent research (preprint drafts — not peer reviewed) · July 2026  
 
-## Overview
+Independent analysis of **stochastic fluctuations in the dark-energy sector** using **public DESI DR2 BAO** products. The repository contains analysis code, numerical results, and draft scientific notes on:
 
-This repository contains research on whether the late-time dark energy sector contains any detectable stochastic component. The analysis uses public DESI DR2 Baryon Acoustic Oscillation data to test both stationary (Ornstein–Uhlenbeck) and non-stationary models, as well as the implications of volume-preserving diffeomorphisms (SDiff) for the protection of the cosmological vacuum.
+1. Stationary Ornstein–Uhlenbeck (OU) and quasi-normal-mode (QNM) covariance models  
+2. Non-stationary rank-1 covariance from a tachyonic quantum-fluid (Bogoliubov) instability  
+3. Geometric protection of vacuum smoothness (volume-preserving diffeomorphisms / unimodular gravity)  
+4. Open-system **desqueezing** as a dynamical analogue of finite vacuum relaxation  
 
-## Main Findings
+All cosmological constraints use **public data only** (DESI BAO releases, Pantheon+ where noted). No proprietary catalogs are required to run the core BAO likelihood scripts.
 
-- No significant evidence is found for stationary stochastic fluctuations when the cosmological background is allowed to vary.
-- A globally coherent tachyonic quantum fluid model with negative effective mass is strongly disfavored.
-- The observed smoothness of the vacuum (\(\sigma_X < 1.5 \times 10^{-4}\)) is naturally explained by the reduction of the spacetime gauge group to volume-preserving diffeomorphisms (\(\mathrm{SDiff}(M)\)).
-- Future observations with Euclid DR1 can help distinguish whether \(\mathrm{SDiff}(M)\) is a fundamental symmetry or an emergent feature.
+---
 
-## Repository Structure
+## Why this repository exists
 
-### Scientific Documents (.md)
+This project is maintained by an **independent researcher** (not affiliated with a university department). The code and notes are published for **transparency and reproducibility**, and as a public record of ongoing work on late-time vacuum homogeneity and DESI-scale tests of stochastic dark energy.
+
+---
+
+## Main findings (summary)
+
+| Result | Detail |
+|--------|--------|
+| OU / QNM on DESI DR2 | Stochastic amplitude driven to the numerical floor when the background is free |
+| Working upper limit | \(\sigma_X < 1.5\times 10^{-4}\) (95% CL, phenomenological OU kernel) |
+| Tachyonic quantum fluid | Globally coherent growing mode **excluded** (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
+| Vacuum smoothness | Interpreted via SDiff / unimodular structure; Euclid DR1 as discriminator |
+| Desqueezing (open systems) | \(t_{1/2}(\lvert\langle a^2\rangle\rvert)=\ln 2/\gamma\); bare Sorkin seed \(\sim 10^{-61}\) is far below BAO sensitivity |
+
+Full narrative and caveats: see `papers/` and `papers/resume.txt`.
+
+---
+
+## Repository layout
+
+```
+papers/       English scientific notes (primary reading)
+scripts/      Runnable analysis code
+  desqueezing/   QuTiP Lindblad desqueezing + cosmological mapping
+  gpe/           Gross–Pitaevskii / Bogoliubov numerics
+  legacy/        Older script variants (reference only)
+figures/      PNG figures referenced in the notes
+results/      Numerical tables and figure data for desqueezing
+notes/        Desqueezing synthesis note and mapping tables
+```
+
+---
+
+## Papers (`papers/`)
 
 | File | Description |
 |------|-------------|
-| `stochastic-dark-energy-desi-dr2.md` | Main analysis paper on Ornstein–Uhlenbeck and QNM models fitted to DESI DR2 data. |
-| `quantum-fluid-instabilities-desi-dr2.md` | Paper testing tachyonic quantum fluid instabilities using rank-1 growing covariance. |
-| `principle-of-vacuum-smoothness.md` | Short note presenting the **Principle of Late-Time Vacuum Homogeneity**. |
-| `smoothness-of-the-vacuum-unimodular.md` | Theoretical discussion on unimodular gravity and vacuum smoothness. |
-| `unimodular-gravity-vacuum-smoothness.md` | More developed theoretical synthesis on unimodular gravity and the geometric origin of vacuum smoothness. |
-| `sdiff-fundamental-vs-emergent.md` | **New** — Analysis of whether volume-preserving diffeomorphisms (SDiff) are fundamental or emergent, with observational implications for Euclid DR1. |
-| `sensitivity_kernel_table.md` | Supplementary table with BAO sensitivity kernel values. |
-| `README.md` | This file. |
+| [`stochastic-dark-energy-desi-dr2.md`](papers/stochastic-dark-energy-desi-dr2.md) | Main OU/QNM analysis vs DESI DR2 |
+| [`quantum-fluid-instabilities-desi-dr2.md`](papers/quantum-fluid-instabilities-desi-dr2.md) | Tachyonic quantum fluid + rank-1 covariance (full version) |
+| [`principle-of-vacuum-smoothness.md`](papers/principle-of-vacuum-smoothness.md) | Principle of Late-Time Vacuum Homogeneity |
+| [`smoothness-of-the-vacuum-unimodular.md`](papers/smoothness-of-the-vacuum-unimodular.md) | Unimodular gravity and vacuum smoothness |
+| [`unimodular-gravity-vacuum-smoothness.md`](papers/unimodular-gravity-vacuum-smoothness.md) | Extended geometric synthesis |
+| [`sdiff-fundamental-vs-emergent.md`](papers/sdiff-fundamental-vs-emergent.md) | Fundamental vs emergent SDiff; Euclid tests |
+| [`sensitivity_kernel_table.md`](papers/sensitivity_kernel_table.md) | BAO sensitivity kernel \(S(z)\) |
+| [`resume.txt`](papers/resume.txt) | Compact numerical summary |
 
-### Python Scripts (.py)
-
-| File | Description |
-|------|-------------|
-| `ou_bao_stochastic_test.py` | Main likelihood pipeline with OU and QNM kernels, MLE fitting, and sensitivity kernel computation. |
-| `ou_bao_likelihood.py` | Core BAO likelihood functions. |
-| `cross_correlation_DESI.py` | Cross-correlation analysis between DESI galaxies and Pantheon+ supernovae. |
-| `test_desi_dr2_correlations.py` | Additional correlation tests on DESI DR2 data. |
-
-### Figures (.png)
+Supporting note:
 
 | File | Description |
 |------|-------------|
-| `Figure_1.png` | Main results figure (exclusion limits or model comparison). |
-| `Figure_2.png` | Secondary results figure. |
-| `exclusion_plot.png` | Plot showing exclusion limits on stochastic amplitude. |
-| `falsos_positivos_detectores.png` | Figure related to false-positive analysis. |
-| `gpe_negative_mass_evolution.png` | Evolution of a negative-mass Gross–Pitaevskii condensate. |
-| `gpe_negative_mass_instability.png` | Instability growth in the tachyonic quantum fluid model. |
-| `test_desi_QNM.png` | Diagnostic plot for quasi-normal mode behavior with DESI data. |
+| [`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`](notes/desqueezing-relaxation-vacuum-fluctuations-note.md) | Open-system half-life and map to \(\theta H(z)\) |
 
-### Other Files
+---
 
-| File | Description |
-|------|-------------|
-| `requirements.txt` | Python package dependencies. |
-| `resume.txt` | Internal notes and summary of results. |
+## Quick start
 
-## Data Sources
+```bash
+git clone https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou.git
+cd stochastic-dark-energy-ou
+python -m venv venv && source venv/bin/activate   # optional
+pip install -r requirements.txt
 
-- DESI DR2 BAO: https://data.desi.lbl.gov/public/
-- Pantheon+ Type Ia Supernovae (used for cross-checks)
+# Core BAO OU / QNM pipeline (public hardcoded DESI numbers; no catalog download)
+python scripts/ou_bao_stochastic_test.py
 
-## Status
+# Desqueezing relaxation scan (requires qutip)
+python scripts/desqueezing/desqueezing_relax_time.py
 
-This is independent research (July 2026). The results are not yet peer-reviewed. The project is being extended for future datasets such as Euclid DR1, with particular focus on testing the fundamental vs emergent nature of volume-preserving diffeomorphisms.
+# First-principles cosmological mapping tables
+python scripts/desqueezing/cosmological_mapping_from_repo.py
+```
 
-## Author
+**Dependencies:** `numpy`, `scipy`, `matplotlib`, `astropy`, `healpy`, `qutip` (see `requirements.txt`).
 
-Jesús Morales Souhail  
-ORCID: [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)
+---
+
+## Data sources (public)
+
+- DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · arXiv:2503.14738  
+- DESI DR1 BAO (legacy comparisons): arXiv:2404.03000  
+- Pantheon+ SN Ia (cross-correlation pipeline only)
+
+---
+
+## Reproducibility notes
+
+- Core BAO OU/QNM scripts use **published BAO summary statistics** (redshift bins, \(\alpha\), \(\sigma\)) and do not require bulk catalog access.
+- Cross-correlation scripts may request large public FITS products; see script headers.
+- Draft Word histories and bulk local data remain **off-Git** by design (see `.gitignore`) so the public tree stays lean and reviewable.
+
+---
+
+## Citation
+
+If you use this code or notes, please cite the repository and ORCID:
+
+```text
+Morales Souhail, J. (2026). stochastic-dark-energy-ou (GitHub).
+https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+ORCID: 0009-0000-7637-1818
+```
+
+---
+
+## License
+
+Code: MIT (unless otherwise noted in individual files).  
+Text: CC BY 4.0 for author-written notes.
+
+---
+
+## Contact
+
+For questions about the analysis or access to public DESI products used here:  
+**Jesús Morales Souhail** · jesus_thesimpson@hotmail.com · [ORCID](https://orcid.org/0009-0000-7637-1818)

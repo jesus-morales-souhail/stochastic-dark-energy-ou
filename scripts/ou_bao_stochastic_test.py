@@ -40,7 +40,7 @@ USAGE:
 
 OUTPUTS:
   - Console: model comparison table, fit parameters, lag correlations
-  - plots/test_desi_QNM.png: 4-panel diagnostic figure
+  - figures/test_desi_QNM.png: 4-panel diagnostic figure
 
 REFERENCES:
   [1] DESI DR1 BAO: arXiv:2404.03000 (2024)
@@ -553,5 +553,5 @@ ax4.legend(fontsize=8); ax4.grid(alpha=0.3); ax4.set_ylim(-1.25, 1.25)
 
 plt.tight_layout()
 os.makedirs('plots', exist_ok=True)
-plt.savefig('plots/test_desi_QNM.png', dpi=150, bbox_inches='tight')
-print("Figure saved: plots/test_desi_QNM.png")
+plt.savefig('figures/test_desi_QNM.png', dpi=150, bbox_inches='tight')
+print("Figure saved: figures/test_desi_QNM.png")
