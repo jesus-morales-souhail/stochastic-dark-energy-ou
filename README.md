@@ -27,7 +27,7 @@ This project is maintained by an **independent researcher** (not affiliated with
 | Result | Detail |
 |--------|--------|
 | OU / QNM on DESI DR2 | Stochastic amplitude driven to the numerical floor when the background is free |
-| Working upper limit | \(\sigma_X < 1.5\times 10^{-4}\) (95% CL, phenomenological OU kernel) |
+| Working upper limit | **σ_X < 1.5 × 10⁻⁴ (95% CL)** (phenomenological OU kernel) |
 | Tachyonic quantum fluid | Globally coherent growing mode **excluded** (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
 | Vacuum smoothness | Interpreted via SDiff / unimodular structure; Euclid DR1 as discriminator |
 | Desqueezing (open systems) | \(t_{1/2}(\lvert\langle a^2\rangle\rvert)=\ln 2/\gamma\); bare Sorkin seed \(\sim 10^{-61}\) is far below BAO sensitivity |

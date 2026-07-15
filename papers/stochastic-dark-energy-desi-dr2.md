@@ -16,8 +16,10 @@ In this paper, we test whether there is additional room for a stochastic compone
 We find that the MLE drives the stochastic amplitude to the numerical floor: $\sigma_X \to 0$ and $\omega_R \to 0$. The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a phenomenological upper limit on the amplitude of such fluctuations:
 
 $$
-\sigma_X < 1.5 \times 10^{-4} \quad \text{(95\% CL)}.
+\sigma_X < 1.5 \times 10^{-4}
 $$
+
+**(95% CL).**
 
 We caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the $>20$ bins of Euclid DR1 (expected H2 2026).
 
@@ -409,8 +411,10 @@ We have tested a specific class of stochastic dark energy models (OU and QNM) ag
 This result places a phenomenological upper limit on the amplitude of such fluctuations:
 
 $$
-\sigma_X < 1.5 \times 10^{-4} \quad \text{(95\% CL)}.
+\sigma_X < 1.5 \times 10^{-4}
 $$
+
+**(95% CL).**
 
 The upper limit translates into a constraint on the mass of a possible scalar field mediating dark energy: $m_\phi \lesssim 10^{-5}\ \text{eV}$. This is consistent with ultralight boson scenarios and with astrophysical bounds on the variation of fundamental constants ($\Delta\alpha/\alpha \lesssim 10^{-5}$ from quasar spectroscopy).
 

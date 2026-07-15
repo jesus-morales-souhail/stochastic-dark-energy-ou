@@ -14,8 +14,10 @@ At observable cosmological scales (\(z \lesssim 2.3\)) and with current baryon a
 Any physical mechanism capable of generating fluctuations in the dark energy density \(\rho_\Lambda\) — whether arising from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below the level detectable by current surveys:
 
 $$
-\sigma_X < 1.5 \times 10^{-4} \quad \text{(95\% CL)}.
+\sigma_X < 1.5 \times 10^{-4}
 $$
+
+**(95% CL).**
 
 This is not merely an observational upper limit. It is proposed as a **working principle** for theoretical model building:
 

@@ -443,7 +443,7 @@ t_{H_0}&\simeq 14.51\ \mathrm{Gyr},\\
 \Delta x_{\rm DESI}&=0.94,\\
 N&\sim 10^{122},\\
 \sigma_0&\sim 10^{-61},\\
-\sigma_X^{\rm DESI}&<1.5\times 10^{-4}\ \text{(95\% CL)},\\
+\sigma_X^{\rm DESI}&<1.5\times 10^{-4},\\
 \sigma_X^{\rm Euclid\ target}&\sim 10^{-5}.
 \end{aligned}
 $$

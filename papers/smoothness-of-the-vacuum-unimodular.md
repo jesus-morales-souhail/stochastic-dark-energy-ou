@@ -28,8 +28,10 @@ $$
 establishing a conservative upper limit [1]:
 
 $$
-\sigma_X < 1.5 \times 10^{-4} \quad \text{(95\% CL)}.
+\sigma_X < 1.5 \times 10^{-4}
 $$
+
+**(95% CL).**
 
 Moreover, a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — is excluded with high significance [2]:
 
@@ -54,8 +56,10 @@ $$
 with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
 
 $$
-\sigma_X < 1.5 \times 10^{-4} \quad \text{(95\% CL)}.
+\sigma_X < 1.5 \times 10^{-4}
 $$
+
+**(95% CL).**
 
 This is a direct, empirical statement: the dark-energy density is homogeneous to better than one part in ten thousand across the observable universe.
 
