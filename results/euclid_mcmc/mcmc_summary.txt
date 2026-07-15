@@ -1,0 +1,38 @@
+Euclid mock MCMC — vacuum-relaxation protocol
+==================================================
+N_bins=24, z in [0.90,1.80]
+walkers=28, steps=1600, discard=500, thin=3
+Tier A: fixed (w0,wa)=truth. Tier B: free {w0,wa,theta,sigma_X}.
+Note: sigma_X ~ 0.01 is used for SNR-honest recovery under ~1% BAO errors;
+literature targets 1e-5..1.5e-4 require multi-survey power beyond this mock.
+
+[null_F_E0_fixedBG] decision=borderline_or_weak
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 0.5, 'sigma_X': 1e-06}
+  sigma_X=8.41e-05 [1.292e-06,0.006087]
+  theta=0.0853 [0.00119,7.6]
+
+[null_F_E0_freeBG] decision=borderline_or_weak
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 0.5, 'sigma_X': 1e-06}
+  sigma_X=7.208e-05 [1.18e-06,0.008004]
+  theta=0.1 [0.00124,7.4]
+
+[E1_amplitude_fixedBG] decision=borderline_or_weak
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 0.1, 'sigma_X': 0.012}
+  sigma_X=0.0006253 [1.396e-06,0.008606]
+  theta=0.0888 [0.00128,7.94]
+
+[E1_amplitude_freeBG] decision=borderline_or_weak
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 0.1, 'sigma_X': 0.012}
+  sigma_X=6.667e-05 [1.236e-06,0.006857]
+  theta=0.125 [0.00134,8.03]
+
+[E2_mean_reversion_fixedBG] decision=E1_amplitude
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 1.5, 'sigma_X': 0.015}
+  sigma_X=0.008848 [0.006181,0.009952]
+  theta=0.0298 [0.00122,1.62]
+
+[E2_mean_reversion_freeBG] decision=borderline_or_weak
+  truth={'w0': -1.0, 'wa': 0.0, 'theta': 1.5, 'sigma_X': 0.015}
+  sigma_X=7.832e-05 [1.241e-06,0.0072]
+  theta=0.113 [0.00129,7.72]
+

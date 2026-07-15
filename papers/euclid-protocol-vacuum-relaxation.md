@@ -260,6 +260,50 @@ That is the sharpest Euclid-facing protocol the present framework supports witho
 
 ---
 
+
+
+---
+
+## 12. Mock MCMC validation (this repository)
+
+A reference implementation lives in `scripts/euclid_mock_mcmc.py` (emcee). It builds a 24-bin Euclid-like BAO vector (\(z\in[0.9,1.8]\)), uses the repository OU kernel, and samples either \(\{\theta,\sigma_X\}\) at fixed background or the full \(\{w_0,w_a,\theta,\sigma_X\}\).
+
+### 12.1 Sensitivity reality check
+
+With percent-level BAO uncertainties (\(\sigma_\alpha\sim 0.5\%\text{--}1.2\%\)) and \(S(z)\sim\mathcal{O}(1)\), the OU contribution \(S_i S_j\sigma_X^2\) only competes with \(C_{\rm std}\) when
+
+$$
+\sigma_X \sim \mathrm{few}\times 10^{-3}\ \text{to}\ 10^{-2}.
+$$
+
+The scientific window \(10^{-5}\text{--}1.5\times 10^{-4}\) therefore sits **below the single-mock SNR** of this simplified forecast. The published DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a claim that \(\sigma_X\sim 10^{-4}\) is a high-SNR detection scale in a 24-bin mock with \(\sim 1\%\) errors.
+
+### 12.2 What the mocks show (illustrative run)
+
+| Scenario (truth) | Fixed \((w_0,w_a)\) | Free \((w_0,w_a)\) |
+|------------------|---------------------|---------------------|
+| Null \(\sigma_X=10^{-6}\) | Posterior prior-like; no false high-\(\sigma_X\) claim | Same; background widens further |
+| E1 \(\sigma_X=0.012,\ \theta=0.1\) | Amplitude only partially recovered; \(\theta\) weakly constrained | Signal largely absorbed by background freedom |
+| E2 \(\sigma_X=0.015,\ \theta=1.5\) | Amplitude recovered at the right order; \(\theta\) still poorly pinned (kernel degeneracy) | Recovery degrades once \(w_0,w_a\) are free |
+
+**Lesson for the protocol:** always free \(\{w_0,w_a\}\) before claiming E1/E2; fixed-background fits can look artificially optimistic. Lag-shape constraints remain secondary to the full-kernel posterior on \(\theta\).
+
+### 12.3 Products
+
+| Path | Content |
+|------|---------|
+| `scripts/euclid_mock_mcmc.py` | Mock generation + emcee sampler |
+| `results/euclid_mcmc/mcmc_summary.txt` | Latest run summary |
+| `results/euclid_mcmc/mcmc_summaries.json` | Machine-readable posteriors |
+| `figures/euclid_mcmc_*_fixedBG.png` | 1D posterior panels (fixed background) |
+| `figures/euclid_mcmc_*_freeBG.png` | 1D posterior panels (free background) |
+
+```bash
+pip install emcee
+python scripts/euclid_mock_mcmc.py
+```
+
+
 ## References
 
 [1] Morales Souhail, J., DESI OU/QNM analysis, this repository.  

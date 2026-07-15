@@ -25,3 +25,5 @@ results/**/*_datos.npz
 .idea/
 .vscode/
 *.swp
+results/euclid_mcmc/*.npz
+results/euclid_mcmc/*.npy

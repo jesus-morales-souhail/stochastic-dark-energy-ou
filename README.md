@@ -89,6 +89,9 @@ python scripts/desqueezing/desqueezing_relax_time.py
 
 # First-principles cosmological mapping tables
 python scripts/desqueezing/cosmological_mapping.py
+
+# Euclid mock MCMC (protocol validation; requires emcee)
+python scripts/euclid_mock_mcmc.py
 ```
 
 **Dependencies:** `numpy`, `scipy`, `matplotlib`, `astropy`, `healpy`, `qutip` (see `requirements.txt`).
