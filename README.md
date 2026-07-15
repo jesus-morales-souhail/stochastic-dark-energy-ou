@@ -2,7 +2,7 @@
 
 **Author:** Jesús Morales Souhail  
 **ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
-**Contact:** jesus_thesimpson@hotmail.com  
+**Contact:** jmskjym@gmail.com  
 **Status:** Independent research (preprint drafts — not peer reviewed) · July 2026  
 
 Independent analysis of **stochastic fluctuations in the dark-energy sector** using **public DESI DR2 BAO** products. The repository contains analysis code, numerical results, and draft scientific notes on:
@@ -132,4 +132,4 @@ Text: CC BY 4.0 for author-written notes.
 ## Contact
 
 For questions about the analysis or access to public DESI products used here:  
-**Jesús Morales Souhail** · jesus_thesimpson@hotmail.com · [ORCID](https://orcid.org/0009-0000-7637-1818)
+**Jesús Morales Souhail** · jmskjym@gmail.com · [ORCID](https://orcid.org/0009-0000-7637-1818)
