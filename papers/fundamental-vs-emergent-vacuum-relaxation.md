@@ -195,3 +195,10 @@ That is the edge where theory, open quantum systems, and the next BAO generation
 [5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).  
 [6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).  
 [7] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
+
+---
+
+## Euclid analysis protocol
+
+A minimal pre-registered Euclid-facing fit (\(\{w_0,w_a,\theta,\sigma_X\}\), priors, E2 damping thresholds, and outcome scenarios) is given in `euclid-protocol-vacuum-relaxation.md`.
+
