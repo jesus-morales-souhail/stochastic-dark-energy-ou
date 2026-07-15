@@ -73,5 +73,4 @@ NOTES
 ================================================================================
 
 - All BAO results use public DESI data.
-- The molecular dynamics section (PETase enzyme) has been removed as it belongs to a separate project.
 - This document summarizes the current status of the stochastic dark energy analysis as of July 2026.
