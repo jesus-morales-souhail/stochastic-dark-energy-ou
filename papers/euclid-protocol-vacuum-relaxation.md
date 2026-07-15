@@ -304,6 +304,42 @@ python scripts/euclid_mock_mcmc.py
 ```
 
 
+
+
+---
+
+## 13. Joint BAO + SN mock (optimistic Euclid errors)
+
+Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
+
+**BAO:** 20 bins, \(z\in[0.9,1.8]\), optimistic forecast-style \(\sigma_\alpha\sim 0.3\%\text{--}0.7\%\).  
+**SN:** 25 compressed distance-modulus bins (relative fit; mean residual removed), shared \(\{w_0,w_a\}\).  
+**Noise sector:** OU kernel on BAO only.
+
+### Illustrative outcomes (one seed)
+
+| Scenario | Probe | \(\sigma_X\) median [2.5%, 97.5%] | \(\theta\) median | Note |
+|----------|-------|--------------------------------------:|-------------------:|------|
+| Null | BAO | \(\sim 2\times 10^{-4}\) (upper prior-like) | unconstrained | No false high-\(\sigma_X\) claim |
+| Null | BAO+SN | similar \(\sigma_X\); slightly tighter \(w_0\) | unconstrained | SN helps background |
+| E1 (\(\sigma_X=0.008,\theta=0.1\)) | BAO / joint | still weak recovery | weak | Near edge of optimistic SNR |
+| E2 (\(\sigma_X=0.012,\theta=1.5\)) | BAO | \(\sim 0.016\ [0.000,0.029]\) | poorly pinned | **Amplitude recovered at right order** |
+| E2 | BAO+SN | \(\sim 0.007\ [0.000,0.027]\) | median higher than BAO-only | SN reduces (but does not remove) DE–noise trade-off |
+
+### Conclusions for the protocol
+
+1. **Optimistic Euclid BAO errors** move the practical recovery threshold from \(\sigma_X\sim\mathrm{few}\%\) toward \(\sim 1\%\), but the literature window \(10^{-5}\text{--}10^{-4}\) remains demanding.
+2. **SN data primarily tighten \(\{w_0,w_a\}\)**; they help only indirectly with \(\theta,\sigma_X\) by limiting absorption of correlated BAO residuals into smooth DE.
+3. **Joint analysis is necessary** for honest region claims, but **not sufficient** without BAO covariance SNR.
+4. Pre-register: always report BAO-only and BAO+SN side by side.
+
+Products: `results/euclid_joint_mcmc/`, `figures/joint_mcmc_*.png`.
+
+```bash
+python scripts/euclid_joint_bao_sne_mcmc.py
+```
+
+
 ## References
 
 [1] Morales Souhail, J., DESI OU/QNM analysis, this repository.  

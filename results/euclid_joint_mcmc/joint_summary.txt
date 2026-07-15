@@ -1,0 +1,43 @@
+Joint Euclid-like BAO + SN mock MCMC
+==================================================
+BAO: optimistic forecast-style errors (~0.3–0.7% on alpha).
+SN:  25 compressed mu bins, relative fit (mean residual removed).
+Parameters: {w0, wa, theta, sigma_X} with OU kernel on BAO only.
+
+[null_F_E0_BAO_only] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 0.5, 'sigma_X': 1e-06}
+  sigma_X=0.0001889 [1.263e-06,0.01912]
+  theta=0.063 [0.00121,6.6]
+  w0=-0.974 [-1.128,-0.765]  wa=-0.114 [-1.172,0.559]
+
+[null_F_E0_BAO_SN] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 0.5, 'sigma_X': 1e-06}
+  sigma_X=0.0001112 [1.286e-06,0.01743]
+  theta=0.0698 [0.00126,7.57]
+  w0=-0.952 [-1.099,-0.772]  wa=-0.220 [-1.112,0.397]
+
+[E1_amplitude_BAO_only] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 0.1, 'sigma_X': 0.008}
+  sigma_X=0.0001693 [1.377e-06,0.01777]
+  theta=0.0613 [0.00117,7.67]
+  w0=-0.876 [-1.049,-0.658]  wa=-0.550 [-1.545,0.216]
+
+[E1_amplitude_BAO_SN] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 0.1, 'sigma_X': 0.008}
+  sigma_X=8.377e-05 [1.337e-06,0.01319]
+  theta=0.0908 [0.00125,7.79]
+  w0=-0.947 [-1.100,-0.793]  wa=-0.251 [-0.926,0.397]
+
+[E2_mean_reversion_BAO_only] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 1.5, 'sigma_X': 0.012}
+  sigma_X=0.01642 [2.328e-05,0.02935]
+  theta=0.0319 [0.00117,5.24]
+  w0=-1.235 [-1.378,-0.894]  wa=0.606 [-1.693,0.989]
+
+[E2_mean_reversion_BAO_SN] region=borderline_or_weak
+  true={'w0': -1.0, 'wa': 0.0, 'theta': 1.5, 'sigma_X': 0.012}
+  sigma_X=0.00702 [2.101e-06,0.02689]
+  theta=0.371 [0.00157,7.82]
+  w0=-1.227 [-1.322,-0.966]  wa=0.791 [-0.359,0.994]
+
+Interpretation: SN primarily tightens {w0,wa}; OU parameters still require BAO covariance SNR. Joint analysis reduces false absorption of OU signal into smooth DE when SNR is sufficient.

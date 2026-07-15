@@ -92,6 +92,9 @@ python scripts/desqueezing/cosmological_mapping.py
 
 # Euclid mock MCMC (protocol validation; requires emcee)
 python scripts/euclid_mock_mcmc.py
+
+# Joint optimistic Euclid BAO + SN mock
+python scripts/euclid_joint_bao_sne_mcmc.py
 ```
 
 **Dependencies:** `numpy`, `scipy`, `matplotlib`, `astropy`, `healpy`, `qutip` (see `requirements.txt`).
