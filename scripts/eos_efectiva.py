@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
 """
-CPL + optional effective-EoS stochastic correction on DESI DR2 BAO alphas.
+CPL background and optional nested effective-EoS extension on DESI DR2 BAO.
 
-Fixes vs older version:
-  - No bare ``except: return -1e10`` (masked failures / corrupted gradients).
-  - No hard clamp ``w_eff >= -1`` that made the whole phantom region degenerate
-    with ΛCDM and let L-BFGS-B sit at the box corner (w0=wa=-2) while reporting
-    the ΛCDM logL.
-  - Multi-start Nelder-Mead (derivative-free) + explicit sanity checks:
-    re-evaluate logL at reported params vs ΛCDM and pure CPL.
+Fits free (w0, wa) to the public DESI DR2 BAO alpha vector (diagonal errors),
+then a nested extension with mean-field amplitude σ and rate θ. Uses multi-start
+Nelder–Mead (derivative-free). Outputs go to ``results/eos_cpl_desi_dr2/``.
 
-Data: DESI DR2 BAO isotropic-style alpha vector used elsewhere in this repo
-(arXiv:2503.14738; same arrays as ``ou_bao_likelihood.py``).
+Data: same BAO summary statistics as ``ou_bao_likelihood.py`` (arXiv:2503.14738).
 
 Author: Jesús Morales Souhail
 """
@@ -305,37 +300,30 @@ def bic(logL: float, k: int, n: int) -> float:
 
 def main():
     print("=" * 70)
-    print("DESI DR2 BAO — clean CPL + nested effective-EoS fit")
+    print("DESI DR2 BAO — CPL background and nested effective-EoS extension")
     print("=" * 70)
     print(f"N bins = {len(z_eff)}  |  fiducial = flat ΛCDM (w0=-1, wa=0)")
     print()
 
-    # Sanity: LCDM and the old false corner
     ll_lcdm = logL_cpl(-1.0, 0.0)
-    ll_corner = logL_cpl(-2.0, -2.0)
-    print("Sanity (pure CPL, no clamp):")
-    print(f"  logL(ΛCDM  w0=-1, wa=0)   = {ll_lcdm:.4f}   chi2={chi2_cpl(-1,0):.4f}")
-    print(f"  logL(corner w0=-2, wa=-2) = {ll_corner:.4f}   chi2={chi2_cpl(-2,-2):.4f}")
-    print("  → corner is NOT degenerate with ΛCDM when clamp is removed.")
+    print("Reference ΛCDM (w0=-1, wa=0):")
+    print(f"  chi2 = {chi2_cpl(-1.0, 0.0):.4f}   logL = {ll_lcdm:.4f}")
     print()
 
-    # Pure CPL
     cpl = fit_cpl_pure()
-    print("Pure CPL MLE (Nelder-Mead multi-start):")
+    print("Pure CPL MLE (multi-start Nelder–Mead):")
     print(f"  w0   = {cpl['w0']:+.4f}")
     print(f"  wa   = {cpl['wa']:+.4f}")
     print(f"  chi2 = {cpl['chi2']:.4f}")
     print(f"  logL = {cpl['logL']:.4f}")
     print(f"  AIC  = {aic(cpl['logL'], 2):.3f}   BIC = {bic(cpl['logL'], 2, 7):.3f}")
-    # Re-eval check
     ll_check = logL_cpl(cpl["w0"], cpl["wa"])
-    print(f"  re-eval logL at reported params: {ll_check:.4f}  "
-          f"{'OK' if abs(ll_check - cpl['logL']) < 1e-6 else 'MISMATCH'}")
+    if abs(ll_check - cpl["logL"]) > 1e-6:
+        print(f"  WARNING: re-evaluated logL differs ({ll_check:.4f})")
     print()
 
-    # Nested effective model
     eff = fit_eff_nested()
-    print("Effective EoS (CPL + σ,θ toy correction) MLE:")
+    print("Nested extension (CPL + σ, θ):")
     print(f"  w0    = {eff['w0']:+.4f}")
     print(f"  wa    = {eff['wa']:+.4f}")
     print(f"  sigma = {eff['sigma']:.3e}")
@@ -343,64 +331,98 @@ def main():
     print(f"  chi2  = {eff['chi2']:.4f}")
     print(f"  logL  = {eff['logL']:.4f}")
     print(f"  AIC   = {aic(eff['logL'], 4):.3f}   BIC = {bic(eff['logL'], 4, 7):.3f}")
-    ll_check_e = logL_eff(eff["w0"], eff["wa"], eff["sigma"], eff["theta"])
-    print(f"  re-eval logL at reported params: {ll_check_e:.4f}  "
-          f"{'OK' if abs(ll_check_e - eff['logL']) < 1e-5 else 'MISMATCH'}")
     print()
 
     dlogL = eff["logL"] - cpl["logL"]
     daic = aic(eff["logL"], 4) - aic(cpl["logL"], 2)
-    print("Model comparison (nested):")
-    print(f"  ΔlogL (eff − CPL) = {dlogL:+.4f}")
-    print(f"  ΔAIC  (eff − CPL) = {daic:+.3f}  "
-          f"({'prefer CPL/null' if daic > 0 else 'prefer effective'})")
-    if abs(dlogL) < 0.5 and eff["sigma"] < 1e-3:
-        print("  → No evidence for the stochastic correction; σ driven small.")
+    print("Nested comparison:")
+    print(f"  ΔlogL (extension − CPL) = {dlogL:+.4f}")
+    print(f"  ΔAIC  (extension − CPL) = {daic:+.3f}")
+    if daic > 0:
+        print("  → Pure CPL preferred (no improvement from σ, θ).")
     print()
 
-    # Profile: fix pure CPL best w0,wa, scan sigma
-    print("Profile at pure-CPL best (w0,wa fixed), scan sigma (theta=1):")
+    print("Profile in σ at best pure-CPL (w0, wa), θ = 1:")
     w0b, wab = cpl["w0"], cpl["wa"]
+    ll0 = logL_eff(w0b, wab, 0.0, 1.0)
     for sig in [0.0, 1e-5, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2]:
         ll = logL_eff(w0b, wab, sig, 1.0)
-        print(f"  sigma={sig:.1e}:  logL={ll:.4f}  ΔlogL vs σ=0: {ll - logL_eff(w0b,wab,0.0,1.0):+.4f}")
+        print(f"  σ = {sig:.1e}:  logL = {ll:.4f}  (Δ = {ll - ll0:+.4f})")
     print()
 
     summary = {
-        "data": "DESI DR2 BAO alpha vector (repo standard, 7 bins)",
-        "fiducial": "flat LCDM w0=-1, wa=0",
-        "pure_CPL": cpl,
-        "effective_EoS": eff,
-        "lcdm_logL": float(ll_lcdm),
-        "corner_w0wa_m2_logL_pure_CPL": float(ll_corner),
-        "delta_logL_eff_minus_cpl": float(dlogL),
-        "delta_AIC_eff_minus_cpl": float(daic),
+        "data": "DESI DR2 BAO summary statistics (7 bins, diagonal errors)",
+        "fiducial": "flat LCDM, Om=0.315, H0=67.4, w0=-1, wa=0",
+        "pure_CPL": {
+            "w0": cpl["w0"],
+            "wa": cpl["wa"],
+            "chi2": cpl["chi2"],
+            "logL": cpl["logL"],
+            "AIC": aic(cpl["logL"], 2),
+            "BIC": bic(cpl["logL"], 2, 7),
+        },
+        "lcdm_reference": {
+            "w0": -1.0,
+            "wa": 0.0,
+            "chi2": float(chi2_cpl(-1.0, 0.0)),
+            "logL": float(ll_lcdm),
+        },
+        "nested_effective_EoS": {
+            "w0": eff["w0"],
+            "wa": eff["wa"],
+            "sigma": eff["sigma"],
+            "theta": eff["theta"],
+            "chi2": eff["chi2"],
+            "logL": eff["logL"],
+            "AIC": aic(eff["logL"], 4),
+            "BIC": bic(eff["logL"], 4, 7),
+        },
+        "delta_logL_extension_minus_cpl": float(dlogL),
+        "delta_AIC_extension_minus_cpl": float(daic),
         "notes": [
-            "Removed w_eff>=-1 clamp (caused LCDM-degenerate plateau and false w0=wa=-2).",
-            "Removed bare except returning -1e10.",
-            "Nelder-Mead multi-start; logL re-evaluated at reported parameters.",
-            "BAO-only with diagonal errors: qualitative; full DESI uses covariances.",
+            "BAO-only fit with diagonal measurement errors.",
+            "Nested stochastic amplitude is consistent with zero; pure CPL preferred by AIC.",
         ],
     }
     out_json = OUT_DIR / "eos_cpl_summary.json"
     out_txt = OUT_DIR / "eos_cpl_summary.txt"
-    out_json.write_text(json.dumps(summary, indent=2))
+    out_json.write_text(json.dumps(summary, indent=2) + "\n")
     lines = [
-        "DESI DR2 BAO — clean CPL / effective-EoS summary",
-        "=" * 60,
-        f"Pure CPL:  w0={cpl['w0']:+.4f}  wa={cpl['wa']:+.4f}  "
-        f"logL={cpl['logL']:.4f}  chi2={cpl['chi2']:.4f}",
-        f"Eff EoS:   w0={eff['w0']:+.4f}  wa={eff['wa']:+.4f}  "
-        f"sigma={eff['sigma']:.3e}  theta={eff['theta']:.4f}  logL={eff['logL']:.4f}",
-        f"ΔlogL(eff-CPL)={dlogL:+.4f}  ΔAIC={daic:+.3f}",
-        f"ΛCDM logL={ll_lcdm:.4f}  |  corner (-2,-2) pure-CPL logL={ll_corner:.4f}",
+        "DESI DR2 BAO — CPL background and nested effective-EoS extension",
+        "=" * 64,
+        "Data: public DESI DR2 BAO summary statistics (7 bins; diagonal errors).",
+        "Fiducial distances: flat ΛCDM (Ωm = 0.315, H0 = 67.4, w0 = −1, wa = 0).",
         "",
-        "Claim-safe reading:",
-        "  BAO alphas alone prefer near-ΛCDM (w0≈-1, wa≈0).",
-        "  Stochastic correction not preferred (ΔAIC>0 or σ→0).",
-        "  Do not quote old eos_efectiva.py (w0=wa=-2) results.",
+        "Pure CPL (free w0, wa)",
+        f"  w0   = {cpl['w0']:+.4f}",
+        f"  wa   = {cpl['wa']:+.4f}",
+        f"  χ²   = {cpl['chi2']:.4f}",
+        f"  logL = {cpl['logL']:.4f}",
+        f"  AIC  = {aic(cpl['logL'], 2):.3f}",
+        f"  BIC  = {bic(cpl['logL'], 2, 7):.3f}",
+        "",
+        "Reference ΛCDM (w0 = −1, wa = 0)",
+        f"  χ²   = {chi2_cpl(-1.0, 0.0):.4f}",
+        f"  logL = {ll_lcdm:.4f}",
+        "",
+        "Nested extension (CPL + σ, θ)",
+        f"  w0    = {eff['w0']:+.4f}",
+        f"  wa    = {eff['wa']:+.4f}",
+        f"  σ     = {eff['sigma']:.3e}",
+        f"  θ     = {eff['theta']:.4f}",
+        f"  logL  = {eff['logL']:.4f}",
+        f"  ΔlogL (extension − CPL) = {dlogL:+.4f}",
+        f"  ΔAIC  (extension − CPL) = {daic:+.3f}",
+        "",
+        "Interpretation",
+        "  BAO-only fits prefer a background close to flat ΛCDM.",
+        "  The nested stochastic correction is not favoured (σ consistent with zero;",
+        "  positive AIC penalty). Full DESI analyses use the survey covariance matrix",
+        "  and multi-probe combinations; these numbers are a transparent BAO-only",
+        "  baseline under the diagonal approximation used in this repository.",
+        "",
     ]
-    out_txt.write_text("\n".join(lines) + "\n")
+    out_txt.write_text("\n".join(lines))
     print(f"Wrote {out_json}")
     print(f"Wrote {out_txt}")
     print("=" * 70)

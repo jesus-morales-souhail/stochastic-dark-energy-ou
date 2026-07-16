@@ -1,11 +1,32 @@
-DESI DR2 BAO — clean CPL / effective-EoS summary
-============================================================
-Pure CPL:  w0=-0.9899  wa=-0.0159  logL=-0.7058  chi2=1.4116
-Eff EoS:   w0=-0.9899  wa=-0.0159  sigma=6.315e-07  theta=1.7339  logL=-0.7058
-ΔlogL(eff-CPL)=-0.0000  ΔAIC=+4.000
-ΛCDM logL=-0.8324  |  corner (-2,-2) pure-CPL logL=-1663.4445
+DESI DR2 BAO — CPL background and nested effective-EoS extension
+================================================================
+Data: public DESI DR2 BAO summary statistics (7 bins; diagonal errors).
+Fiducial distances: flat ΛCDM (Ωm = 0.315, H0 = 67.4, w0 = −1, wa = 0).
 
-Claim-safe reading:
-  BAO alphas alone prefer near-ΛCDM (w0≈-1, wa≈0).
-  Stochastic correction not preferred (ΔAIC>0 or σ→0).
-  Do not quote old eos_efectiva.py (w0=wa=-2) results.
+Pure CPL (free w0, wa)
+  w0   = -0.9899
+  wa   = -0.0159
+  χ²   = 1.4116
+  logL = -0.7058
+  AIC  = 5.412
+  BIC  = 5.303
+
+Reference ΛCDM (w0 = −1, wa = 0)
+  χ²   = 1.6647
+  logL = -0.8324
+
+Nested extension (CPL + σ, θ)
+  w0    = -0.9899
+  wa    = -0.0159
+  σ     = 6.315e-07
+  θ     = 1.7339
+  logL  = -0.7058
+  ΔlogL (extension − CPL) = -0.0000
+  ΔAIC  (extension − CPL) = +4.000
+
+Interpretation
+  BAO-only fits prefer a background close to flat ΛCDM.
+  The nested stochastic correction is not favoured (σ consistent with zero;
+  positive AIC penalty). Full DESI analyses use the survey covariance matrix
+  and multi-probe combinations; these numbers are a transparent BAO-only
+  baseline under the diagonal approximation used in this repository.

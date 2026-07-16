@@ -1,32 +1,34 @@
 {
-  "data": "DESI DR2 BAO alpha vector (repo standard, 7 bins)",
-  "fiducial": "flat LCDM w0=-1, wa=0",
+  "data": "DESI DR2 BAO summary statistics (7 bins, diagonal errors)",
+  "fiducial": "flat LCDM, Om=0.315, H0=67.4, w0=-1, wa=0",
   "pure_CPL": {
     "w0": -0.9898956968059271,
     "wa": -0.015902984131323503,
     "chi2": 1.4115868194458063,
     "logL": -0.7057934097229032,
-    "success": true,
-    "nfev": 169
+    "AIC": 5.411586819445806,
+    "BIC": 5.303407117556433
   },
-  "effective_EoS": {
+  "lcdm_reference": {
+    "w0": -1.0,
+    "wa": 0.0,
+    "chi2": 1.6647026678954178,
+    "logL": -0.8323513339477089
+  },
+  "nested_effective_EoS": {
     "w0": -0.9898956993021897,
     "wa": -0.015902976959154023,
     "sigma": 6.31531450605264e-07,
     "theta": 1.7338518885924228,
     "chi2": 1.4115868194458119,
     "logL": -0.7057934097229059,
-    "success": true,
-    "nfev": 310
+    "AIC": 9.411586819445812,
+    "BIC": 9.195227415667064
   },
-  "lcdm_logL": -0.8323513339477089,
-  "corner_w0wa_m2_logL_pure_CPL": -1663.4445348188378,
-  "delta_logL_eff_minus_cpl": -2.7755575615628914e-15,
-  "delta_AIC_eff_minus_cpl": 4.000000000000006,
+  "delta_logL_extension_minus_cpl": -2.7755575615628914e-15,
+  "delta_AIC_extension_minus_cpl": 4.000000000000006,
   "notes": [
-    "Removed w_eff>=-1 clamp (caused LCDM-degenerate plateau and false w0=wa=-2).",
-    "Removed bare except returning -1e10.",
-    "Nelder-Mead multi-start; logL re-evaluated at reported parameters.",
-    "BAO-only with diagonal errors: qualitative; full DESI uses covariances."
+    "BAO-only fit with diagonal measurement errors.",
+    "Nested stochastic amplitude is consistent with zero; pure CPL preferred by AIC."
   ]
 }

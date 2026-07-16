@@ -9,8 +9,14 @@ Date:   July 2026
 ================================================================================
 
 Data: DESI DR2 BAO (arXiv:2503.14738) — 7 redshift bins
+      Public summary statistics; diagonal measurement errors in this pipeline.
 
-Models tested:
+Background (CPL, BAO-only):
+  w0 ≈ −0.99
+  wa ≈ −0.02
+  (close to flat ΛCDM under the fiducial used for α = 1)
+
+Models tested on residuals:
 - Baseline: ΛCDM (diagonal covariance only)
 - H0: Stationary Ornstein–Uhlenbeck (OU) fluctuations
 - H1: Damped oscillatory QNM kernel
@@ -32,9 +38,10 @@ Results:
 
 Conclusion:
 - No statistical evidence for stochastic fluctuations in the dark energy sector.
-- The data are fully consistent with a smooth background (ΛCDM or CPL).
+- The BAO summary statistics are consistent with a smooth background near ΛCDM.
 - 95% CL upper limit: σ_X < 1.5 × 10⁻⁴
-- The stochastic component is driven to zero when the cosmological background is allowed to vary.
+- The stochastic amplitude is driven to zero when the background is free.
+  Nested CPL + (σ, θ) extensions are not preferred (ΔAIC ≈ +4).
 
 ================================================================================
 2. ANGULAR CROSS-CORRELATION TEST (DESI DR1 + Pantheon+)

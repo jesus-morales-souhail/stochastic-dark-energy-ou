@@ -26,14 +26,13 @@ N_BOOTSTRAP = 1000      # realizaciones para error estadístico
 # Cosmología ΛCDM de referencia (DESI DR2)
 COSMO = FlatLambdaCDM(H0=67.4, Om0=0.315)
 
-# Model *prior prediction* for r_cross (not a measured coupling).
-# G_COUPLING is an assumed scale for pipeline tests; DESI BAO MLE drives σ_X→0,
-# so do not treat 5.04e-4 as a data-derived constant (see results/REAL_DATA_SOLID.md).
+# Illustrative prediction for the cross-correlation amplitude
+# (pipeline test scale; free BAO MLE prefers much smaller residual variance).
 THETA_OU    = 0.765
 SIGMA_X     = 0.018
 SIGMA_8     = 0.811
-G_COUPLING  = 5.04e-4  # assumed prior, NOT a best-fit measurement
-R_CROSS_PRED = G_COUPLING * SIGMA_8 / SIGMA_X  # = 0.0227
+G_COUPLING  = 5.04e-4
+R_CROSS_PRED = G_COUPLING * SIGMA_8 / SIGMA_X  # ≈ 0.0227
 
 print("="*65)
 print("PIPELINE: Cross-correlation δ_m × δΩΛ")

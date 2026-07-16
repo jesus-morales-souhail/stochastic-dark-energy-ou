@@ -12,13 +12,7 @@ Independent analysis of **stochastic fluctuations in the dark-energy sector** us
 3. Geometric protection of vacuum smoothness (volume-preserving diffeomorphisms / unimodular gravity)  
 4. Open-system **desqueezing** as a dynamical analogue of finite vacuum relaxation  
 
-All cosmological constraints use **public data only** (DESI BAO releases, Pantheon+ where noted). No proprietary catalogs are required to run the core BAO likelihood scripts.
-
----
-
-## Why this repository exists
-
-This project is maintained by an **independent researcher** (not affiliated with a university department). The code and notes are published for **transparency and reproducibility**, and as a public record of ongoing work on late-time vacuum homogeneity and DESI-scale tests of stochastic dark energy.
+Cosmological constraints use **public DESI BAO products** (and Pantheon+ where noted). Core BAO likelihood scripts run from published summary statistics; no proprietary catalogs are required.
 
 ---
 
@@ -26,13 +20,12 @@ This project is maintained by an **independent researcher** (not affiliated with
 
 | Result | Detail |
 |--------|--------|
-| OU / QNM on DESI DR2 | Stochastic amplitude driven to the numerical floor when the background is free |
-| Working upper limit | **σ_X < 1.5 × 10⁻⁴ (95% CL)** (phenomenological OU kernel) |
-| BAO-only CPL (clean fit) | **w₀ ≈ −0.99, w_a ≈ −0.02** (near ΛCDM; see `results/eos_cpl_desi_dr2/`) |
-| Claim-safe digest | `results/REAL_DATA_SOLID.md` |
+| BAO-only CPL background | **w₀ ≈ −0.99, w_a ≈ −0.02** (near flat ΛCDM; `results/eos_cpl_desi_dr2/`) |
+| OU / QNM residuals | Stochastic amplitude at the numerical floor when the background is free |
+| Working upper limit | **σ_X < 1.5 × 10⁻⁴ (95% CL)** under the phenomenological OU kernel |
 | Tachyonic quantum fluid | Globally coherent growing mode **excluded** (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
-| Vacuum smoothness | Interpreted via SDiff / unimodular structure; Euclid DR1 as discriminator |
-| Desqueezing (open systems) | \(t_{1/2}(\lvert\langle a^2\rangle\rvert)=\ln 2/\gamma\); bare Sorkin seed \(\sim 10^{-61}\) is far below BAO sensitivity |
+| Vacuum smoothness | Interpreted via SDiff / unimodular structure; Euclid DR1 as a future discriminator |
+| Desqueezing (open systems) | \(t_{1/2}(\lvert\langle a^2\rangle\rvert)=\ln 2/\gamma\); Sorkin-scale seeds \(\sim 10^{-61}\) lie far below BAO sensitivity |
 
 Full narrative and caveats: see `papers/` and `papers/resume.txt`.
 
@@ -83,19 +76,20 @@ cd stochastic-dark-energy-ou
 python -m venv venv && source venv/bin/activate   # optional
 pip install -r requirements.txt
 
-# Core BAO OU / QNM pipeline (public hardcoded DESI numbers; no catalog download)
-python scripts/ou_bao_stochastic_test.py
+# BAO OU / QNM residual kernel (DESI DR2 summary statistics)
+python scripts/ou_bao_likelihood.py
+
+# CPL background (+ optional nested σ, θ extension)
+python scripts/eos_efectiva.py
 
 # Desqueezing relaxation scan (requires qutip)
 python scripts/desqueezing/desqueezing_relax_time.py
 
-# First-principles cosmological mapping tables
+# Cosmological mapping tables
 python scripts/desqueezing/cosmological_mapping.py
 
-# Euclid mock MCMC (protocol validation; requires emcee)
+# Euclid forecast MCMC (mock likelihood; requires emcee)
 python scripts/euclid_mock_mcmc.py
-
-# Joint optimistic Euclid BAO + SN mock
 python scripts/euclid_joint_bao_sne_mcmc.py
 ```
 
@@ -114,7 +108,7 @@ python scripts/euclid_joint_bao_sne_mcmc.py
 
 - Core BAO OU/QNM scripts use **published BAO summary statistics** (redshift bins, \(\alpha\), \(\sigma\)) and do not require bulk catalog access.
 - Cross-correlation scripts may request large public FITS products; see script headers.
-- Draft Word histories and bulk local data remain **off-Git** by design (see `.gitignore`) so the public tree stays lean and reviewable.
+- Large local archives and draft Word histories are kept off-Git (see `.gitignore`).
 
 ---
 
