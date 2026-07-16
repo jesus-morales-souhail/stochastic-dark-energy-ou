@@ -1,0 +1,87 @@
+{
+  "anchors": {
+    "B_typical_G": 100000000000000.0,
+    "B_strong_G": 1000000000000000.0,
+    "B_QED_G": 44140052213994.19,
+    "R_km": 12.0,
+    "M_msun": 1.4,
+    "P_spin_s": 7.56,
+    "flare_spike_s": 0.2,
+    "flare_tail_s": 400.0,
+    "distance_SGR1806_kpc": 15.0,
+    "notes": [
+      "B, R, M, P, flare times: standard magnetar / giant-flare scales.",
+      "B_QED: Schwinger critical field from electron mass and charge."
+    ]
+  },
+  "B_QED_G": 44140052213994.19,
+  "B_QED_T": 4414005221.399419,
+  "gravity": {
+    "R_s_km": 4.134675134893629,
+    "compactness_Rs_over_R": 0.3445562612411358,
+    "alpha_surface": 0.8095947991179687,
+    "time_dilation_infty_over_local": 1.235185800463976,
+    "redshift_z": 0.23518580046397597
+  },
+  "vacuum_response_vs_B": [
+    {
+      "B_G": 1000000000000.0,
+      "chi_B_over_B_QED": 0.022655161238865944,
+      "delta_n_birefringence": 2.98050449005063e-07,
+      "QED_regime": "subcritical"
+    },
+    {
+      "B_G": 10000000000000.0,
+      "chi_B_over_B_QED": 0.22655161238865945,
+      "delta_n_birefringence": 2.9805044900506304e-05,
+      "QED_regime": "subcritical"
+    },
+    {
+      "B_G": 100000000000000.0,
+      "chi_B_over_B_QED": 2.265516123886594,
+      "delta_n_birefringence": 0.0029805044900506296,
+      "QED_regime": "supercritical_order"
+    },
+    {
+      "B_G": 1000000000000000.0,
+      "chi_B_over_B_QED": 22.655161238865944,
+      "delta_n_birefringence": 0.298050449005063,
+      "QED_regime": "supercritical_order"
+    },
+    {
+      "B_G": 2000000000000000.0,
+      "chi_B_over_B_QED": 45.31032247773189,
+      "delta_n_birefringence": 1.192201796020252,
+      "QED_regime": "supercritical_order"
+    }
+  ],
+  "desqueezing_gamma_for_magnetar_timescales_s": {
+    "spike_0.2s": 3.465735902799726,
+    "spin_7.56s": 0.09168613499470177,
+    "tail_400s": 0.0017328679513998633
+  },
+  "desqueezing_t_half_s": {
+    "spike_0.2s": 0.2,
+    "spin_7.56s": 7.559999999999999,
+    "tail_400s": 400.0
+  },
+  "cosmological_gamma_si": {
+    "theta_floor_1e-3": 2.1842852414333305e-21,
+    "theta_O1": 2.1842852414333306e-18
+  },
+  "cosmological_t_half_s": {
+    "theta_floor_1e-3": 3.173336372978015e+20,
+    "theta_O1": 3.173336372978015e+17
+  },
+  "cosmological_t_half_Gyr": {
+    "theta_floor_1e-3": 10055.696165037947,
+    "theta_O1": 10.055696165037945
+  },
+  "flare_spike_local_s": 0.2,
+  "flare_spike_distant_observer_s": 0.2470371600927952,
+  "interpretation": {
+    "shared_idea": "Both magnetar QED vacuum and open-system desqueezing exhibit a non-trivial vacuum response to extreme conditions, with a characteristic recovery timescale.",
+    "not_identified": "Magnetar \u03b3 (if interpreted as desqueezing) is ~1/s; cosmological \u03b3 ~ \u03b8 H0 is ~1e-18/s. They are not the same physical process.",
+    "use_of_repo": "The analytic desqueezing law t_1/2 = ln2/\u03b3_eff is the same relation validated by QuTiP in this repository; it is applied here as a portable open-system formula, not as a DESI fit."
+  }
+}

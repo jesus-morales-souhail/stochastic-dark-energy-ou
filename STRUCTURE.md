@@ -16,6 +16,8 @@ notes/        Technical notes (desqueezing synthesis, mapping tables)
 |------|------|
 | `scripts/ou_bao_likelihood.py` | OU / QNM residual kernel on DESI DR2 BAO |
 | `scripts/eos_efectiva.py` | CPL background and nested (σ, θ) extension |
+| `scripts/magnetar_vacuum_response.py` | Magnetar QED / gravity scales vs desqueezing law |
+| `notes/magnetar-extreme-vacuum-response.md` | Accompanying note |
 | `scripts/ou_bao_stochastic_test.py` | Alternate OU / QNM BAO pipeline |
 | `scripts/cross_correlation_DESI.py` | Galaxy × residual cross-correlation |
 | `scripts/desqueezing/desqueezing_relax_time.py` | Lindblad desqueezing half-life scan |

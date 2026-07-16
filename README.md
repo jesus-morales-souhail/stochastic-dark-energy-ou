@@ -63,6 +63,7 @@ Supporting note:
 | File | Description |
 |------|-------------|
 | [`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`](notes/desqueezing-relaxation-vacuum-fluctuations-note.md) | Open-system half-life and map to \(\theta H(z)\) |
+| [`notes/magnetar-extreme-vacuum-response.md`](notes/magnetar-extreme-vacuum-response.md) | Magnetar QED scales vs desqueezing timescales (no DESI matching) |
 | [`papers/fundamental-vs-emergent-vacuum-relaxation.md`](papers/fundamental-vs-emergent-vacuum-relaxation.md) | Path-integrated residuals; SDiff regions F/E0–E3 |
 | [`papers/euclid-protocol-vacuum-relaxation.md`](papers/euclid-protocol-vacuum-relaxation.md) | Euclid BAO fit: parameters, priors, and region assignment |
 
@@ -81,6 +82,9 @@ python scripts/ou_bao_likelihood.py
 
 # CPL background (+ optional nested σ, θ extension)
 python scripts/eos_efectiva.py
+
+# Magnetar vacuum scales vs open-system desqueezing (numpy only)
+python scripts/magnetar_vacuum_response.py
 
 # Desqueezing relaxation scan (requires qutip)
 python scripts/desqueezing/desqueezing_relax_time.py
