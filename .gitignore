@@ -15,9 +15,7 @@ local_archive/
 data/
 drafts/
 outreach/
-# literature/: keep citable anchors (*.md, *.json); ignore bulk PDFs
-literature/*.pdf
-literature/**/*.pdf
+literature/
 
 # Optional large binaries
 results/**/*.npz
