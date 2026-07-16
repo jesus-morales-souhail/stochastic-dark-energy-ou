@@ -112,21 +112,45 @@ def desqueezing_curve(t: np.ndarray, gamma: float, n_th: float = 0.0, r: float =
 
 
 def magnetar_anchors() -> dict:
-    """Literature-scale anchors (order of magnitude; not free fit parameters)."""
+    """
+    Literature anchors (see literature/magnetar_literature_anchors.md).
+    Not free parameters of the DESI BAO analysis.
+    """
+    catalog = ROOT / "literature" / "magnetar_literature_anchors.json"
+    if catalog.is_file():
+        import json as _json
+        data = _json.loads(catalog.read_text(encoding="utf-8"))
+        sgr = data["objects"]["SGR_1806-20"]
+        return {
+            "B_typical_G": 1e14,
+            "B_strong_G": float(sgr.get("B_dipole_G_order", 1e15)),
+            "B_QED_G": float(data["qed"]["B_QED_G"]),
+            "R_km": float(data["class_properties"]["radius_km"]["typical"]),
+            "M_msun": float(data["class_properties"]["mass_Msun"]["typical"]),
+            "P_spin_s": float(sgr["P_s_flare_tail"]),
+            "flare_spike_s": float(sgr["giant_flare"]["spike_s"]),
+            "flare_tail_s": float(sgr["giant_flare"]["tail_s_range"][0]),
+            "E_iso_erg": float(sgr["giant_flare"]["E_iso_erg"]),
+            "distance_SGR1806_kpc": float(sgr["distance_kpc_range"][1]),
+            "source": "literature/magnetar_literature_anchors.json",
+            "notes": [
+                "Values from published magnetar / QED literature (McGill, Palmer 2005).",
+                "Not fitted to DESI BAO.",
+            ],
+        }
     return {
         "B_typical_G": 1e14,
         "B_strong_G": 1e15,
         "B_QED_G": B_QED_G,
         "R_km": 12.0,
         "M_msun": 1.4,
-        "P_spin_s": 7.56,  # SGR 1806−20 order
-        "flare_spike_s": 0.2,  # hard spike
-        "flare_tail_s": 400.0,  # soft tail duration (order)
-        "distance_SGR1806_kpc": 15.0,  # order of magnitude used in literature
-        "notes": [
-            "B, R, M, P, flare times: standard magnetar / giant-flare scales.",
-            "B_QED: Schwinger critical field from electron mass and charge.",
-        ],
+        "P_spin_s": 7.56,
+        "flare_spike_s": 0.2,
+        "flare_tail_s": 400.0,
+        "E_iso_erg": 2e46,
+        "distance_SGR1806_kpc": 15.0,
+        "source": "hardcoded fallback",
+        "notes": ["Fallback if literature JSON missing."],
     }
 
 

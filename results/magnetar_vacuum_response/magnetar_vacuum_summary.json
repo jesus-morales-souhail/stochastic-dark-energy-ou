@@ -1,17 +1,19 @@
 {
   "anchors": {
     "B_typical_G": 100000000000000.0,
-    "B_strong_G": 1000000000000000.0,
-    "B_QED_G": 44140052213994.19,
+    "B_strong_G": 2000000000000000.0,
+    "B_QED_G": 44100000000000.0,
     "R_km": 12.0,
     "M_msun": 1.4,
     "P_spin_s": 7.56,
     "flare_spike_s": 0.2,
     "flare_tail_s": 400.0,
+    "E_iso_erg": 2e+46,
     "distance_SGR1806_kpc": 15.0,
+    "source": "literature/magnetar_literature_anchors.json",
     "notes": [
-      "B, R, M, P, flare times: standard magnetar / giant-flare scales.",
-      "B_QED: Schwinger critical field from electron mass and charge."
+      "Values from published magnetar / QED literature (McGill, Palmer 2005).",
+      "Not fitted to DESI BAO."
     ]
   },
   "B_QED_G": 44140052213994.19,

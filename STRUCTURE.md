@@ -8,6 +8,7 @@ scripts/      Analysis code
 figures/      Figures
 results/      Numerical outputs (BAO fits, forecasts, desqueezing tables)
 notes/        Technical notes (desqueezing synthesis, mapping tables)
+literature/   Citable external anchors (magnetars, QED scales)
 ```
 
 ## Entry points

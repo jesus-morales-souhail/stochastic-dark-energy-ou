@@ -3,7 +3,7 @@ Magnetar extreme vacuum response vs repository desqueezing
 
 1. Magnetar anchors (literature scales)
   B_typical       = 1.0e+14 G
-  B_strong        = 1.0e+15 G
+  B_strong        = 2.0e+15 G
   B_QED           = 4.414e+13 G
   R, M            = 12.0 km, 1.4 M_sun
   P_spin          = 7.56 s

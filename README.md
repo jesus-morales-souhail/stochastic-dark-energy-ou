@@ -104,7 +104,8 @@ python scripts/euclid_joint_bao_sne_mcmc.py
 ## Data sources (public)
 
 - DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · arXiv:2503.14738  
-- Pantheon+ SN Ia (cross-correlation pipeline only)
+- Pantheon+ SN Ia (cross-correlation pipeline only)  
+- Magnetar / QED literature anchors (context only): [`literature/magnetar_literature_anchors.md`](literature/magnetar_literature_anchors.md)
 
 ---
 
