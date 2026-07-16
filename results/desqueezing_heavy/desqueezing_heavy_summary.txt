@@ -1,0 +1,5 @@
+Heavy desqueezing QuTiP scan: 120 runs, N=100
+Measured law: t_1/2 = ln2/gamma  (n_th and r do not shift t_1/2 of |a^2|)
+median |rel err| = 1.3060e-04
+max |rel err|    = 8.9828e-04
+Earlier analytic note sometimes wrote gamma_eff=gamma(1+2n_th); this heavy QuTiP scan shows half-life of |a^2| tracks ln2/gamma only. n_th sets the thermal floor of Var(q), not t_1/2 of |a^2|.

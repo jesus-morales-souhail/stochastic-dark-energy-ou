@@ -1,0 +1,9 @@
+{
+  "N": 100,
+  "n_runs": 120,
+  "law_measured": "t_1/2(|<a^2>|) = ln2 / gamma   (independent of n_th and r within scan)",
+  "note": "Earlier analytic note sometimes wrote gamma_eff=gamma(1+2n_th); this heavy QuTiP scan shows half-life of |a^2| tracks ln2/gamma only. n_th sets the thermal floor of Var(q), not t_1/2 of |a^2|.",
+  "median_rel_err_vs_ln2_over_gamma": 0.00013060256545120643,
+  "max_rel_err_vs_ln2_over_gamma": 0.0008982804785997394,
+  "mean_rel_err_vs_ln2_over_gamma": 0.0002413532750125486
+}

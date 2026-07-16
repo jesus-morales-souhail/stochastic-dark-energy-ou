@@ -1,0 +1,9 @@
+Joint MLE DESI DR2 BAO {w0,wa,theta,sigma_X}
+=======================================================
+lcdm          w0=-1.0000  wa=+0.0000  θ=    None  σ_X=0.000e+00  logL=27.0132  ΔlnL=+0.0000  AIC=None
+cpl           w0=-0.9899  wa=-0.0159  θ=    None  σ_X=0.000e+00  logL=27.1398  ΔlnL=+0.1266  AIC=-50.27961502912173
+ou_fixed_bg   w0=-1.0000  wa=+0.0000  θ=1.152025  σ_X=3.815e-10  logL=27.0132  ΔlnL=+0.0000  AIC=-50.02649918067293
+joint         w0=-0.9899  wa=-0.0159  θ=0.903819  σ_X=3.485e-11  logL=27.1398  ΔlnL=+0.1266  AIC=-46.27961502912257
+
+ΔAIC(joint − cpl) = +4.000
+σ_X joint = 3.485e-11  (→0 means stochastic not needed)
