@@ -28,6 +28,8 @@ This project is maintained by an **independent researcher** (not affiliated with
 |--------|--------|
 | OU / QNM on DESI DR2 | Stochastic amplitude driven to the numerical floor when the background is free |
 | Working upper limit | **σ_X < 1.5 × 10⁻⁴ (95% CL)** (phenomenological OU kernel) |
+| BAO-only CPL (clean fit) | **w₀ ≈ −0.99, w_a ≈ −0.02** (near ΛCDM; see `results/eos_cpl_desi_dr2/`) |
+| Claim-safe digest | `results/REAL_DATA_SOLID.md` |
 | Tachyonic quantum fluid | Globally coherent growing mode **excluded** (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
 | Vacuum smoothness | Interpreted via SDiff / unimodular structure; Euclid DR1 as discriminator |
 | Desqueezing (open systems) | \(t_{1/2}(\lvert\langle a^2\rangle\rvert)=\ln 2/\gamma\); bare Sorkin seed \(\sim 10^{-61}\) is far below BAO sensitivity |

@@ -1,0 +1,11 @@
+DESI DR2 BAO — clean CPL / effective-EoS summary
+============================================================
+Pure CPL:  w0=-0.9899  wa=-0.0159  logL=-0.7058  chi2=1.4116
+Eff EoS:   w0=-0.9899  wa=-0.0159  sigma=6.315e-07  theta=1.7339  logL=-0.7058
+ΔlogL(eff-CPL)=-0.0000  ΔAIC=+4.000
+ΛCDM logL=-0.8324  |  corner (-2,-2) pure-CPL logL=-1663.4445
+
+Claim-safe reading:
+  BAO alphas alone prefer near-ΛCDM (w0≈-1, wa≈0).
+  Stochastic correction not preferred (ΔAIC>0 or σ→0).
+  Do not quote old eos_efectiva.py (w0=wa=-2) results.

@@ -1,218 +1,410 @@
-import numpy as np
-from scipy.optimize import minimize
-from scipy.integrate import quad
-import warnings
-warnings.filterwarnings('ignore')
+#!/usr/bin/env python3
+"""
+CPL + optional effective-EoS stochastic correction on DESI DR2 BAO alphas.
 
-# ============================================================
-# DATOS REALES DE DESI DR2
-# ============================================================
+Fixes vs older version:
+  - No bare ``except: return -1e10`` (masked failures / corrupted gradients).
+  - No hard clamp ``w_eff >= -1`` that made the whole phantom region degenerate
+    with ΛCDM and let L-BFGS-B sit at the box corner (w0=wa=-2) while reporting
+    the ΛCDM logL.
+  - Multi-start Nelder-Mead (derivative-free) + explicit sanity checks:
+    re-evaluate logL at reported params vs ΛCDM and pure CPL.
+
+Data: DESI DR2 BAO isotropic-style alpha vector used elsewhere in this repo
+(arXiv:2503.14738; same arrays as ``ou_bao_likelihood.py``).
+
+Author: Jesús Morales Souhail
+"""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+
+import numpy as np
+from scipy.integrate import quad
+from scipy.optimize import minimize
+
+# ---------------------------------------------------------------------------
+# Real DESI DR2 BAO data (repo standard)
+# ---------------------------------------------------------------------------
 z_eff = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
 alpha_obs = np.array([1.0030, 0.9947, 1.0016, 0.9960, 1.0020, 0.9963, 1.0008])
 sigma_obs = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
 
-# Parámetros fiduciales
 H0 = 67.4
 Om = 0.315
-Ol = 1.0 - Om
 c_kms = 299792.458
 
-# ============================================================
-# FUNCIONES COSMOLÓGICAS ESTÁNDAR
-# ============================================================
-def E2_z(z, Om=0.315, Ol=0.685):
-    """E(z)^2 = Ωm(1+z)^3 + ΩΛ(z)"""
-    return Om * (1+z)**3 + Ol
+ROOT = Path(__file__).resolve().parents[1]
+OUT_DIR = ROOT / "results" / "eos_cpl_desi_dr2"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-def H_z(z, H0=67.4, Om=0.315, Ol=0.685):
-    return H0 * np.sqrt(E2_z(z, Om, Ol))
 
-def DM_standard(z, H0=67.4, Om=0.315, Ol=0.685):
-    """Distancia comóvil transversal estándar (Mpc)."""
-    integrand = lambda zp: 1.0 / H_z(zp, H0, Om, Ol)
-    return c_kms * quad(integrand, 0, z)[0]
+# ---------------------------------------------------------------------------
+# Pure CPL cosmology (standard textbook expressions)
+# ---------------------------------------------------------------------------
+def E2_cpl(z: float, w0: float, wa: float, Om_: float = Om) -> float:
+    """E(z)^2 for flat CPL dark energy."""
+    rho_de = (1.0 + z) ** (3.0 * (1.0 + w0 + wa)) * np.exp(-3.0 * wa * z / (1.0 + z))
+    return Om_ * (1.0 + z) ** 3 + (1.0 - Om_) * rho_de
 
-def DH_standard(z, H0=67.4, Om=0.315, Ol=0.685):
-    return c_kms / H_z(z, H0, Om, Ol)
 
-def DV_standard(z, H0=67.4, Om=0.315, Ol=0.685):
-    dm = DM_standard(z, H0, Om, Ol)
-    dh = DH_standard(z, H0, Om, Ol)
-    return (dm**2 * dh * z) ** (1.0/3.0)
+def H_cpl(z: float, w0: float, wa: float) -> float:
+    e2 = E2_cpl(z, w0, wa)
+    if e2 <= 0.0 or not np.isfinite(e2):
+        return np.nan
+    return H0 * np.sqrt(e2)
 
-# ============================================================
-# EoS EFECTIVA Y DENSIDAD DE ENERGÍA OSCURA MODIFICADA
-# ============================================================
-def t_z(z, H0=67.4, Om=0.315):
-    """Tiempo conforme desde z=0 hasta z."""
-    integrand = lambda zp: 1.0 / ((1+zp) * H_z(zp, H0, Om))
-    return quad(integrand, 0, z)[0]
 
-def Omega_DE_z(z, w0, wa, sigma, theta, Om=0.315):
-    """
-    Densidad de energía oscura relativa a la crítica.
-    Ω_DE(z) = (1 - Ωm) * exp(3 * ∫_0^z [1 + w_eff(z')]/(1+z') dz')
-    """
-    def integrand(zp):
-        w_CPL = w0 + wa * zp / (1 + zp)
-        tz = t_z(zp)
-        Omega_background = (1 - Om) * (1+zp)**3 / E2_z(zp, Om)
-        if theta < 1e-6:
-            correction = sigma**2 * tz / Omega_background
+def DM_cpl(z: float, w0: float, wa: float) -> float:
+    def integrand(zp: float) -> float:
+        h = H_cpl(zp, w0, wa)
+        if not np.isfinite(h) or h <= 0.0:
+            raise ValueError("non-positive H")
+        return 1.0 / h
+
+    return c_kms * quad(integrand, 0.0, z, limit=120, epsabs=1e-6)[0]
+
+
+def DH_cpl(z: float, w0: float, wa: float) -> float:
+    h = H_cpl(z, w0, wa)
+    if not np.isfinite(h) or h <= 0.0:
+        raise ValueError("non-positive H")
+    return c_kms / h
+
+
+def DV_cpl(z: float, w0: float, wa: float) -> float:
+    dm = DM_cpl(z, w0, wa)
+    dh = DH_cpl(z, w0, wa)
+    return (dm**2 * dh * z) ** (1.0 / 3.0)
+
+
+# Fiducial = flat ΛCDM (w0=-1, wa=0), matching alpha≈1 definition in the repo
+W0_FID, WA_FID = -1.0, 0.0
+DV_fid = DV_cpl(float(z_eff[0]), W0_FID, WA_FID)
+DM_fid = np.array([DM_cpl(float(z), W0_FID, WA_FID) for z in z_eff[1:]])
+DH_fid = np.array([DH_cpl(float(z), W0_FID, WA_FID) for z in z_eff[1:]])
+
+
+def alpha_pred_cpl(w0: float, wa: float) -> np.ndarray:
+    """Model alpha relative to flat-ΛCDM fiducial (same construction as DR2 tests)."""
+    out = np.zeros(len(z_eff))
+    out[0] = DV_cpl(float(z_eff[0]), w0, wa) / DV_fid
+    for i in range(1, len(z_eff)):
+        z = float(z_eff[i])
+        dm = DM_cpl(z, w0, wa)
+        dh = DH_cpl(z, w0, wa)
+        out[i] = (dm / DM_fid[i - 1]) ** (2.0 / 3.0) * (dh / DH_fid[i - 1]) ** (1.0 / 3.0)
+    return out
+
+
+def chi2_cpl(w0: float, wa: float) -> float:
+    pred = alpha_pred_cpl(w0, wa)
+    if not np.all(np.isfinite(pred)):
+        return np.inf
+    return float(np.sum(((alpha_obs - pred) / sigma_obs) ** 2))
+
+
+def logL_cpl(w0: float, wa: float) -> float:
+    c2 = chi2_cpl(w0, wa)
+    if not np.isfinite(c2):
+        return -np.inf
+    return -0.5 * c2
+
+
+# ---------------------------------------------------------------------------
+# Optional OU-style additive correction on w (nested extension)
+# w_eff(z) = w_CPL(z) + δw(z),  δw ~ σ²/(2θ) (1 - e^{-2θ t}) / Ω_DE  (toy)
+# No hard phantom clamp — that created a flat ΛCDM plateau.
+# ---------------------------------------------------------------------------
+def conformal_time_to_z(z: float) -> float:
+    def integrand(zp: float) -> float:
+        # background for time coordinate: flat ΛCDM
+        h = H_cpl(zp, W0_FID, WA_FID)
+        return 1.0 / ((1.0 + zp) * h)
+
+    return quad(integrand, 0.0, z, limit=80, epsabs=1e-6)[0]
+
+
+def Omega_DE_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
+    """Integrate continuity equation for DE with optional mean-field OU correction."""
+
+    def integrand(zp: float) -> float:
+        w_cpl = w0 + wa * zp / (1.0 + zp)
+        if sigma <= 0.0:
+            w_eff = w_cpl
         else:
-            correction = (sigma**2 / (2 * theta * Omega_background)) * (1 - np.exp(-2 * theta * tz))
-        w_eff_val = w_CPL + correction
-        # Restricción física: w_eff >= -1
-        if w_eff_val < -1:
-            w_eff_val = -1
-        return (1 + w_eff_val) / (1 + zp)
-    
-    exponent = 3 * quad(integrand, 0, z, limit=100)[0]
-    return (1 - Om) * np.exp(exponent)
+            tz = conformal_time_to_z(zp)
+            # background DE fraction (ΛCDM) only as a scale in the toy correction
+            e2_bg = E2_cpl(zp, W0_FID, WA_FID)
+            omega_bg = (1.0 - Om) / e2_bg
+            if theta < 1e-8:
+                corr = (sigma**2) * tz / max(omega_bg, 1e-12)
+            else:
+                corr = (sigma**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
+                    1.0 - np.exp(-2.0 * theta * tz)
+                )
+            w_eff = w_cpl + corr
+        return (1.0 + w_eff) / (1.0 + zp)
 
-def E2_eff(z, w0, wa, sigma, theta, Om=0.315):
-    """E(z)^2 con Ω_DE(z) variable."""
-    return Om * (1+z)**3 + Omega_DE_z(z, w0, wa, sigma, theta, Om)
+    exponent = 3.0 * quad(integrand, 0.0, z, limit=100, epsabs=1e-6)[0]
+    return (1.0 - Om) * np.exp(exponent)
 
-def H_eff(z, w0, wa, sigma, theta, H0=67.4, Om=0.315):
-    return H0 * np.sqrt(E2_eff(z, w0, wa, sigma, theta, Om))
 
-def DM_eff(z, w0, wa, sigma, theta, H0=67.4, Om=0.315):
-    integrand = lambda zp: 1.0 / H_eff(zp, w0, wa, sigma, theta, H0, Om)
-    return c_kms * quad(integrand, 0, z, limit=100)[0]
+def E2_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
+    return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma, theta)
 
-def DH_eff(z, w0, wa, sigma, theta, H0=67.4, Om=0.315):
-    return c_kms / H_eff(z, w0, wa, sigma, theta, H0, Om)
 
-def DV_eff(z, w0, wa, sigma, theta, H0=67.4, Om=0.315):
-    dm = DM_eff(z, w0, wa, sigma, theta, H0, Om)
-    dh = DH_eff(z, w0, wa, sigma, theta, H0, Om)
-    return (dm**2 * dh * z) ** (1.0/3.0)
+def H_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
+    e2 = E2_eff(z, w0, wa, sigma, theta)
+    if e2 <= 0.0 or not np.isfinite(e2):
+        return np.nan
+    return H0 * np.sqrt(e2)
 
-# ============================================================
-# VALORES FIDUCIALES PARA DESI DR2 (estándar)
-# ============================================================
-# Usamos las distancias estándar con Ωm=0.315, Ol=0.685
-DV_fid = DV_standard(0.295)
-DM_fid = np.array([DM_standard(z) for z in [0.510, 0.706, 0.934, 1.321, 1.484, 2.330]])
-DH_fid = np.array([DH_standard(z) for z in [0.510, 0.706, 0.934, 1.321, 1.484, 2.330]])
-z_fid_DM = np.array([0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
 
-def alpha_iso_pred(z_idx, w0, wa, sigma, theta):
-    z = z_eff[z_idx]
-    if z_idx == 0:
-        DV_pred = DV_eff(z, w0, wa, sigma, theta)
-        return DV_pred / DV_fid
-    else:
-        i = z_idx - 1
-        DM_pred = DM_eff(z, w0, wa, sigma, theta)
-        DH_pred = DH_eff(z, w0, wa, sigma, theta)
-        return (DM_pred / DM_fid[i])**(2/3) * (DH_pred / DH_fid[i])**(1/3)
+def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarray:
+    def DM(z: float) -> float:
+        def integrand(zp: float) -> float:
+            h = H_eff(zp, w0, wa, sigma, theta)
+            if not np.isfinite(h) or h <= 0.0:
+                raise ValueError("non-positive H_eff")
+            return 1.0 / h
 
-# ============================================================
-# VEROSIMILITUD
-# ============================================================
-def log_likelihood(params):
-    w0, wa, sigma, theta = params
-    if sigma < 0 or theta < 0:
-        return -1e10
+        return c_kms * quad(integrand, 0.0, z, limit=100, epsabs=1e-6)[0]
+
+    def DH(z: float) -> float:
+        h = H_eff(z, w0, wa, sigma, theta)
+        if not np.isfinite(h) or h <= 0.0:
+            raise ValueError("non-positive H_eff")
+        return c_kms / h
+
+    out = np.zeros(len(z_eff))
+    z0 = float(z_eff[0])
+    dm0 = DM(z0)
+    dh0 = DH(z0)
+    out[0] = (dm0**2 * dh0 * z0) ** (1.0 / 3.0) / DV_fid
+    for i in range(1, len(z_eff)):
+        z = float(z_eff[i])
+        out[i] = (DM(z) / DM_fid[i - 1]) ** (2.0 / 3.0) * (DH(z) / DH_fid[i - 1]) ** (
+            1.0 / 3.0
+        )
+    return out
+
+
+def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
     try:
-        alpha_pred = np.array([alpha_iso_pred(i, w0, wa, sigma, theta) for i in range(7)])
-        residuals = alpha_obs - alpha_pred
-        chi2 = np.sum(residuals**2 / sigma_obs**2)
-        return -0.5 * chi2
-    except:
-        return -1e10
+        pred = alpha_pred_eff(w0, wa, sigma, theta)
+    except (ValueError, FloatingPointError, ZeroDivisionError, OverflowError):
+        return np.inf
+    if not np.all(np.isfinite(pred)):
+        return np.inf
+    return float(np.sum(((alpha_obs - pred) / sigma_obs) ** 2))
 
-def neg_log_likelihood(params):
-    return -log_likelihood(params)
 
-# ============================================================
-# AJUSTE MLE
-# ============================================================
-print("="*60)
-print("AJUSTE MLE CON EoS EFECTIVA (VERSIÓN CORREGIDA)")
-print("="*60)
+def logL_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
+    c2 = chi2_eff(w0, wa, sigma, theta)
+    if not np.isfinite(c2):
+        return -np.inf
+    return -0.5 * c2
 
-# Valores iniciales: CPL best-fit de DESI DR2
-x0 = [-0.87, -0.41, 1e-4, 0.001]
-bounds = [(-2, 0), (-2, 2), (0, 0.01), (1e-4, 10)]
 
-result = minimize(neg_log_likelihood, x0, method='L-BFGS-B', bounds=bounds, options={'maxiter': 1000})
-w0_opt, wa_opt, sigma_opt, theta_opt = result.x
+# ---------------------------------------------------------------------------
+# Optimizers (derivative-free; multi-start)
+# ---------------------------------------------------------------------------
+def fit_cpl_pure(starts=None):
+    if starts is None:
+        starts = [
+            [-1.0, 0.0],
+            [-0.9, -0.3],
+            [-0.87, -0.41],
+            [-0.7, -0.5],
+            [-1.2, 0.2],
+            [-0.5, -1.0],
+        ]
 
-print(f"w0   = {w0_opt:.4f}")
-print(f"wa   = {wa_opt:.4f}")
-print(f"σ    = {sigma_opt:.2e}")
-print(f"θ    = {theta_opt:.4f}")
-print(f"logL = {-result.fun:.3f}")
+    def neg(p):
+        w0, wa = p
+        if not (-3.0 < w0 < 0.5 and -5.0 < wa < 5.0):
+            return 1e12
+        ll = logL_cpl(w0, wa)
+        return -ll if np.isfinite(ll) else 1e12
 
-# ============================================================
-# AJUSTE CPL PURO
-# ============================================================
-def log_likelihood_CPL(params):
-    w0, wa = params
-    try:
-        alpha_pred = np.array([alpha_iso_pred(i, w0, wa, 0.0, 0.001) for i in range(7)])
-        residuals = alpha_obs - alpha_pred
-        chi2 = np.sum(residuals**2 / sigma_obs**2)
-        return -0.5 * chi2
-    except:
-        return -1e10
+    best = None
+    for x0 in starts:
+        res = minimize(
+            neg,
+            x0,
+            method="Nelder-Mead",
+            options={"xatol": 1e-7, "fatol": 1e-7, "maxiter": 4000},
+        )
+        if best is None or res.fun < best.fun:
+            best = res
+    w0, wa = best.x
+    return {
+        "w0": float(w0),
+        "wa": float(wa),
+        "chi2": float(chi2_cpl(w0, wa)),
+        "logL": float(logL_cpl(w0, wa)),
+        "success": bool(best.success),
+        "nfev": int(best.nfev),
+    }
 
-result_CPL = minimize(lambda p: -log_likelihood_CPL(p), [-0.87, -0.41],
-                      method='L-BFGS-B', bounds=[(-2, 0), (-2, 2)])
-w0_CPL, wa_CPL = result_CPL.x
-logL_CPL = -result_CPL.fun
 
-print("\n" + "="*60)
-print("AJUSTE CPL PURO")
-print("="*60)
-print(f"w0_CPL   = {w0_CPL:.4f}")
-print(f"wa_CPL   = {wa_CPL:.4f}")
-print(f"logL_CPL = {logL_CPL:.3f}")
+def fit_eff_nested(starts=None):
+    """Joint {w0, wa, sigma, theta}; sigma>=0, theta>0."""
+    if starts is None:
+        starts = [
+            [-1.0, 0.0, 1e-5, 0.1],
+            [-0.99, -0.02, 1e-4, 0.5],
+            [-0.87, -0.41, 1e-3, 1.0],
+            [-0.9, -0.2, 5e-3, 0.2],
+            [-1.1, 0.1, 1e-6, 1.0],
+        ]
 
-# ============================================================
-# COMPARACIÓN
-# ============================================================
-print("\n" + "="*60)
-print("COMPARACIÓN DE MODELOS")
-print("="*60)
-delta_logL = logL_CPL - (-result.fun)
-print(f"ΔlogL (CPL - EoS_eff) = {delta_logL:.3f}")
-if delta_logL > 2:
-    print("CPL es preferido sobre EoS_eff (evidencia fuerte).")
-elif delta_logL > 0.5:
-    print("CPL es ligeramente preferido sobre EoS_eff.")
-else:
-    print("No hay evidencia a favor de ninguno de los dos modelos.")
+    def neg(p):
+        w0, wa, sig, th = p
+        if not (-3.0 < w0 < 0.5 and -5.0 < wa < 5.0):
+            return 1e12
+        if sig < 0.0 or th < 1e-6 or th > 50.0 or sig > 0.05:
+            return 1e12
+        ll = logL_eff(w0, wa, sig, th)
+        return -ll if np.isfinite(ll) else 1e12
 
-# ============================================================
-# PREDICCIÓN PARA EUCLID
-# ============================================================
-def alpha_iso_pred_z(z, w0, wa, sigma, theta):
-    # Interpolamos los valores fiduciales de DM/DH a z
-    DM_fid_interp = np.interp(z, z_fid_DM, DM_fid)
-    DH_fid_interp = np.interp(z, z_fid_DM, DH_fid)
-    DM_pred = DM_eff(z, w0, wa, sigma, theta)
-    DH_pred = DH_eff(z, w0, wa, sigma, theta)
-    return (DM_pred / DM_fid_interp)**(2/3) * (DH_pred / DH_fid_interp)**(1/3)
+    best = None
+    for x0 in starts:
+        res = minimize(
+            neg,
+            x0,
+            method="Nelder-Mead",
+            options={"xatol": 1e-7, "fatol": 1e-7, "maxiter": 6000},
+        )
+        if best is None or res.fun < best.fun:
+            best = res
+    w0, wa, sig, th = best.x
+    return {
+        "w0": float(w0),
+        "wa": float(wa),
+        "sigma": float(sig),
+        "theta": float(th),
+        "chi2": float(chi2_eff(w0, wa, sig, th)),
+        "logL": float(logL_eff(w0, wa, sig, th)),
+        "success": bool(best.success),
+        "nfev": int(best.nfev),
+    }
 
-z_euclid = np.linspace(0.9, 1.8, 20)
-try:
-    alpha_euclid = np.array([alpha_iso_pred_z(z, w0_opt, wa_opt, sigma_opt, theta_opt) for z in z_euclid])
-    alpha_euclid_CPL = np.array([alpha_iso_pred_z(z, w0_CPL, wa_CPL, 0.0, 0.001) for z in z_euclid])
-    
-    print("\n" + "="*60)
-    print("PREDICCIÓN PARA EUCLID DR1")
-    print("="*60)
-    print(f"z_min = {z_euclid[0]:.2f}, z_max = {z_euclid[-1]:.2f}, N_bins = {len(z_euclid)}")
-    print(f"alpha_iso medio (EoS_eff) = {np.mean(alpha_euclid):.4f}")
-    print(f"alpha_iso medio (CPL)     = {np.mean(alpha_euclid_CPL):.4f}")
-    print(f"Diferencia media = {np.mean(alpha_euclid - alpha_euclid_CPL):.6f}")
-except Exception as e:
-    print(f"\n⚠️ Error en la predicción: {e}")
 
-print("\n" + "="*60)
-print("FIN DEL ANÁLISIS")
-print("="*60)
+def aic(logL: float, k: int) -> float:
+    return 2 * k - 2 * logL
+
+
+def bic(logL: float, k: int, n: int) -> float:
+    return k * np.log(n) - 2 * logL
+
+
+def main():
+    print("=" * 70)
+    print("DESI DR2 BAO — clean CPL + nested effective-EoS fit")
+    print("=" * 70)
+    print(f"N bins = {len(z_eff)}  |  fiducial = flat ΛCDM (w0=-1, wa=0)")
+    print()
+
+    # Sanity: LCDM and the old false corner
+    ll_lcdm = logL_cpl(-1.0, 0.0)
+    ll_corner = logL_cpl(-2.0, -2.0)
+    print("Sanity (pure CPL, no clamp):")
+    print(f"  logL(ΛCDM  w0=-1, wa=0)   = {ll_lcdm:.4f}   chi2={chi2_cpl(-1,0):.4f}")
+    print(f"  logL(corner w0=-2, wa=-2) = {ll_corner:.4f}   chi2={chi2_cpl(-2,-2):.4f}")
+    print("  → corner is NOT degenerate with ΛCDM when clamp is removed.")
+    print()
+
+    # Pure CPL
+    cpl = fit_cpl_pure()
+    print("Pure CPL MLE (Nelder-Mead multi-start):")
+    print(f"  w0   = {cpl['w0']:+.4f}")
+    print(f"  wa   = {cpl['wa']:+.4f}")
+    print(f"  chi2 = {cpl['chi2']:.4f}")
+    print(f"  logL = {cpl['logL']:.4f}")
+    print(f"  AIC  = {aic(cpl['logL'], 2):.3f}   BIC = {bic(cpl['logL'], 2, 7):.3f}")
+    # Re-eval check
+    ll_check = logL_cpl(cpl["w0"], cpl["wa"])
+    print(f"  re-eval logL at reported params: {ll_check:.4f}  "
+          f"{'OK' if abs(ll_check - cpl['logL']) < 1e-6 else 'MISMATCH'}")
+    print()
+
+    # Nested effective model
+    eff = fit_eff_nested()
+    print("Effective EoS (CPL + σ,θ toy correction) MLE:")
+    print(f"  w0    = {eff['w0']:+.4f}")
+    print(f"  wa    = {eff['wa']:+.4f}")
+    print(f"  sigma = {eff['sigma']:.3e}")
+    print(f"  theta = {eff['theta']:.4f}")
+    print(f"  chi2  = {eff['chi2']:.4f}")
+    print(f"  logL  = {eff['logL']:.4f}")
+    print(f"  AIC   = {aic(eff['logL'], 4):.3f}   BIC = {bic(eff['logL'], 4, 7):.3f}")
+    ll_check_e = logL_eff(eff["w0"], eff["wa"], eff["sigma"], eff["theta"])
+    print(f"  re-eval logL at reported params: {ll_check_e:.4f}  "
+          f"{'OK' if abs(ll_check_e - eff['logL']) < 1e-5 else 'MISMATCH'}")
+    print()
+
+    dlogL = eff["logL"] - cpl["logL"]
+    daic = aic(eff["logL"], 4) - aic(cpl["logL"], 2)
+    print("Model comparison (nested):")
+    print(f"  ΔlogL (eff − CPL) = {dlogL:+.4f}")
+    print(f"  ΔAIC  (eff − CPL) = {daic:+.3f}  "
+          f"({'prefer CPL/null' if daic > 0 else 'prefer effective'})")
+    if abs(dlogL) < 0.5 and eff["sigma"] < 1e-3:
+        print("  → No evidence for the stochastic correction; σ driven small.")
+    print()
+
+    # Profile: fix pure CPL best w0,wa, scan sigma
+    print("Profile at pure-CPL best (w0,wa fixed), scan sigma (theta=1):")
+    w0b, wab = cpl["w0"], cpl["wa"]
+    for sig in [0.0, 1e-5, 1e-4, 5e-4, 1e-3, 5e-3, 1e-2]:
+        ll = logL_eff(w0b, wab, sig, 1.0)
+        print(f"  sigma={sig:.1e}:  logL={ll:.4f}  ΔlogL vs σ=0: {ll - logL_eff(w0b,wab,0.0,1.0):+.4f}")
+    print()
+
+    summary = {
+        "data": "DESI DR2 BAO alpha vector (repo standard, 7 bins)",
+        "fiducial": "flat LCDM w0=-1, wa=0",
+        "pure_CPL": cpl,
+        "effective_EoS": eff,
+        "lcdm_logL": float(ll_lcdm),
+        "corner_w0wa_m2_logL_pure_CPL": float(ll_corner),
+        "delta_logL_eff_minus_cpl": float(dlogL),
+        "delta_AIC_eff_minus_cpl": float(daic),
+        "notes": [
+            "Removed w_eff>=-1 clamp (caused LCDM-degenerate plateau and false w0=wa=-2).",
+            "Removed bare except returning -1e10.",
+            "Nelder-Mead multi-start; logL re-evaluated at reported parameters.",
+            "BAO-only with diagonal errors: qualitative; full DESI uses covariances.",
+        ],
+    }
+    out_json = OUT_DIR / "eos_cpl_summary.json"
+    out_txt = OUT_DIR / "eos_cpl_summary.txt"
+    out_json.write_text(json.dumps(summary, indent=2))
+    lines = [
+        "DESI DR2 BAO — clean CPL / effective-EoS summary",
+        "=" * 60,
+        f"Pure CPL:  w0={cpl['w0']:+.4f}  wa={cpl['wa']:+.4f}  "
+        f"logL={cpl['logL']:.4f}  chi2={cpl['chi2']:.4f}",
+        f"Eff EoS:   w0={eff['w0']:+.4f}  wa={eff['wa']:+.4f}  "
+        f"sigma={eff['sigma']:.3e}  theta={eff['theta']:.4f}  logL={eff['logL']:.4f}",
+        f"ΔlogL(eff-CPL)={dlogL:+.4f}  ΔAIC={daic:+.3f}",
+        f"ΛCDM logL={ll_lcdm:.4f}  |  corner (-2,-2) pure-CPL logL={ll_corner:.4f}",
+        "",
+        "Claim-safe reading:",
+        "  BAO alphas alone prefer near-ΛCDM (w0≈-1, wa≈0).",
+        "  Stochastic correction not preferred (ΔAIC>0 or σ→0).",
+        "  Do not quote old eos_efectiva.py (w0=wa=-2) results.",
+    ]
+    out_txt.write_text("\n".join(lines) + "\n")
+    print(f"Wrote {out_json}")
+    print(f"Wrote {out_txt}")
+    print("=" * 70)
+
+
+if __name__ == "__main__":
+    main()

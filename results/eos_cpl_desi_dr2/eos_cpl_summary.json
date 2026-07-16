@@ -1,0 +1,32 @@
+{
+  "data": "DESI DR2 BAO alpha vector (repo standard, 7 bins)",
+  "fiducial": "flat LCDM w0=-1, wa=0",
+  "pure_CPL": {
+    "w0": -0.9898956968059271,
+    "wa": -0.015902984131323503,
+    "chi2": 1.4115868194458063,
+    "logL": -0.7057934097229032,
+    "success": true,
+    "nfev": 169
+  },
+  "effective_EoS": {
+    "w0": -0.9898956993021897,
+    "wa": -0.015902976959154023,
+    "sigma": 6.31531450605264e-07,
+    "theta": 1.7338518885924228,
+    "chi2": 1.4115868194458119,
+    "logL": -0.7057934097229059,
+    "success": true,
+    "nfev": 310
+  },
+  "lcdm_logL": -0.8323513339477089,
+  "corner_w0wa_m2_logL_pure_CPL": -1663.4445348188378,
+  "delta_logL_eff_minus_cpl": -2.7755575615628914e-15,
+  "delta_AIC_eff_minus_cpl": 4.000000000000006,
+  "notes": [
+    "Removed w_eff>=-1 clamp (caused LCDM-degenerate plateau and false w0=wa=-2).",
+    "Removed bare except returning -1e10.",
+    "Nelder-Mead multi-start; logL re-evaluated at reported parameters.",
+    "BAO-only with diagonal errors: qualitative; full DESI uses covariances."
+  ]
+}

@@ -1,0 +1,58 @@
+/home/ashpokemon/proyectos/stochastic-dark-energy-ou/scripts/ou_bao_likelihood.py:582: SyntaxWarning: invalid escape sequence '\D'
+  ax.set_title('rExclusion Plot: $\Delta\log L$ vs $\Lambda$CDM')
+======================================================================
+STOCHASTIC DARK ENERGY — OU + QNM KERNEL TEST
+======================================================================
+  Data source : DESI DR2 (arXiv:2503.14738)
+  N bins      : 7
+  z range     : [0.295, 2.330]
+  WARNING: Results are PRELIMINARY with N=7 bins.
+  95% CI on lag correlations: ≈ ±1.0 (non-significant).
+
+─── MODEL COMPARISON ─────────────────────────────────────────
+Model                              logL    ΔlogL   k       AIC       BIC
+----------------------------------------------------------------------
+ΛCDM (baseline)                  27.013    0.000   0       ref       ref
+OU calibrated (θ=1.2)            23.377   -3.636   —         —         —
+H0: OU free MLE                  27.013   -0.000   2   -50.026   -50.135
+H1: QNM free MLE                 27.013   -0.000   3   -48.026   -48.189
+
+─── BEST-FIT PARAMETERS ──────────────────────────────────────
+  H0 (OU):  θ = 0.0010,  σ_X = 0.00005,  ω_R = 0 (fixed)
+  H1 (QNM): θ = 0.0010,  σ_X = 0.00005,  ω_R = 0.0000
+  H1 m_eff/H (de Sitter dispersion) = 1.5000
+
+  ⚠ PHYSICAL WARNING: θ = 0.0010 ≈ 0: near-undamped oscillation. Likely a numerical artifact with N=7 bins, not a physical QNM. The dispersion relation gives m_eff/H = 1.500, but the near-zero decay rate is unphysical for de Sitter QNM.
+
+─── MODEL SELECTION (AIC/BIC) ────────────────────────────────
+  ΔAIC(H0 − H1) = -2.000  → H0 preferred  (|Δ| > 2 notable, > 6 strong)
+  ΔBIC(H0 − H1) = -1.946  → H0 preferred  (|Δ| > 2 positive, > 6 strong)
+
+  ⚠ With N=7 bins, model selection is INDICATIVE only.
+  ⚠ Decisive test: >20 bins (Euclid DR1, expected H2 2026).
+
+─── QNM CONSISTENCY: θ/ω_R RATIO ────────────────────────────
+  ω_R ≈ 0.0000: fit converged near OU limit.
+  H1 is numerically degenerate with H0 at this precision.
+
+─── LINEARITY TEST: Δη vs Δx ────────────────────────────────
+  Pearson r(Δη, Δx) over all 21 pairs = 0.998456
+  ≈ Good linearity (r < 0.999). Consider 2nd-order correction in future versions.
+
+─── LAG CORRELATIONS (whitened residuals) ────────────────────
+  Note: 95% CI ≈ ±0.98 with N=7 bins. No lag is individually significant.
+
+   Lag    Obs(ΛCDM)     Obs(OU)    Obs(QNM)     Pred_OU   Pred_QNM     ⟨Δx⟩
+  ---------------------------------------------------------------------------
+     1      -0.9579     -0.9579     -0.9579     +0.9998    +0.9998   0.1574
+     2      +0.9198     +0.9198     +0.9198     +0.9997    +0.9997   0.2884
+     3      -0.9195     -0.9195     -0.9195     +0.9996    +0.9996   0.4375
+
+─── FALSIFICATION CRITERIA ───────────────────────────────────
+  F4a: ΔlogL(OU)  < 0 with 20+ bins           → H0 (OU) falsified
+  F4b: ΔlogL(QNM) < ΔlogL(OU) with 20+ bins  → QNM adds no value
+  F6:  θ/ω_R inconsistent across DESI/Euclid  → QNM kernel incoherent
+  F7:  ω_R → 0 in Euclid fit                  → OU pure recovered, not QNM
+
+======================================================================
+Figure saved: plots/test_desi_QNM.png
