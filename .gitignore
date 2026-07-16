@@ -15,7 +15,9 @@ local_archive/
 data/
 drafts/
 outreach/
-# literature/: keep citable anchors (magnetar_literature_anchors.*) in git
+# literature/: keep citable anchors (*.md, *.json); ignore bulk PDFs
+literature/*.pdf
+literature/**/*.pdf
 
 # Optional large binaries
 results/**/*.npz
