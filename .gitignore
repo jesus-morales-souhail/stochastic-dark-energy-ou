@@ -14,8 +14,8 @@ Thumbs.db
 local_archive/
 data/
 drafts/
-literature/
 outreach/
+# literature/: keep citable anchors (magnetar_literature_anchors.*) in git
 
 # Optional large binaries
 results/**/*.npz
