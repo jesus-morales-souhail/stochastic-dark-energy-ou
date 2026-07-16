@@ -28,3 +28,4 @@ results/**/*_datos.npz
 results/euclid_mcmc/*.npz
 results/euclid_mcmc/*.npy
 results/euclid_joint_mcmc/*.npz
+plots/
