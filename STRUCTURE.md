@@ -22,6 +22,7 @@ notes/        Technical notes (desqueezing synthesis, mapping tables)
 | `scripts/desqueezing/cosmological_mapping.py` | Map γ ↔ θ H(z) |
 | `scripts/gpe/gpe_sim.py` | Negative-mass GPE illustration |
 | `papers/resume.txt` | Compact numerical summary |
+| `papers/anisotropic-slip-option0.md` | Option 0: η / anisotropic stress vs σ_X (literature + scaling; no Boltzmann) |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
 See `README.md` for installation and overview.
