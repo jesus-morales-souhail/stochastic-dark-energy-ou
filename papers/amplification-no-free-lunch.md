@@ -147,6 +147,77 @@ Need detection-scale residual without free A0?
 **Recommended default for publication of the present corpus:**  
 Act III closed as **no free lunch on linear amplifiers**; Routes 1–3 listed as **the only open theory cards**, each with a price.
 
+### 6.3 Numerical scan results (HEAD — machine tables)
+
+**Data:** `results/amplification_routes/`  
+`route1_N_eff_required.csv`, `route1_N_eff_grid.csv` (1800 rows),  
+`route2_horizon_exit_scan.csv` (24 configs × 4000 paths),  
+`route3_avalanche_scan.csv` (288 jobs × 20 000 paths).  
+**Compact verdict file:** `results/amplification_routes/VERDICT.md`.
+
+#### Route 1 — redefining \(N_{\mathrm{eff}}\) (not a gain factor)
+
+Pure Poisson counting \(\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}\):
+
+| Target residual | \(\sigma_{0,\mathrm{eff}}\) | \(N_{\mathrm{eff}}\) required | vs \(N_{\mathrm{BH}}\sim 10^{122}\) |
+|-----------------|-----------------------------|-------------------------------|-------------------------------------|
+| DESI 95% ceiling | \(1.5\times 10^{-4}\) | \(\mathbf{4.44\times 10^{7}}\) | smaller by \(\sim 10^{114}\) |
+| Intermediate window | \(10^{-4}\) | \(1.00\times 10^{8}\) | \(\sim 10^{114}\) |
+| Euclid-scale residual | \(10^{-5}\) | \(\mathbf{1.00\times 10^{10}}\) | smaller by \(\sim 10^{112}\) |
+
+Implied local scale if \(N_{\mathrm{eff}}=N_{\mathrm{BH}}(L/R_H)^p\) (order-of-magnitude only):
+
+| Target | \(p=2\) (area) \(L\) | \(p=3\) (volume) \(L\) | \(p=4\) (4-vol) \(L\) |
+|--------|----------------------|------------------------|------------------------|
+| DESI \(N_{\mathrm{eff}}\sim 4.4\times 10^{7}\) | \(\sim 10^{-31}\,\mathrm{m}\) | \(\sim 10^{-12}\,\mathrm{m}\) | \(\sim\mathrm{mm}\) |
+| Euclid \(N_{\mathrm{eff}}\sim 10^{10}\) | \(\sim 10^{-30}\,\mathrm{m}\) | \(\sim 10^{-11}\,\mathrm{m}\) | \(\sim\mathrm{cm}\) |
+
+**Verdict R1:** The **only** card that reaches DESI/Euclid residual *amplitudes* without linear gain. **Price:** abandon global horizon counting; justify a meso-scale causal-set / correlation volume. That is a **new theory claim**, not a free lunch on \(\sigma_0\sim 10^{-61}\).
+
+#### Route 2 — late freeze-out toy (96k paths total)
+
+SDE \(dX=-\theta(x)X\,dx+\sigma\,dW\) with \(\theta\) dropping after a late \(x_{\mathrm{exit}}\) (\(\Delta x\sim\mathcal{O}(1)\)).
+
+| Metric | Result |
+|--------|--------|
+| \(\mathrm{rms}(X_f)/\sigma\) | \(\sim 0.36\)–\(0.97\) (always \(\mathcal{O}(1)\)) |
+| Freeze vs restore (\(\theta_{\mathrm{super}}=0\) vs \(10^{-4}\)) | ratio \(\mathbf{1.000}\) at fixed \(\theta_{\mathrm{sub}}\) |
+| Scaling | residual \(\propto\sigma\) (no decade gain) |
+| Smallest \(\sigma\) in scan | \(10^{-6}\) (float-safe); bare \(10^{-61}\) not representable |
+
+**Verdict R2:** Late-time freeze with \(\Delta x\sim\mathcal{O}(1)\) **does not amplify**. It at best *preserves* an already large seed. Without Route 1 or a non-Sorkin \(H/M_{\mathrm{Pl}}\) seed, Route 2 **cannot** close the \(10^{56}\) gap. Matches §6.1.
+
+#### Route 3 — double-well Langevin avalanche (288 × 20k)
+
+Potential \(V=\tfrac14 a X^4-\tfrac12 b X^2\), \(a\in\{1,10\}\), \(b\in[10^{-6},0.1]\), \(\sigma\in[10^{-8},10^{-3}]\), \(\Delta x=1\).
+
+| Metric | Result |
+|--------|--------|
+| Gain \(\mathrm{p95}(|X|)/\sigma\) | **min 1.93 · median 1.97 · max 2.08** |
+| Linearized growth ceiling \(e^{b\Delta x}\) at \(b_{\max}=0.1\) | \(\approx 1.11\) (scan not in deep-avalanche regime) |
+| Jobs with \(\mathrm{p95}\ge 10^{-5}\) and \(\sigma\le 10^{-8}\) | **0 / 288** |
+| Jobs with \(\mathrm{p95}\ge 10^{-5}\) and \(\sigma < 10^{-6}\) | **0 / 288** |
+| BAO-safe (\(\mathrm{p95}<1.5\times 10^{-4}\)) | **216 / 288** |
+| BAO-unsafe (\(\mathrm{p95}\ge 1.5\times 10^{-4}\)) | **72 / 288** — **all** have \(\sigma\gtrsim 1.2\times 10^{-4}\) |
+| Euclid window \(10^{-5}\le\mathrm{p95}<1.5\times 10^{-4}\) | 72 jobs — residual still \(\sim\sigma\), not seed-triggered |
+
+**BAO-safe rule of thumb in this scan:** keep drive noise \(\sigma\lesssim 4\times 10^{-5}\) (p95 stays below DESI ceiling for all \((a,b)\) tested).  
+**BAO-unsafe:** \(\sigma\gtrsim 1.2\times 10^{-4}\) → p95 exceeds DESI for **every** \((a,b)\).
+
+**Verdict R3:** In the soft-potential, late-\(\Delta x=\mathcal{O}(1)\) window scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains \(\mathcal{O}(1)\). Large residuals require **large \(\sigma\)** (renaming free \(A_0\)) or a **new** regime \(b\,\Delta x\gg 1\) / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free lunch inside the present corpus.
+
+#### Act III decision after the scan
+
+```
+Linear amplifiers (a–c,e)     → closed (audit + exclusions)
+Route 2 freeze alone          → numerically dead as amplifier (gain ~1)
+Route 3 soft double-well      → no seed→Euclid trigger (gain ~2; BAO set by σ)
+Route 1 local N_eff           → only card that hits target amplitude
+                                 (by redefining the seed; price: causal-set theory)
+Default publication posture   → limits + exclusions + hypothesis map
+                                 (success without detection claim)
+```
+
 ---
 
 ## 7. Key equations (corpus-fixed)
@@ -181,6 +252,8 @@ Bare seed motivation:
 
 **There is no free lunch:** every channel that could make vacuum noise *visible* either fails gain by many decades, is already excluded, or replaces \(\sigma_0\) with a different microphysics.  
 The only amplifier class worth a *serious new theory exam* is an **inflation-style freeze-out (d)** — and only after abandoning a pure Sorkin late-time seed and deriving a DE-residual map. Until then, the project’s strength is **what it already closed**, not a promised detection.
+
+**After Routes 1–3 machine scans (§6.3):** Route 2 is numerically dead as an amplifier; Route 3 soft double-well yields gain \(\sim 2\) and BAO bounds set by \(\sigma\); Route 1 alone hits target amplitudes by redefining \(N_{\mathrm{eff}}\). Publication default remains **honest limits + exclusions + open hypothesis cards**.
 
 ---
 

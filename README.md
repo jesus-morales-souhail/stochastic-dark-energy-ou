@@ -38,12 +38,15 @@ Unimodular / SDiff structure projects out local vacuum stress of the form \(T_{\
 
 A pure Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) sits far below BAO reach (\(A_0/\sigma_0\sim 10^{56}\) to hit \(\sim 10^{-5}\)). Open-system **desqueezing** supplies a dynamical language for finite relaxation (\(t_{1/2}=\ln 2/\gamma\)) but only \(\mathcal{O}(10)\) gain at \(r\sim 1.5\). Audited amplifiers (tachyonic growth, \(\sqrt{N}\), freeze-out slogans, phase jumps) are **excluded**, short by decades, or require a **new seed** — see the closure note.
 
+**Routes 1–3 (scanned):** only **local \(N_{\mathrm{eff}}\)** hits DESI/Euclid amplitudes (\(N_{\mathrm{eff}}\sim 4\times 10^{7}\) / \(10^{10}\)); late freeze gain \(=1\); soft avalanche gain \(\sim 2\) (no seed→Euclid). Tables: `results/amplification_routes/VERDICT.md`.
+
 **Primary notes:**  
-`papers/amplification-no-free-lunch.md` (**Act III closure**),  
+`papers/amplification-no-free-lunch.md` (**Act III closure**, §6.3 machine tables),  
 `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,  
 `fundamental-vs-emergent-vacuum-relaxation.md`,  
 `euclid-protocol-vacuum-relaxation.md`,  
-`scripts/amplifier_audit.py`.
+`scripts/amplifier_audit.py`,  
+`scripts/amplification/run_all_routes.py`.
 
 ### Act IV — Option 0: the anisotropic “gap” (no homemade Boltzmann)
 

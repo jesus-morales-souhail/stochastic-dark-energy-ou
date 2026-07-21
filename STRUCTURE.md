@@ -52,6 +52,7 @@ local_archive/  Offline drafts (not part of the public scientific claim)
 | `scripts/amplification/route3_nonlinear_avalanche.py` | Route 3: double-well avalanche scan |
 | `scripts/amplification/run_all_routes.py` | Batch runner (`--heavy` for full CPU) |
 | `results/amplification_routes/` | CSV outputs of routes 1–3 |
+| `results/amplification_routes/VERDICT.md` | Machine-checked Act III table (N_eff, freeze gain, avalanche) |
 | `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` | Open-system half-life |
 | `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |

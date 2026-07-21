@@ -9,6 +9,10 @@ Narrative cohesion (how papers fit): see repository README.md
   Act IV Option 0 slip | V closed wrong paths (scale/operator)
   Act III closure: papers/amplification-no-free-lunch.md
   Gap: A0/sigma_0 ~ 1e56 (sigma_0~1e-61 → Euclid residual ~1e-5)
+  Routes 1–3 scan (results/amplification_routes/VERDICT.md):
+    R1: N_eff ~ 4.4e7 (DESI) / 1e10 (Euclid)  — only amplitude card (redefine seed)
+    R2: freeze gain = 1.000; rms/sigma = O(1)  — dead as amplifier alone
+    R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; BAO-safe if sigma ≲ 4e-5
   Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~1e-4 best case; O(1e2-1e3)x starved)
   External lab optics: ~/Proyectos/04_Optica_medios_complejos/ (NOT this paper)
 Data pack (arXiv links): papers/data-pack-option0-internet.md
