@@ -54,6 +54,7 @@ These notes keep the corpus honest and prevent mixing lab metaphors into DESI cl
 |--------------|------------|----------|
 | Highway pupil / “tesseract diffraction” tests expansion | Wrong **scale** and **operator** | `car-drone-pupil-newton-einstein.md` |
 | Phase tricks force single-photon sub-Airy certainty | Born + band-limit | `no-go-superoscillation-tesseract.md`, `self-shielding-triple-barrier.md` |
+| Tesseract/\(B_4\) as channel amplifier | 32/384 symplectic; commutant dim 1 in \(\mathfrak{sp}(4,\mathbb{R})\) — symmetry *kills* DOF | `no-go-superoscillation-tesseract.md` §3.2–4.2, `scripts/b4_symplectic_count.py` |
 | Lab wavefront \(T\) = BAO OU vacuum | Different objects | `wavefront-shaping-vs-ou-vacuum.md` |
 | \(\ln 4\equiv\omega_R\) or \(B_4\) as undeclared physics | Pattern hygiene | `pattern-undeclared-physical-power.md` |
 | \(f_{\mathrm{cosmo}}\equiv 1/\theta\) as optical identity | Analogy only | `optics-ou-analogies-and-limits.md` |

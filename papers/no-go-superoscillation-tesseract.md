@@ -60,12 +60,31 @@ Numbers like “0.01% / 99.99%” in informal texts are order-of-magnitude illus
 
 ### 3.2 Tesseract / 8 cubes / \(B_4\): geometry ≠ undeclared control power
 
-**True:** A tesseract has **8 cubic cells** as 3D boundary facets. The hyperoctahedral / Coxeter group \(B_4\) is a real symmetry group of the 4-cube.
+**True:** A tesseract has **8 cubic cells** as 3D boundary facets. The hyperoctahedral / Coxeter group \(B_4\) is a real symmetry group of the 4-cube (\(|B_4|=4!\cdot 2^4=384\) signed permutations of \(\mathbb{R}^4\)).
 
-**Not shown in the proposal:**
+**Sealed count (optical phase space, first order):**  
+On the paraxial phase space \((x,p_x,y,p_y)\) with symplectic form
+\[
+J=\mathrm{blockdiag}(J_2,J_2),\qquad
+J_2=\begin{pmatrix}0&1\\-1&0\end{pmatrix},
+\]
+exactly **32** of the 384 signed permutations satisfy \(MJM^{\mathsf T}=J\)  
+(check: \(4\times 4\times 2=32\) — symplectic rotations in each plane plus exchange of the two planes with compatible signs).  
 
-- A map from “8 projected cubes” \(\to\) a physical field configuration \(E(\mathbf{r},t)\) obeying Maxwell.
-- A proof that this map provides **more** controllable degrees of freedom than a spatial light modulator (SLM) already controlling phase on a 2D pupil (and pulse shaping for time/\(\omega\)).
+Those 32 generate a joint **commutant of dimension 1** inside \(\mathfrak{sp}(4,\mathbb{R})\) (\(\dim=10\)).  
+Runnable verification: `scripts/b4_symplectic_count.py`.
+
+**Reading of the seal:** as a *symmetry constraint*, \(B_4\) **removes** 9 of 10 first-order optical freedoms; it is **never** an amplifier of channels. The “8” of the 4-cube is **polytope boundary combinatorics**, not the rank of a Maxwell-derived operator.
+
+**What the device actually is (Maxwell → ABCD):**  
+Paraxial Helmholtz \(\to\) Fresnel propagators \(P_d\) (metaplectic) + thin phase screens \(L_\Phi\) (e.g. SLM).  
+Composition \(M=P_{d_n}L_{\Phi_{n-1}}\cdots L_{\Phi_1}P_{d_1}\).  
+If every \(\Phi\) is quadratic, \(M\in\mathrm{Sp}(4,\mathbb{R})\) (Collins kernel); image condition \(B_{\mathrm{tot}}=0\) recovers Descartes.  
+Controllable DOF of a phase-only SLM: \(N_{\mathrm{pix}}\) (e.g. \(1920\times 1080\)) times spectral bins if used — **hardware**, not 8/16/24/32 from the 4-cube.
+
+**Not shown in tesseract proposals:**
+
+- A map from “8 projected cubes” \(\to\) a physical field \(E(\mathbf{r},t)\) obeying Maxwell that *extends* \(\mathrm{Sp}(4,\mathbb{R})\) or \(N_{\mathrm{pix}}\).  
 - Any advantage over standard phase conjugation / holography / Fourier optics.
 
 This is the same **pattern of undeclared power** as in the archived script `quantum_information_cosmos.py`: take a clean mathematical object (\(\ln 4\), \(B_4\)) and **declare** it sets a physical frequency or optical control law without derivation.
@@ -76,7 +95,9 @@ Thermal index fluctuations and inelastic scattering do destroy phase conjugation
 
 ---
 
-## 4. Formal no-go (optics + quantum detection)
+## 4. Formal no-gos
+
+### 4.1 Optics + quantum detection (Born)
 
 **Assumptions**
 
@@ -92,7 +113,13 @@ No choice of deterministic pre-phase (tesseract-inspired or otherwise) that yiel
 - post-selecting / discarding trials (which reintroduces the energy cost as failed shots), or  
 - changing the definition of “success” (e.g. classical multi-photon intensity peaks without single-photon certainty).
 
-**Tesseract geometry does not appear in the assumptions or the conclusion.** Until a derivation inserts it, it is decorative.
+### 4.2 First-order device symmetry (\(B_4\) vs \(\mathrm{Sp}(4,\mathbb{R})\))
+
+**Assumptions:** paraxial phase-space maps in \(\mathrm{Sp}(4,\mathbb{R})\); candidate “tesseract symmetry” = signed-permutation action of \(B_4\) on \(\mathbb{R}^4\).
+
+**Facts (machine-checked):** 32 of 384 elements of \(B_4\) are optical-symplectic; their commutant in \(\mathfrak{sp}(4,\mathbb{R})\) has dimension **1**.
+
+**Conclusion:** Imposing \(B_4\) as a symmetry **restricts** first-order devices (\(10\to 1\) free directions in the Lie algebra, up to that commutant). It cannot be a derivation of **extra** independent optical channels equal to the number of cells/vertices of the 4-cube. Any claim “8 cells → 8 channels” confuses **polytope combinatorics** with **operator rank**.
 
 ---
 
