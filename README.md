@@ -34,11 +34,16 @@ Unimodular / SDiff structure projects out local vacuum stress of the form \(T_{\
 
 **Primary papers:** `principle-of-vacuum-smoothness.md`, `smoothness-of-the-vacuum-unimodular.md`, `unimodular-gravity-vacuum-smoothness.md`, `sdiff-fundamental-vs-emergent.md`.
 
-### Act III — Open systems and amplification
+### Act III — Open systems and amplification (**no free lunch**)
 
-A pure Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) sits far below BAO reach. Open-system **desqueezing** supplies a dynamical language for finite relaxation (\(t_{1/2}=\ln 2/\gamma\)) and makes the **amplification** problem explicit: without a physical map from seed to \(A_0\gtrsim 10^{-5}\), Euclid-scale residual detections are not automatic.
+A pure Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) sits far below BAO reach (\(A_0/\sigma_0\sim 10^{56}\) to hit \(\sim 10^{-5}\)). Open-system **desqueezing** supplies a dynamical language for finite relaxation (\(t_{1/2}=\ln 2/\gamma\)) but only \(\mathcal{O}(10)\) gain at \(r\sim 1.5\). Audited amplifiers (tachyonic growth, \(\sqrt{N}\), freeze-out slogans, phase jumps) are **excluded**, short by decades, or require a **new seed** — see the closure note.
 
-**Primary notes:** `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, `fundamental-vs-emergent-vacuum-relaxation.md`, `euclid-protocol-vacuum-relaxation.md`.
+**Primary notes:**  
+`papers/amplification-no-free-lunch.md` (**Act III closure**),  
+`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,  
+`fundamental-vs-emergent-vacuum-relaxation.md`,  
+`euclid-protocol-vacuum-relaxation.md`,  
+`scripts/amplifier_audit.py`.
 
 ### Act IV — Option 0: the anisotropic “gap” (no homemade Boltzmann)
 
@@ -84,7 +89,7 @@ These notes keep the corpus honest and prevent mixing lab metaphors into DESI cl
 2. `papers/stochastic-dark-energy-desi-dr2.md` — main BAO analysis  
 3. `papers/quantum-fluid-instabilities-desi-dr2.md` — model kill  
 4. `papers/principle-of-vacuum-smoothness.md` + `sdiff-fundamental-vs-emergent.md` — geometry  
-5. `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` — amplification  
+5. `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` + **`amplification-no-free-lunch.md`** — amplification  
 6. `papers/anisotropic-slip-option0.md` + `data-pack-option0-internet.md` — slip / Option 0  
 7. `papers/scale-operator-experiment-map.md` — what is closed vs next  
 8. Boundary notes (V) as needed when analogies appear  

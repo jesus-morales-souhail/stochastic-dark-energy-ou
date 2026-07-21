@@ -5,8 +5,10 @@ ORCID:  0009-0000-7637-1818
 Date:   July 2026
 
 Narrative cohesion (how papers fit): see repository README.md
-  Act I BAO residuals | II SDiff geometry | III desqueezing/amplification
+  Act I BAO residuals | II SDiff geometry | III amplification NO FREE LUNCH
   Act IV Option 0 slip | V closed wrong paths (scale/operator)
+  Act III closure: papers/amplification-no-free-lunch.md
+  Gap: A0/sigma_0 ~ 1e56 (sigma_0~1e-61 → Euclid residual ~1e-5)
   External lab optics: ~/Proyectos/04_Optica_medios_complejos/ (NOT this paper)
 Data pack (arXiv links): papers/data-pack-option0-internet.md
 

@@ -45,6 +45,8 @@ local_archive/  Offline drafts (not part of the public scientific claim)
 
 | Path | Role |
 |------|------|
+| `papers/amplification-no-free-lunch.md` | **Act III closure:** gap \(10^{56}\), amplifier audit, only (d) worth new theory |
+| `scripts/amplifier_audit.py` | Runnable gain table (Sorkin → DESI/Euclid) |
 | `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` | Open-system half-life |
 | `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |
