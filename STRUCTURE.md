@@ -33,6 +33,7 @@ notes/        Technical notes (desqueezing synthesis, mapping tables)
 | `papers/data-pack-option0-internet.md` | Internet-sourced numbers + arXiv links for Option 0 |
 | `papers/optics-ou-analogies-and-limits.md` | Quantum lens OK; tesseract ABCD no; f↔1/θ analogy only |
 | `papers/self-shielding-triple-barrier.md` | 0% physical / 100% math: Born, band-limit, OU shields |
+| `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab T-matrix optics ≠ BAO OU; no vacuum SLM |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
 See `README.md` for installation and overview.
