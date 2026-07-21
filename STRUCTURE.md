@@ -46,11 +46,12 @@ local_archive/ Offline drafts (not part of the public scientific claim)
 | `papers/unimodular-gravity-vacuum-smoothness.md` | Extended geometric synthesis |
 | `papers/sdiff-fundamental-vs-emergent.md` | Fundamental vs emergent SDiff |
 
-### III — Desqueezing / amplification / Euclid
+### III — Desqueezing / amplification gap / Euclid
 
 | Path | Role |
 |------|------|
-| `papers/amplification-no-free-lunch.md` | **Act III closure:** gap \(10^{56}\), amplifier audit, only (d) worth new theory |
+| `papers/amplification-gap.md` | **Act III closure:** gap \(10^{56}\), amplifier audit, only (d) worth new theory |
+| `papers/amplification-no-free-lunch.md` | Redirect stub → `amplification-gap.md` (old bookmarks) |
 | `scripts/amplifier_audit.py` | Runnable gain table (Sorkin → DESI/Euclid) |
 | `scripts/amplification/route1_local_causal_set_seed.py` | Route 1: N_eff / local seed scan |
 | `scripts/amplification/route2_late_horizon_exit.py` | Route 2: θ(x) freeze-out Monte Carlo |

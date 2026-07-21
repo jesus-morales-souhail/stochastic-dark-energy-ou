@@ -3,7 +3,7 @@
 | | |
 |:--|:--|
 | **Analysis** | Corpus July 2026 |
-| **Parent note** | [`papers/amplification-no-free-lunch.md`](../../papers/amplification-no-free-lunch.md) §6.3 |
+| **Parent note** | [`papers/amplification-gap.md`](../../papers/amplification-gap.md) §6.3 |
 | **Scripts** | `scripts/amplification/route{1,2,3}_*.py`, `run_all_routes.py` |
 
 This file freezes the **machine-checked** conclusions of the amplification-route scans. 

@@ -159,7 +159,7 @@ Compare:
 
 **Interpretation:** even the most optimistic anisotropic fraction does **not** make the gap visible at current DESI precision, nor automatically at Euclid, **unless** there is **amplification** of the bare residual amplitude (or a shear sector **decoupled** from the BAO-bounded isotropic \(\sigma_X\)).
 
-That word — **amplification** — is the same one that appears in Act III (`amplification-no-free-lunch.md`) when mapping Sorkin-scale seeds (\(\sim 10^{-61}\)) up to BAO-relevant \(\sigma_X\) (factors of order \(A_0/\sigma_0\sim 10^{56}\)). The anisotropic channel **does not evade** that problem; it **inherits** it.
+That word — **amplification** — is the same one that appears in Act III (`amplification-gap.md`) when mapping Sorkin-scale seeds (\(\sim 10^{-61}\)) up to BAO-relevant \(\sigma_X\) (factors of order \(A_0/\sigma_0\sim 10^{56}\)). The anisotropic channel **does not evade** that problem; it **inherits** it.
 
 | \(\varepsilon\) | \(\|\gamma-1\|\) at \(z=0.5\), \(\sigma_X=1.5\times 10^{-4}\) |
 |-----------------|------------------------------------------------------------------|

@@ -220,13 +220,13 @@ DESI constrains the **effective** amplitude after any amplification. Without a p
 |:------|:-----|:------------------|
 | **1. Local $N_{\mathrm{eff}}$** | $\sigma_{0,\mathrm{eff}} = 1/\sqrt{N_{\mathrm{eff}}}$, with $N_{\mathrm{eff}} \ll N_{\mathrm{BH}}$ | $N_{\mathrm{eff}} \sim 4.44 \times 10^{7}$ (DESI), $1.00 \times 10^{10}$ (Euclid). **Only amplitude card** — redefines the seed. |
 | **2. Late freeze-out** | $\theta \to 0$ after late exit, $\Delta x \sim \mathcal{O}(1)$ | Freeze/restore gain $= 1.000$; $\mathrm{rms}/\sigma = \mathcal{O}(1)$. **Dead as amplifier alone.** |
-| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma \sim 2$; **0/288** jobs with $\mathrm{p95} \ge 10^{-5}$ and $\sigma \le 10^{-8}$. BAO-safe if $\sigma \lesssim 4 \times 10^{-5}$. **No free amplification.** |
+| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma \sim 2$; **0/288** jobs with $\mathrm{p95} \ge 10^{-5}$ and $\sigma \le 10^{-8}$. BAO-safe if $\sigma \lesssim 4 \times 10^{-5}$. **No free gain (amplification gap).** |
 
-Full tables: [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md) and [`papers/amplification-no-free-lunch.md`](../papers/amplification-no-free-lunch.md) §6.3.
+Full tables: [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md) and [`papers/amplification-gap.md`](../papers/amplification-gap.md) §6.3.
 
 ### 5.4 Claim statement (Act III)
 
-> There is **no free amplification** for linear amplification of a pure Sorkin seed to BAO/Euclid residual scales. Publication of the present corpus is consistent with **honest limits + exclusions + a short map of open hypothesis cards**, each with an explicit theoretical price.
+> **Amplification gap:** linear amplification of a pure Sorkin seed does not reach BAO/Euclid residual scales (factor $\sim 10^{56}$). Publication of the present corpus is consistent with **honest limits + exclusions + a short map of open hypothesis cards**, each with an explicit theoretical price.
 
 ---
 

@@ -28,7 +28,7 @@ Run:
 
 Related:
   papers/anisotropic-slip-option0.md
-  papers/amplification-no-free-lunch.md
+  papers/amplification-gap.md
   papers/resume.txt
   papers/data-pack-option0-internet.md
 """
@@ -145,7 +145,7 @@ def main() -> None:
     print("  this stochastic mechanism alone — it is generic anisotropic")
     print("  stress / MG (Clifton+Ferreira+Padilla+Skordis degeneracy).")
     print()
-    print("  Act IV inherits Act III: no free amplification on amplitude.")
+    print("  Act IV inherits Act III: amplification gap on amplitude (no free gain).")
 
 
 if __name__ == "__main__":

@@ -51,14 +51,14 @@ Unimodular / SDiff structure projects out local vacuum stress of the form $T_{\m
 
 **Primary papers:** `principle-of-vacuum-smoothness.md`, `smoothness-of-the-vacuum-unimodular.md`, `unimodular-gravity-vacuum-smoothness.md`, `sdiff-fundamental-vs-emergent.md`.
 
-### Act III — Open systems and amplification (**no free amplification**)
+### Act III — Open systems and amplification (**amplification gap**)
 
 A pure Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ sits far below BAO reach ($A_0/\sigma_0\sim 10^{56}$ to hit $\sim 10^{-5}$). Open-system **desqueezing** supplies a dynamical language for finite relaxation ($t_{1/2}=\ln 2/\gamma$) but only $\mathcal{O}(10)$ gain at $r\sim 1.5$. Audited amplifiers (tachyonic growth, $\sqrt{N}$, freeze-out slogans, phase jumps) are **excluded**, short by decades, or require a **new seed** — see the closure note.
 
 **Routes 1–3 (scanned):** only **local $N_{\mathrm{eff}}$** hits DESI/Euclid amplitudes ($N_{\mathrm{eff}}\sim 4\times 10^{7}$ / $10^{10}$); late freeze gain $=1$; soft avalanche gain $\sim 2$ (no seed→Euclid). Tables: `results/amplification_routes/VERDICT.md`.
 
 **Primary notes:** 
-`papers/amplification-no-free-lunch.md` (**Act III closure**, §6.3 machine tables), 
+`papers/amplification-gap.md` (**Act III closure**, §6.3 machine tables), 
 `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, 
 `fundamental-vs-emergent-vacuum-relaxation.md`, 
 `euclid-protocol-vacuum-relaxation.md`, 
@@ -110,7 +110,7 @@ These notes keep the corpus honest and prevent mixing lab metaphors into DESI cl
 3. `papers/resume.txt` — numbers only 
 4. `papers/stochastic-dark-energy-desi-dr2.md` — detailed BAO analysis 
 5. `papers/quantum-fluid-instabilities-desi-dr2.md` — model kill 
-6. `papers/amplification-no-free-lunch.md` + `results/amplification_routes/VERDICT.md` — amplification 
+6. `papers/amplification-gap.md` + `results/amplification_routes/VERDICT.md` — amplification 
 7. `papers/anisotropic-slip-option0.md` + `scripts/slip_bridge.py` — slip / Option 0 
 8. Exploratory Act V (optional): [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) 
 

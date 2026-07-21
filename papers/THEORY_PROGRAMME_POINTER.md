@@ -15,4 +15,4 @@ Theory is **not** part of this DESI empirical claim set.
 | `papers/NARROW_PATH.md` | DESI-safe NP-A / NP-B |
 | `pytest -q` | Expect **42 passed** |
 
-This repository remains: DESI residual bounds, model exclusions, and no free amplification.
+This repository remains: DESI residual bounds, model exclusions, and the amplification gap (see `papers/amplification-gap.md`).
