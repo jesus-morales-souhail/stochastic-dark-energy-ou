@@ -67,12 +67,15 @@ local_archive/  Offline drafts (not part of the public scientific claim)
 | `papers/scale-operator-experiment-map.md` | Master map: closed vs next (scale + operator) |
 | `papers/self-shielding-vs-untestability.md` | Shielding vs amplitude honesty |
 | `papers/self-shielding-triple-barrier.md` | Born / band-limit / OU: 0% physical abuse, 100% math |
-| `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy single-photon certainty |
+| `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy + B4/Sp(4,R) seal |
+| `papers/maxwell-device-to-M-derivation.md` | Maxwell+device→M; only Sp(4,R) is legitimate 4D |
 | `papers/optics-ou-analogies-and-limits.md` | Thin lens OK; tesseract ABCD no; \(f\leftrightarrow 1/\theta\) analogy only |
 | `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab \(T\) ≠ BAO OU |
 | `papers/pattern-undeclared-physical-power.md` | \(\ln 4\), \(B_4\) pattern filter |
 | `papers/car-drone-pupil-newton-einstein.md` | Highway pupil: **CLOSED** wrong scale/operator |
 | `scripts/superoscillation_energy_cost_demo.py` | 1D energy-tax demo |
+| `scripts/b4_symplectic_count.py` | Seal: 32/384 B4 optical-symplectic; commutant dim 1 |
+| `scripts/derive_M_maxwell_device.py` | Maxwell→Fresnel→ABCD + B4 restriction check |
 | `scripts/car_drone_pupil_newton_einstein.py` | Runnable Newton vs SR numbers |
 
 ### Separated (not this repository)
