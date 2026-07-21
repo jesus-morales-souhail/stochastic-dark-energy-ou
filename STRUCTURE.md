@@ -47,6 +47,11 @@ local_archive/  Offline drafts (not part of the public scientific claim)
 |------|------|
 | `papers/amplification-no-free-lunch.md` | **Act III closure:** gap \(10^{56}\), amplifier audit, only (d) worth new theory |
 | `scripts/amplifier_audit.py` | Runnable gain table (Sorkin → DESI/Euclid) |
+| `scripts/amplification/route1_local_causal_set_seed.py` | Route 1: N_eff / local seed scan |
+| `scripts/amplification/route2_late_horizon_exit.py` | Route 2: θ(x) freeze-out Monte Carlo |
+| `scripts/amplification/route3_nonlinear_avalanche.py` | Route 3: double-well avalanche scan |
+| `scripts/amplification/run_all_routes.py` | Batch runner (`--heavy` for full CPU) |
+| `results/amplification_routes/` | CSV outputs of routes 1–3 |
 | `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` | Open-system half-life |
 | `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |

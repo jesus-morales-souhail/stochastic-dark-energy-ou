@@ -116,15 +116,36 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 
 ---
 
-## 6. Decision tree (what to write next)
+## 6. Three *allowed* working hypotheses (not free lunches)
+
+Linear gain \(\times 10^{56}\) on white noise is dead. The only coherent ways to **change the problem** (not multiply noise by magic) are:
+
+| Route | Mechanism | How it “reaches” \(10^{-5}\) | Price / open problem | Script |
+|-------|-----------|------------------------------|----------------------|--------|
+| **1. Scale-invariant / local seed** | Sorkin count uses \(N_{\mathrm{eff}}\ll N_{\mathrm{BH}}\) (local / meso correlation) | Raise **starting** \(\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}\) | Redefine causal-set boundary counting | `scripts/amplification/route1_local_causal_set_seed.py` |
+| **2. Late horizon exit** | \(\theta(x)\to 0\) after mode exits horizon during late acceleration; freeze residual | Stretch / freeze **before** restoration kills the kick | Must derive DE-mode freeze-out (≠ 60 inflation e-folds; late \(\Delta x=\mathcal{O}(1)\)) | `scripts/amplification/route2_late_horizon_exit.py` |
+| **3. Nonlinear avalanche** | Tiny seed is only a **trigger**; large jump from multi-well / threshold dynamics paid by background potential | Burst amplitude set by potential, not \(e^{2r}\) | New \(V(X)\); must stay BAO-smooth (not always-large) | `scripts/amplification/route3_nonlinear_avalanche.py` |
+
+**Batch runner:** `python scripts/amplification/run_all_routes.py` (add `--heavy` for denser grids).  
+**Outputs:** `results/amplification_routes/*.csv`.
+
+### 6.1 Reading of Route 2 vs classical inflation
+
+Late-time acceleration supplies \(\Delta x=\ln(a_0/a_{\mathrm{exit}})\sim\mathcal{O}(1)\), **not** \(\sim 60\).  
+Even with perfect freeze, a bare \(\sigma_0\sim 10^{-61}\) does **not** become \(10^{-5}\) from e-fold stretch alone. Route 2 only becomes powerful if combined with Route 1 (larger seed) or a **non-Sorkin** mode amplitude \(\sim H/M_{\mathrm{Pl}}\).
+
+### 6.2 Decision tree
 
 ```
-Is there a derived late-time freeze-out for DE residual X(x)?
-   ├─ NO  →  stop amplifier hunt; publish nulls + SDiff + Option 0 honesty
-   └─ YES →  redefine seed (not pure σ0); recompute residual kernel; joint BAO fit
+Need detection-scale residual without free A0?
+   ├─ Redefine seed (Route 1)?  → justify N_eff; re-run BAO with new prior
+   ├─ Freeze-out (Route 2)?     → derive θ(k,a); note Δx_late ≪ 60
+   ├─ Avalanche (Route 3)?      → derive V(X); scan BAO-safe rare-burst region
+   └─ None                      → programme = honest limits + exclusions (success)
 ```
 
-**Recommended default:** treat Act III as **closed at the “no free lunch” level**, and only reopen (d) with a full derivation — not a slogan.
+**Recommended default for publication of the present corpus:**  
+Act III closed as **no free lunch on linear amplifiers**; Routes 1–3 listed as **the only open theory cards**, each with a price.
 
 ---
 
