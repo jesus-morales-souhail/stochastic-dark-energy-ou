@@ -37,3 +37,10 @@ notes/        Technical notes (desqueezing synthesis, mapping tables)
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
 See `README.md` for installation and overview.
+
+### Separated (not this repo)
+
+| Path | Content |
+|------|--------|
+| `~/Proyectos/04_Optica_medios_complejos/` | Lab T-matrix wavefront shaping experiment (not DE) |
+
