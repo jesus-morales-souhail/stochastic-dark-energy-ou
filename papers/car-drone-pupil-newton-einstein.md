@@ -105,3 +105,19 @@ Run: `python scripts/car_drone_pupil_newton_einstein.py`
 ---
 
 *End.*
+
+
+---
+
+## Status: CLOSED
+
+**Result locked:** this setup tests **local EM diffraction + inertial SR at** \(\beta\sim 10^{-7}\).  
+It does **not** test cosmic expansion or any tesseract optical engine.
+
+| Diagnosis | Content |
+|-----------|---------|
+| Wrong **scale** | Hubble / cosmic geometry on millimetre–metre / seconds |
+| Wrong **operator** | Pupil Airy pattern (and non-derived 4D “projection”) |
+
+**Next experiments:** only those with **correct scale + correct operator** — see `papers/scale-operator-experiment-map.md`.
+

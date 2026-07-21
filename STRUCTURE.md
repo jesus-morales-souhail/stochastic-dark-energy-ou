@@ -29,6 +29,7 @@ notes/        Technical notes (desqueezing synthesis, mapping tables)
 | `scripts/superoscillation_energy_cost_demo.py` | 1D demo: E_core collapses as superoscillation grows |
 | `scripts/car_drone_pupil_newton_einstein.py` | Car+drone@120 km/h, pupil diffraction: Newton vs SR + Hubble |
 | `papers/car-drone-pupil-newton-einstein.md` | Write-up of the car/drone/pupil experiment (no tesseract) |
+| `papers/scale-operator-experiment-map.md` | Closed wrong-scale results + correct next experiments |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
 See `README.md` for installation and overview.
