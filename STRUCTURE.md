@@ -1,46 +1,98 @@
 # Repository structure
 
 ```
-papers/       Scientific notes and numerical summary (English)
-scripts/      Analysis code
+papers/       Scientific notes and data packs (English) — narrative arc in README.md
+scripts/      Analysis code and small demos
   desqueezing/   Open-system desqueezing and timescale mapping
   gpe/           Gross–Pitaevskii / Bogoliubov numerics
 figures/      Figures
 results/      Numerical outputs (BAO fits, forecasts, desqueezing tables)
 notes/        Technical notes (desqueezing synthesis, mapping tables)
+local_archive/  Offline drafts (not part of the public scientific claim)
 ```
 
-## Entry points
+---
+
+## Narrative index (read with README.md)
+
+### I — Empirical BAO / models
 
 | Path | Role |
 |------|------|
-| `scripts/ou_bao_likelihood.py` | OU / QNM residual kernel on DESI DR2 BAO |
-| `scripts/eos_efectiva.py` | CPL background and nested (σ, θ) extension |
-| `scripts/ou_bao_stochastic_test.py` | Alternate OU / QNM BAO pipeline |
-| `scripts/cross_correlation_DESI.py` | Galaxy × residual cross-correlation |
-| `scripts/desqueezing/desqueezing_relax_time.py` | Lindblad desqueezing half-life scan |
-| `scripts/desqueezing/cosmological_mapping.py` | Map γ ↔ θ H(z) |
-| `scripts/gpe/gpe_sim.py` | Negative-mass GPE illustration |
 | `papers/resume.txt` | Compact numerical summary |
-| `papers/anisotropic-slip-option0.md` | Option 0: η / anisotropic stress vs σ_X (literature + scaling; no Boltzmann) |
-| `papers/no-go-superoscillation-tesseract.md` | No-go: Born tax + undeclared tesseract optical power |
-| `papers/self-shielding-vs-untestability.md` | SDiff “shielding” vs amplitude/operator honesty |
-| `papers/pattern-undeclared-physical-power.md` | Method hygiene: ln4 / B4 style claims |
-| `scripts/superoscillation_energy_cost_demo.py` | 1D demo: E_core collapses as superoscillation grows |
-| `scripts/car_drone_pupil_newton_einstein.py` | Car+drone@120 km/h, pupil diffraction: Newton vs SR + Hubble |
-| `papers/car-drone-pupil-newton-einstein.md` | Write-up of the car/drone/pupil experiment (no tesseract) |
-| `papers/scale-operator-experiment-map.md` | Closed wrong-scale results + correct next experiments |
-| `papers/data-pack-option0-internet.md` | Internet-sourced numbers + arXiv links for Option 0 |
-| `papers/optics-ou-analogies-and-limits.md` | Quantum lens OK; tesseract ABCD no; f↔1/θ analogy only |
-| `papers/self-shielding-triple-barrier.md` | 0% physical / 100% math: Born, band-limit, OU shields |
-| `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab T-matrix optics ≠ BAO OU; no vacuum SLM |
+| `papers/stochastic-dark-energy-desi-dr2.md` | Main OU/QNM vs DESI DR2 |
+| `papers/quantum-fluid-instabilities-desi-dr2.md` | Tachyonic fluid exclusion |
+| `papers/sensitivity_kernel_table.md` | BAO sensitivity kernel \(S(z)\) |
+| `scripts/ou_bao_likelihood.py` | OU / QNM residual kernel |
+| `scripts/eos_efectiva.py` | CPL background + nested \((\sigma,\theta)\) |
+| `scripts/ou_bao_stochastic_test.py` | Alternate OU/QNM pipeline |
+| `scripts/joint_w0wa_sigma_desi.py` | Joint \(\{w_0,w_a,\sigma_X\}\) |
+| `scripts/profile_sigma_x_desi.py` | Profile likelihood for \(\sigma_X\) |
+| `scripts/cross_correlation_DESI.py` | Galaxy × residual cross-check |
+| `scripts/gpe/gpe_sim.py` | GPE illustration |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
-See `README.md` for installation and overview.
+### II — Geometry of vacuum smoothness
 
-### Separated (not this repo)
+| Path | Role |
+|------|------|
+| `papers/principle-of-vacuum-smoothness.md` | Late-time vacuum homogeneity |
+| `papers/smoothness-of-the-vacuum-unimodular.md` | Unimodular + smoothness |
+| `papers/unimodular-gravity-vacuum-smoothness.md` | Extended geometric synthesis |
+| `papers/sdiff-fundamental-vs-emergent.md` | Fundamental vs emergent SDiff |
+
+### III — Desqueezing / amplification / Euclid
+
+| Path | Role |
+|------|------|
+| `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` | Open-system half-life |
+| `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
+| `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |
+| `scripts/desqueezing/desqueezing_relax_time.py` | QuTiP Lindblad scan |
+| `scripts/desqueezing/cosmological_mapping.py` | \(\gamma \leftrightarrow \theta H(z)\) |
+| `scripts/euclid_mock_mcmc.py` | Euclid mock MCMC |
+| `scripts/euclid_joint_bao_sne_mcmc.py` | Joint BAO+SN mock MCMC |
+
+### IV — Option 0 (slip / anisotropic gap)
+
+| Path | Role |
+|------|------|
+| `papers/anisotropic-slip-option0.md` | \(\eta\) / shear vs \(\sigma_X\); amplification inheritance |
+| `papers/data-pack-option0-internet.md` | arXiv numbers (Maus, Sakr, DESI MG/BAO) |
+
+### V — Method hygiene and closed wrong paths
+
+| Path | Role |
+|------|------|
+| `papers/scale-operator-experiment-map.md` | Master map: closed vs next (scale + operator) |
+| `papers/self-shielding-vs-untestability.md` | Shielding vs amplitude honesty |
+| `papers/self-shielding-triple-barrier.md` | Born / band-limit / OU: 0% physical abuse, 100% math |
+| `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy single-photon certainty |
+| `papers/optics-ou-analogies-and-limits.md` | Thin lens OK; tesseract ABCD no; \(f\leftrightarrow 1/\theta\) analogy only |
+| `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab \(T\) ≠ BAO OU |
+| `papers/pattern-undeclared-physical-power.md` | \(\ln 4\), \(B_4\) pattern filter |
+| `papers/car-drone-pupil-newton-einstein.md` | Highway pupil: **CLOSED** wrong scale/operator |
+| `scripts/superoscillation_energy_cost_demo.py` | 1D energy-tax demo |
+| `scripts/car_drone_pupil_newton_einstein.py` | Runnable Newton vs SR numbers |
+
+### Separated (not this repository)
 
 | Path | Content |
-|------|--------|
-| `~/Proyectos/04_Optica_medios_complejos/` | Lab T-matrix wavefront shaping experiment (not DE) |
+|------|---------|
+| `~/Proyectos/04_Optica_medios_complejos/` | Lab transmission-matrix wavefront shaping experiment |
 
+---
+
+## Cohesion rule
+
+Every claim in this repository should be classifiable as one of:
+
+1. **BAO residual / model constraint** (Act I),  
+2. **Geometric interpretation** of smoothness (Act II),  
+3. **Amplification / Euclid protocol** (Act III),  
+4. **Slip Option 0 with amplitude honesty** (Act IV), or  
+5. **Explicit no-go / boundary** (Act V).
+
+Anything that is only a lab optics metaphor belongs in Act V or in the **separated** optics project — not in the DESI likelihood narrative.
+
+See **`README.md`** for the full story and reading order.
