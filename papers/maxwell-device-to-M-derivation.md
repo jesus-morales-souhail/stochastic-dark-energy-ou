@@ -1,8 +1,8 @@
-# Maxwell + device geometry → M : a numerology-free derivation
+# Maxwell + device geometry → M : a parameter-free derivation
 
 **Author:** derivation note (companion to `optics-ou-analogies-and-limits.md`, Q2)
 **Date:** July 2026
-**Status:** Formal derivation + verified numerics. No tesseract numerology.
+**Status:** Formal derivation + verified numerics. No tesseract ad hoc free-parameter tuning.
 **Code:** `scripts/derive_M_maxwell_device.py` (all three checks pass)
 
 This note closes Q2 of `optics-ou-analogies-and-limits.md` ("How does a tesseract

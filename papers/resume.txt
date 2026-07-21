@@ -5,7 +5,7 @@ ORCID:  0009-0000-7637-1818
 Date:   July 2026
 
 Narrative cohesion (how papers fit): see repository README.md
-  Act I BAO residuals | II SDiff geometry | III amplification NO FREE LUNCH
+  Act I BAO residuals | II SDiff geometry | III amplification AMPLIFICATION GAP
   Act IV Option 0 slip | V closed wrong paths (scale/operator)
   Act III closure: papers/amplification-no-free-lunch.md
   Gap: A0/sigma_0 ~ 1e56 (sigma_0~1e-61 → Euclid residual ~1e-5)

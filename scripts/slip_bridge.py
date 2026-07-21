@@ -145,7 +145,7 @@ def main() -> None:
     print("  this stochastic mechanism alone — it is generic anisotropic")
     print("  stress / MG (Clifton+Ferreira+Padilla+Skordis degeneracy).")
     print()
-    print("  Act IV inherits Act III: no free lunch on amplitude.")
+    print("  Act IV inherits Act III: no free amplification on amplitude.")
 
 
 if __name__ == "__main__":

@@ -27,7 +27,7 @@ This directory holds the **unified preprint** for the scientific claims of
 
 Theory programme (Minimal Model, past light cone, Einstein+Morales wall):
 
-**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**  
+**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum** 
 Start: `papers/FOR_REFEREES.md`
 
 Exploratory optics / scale–operator pedagogy:

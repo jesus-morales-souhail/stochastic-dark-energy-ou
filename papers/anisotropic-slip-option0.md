@@ -24,7 +24,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does **not
 2. Can they be compared, even roughly, to \(\sigma_X\) if a fraction \(f\) of the noise is anisotropic?
 3. Is the anisotropic channel a shortcut around the **amplification** problem already discussed in the desqueezing note?
 
-**Conclusion (preview):** the anisotropic “gap” is a *real structural crack* in SDiff protection, and \(\eta\) is the right *kind* of observable — but with \(\sigma_X\sim 10^{-4}\) it inherits the same amplitude problem as the isotropic residual. It is an **additional channel that turns on with amplification**, not a free lunch.
+**Conclusion (preview):** the anisotropic “gap” is a *real structural crack* in SDiff protection, and \(\eta\) is the right *kind* of observable — but with \(\sigma_X\sim 10^{-4}\) it inherits the same amplitude problem as the isotropic residual. It is an **additional channel that turns on with amplification**, not a free amplification.
 
 ---
 

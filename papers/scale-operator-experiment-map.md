@@ -62,7 +62,7 @@ Wrong scale **or** wrong operator ⇒ null result that **does not** falsify the 
 | Physical amplification \(10^{-61}\to 10^{-4}\) | Hand-waving \(10^{56}\) factor | Lab open systems + derived map | Desqueezing \(t_{1/2}=\ln 2/\gamma\), open-system models | **Open theory problem** |
 | Spacetime discreteness (premise, not shield) | Gravity-only channels if shield applies | Astrophysical baselines, high-\(E\) photons | Energy-dependent time of flight (GRB / γ-ray), etc. | Literature-driven; not BAO residual |
 
-### 2.2 Local / lab (PC-scale, no numerology)
+### 2.2 Local / lab (PC-scale, no ad hoc free-parameter tuning)
 
 | Scientific question | Wrong setup | Correct scale | Correct operator | Tool on this PC |
 |---------------------|-------------|---------------|------------------|-----------------|

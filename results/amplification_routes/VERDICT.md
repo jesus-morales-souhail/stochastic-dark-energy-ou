@@ -55,11 +55,11 @@ Grid: $a\in\{1,10\}$, $b\in[10^{-6},0.1]$, $\sigma\in[10^{-8},10^{-3}]$, $\Delta
 
 **BAO-safe rule of thumb (this scan):** $\sigma\lesssim 4\times 10^{-5}$.
 
-**Verdict:** Soft-potential avalanche is **not** a seed→Euclid free lunch. Large residuals track large $\sigma$.
+**Verdict:** Soft-potential avalanche is **not** a seed→Euclid free amplification. Large residuals track large $\sigma$.
 
 ---
 
 ## One-line programme status
 
-**No free lunch confirmed numerically on Routes 2–3; Route 1 is a seed-redefinition card with a causal-set price.** 
+**No free amplification confirmed numerically on Routes 2–3; Route 1 is a seed-redefinition card with a causal-set price.** 
 Default: publish **limits + exclusions + hypothesis map**.

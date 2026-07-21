@@ -1,4 +1,4 @@
-# Amplification: no free lunch
+# Amplification gap: Sorkin seed to BAO residual
 
 **Author:** Jesús Morales Souhail 
 **Date:** July 2026 
@@ -77,7 +77,7 @@ Every closed channel that looked like a “shortcut” — anisotropic slip, cas
 
 Inflation is the **only** standard paradigm known to convert sub-horizon quantum fluctuations into large-scale classical curvature perturbations with a huge effective boost over many e-folds. Schematic amplitude after freeze-out is set by \(H/M_{\mathrm{Pl}}\) (and slow-roll factors), not by \(1/\sqrt{N_{\mathrm{BH,today}}}\).
 
-### 4.2 Why (d) is **not** a free lunch for this repo
+### 4.2 Why (d) is **not** a free amplification for this repo
 
 | Requirement | Status |
 |-------------|--------|
@@ -104,7 +104,7 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 |-----|---------|----------------|
 | I | BAO null + model kills | Bounds **effective** amplitude |
 | II | SDiff geometry | Explains **isotropic** smallness without a particle |
-| **III** | **This note** | **No free lunch** from \(\sigma_0\) to \(10^{-5}\) |
+| **III** | **This note** | **No free amplification** from \(\sigma_0\) to \(10^{-5}\) |
 | IV | Slip Option 0 | Right operator; still needs \(A_0\) |
 | V | Method no-gos | Wrong scale/operator closed |
 
@@ -145,7 +145,7 @@ Need detection-scale residual without free A0?
 ```
 
 **Recommended default for publication of the present corpus:** 
-Act III closed as **no free lunch on linear amplifiers**; Routes 1–3 listed as **the only open theory cards**, each with a price.
+Act III closed as **no free amplification factor on linear amplifiers**; Routes 1–3 listed as **the only open theory cards**, each with a price.
 
 ### 6.3 Numerical scan results (HEAD — machine tables)
 
@@ -172,7 +172,7 @@ Implied local scale if \(N_{\mathrm{eff}}=N_{\mathrm{BH}}(L/R_H)^p\) (order-of-m
 | DESI \(N_{\mathrm{eff}}\sim 4.4\times 10^{7}\) | \(\sim 10^{-31} \mathrm{m}\) | \(\sim 10^{-12} \mathrm{m}\) | \(\sim\mathrm{mm}\) |
 | Euclid \(N_{\mathrm{eff}}\sim 10^{10}\) | \(\sim 10^{-30} \mathrm{m}\) | \(\sim 10^{-11} \mathrm{m}\) | \(\sim\mathrm{cm}\) |
 
-**Verdict R1:** The **only** card that reaches DESI/Euclid residual *amplitudes* without linear gain. **Price:** abandon global horizon counting; justify a meso-scale causal-set / correlation volume. That is a **new theory claim**, not a free lunch on \(\sigma_0\sim 10^{-61}\).
+**Verdict R1:** The **only** card that reaches DESI/Euclid residual *amplitudes* without linear gain. **Price:** abandon global horizon counting; justify a meso-scale causal-set / correlation volume. That is a **new theory claim**, not a free amplification on \(\sigma_0\sim 10^{-61}\).
 
 #### Route 2 — late freeze-out toy (96k paths total)
 
@@ -204,7 +204,7 @@ Potential \(V=\tfrac14 a X^4-\tfrac12 b X^2\), \(a\in\{1,10\}\), \(b\in[10^{-6},
 **BAO-safe rule of thumb in this scan:** keep drive noise \(\sigma\lesssim 4\times 10^{-5}\) (p95 stays below DESI ceiling for all \((a,b)\) tested). 
 **BAO-unsafe:** \(\sigma\gtrsim 1.2\times 10^{-4}\) → p95 exceeds DESI for **every** \((a,b)\).
 
-**Verdict R3:** In the soft-potential, late-\(\Delta x=\mathcal{O}(1)\) window scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains \(\mathcal{O}(1)\). Large residuals require **large \(\sigma\)** (renaming free \(A_0\)) or a **new** regime \(b \Delta x\gg 1\) / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free lunch inside the present corpus.
+**Verdict R3:** In the soft-potential, late-\(\Delta x=\mathcal{O}(1)\) window scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains \(\mathcal{O}(1)\). Large residuals require **large \(\sigma\)** (renaming free \(A_0\)) or a **new** regime \(b \Delta x\gg 1\) / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free amplification inside the present corpus.
 
 #### Act III decision after the scan
 
@@ -250,7 +250,7 @@ Bare seed motivation:
 
 ## 8. Bottom line
 
-**There is no free lunch:** every channel that could make vacuum noise *visible* either fails gain by many decades, is already excluded, or replaces \(\sigma_0\) with a different microphysics. 
+**There is no free amplification factor:** every channel that could make vacuum noise *visible* either fails gain by many decades, is already excluded, or replaces \(\sigma_0\) with a different microphysics. 
 The only amplifier class worth a *serious new theory exam* is an **inflation-style freeze-out (d)** — and only after abandoning a pure Sorkin late-time seed and deriving a DE-residual map. Until then, the project’s strength is **what it already closed**, not a promised detection.
 
 **After Routes 1–3 machine scans (§6.3):** Route 2 is numerically dead as an amplifier; Route 3 soft double-well yields gain \(\sim 2\) and BAO bounds set by \(\sigma\); Route 1 alone hits target amplitudes by redefining \(N_{\mathrm{eff}}\). Publication default remains **honest limits + exclusions + open hypothesis cards**.

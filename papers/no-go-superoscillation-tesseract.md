@@ -133,7 +133,7 @@ No choice of deterministic pre-phase (tesseract-inspired or otherwise) that yiel
 | Deterministic single-photon sub-Airy “hit every time” | **No-go** under Born + band-limit |
 | Tesseract as superior phase engine | **Unsupported claim** |
 
-A clean PC-scale project (no numerology): run `scripts/superoscillation_energy_cost_demo.py` and report \(E_{\mathrm{core}}/E_{\mathrm{total}}\) vs bandwidth — **confirming** the tax, not bypassing it.
+A clean PC-scale project (no ad hoc free-parameter tuning): run `scripts/superoscillation_energy_cost_demo.py` and report \(E_{\mathrm{core}}/E_{\mathrm{total}}\) vs bandwidth — **confirming** the tax, not bypassing it.
 
 ---
 

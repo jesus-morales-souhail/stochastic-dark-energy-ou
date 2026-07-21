@@ -13,7 +13,7 @@ notes/ Technical notes (desqueezing synthesis, mapping tables)
 local_archive/ Offline drafts (not part of the public scientific claim)
 ```
 
-**Peer-review entry:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md` 
+**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md` 
 **Exploratory repo (separate):** `../stochastic-de-exploratory-notes/`
 
 ---

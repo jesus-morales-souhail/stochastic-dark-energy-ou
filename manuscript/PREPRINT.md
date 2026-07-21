@@ -27,7 +27,7 @@ under the stated phenomenological kernel and public BAO summary statistics (diag
 
 Separately, a *coherent* tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L} \approx -11.35$ relative to $\Lambda$CDM ($\Delta\chi^2 \approx +22.7$).
 
-We then quantify an *amplification bottleneck*: a Sorkin–Bekenstein Poisson seed $\sigma_0 \sim 10^{-61}$ lies $\sim 10^{56}$ below residual amplitudes of interest for Euclid-scale BAO ($\sim 10^{-5}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a *local* effective count $N_{\mathrm{eff}} \sim 4 \times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free lunch.
+We then quantify an *amplification bottleneck*: a Sorkin–Bekenstein Poisson seed $\sigma_0 \sim 10^{-61}$ lies $\sim 10^{56}$ below residual amplitudes of interest for Euclid-scale BAO ($\sim 10^{-5}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a *local* effective count $N_{\mathrm{eff}} \sim 4 \times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
 
 Gravitational slip $\gamma = \Phi/\Psi$ is the correct *operator* for anisotropic leakage past volume-preserving (SDiff) structure, but inherits the same amplitude starvation: even full anisotropy of the BAO-bounded residual gives $\lvert\gamma - 1\rvert \sim 10^{-4}$, of order $10^{2}$–$10^{3}$ below current and forecast floors.
 
@@ -191,7 +191,7 @@ This exclusion is logically independent of the stationary OU bound: the covarian
 
 ---
 
-## 5. Results III — Amplification bottleneck (no free lunch)
+## 5. Results III — Amplification bottleneck
 
 ### 5.1 Quantified gap
 
@@ -220,13 +220,13 @@ DESI constrains the **effective** amplitude after any amplification. Without a p
 |:------|:-----|:------------------|
 | **1. Local $N_{\mathrm{eff}}$** | $\sigma_{0,\mathrm{eff}} = 1/\sqrt{N_{\mathrm{eff}}}$, with $N_{\mathrm{eff}} \ll N_{\mathrm{BH}}$ | $N_{\mathrm{eff}} \sim 4.44 \times 10^{7}$ (DESI), $1.00 \times 10^{10}$ (Euclid). **Only amplitude card** — redefines the seed. |
 | **2. Late freeze-out** | $\theta \to 0$ after late exit, $\Delta x \sim \mathcal{O}(1)$ | Freeze/restore gain $= 1.000$; $\mathrm{rms}/\sigma = \mathcal{O}(1)$. **Dead as amplifier alone.** |
-| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma \sim 2$; **0/288** jobs with $\mathrm{p95} \ge 10^{-5}$ and $\sigma \le 10^{-8}$. BAO-safe if $\sigma \lesssim 4 \times 10^{-5}$. **No free lunch.** |
+| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma \sim 2$; **0/288** jobs with $\mathrm{p95} \ge 10^{-5}$ and $\sigma \le 10^{-8}$. BAO-safe if $\sigma \lesssim 4 \times 10^{-5}$. **No free amplification.** |
 
 Full tables: [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md) and [`papers/amplification-no-free-lunch.md`](../papers/amplification-no-free-lunch.md) §6.3.
 
 ### 5.4 Claim statement (Act III)
 
-> There is **no free lunch** for linear amplification of a pure Sorkin seed to BAO/Euclid residual scales. Publication of the present corpus is consistent with **honest limits + exclusions + a short map of open hypothesis cards**, each with an explicit theoretical price.
+> There is **no free amplification** for linear amplification of a pure Sorkin seed to BAO/Euclid residual scales. Publication of the present corpus is consistent with **honest limits + exclusions + a short map of open hypothesis cards**, each with an explicit theoretical price.
 
 ---
 
@@ -289,7 +289,7 @@ Method-hygiene digressions, optical analogies, band-limit / superoscillation dem
 
 **https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes**
 
-**Theory (if the null is not the end of the story):** a separate English programme develops a minimal model as simple as $\Lambda$ (bulk $\Lambda$CDM + one grain $\sigma$ + light-path $\mathrm{RMS}\sim\sigma^{2/3}$), with a test-gated claim map:
+**Theory (if the null is not the end of the story):** a separate English programme develops a minimal model as simple as $\Lambda$ (bulk $\Lambda$CDM + one grain $\sigma$ + light-path $\mathrm{RMS}\sim\sigma^{2/3}$), with a unit-tested statement of results:
 
 **https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum** 
 Start: `papers/FOR_REFEREES.md`, `papers/SIMPLE_AS_LAMBDA.md`, `papers/VERIFIED_RESULTS.md` (`pytest -q`).
@@ -325,7 +325,7 @@ python scripts/slip_bridge.py
 
 1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X < 1.5 \times 10^{-4}$ (95% CL) under the stated kernel.
 2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2 \approx +22.7$).
-3. **No free lunch:** the gap from $\sigma_0 \sim 10^{-61}$ to residual targets $\sim 10^{-5}$ is $\sim 10^{56}$; audited linear amplifiers fail; freeze-out and soft avalanche scans do not provide free gain; only redefining $N_{\mathrm{eff}}$ hits target amplitudes.
+3. **Amplification gap:** the gap from $\sigma_0 \sim 10^{-61}$ to residual targets $\sim 10^{-5}$ is $\sim 10^{56}$; audited linear amplifiers fail; freeze-out and soft avalanche scans do not provide free gain; only redefining $N_{\mathrm{eff}}$ hits target amplitudes.
 4. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and an amplitude-starved channel in practice.
 5. **Scientific posture:** the strength of this programme is **what it closes**—limits, exclusions, and an honest map of open theory prices—not a promised detection.
 

@@ -21,7 +21,7 @@ Independent analysis of **stochastic fluctuations in the dark-energy sector** wi
 **Exploratory / pedagogy (not DESI claims):** 
 https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes 
 
-**Theory programme — when could vacuum noise be measurable? (R1–R2–R3, no free lunch):** 
+**Theory programme — when could vacuum noise be measurable? (R1–R2–R3):** 
 https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum
 
 ---
@@ -32,7 +32,7 @@ The project asks one empirical question and two structural ones:
 
 1. **Empirical:** Do DESI DR2 BAO residual statistics require a stationary stochastic (OU/QNM) component on top of a smooth background? 
 2. **Structural:** Can volume-preserving diffeomorphisms (SDiff / unimodular gravity) explain **late-time vacuum smoothness**? 
-3. **Method:** What is the **correct scale and operator** for each claim — and what is numerology?
+3. **Method:** What is the **correct scale and operator** for each claim — and what is an undeclared free parameter?
 
 ### Act I — Data (BAO residuals)
 
@@ -51,7 +51,7 @@ Unimodular / SDiff structure projects out local vacuum stress of the form $T_{\m
 
 **Primary papers:** `principle-of-vacuum-smoothness.md`, `smoothness-of-the-vacuum-unimodular.md`, `unimodular-gravity-vacuum-smoothness.md`, `sdiff-fundamental-vs-emergent.md`.
 
-### Act III — Open systems and amplification (**no free lunch**)
+### Act III — Open systems and amplification (**no free amplification**)
 
 A pure Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ sits far below BAO reach ($A_0/\sigma_0\sim 10^{56}$ to hit $\sim 10^{-5}$). Open-system **desqueezing** supplies a dynamical language for finite relaxation ($t_{1/2}=\ln 2/\gamma$) but only $\mathcal{O}(10)$ gain at $r\sim 1.5$. Audited amplifiers (tachyonic growth, $\sqrt{N}$, freeze-out slogans, phase jumps) are **excluded**, short by decades, or require a **new seed** — see the closure note.
 

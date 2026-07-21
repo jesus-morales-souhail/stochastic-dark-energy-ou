@@ -12,7 +12,7 @@
 
 Does the SDiff / unimodular + stochastic residual mechanism **shield itself** so that it cannot be tested?
 
-**Short answer:** It does not magically rewrite the definition of a test. It **does** place its cleanest signatures at amplitudes and sectors where **current** probes are blind **unless** there is large amplification or a different (anisotropic) operator. That is **structural smallness**, not a free pass forever — and not a license for hype.
+**Short answer:** It does not by itself rewrite the definition of a test. It **does** place its cleanest signatures at amplitudes and sectors where **current** probes are blind **unless** there is large amplification or a different (anisotropic) operator. That is **structural smallness**, not a free pass forever — and not a license for hype.
 
 ---
 
