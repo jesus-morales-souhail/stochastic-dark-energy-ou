@@ -3,13 +3,28 @@
 **Author:** Jesús Morales Souhail  
 **ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
 **Contact:** jmskjym@gmail.com  
-**Status:** Independent research (preprint drafts — **not** peer reviewed) · July 2026  
+**Status:** Independent research · July 2026 · **not peer reviewed**
 
-Independent analysis of **stochastic fluctuations in the dark-energy sector** with **public DESI DR2 BAO** products: code, numerical results, and a **coherent set of notes** on what the data constrain, what geometry may protect, and which speculative paths are closed.
+Independent analysis of **stochastic fluctuations in the dark-energy sector** with **public DESI DR2 BAO** products: code, numerical results, and a coherent set of notes on what the data constrain, what geometry may protect, and which speculative paths are closed.
 
 ---
 
-## Narrative arc (how the papers fit together)
+## Start here (peer-review claim set)
+
+| Document | Role |
+|----------|------|
+| **[`manuscript/PREPRINT.md`](manuscript/PREPRINT.md)** | **Unified preprint** — null BAO result, model exclusion, \(10^{56}\) bottleneck, slip honesty |
+| [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) | Referee checklist: claims vs non-claims |
+| [`papers/resume.txt`](papers/resume.txt) | Compact numerical summary |
+| [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) | What is **not** part of the paper |
+
+**Exploratory / pedagogy (separate repository — not DESI claims):**  
+[`stochastic-de-exploratory-notes`](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes)  
+Local path: `~/Proyectos/01_Fisica_y_Cosmologia/stochastic-de-exploratory-notes/`
+
+---
+
+## Narrative arc (how the technical notes fit together)
 
 The project asks one empirical question and two structural ones:
 
@@ -114,11 +129,14 @@ notes/        Desqueezing synthesis and mapping tables
 
 Detailed file index: **`STRUCTURE.md`**.
 
-### Separated project (not this repo)
+### Separated projects (not the peer-review claim set)
 
-Lab **transmission-matrix** wavefront shaping lives here (do not mix into DESI papers):
+| Path | Content |
+|------|---------|
+| `~/Proyectos/01_Fisica_y_Cosmologia/stochastic-de-exploratory-notes/` | Scale/operator hygiene, optics no-gos, pedagogy |
+| `~/Proyectos/04_Optica_medios_complejos/` | Lab transmission-matrix wavefront shaping (hardware) |
 
-`~/Proyectos/04_Optica_medios_complejos/`
+See `papers/EXPLORATORY_BOUNDARY.md` and `manuscript/CLAIMS.md`.
 
 ---
 

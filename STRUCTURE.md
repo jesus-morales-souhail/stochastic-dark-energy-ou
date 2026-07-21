@@ -1,15 +1,20 @@
 # Repository structure
 
 ```
-papers/       Scientific notes and data packs (English) — narrative arc in README.md
+manuscript/   Unified preprint + referee claim checklist (START HERE for publication)
+papers/       Technical notes and data packs (English) — narrative arc in README.md
 scripts/      Analysis code and small demos
   desqueezing/   Open-system desqueezing and timescale mapping
   gpe/           Gross–Pitaevskii / Bogoliubov numerics
+  amplification/ Routes 1–3 (seed / freeze / avalanche)
 figures/      Figures
-results/      Numerical outputs (BAO fits, forecasts, desqueezing tables)
+results/      Numerical outputs (BAO fits, forecasts, desqueezing, routes)
 notes/        Technical notes (desqueezing synthesis, mapping tables)
 local_archive/  Offline drafts (not part of the public scientific claim)
 ```
+
+**Peer-review entry:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`  
+**Exploratory repo (separate):** `../stochastic-de-exploratory-notes/`
 
 ---
 
@@ -87,11 +92,13 @@ local_archive/  Offline drafts (not part of the public scientific claim)
 | `scripts/derive_M_maxwell_device.py` | Maxwell→Fresnel→ABCD + B4 restriction check |
 | `scripts/car_drone_pupil_newton_einstein.py` | Runnable Newton vs SR numbers |
 
-### Separated (not this repository)
+### Separated (not the peer-review claim set)
 
 | Path | Content |
 |------|---------|
+| `../stochastic-de-exploratory-notes/` | Optics / scale-operator pedagogy and no-gos |
 | `~/Proyectos/04_Optica_medios_complejos/` | Lab transmission-matrix wavefront shaping experiment |
+| `papers/EXPLORATORY_BOUNDARY.md` | Fence between claims and digressions |
 
 ---
 
