@@ -88,6 +88,17 @@ Every closed channel that looked like a “shortcut” — anisotropic slip, cas
 
 ## 4. The only candidate that deserves a serious *new* theory exam: (d)
 
+### 4.0 Concrete literature (revalidated): Gordon & Wands (2005)
+
+**Reference:** C. Gordon & D. Wands, Phys. Rev. D **71**, 123505 (2005); arXiv:[astro-ph/0504132](https://arxiv.org/abs/astro-ph/0504132).  
+**Theory-repo expansion:** [measurable-stochastic-vacuum `inflation-spectator-seed-gordon-wands.md`](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum/blob/main/papers/inflation-spectator-seed-gordon-wands.md).
+
+They **do not** start from Sorkin \(\sigma_0\sim 10^{-61}\). Light spectator: \(\mathcal{P}_Q^{1/2}=H_{\mathrm{inf}}/(2\pi)\). For *their* large isocurvature / quadrupole target, frozen evolution conflicts with tensor bounds; they require \(\delta Q_f/\delta Q_i>45\) (Mexican-hat radial roll) — **factor \(\sim 45\)**, not \(10^{56}\).
+
+**Do not** equate that “tachyonic” roll with the **excluded** coherent GPE/tachyonic residual on BAO in this corpus (different seed, different observable, different math).  
+**Do not** claim it closes DESI residual detectability without a new seed→BAO map.  
+**Do** treat it as a respected, structurally distinct open door: missing factor \(\mathcal{O}(10^{1}\)–\(10^{2})\) + unmeasured \(H_{\mathrm{inf}}\), not free \(G\sim 10^{56}\) on holographic counting.
+
 ### 4.1 Why (d) is special
 
 Inflation is the **only** standard paradigm known to convert sub-horizon quantum fluctuations into large-scale classical curvature perturbations with a huge effective boost over many e-folds. Schematic amplitude after freeze-out is set by \(H/M_{\mathrm{Pl}}\) (and slow-roll factors), not by \(1/\sqrt{N_{\mathrm{BH,today}}}\).
