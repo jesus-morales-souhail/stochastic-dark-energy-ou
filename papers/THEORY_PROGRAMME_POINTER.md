@@ -17,7 +17,8 @@ Theory is **not** part of this DESI empirical claim set.
 | `papers/lensing-rms-forecast-real-data.md` | Path RMS vs Maus / Sakr / DESI MG / Stage-IV (real external data) |
 | `papers/inflation-spectator-seed-gordon-wands.md` | Gordon & Wands spectator seed: factor $\sim 45$, not Sorkin $10^{56}$ |
 | `papers/inflation-spectator-residual-atlas.md` | Modern $r\to\sigma_\rho$ atlas — residual band without $10^{56}$ |
-| `pytest -q` | Expect **64 passed** (approx.) |
+| `papers/h0-running-brachistochrone-bridge.md` | H0 running + time-delay multi-path bridge to open kernel |
+| `pytest -q` | Expect **67 passed** (approx.) |
 
 This repository remains: DESI residual bounds, model exclusions, and the amplification gap (see `papers/amplification-gap.md`).  
 Theory open kernel (principle for mesoscopic $\ell_*$) lives only in the theory repo.
