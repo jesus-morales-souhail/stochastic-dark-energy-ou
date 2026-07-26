@@ -146,7 +146,7 @@ The tesseract is the 4-cube $\{|x_{i}|\le 1\}\subset\mathbb{R}^{4}$; its boundar
 Its Coxeter group $B_{4}$ (hyperoctahedral, signed permutations of four coordinates) has order
 
 $$
-\lvert $B_{4}$\rvert = 2^{4}\cdot 4! = 384.
+\lvert B_{4}\rvert = 2^{4}\cdot 4! = 384.
 $$
 
 The question is whether $B_{4}$ enters §§1–4. It can, in exactly one way: **as a discrete symmetry of the optical phase space**
@@ -158,13 +158,13 @@ so the symmetry reduces the available operator to the group-invariant subalgebra
 $J=\mathrm{blockdiag}(J_{2},J_{2})$:
 
 $$
-\lvert $B_{4}$\cap\mathrm{Sp}(4,\mathbb{R})\rvert = 32
+\lvert B_{4}\cap\mathrm{Sp}(4,\mathbb{R})\rvert = 32
 \quad\text{(only 32 of 384 preserve the symplectic structure).}
 $$
 
 ```
 |B4| = 384
-|B4 ∩ Sp(4,R)| = 32
+|B4 cap Sp(4,R)| = 32
 dim sp(4,R) = 10
 dim(commutant) = 1
 ```

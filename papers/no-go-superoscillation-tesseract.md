@@ -65,7 +65,7 @@ Numbers like “0.01% / 99.99%” in informal texts are order-of-magnitude illus
 ### 3.2 Tesseract / 8 cubes / $B_{4}$: geometry is not undeclared control power
 
 **True:** A tesseract has **8 cubic cells** as 3D boundary facets. The hyperoctahedral / Coxeter group $B_{4}$ is a real symmetry group of the 4-cube:
-$\lvert $B_{4}$\rvert = 4!\cdot 2^{4} = 384$ signed permutations of $\mathbb{R}^{4}$.
+$\lvert B_{4}\rvert = 4!\cdot 2^{4} = 384$ signed permutations of $\mathbb{R}^{4}$.
 
 **Sealed count (optical phase space, first order):**  
 On the paraxial phase space $(x,p_x,y,p_y)$ with symplectic form
@@ -86,7 +86,7 @@ Runnable verification: `scripts/b4_symplectic_count.py`.
 **What the device actually is (Maxwell → ABCD):**  
 Paraxial Helmholtz $\to$ Fresnel propagators $P_d$ (metaplectic) + thin phase screens $L_\Phi$ (e.g. SLM).  
 Composition $M=P_{d_n}L_{\Phi_{n-1}}\cdots L_{\Phi_1}P_{d_1}$.  
-If every $\Phi$ is quadratic, $$M\in\mathrm{Sp}(4,\mathbb{R})$ (Collins kernel); the imaging condition $B_{\mathrm{tot}}=0$ recovers Descartes.  
+If every $\Phi$ is quadratic, $$$M\in\mathrm{Sp}(4,\mathbb{R})$ (Collins kernel); the imaging condition $B_{\mathrm{tot}}=0$ recovers Descartes.  
 Controllable DOF of a phase-only SLM: $N_{\mathrm{pix}}$ (e.g. $1920\times 1080$) times spectral bins if used — **hardware**, not 8/16/24/32 from the 4-cube.
 
 **Not shown in tesseract proposals:**
