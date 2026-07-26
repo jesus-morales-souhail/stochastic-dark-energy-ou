@@ -42,7 +42,7 @@ $$
 with $\psi$ the same mode function (Born). So I may write, schematically,
 
 $$
-P(\mathbf{r},s_i)=\Big|\mathcal{F}\!\left\{\psi_{\mathrm{in}} A \exp\!\Big(i\frac{k}{2} |\mathbf{r}_\perp\lvert ^2 \Delta R^{-1}\Big)\right\}\Big \rvert^2
+P(\mathbf{r},s_i)=\Big|\mathcal{F}\!\left\{\psi_{\mathrm{in}} A \exp\!\Big(i\frac{k}{2} |\mathbf{r}_\perp|^2 \Delta R^{-1}\Big)\right\}\Big|^2
 $$
 
 (up to known Fresnel prefactors and normalizations). This is **not** a new law of physics: it is Fresnel + quadratic lens + Born.

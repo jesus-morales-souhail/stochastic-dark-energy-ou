@@ -362,7 +362,7 @@ $$
 My upper bound $\sigma_X < 1.5 \times 10^{-4}$ therefore implies:
 
 $$
-\left\lvert \frac{\Delta \alpha}{\alpha}\right\rvert \lesssim \lvert \beta \rvert \left\lvert \frac{V}{V'}\right\rvert (1.5 \times 10^{-4}).
+\left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (1.5 \times 10^{-4}).
 $$
 
 Combined with astrophysical bounds from quasar absorption spectroscopy ($\lvert \Delta\alpha/\alpha \rvert \lesssim 10^{-5}$ at $z \sim 7$, Wilczyńska et al. 2020 [7]), this limit disfavors models with $\lvert \beta \rvert \sim 1$ and $\lvert V/V' \rvert \sim \mathcal{O}(1)$ unless additional screening mechanisms suppress the observable variation.
@@ -747,7 +747,7 @@ $$
 Taking the conservative $2\sigma$ (95% CL) upper limit, with the errors added in quadrature:
 
 $$
-\left\lvert \frac{\Delta\alpha}{\alpha} \right\rvert \lesssim 2.7 \times 10^{-6}. \tag{H.4}
+\left| \frac{\Delta\alpha}{\alpha} \right| \lesssim 2.7 \times 10^{-6}. \tag{H.4}
 $$
 
 Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 1.5 \times 10^{-4}$ at 95% CL) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
@@ -765,14 +765,14 @@ Equation (H.5) imposes a severe fine-tuning constraint on any quintessence model
 If the scalar field interacts with the gauge sector with a strength comparable to gravity, then the dimensionless potential-slope term must satisfy:
 
 $$
-\left\lvert \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right\rvert \lesssim 1.8 \times 10^{-2}.
+\left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.8 \times 10^{-2}.
 $$
 
 For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 55.5$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
 
 **Case 2: Slow-roll quintessence potential** ($\lambda \lesssim 1$)
 
-For the field to reproduce the observed accelerated expansion, the potential must be extremely flat, such that $\left\lvert V'/V \right\rvert M_{\rm Pl} \lesssim 1$. In this regime, Eq. (H.5) forces:
+For the field to reproduce the observed accelerated expansion, the potential must be extremely flat, such that $\left| V'/V \right| M_{\rm Pl} \lesssim 1$. In this regime, Eq. (H.5) forces:
 
 $$
 \lvert \zeta \rvert \lesssim 1.8 \times 10^{-2}.

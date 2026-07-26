@@ -232,7 +232,7 @@ Volume-preserving diffeomorphisms / unimodular structure project out isotropic v
 Anisotropic stress is not of the form $Vg_{\mu\nu}$. Sub-horizon slip satisfies (Newtonian gauge)
 
 $$
-\lvert\gamma-1\rvert=\left\lvert \frac{\Phi-\Psi}{\Psi}\right\rvert =2\varepsilon\sigma_X\frac{\rho_X}{\rho_m\lvert\delta_m\rvert},
+\lvert\gamma-1\rvert=\left| \frac{\Phi-\Psi}{\Psi}\right| =2\varepsilon\sigma_X\frac{\rho_X}{\rho_m\lvert\delta_m\rvert},
 $$
 
 with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual. With $\sigma_X=1.5\times 10^{-4}$, $\varepsilon=1$, $\delta_m=1$:

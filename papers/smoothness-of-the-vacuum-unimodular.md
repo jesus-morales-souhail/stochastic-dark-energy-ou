@@ -101,7 +101,7 @@ $$
 If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3H \delta\dot{\phi}$ forces the mode into the “frozen” regime and effectively erases inhomogeneities. The limits I derived in [1] give:
 
 $$
-m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left\lvert \frac{V'}{V}\right\rvert M_{\mathrm{Pl}} \lesssim 10^{-2}.
+m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left| \frac{V'}{V}\right| M_{\mathrm{Pl}} \lesssim 10^{-2}.
 $$
 
 In this regime the field is observationally indistinguishable from a cosmological constant. Both alternatives lead to the same phenomenological outcome: $\sigma_X$ is zero or below detection.
