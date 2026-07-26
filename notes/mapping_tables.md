@@ -1,14 +1,14 @@
 # Cosmological mapping tables
 
-These tables map \(\theta\) and seed amplitude into \(\gamma\), half-lives, and the \(A_0\) needed to hit DESI/Euclid residual targets. I keep them here so the numbers stay easy to check.
+These tables map $\theta$ and seed amplitude into $\gamma$, half-lives, and the $A_0$ needed to hit DESI/Euclid residual targets. I keep them here so the numbers stay easy to check.
 
-Seed amplitude: \(\sigma_0\sim 10^{-61}\) (repo Axiom A2 / GPE paper).
+Seed amplitude: $\sigma_0\sim 10^{-61}$ (repo Axiom A2 / GPE paper).
 
-Fiducial: \(H_0=67.4\), \(\Omega_m=0.315\), \(t_0=13.796 \mathrm{Gyr}\).
+Fiducial: $H_0=67.4$, $\Omega_m=0.315$, $t_0=13.796 \mathrm{Gyr}$.
 
-## Table 1 — \(\theta\) from repo → \(\gamma\), \(t_{1/2}\), Sorkin residual
+## Table 1 — $\theta$ from repo → $\gamma$, $t_{1/2}$, Sorkin residual
 
-| Case | \(\theta\) | \(\gamma\) [1/Gyr] | \(t_{1/2}\) [Gyr] | \(\sigma_{\rm res}\) (DESI path) |
+| Case | $\theta$ | $\gamma$ [1/Gyr] | $t_{1/2}$ [Gyr] | $\sigma_{\rm res}$ (DESI path) |
 |------|----------:|-------------------:|------------------:|----------------------------------:|
 | MLE floor (resume/paper) | 1.0000e-03 | 6.8930e-05 | 1.0056e+04 | 9.991e-62 |
 | Old base THETA_BASE=1.2 (superseded) | 1.2000e+00 | 8.2716e-02 | 8.3798e+00 | 3.237e-62 |
@@ -17,9 +17,9 @@ Fiducial: \(H_0=67.4\), \(\Omega_m=0.315\), \(t_0=13.796 \mathrm{Gyr}\).
 | Hubble-scale: t_1/2 = t_H0 (Map A) | 6.9315e-01 | 4.7779e-02 | 1.4507e+01 | 5.212e-62 |
 | Age-scale: t_1/2 = t0 (Map A) | 7.2887e-01 | 5.0241e-02 | 1.3796e+01 | 5.040e-62 |
 
-## Table 2 — \(A_0\) required to hit DESI/Euclid (vs Sorkin \(10^{-61}\))
+## Table 2 — $A_0$ required to hit DESI/Euclid (vs Sorkin $10^{-61}$)
 
-| \(\theta\) case | path | target | \(A_0\) required | \(A_0/\sigma_0\) |
+| $\theta$ case | path | target | $A_0$ required | $A_0/\sigma_0$ |
 |----------------|------|--------|-----------------:|-----------------:|
 | theta_MLE=0.001 | DESI_0.94 | DESI_limit_1.5e-4 | 1.501e-04 | 1.501e+57 |
 | theta_MLE=0.001 | DESI_0.94 | Euclid_1e-5 | 1.001e-05 | 1.001e+56 |
@@ -38,9 +38,9 @@ Fiducial: \(H_0=67.4\), \(\Omega_m=0.315\), \(t_0=13.796 \mathrm{Gyr}\).
 | theta=0.099 (half over recomb path) | recomb | DESI_limit_1.5e-4 | 3.000e-04 | 3.000e+57 |
 | theta=0.099 (half over recomb path) | recomb | Euclid_1e-5 | 2.000e-05 | 2.000e+56 |
 
-## Table 3 — Page/scrambling with \(S=10^{122}\)
+## Table 3 — Page/scrambling with $S=10^{122}$
 
-| Scale | T [Gyr] | \(\gamma\) | \(\theta_A\) |
+| Scale | T [Gyr] | $\gamma$ | $\theta_A$ |
 |-------|--------:|-----------:|-------------:|
 | t_H0 | 1.450742e+01 | 4.777881e-02 | 6.931472e-01 |
 | t0_LCDM | 1.379634e+01 | 5.024137e-02 | 7.288725e-01 |

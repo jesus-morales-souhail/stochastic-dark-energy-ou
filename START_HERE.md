@@ -10,7 +10,7 @@ This is the **empirical** repo: public DESI DR2 BAO and residual models.
 1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main manuscript  
 2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim and what I do not  
 3. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — language I allow myself  
-4. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft \(10^{56}\) is closed  
+4. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft $10^{56}$ is closed  
 
 ## Sister repos
 
@@ -21,4 +21,4 @@ This is the **empirical** repo: public DESI DR2 BAO and residual models.
 
 ## One-line result
 
-Under the OU/QNM residual kernel I use on public DESI DR2 BAO, a stochastic residual is not required. Working ceiling: \(\sigma_X < 1.5\times 10^{-4}\) (95% CL). Soft amplification of a pure Sorkin seed \(\sim 10^{-61}\) to telescope-band residuals needs \(\sim 10^{56}\)–\(10^{57}\) and is not free.
+Under the OU/QNM residual kernel I use on public DESI DR2 BAO, a stochastic residual is not required. Working ceiling: $\sigma_X < 1.5\times 10^{-4}$ (95% CL). Soft amplification of a pure Sorkin seed $\sim 10^{-61}$ to telescope-band residuals needs $\sim 10^{56}$–$10^{57}$ and is not free.

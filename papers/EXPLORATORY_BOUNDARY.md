@@ -6,7 +6,7 @@ I keep several notes under `papers/` and demos under `scripts/` for **method hyg
 
 | Peer-review claim set | Exploratory / pedagogy |
 |----------------------|-------------------------|
-| `manuscript/PREPRINT.md` | car–drone pupil, tesseract \(B_4\), wavefront \(T\), superoscillation demos |
+| `manuscript/PREPRINT.md` | car–drone pupil, tesseract $B_4$, wavefront $T$, superoscillation demos |
 | BAO OU/QNM limits | Maxwell→device lab notes |
 | Tachyonic exclusion | Pattern-undeclared-power essays |
 | Amplification audit + routes | Self-shielding optics barriers |

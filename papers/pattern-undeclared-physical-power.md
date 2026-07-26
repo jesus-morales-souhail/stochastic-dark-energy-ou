@@ -27,12 +27,12 @@ It is **not** a measurement paper and **not** a DESI claim.
 
 | Object | Claim (undeclared power) | Reality in repo / physics |
 |--------|--------------------------|---------------------------|
-| \(\ln 4 \approx \omega_R\) fit | DE oscillation frequency “set by information” | Production QNM fit drives \(\omega_R\to 0\); script is **archived** and obsolete vs null result |
-| Tesseract / 8 cubes / \(B_4\) | Extra phase control beyond SLM | Geometry true; **optical map not derived** — see `no-go-superoscillation-tesseract.md` |
-| SDiff | “Shield forever from all tests” | Selective protection of isotropic \(T\propto g_{\mu\nu}\); BAO already constrains residuals — see `self-shielding-vs-untestability.md` |
+| $\ln 4 \approx \omega_R$ fit | DE oscillation frequency “set by information” | Production QNM fit drives $\omega_R\to 0$; script is **archived** and obsolete vs null result |
+| Tesseract / 8 cubes / $B_4$ | Extra phase control beyond SLM | Geometry true; **optical map not derived** — see `no-go-superoscillation-tesseract.md` |
+| SDiff | “Shield forever from all tests” | Selective protection of isotropic $T\propto g_{\mu\nu}$; BAO already constrains residuals — see `self-shielding-vs-untestability.md` |
 
 Archived example (not on public main tree as active science):  
-`local_archive/.../quantum_information_cosmos.py` — compares \(\omega_R\) to \(\ln 4\), horizon entropy plots, speculative \(\alpha\)–mass links.
+`local_archive/.../quantum_information_cosmos.py` — compares $\omega_R$ to $\ln 4$, horizon entropy plots, speculative $\alpha$–mass links.
 
 ## Filter (use before writing a paper sentence)
 

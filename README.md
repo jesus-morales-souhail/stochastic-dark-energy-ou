@@ -38,24 +38,24 @@ https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
 | Result | Detail |
 |:-------|:-------|
-| CPL background (BAO-only) | \(w_0\approx -0.99\), \(w_a\approx -0.02\) (near \(\Lambda\)CDM) |
+| CPL background (BAO-only) | $w_0\approx -0.99$, $w_a\approx -0.02$ (near $\Lambda$CDM) |
 | OU / QNM residuals | amplitude driven to the floor when the background is free |
-| Working upper limit | \(\sigma_X < 1.5\times 10^{-4}\) (95% CL) under the OU kernel I use |
-| Tachyonic quantum fluid | coherent growing mode excluded (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
+| Working upper limit | $\sigma_X < 1.5\times 10^{-4}$ (95% CL) under the OU kernel I use |
+| Tachyonic quantum fluid | coherent growing mode excluded ($\Delta\ln\mathcal{L}\approx -11.35$ vs $\Lambda$CDM) |
 
 Notes: `papers/stochastic-dark-energy-desi-dr2.md`, `papers/quantum-fluid-instabilities-desi-dr2.md`, `papers/resume.txt`.
 
 ### Smoothness (SDiff)
 
-Unimodular / SDiff projects out isotropic vacuum stress \(T_{\mu\nu}\propto g_{\mu\nu}\). That is a candidate reason residuals are small — not a particle detection.
+Unimodular / SDiff projects out isotropic vacuum stress $T_{\mu\nu}\propto g_{\mu\nu}$. That is a candidate reason residuals are small — not a particle detection.
 
 ### Amplification gap
 
-A pure Sorkin seed \(\sigma_0\sim 10^{-61}\) needs roughly \(G\sim 10^{56}\) to hit Euclid-scale residuals \(\sim 10^{-5}\), and \(\sim 10^{57}\) to the DESI ceiling \(1.5\times 10^{-4}\). Soft desqueezing gives \(\mathcal{O}(10)\) at \(r\sim 1.5\), not \(10^{56}\). See `papers/amplification-gap.md` and `papers/HONEST_HEADLINES.md`.
+A pure Sorkin seed $\sigma_0\sim 10^{-61}$ needs roughly $G\sim 10^{56}$ to hit Euclid-scale residuals $\sim 10^{-5}$, and $\sim 10^{57}$ to the DESI ceiling $1.5\times 10^{-4}$. Soft desqueezing gives $\mathcal{O}(10)$ at $r\sim 1.5$, not $10^{56}$. See `papers/amplification-gap.md` and `papers/HONEST_HEADLINES.md`.
 
 ### Slip (Option 0)
 
-SDiff does not cancel shear. Gravitational slip is the right *kind* of operator, but at \(\sigma_X\sim 10^{-4}\) the signal is \(\sim 10^{-4}\), far below Maus-class errors \(\mathcal{O}(0.1)\). No shortcut.
+SDiff does not cancel shear. Gravitational slip is the right *kind* of operator, but at $\sigma_X\sim 10^{-4}$ the signal is $\sim 10^{-4}$, far below Maus-class errors $\mathcal{O}(0.1)$. No shortcut.
 
 ### Wrong paths
 

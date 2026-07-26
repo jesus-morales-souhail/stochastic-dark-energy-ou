@@ -10,15 +10,13 @@
 
 ## Statement of the Principle
 
-At observable cosmological scales (\(z \lesssim 2.3\)) and with the baryon acoustic oscillation precision we have today, I find that the dark energy sector behaves as a **perfectly homogeneous and non-stochastic background**.
+At observable cosmological scales ($z \lesssim 2.3$) and with the baryon acoustic oscillation precision we have today, I find that the dark energy sector behaves as a **perfectly homogeneous and non-stochastic background**.
 
-Any physical mechanism that could generate fluctuations in the dark energy density \(\rho_\Lambda\) — whether from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below what current surveys can detect:
-
+Any physical mechanism that could generate fluctuations in the dark energy density $\rho_\Lambda$ — whether from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below what current surveys can detect:
 
 $$
 \sigma_X < 1.5 \times 10^{-4}
 $$
-
 
 **(95% CL).**
 
@@ -39,9 +37,9 @@ That robustness across different statistical frameworks suggests that the smooth
 
 ## Implications
 
-- **For quantum gravity and emergent spacetime models:** Mechanisms that predict residual fluctuations in \(\Lambda\) (for example causal set theory or the Sorkin mechanism) need a strong suppression mechanism at late times.
+- **For quantum gravity and emergent spacetime models:** Mechanisms that predict residual fluctuations in $\Lambda$ (for example causal set theory or the Sorkin mechanism) need a strong suppression mechanism at late times.
 - **For scalar field dark energy:** Couplings that would induce observable variations in fundamental constants or stochastic behaviour are strongly constrained.
-- **For model building:** Any new proposal should first explain why \(\sigma_X \approx 0\), rather than treating smoothness as a tuning problem to be fixed after the fact.
+- **For model building:** Any new proposal should first explain why $\sigma_X \approx 0$, rather than treating smoothness as a tuning problem to be fixed after the fact.
 
 ---
 

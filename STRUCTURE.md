@@ -29,12 +29,12 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 | `papers/resume.txt` | Compact numerical summary |
 | `papers/stochastic-dark-energy-desi-dr2.md` | Main OU/QNM vs DESI DR2 |
 | `papers/quantum-fluid-instabilities-desi-dr2.md` | Tachyonic fluid exclusion |
-| `papers/sensitivity_kernel_table.md` | BAO sensitivity kernel \(S(z)\) |
+| `papers/sensitivity_kernel_table.md` | BAO sensitivity kernel $S(z)$ |
 | `scripts/ou_bao_likelihood.py` | OU / QNM residual kernel |
-| `scripts/eos_efectiva.py` | CPL background + nested \((\sigma,\theta)\) |
+| `scripts/eos_efectiva.py` | CPL background + nested $(\sigma,\theta)$ |
 | `scripts/ou_bao_stochastic_test.py` | Alternate OU/QNM pipeline |
-| `scripts/joint_w0wa_sigma_desi.py` | Joint \(\{w_0,w_a,\sigma_X\}\) |
-| `scripts/profile_sigma_x_desi.py` | Profile likelihood for \(\sigma_X\) |
+| `scripts/joint_w0wa_sigma_desi.py` | Joint $\{w_0,w_a,\sigma_X\}$ |
+| `scripts/profile_sigma_x_desi.py` | Profile likelihood for $\sigma_X$ |
 | `scripts/cross_correlation_DESI.py` | Galaxy × residual cross-check |
 | `scripts/gpe/gpe_sim.py` | GPE illustration |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
@@ -52,7 +52,7 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 
 | Path | Role |
 |------|------|
-| `papers/amplification-gap.md` | **Act III closure:** \(G_{\mathrm{Euclid}}\sim 10^{56}\), \(G_{\mathrm{DESI}}\sim 10^{57}\); amplifier audit |
+| `papers/amplification-gap.md` | **Act III closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{57}$; amplifier audit |
 | `papers/amplification-no-free-lunch.md` | Redirect stub → `amplification-gap.md` (old bookmarks) |
 | `papers/HONEST_HEADLINES.md` | Press/title discipline: not “vacuum energy calculated” |
 | `scripts/gap_two_targets.py` | Exact two-gap arithmetic |
@@ -67,7 +67,7 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 | `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |
 | `scripts/desqueezing/desqueezing_relax_time.py` | QuTiP Lindblad scan |
-| `scripts/desqueezing/cosmological_mapping.py` | \(\gamma \leftrightarrow \theta H(z)\) |
+| `scripts/desqueezing/cosmological_mapping.py` | $\gamma \leftrightarrow \theta H(z)$ |
 | `scripts/euclid_mock_mcmc.py` | Euclid mock MCMC |
 | `scripts/euclid_joint_bao_sne_mcmc.py` | Joint BAO+SN mock MCMC |
 
@@ -75,9 +75,9 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 
 | Path | Role |
 |------|------|
-| `papers/anisotropic-slip-option0.md` | \(\eta\) / shear vs \(\sigma_X\); amplification inheritance |
+| `papers/anisotropic-slip-option0.md` | $\eta$ / shear vs $\sigma_X$; amplification inheritance |
 | `papers/data-pack-option0-internet.md` | arXiv numbers (Maus, Sakr, DESI MG/BAO) |
-| `scripts/slip_bridge.py` | Runnable \(\sigma_X\to\|\gamma-1\|\) map; amplitude-starved verdict |
+| `scripts/slip_bridge.py` | Runnable $\sigma_X\to\|\gamma-1\|$ map; amplitude-starved verdict |
 
 ### V — Method hygiene and closed wrong paths
 
@@ -88,9 +88,9 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 | `papers/self-shielding-triple-barrier.md` | Born / band-limit / OU: 0% physical abuse, 100% math |
 | `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy + B4/Sp(4,R) seal |
 | `papers/maxwell-device-to-M-derivation.md` | Maxwell+device→M; only Sp(4,R) is legitimate 4D |
-| `papers/optics-ou-analogies-and-limits.md` | Thin lens OK; tesseract ABCD no; \(f\leftrightarrow 1/\theta\) analogy only |
-| `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab \(T\) ≠ BAO OU |
-| `papers/pattern-undeclared-physical-power.md` | \(\ln 4\), \(B_4\) pattern filter |
+| `papers/optics-ou-analogies-and-limits.md` | Thin lens OK; tesseract ABCD no; $f\leftrightarrow 1/\theta$ analogy only |
+| `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab $T$ ≠ BAO OU |
+| `papers/pattern-undeclared-physical-power.md` | $\ln 4$, $B_4$ pattern filter |
 | `papers/car-drone-pupil-newton-einstein.md` | Highway pupil: **CLOSED** wrong scale/operator |
 | `scripts/superoscillation_energy_cost_demo.py` | 1D energy-tax demo |
 | `scripts/b4_symplectic_count.py` | Seal: 32/384 B4 optical-symplectic; commutant dim 1 |
