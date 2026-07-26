@@ -82,9 +82,9 @@ This is the correct scale+operator family for $\sigma_X$ residual tests on dista
 
 Using $\sigma_X \sim 10^{-4}$, $\Omega_{\mathrm{DE}}/\Omega_m\sim 2$, $f=1$:
 
-$$
+
 \lvert \eta-1 \rvert\sim \mathcal{O}\!\left(f\cdot\frac{\Omega_{\mathrm{DE}}}{\Omega_m}\cdot\sigma_X\right)\sim 2\times 10^{-4}.
-$$
+
 
 | Probe | Rough reach on $\lvert \eta-1 \rvert$ or $\lvert \gamma-1 \rvert$ | vs $2\times 10^{-4}$ |
 |-------|-----------------------------------------------|------------------------|

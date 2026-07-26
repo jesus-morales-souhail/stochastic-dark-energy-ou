@@ -36,9 +36,9 @@ In unimodular / SDiff-oriented narratives, vacuum pieces $\propto g_{\mu\nu}$ ar
 
 Public DESI DR2 BAO residual analysis in this repository (main pipeline, not this essay’s claim):
 
-$$
+
 \sigma_X < 1.5\times 10^{-4}\quad(95\%~\mathrm{CL}).
-$$
+
 
 MLE drives $\sigma_X\to 0$; stochastic extensions are not preferred (AIC penalty).  
 See `papers/resume.txt`, `papers/stochastic-dark-energy-desi-dr2.md`, `manuscript/CLAIMS.md`.
@@ -53,16 +53,16 @@ SDiff-type protection targets $T_{\mu\nu}\propto g_{\mu\nu}$. Anisotropic stress
 
 Gravitational slip (Maus et al. arXiv:2505.20656):
 
-$$
+
 \gamma=\frac{\Phi}{\Psi},\qquad \gamma=1.17\pm 0.11\ \text{(GR: }1\text{)},
-$$
+
 
 sensitivity $\mathcal{O}(0.1)$ on $\lvert \gamma-1 \rvert$.  
 Order-of-magnitude from $\sigma_X\sim 10^{-4}$, $f=1$:
 
-$$
+
 \lvert \eta-1 \rvert\sim 2\times 10^{-4},
-$$
+
 
 still **orders of magnitude** below current DESI-era slip sensitivity and below naive Euclid few-percent forecasts **without amplification**.
 

@@ -45,7 +45,7 @@ It is that **the laws themselves shield the mechanism** against that abuse.
 
 ## Barrier 2 — Band limit ($k_{\max}$)
 
-**Attempted move:** Project 4D / $B_4$ / 8-cube geometry onto a 2D SLM to carry “more spatial frequency” than ordinary optics.
+**Attempted move:** Project 4D / $B_{4}$ / 8-cube geometry onto a 2D SLM to carry “more spatial frequency” than ordinary optics.
 
 **Shield:** Wavelength and aperture set a hard spatial-frequency cutoff in free space / the optical system ($k_{\max}\sim 2\pi/\lambda$ scale, plus pixel pitch of any SLM).
 

@@ -8,9 +8,9 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 | File | Role |
 |:-----|:-----|
 | **[PREPRINT.md](PREPRINT.md)** | Main manuscript (English); GitHub math with `$...$` and `
-$$
+
 ...
-$$
+
 ` |
 | [CLAIMS.md](CLAIMS.md) | Referee checklist: what I claim and what I do not |
 | [COVER_LETTER.md](COVER_LETTER.md) | Optional journal cover letter draft |
@@ -18,9 +18,9 @@ $$
 ## Rendering notes
 
 - Math uses **GitHub-compatible** delimiters: inline `$...$`, display `
-$$
+
 ...
-$$
+
 `.
 - Relative links point to scripts and results inside this repository.
 - On GitHub, open `PREPRINT.md` in the browser (math renders in GitHub’s viewer).

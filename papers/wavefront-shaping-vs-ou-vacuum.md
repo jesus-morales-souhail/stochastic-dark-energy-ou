@@ -41,15 +41,15 @@ Disordered-media optics is real physics. Identifying it with the repo OU process
 
 From the production analysis (`ou_bao_*`, `papers/stochastic-dark-energy-desi-dr2.md`):
 
-$$
+
 \mathrm{d}X = -\theta X \mathrm{d}x + \sigma \mathrm{d}W_x, \qquad x=\ln a, \qquad X \sim \frac{\delta\rho_\Lambda}{\rho_{\Lambda,0}},
-$$
+
 
 with residual BAO covariance
 
-$$
+
 (C_{\mathrm{OU}})_{ij} = S(z_i)S(z_j) \frac{\sigma_X^2}{2\theta} e^{-\theta\lvert x_i-x_j \rvert} \quad\text{(or equivalent normalization conventions).}
-$$
+
 
 | Property | Lab disordered medium $T$ | Repo OU |
 |----------|----------------------------|---------|
@@ -61,9 +61,9 @@ $$
 
 Identifying
 
-$$
+
 \langle\delta g_{\mu\nu}(x) \delta g_{\alpha\beta}(x')\rangle \stackrel{?}{=} \sigma_X^2 e^{-\lvert x-x' \rvert/\xi} \times\text{(polarization structure)}
-$$
+
 
 with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO pipeline **does not** perform. The published bound $\sigma_X < 1.5\times 10^{-4}$ is **not** a free amplitude for arbitrary metric shear felt by photons.
 
@@ -116,9 +116,9 @@ A legitimate research program (outside the current BAO code) would look like:
 
 Until (1)–(5) are done, the expansion
 
-$$
+
 T(k,k')=\delta(k-k')+\sigma_X \tilde T_1+\sigma_X^2 \tilde T_2+\cdots
-$$
+
 
 with $\sigma_X$ from DESI BAO is **not** a theorem of this repository.
 

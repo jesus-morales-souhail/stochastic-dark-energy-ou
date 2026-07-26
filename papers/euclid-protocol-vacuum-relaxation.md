@@ -30,9 +30,9 @@ Euclid therefore constrains the effective residual amplitude and, when the data 
 
 Baseline Euclid BAO-focused model:
 
-$$
+
 \Theta = \{w_0, w_a, \theta, \sigma_X\}.
-$$
+
 
 | Parameter | Role |
 |-----------|------|
@@ -47,17 +47,17 @@ Equivalent reparameterizations (Jacobian handled as usual):
 
 Additive kernel as in this repository:
 
-$$
+
 (C_{\rm OU})_{ij}=S(z_i)S(z_j) \sigma_X^{2} e^{-\theta\lvert x_i-x_j\rvert},
-$$
+
 
 plus the survey covariance $C_{\rm std}$.
 
 Optional nested extension:
 
-$$
+
 \Theta_+ = \{w_0, w_a, \theta, \sigma_X, \omega_R\}
-$$
+
 
 for a damped oscillatory (QNM) kernel. If $\omega_R\to 0$, the model reduces to pure OU.
 
@@ -85,9 +85,9 @@ A prior peaked at $\sigma_X\sim 10^{-61}$ is inappropriate: that scale is a UV s
 
 Gaussian residual likelihood (as in `scripts/ou_bao_stochastic_test.py`):
 
-$$
+
 -2\ln\mathcal{L} = \mathbf{r}^{\top} C^{-1}\mathbf{r}+\ln\det C+\mathrm{const}, \qquad C=C_{\rm std}+C_{\rm OU}(\theta,\sigma_X).
-$$
+
 
 For Euclid, I replace the DESI 7-bin vector by the Euclid BAO vector ($\gtrsim 20$ bins when available) and recompute $S(z)$.
 
@@ -124,9 +124,9 @@ Euclid alone cannot split F from E0. A null should be reported as **F $\cup$ E0*
 
 If a no-damping model would over-predict the residual and the absolute uncertainty on $\sigma_X$ is $s$,
 
-$$
+
 A_0\bigl(1-e^{-\theta\Delta x}\bigr)\gtrsim s \qquad\Rightarrow\qquad \theta \gtrsim -\frac{1}{\Delta x}\ln\Bigl(1-\frac{s}{A_0}\Bigr) \quad(s<A_0).
-$$
+
 
 Examples for a DESI-wide path $\Delta x=0.94$:
 
@@ -221,9 +221,9 @@ Reference implementation: `scripts/euclid_mock_mcmc.py` (emcee). Euclid-like vec
 
 With percent-level BAO uncertainties ($\sigma_\alpha\sim 0.5\%$–$1.2\%$) and $S(z)\sim\mathcal{O}(1)$, the OU term competes with $C_{\rm std}$ only for
 
-$$
+
 \sigma_X \sim \mathrm{few}\times 10^{-3}\ \text{to}\ 10^{-2}.
-$$
+
 
 The scientific window $10^{-5}$–$1.5\times 10^{-4}$ therefore sits below the single-mock SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a 24-bin mock with $\sim 1\%$ errors.
 

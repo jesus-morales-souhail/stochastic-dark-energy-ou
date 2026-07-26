@@ -10,9 +10,9 @@ One-page research note (literature + order-of-magnitude) — not a Boltzmann imp
 
 The BAO / OU pipeline in this repository constrains background residual amplitude only:
 
-$$
+
 \sigma_X < 1.5\times 10^{-4}\quad(95\%~\mathrm{CL}),
-$$
+
 
 from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not compute $\Phi$, $\Psi$, or the gravitational slip $\eta=\Phi/\Psi$.
 
@@ -46,9 +46,9 @@ Scripts such as `ou_bao_likelihood.py`, `joint_w0wa_sigma_desi.py`, `profile_sig
 
 Volume-preserving / unimodular structure projects out stress-energy contributions of the form
 
-$$
+
 T_{\mu\nu} = V(x) g_{\mu\nu}
-$$
+
 
 (the isotropic vacuum-like piece). That is a strong algebraic filter, not a complete eraser of all vacuum-sector noise.
 
@@ -56,11 +56,11 @@ If the underlying source is granular (Planck-scale discreteness, Sorkin–Poisso
 
 **Observational handle:** gravitational slip
 
-$$
-\eta \equiv \frac{\Phi}{\Psi}.
-$$
 
-- In GR without anisotropic stress: $\Phi=\Psi$ $\Rightarrow$ $\eta=1$.
+\eta \equiv \frac{\Phi}{\Psi}.
+
+
+- In GR without anisotropic stress: $\Phi=\Psi\Rightarrow\eta=1$.
 - Anisotropic stress in a dark sector can yield $\eta\neq 1$.
 - Measurement: weak lensing (sensitive to $\Phi+\Psi$) combined with galaxy dynamics / RSD (sensitive to $\Psi$).
 
@@ -94,9 +94,9 @@ Maus et al., *A joint analysis of 3D clustering and galaxy × CMB-lensing cross-
 
 **What $\gamma$ is in that paper (Appendix E):**
 
-$$
+
 \gamma \equiv \frac{\Phi}{\Psi} , \qquad \Phi_\gamma \equiv \frac{\Phi+\Psi}{2} \equiv \Psi \frac{1+\gamma}{2} .
-$$
+
 
 - This is the gravitational slip (Newtonian potential $\Psi$ vs lensing/Weyl-related $\Phi$).  
 - GR limit: $\gamma = 1$ (not $0.55$).  
@@ -132,9 +132,9 @@ Model-independent forecasts combining Euclid-like and DESI-like surveys for anis
 
 Let $\varepsilon\in[0,1]$ (also written $f$ below) be the fraction of the DE-sector residual stress that is anisotropic (shear), and let $\sigma_X$ be the fractional residual amplitude constrained by BAO. With $\pi_T=\varepsilon \sigma_X \rho_X$ and $\delta_m\sim 1$:
 
-$$
+
 \lvert \gamma-1 \rvert = 2 \varepsilon \sigma_X \frac{\rho_X}{\rho_m \lvert \delta_m \rvert}.
-$$
+
 
 **Machine check (best case $\varepsilon=1$, $\sigma_X=1.5\times 10^{-4}$, $\delta_m=1$):**
 

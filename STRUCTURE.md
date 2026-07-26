@@ -86,11 +86,11 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 | `papers/scale-operator-experiment-map.md` | Master map: closed vs next (scale + operator) |
 | `papers/self-shielding-vs-untestability.md` | Shielding vs amplitude honesty |
 | `papers/self-shielding-triple-barrier.md` | Born / band-limit / OU: 0% physical abuse, 100% math |
-| `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy + B4/Sp(4,R) seal |
-| `papers/maxwell-device-to-M-derivation.md` | Maxwell+device→M; only Sp(4,R) is legitimate 4D |
+| `papers/no-go-superoscillation-tesseract.md` | No-go sub-Airy + B4/$\mathrm{Sp}(4,\mathbb{R})$ seal |
+| `papers/maxwell-device-to-M-derivation.md` | Maxwell+device→M; only $\mathrm{Sp}(4,\mathbb{R})$ is legitimate 4D |
 | `papers/optics-ou-analogies-and-limits.md` | Thin lens OK; tesseract ABCD no; $f\leftrightarrow 1/\theta$ analogy only |
 | `papers/wavefront-shaping-vs-ou-vacuum.md` | Lab $T$ ≠ BAO OU |
-| `papers/pattern-undeclared-physical-power.md` | $\ln 4$, $B_4$ pattern filter |
+| `papers/pattern-undeclared-physical-power.md` | $\ln 4$, $B_{4}$ pattern filter |
 | `papers/car-drone-pupil-newton-einstein.md` | Highway pupil: **CLOSED** wrong scale/operator |
 | `scripts/superoscillation_energy_cost_demo.py` | 1D energy-tax demo |
 | `scripts/b4_symplectic_count.py` | Seal: 32/384 B4 optical-symplectic; commutant dim 1 |

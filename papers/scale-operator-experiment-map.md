@@ -77,7 +77,7 @@ Wrong scale **or** wrong operator ⇒ null result that **does not** falsify the 
 | “Free work” from ideal current / levitation | Ignore Lenz / 3rd law | Force, power, temperature of SC | Mechanical reaction or magnetic drag $P_{\mathrm{load}}=-P_{\mathrm{drag}}$ | Analytical + optional FEM later |
 | Energy balance under forced work | “Efficiency 100% useful” claim | Molecular / nm–μm MD box | Work vs heat to thermostat (1st law check) | **GROMACS 2026.2 + CUDA** (already installed) |
 | Superoscillation “beats Airy for free” | “Perfect phase ⇒ photon always in core” | Band-limited 1D/2D field | $E_{\mathrm{core}}/E_{\mathrm{total}}$ under Born | `scripts/superoscillation_energy_cost_demo.py` (**done**) |
-| Tesseract optical engine | Assign $B_4$ power without Maxwell map | — | — | **No-go** (`no-go-superoscillation-tesseract.md`) |
+| Tesseract optical engine | Assign $B_{4}$ power without Maxwell map | — | — | **No-go** (`no-go-superoscillation-tesseract.md`) |
 
 ### 2.3 Optics / relativity (extensions of the car experiment)
 

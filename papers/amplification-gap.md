@@ -20,7 +20,7 @@
 ## 1. The only scientifically open front (after Acts I–II, IV–V)
 
 Acts I–II give me a **null residual** under the OU/QNM kernel and a **geometric candidate** (SDiff) for isotropic smoothness.  
-Acts IV–V close **wrong operators** and **wrong scales** (slip amplitude starvation, Born/band-limit, tesseract $B_4$ seal, wavefront $T\neq$ OU).
+Acts IV–V close **wrong operators** and **wrong scales** (slip amplitude starvation, Born/band-limit, tesseract $B_{4}$ seal, wavefront $T\neq$ OU).
 
 The corpus already names the remaining hole:
 
@@ -253,27 +253,27 @@ Default publication posture → limits + exclusions + hypothesis map
 
 Path residual:
 
-$$
+
 \sigma_{\rm res}(x)=A_0 e^{-\theta\Delta x}.
-$$
+
 
 Stationary OU variance (when $\theta>0$):
 
-$$
+
 \mathrm{Var}(X)=\frac{\sigma^2}{2\theta}.
-$$
+
 
 Desqueezing half-life (open systems):
 
-$$
+
 t_{1/2}=\frac{\ln 2}{\gamma},\qquad \gamma\leftrightarrow\theta H_0\ \text{(map, not identity of units)}.
-$$
+
 
 Bare seed motivation:
 
-$$
+
 \sigma_0\sim\frac{1}{\sqrt{N}},\quad N\sim 10^{122}.
-$$
+
 
 ---
 

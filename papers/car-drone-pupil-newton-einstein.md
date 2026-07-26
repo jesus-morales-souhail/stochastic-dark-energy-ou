@@ -12,7 +12,7 @@
 
 I use this note to pin down a simple setup: highway speed, a millimetre aperture, Newton vs Einstein. I am **not** reporting a cosmological detection, and I am **not** claiming that a car or a pupil measures dark energy. The point is scale and operator discipline — the same hygiene I apply when I refuse wrong-scale claims in the BAO programme.
 
-**Not included:** hypercubes, Coxeter $B_4$, or undeclared 4D optical engines.
+**Not included:** hypercubes, Coxeter $B_{4}$, or undeclared 4D optical engines.
 
 ---
 
@@ -36,9 +36,9 @@ I use this note to pin down a simple setup: highway speed, a millimetre aperture
 
 ### A) Expansion vs local binding
 
-$$
+
 H_0 \sim 2\times 10^{-18} \mathrm{s}^{-1} \qquad\Rightarrow\qquad v_H = H_0 L
-$$
+
 
 | $L$ | $v_H = H_0 L$ |
 |-------|------------------|
@@ -65,9 +65,9 @@ I do not need an absolute-space “diagonal light + $v$” story between them; t
 
 ### D) Einstein (special relativity)
 
-$$
+
 \beta = \frac{v}{c} \approx 1.1\times 10^{-7},\qquad \gamma-1 \approx 6\times 10^{-15}.
-$$
+
 
 - **Correct setup** (matched velocities): relative $\beta=0$ ⇒ **no** contraction/Doppler between car and drone; identical Airy pattern.
 - **Wrong setup** (drone fixed to road): aberration $\sim\beta$ rad $\approx 0.023''$, while Airy angle $\sim 138''$ for 1 mm ⇒ ratio $\beta/\theta_{\mathrm{Airy}}\sim 10^{-4}$. **Undetectable** as a “tesseract-like” distortion of the pupil pattern.

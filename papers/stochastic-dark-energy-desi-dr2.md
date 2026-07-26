@@ -15,9 +15,9 @@ In this note I test whether there is additional room for a stochastic component 
 
 I find that the MLE drives the stochastic amplitude to the numerical floor: $\sigma_X \to 0$ and $\omega_R \to 0$. The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a phenomenological upper limit on the amplitude of such fluctuations:
 
-$$
+
 \sigma_X < 1.5 \times 10^{-4}
-$$
+
 
 **(95% CL).**
 
@@ -43,9 +43,9 @@ I clarify that while the standard DESI DR2 BAO analysis constrains the homogeneo
 
 The maximum entropy $S$ contained in a region with horizon area $A$ satisfies the Bekenstein–Hawking bound:
 
-$$
+
 S \leq \frac{A}{4 G \hbar}.
-$$
+
 
 For the observable universe, $A \sim 10^{122}$ (in Planck units), which implies a finite effective Hilbert-space dimension. Continuum field descriptions are therefore effective coarse-grainings, not fundamental.
 
@@ -53,9 +53,9 @@ For the observable universe, $A \sim 10^{122}$ (in Planck units), which implies 
 
 In unimodular gravity, $\Lambda$ can be interpreted as a constant of integration conjugate to the spacetime four-volume. If spacetime consists of $N$ discrete elements with $N = V / L_P^4$, Poisson fluctuations yield
 
-$$
+
 \delta \Lambda \sim \frac{1}{\sqrt{N}}.
-$$
+
 
 With $N \sim 10^{122}$, this gives $\delta\Lambda \sim 10^{-61}$ in Planck units. This motivates the existence of a small, non-zero stochastic component, though I do not claim a full derivation of $\rho_\Lambda$ from this argument.
 
@@ -63,15 +63,15 @@ With $N \sim 10^{122}$, this gives $\delta\Lambda \sim 10^{-61}$ in Planck units
 
 Define $X(x) \equiv \delta\Omega_\Lambda(x)$, where $x = \ln a$ is the logarithmic scale factor. I model $X$ as an Ornstein–Uhlenbeck process:
 
-$$
+
 dX = -\theta X dx + \sigma dW_x,
-$$
+
 
 with stationary variance
 
-$$
+
 \mathrm{Var}(X) = \frac{\sigma^2}{2\theta}.
-$$
+
 
 The OU process captures finite memory and yields analytic redshift correlations. I adopt it as a minimal phenomenological closure.
 
@@ -79,9 +79,9 @@ The OU process captures finite memory and yields analytic redshift correlations.
 
 To preserve early-universe constraints (CMB, BBN), a smooth activation factor $g(z)$ is conceptually introduced:
 
-$$
+
 \sigma_{\rm eff}(z) = \sigma g(z), \qquad g(z) = \frac{1}{1 + \exp\left[-(x - x_*) / \Delta\right]},
-$$
+
 
 where $x = \ln(1/(1+z))$. However, for the redshift range probed by DESI ($z \lesssim 2.3$) and Euclid ($z \lesssim 2.0$), $g(z)$ is essentially unconstrained by data. I set $z_* = 1.5$ (illustrative), with the understanding that this parameter is degenerate with $\sigma$ and cannot be independently calibrated. For all numerical results in Sections 4–6, $g(z) \approx 1$ in the observed range, meaning the effective amplitude $\sigma_X$ absorbs any early-time suppression.
 
@@ -93,21 +93,21 @@ where $x = \ln(1/(1+z))$. However, for the redshift range probed by DESI ($z \le
 
 Noether's theorem states that every continuous symmetry of the action corresponds to a conserved current and, for spacetime symmetries, a conserved charge. In Minkowski spacetime, invariance under time translations yields a conserved energy via the energy-momentum tensor $T^{\mu\nu}$:
 
-$$
+
 \partial_\mu T^{\mu\nu} = 0 \quad \Longrightarrow \quad E = \int d^3x T^{00} = \text{constant}.
-$$
+
 
 In a Friedmann-Lemaître-Robertson-Walker (FLRW) spacetime with metric
 
-$$
+
 ds^2 = -dt^2 + a(t)^2 \left[ \frac{dr^2}{1-kr^2} + r^2 d\Omega^2 \right],
-$$
+
 
 the time translation vector $\xi^\mu = (1,0,0,0)$ is not a Killing vector when $\dot{a} \neq 0$. The Lie derivative of the metric along $\xi^\mu$ is:
 
-$$
+
 \mathcal{L}_\xi g_{\mu\nu} = 2\dot{a} a \delta_{\mu\nu} \neq 0.
-$$
+
 
 Consequently, there is no conserved energy associated with time translations. This is not a statement about the local conservation of energy-momentum (which is always preserved via the contracted Bianchi identity, $\nabla_\mu T^{\mu\nu} = 0$), but about the absence of a global, conserved charge analogous to energy in a static spacetime.
 
@@ -119,17 +119,17 @@ Consequently, there is no conserved energy associated with time translations. Th
 
 For a cosmological fluid with equation of state $w_\Lambda$, the local conservation law $\nabla_\mu T^{\mu\nu} = 0$ gives the continuity equation:
 
-$$
+
 \dot{\rho}_\Lambda + 3H(1+w_\Lambda)\rho_\Lambda = 0.
-$$
+
 
 For a pure cosmological constant, $w_\Lambda = -1$, so $\dot{\rho}_\Lambda = 0$: the density is exactly constant, and no fluctuations are permitted.
 
 For the CPL parameterization $w(z) = w_0 + w_a z/(1+z)$, the solution is:
 
-$$
+
 \rho_\Lambda(z) = \rho_{\Lambda,0} \cdot (1+z)^{3(1+w_0+w_a)} \cdot \exp\left[-\frac{3w_a z}{1+z}\right],
-$$
+
 
 which is a smooth, deterministic evolution — no stochastic component.
 
@@ -137,23 +137,23 @@ which is a smooth, deterministic evolution — no stochastic component.
 
 The OU process $dX = -\theta X dx + \sigma dW_x$ (Axiom A3) provides a minimal and physically motivated phenomenological closure. It is obtained by adding a noise term to the standard fluid continuity equation. In physical time, setting $x = \ln a$ and $X \equiv \delta\Omega_\Lambda$:
 
-$$
+
 \frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t),
-$$
+
 
 where $\xi(t)$ is a Gaussian white noise with:
 
-$$
+
 \langle \xi(t) \rangle = 0, \qquad \langle \xi(t) \xi(t') \rangle = \frac{\sigma^2 H^2 \rho_{\Lambda,0}^2}{2\theta} \cdot \delta_D(t - t').
-$$
+
 
 Converting to the logarithmic scale factor $x = \ln a$ (using $dt = dx/H$ and defining $X = \delta\rho_\Lambda / \rho_{\Lambda,0}$), this becomes exactly Axiom A3. The mean-reversion rate $\theta$ is the effective damping of fluctuations by the Hubble friction term $3H(1+w_\Lambda)$; the diffusion amplitude $\sigma$ encodes the strength of the microscopic noise source from Axiom A2.
 
 The stationary solution has variance:
 
-$$
+
 \mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
-$$
+
 
 which is finite only when $\theta > 0$ — i.e., when the dark energy fluid has a non-trivial equation of state that provides effective damping. For $w_\Lambda = -1$ exactly, the damping vanishes ($\theta \to 0$), and the stationary variance diverges unless $\sigma = 0$ simultaneously. This is the covariant statement that a pure cosmological constant cannot sustain finite stochastic fluctuations: either the equation of state departs from $-1$ (as DESI DR2 suggests), or the noise amplitude must vanish.
 
@@ -165,29 +165,29 @@ which is finite only when $\theta > 0$ — i.e., when the dark energy fluid has 
 
 I use the standard isotropic BAO distance proxy:
 
-$$
+
 D_V(z) = \left[ D_M(z)^2 \frac{c z}{H(z)} \right]^{1/3}.
-$$
+
 
 Define the sensitivity kernel to $\Omega_\Lambda$:
 
-$$
+
 S(z) \equiv \frac{\partial \ln D_V(z)}{\partial \Omega_\Lambda}.
-$$
+
 
 Linear propagation yields an induced BAO scatter (the "precision floor"):
 
-$$
+
 \sigma_{\alpha,\rm floor}(z) \approx \lvert S(z) \rvert \sigma_{\Omega_\Lambda}(z).
-$$
+
 
 ### 3.2 Calibration (Superseded by MLE)
 
 Earlier versions of this work used an illustrative calibration with $f_{\text{net}} = 0.15$ and $\sigma_X \sim 0.018$ based on DESI DR1. This calibration is superseded by the MLE analysis presented in Section 4.2, which treats $\theta$ and $\sigma_X$ as free parameters and yields $\sigma_X \to 0$. The only relevant quantity is the 95% upper limit:
 
-$$
+
 \sigma_X < 1.5 \times 10^{-4}.
-$$
+
 
 All numerical results in this work are based on this MLE fit, not on the illustrative calibration.
 
@@ -215,21 +215,21 @@ For the numerical results in Sections 4–6, I use the discrete sensitivity kern
 
 The standard BAO analysis assumes Gaussian residuals with diagonal covariance. My model adds an OU-induced component to the total covariance:
 
-$$
+
 C_{\text{total}} = C_{\text{std}} + C_{\text{OU}},
-$$
+
 
 where
 
-$$
+
 (C_{\text{OU}})_{ij} = S(z_i) S(z_j) \mathrm{Cov}[X(x_i), X(x_j)],
-$$
+
 
 and
 
-$$
+
 \mathrm{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \exp\left[-\theta \lvert x_i - x_j \rvert\right],
-$$
+
 
 modulated by the activation factor $g(z)$.
 
@@ -257,9 +257,9 @@ I construct a HEALPix map ($N_{\rm side} = 32$) of galaxy overdensities from DES
 
 As a proxy for $\delta\Omega_\Lambda$, I use the Hubble diagram residuals $\Delta\mu(z) = \mu_{\rm obs}(z) - \mu_{\Lambda\rm CDM}(z)$ from the Pantheon+ compilation (1701 SNe Ia). For each SN, I estimate
 
-$$
+
 \delta\Omega_\Lambda \approx \frac{\Delta\mu}{d\mu/d\Omega_\Lambda},
-$$
+
 
 where the denominator is computed numerically using the same fiducial $\Lambda$CDM cosmology. I then map these estimates onto HEALPix pixels.
 
@@ -269,9 +269,9 @@ The angular cross-correlation is computed as the Pearson correlation coefficient
 
 Combining NGC and SGC, I find **67 overlapping pixels** with both LRG galaxies and SNe. The cross-correlation coefficient is
 
-$$
+
 r_{\rm cross} = 0.1673 \pm 0.0613,
-$$
+
 
 corresponding to a $Z \approx 2.73\sigma$ excess over the null hypothesis ($r=0$).
 
@@ -287,9 +287,9 @@ corresponding to a $Z \approx 2.73\sigma$ excess over the null hypothesis ($r=0$
 
 The OU process predicted positive lag correlations. For a DESI-like 9-bin grid, the original prediction was:
 
-$$
+
 \rho_1 \approx 0.78, \qquad \rho_2 \approx 0.62, \qquad \rho_3 \approx 0.49.
-$$
+
 
 However, since the MLE forces $\sigma_X \to 0$, this prediction is no longer relevant: if there is no stochastic signal, there is no prediction to test. The data show no sign of these correlations, as detailed below.
 
@@ -343,27 +343,27 @@ The following interpretation requires additional assumptions beyond the data and
 
 In scalar-field dark energy models where the field is coupled to the electromagnetic sector, the effective fine-structure constant becomes a function of the field, $\alpha(\phi)$. For a linear coupling:
 
-$$
+
 \frac{\Delta \alpha}{\alpha} \equiv \frac{\alpha(\phi) - \alpha_0}{\alpha_0} \approx \beta \delta \phi,
-$$
+
 
 where $\beta$ is the effective coupling constant. Assuming $\rho_\Lambda \approx V(\phi)$, the fractional fluctuation in $\rho_\Lambda$ is:
 
-$$
+
 \sigma_X \equiv \frac{\delta \rho_\Lambda}{\rho_\Lambda} \approx \frac{V'(\phi)}{V(\phi)} \delta \phi.
-$$
+
 
 Combining both expressions:
 
-$$
+
 \frac{\Delta \alpha}{\alpha} \approx \beta \frac{V(\phi)}{V'(\phi)} \sigma_X.
-$$
+
 
 My upper bound $\sigma_X < 1.5 \times 10^{-4}$ therefore implies:
 
-$$
+
 \left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (1.5 \times 10^{-4}).
-$$
+
 
 Combined with astrophysical bounds from quasar absorption spectroscopy ($\lvert \Delta\alpha/\alpha \rvert \lesssim 10^{-5}$ at $z \sim 7$, Wilczyńska et al. 2020 [7]), this limit disfavors models with $\lvert \beta \rvert \sim 1$ and $\lvert V/V' \rvert \sim \mathcal{O}(1)$ unless additional screening mechanisms suppress the observable variation.
 
@@ -409,9 +409,9 @@ I have tested a specific class of stochastic dark energy models (OU and QNM) aga
 
 This result places a phenomenological upper limit on the amplitude of such fluctuations:
 
-$$
+
 \sigma_X < 1.5 \times 10^{-4}
-$$
+
 
 **(95% CL).**
 
@@ -421,9 +421,9 @@ More broadly, $\sigma_X < 1.5 \times 10^{-4}$ implies that any microscopic mecha
 
 The correlation function derived in Appendix F provides a falsifiable prediction for Euclid DR1: if a stochastic component exists, the whitened BAO residuals should follow:
 
-$$
+
 \Xi(\Delta x, r) \propto \frac{K_1\!\left(\theta_0 \sqrt{\Delta x^2 + (aH)^2 r^2}\right)}{\sqrt{\Delta x^2 + (aH)^2 r^2}},
-$$
+
 
 where $K_1$ is the modified Bessel function of the second kind. Any significant deviation from this form would indicate non-linear self-interactions, time-dependent damping, or a breakdown of spatial isotropy.
 
@@ -497,21 +497,21 @@ This derivation is not used in the main analysis but is provided as a roadmap fo
 
 Starting from the perturbed Hubble parameter:
 
-$$
+
 H^2(z) = H_0^2 \left[ \Omega_m (1+z)^3 + \Omega_\Lambda + X(z) \right],
-$$
+
 
 one obtains, to first order in $X$:
 
-$$
+
 \delta \ln D_V(z) = -\frac{c}{3 H_0 D_{M,0}(z)} \int_0^z \frac{X(z')}{E_0(z')^3} dz' - \frac{1}{6 E_0(z)^2} X(z).
-$$
+
 
 Defining $\chi(z, z')$ via $\delta \ln D_V(z) = \int_0^z \chi(z, z') X(z') dz'$:
 
-$$
+
 \chi(z, z') = -\frac{c}{3 H_0 D_{M,0}(z) E_0(z')^3} \Theta(z - z') - \frac{1}{6 E_0(z)^2} \delta_D(z - z'),
-$$
+
 
 where $\Theta$ is the Heaviside step function. Full numerical implementation is deferred to future versions.
 
@@ -521,15 +521,15 @@ where $\Theta$ is the Heaviside step function. Full numerical implementation is 
 
 This is a purely geometric consequence of survey redshift coverage, independent of any dark-energy model. For a survey covering logarithmic scale-factor range:
 
-$$
+
 \Delta x = \ln(1 + z_{\rm max}) - \ln(1 + z_{\rm min}),
-$$
+
 
 the minimum resolvable oscillation frequency is:
 
-$$
+
 \omega_{R, \rm min} = \frac{2\pi}{\Delta x}.
-$$
+
 
 Any oscillation with $\omega_R < \omega_{R, \rm min}$ produces less than one visible cycle and is indistinguishable from a monotonic (pure OU) trend.
 
@@ -550,9 +550,9 @@ The following sections provide theoretical interpretations of the phenomenologic
 
 Assuming that dark energy is a canonical scalar field $\phi$ with $\rho_\Lambda \approx V(\phi)$ and $\phi \sim M_{\rm Pl}$, and using $\sigma_X \sim m_\phi^2 M_{\rm Pl} H_0 / (2\pi \rho_\Lambda)$, the limit $\sigma_X < 1.5 \times 10^{-4}$ implies:
 
-$$
+
 m_\phi \lesssim 9.45 \times 10^{-5} \text{eV}.
-$$
+
 
 This is consistent with ultralight boson scenarios. However, this translation depends on the assumed normalization of $\phi$ and the relation between $\sigma_X$ and $\delta\phi$. It is not a direct measurement from DESI data.
 
@@ -580,9 +580,9 @@ This derivation is provided for theoretical completeness and as a foundation for
 
 Define the fractional fluctuation field $X(x, \mathbf{r}) \equiv \delta\rho_\Lambda(x, \mathbf{r}) / \rho_{\Lambda,0}$, where $x = \ln a$ and $\mathbf{r}$ is the comoving position vector. The two-point correlation function is:
 
-$$
+
 \Xi(\Delta x, r) \equiv \langle X(x_1, \mathbf{r}_1) X(x_2, \mathbf{r}_2) \rangle, \qquad r = \lvert \mathbf{r}_1 - \mathbf{r}_2 \rvert,\quad \Delta x = x_2 - x_1.
-$$
+
 
 The field satisfies:
 
@@ -594,65 +594,65 @@ The field satisfies:
 
 By spatial homogeneity, I Fourier transform in $\mathbf{r}$:
 
-$$
+
 X(x, \mathbf{r}) = \int \frac{d^3k}{(2\pi)^3} X_{\mathbf{k}}(x) e^{i \mathbf{k} \cdot \mathbf{r}}.
-$$
+
 
 The modes decouple statistically:
 
-$$
+
 \langle X_{\mathbf{k}_1}(x_1) X_{\mathbf{k}_2}(x_2) \rangle = (2\pi)^3 \delta_D(\mathbf{k}_1 + \mathbf{k}_2) P_X(x_1, x_2, k).
-$$
+
 
 The linear Langevin equation for each mode is:
 
-$$
+
 \frac{\partial X_{\mathbf{k}}}{\partial x} + \theta(k) X_{\mathbf{k}} = \sigma W_{\mathbf{k}}(x),
-$$
+
 
 where the scale-dependent damping includes a spatial gradient term:
 
-$$
+
 \theta(k) = \sqrt{\theta_0^2 + \left( \frac{k}{aH} \right)^2}.
-$$
+
 
 ### F.3 Stationary Power Spectrum
 
 Under local stationarity, the power spectrum is:
 
-$$
+
 P_X(\Delta x, k) = \frac{\sigma^2}{2\theta(k)} \exp[-\theta(k) \lvert \Delta x \rvert].
-$$
+
 
 ### F.4 Exact Real-Space Correlation Function
 
 Performing the inverse Fourier transform in spherical $k$-space:
 
-$$
+
 \Xi(\Delta x, r) = \frac{1}{2\pi^2 r} \int_0^\infty P_X(\Delta x, k) k \sin(kr) dk.
-$$
+
 
 This integral evaluates to a modified Bessel function $K_1$:
 
-$$
+
 \boxed{ \Xi(\Delta x, r) = \frac{\sigma^2 (aH)^2}{4\pi^2} \cdot \frac{\theta_0}{\sqrt{\Delta x^2 + (aH)^2 r^2}} K_1 \left( \theta_0 \sqrt{\Delta x^2 + (aH)^2 r^2} \right) }.
-$$
+
 
 ### F.5 Limiting Cases
 
 **Temporal limit** ($r \to 0$): For large $\Delta x$, $K_1(z) \sim \sqrt{\pi/(2z)} e^{-z}$, so:
 
-$$
+
 \Xi(\Delta x, 0) \propto \frac{e^{-\theta_0 \lvert \Delta x \rvert}}{\lvert \Delta x \rvert^{3/2}},
-$$
+
 
 recovering the exponential decay of the OU process with a 3D power-law tail.
 
 **Spatial limit** ($\Delta x = 0$): For short distances, $K_1(z) \sim 1/z$, so:
 
-$$
+
 \Xi(0, r) \propto \frac{1}{r^2},
-$$
+
 
 which is the Coulomb/Newtonian propagator for a massless field in three spatial dimensions. At large distances, the correlation length is $\ell \sim 1/(\theta_0 aH)$.
 
@@ -660,9 +660,9 @@ which is the Coulomb/Newtonian propagator for a massless field in three spatial 
 
 If the field has an oscillatory quasi-normal mode response, the correlation function acquires a factor:
 
-$$
+
 \Xi_{\rm QNM}(\Delta x, r) = \Xi(\Delta x, r) \cdot \cos(\omega_R \Delta x).
-$$
+
 
 **Euclid DR1.** If a residual stochastic component is present, the whitened BAO residuals should follow this $K_1$ spatial structure. Significant deviations would indicate non-linear self-interactions, time-dependent damping, or a breakdown of spatial isotropy beyond this minimal model.
 
@@ -690,21 +690,21 @@ This appendix provides an independent consistency test for any scalar-field mode
 
 Consider a quintessence scalar field $\phi$ coupled to the electromagnetic sector via the interaction term:
 
-$$
+
 \mathcal{L}_{\rm int} = -\frac{1}{4} B_F(\phi) F_{\mu\nu} F^{\mu\nu},
-$$
+
 
 where $F_{\mu\nu}$ is the electromagnetic field tensor and $B_F(\phi)$ is a dimensionless function of the scalar field. Expanding around the present-day field value $\phi_0$ to linear order:
 
-$$
+
 B_F(\phi) = 1 - \zeta \frac{\phi - \phi_0}{M_{\rm Pl}},
-$$
+
 
 with $\zeta$ the (dimensionless) coupling parameter and $M_{\rm Pl}$ the reduced Planck mass. This parametrisation induces a dependence of the fine-structure constant $\alpha$ on the scalar field:
 
-$$
+
 \frac{\Delta\alpha}{\alpha}(z) \equiv \frac{\alpha(z) - \alpha_0}{\alpha_0} \simeq \zeta \frac{\Delta\phi(z)}{M_{\rm Pl}}, \tag{H.1}
-$$
+
 
 where $\Delta\phi(z) = \phi(z) - \phi_0$ is the field deviation from its present value.
 
@@ -712,27 +712,27 @@ where $\Delta\phi(z) = \phi(z) - \phi_0$ is the field deviation from its present
 
 Under the stochastic model (Axiom A3), the dark-energy density experiences local fluctuations $\delta\rho_\Lambda$ governed by an Ornstein–Uhlenbeck process. Assuming the energy density is dominated by the potential, $\rho_\Lambda \simeq V(\phi)$, the first-order Taylor expansion gives:
 
-$$
+
 \delta\rho_\Lambda \simeq V'(\phi) \delta\phi,
-$$
+
 
 where $V'(\phi) = dV/d\phi$. The dimensionless stochastic amplitude defined in the main text is:
 
-$$
+
 \sigma_X \equiv \frac{\delta\rho_\Lambda}{\rho_\Lambda}.
-$$
+
 
 Combining these expressions yields:
 
-$$
+
 \sigma_X \simeq \frac{V'(\phi)}{V(\phi)} \delta\phi \quad \Longrightarrow \quad \delta\phi \simeq \sigma_X \frac{V(\phi)}{V'(\phi)}. \tag{H.2}
-$$
+
 
 Substituting into Eq. (H.1) gives the exact link between the spectroscopic observable and the stochastic vacuum amplitude:
 
-$$
+
 \boxed{ \frac{\Delta\alpha}{\alpha} \simeq \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \sigma_X }. \tag{H.3}
-$$
+
 
 This relation is independent of the specific form of the potential and only requires a linear coupling and a potential-dominated equation of state.
 
@@ -740,21 +740,21 @@ This relation is independent of the specific form of the potential and only requ
 
 The ESPRESSO spectrograph at the VLT has provided a precise measurement of $\Delta\alpha/\alpha$ from metal absorption systems in high-redshift quasars. The absorber at $z_{\rm abs} = 1.15$ towards the quasar HE 0515-4414 yields [1]:
 
-$$
+
 \frac{\Delta\alpha}{\alpha} = (1.3 \pm 1.3_{\rm stat} \pm 0.4_{\rm sys}) \times 10^{-6}.
-$$
+
 
 Taking the conservative $2\sigma$ (95% CL) upper limit, with the errors added in quadrature:
 
-$$
+
 \left| \frac{\Delta\alpha}{\alpha} \right| \lesssim 2.7 \times 10^{-6}. \tag{H.4}
-$$
+
 
 Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 1.5 \times 10^{-4}$ at 95% CL) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
 
-$$
+
 \left| \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \right| \lesssim \frac{2.7 \times 10^{-6}}{1.5 \times 10^{-4}} \approx 1.8 \times 10^{-2}. \tag{H.5}
-$$
+
 
 ### H.4 Diagnostic of Theoretical Consistency
 
@@ -764,9 +764,9 @@ Equation (H.5) imposes a severe fine-tuning constraint on any quintessence model
 
 If the scalar field interacts with the gauge sector with a strength comparable to gravity, then the dimensionless potential-slope term must satisfy:
 
-$$
+
 \left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.8 \times 10^{-2}.
-$$
+
 
 For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 55.5$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
 
@@ -774,9 +774,9 @@ For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, t
 
 For the field to reproduce the observed accelerated expansion, the potential must be extremely flat, such that $\left| V'/V \right| M_{\rm Pl} \lesssim 1$. In this regime, Eq. (H.5) forces:
 
-$$
+
 \lvert \zeta \rvert \lesssim 1.8 \times 10^{-2}.
-$$
+
 
 This implies a suppression scale $M_{\rm cut} \equiv M_{\rm Pl} / \lvert \zeta \rvert \gtrsim 55 M_{\rm Pl}$, placing the new-physics scale well above the Planck scale. Such a suppression is technically unnatural and requires a protective symmetry mechanism, such as an axionic shift symmetry, to suppress quantum corrections from charged-particle loops [3].
 

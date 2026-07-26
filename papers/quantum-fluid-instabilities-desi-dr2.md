@@ -27,21 +27,21 @@ In this note I formalise that connection. I derive the growth rate of the Bogoli
 
 I consider a complex scalar field $\psi$ whose macroscopically condensed state mimics dark energy. The action in an FLRW background (with $c=\hbar=1$ for convenience, though I restore $\hbar$ when needed) is
 
-$$
+
 \mathcal{S} = \int d^4x \sqrt{-g} \left[ -\frac{1}{2}g^{\mu\nu}\partial_\mu\psi^\dagger\partial_\nu\psi - V(\psi) \right],
-$$
+
 
 with the self-interaction potential
 
-$$
+
 V(\psi) = \frac{1}{2}(m^{\ast})^{2}\lvert\psi\rvert^{2} + \frac{g}{2}\lvert\psi\rvert^{4},
-$$
+
 
 where $(m^{\ast})^{2} < 0$ (tachyonic mass) and $g > 0$. In the mean-field approximation, the dynamics of the condensate wavefunction $\psi(\mathbf{x},t)$ is governed by the modified Gross–Pitaevskii equation (GPE) in an expanding universe:
 
-$$
+
 i\hbar \frac{\partial\psi}{\partial t} = \left[ -\frac{\hbar^{2}}{2m^{\ast} a^{2}(t)} \nabla^{2} + V_{\text{ext}}(\mathbf{x}) + g\lvert\psi\rvert^{2} \right] \psi,
-$$
+
 
 with $m^{\ast} = -\lvert m^{\ast}\rvert$. For cosmological homogeneity, I set $V_{\text{ext}} = 0$ and identify the background dark-energy density as $\rho_\Lambda \simeq \lvert\psi_0\rvert^{2}$.
 
@@ -51,27 +51,27 @@ with $m^{\ast} = -\lvert m^{\ast}\rvert$. For cosmological homogeneity, I set $V
 
 I linearise the GPE around the homogeneous background, writing $\psi = \psi_0 + \delta\psi$. Expanding the density perturbation $\delta\rho_\Lambda = \psi_0^{\ast}\delta\psi + \psi_0\delta\psi^{\ast}$ in Fourier modes, the Bogoliubov–de Gennes equations yield the dispersion relation for the physical wavenumber $q$ (comoving). For a genuine negative mass $m^{\ast} = -\lvert m^{\ast}\rvert$, the kinetic term changes sign, giving
 
-$$
+
 \omega_q^{2} = \varepsilon_q^{2} - 2\varepsilon_q g\lvert\psi_0\rvert^{2}, \qquad \varepsilon_q \equiv \frac{\hbar^{2} q^{2}}{2\lvert m^{\ast}\rvert a^{2}}.
-$$
+
 
 For low momenta, $\omega_q^{2} < 0$, leading to dynamical instability. The growth rate $\Gamma_q = \sqrt{-\omega_q^{2}}$ is
 
-$$
+
 \Gamma_q = \frac{\hbar q}{\lvert m^{\ast}\rvert a^{2}} \sqrt{2\lvert m^{\ast}\rvert g\lvert\psi_0\rvert^{2} - \hbar^{2} q^{2}}.
-$$
+
 
 This is the correct expression; note that an earlier version of this work contained a sign error in the intermediate $\omega_q^{2}$ formula, but the final $\Gamma_q$ is unchanged. The fastest-growing mode occurs at
 
-$$
+
 q_{\text{max}} = \frac{\sqrt{2\lvert m^{\ast}\rvert g\lvert\psi_0\rvert^{2}}}{\hbar a},
-$$
+
 
 and the maximum growth rate is
 
-$$
+
 \Gamma_{\text{max}} = \frac{g\lvert\psi_0\rvert^{2}}{\hbar} \equiv \frac{1}{t_c},
-$$
+
 
 where $t_c$ is the characteristic collapse time of the quantum fluid.
 
@@ -81,21 +81,21 @@ where $t_c$ is the characteristic collapse time of the quantum fluid.
 
 In the linear regime, the density fluctuations evolve as
 
-$$
+
 \delta\rho_\Lambda(q,t) = \delta\rho_\Lambda^{(0)}(q) e^{\Gamma_q t},
-$$
+
 
 where $\delta\rho_\Lambda^{(0)}$ denotes the primordial seed (e.g., Planck-scale granularity or Sorkin-type Poisson fluctuations [4,5]). The variance of the dimensionless dark-energy density parameter is
 
-$$
+
 \sigma_X^{2}(t) \equiv \frac{\langle (\delta\rho_\Lambda)^2\rangle}{\rho_\Lambda^{2}} = \frac{1}{\rho_\Lambda^{2}}\int \frac{d^3q}{(2\pi)^3} P_0(q) e^{2\Gamma_q t}.
-$$
+
 
 Approximating the integral by the saddle point around $q_{\text{max}}$, I get
 
-$$
+
 \sigma_X(t) \sim \sigma_0 e^{t/t_c},
-$$
+
 
 where $\sigma_0 \sim 10^{-61}$ is the amplitude of the primordial seed (estimated from the Bekenstein–Hawking bound or causal-set fluctuations).
 
@@ -105,31 +105,31 @@ where $\sigma_0 \sim 10^{-61}$ is the amplitude of the primordial seed (estimate
 
 BAO measurements constrain the spherically-averaged distance $D_V(z) = [D_M^{2}(z) c z / H(z)]^{1/3}$. The sensitivity of $D_V$ to $\Omega_\Lambda$ is encoded in the kernel
 
-$$
+
 S(z) \equiv \frac{\partial \ln D_V(z)}{\partial \Omega_\Lambda}.
-$$
+
 
 The stochastic variance $\sigma_X^{2}(z)$ induces an additional covariance in the BAO data. Crucially, the instability amplifies a single frozen primordial field by a redshift-dependent factor. Therefore, the covariance is not of OU type; it is a rank-1 matrix:
 
-$$
+
 C_{ij}^{\text{BAO}} = \delta_{ij}\sigma_i^{2} + \sigma_0^{2} S(z_i)S(z_j) e^{(t(z_i)+t(z_j))/t_c},
-$$
+
 
 where $t(z)$ is the cosmic lookback time and $\sigma_i$ are the measurement errors.
 
 I perform a Maximum Likelihood Estimation (MLE) using the public DESI DR2 BAO data (7 bins, from [1]). The log-likelihood is
 
-$$
+
 \ln\mathcal{L} = -\frac{1}{2}\left[\mathbf{r}^\top C^{-1} \mathbf{r} + \ln\lvert C\rvert + n\ln(2\pi)\right],
-$$
+
 
 with $\mathbf{r} = \boldsymbol{\alpha}_{\mathrm{obs}} - \mathbf{1}$.
 
 I fix $\sigma_0 = 10^{-61}$ (as in Axiom A2 of the companion OU paper) and scan over $t_c$. The likelihood is maximised only as $t_c \to \infty$ (i.e., no growth). For any finite $t_c$, the fit is significantly worse. The best-finite-$t_c$ case yields
 
-$$
+
 \Delta\ln\mathcal{L} = \ln\mathcal{L}(t_c) - \ln\mathcal{L}_{\Lambda\text{CDM}} = -11.35,
-$$
+
 
 corresponding to $\Delta\chi^2 \approx +22.7$ for one extra parameter ($t_c$). This excludes the coherent growing-mode model at high significance. The OU-derived limit $\sigma_X < 1.5\times10^{-4}$ is not applicable here, as it assumes a stationary variance structure.
 
