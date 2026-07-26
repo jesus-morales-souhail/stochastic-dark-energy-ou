@@ -2,12 +2,14 @@
 
 | | |
 |:--|:--|
+| **Author** | Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail) |
 | **Analysis** | Corpus July 2026 |
 | **Parent note** | [`papers/amplification-gap.md`](../../papers/amplification-gap.md) §6.3 |
 | **Scripts** | `scripts/amplification/route{1,2,3}_*.py`, `run_all_routes.py` |
+| **Status** | Machine-checked hygiene freeze of route scans. **Not a DESI detection claim.** Not peer reviewed. |
 
-This file freezes the **machine-checked** conclusions of the amplification-route scans. 
-It does **not** invent a successful microphysical amplifier.
+I freeze here the **machine-checked** conclusions of the amplification-route scans.  
+I do **not** invent a successful microphysical amplifier. This file is a numerical lock-in for theory bottlenecks — **not** a DESI claim that vacuum noise was seen.
 
 ---
 
@@ -43,7 +45,7 @@ Global horizon count $N_{\mathrm{BH}}\sim 10^{122}$ is larger by $\sim 10^{112}$
 
 ## Route 3 — double-well Langevin
 
-**File:** `route3_avalanche_scan.csv` (288 jobs × 20 000 paths) 
+**File:** `route3_avalanche_scan.csv` (288 jobs × 20 000 paths)  
 Grid: $a\in\{1,10\}$, $b\in[10^{-6},0.1]$, $\sigma\in[10^{-8},10^{-3}]$, $\Delta x=1$.
 
 | Check | Result |
@@ -61,5 +63,8 @@ Grid: $a\in\{1,10\}$, $b\in[10^{-6},0.1]$, $\sigma\in[10^{-8},10^{-3}]$, $\Delta
 
 ## One-line programme status
 
-**No free amplification confirmed numerically on Routes 2–3; Route 1 is a seed-redefinition card with a causal-set price.** 
-Default: publish **limits + exclusions + hypothesis map**.
+**No free amplification confirmed numerically on Routes 2–3; Route 1 is a seed-redefinition card with a causal-set price.**  
+Default: publish **limits + exclusions + hypothesis map**.  
+I do not claim detection of Planck-scale vacuum noise.
+
+*End of numerical freeze.*

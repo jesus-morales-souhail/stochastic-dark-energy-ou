@@ -1,18 +1,18 @@
 # Desqueezing Relaxation Time from Open Quantum Systems and its Mapping to Late-Time Vacuum Fluctuations in Stochastic Dark Energy
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**ORCID:** 0009-0000-7637-1818 
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou 
-**Companion numerics:** open quantum simulations (`QuTiP`), project `simulaciones_cuanticas` 
-**Status:** Research note — not peer reviewed 
+**Author:** Jesús Morales Souhail  
+**Date:** July 2026  
+**ORCID:** 0009-0000-7637-1818  
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
+**Companion numerics:** open quantum simulations (`QuTiP`), project `simulaciones_cuanticas`  
+**Status:** Research note — not peer reviewed  
 **Type:** Self-contained synthesis note (~paper-length)
 
 ---
 
 ## Abstract
 
-We present a self-contained research note that closes the loop between (i) a controlled open-quantum-system simulation of **squeezed-state desqueezing** under a thermal Lindblad bath and (ii) the phenomenological **Ornstein–Uhlenbeck (OU)** description of late-time vacuum fluctuations used in our DESI DR2 stochastic dark-energy analysis. The laboratory sector yields a clean half-life for the anomalous correlator,
+I present a self-contained research note that closes the loop between (i) a controlled open-quantum-system simulation of **squeezed-state desqueezing** under a thermal Lindblad bath and (ii) the phenomenological **Ornstein–Uhlenbeck (OU)** description of late-time vacuum fluctuations used in my DESI DR2 stochastic dark-energy analysis. The laboratory sector yields a clean half-life for the anomalous correlator,
 
 
 $$
@@ -28,7 +28,7 @@ $$
 $$
 
 
-so that at the present epoch \(\gamma\leftrightarrow\theta H_0\). Using **only** amplitudes and limits already fixed in the stochastic-dark-energy-ou corpus — in particular the Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) and the DESI bound \(\sigma_X<1.5\times 10^{-4}\) (95% CL) — we show that pure Poisson vacuum noise remains unobservable at BAO precision. Euclid DR1 can probe **emergent** vacuum smoothness only if an effective kick amplitude \(A_0\gtrsim 10^{-5}\) arises after amplification or from non-Sorkin sources. We discuss implications for volume-preserving diffeomorphisms (SDiff) as a fundamental versus emergent symmetry, and we state explicitly what the null result does and does not constrain.
+so that at the present epoch \(\gamma\leftrightarrow\theta H_0\). Using **only** amplitudes and limits already fixed in the stochastic-dark-energy-ou corpus — in particular the Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) and the DESI bound \(\sigma_X<1.5\times 10^{-4}\) (95% CL) — I show that pure Poisson vacuum noise remains unobservable at BAO precision. Euclid DR1 can probe **emergent** vacuum smoothness only if an effective kick amplitude \(A_0\gtrsim 10^{-5}\) arises after amplification or from non-Sorkin sources. I discuss implications for volume-preserving diffeomorphisms (SDiff) as a fundamental versus emergent symmetry, and I state explicitly what the null result does and does not constrain.
 
 ---
 
@@ -36,7 +36,7 @@ so that at the present epoch \(\gamma\leftrightarrow\theta H_0\). Using **only**
 
 ### 1.1 The observational fact
 
-Public DESI DR2 baryon acoustic oscillation (BAO) measurements, analysed within an OU / quasi-normal-mode (QNM) covariance framework, drive the amplitude of stationary stochastic fluctuations of the dark-energy density to the numerical floor. The working 95% confidence upper limit is
+Public DESI DR2 baryon acoustic oscillation (BAO) measurements, analysed within an OU / quasi-normal-mode (QNM) covariance framework, drive the amplitude of stationary stochastic fluctuations of the dark-energy density to the numerical floor. My working 95% confidence upper limit is
 
 
 $$
@@ -73,7 +73,7 @@ The bare UV seed is the repository value \(\sigma_0\sim 10^{-61}\).
 
 ### 2.1 Model
 
-We consider a single damped harmonic oscillator in the Markovian thermal Lindblad equation
+I consider a single damped harmonic oscillator in the Markovian thermal Lindblad equation
 
 
 $$
@@ -109,7 +109,7 @@ $$
 
 ### 2.2 Observables
 
-We track:
+I track:
 
 - mean occupation \(\langle n\rangle=\langle a^\dagger a\rangle\);
 - position variance \(\mathrm{Var}(q)\) with \(q=(a+a^\dagger)/\sqrt{2}\);
@@ -151,7 +151,7 @@ $$
 
 ### 3.1 Axioms (compressed)
 
-From the main OU analysis:
+From my main OU analysis:
 
 - **A1 (finite information):** the observable universe has effective Hilbert-space dimension set by the Bekenstein–Hawking scale, \(N\sim 10^{122}\).
 - **A2 (Sorkin seed):** discreteness induces Poisson fluctuations \(\delta\Lambda\sim 1/\sqrt{N}\), i.e.
@@ -413,7 +413,7 @@ Upstream, it supplies a dynamical language — relaxation time, bath rate, resid
 
 1. **Single-mode Markovian bath.** Cosmological “baths” need not be Lindblad; non-Markovian or expansion-driven noise may modify the \(\ln 2/\gamma\) law.
 2. **Dictionary, not derivation.** \(\gamma\leftrightarrow\theta H\) is a dimensional and structural identification, not a microscopic quantum-gravity derivation of \(\theta\).
-3. **Background degeneracy.** As emphasised in the OU papers, \(\sigma_X\) and smooth \(\{w_0,w_a\}\) remain partially degenerate with few BAO bins.
+3. **Background degeneracy.** As I emphasise in the OU papers, \(\sigma_X\) and smooth \(\{w_0,w_a\}\) remain partially degenerate with few BAO bins.
 4. **No claim of detection.** All cosmological statements are upper limits or forecasts.
 
 ---
@@ -433,23 +433,23 @@ The synthesis is therefore both constructive and restrictive: finite desqueezing
 
 ## Acknowledgements
 
-The DESI collaboration is thanked for public BAO data products. Numerical simulations use QuTiP. This note consolidates results from the stochastic dark energy and vacuum-smoothness research programme.
+I thank the DESI collaboration for public BAO data products. Numerical simulations use QuTiP. This note consolidates results from my stochastic dark energy and vacuum-smoothness research programme.
 
 ---
 
 ## References
 
-[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations,” (2026). 
-[2] Morales Souhail, J., “Principle of Late-Time Vacuum Homogeneity,” (2026). 
-[3] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” (2026). 
-[4] Morales Souhail, J., “The Smoothness of the Vacuum as a Geometric Necessity,” (2026). 
-[5] Morales Souhail, J., “Quantum Fluid Instabilities and DESI DR2,” (2026). 
-[6] DESI Collaboration, “DESI DR2 Results II,” arXiv:2503.14738 (2025). 
-[7] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973). 
-[8] Sorkin, R. D., arXiv:gr-qc/0503057 (2005). 
-[9] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930). 
-[10] Johansson, J. R., Nation, P. D. & Nori, F., Comp. Phys. Comm. 183, 1760 (2012); 184, 1234 (2013). 
-[11] Walls, D. F. & Milburn, G. J., *Quantum Optics*, Springer. 
+[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations,” (2026).  
+[2] Morales Souhail, J., “Principle of Late-Time Vacuum Homogeneity,” (2026).  
+[3] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” (2026).  
+[4] Morales Souhail, J., “The Smoothness of the Vacuum as a Geometric Necessity,” (2026).  
+[5] Morales Souhail, J., “Quantum Fluid Instabilities and DESI DR2,” (2026).  
+[6] DESI Collaboration, “DESI DR2 Results II,” arXiv:2503.14738 (2025).  
+[7] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).  
+[8] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).  
+[9] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).  
+[10] Johansson, J. R., Nation, P. D. & Nori, F., Comp. Phys. Comm. 183, 1760 (2012); 184, 1234 (2013).  
+[11] Walls, D. F. & Milburn, G. J., *Quantum Optics*, Springer.  
 [12] Breuer, H.-P. & Petruccione, F., *The Theory of Open Quantum Systems*, Oxford.
 
 ---
@@ -471,7 +471,14 @@ The DESI collaboration is thanked for public BAO data products. Numerical simula
 
 
 $$
-H_0&=67.4\ \mathrm{km s^{-1} Mpc^{-1}}, t_{H_0}&\simeq 14.51\ \mathrm{Gyr}, \Omega_m&=0.315, \Delta x_{\rm DESI}&=0.94, N&\sim 10^{122}, \sigma_0&\sim 10^{-61}, \sigma_X^{\rm DESI}&<1.5\times 10^{-4}, \sigma_X^{\rm Euclid\ target}&\sim 10^{-5}.
+H_0=67.4\ \mathrm{km s^{-1} Mpc^{-1}},\quad
+t_{H_0}\simeq 14.51\ \mathrm{Gyr},\quad
+\Omega_m=0.315,\quad
+\Delta x_{\rm DESI}=0.94,\quad
+N\sim 10^{122},\quad
+\sigma_0\sim 10^{-61},\quad
+\sigma_X^{\rm DESI}<1.5\times 10^{-4},\quad
+\sigma_X^{\rm Euclid\ target}\sim 10^{-5}.
 $$
 
 

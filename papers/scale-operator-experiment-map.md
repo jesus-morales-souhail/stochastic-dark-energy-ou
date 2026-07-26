@@ -1,15 +1,22 @@
 # Scale / operator map: closed results and correct next experiments
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**Status:** Experimental logic map (closes the car–drone–pupil result; points to correct probes) 
-**Related:** 
-`papers/car-drone-pupil-newton-einstein.md`, 
-`scripts/car_drone_pupil_newton_einstein.py`, 
-`papers/anisotropic-slip-option0.md`, 
-`papers/self-shielding-vs-untestability.md`, 
-`papers/no-go-superoscillation-tesseract.md`, 
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
+**Date:** July 2026  
+**Status:** Experimental logic map (hygiene / pedagogy). Closes the car–drone–pupil result; points to correct probes. **Not a DESI claim by itself** — the table cites pipeline status only for orientation. Not peer reviewed.  
+**Related:**  
+`papers/car-drone-pupil-newton-einstein.md`,  
+`scripts/car_drone_pupil_newton_einstein.py`,  
+`papers/anisotropic-slip-option0.md`,  
+`papers/self-shielding-vs-untestability.md`,  
+`papers/no-go-superoscillation-tesseract.md`,  
+`papers/EXPLORATORY_BOUNDARY.md`,  
 `papers/resume.txt`
+
+---
+
+## What this note is
+
+I use this map so I do not waste effort on wrong-scale or wrong-operator experiments. The car–drone–pupil and optics branches here are **pedagogy**. Cosmology rows point to the main pipeline; this document itself is **not** a DESI discovery paper.
 
 ---
 
@@ -17,7 +24,7 @@
 
 A measurement is only informative if **both** are right:
 
-1. **Scale** — length, time, energy, redshift range where the effect is \(\mathcal{O}(1)\) or at least above noise. 
+1. **Scale** — length, time, energy, redshift range where the effect is \(\mathcal{O}(1)\) or at least above noise.  
 2. **Operator** — which field / combination of observables couples to the mechanism (e.g. isotropic residual on \(D_V\) vs slip \(\Phi/\Psi\) vs free-photon travel time).
 
 Wrong scale **or** wrong operator ⇒ null result that **does not** falsify the deep premise; it only falsifies “this effect is large here.”
@@ -42,7 +49,8 @@ Wrong scale **or** wrong operator ⇒ null result that **does not** falsify the 
 | Does co-moving motion create a “hypercube projection” of the diffraction pattern? | **No** (wrong **operator** / non-derived geometry) |
 | What was actually tested? | Local EM diffraction + inertial SR at \(\beta\sim 10^{-7}\) |
 
-**Status: CLOSED.** Documented in `car-drone-pupil-newton-einstein.md` and the runnable script.
+**Status: CLOSED.** Documented in `car-drone-pupil-newton-einstein.md` and the runnable script.  
+**Not a DESI result.**
 
 **One-line moral:** local EM + inertial physics **shield** the experiment from cosmology — same *kind* of “wrong question” as asking BAO for unamplified Planck-scale isotropic noise.
 
@@ -82,14 +90,14 @@ Wrong scale **or** wrong operator ⇒ null result that **does not** falsify the 
 
 ---
 
-## 3. Ordered programme (what to do next)
+## 3. Ordered programme (what I do next)
 
 ### Already closed
-1. Car–drone–pupil @ 120 km/h → **wrong scale / wrong operator** for expansion and for “4D diffraction.” 
-2. Superoscillation energy tax demo → Born peaje real. 
-3. Tesseract optical claim → no-go (undeclared power). 
-4. DESI BAO OU residual → \(\sigma_X\) upper limit; no detection. 
-5. Tachyonic coherent growth → excluded with correct covariance. 
+1. Car–drone–pupil @ 120 km/h → **wrong scale / wrong operator** for expansion and for “4D diffraction.”  
+2. Superoscillation energy tax demo → Born peaje real.  
+3. Tesseract optical claim → no-go (undeclared power).  
+4. DESI BAO OU residual → \(\sigma_X\) upper limit; no detection.  
+5. Tachyonic coherent growth → excluded with correct covariance.  
 6. Option 0 slip → Maus et al. definition verified; amplitude still kills easy detection.
 
 ### Next experiments (correct scale + operator)
@@ -124,4 +132,4 @@ python scripts/superoscillation_energy_cost_demo.py
 
 ---
 
-*End of map. Car–drone–pupil: CLOSED as wrong scale/operator. Next work: correct scales and operators only.*
+*End of map. Car–drone–pupil: CLOSED as wrong scale/operator. Next work: correct scales and operators only. This note is not a DESI claim.*

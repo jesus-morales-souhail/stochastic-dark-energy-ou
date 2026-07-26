@@ -1,9 +1,8 @@
 # Data pack (internet): scale/operator probes for Option 0 and closed tests
 
-**Compiled:** July 2026 
-**Purpose:** Citable external numbers + repo numbers for 
-`scale-operator-experiment-map.md` and `anisotropic-slip-option0.md`. 
-**Rule:** every row has arXiv / DOI where possible; definitions stated.
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+
+I compiled this pack so that `scale-operator-experiment-map.md` and `anisotropic-slip-option0.md` have citable external numbers next to the repository numbers. Every row has an arXiv or DOI where I could find one, and I state the definition I am using.
 
 ---
 
@@ -17,14 +16,14 @@
 | Motivational seed | \(\sigma_0\sim 10^{-61}\sim 1/\sqrt{N}\), \(N\sim 10^{122}\) | Bekenstein–Hawking / Sorkin (motivational, not a detection) |
 | BAO public data used | DESI DR2 summary stats | arXiv:[2503.14738](https://arxiv.org/abs/2503.14738) |
 
-**Operator in repo:** residual kernel on BAO distances \(D_V,D_M,D_H\). 
+**Operator in repo:** residual kernel on BAO distances \(D_V,D_M,D_H\).  
 **Not in repo:** \(\Phi,\Psi,\eta\), CLASS/CAMB.
 
 ---
 
 ## B) Gravitational slip (correct operator for the “gap”)
 
-### B1. Maus et al. (DESI DR1 × CMB lensing) — **verified primary**
+### B1. Maus et al. (DESI DR1 × CMB lensing) — verified primary
 
 | Field | Value |
 |-------|--------|
@@ -36,7 +35,7 @@
 | Data | DESI DR1 BGS+LRG full-shape + recon; Planck PR4 + ACT DR6 κ; photometric Legacy LRGs |
 | Headline structure | \(\sigma_8=0.803\pm 0.017\), \(\Omega_m=0.3037\pm 0.0069\), \(S_8=0.808\pm 0.017\) |
 
-**Do not confuse with** growth index \(f=\Omega_m^\gamma\) (GR \(\gamma\simeq 0.55\)).
+I do not confuse this with the growth index \(f=\Omega_m^\gamma\) (GR \(\gamma\simeq 0.55\)).
 
 ### B2. Forecast anisotropic stress \(\eta\) (Euclid-like + DESI-like)
 
@@ -47,7 +46,7 @@
 | Definition | Effective anisotropic stress / slip \(\eta\) (model-independent observables from clustering + lensing) |
 | Forecast (Euclid-like photo ± DESI-like spectro) | \(\eta\) constant: **~5%**; \(z\)-only: **&lt;10%** average; free \(z,k\): **at least ~30%** |
 
-Classic earlier forecast (Amendola et al.): arXiv:[1311.4765](https://arxiv.org/abs/1311.4765).
+Earlier forecast I keep on the list: Amendola et al., arXiv:[1311.4765](https://arxiv.org/abs/1311.4765).
 
 ---
 
@@ -61,7 +60,7 @@ Classic earlier forecast (Amendola et al.): arXiv:[1311.4765](https://arxiv.org/
 | DESI alone (example from 2411.12022 abstract) | \(\mu_0 = 0.11^{+0.45}_{-0.54}\) (consistent with GR zero) |
 | DESI + CMB + DESY3 | \(\mu_0 = 0.04 \pm 0.22\), \(\Sigma_0 = 0.044 \pm 0.047\) (GR-compatible) |
 
-**Note:** These are **not** the same symbol as Maus slip \(\gamma=\Phi/\Psi\), but they are **correct-scale** structure-growth / MG operators (RSD + lensing), unlike pupil diffraction.
+These are not the same symbol as Maus slip \(\gamma=\Phi/\Psi\), but they are the right scale of structure-growth / MG operators (RSD + lensing), unlike pupil diffraction.
 
 ---
 
@@ -75,7 +74,7 @@ Classic earlier forecast (Amendola et al.): arXiv:[1311.4765](https://arxiv.org/
 | ΛCDM | BAO consistent with smooth distance–redshift; mild tension with CMB parameters (~2.3σ class) |
 | \(w_0 w_a\) | Preference for evolving DE in combinations with CMB ± SN (significance sample-dependent, often ~3σ class) |
 
-This is the **correct scale+operator family** for \(\sigma_X\) residual tests on distances — already used in-repo.
+This is the correct scale+operator family for \(\sigma_X\) residual tests on distances — already used in this repository.
 
 ---
 
@@ -93,7 +92,7 @@ Using \(\sigma_X \sim 10^{-4}\), \(\Omega_{\mathrm{DE}}/\Omega_m\sim 2\), \(f=1\
 | Sakr et al. forecast (const \(\eta\)) | \(\sim 5\% = 0.05\) | ~250× larger |
 | Sakr free \(z,k\) | \(\gtrsim 30\%\) | still ≫ |
 
-**Conclusion (unchanged):** internet data **confirm** Option 0: correct operator exists and is measured/forecast; **amplitude** still requires amplification for a detection story.
+**Conclusion (unchanged):** the external literature confirms Option 0. The correct operator exists and is measured or forecast; the amplitude still requires amplification before a detection story makes sense.
 
 ---
 
@@ -110,11 +109,11 @@ Using \(\sigma_X \sim 10^{-4}\), \(\Omega_{\mathrm{DE}}/\Omega_m\sim 2\), \(f=1\
 
 ## G) Reading / download checklist
 
-- [x] Maus et al. 2505.20656 — slip definition + number 
-- [x] Sakr et al. 2501.07477 — \(\eta\) forecasts 
-- [x] DESI full-shape MG 2411.12026 / 2411.12022 — \(\mu_0,\Sigma_0\) 
-- [x] DESI DR2 BAO 2503.14738 — background distances 
-- [ ] Full PDF of any “Dark Energy After DESI DR2” review if you want a single secondary survey (optional) 
+- [x] Maus et al. 2505.20656 — slip definition + number  
+- [x] Sakr et al. 2501.07477 — \(\eta\) forecasts  
+- [x] DESI full-shape MG 2411.12026 / 2411.12022 — \(\mu_0,\Sigma_0\)  
+- [x] DESI DR2 BAO 2503.14738 — background distances  
+- [ ] Full PDF of any “Dark Energy After DESI DR2” review if I want a single secondary survey (optional)  
 - [ ] Plaza et al. unimodular + DESI (pipeline craft only)
 
 ---
@@ -132,4 +131,4 @@ Using \(\sigma_X \sim 10^{-4}\), \(\Omega_{\mathrm{DE}}/\Omega_m\sim 2\), \(f=1\
 
 ---
 
-*Data pack only. No Boltzmann run. Definitions mandatory when citing.*
+Data pack only. No Boltzmann run. Definitions are mandatory when I cite a number.

@@ -1,17 +1,17 @@
 # The Smoothness of the Vacuum as a Geometric Necessity: Unimodular Gravity and the Null Result of DESI DR2
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**ORCID:** 0009-0000-7637-1818 
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/ 
-**Status:** Preprint — not peer reviewed 
+**Author:** Jesús Morales Souhail  
+**Date:** July 2026  
+**ORCID:** 0009-0000-7637-1818  
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/  
+**Status:** Preprint — not peer reviewed  
 **Type:** Theoretical synthesis
 
 ---
 
 ## Abstract
 
-Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: $\sigma_X < 1.5 \times 10^{-4}$ (95% CL) [1]. This empirical fact forces a logical dichotomy: the dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. We then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? We examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. We show that the cosmological constant emerges as a global integration constant,
+Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: \(\sigma_X < 1.5 \times 10^{-4}\) (95% CL) [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation \(V(x) g_{\mu\nu}\) identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
 
 
 $$
@@ -19,17 +19,17 @@ $$
 $$
 
 
-which is a consistency condition, not a predictive equation. The value of $\Lambda$ remains a free global parameter, but its fluctuations are rigorously zero. We conclude that the observed smoothness of the vacuum is not an accident; it is a geometric necessity that singles out unimodular gravity as the only known structure compatible with the data. Future surveys, such as Euclid DR1, will provide the decisive test.
+which is a consistency condition, not a predictive equation. The value of \(\Lambda\) remains a free global parameter, but its fluctuations are rigorously zero. I conclude that the observed smoothness of the vacuum is not an accident; it is a geometric necessity that singles out unimodular gravity as the only known structure compatible with the data. Future surveys, such as Euclid DR1, will provide the decisive test.
 
 ---
 
 ## 1. Introduction
 
-The $\Lambda$CDM model has been the standard framework of cosmology for decades. Its central feature — a cosmological constant with no dynamics and no fluctuations — has always been treated as a phenomenological placeholder, waiting to be explained by a more fundamental theory. The expectation has been that quantum gravity would eventually provide a dynamical origin for $\Lambda$ and perhaps even predict small, observable fluctuations.
+The \(\Lambda\)CDM model has been the standard framework of cosmology for decades. Its central feature — a cosmological constant with no dynamics and no fluctuations — has always been treated as a phenomenological placeholder, waiting for a more fundamental theory. The usual expectation has been that quantum gravity would eventually give \(\Lambda\) a dynamical origin and perhaps even predict small, observable fluctuations.
 
 That expectation has not been fulfilled.
 
-The DESI DR2 BAO data, when analysed within a phenomenological Ornstein-Uhlenbeck (OU) framework, show no evidence for stochastic fluctuations [1]. The Maximum Likelihood Estimation drives the amplitude to zero:
+When I analyse the DESI DR2 BAO data within a phenomenological Ornstein–Uhlenbeck (OU) framework, I find no evidence for stochastic fluctuations [1]. Maximum Likelihood Estimation drives the amplitude to zero:
 
 
 $$
@@ -37,7 +37,7 @@ $$
 $$
 
 
-establishing a conservative upper limit:
+and establishes a conservative upper limit:
 
 
 $$
@@ -47,7 +47,7 @@ $$
 
 **(95% CL).**
 
-Moreover, a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — is excluded with high significance [2]:
+I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
 $$
@@ -55,15 +55,15 @@ $$
 $$
 
 
-meaning that the data reject a coherent growing-mode scenario entirely.
+so the data reject a coherent growing-mode scenario entirely.
 
-These results are not a "non-discovery." They are a structural constraint on the space of possible theories. In this paper, we take this empirical limit and trace its logical consequences to their ultimate conclusion: the choice of the fundamental symmetry that protects the vacuum from local quantum fluctuations. We show that unimodular gravity — the theory whose gauge group is the group of volume-preserving diffeomorphisms (SDiff) — is the only known structure that can guarantee $\sigma_X = 0$ in a mathematically consistent way.
+I do not read these results as a mere “non-discovery.” They are a structural constraint on the space of possible theories. In this paper I take the empirical limit and follow its logical consequences to the end: the choice of fundamental symmetry that protects the vacuum from local quantum fluctuations. I show that unimodular gravity — the theory whose gauge group is the group of volume-preserving diffeomorphisms (SDiff) — is the only known structure that can guarantee \(\sigma_X = 0\) in a mathematically consistent way.
 
 ---
 
 ## 2. The Observational Constraint
 
-We define the fractional fluctuation of the dark-energy density as:
+I define the fractional fluctuation of the dark-energy density as:
 
 
 $$
@@ -71,7 +71,7 @@ X(x) \equiv \frac{\delta\rho_\Lambda(x)}{\bar{\rho}_\Lambda},
 $$
 
 
-with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
+with variance \(\sigma_X^2 \equiv \langle X^2 \rangle\). The DESI DR2 BAO data, combined with the sensitivity kernel \(S(z) = \partial \ln D_V / \partial \Omega_\Lambda\), yield [1]:
 
 
 $$
@@ -81,15 +81,15 @@ $$
 
 **(95% CL).**
 
-This is a direct, empirical statement: the dark-energy density is homogeneous to better than one part in ten thousand across the observable universe.
+This is a direct empirical statement: the dark-energy density is homogeneous to better than one part in ten thousand across the observable universe.
 
 ---
 
 ## 3. The Logical Dichotomy
 
-Under the classical theory of fields and Einstein's equations, only two structures can account for this level of homogeneity:
+Under the classical theory of fields and Einstein’s equations, only two structures can account for this level of homogeneity.
 
-### 3.1 Static geometry: $\Lambda$ as an integration constant
+### 3.1 Static geometry: \(\Lambda\) as an integration constant
 
 If dark energy is a pure cosmological constant, its energy-momentum tensor is
 
@@ -99,7 +99,7 @@ T_{\mu\nu} = -\Lambda g_{\mu\nu}.
 $$
 
 
-By the Bianchi identity, $\nabla_\mu T^{\mu\nu} = 0$ implies $\partial_\mu \Lambda = 0$. There are no local degrees of freedom. Consequently,
+By the Bianchi identity, \(\nabla_\mu T^{\mu\nu} = 0\) implies \(\partial_\mu \Lambda = 0\). There are no local degrees of freedom. Consequently,
 
 
 $$
@@ -109,7 +109,7 @@ $$
 
 ### 3.2 A dynamical field frozen by Hubble friction
 
-If dark energy is a scalar field $\phi$ with energy density
+If dark energy is a scalar field \(\phi\) with energy density
 
 
 $$
@@ -117,7 +117,7 @@ $$
 $$
 
 
-then small fluctuations $\delta\phi$ obey the wave equation in an expanding universe:
+then small fluctuations \(\delta\phi\) obey the wave equation in an expanding universe:
 
 
 $$
@@ -125,7 +125,7 @@ $$
 $$
 
 
-If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3H \delta\dot{\phi}$ forces the mode into the "frozen" regime, effectively erasing inhomogeneities. The limits derived in [1] give:
+If \(m_\phi \ll H_0\) (where \(H_0 \sim 10^{-33}\ \text{eV}\)), the friction term \(3H \delta\dot{\phi}\) forces the mode into the “frozen” regime and effectively erases inhomogeneities. The limits I derived in [1] give:
 
 
 $$
@@ -133,17 +133,17 @@ m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left|\frac{V'}{V}\right| M_{\mathrm{
 $$
 
 
-In this regime, the field is observationally indistinguishable from a cosmological constant. Both alternatives lead to the same phenomenological outcome: $\sigma_X$ is zero or below detection.
+In this regime the field is observationally indistinguishable from a cosmological constant. Both alternatives lead to the same phenomenological outcome: \(\sigma_X\) is zero or below detection.
 
 ---
 
 ## 4. The Two Symmetry Candidates
 
-To distinguish which of the two alternatives is more fundamental, we must ask: what symmetry of nature prohibits local quantum fluctuations of matter from coupling to the cosmic volume element? Two candidates have been proposed.
+To decide which of the two alternatives is more fundamental, I ask: what symmetry of nature prohibits local quantum fluctuations of matter from coupling to the cosmic volume element? Two candidates have been proposed.
 
 ### 4.1 Candidate A: Conformal (Weyl) invariance
 
-Weyl invariance requires the action to be invariant under local rescalings of the metric: $g_{\mu\nu}(x) \to \Omega^2(x) g_{\mu\nu}(x)$. Classically, this forces the trace of the energy-momentum tensor to vanish: $T^{\mu}{}_{\mu} = 0$.
+Weyl invariance requires the action to be invariant under local rescalings of the metric: \(g_{\mu\nu}(x) \to \Omega^2(x) g_{\mu\nu}(x)\). Classically this forces the trace of the energy-momentum tensor to vanish: \(T^{\mu}{}_{\mu} = 0\).
 
 **Problem:** At the quantum level, Weyl invariance is broken by the conformal anomaly:
 
@@ -153,11 +153,11 @@ $$
 $$
 
 
-Since the local curvature $R(x)$ varies in space and time due to structure formation, the anomaly reintroduces local vacuum fluctuations. Thus, Weyl invariance cannot guarantee $\sigma_X = 0$ in a universe with matter.
+Since the local curvature \(R(x)\) varies in space and time because of structure formation, the anomaly reintroduces local vacuum fluctuations. Weyl invariance therefore cannot guarantee \(\sigma_X = 0\) in a universe with matter.
 
 ### 4.2 Candidate B: Volume-preserving diffeomorphisms (SDiff)
 
-In unimodular gravity, the gauge group is reduced from the full diffeomorphism group $\mathrm{Diff}(M)$ to the subgroup that preserves the four-volume element:
+In unimodular gravity the gauge group is reduced from the full diffeomorphism group \(\mathrm{Diff}(M)\) to the subgroup that preserves the four-volume element:
 
 
 $$
@@ -165,7 +165,7 @@ $$
 $$
 
 
-The resulting field equation is the trace-free part of Einstein's equation:
+The resulting field equation is the trace-free part of Einstein’s equation:
 
 
 $$
@@ -173,7 +173,7 @@ R_{\mu\nu} - \frac{1}{4} R g_{\mu\nu} = 8\pi G \left(T_{\mu\nu} - \frac{1}{4} T^
 $$
 
 
-Now, any local vacuum fluctuation of matter has the form
+Any local vacuum fluctuation of matter has the form
 
 
 $$
@@ -181,7 +181,7 @@ T_{\mu\nu}^{\mathrm{vac}}(x) = V(x) g_{\mu\nu}.
 $$
 
 
-Substituting this into the trace-free equation:
+Substituting into the trace-free equation:
 
 
 $$
@@ -189,13 +189,13 @@ V(x) g_{\mu\nu} - \frac{1}{4}(4V(x)) g_{\mu\nu} = 0 \quad \text{identically}.
 $$
 
 
-**Conclusion:** In unimodular gravity, the trace-free projection cancels any local vacuum fluctuation, regardless of its magnitude or inhomogeneity. This is a purely algebraic cancellation, independent of the details of the quantum fields.
+**Conclusion:** In unimodular gravity the trace-free projection cancels any local vacuum fluctuation, regardless of its magnitude or inhomogeneity. This is a purely algebraic cancellation, independent of the details of the quantum fields.
 
 ---
 
 ## 5. The Cosmological Constant as a Global Integration Constant
 
-To understand how $\Lambda$ emerges in unimodular gravity, we take the divergence of the trace-free field equation. Using the Bianchi identity and the local conservation of energy-momentum, one obtains:
+To see how \(\Lambda\) emerges in unimodular gravity, I take the divergence of the trace-free field equation. Using the Bianchi identity and local conservation of energy-momentum, one obtains:
 
 
 $$
@@ -203,7 +203,7 @@ $$
 $$
 
 
-This implies that $R + 8\pi G T^{\lambda}{}_{\lambda}$ is a constant throughout spacetime:
+This implies that \(R + 8\pi G T^{\lambda}{}_{\lambda}\) is a constant throughout spacetime:
 
 
 $$
@@ -211,7 +211,7 @@ R + 8\pi G T^{\lambda}{}_{\lambda} = 4\Lambda,
 $$
 
 
-where $\Lambda$ is a global integration constant. Substituting this back into the trace-free equation recovers the standard Einstein equations:
+where \(\Lambda\) is a global integration constant. Substituting this back into the trace-free equation recovers the standard Einstein equations:
 
 
 $$
@@ -219,7 +219,7 @@ G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G T_{\mu\nu}.
 $$
 
 
-The value of $\Lambda$ is given by the global average:
+The value of \(\Lambda\) is given by the global average:
 
 
 $$
@@ -227,31 +227,31 @@ $$
 $$
 
 
-where $V_4 = \int d^4x \sqrt{-g}$ is the total four-volume of spacetime.
+where \(V_4 = \int d^4x \sqrt{-g}\) is the total four-volume of spacetime.
 
-It is worth emphasizing the precise scope of this result. The unimodular structure ensures that local vacuum energy contributions of the form \(T_{\mu\nu} \propto g_{\mu\nu}\) are projected out by the trace-free Einstein equations. This provides a natural mechanism for suppressing inhomogeneous fluctuations in the vacuum energy density. 
+I want to be careful about the precise scope of this result. The unimodular structure ensures that local vacuum energy contributions of the form \(T_{\mu\nu} \propto g_{\mu\nu}\) are projected out by the trace-free Einstein equations. That gives a natural mechanism for suppressing inhomogeneous fluctuations in the vacuum energy density.
 
-However, this protection does not extend to the homogeneous background evolution. A time-dependent dark energy component with equation of state \(w(z) \neq -1\) remains compatible with unimodular gravity, as long as fluctuations around this background are sufficiently suppressed. In this sense, unimodular gravity constrains the *fluctuations* of the vacuum but does not, by itself, require the background energy density to be strictly constant. For a more detailed discussion on this distinction, see `sdiff-fundamental-vs-emergent.md`
+This protection does not, however, extend to the homogeneous background evolution. A time-dependent dark energy component with equation of state \(w(z) \neq -1\) remains compatible with unimodular gravity, as long as fluctuations around that background are sufficiently suppressed. In this sense unimodular gravity constrains the *fluctuations* of the vacuum but does not, by itself, require the background energy density to be strictly constant. I discuss this distinction in more detail in `sdiff-fundamental-vs-emergent.md`.
 
 ---
 
 ## 6. The Meaning of the Equation: A Constraint, Not a Prediction
 
-The equation above is not a predictive equation. It is a consistency condition — a global constraint that the universe must satisfy. If we attempted to use it to calculate $\Lambda$ deductively, we would fall into a circular argument:
+The equation above is not a predictive equation. It is a consistency condition — a global constraint that the universe must satisfy. If one tried to use it to calculate \(\Lambda\) deductively, one would fall into a circular argument:
 
-1. To compute $V_4$ and the integral of $R$, we need to know the global metric $g_{\mu\nu}$.
-2. To know $g_{\mu\nu}$, we must solve the Einstein equations.
-3. To solve the Einstein equations, we need to know $\Lambda$ in advance.
+1. To compute \(V_4\) and the integral of \(R\), one needs the global metric \(g_{\mu\nu}\).
+2. To know \(g_{\mu\nu}\), one must solve the Einstein equations.
+3. To solve the Einstein equations, one needs \(\Lambda\) in advance.
 
-Thus, the equation does not determine the numerical value of $\Lambda$. It only tells us that, whatever its value, it is a global constant — fixed by the initial or boundary conditions of the universe — and that local fluctuations of matter cannot affect it.
+So the equation does not determine the numerical value of \(\Lambda\). It only tells us that, whatever its value, it is a global constant — fixed by the initial or boundary conditions of the universe — and that local fluctuations of matter cannot affect it.
 
-The smallness of $\Lambda$ ($\sim 10^{-122}$ in Planck units) is not a fine-tuning problem in this framework. It is a consequence of the vastness of the universe: the denominator $V_4$ is enormous, so the average of any finite quantity over it tends to zero. The discrepancy between the quantum prediction and the observed value is not an inconsistency; it is the signature that the quantum fluctuations are local, while $\Lambda$ is global.
+The smallness of \(\Lambda\) (\(\sim 10^{-122}\) in Planck units) is not a fine-tuning problem in this framework. It is a consequence of the vastness of the universe: the denominator \(V_4\) is enormous, so the average of any finite quantity over it tends to zero. The discrepancy between the quantum prediction and the observed value is not an inconsistency; it is the signature that the quantum fluctuations are local, while \(\Lambda\) is global.
 
 ---
 
-## 7. The Cancellation of Local Vacuum Fluctuations ($\sigma_X = 0$)
+## 7. The Cancellation of Local Vacuum Fluctuations (\(\sigma_X = 0\))
 
-The reason unimodular gravity is the natural candidate to explain the extreme homogeneity of the universe lies in the algebraic structure of its matter source. If we model local quantum vacuum fluctuations as a stochastic contribution of the form
+The reason I take unimodular gravity as the natural candidate for the extreme homogeneity of the universe is the algebraic structure of its matter source. If I model local quantum vacuum fluctuations as a stochastic contribution of the form
 
 
 $$
@@ -269,7 +269,7 @@ $$
 
 **Consequence:** Any local fluctuation of the quantum vacuum — regardless of its origin, energy scale, or stochastic behaviour — is identically cancelled at the algebraic level before it can curve spacetime. The metric is completely immune to this local quantum noise.
 
-This decouples the macroscopic value of the observed cosmological constant from the catastrophic 120-order-of-magnitude problem of the quantum zero-point energy, fixing the variance of the dark-energy density exactly to:
+This decouples the macroscopic value of the observed cosmological constant from the catastrophic 120-order-of-magnitude problem of the quantum zero-point energy, and fixes the variance of the dark-energy density exactly to:
 
 
 $$
@@ -285,35 +285,35 @@ The hypothesis that unimodular gravity is the true regulatory framework behind c
 
 | Test | Prediction of Unimodular Gravity | What would falsify it |
 |:-----|:--------------------------------|:---------------------|
-| Euclid DR1 BAO (2026) | $\sigma_X = 0$ exactly (within experimental uncertainty) | Any statistically significant deviation ($\sigma_X > 0$) |
+| Euclid DR1 BAO (2026) | \(\sigma_X = 0\) exactly (within experimental uncertainty) | Any statistically significant deviation (\(\sigma_X > 0\)) |
 | Gravitational waves | Only two tensor polarisations (same as GR) | Detection of a scalar polarisation mode |
 | ISW effect | No late-time ISW anomaly from dark-energy clustering | Detection of a residual ISW signal from dark-energy perturbations |
 
-If Euclid DR1 detects any stochastic fluctuation in the dark-energy density above the noise, unimodular gravity would be ruled out. If it confirms the null result (and tightens the limit to $\sigma_X \lesssim 10^{-5}$), the case for unimodular gravity would become compelling.
+If Euclid DR1 detects any stochastic fluctuation in the dark-energy density above the noise, unimodular gravity would be ruled out. If it confirms the null result (and tightens the limit to \(\sigma_X \lesssim 10^{-5}\)), the case for unimodular gravity would become compelling.
 
 ---
 
 ## 9. Conclusion
 
-We have traced the empirical limit $\sigma_X < 1.5 \times 10^{-4}$ to its ultimate logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms $\mathrm{SDiff}(M)$.
+I have traced the empirical limit \(\sigma_X < 1.5 \times 10^{-4}\) to its logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms \(\mathrm{SDiff}(M)\).
 
 This conclusion does not rest on speculative models. It follows from:
 
-- The observational constraint that $\sigma_X$ is below $10^{-4}$.
-- The logical dichotomy that only a pure constant or a frozen field can satisfy this bound.
-- The mathematical fact that Weyl invariance is broken by the conformal anomaly, while SDiff cancels local vacuum fluctuations identically.
+- the observational constraint that \(\sigma_X\) is below \(10^{-4}\);
+- the logical dichotomy that only a pure constant or a frozen field can satisfy this bound;
+- the mathematical fact that Weyl invariance is broken by the conformal anomaly, while SDiff cancels local vacuum fluctuations identically.
 
-The cosmological constant $\Lambda$ emerges as a global integration constant, fixed by the initial or boundary conditions of the universe. Its numerical value remains a mystery, but its homogeneity is rigorously guaranteed: $\sigma_X = 0$. The equation that defines $\Lambda$ is a consistency condition, not a predictive equation — a constraint that the universe must satisfy, not a formula from which we can derive its value.
+The cosmological constant \(\Lambda\) emerges as a global integration constant, fixed by the initial or boundary conditions of the universe. Its numerical value remains a mystery, but its homogeneity is rigorously guaranteed: \(\sigma_X = 0\). The equation that defines \(\Lambda\) is a consistency condition, not a predictive equation — a constraint that the universe must satisfy, not a formula from which we can derive its value.
 
-We therefore propose that the **Principle of Vacuum Smoothness** — the requirement that $\sigma_X = 0$ exactly — is not an ad-hoc assumption but a necessary condition for any consistent theory of gravity coupled to quantum matter. Unimodular gravity satisfies this principle naturally.
+I therefore propose that the **Principle of Vacuum Smoothness** — the requirement that \(\sigma_X = 0\) exactly — is not an ad-hoc assumption but a necessary condition for any consistent theory of gravity coupled to quantum matter. Unimodular gravity satisfies this principle naturally.
 
-Future surveys, such as Euclid DR1 (expected 2026), may further tighten the limit on $\sigma_X$ or even detect a residual signal. But if the smoothness persists, the theoretical community must take seriously the possibility that the universe is geometrically unimodular at its foundation.
+Future surveys, such as Euclid DR1 (expected 2026), may further tighten the limit on \(\sigma_X\) or even detect a residual signal. If the smoothness persists, I think the theoretical community must take seriously the possibility that the universe is geometrically unimodular at its foundation.
 
 ---
 
 ## Acknowledgements
 
-The author thanks the DESI collaboration for making the DR2 BAO data publicly available.
+I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 ---
 

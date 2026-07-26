@@ -1,10 +1,17 @@
 # Three questions: quantum lens, tesseract→ABCD, and “focal length” in the OU model
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**Status:** Formal mapping with explicit **yes / analogy only / no** 
-**Related:** `no-go-superoscillation-tesseract.md`, `car-drone-pupil-newton-einstein.md`, `stochastic-dark-energy-desi-dr2.md` 
-**Repo θ, σ:** OU kernel \(C(\Delta x)=\sigma_X^2 e^{-\theta|\Delta x|}\); MLE drives \(\sigma_X\to 0\), \(\theta\) poorly constrained near boundary
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
+**Date:** July 2026  
+**Status:** Formal mapping with explicit **yes / analogy only / no** (hygiene / pedagogy). **Not a DESI claim.** Not peer reviewed.  
+**Related:** `no-go-superoscillation-tesseract.md`, `car-drone-pupil-newton-einstein.md`, `stochastic-dark-energy-desi-dr2.md`, `papers/EXPLORATORY_BOUNDARY.md`  
+**Repo \(\theta\), \(\sigma\):** OU kernel \(C(\Delta x)=\sigma_X^2 e^{-\theta|\Delta x|}\); MLE drives \(\sigma_X\to 0\), \(\theta\) poorly constrained near boundary
+
+---
+
+## What this note is
+
+I answer three questions that sit at the boundary of optics and the stochastic DE repo. The goal is **analogy discipline**: what transfers, what does not.  
+This file is method hygiene. It is **not** part of the peer-review abstract of the main manuscript. Please do **not** cite it as a DESI result.
 
 ---
 
@@ -32,7 +39,7 @@ For a **single photon in a pure spatial mode**, the detection probability is
 P(\mathbf{r},s_i)=|\psi(\mathbf{r},s_i)|^2,
 \]
 
-with \(\psi\) the same mode function (Born). So one may write, schematically,
+with \(\psi\) the same mode function (Born). So I may write, schematically,
 
 \[
 P(\mathbf{r},s_i)=\Big|\mathcal{F}\!\left\{\psi_{\mathrm{in}} A \exp\!\Big(i\frac{k}{2} |\mathbf{r}_\perp|^2 \Delta R^{-1}\Big)\right\}\Big|^2
@@ -48,8 +55,8 @@ P(\mathbf{r},s_i)=\Big|\mathcal{F}\!\left\{\psi_{\mathrm{in}} A \exp\!\Big(i\fra
 | Probability concentrates to a point when \(\Delta R^{-1}=0\) | **No.** Focused mode still has finite Airy / diffraction size set by \(A\) and \(\lambda\). |
 | “Perfect phase” forces detection at the geometric image point | **No.** Born uses the full \(|\psi|^2\); side lobes remain. |
 
-**Answer to Q1:** Yes to a **careful** single-photon *mode* statement: 
-**Descartes remains the condition \(\Delta R^{-1}=0\) for quadratic phase cancellation; probability is \(|\psi|^2\) after Fresnel propagation.** 
+**Answer to Q1:** Yes to a **careful** single-photon *mode* statement:  
+**Descartes remains the condition \(\Delta R^{-1}=0\) for quadratic phase cancellation; probability is \(|\psi|^2\) after Fresnel propagation.**  
 No to replacing Descartes with a formula that gives a deterministic sub-diffraction hit for one photon.
 
 ---
@@ -82,23 +89,25 @@ and
 
 **asserts** that:
 
-1. SO(4) / Coxeter \(B_4\) / “8 cubes” define \(\phi_w,d_w,f_w,\gamma_4\); 
-2. those parameters equal a physical 4D geometry of light; 
+1. SO(4) / Coxeter \(B_4\) / “8 cubes” define \(\phi_w,d_w,f_w,\gamma_4\);  
+2. those parameters equal a physical 4D geometry of light;  
 3. this exceeds ordinary SLM + pulse shaping.
 
 None of (1)–(3) is derived from Maxwell + a physical tesseract cavity in the text. A 4D hypercube has 8 cubic cells as a **mathematical boundary**; that does **not** automatically supply eight independent optical channels beyond a 2D phase mask.
 
 A **real** SLM programme would be:
 
-1. Choose a target transfer (e.g. focus \(f\), astigmatism, OAM charge \(\ell\)). 
-2. Compute \(\Phi(x,y)\) from standard Fourier / Fresnel / GS algorithms. 
-3. Measure PSF and \(E_{\mathrm{core}}/E_{\mathrm{total}}\). 
+1. Choose a target transfer (e.g. focus \(f\), astigmatism, OAM charge \(\ell\)).  
+2. Compute \(\Phi(x,y)\) from standard Fourier / Fresnel / GS algorithms.  
+3. Measure PSF and \(E_{\mathrm{core}}/E_{\mathrm{total}}\).  
 
 No \(B_4\) required. OAM \(\propto \ell\phi\) is standard and **not** a tesseract theorem.
 
-**Answer to Q2:** 
-**You implement quadratic (and higher) phases on an SLM as usual.** 
-**You do *not* get a derived “tesseract ABCD” until someone builds Maxwell + device geometry → \(M\).** Until then, treat tesseract language as **undeclared physical power** (same pattern as \(\ln 4 \equiv \omega_R\)).
+Full Maxwell → device derivation: see `papers/maxwell-device-to-M-derivation.md`.
+
+**Answer to Q2:**  
+**I implement quadratic (and higher) phases on an SLM as usual.**  
+**I do *not* get a derived “tesseract ABCD” until someone builds Maxwell + device geometry → \(M\).** Until then, I treat tesseract language as **undeclared physical power** (same pattern as \(\ln 4 \equiv \omega_R\)).
 
 ---
 
@@ -123,7 +132,8 @@ with stationary variance \(\mathrm{Var}(X)=\sigma^2/(2\theta)\) (when \(\theta>0
 
 Physical reading in the paper: \(\theta\) is an **effective mean-reversion / damping rate** (related to Hubble friction \(3H(1+w)\) in the continuity story), **not** a geometric focal length.
 
-Empirically (DESI DR2 BAO residual MLE): \(\sigma_X\to 0\); \(\theta\) is not a well-measured “focus of the cosmos.”
+Empirically (DESI DR2 BAO residual MLE): \(\sigma_X\to 0\); \(\theta\) is not a well-measured “focus of the cosmos.”  
+(That empirical fact belongs to the main pipeline; this *analogy* note is still not a DESI claim.)
 
 ### Honest analogy table (formal, not identity)
 
@@ -134,7 +144,7 @@ Empirically (DESI DR2 BAO residual MLE): \(\sigma_X\to 0\); \(\theta\) is not a 
 | Limit \(\to 0\) | Infinite optical power (formal) | Instant snap to mean (if \(\sigma\) fixed, variance formula singular) |
 | Observable in repo | — | Enters residual **covariance between BAO bins**, not a PSF on the sky |
 
-One may say, **as a metaphor only**:
+I may say, **as a metaphor only**:
 
 \[
 \tau \equiv \frac{1}{\theta}
@@ -143,7 +153,7 @@ One may say, **as a metaphor only**:
 
 in the sense that both are **single parameters controlling how strongly a quadratic (lens) or linear (OU drift) restoring mechanism curves a profile** (phase vs correlation).
 
-One **must not** say:
+I **must not** say:
 
 \[
 f_{\mathrm{cosmo}}\equiv\frac{1}{\theta}
@@ -156,9 +166,9 @@ without a derived map \(\theta \leftrightarrow\) metric curvature / wavefront ra
 
 In open-system notes, \(t_{1/2}=\ln 2/\gamma\) with \(\gamma\leftrightarrow\theta H_0\) is a **relaxation time**, again analogous to a rate, not to an optical \(f\) in metres.
 
-**Answer to Q3:** 
-The closest **repo parameter** to a “restoring strength” is **\(\theta\)** (or \(\tau=1/\theta\)). 
-Call it a **formal analogy** to \(1/f\), not a replacement of Descartes by cosmology.
+**Answer to Q3:**  
+The closest **repo parameter** to a “restoring strength” is **\(\theta\)** (or \(\tau=1/\theta\)).  
+I call it a **formal analogy** to \(1/f\), not a replacement of Descartes by cosmology.
 
 ---
 
@@ -198,4 +208,4 @@ f \longleftrightarrow \frac{1}{\theta}
 
 ---
 
-*End.*
+*End of hygiene note. Not a DESI claim.*

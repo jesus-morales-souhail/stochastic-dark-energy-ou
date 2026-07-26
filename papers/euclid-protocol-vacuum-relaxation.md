@@ -1,17 +1,14 @@
 # Euclid BAO analysis for vacuum smoothness and mean-reversion
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) 
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou 
-**Status:** Preprint note — not peer reviewed 
-**Related notes:** `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamental-vs-emergent.md`, `stochastic-dark-energy-desi-dr2.md`
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+
+Related notes: `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamental-vs-emergent.md`, `stochastic-dark-energy-desi-dr2.md`.
 
 ---
 
 ## Abstract
 
-We set out a Euclid-scale BAO analysis for residual stochastic fluctuations of dark energy, extending the DESI DR2 working limit \(\sigma_X < 1.5\times 10^{-4}\) (95% CL). The fit uses the parameter vector \(\{w_0,w_a,\theta,\sigma_X\}\), with optional \(\omega_R\) for a nested QNM kernel. Path residuals of the form \(\sigma_{\rm res}=A_0 e^{-\theta\Delta x}\) define operational regions (F, E0–E3). For \(\theta\sim\mathcal{O}(1)\), amplitude-based damping can be visible when \(A_0\) exceeds the measurement noise, while lag–shape tests with a Pearson estimator alone are weak unless \(N\) is large or the full OU kernel is used in the likelihood. A BAO-only null does not separate fundamental geometric silence (F) from an emergent but unobservable seed (E0); a residual in \(10^{-5}\lesssim\sigma_X\lesssim 10^{-4}\) would favour E1-type effective physics.
+I set out a Euclid-scale BAO analysis for residual stochastic fluctuations of dark energy, extending the DESI DR2 working limit \(\sigma_X < 1.5\times 10^{-4}\) (95% CL). The fit uses the parameter vector \(\{w_0,w_a,\theta,\sigma_X\}\), with optional \(\omega_R\) for a nested QNM kernel. Path residuals of the form \(\sigma_{\rm res}=A_0 e^{-\theta\Delta x}\) define operational regions (F, E0–E3). For \(\theta\sim\mathcal{O}(1)\), amplitude-based damping can be visible when \(A_0\) exceeds the measurement noise, while lag–shape tests with a Pearson estimator alone are weak unless \(N\) is large or the full OU kernel is used in the likelihood. A BAO-only null does not separate fundamental geometric silence (F) from an emergent but unobservable seed (E0); a residual in \(10^{-5}\lesssim\sigma_X\lesssim 10^{-4}\) would favour E1-type effective physics.
 
 ---
 
@@ -25,7 +22,7 @@ Three layers enter the interpretation:
 | Microscopic seed | Sorkin / Bekenstein–Hawking \(\sigma_0\sim 10^{-61}\) | Always \(\ll\) BAO noise |
 | Effective BAO residual | \(\sigma_{\rm res}=A_0 e^{-\theta\Delta x}\) after the expansion path | What DESI and Euclid constrain |
 
-Euclid therefore constrains the **effective** residual amplitude and, when the data allow, the shape of the OU kernel. It does not measure \(\sigma_0\) directly. A deep null remains compatible with both F and E0.
+Euclid therefore constrains the effective residual amplitude and, when the data allow, the shape of the OU kernel. It does not measure \(\sigma_0\) directly. A deep null remains compatible with both F and E0.
 
 ---
 
@@ -33,11 +30,9 @@ Euclid therefore constrains the **effective** residual amplitude and, when the d
 
 Baseline Euclid BAO-focused model:
 
-
 $$
 \Theta = \{w_0, w_a, \theta, \sigma_X\}.
 $$
-
 
 | Parameter | Role |
 |-----------|------|
@@ -47,26 +42,22 @@ $$
 
 Equivalent reparameterizations (Jacobian handled as usual):
 
-- \(\{\theta, A_0\}\) with \(\sigma_{\rm res}(z)\sim A_0 e^{-\theta\Delta x(z)}\) for a single frozen kick; 
+- \(\{\theta, A_0\}\) with \(\sigma_{\rm res}(z)\sim A_0 e^{-\theta\Delta x(z)}\) for a single frozen kick;  
 - \(\{\Gamma_0, A_0\}\) with \(\Gamma_0=\theta H_0\) at \(z=0\).
 
 Additive kernel as in this repository:
-
 
 $$
 (C_{\rm OU})_{ij}=S(z_i)S(z_j) \sigma_X^{2} e^{-\theta\lvert x_i-x_j\rvert},
 $$
 
-
 plus the survey covariance \(C_{\rm std}\).
 
 Optional nested extension:
 
-
 $$
 \Theta_+ = \{w_0, w_a, \theta, \sigma_X, \omega_R\}
 $$
-
 
 for a damped oscillatory (QNM) kernel. If \(\omega_R\to 0\), the model reduces to pure OU.
 
@@ -94,13 +85,11 @@ A prior peaked at \(\sigma_X\sim 10^{-61}\) is inappropriate: that scale is a UV
 
 Gaussian residual likelihood (as in `scripts/ou_bao_stochastic_test.py`):
 
-
 $$
 -2\ln\mathcal{L} = \mathbf{r}^{\top} C^{-1}\mathbf{r}+\ln\det C+\mathrm{const}, \qquad C=C_{\rm std}+C_{\rm OU}(\theta,\sigma_X).
 $$
 
-
-For Euclid, replace the DESI 7-bin vector by the Euclid BAO vector (\(\gtrsim 20\) bins when available) and recompute \(S(z)\).
+For Euclid, I replace the DESI 7-bin vector by the Euclid BAO vector (\(\gtrsim 20\) bins when available) and recompute \(S(z)\).
 
 | Question | Statistic |
 |----------|-----------|
@@ -109,7 +98,7 @@ For Euclid, replace the DESI 7-bin vector by the Euclid BAO vector (\(\gtrsim 20
 | Mean-reversion | Marginal \(p(\theta\mid\mathrm{data})\) from the full kernel |
 | QNM | Nested OU vs QNM on \(\omega_R\); require \(\omega_R\) away from 0 and \(\theta\) not at the floor |
 
-Detection language is reserved for cases where the Bayes factor (or \(\Delta\mathrm{AIC}\)) and the \(\sigma_X\) posterior both support a non-zero amplitude.
+I reserve detection language for cases where the Bayes factor (or \(\Delta\mathrm{AIC}\)) and the \(\sigma_X\) posterior both support a non-zero amplitude.
 
 ---
 
@@ -135,11 +124,9 @@ Euclid alone cannot split F from E0. A null should be reported as **F \(\cup\) E
 
 If a no-damping model would over-predict the residual and the absolute uncertainty on \(\sigma_X\) is \(s\),
 
-
 $$
 A_0\bigl(1-e^{-\theta\Delta x}\bigr)\gtrsim s \qquad\Rightarrow\qquad \theta \gtrsim -\frac{1}{\Delta x}\ln\Bigl(1-\frac{s}{A_0}\Bigr) \quad(s<A_0).
 $$
-
 
 Examples for a DESI-wide path \(\Delta x=0.94\):
 
@@ -189,18 +176,18 @@ If Euclid BAO leaves F/E0 degenerate, a natural joint analysis includes:
 | ISW / CMB lensing | DE perturbations if present |
 | Imaging systematics weights | Required for angular cross-correlations |
 
-Report \(\sigma_X\) and \(\theta\) **conditional on free smooth DE**.
+I report \(\sigma_X\) and \(\theta\) conditional on free smooth DE.
 
 ---
 
 ## 9. Analysis sequence
 
-1. Construct the Euclid BAO data vector, \(C_{\rm std}\), and \(S(z)\). 
-2. Sample \(\{w_0,w_a,\theta,\sigma_X\}\) with the priors of §3. 
-3. Report the marginal interval or upper limit on \(\sigma_X\), the posterior on \(\theta\), and nested model comparison versus CPL-only. 
-4. Use lag correlations only as diagnostics. 
-5. Assign F\(\cup\)E0 / E1 / E2 / E3 using §§5–7. 
-6. Compare fixed versus free \(\{w_0,w_a\}\); optionally nest QNM. 
+1. Construct the Euclid BAO data vector, \(C_{\rm std}\), and \(S(z)\).  
+2. Sample \(\{w_0,w_a,\theta,\sigma_X\}\) with the priors of §3.  
+3. Report the marginal interval or upper limit on \(\sigma_X\), the posterior on \(\theta\), and nested model comparison versus CPL-only.  
+4. Use lag correlations only as diagnostics.  
+5. Assign F\(\cup\)E0 / E1 / E2 / E3 using §§5–7.  
+6. Compare fixed versus free \(\{w_0,w_a\}\); optionally nest QNM.
 
 ---
 
@@ -221,9 +208,9 @@ python scripts/desqueezing/euclid_protocol_forecasts.py
 
 ## 11. Summary
 
-- Fit \(\{w_0,w_a,\theta,\sigma_X\}\) with weakly informative log priors on \(\theta\) and \(\sigma_X\). 
-- E1 is the BAO window in which Euclid can favour residual amplitude above a pure Poisson seed. 
-- E2 requires damping large enough to exceed amplitude noise when \(A_0>s\); Pearson lags alone are usually insufficient. 
+- Fit \(\{w_0,w_a,\theta,\sigma_X\}\) with weakly informative log priors on \(\theta\) and \(\sigma_X\).  
+- E1 is the BAO window in which Euclid can favour residual amplitude above a pure Poisson seed.  
+- E2 requires damping large enough to exceed amplitude noise when \(A_0>s\); Pearson lags alone are usually insufficient.  
 - F versus E0 remains a theoretical distinction under a deep null.
 
 ---
@@ -234,11 +221,9 @@ Reference implementation: `scripts/euclid_mock_mcmc.py` (emcee). Euclid-like vec
 
 With percent-level BAO uncertainties (\(\sigma_\alpha\sim 0.5\%\)–\(1.2\%\)) and \(S(z)\sim\mathcal{O}(1)\), the OU term competes with \(C_{\rm std}\) only for
 
-
 $$
 \sigma_X \sim \mathrm{few}\times 10^{-3}\ \text{to}\ 10^{-2}.
 $$
-
 
 The scientific window \(10^{-5}\)–\(1.5\times 10^{-4}\) therefore sits below the single-mock SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a 24-bin mock with \(\sim 1\%\) errors.
 
@@ -248,7 +233,7 @@ The scientific window \(10^{-5}\)–\(1.5\times 10^{-4}\) therefore sits below t
 | E1 \(\sigma_X=0.012,\ \theta=0.1\) | Partial amplitude recovery; \(\theta\) weak | Signal largely absorbed by background freedom |
 | E2 \(\sigma_X=0.015,\ \theta=1.5\) | Amplitude recovered in order of magnitude; \(\theta\) poorly pinned | Recovery degrades with free \(w_0,w_a\) |
 
-Free \(\{w_0,w_a\}\) before interpreting E1/E2. Products: `results/euclid_mcmc/`, `figures/euclid_mcmc_*_{fixed,free}BG.png`.
+I free \(\{w_0,w_a\}\) before interpreting E1/E2. Products: `results/euclid_mcmc/`, `figures/euclid_mcmc_*_{fixed,free}BG.png`.
 
 ```bash
 pip install emcee
@@ -261,8 +246,8 @@ python scripts/euclid_mock_mcmc.py
 
 Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
 
-- **BAO:** 20 bins, \(z\in[0.9,1.8]\), forecast-style \(\sigma_\alpha\sim 0.3\%\)–\(0.7\%\). 
-- **SN:** 25 compressed distance-modulus bins (relative fit), shared \(\{w_0,w_a\}\). 
+- **BAO:** 20 bins, \(z\in[0.9,1.8]\), forecast-style \(\sigma_\alpha\sim 0.3\%\)–\(0.7\%\).  
+- **SN:** 25 compressed distance-modulus bins (relative fit), shared \(\{w_0,w_a\}\).  
 - **Noise sector:** OU kernel on BAO only.
 
 | Scenario | Probe | \(\sigma_X\) (illustrative) | \(\theta\) | Comment |
@@ -283,7 +268,7 @@ python scripts/euclid_joint_bao_sne_mcmc.py
 
 ## References
 
-[1] Morales Souhail, J., DESI OU/QNM analysis, this repository. 
-[2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository. 
-[3] DESI Collaboration, arXiv:2503.14738 (2025). 
+[1] Morales Souhail, J., DESI OU/QNM analysis, this repository.  
+[2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository.  
+[3] DESI Collaboration, arXiv:2503.14738 (2025).  
 [4] Euclid Collaboration, DR1 BAO forecasts (as available at analysis time).

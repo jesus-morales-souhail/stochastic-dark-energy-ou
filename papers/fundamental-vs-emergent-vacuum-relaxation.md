@@ -1,17 +1,17 @@
 # Fundamental versus Emergent Vacuum Smoothness: Path-Integrated Relaxation, Amplification Bounds, and Euclid Discriminators
 
-**Author:** Jesús Morales Souhail 
-**Date:** July 2026 
-**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) 
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou 
-**Status:** Technical note — not peer reviewed 
+**Author:** Jesús Morales Souhail  
+**Date:** July 2026  
+**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
+**Status:** Technical note — not peer reviewed  
 **Related:** `sdiff-fundamental-vs-emergent.md`, `desqueezing-relaxation-vacuum-fluctuations-note.md`, `stochastic-dark-energy-desi-dr2.md`
 
 ---
 
 ## Abstract
 
-DESI DR2 BAO analyses in this repository drive stationary stochastic fluctuations of dark energy to a null working limit \(\sigma_X < 1.5\times 10^{-4}\) (95% CL). The open question is whether late-time vacuum smoothness is an exact geometric law (fundamental volume-preserving diffeomorphisms, SDiff) or an attractor with finite relaxation time (emergent SDiff). Combining the Ornstein–Uhlenbeck continuity structure \(\Gamma_{\rm phys}(z)=\theta H(z)\) with the open-system desqueezing law \(t_{1/2}=\ln 2/\gamma\), we derive path-integrated residuals \(\sigma_{\rm res}=A_0 e^{-\theta\Delta x}\), estimate the kick amplitude needed for Euclid-scale detectability, and show that a pure Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) remains unobservable for cosmologically relevant \(\theta\). Theory space is partitioned into regions F and E0–E3 with corresponding Euclid and lag-correlation tests.
+My DESI DR2 BAO analyses in this repository drive stationary stochastic fluctuations of dark energy to a null working limit \(\sigma_X < 1.5\times 10^{-4}\) (95% CL). The open question is whether late-time vacuum smoothness is an exact geometric law (fundamental volume-preserving diffeomorphisms, SDiff) or an attractor with finite relaxation time (emergent SDiff). Combining the Ornstein–Uhlenbeck continuity structure \(\Gamma_{\rm phys}(z)=\theta H(z)\) with the open-system desqueezing law \(t_{1/2}=\ln 2/\gamma\), I derive path-integrated residuals \(\sigma_{\rm res}=A_0 e^{-\theta\Delta x}\), estimate the kick amplitude needed for Euclid-scale detectability, and show that a pure Sorkin–Bekenstein seed \(\sigma_0\sim 10^{-61}\) remains unobservable for cosmologically relevant \(\theta\). I partition theory space into regions F and E0–E3 with corresponding Euclid and lag-correlation tests.
 
 ---
 
@@ -29,7 +29,7 @@ If fundamental, local vacuum stresses of the form \(T_{\mu\nu}=V(x)g_{\mu\nu}\) 
 
 ### 2.1 OU sector (this repository)
 
-Fractional fluctuations \(X\equiv\delta\Omega_\Lambda\) in \(x=\ln a\):
+I take fractional fluctuations \(X\equiv\delta\Omega_\Lambda\) in \(x=\ln a\):
 
 
 $$
@@ -97,8 +97,8 @@ $$
 $$
 
 
-**A pure Poisson discreteness seed is invisible to DESI and to Euclid.** 
-DESI therefore constrains **effective** late-time amplitude after amplification or non-Sorkin coupling — not \(\sigma_0\) itself.
+**A pure Poisson discreteness seed is invisible to DESI and to Euclid.**  
+DESI therefore constrains the **effective** late-time amplitude after amplification or non-Sorkin coupling — not \(\sigma_0\) itself.
 
 ### 3.2 Amplification to reach Euclid on the DESI path
 
@@ -112,7 +112,7 @@ Minimum kick \(A_0^{\min}=\sigma_{\rm target} e^{+\theta\Delta x}\):
 | \(1.2\) | \(\sim 3.1\times 10^{-5}\) | \(\sim 10^{56}\) |
 | \(5\) | \(\sim 1.1\times 10^{-3}\) | \(\sim 10^{58}\) |
 
-Any **observable** residual under an emergent picture requires physics beyond bare Sorkin noise (or equivalent effective \(A_0\)).
+Any **observable** residual under an emergent picture requires physics beyond bare Sorkin noise (or an equivalent effective \(A_0\)).
 
 ### 3.3 Physical half-life (Mapping A)
 
@@ -147,12 +147,12 @@ Euclid alone cannot separate **F** from **E0**. Separation requires either a res
 
 ## 5. Observational tests
 
-1. **Euclid residual** \(0<\sigma_X\lesssim 10^{-4}\) in a joint fit with free \(\{w_0,w_a\}\): disfavours pure **F** (if systematics are controlled). 
-2. **Euclid null** \(\sigma_X\ll 10^{-5}\) with \(\gtrsim 20\) bins: forces \(A_0 e^{-\theta\Delta x}\) small; compatible with **F** and **E0**. 
-3. **Lag structure** in whitened BAO residuals matching an OU kernel: supports dynamical mean-reversion rather than pure algebraic projection. 
+1. **Euclid residual** \(0<\sigma_X\lesssim 10^{-4}\) in a joint fit with free \(\{w_0,w_a\}\): disfavours pure **F** (if systematics are controlled).
+2. **Euclid null** \(\sigma_X\ll 10^{-5}\) with \(\gtrsim 20\) bins: forces \(A_0 e^{-\theta\Delta x}\) small; compatible with **F** and **E0**.
+3. **Lag structure** in whitened BAO residuals matching an OU kernel: supports dynamical mean-reversion rather than pure algebraic projection.
 4. **Open-system map:** a Markovian bath mapped to cosmology should obey \(t_{1/2}=\ln 2/\gamma\) with \(\gamma\leftrightarrow\theta H\).
 
-This note does not derive SDiff from quantum gravity, nor does it identify a microphysical amplifier from \(10^{-61}\) to \(10^{-5}\). It organises the fundamental/emergent alternatives into quantitative regions and tests, subject to a full joint analysis with free background parameters and the survey covariance.
+I do not derive SDiff from quantum gravity in this note, nor do I identify a microphysical amplifier from \(10^{-61}\) to \(10^{-5}\). I organise the fundamental/emergent alternatives into quantitative regions and tests, subject to a full joint analysis with free background parameters and the survey covariance.
 
 ---
 
@@ -176,22 +176,21 @@ python scripts/desqueezing/sdiff_discrimination.py
 
 The DESI null raises the status of vacuum smoothness as a quantitative question:
 
-- **Fundamental SDiff** predicts geometric silence at BAO scales. 
-- **Emergent SDiff** allows finite relaxation, with open-system scaling \(t_{1/2}=\ln 2/\gamma\) and residual \(A_0 e^{-\theta\Delta x}\). 
-- A pure Sorkin seed remains unobservable at DESI/Euclid precision. 
+- **Fundamental SDiff** predicts geometric silence at BAO scales.
+- **Emergent SDiff** allows finite relaxation, with open-system scaling \(t_{1/2}=\ln 2/\gamma\) and residual \(A_0 e^{-\theta\Delta x}\).
+- A pure Sorkin seed remains unobservable at DESI/Euclid precision.
 - A residual in \(10^{-5}\)–\(10^{-4}\) would indicate effective physics well above that seed.
 
-A Euclid-facing fit with free \(\{w_0,w_a,\theta,\sigma_X\}\) is specified in `euclid-protocol-vacuum-relaxation.md`.
+I specify a Euclid-facing fit with free \(\{w_0,w_a,\theta,\sigma_X\}\) in `euclid-protocol-vacuum-relaxation.md`.
 
 ---
 
 ## References
 
-[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2,” this repository (`papers/stochastic-dark-energy-desi-dr2.md`). 
-[2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository. 
-[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`notes/`). 
-[4] DESI Collaboration, arXiv:2503.14738 (2025). 
-[5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005). 
-[6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973). 
+[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2,” this repository (`papers/stochastic-dark-energy-desi-dr2.md`).  
+[2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository.  
+[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`notes/`).  
+[4] DESI Collaboration, arXiv:2503.14738 (2025).  
+[5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).  
+[6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).  
 [7] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
-

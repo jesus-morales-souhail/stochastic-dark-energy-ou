@@ -1,31 +1,34 @@
 # Maxwell + device geometry → M : a parameter-free derivation
 
-**Author:** derivation note (companion to `optics-ou-analogies-and-limits.md`, Q2)
-**Date:** July 2026
-**Status:** Formal derivation + verified numerics. No tesseract ad hoc free-parameter tuning.
-**Code:** `scripts/derive_M_maxwell_device.py` (all three checks pass)
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
+**Date:** July 2026  
+**Status:** Formal derivation + verified numerics (hygiene / pedagogy). **Not a DESI claim.** Not peer reviewed.  
+**Code:** `scripts/derive_M_maxwell_device.py` (all three checks pass)  
+**Related:** `papers/optics-ou-analogies-and-limits.md` (Q2), `papers/no-go-superoscillation-tesseract.md`, `papers/EXPLORATORY_BOUNDARY.md`
 
-This note closes Q2 of `optics-ou-analogies-and-limits.md` ("How does a tesseract
-projection become an ABCD matrix on an SLM?") by *deriving* the transfer operator
-of a real optical device from Maxwell, and then asking — once the derivation is on
-the table — whether a 4-cube / Coxeter B₄ / "8 cubic cells" structure can appear
-in it. It cannot, except as a *constraint* that reduces freedom. The derivation is
-independent of any polytope.
+---
+
+## What this note is
+
+I write this note to close Q2 of `optics-ou-analogies-and-limits.md` — “How does a tesseract projection become an ABCD matrix on an SLM?” — by *deriving* the transfer operator of a real optical device from Maxwell, and then asking, once the derivation is on the table, whether a 4-cube / Coxeter \(B_4\) / “8 cubic cells” structure can appear in it.
+
+It cannot, except as a *constraint* that reduces freedom. The derivation is independent of any polytope.  
+This is lab-optics hygiene, **not** a BAO residual result and **not** a DESI claim.
 
 ---
 
 ## 1. From Maxwell to the paraxial wave operator
 
-Source-free Maxwell in a non-magnetic dielectric ε(r), monochomorphic field
-𝔈(r,t)=Re[E(r)e^{−iωt}], gives the Helmholtz equation
+Source-free Maxwell in a non-magnetic dielectric \(\varepsilon(\mathbf{r})\), monochromatic field
+\(\mathfrak{E}(\mathbf{r},t)=\mathrm{Re}[E(\mathbf{r})e^{-i\omega t}]\), gives the Helmholtz equation
 
 \[
 (\nabla^2 + k^2 n^2(\mathbf r)) E = 0,\qquad k=\omega/c .
 \]
 
 Write \(E(\mathbf r_\perp,z)=e^{ikz}u(\mathbf r_\perp,z)\) and assume paraxial
-propagation (\(|\partial_z^2 u|\ll k|\partial_z u|{ }). The slow envelope obeys the
-paraxial wave equation (Schrödinger form, \(z\) as "time", mass \(k\)):
+propagation (\(|\partial_z^2 u|\ll k|\partial_z u|\)). The slow envelope obeys the
+paraxial wave equation (Schrödinger form, \(z\) as “time”, mass \(k\)):
 
 \[
 \partial_z u = \frac{i}{2k}\nabla_\perp^2 u + (\text{index terms}).
@@ -86,7 +89,7 @@ Free propagation \(d\) and thin lens \(f\) give the textbook factors
 \(L_f=\bigl(\begin{smallmatrix}1&0\\-1/f&1\end{smallmatrix}\bigr)\); the imaging
 condition \(B_{\rm tot}=0\) is Descartes \(1/s_o+1/s_i=1/f\). For two transverse
 planes \((x,\theta_x,y,\theta_y)\) the matrix is \(4\times4\) symplectic,
-\(M\in Sp(4,\mathbb R)\). This is the only legitimate "4D" object.
+\(M\in Sp(4,\mathbb R)\). This is the only legitimate “4D” object I accept in this derivation.
 
 **Verification (`scripts/derive_M_maxwell_device.py`, check 1).** A Gaussian waist
 propagated through \(P_{d_1}L_fP_{d_2}\) by the *integral operators* of §2–§3 is
@@ -110,13 +113,13 @@ Adding spectral pulse shaping with \(N_\omega\) bins multiplies this by
 not by the dimensionality of an abstract group.
 
 **Verification (check 2).** A 1920×1080 SLM: \(N_{\rm pix}=2{,}073{,}600\); with 128
-spectral bins, \(2.65\times10^8\). No "8", "16", "24", or "32" appears.
+spectral bins, \(2.65\times10^8\). No “8”, “16”, “24”, or “32” appears.
 
-## 6. Where a 4-cube / B₄ could enter — and what it actually does
+## 6. Where a 4-cube / \(B_4\) could enter — and what it actually does
 
 The tesseract is the 4-cube \(\{|x_i|\le1\}\subset\mathbb R^4\); its boundary has 8
 cubic cells. Its Coxeter group \(B_4\) (hyperoctahedral, signed permutations of
-four coordinates, \(|B_4|=2^4\cdot4!=384\)) is real. The question is whether it
+four coordinates, \(|B_4|=2^4\cdot4!=384\)) is real. The question I ask is whether it
 enters §1–§4. It can, in exactly one way: **as a discrete symmetry of the optical
 phase space** \((x,\theta_x,y,\theta_y)\cong\mathbb R^4\), i.e. as a subgroup of
 \(Sp(4,\mathbb R)\). A device invariant under such a symmetry is *constrained* by
@@ -148,19 +151,19 @@ M_{\rm device}=P_{d_n}L_{\Phi_{n-1}}\cdots L_{\Phi_1}P_{d_1}\in{\cal U}(L^2(\mat
 \]
 
 with the quadratic (first-order) specialisation \(M\in Sp(4,\mathbb R)\) and the
-controllable dimension \(N_{\rm pix} [\times N_\omega]\). **A "tesseract / B₄ /
-8-cube" structure is not produced by this derivation.** It enters only if inserted
+controllable dimension \(N_{\rm pix} [\times N_\omega]\). **A “tesseract / \(B_4\) /
+8-cube” structure is not produced by this derivation.** It enters only if inserted
 by hand as an ansatz; inserted as a *symmetry* it reduces freedom
 (\(10\to1\)); inserted as a *parametrisation* of \(M\)'s free parameters using
-4-cube combinatorics it is decoration (the same "undeclared physical power"
+4-cube combinatorics it is decoration (the same “undeclared physical power”
 pattern as \(\ln4\equiv\omega_R\), flagged in `no-go-superoscillation-tesseract.md`).
-There is no derived map "8 cubes → 8 optical channels."
+There is no derived map “8 cubes → 8 optical channels.”
 
-The honest ABCD/engineering programme (§4) stands; the tesseract programme does not,
-until someone supplies a Maxwell-and-geometry derivation that inserts the 4-cube —
+I keep the honest ABCD/engineering programme (§4). The tesseract programme does not
+stand until someone supplies a Maxwell-and-geometry derivation that inserts the 4-cube —
 which, by the symmetry-count result above, can only *limit* the device, not extend
 it.
 
----
+This note is **not** a DESI claim. Companion code: `scripts/derive_M_maxwell_device.py`.
 
-*End of derivation note. Companion code: `scripts/derive_M_maxwell_device.py`.*
+*End of derivation note.*
