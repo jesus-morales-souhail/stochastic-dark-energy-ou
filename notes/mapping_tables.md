@@ -1,5 +1,7 @@
 # Cosmological mapping tables
 
+These tables map \(\theta\) and seed amplitude into \(\gamma\), half-lives, and the \(A_0\) needed to hit DESI/Euclid residual targets. I keep them here so the numbers stay easy to check.
+
 Seed amplitude: \(\sigma_0\sim 10^{-61}\) (repo Axiom A2 / GPE paper).
 
 Fiducial: \(H_0=67.4\), \(\Omega_m=0.315\), \(t_0=13.796 \mathrm{Gyr}\).

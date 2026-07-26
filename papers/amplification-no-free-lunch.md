@@ -1,6 +1,6 @@
 # Moved — use the new filename
 
-> **This note was renamed for clarity.** Content lives at the link below.
+> **I renamed this note for clarity.** The full content lives at the link below.
 
 ## Canonical document
 
@@ -15,8 +15,8 @@ https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/blob/main/pap
 | | |
 |:--|:--|
 | **Old path (this file)** | `papers/amplification-no-free-lunch.md` |
-| **New path (cite this)** | `papers/amplification-gap.md` |
+| **New path (please cite this)** | `papers/amplification-gap.md` |
 | **Role** | Quantified \(\sim 10^{56}\) seed→BAO gap; linear-amplifier audit; Routes 1–3 |
 
 Please update bookmarks and citations to **`amplification-gap.md`**.  
-Machine tables remain at [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md).
+Machine tables are still at [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md).

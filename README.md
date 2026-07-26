@@ -1,220 +1,77 @@
 # stochastic-dark-energy-ou
 
-**Author:** Jesús Morales Souhail 
-**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) 
-**Contact:** jmskjym@gmail.com 
-**Status:** Independent research · July 2026 · **not peer reviewed**
+Jesús Morales Souhail  
+[ORCID 0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) · jmskjym@gmail.com  
+[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
 
-Independent analysis of **stochastic fluctuations in the dark-energy sector** with **public DESI DR2 BAO** products: code, numerical results, and a coherent set of notes on what the data constrain, what geometry may protect, and which speculative paths are closed.
+July 2026 · independent research · not peer reviewed
 
----
-
-## Start here (peer-review claim set)
-
-| Document | Role |
-|:---------|:-----|
-| **[`manuscript/PREPRINT.md`](manuscript/PREPRINT.md)** | **Unified preprint** — null BAO result, model exclusion, $10^{56}$ bottleneck, slip honesty |
-| [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) | Referee checklist: claims vs non-claims |
-| [`papers/resume.txt`](papers/resume.txt) | Compact numerical summary |
-| [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) | What is **not** part of the paper |
-
-**Exploratory / pedagogy (not DESI claims):** 
-https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes 
-
-**Theory programme — when could vacuum noise be measurable? (R1–R2–R3):** 
-https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum
+I use this repo for the **data** side: public DESI DR2 BAO, residual models (OU / QNM), what is excluded, and how large the soft-amplification gap is if you start from a pure Sorkin seed.
 
 ---
 
-## Narrative arc (how the technical notes fit together)
+## Start here
 
-The project asks one empirical question and two structural ones:
+| Document | What it is |
+|:---------|:-----------|
+| [`START_HERE.md`](START_HERE.md) | short map |
+| [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) | main write-up |
+| [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) | claims vs non-claims |
+| [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) | what I will and will not say out loud |
+| [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) | what is *not* part of the paper |
 
-1. **Empirical:** Do DESI DR2 BAO residual statistics require a stationary stochastic (OU/QNM) component on top of a smooth background? 
-2. **Structural:** Can volume-preserving diffeomorphisms (SDiff / unimodular gravity) explain **late-time vacuum smoothness**? 
-3. **Method:** What is the **correct scale and operator** for each claim — and what is an undeclared free parameter?
+**Theory (residual scale, measurability):**  
+https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum  
 
-### Act I — Data (BAO residuals)
+**Pedagogy / wrong-scale quarantine:**  
+https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes  
+
+---
+
+## What the project is asking
+
+1. **Data.** Do DESI DR2 BAO residual statistics require a stationary stochastic (OU/QNM) piece on top of a smooth background?  
+2. **Geometry.** Can SDiff / unimodular structure explain why late-time vacuum residuals stay small?  
+3. **Method.** Right scale and right operator for each claim — no undeclared free parameters.
+
+### Data (BAO residuals)
 
 | Result | Detail |
 |:-------|:-------|
-| CPL background (BAO-only) | $w_0 \approx -0.99$, $w_a \approx -0.02$ (near ΛCDM) |
-| OU / QNM residuals | Amplitude driven to the numerical floor when the background is free |
-| Working upper limit | **$\sigma_X < 1.5\times 10^{-4}$ (95% CL)** under the phenomenological OU kernel |
-| Tachyonic quantum fluid | Coherent growing mode **excluded** ($\Delta\ln\mathcal{L}\approx -11.35$ vs ΛCDM) |
+| CPL background (BAO-only) | \(w_0\approx -0.99\), \(w_a\approx -0.02\) (near \(\Lambda\)CDM) |
+| OU / QNM residuals | amplitude driven to the floor when the background is free |
+| Working upper limit | \(\sigma_X < 1.5\times 10^{-4}\) (95% CL) under the OU kernel I use |
+| Tachyonic quantum fluid | coherent growing mode excluded (\(\Delta\ln\mathcal{L}\approx -11.35\) vs \(\Lambda\)CDM) |
 
-**Primary papers:** `stochastic-dark-energy-desi-dr2.md`, `quantum-fluid-instabilities-desi-dr2.md`, `resume.txt`, `sensitivity_kernel_table.md`.
+Notes: `papers/stochastic-dark-energy-desi-dr2.md`, `papers/quantum-fluid-instabilities-desi-dr2.md`, `papers/resume.txt`.
 
-### Act II — Geometry of smoothness (SDiff)
+### Smoothness (SDiff)
 
-Unimodular / SDiff structure projects out local vacuum stress of the form $T_{\mu\nu}\propto g_{\mu\nu}$. That is a candidate explanation of **why residuals are small**, not a detection of a new particle.
+Unimodular / SDiff projects out isotropic vacuum stress \(T_{\mu\nu}\propto g_{\mu\nu}\). That is a candidate reason residuals are small — not a particle detection.
 
-**Primary papers:** `principle-of-vacuum-smoothness.md`, `smoothness-of-the-vacuum-unimodular.md`, `unimodular-gravity-vacuum-smoothness.md`, `sdiff-fundamental-vs-emergent.md`.
+### Amplification gap
 
-### Act III — Open systems and amplification (**amplification gap**)
+A pure Sorkin seed \(\sigma_0\sim 10^{-61}\) needs roughly \(G\sim 10^{56}\) to hit Euclid-scale residuals \(\sim 10^{-5}\), and \(\sim 10^{57}\) to the DESI ceiling \(1.5\times 10^{-4}\). Soft desqueezing gives \(\mathcal{O}(10)\) at \(r\sim 1.5\), not \(10^{56}\). See `papers/amplification-gap.md` and `papers/HONEST_HEADLINES.md`.
 
-A pure Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ sits far below residual scales: **$G_{\mathrm{Euclid}}\sim 10^{56}$** to hit $\sim 10^{-5}$, and **$G_{\mathrm{DESI}}\sim 10^{57}$** to the measured ceiling $1.5\times 10^{-4}$ (do not mix the two labels). Open-system **desqueezing** supplies a dynamical language for finite relaxation ($t_{1/2}=\ln 2/\gamma$) but only $\mathcal{O}(10)$ gain at $r\sim 1.5$. Audited amplifiers (tachyonic growth, $\sqrt{N}$, freeze-out slogans, phase jumps) are **excluded**, short by decades, or require a **new seed** — see the closure note and `papers/HONEST_HEADLINES.md`.
+### Slip (Option 0)
 
-**Routes 1–3 (scanned):** only **local $N_{\mathrm{eff}}$** hits DESI/Euclid amplitudes ($N_{\mathrm{eff}}\sim 4\times 10^{7}$ / $10^{10}$); late freeze gain $=1$; soft avalanche gain $\sim 2$ (no seed→Euclid). Tables: `results/amplification_routes/VERDICT.md`.
+SDiff does not cancel shear. Gravitational slip is the right *kind* of operator, but at \(\sigma_X\sim 10^{-4}\) the signal is \(\sim 10^{-4}\), far below Maus-class errors \(\mathcal{O}(0.1)\). No shortcut.
 
-**Primary notes:** 
-`papers/amplification-gap.md` (**Act III closure**, §6.3 machine tables), 
-`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, 
-`fundamental-vs-emergent-vacuum-relaxation.md`, 
-`euclid-protocol-vacuum-relaxation.md`, 
-`scripts/amplifier_audit.py`, 
-`scripts/amplification/run_all_routes.py`.
+### Wrong paths
 
-### Act IV — Option 0: the anisotropic “gap” (no homemade Boltzmann)
-
-SDiff does **not** cancel shear. Gravitational slip $\gamma=\Phi/\Psi$ (Maus et al., arXiv:2505.20656: $\gamma=1.17\pm 0.11$, GR limit $=1$) is the right **kind** of operator. Order-of-magnitude: even $f=1$ and $\sigma_X\sim 10^{-4}$ give $|\eta-1|\sim 10^{-4}$, far below current $\mathcal{O}(0.1)$ sensitivity. **The gap inherits the amplification problem; it is not a shortcut.**
-
-**Primary papers:** `anisotropic-slip-option0.md`, `data-pack-option0-internet.md`. 
-**Runnable bridge:** `python scripts/slip_bridge.py` ($\sigma_X \to |\gamma-1|$; amplitude-starved).
-
-### Act V — Closed wrong paths (scale / operator hygiene)
-
-These notes keep the corpus honest and prevent mixing lab metaphors into DESI claims:
-
-| Closed claim | Why closed | Where |
-|:-------------|:-----------|:------|
-| Highway pupil tests expansion | Wrong scale & operator | [exploratory repo](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) |
-| Phase tricks → sub-Airy certainty | Born + band-limit | exploratory notes |
-| Tesseract / $B_4$ as amplifier | 32/384 symplectic; commutant dim 1 | exploratory + `b4_symplectic_count.py` |
-| Lab wavefront $T$ = BAO OU | Different objects | exploratory |
-| $\ln 4$ or $B_4$ as undeclared physics | Pattern hygiene | exploratory |
-| $f_{\mathrm{cosmo}}\equiv 1/\theta$ as optical identity | Analogy only | exploratory |
-
-**Act V home:** [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) (not peer-review claims).
-
-### What this programme **does not** claim
-
-- Detection of unamplified Planck-scale vacuum noise. 
-- That Euclid will “easily” see Sorkin seeds or slip at $10^{-4}$ without amplification. 
-- That optical tesseracts, SLMs, or wavefront shaping of the cosmic vacuum are part of the DESI result. 
-- Peer-reviewed status.
-
-### What it **does** claim
-
-- Under the stated OU/QNM residual kernel and public BAO summary statistics, the data **prefer smooth** evolution; $\sigma_X$ is bounded. 
-- A coherent tachyonic growth model with rank-1 covariance is **disfavoured**. 
-- SDiff is a **structural candidate** for isotropic smoothness, with a **shear gap** that still needs amplitude honesty. 
-- Method: **correct scale + correct operator**, or no claim.
+Lab optics, tesseract slogans, and undeclared free powers are documented and kept out of the DESI claim set. Some of that material is also mirrored in the exploratory repo.
 
 ---
 
-## Reading order (cohesive path)
-
-1. **[`manuscript/PREPRINT.md`](manuscript/PREPRINT.md)** — unified peer-review manuscript 
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — claim / non-claim checklist 
-3. `papers/resume.txt` — numbers only 
-4. `papers/stochastic-dark-energy-desi-dr2.md` — detailed BAO analysis 
-5. `papers/quantum-fluid-instabilities-desi-dr2.md` — model kill 
-6. `papers/amplification-gap.md` + `results/amplification_routes/VERDICT.md` — amplification 
-7. `papers/anisotropic-slip-option0.md` + `scripts/slip_bridge.py` — slip / Option 0 
-8. Exploratory Act V (optional): [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) 
-
----
-
-## Repository layout
+## Layout
 
 ```
-manuscript/ Unified preprint + referee checklist (START HERE)
-papers/ Technical notes (English)
-scripts/ Analysis code
- desqueezing/ QuTiP Lindblad desqueezing + cosmological mapping
- gpe/ Gross–Pitaevskii / Bogoliubov numerics
- amplification/ Routes 1–3 (seed / freeze / avalanche)
-figures/ Figures
-results/ Numerical outputs (BAO, forecasts, routes)
-notes/ Desqueezing synthesis and mapping tables
+manuscript/   preprint and claims
+papers/       technical notes
+scripts/      analysis code
+data/         local DESI products (public provenance)
+results/      numerical outputs
+notes/        working notes
 ```
 
-Detailed file index: **`STRUCTURE.md`**.
-
-### Separated projects (not the peer-review claim set)
-
-| Path | Content |
-|------|---------|
-| `~/Proyectos/01_Fisica_y_Cosmologia/stochastic-de-exploratory-notes/` | Scale/operator hygiene, optics no-gos, pedagogy |
-| `~/Proyectos/04_Optica_medios_complejos/` | Lab transmission-matrix wavefront shaping (hardware) |
-
-See `papers/EXPLORATORY_BOUNDARY.md` and `manuscript/CLAIMS.md`.
-
----
-
-## Quick start
-
-```bash
-git clone https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou.git
-cd stochastic-dark-energy-ou
-python -m venv venv && source venv/bin/activate # optional
-pip install -r requirements.txt
-
-# BAO OU / QNM residual kernel (DESI DR2 summary statistics)
-python scripts/ou_bao_likelihood.py
-
-# CPL background (+ optional nested σ, θ extension)
-python scripts/eos_efectiva.py
-
-# Desqueezing relaxation scan (requires qutip)
-python scripts/desqueezing/desqueezing_relax_time.py
-
-# Cosmological mapping tables
-python scripts/desqueezing/cosmological_mapping.py
-
-# Euclid forecast MCMC (mock likelihood; requires emcee)
-python scripts/euclid_mock_mcmc.py
-python scripts/euclid_joint_bao_sne_mcmc.py
-
-# Option 0: σ_X → gravitational slip (amplitude-starved; not Boltzmann)
-python scripts/slip_bridge.py
-
-# Pedagogy / hygiene demos (not cosmology likelihoods)
-python scripts/superoscillation_energy_cost_demo.py
-python scripts/car_drone_pupil_newton_einstein.py
-```
-
-**Dependencies:** `numpy`, `scipy`, `matplotlib`, `astropy`, `healpy`, `qutip` (see `requirements.txt`).
-
----
-
-## Data sources (public)
-
-- DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · arXiv:[2503.14738](https://arxiv.org/abs/2503.14738) 
-- Slip / structure: Maus et al. arXiv:[2505.20656](https://arxiv.org/abs/2505.20656) 
-- $\eta$ forecasts: Sakr et al. arXiv:[2501.07477](https://arxiv.org/abs/2501.07477) 
-- Pantheon+ SN Ia (cross-correlation pipeline only) 
-
-Compiled links: `papers/data-pack-option0-internet.md`.
-
----
-
-## Reproducibility notes
-
-- Core BAO OU/QNM scripts use **published BAO summary statistics** (redshift bins, $\alpha$, $\sigma$) and do not require bulk catalog access. 
-- Cross-correlation scripts may request large public FITS products; see script headers. 
-- Large local archives and obsolete drafts (e.g. $\ln 4$ narrative scripts) stay **off** the public tree (`.gitignore` / `local_archive/`).
-
----
-
-## Citation
-
-```text
-Morales Souhail, J. (2026). stochastic-dark-energy-ou (GitHub).
-https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
-ORCID: 0009-0000-7637-1818
-```
-
----
-
-## License
-
-Code: MIT (unless otherwise noted in individual files). 
-Text: CC BY 4.0 for author-written notes.
-
----
-
-## Contact
-
-**Jesús Morales Souhail** · jmskjym@gmail.com · [ORCID](https://orcid.org/0009-0000-7637-1818)
+See [`STRUCTURE.md`](STRUCTURE.md) if present for more detail.

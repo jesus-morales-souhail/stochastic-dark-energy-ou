@@ -1,26 +1,23 @@
-# Theory programme (separate repository)
+# Theory programme (other repository)
 
-Theory is **not** part of this DESI empirical claim set.
+Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
+
+Theory is not part of this DESI empirical claim set.
 
 **https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**
 
+Start there with `START_HERE.md` and `papers/r1_kernel/NOTE_uniqueness_residual_grain.md`.
+
+Useful theory notes (paths inside that repo):
+
 | Document | Role |
 |:---------|:-----|
-| `papers/FOR_REFEREES.md` | Reading guide — claims, formula sheet |
-| `papers/OBSERVABLE_WALL.md` | Einstein+Morales wall + self-shielding |
-| `papers/PAST_LIGHT_CONE_INTEGRATION.md` | **Only natural amplifier** $\mathrm{RMS}=\lvert\gamma-1\rvert\sqrt{\chi/\ell_*}$ |
-| `figures/past_light_cone_rms.png` | Boost + RMS figure |
-| `papers/SIMPLE_AS_LAMBDA.md` | Minimal model (as simple as $\Lambda$) |
-| `papers/VERIFIED_RESULTS.md` | Documented results only (unit-tested) |
-| `papers/NARROW_PATH.md` | DESI-safe NP-A / NP-B |
-| `papers/r1-open-kernel.md` | **Walls vs open kernel** (R1 load-bearing gap; not a derivation of $\ell_*$) |
-| `papers/lensing-rms-forecast-real-data.md` | Path RMS vs Maus / Sakr / DESI MG / Stage-IV (real external data) |
-| `papers/inflation-spectator-seed-gordon-wands.md` | Gordon & Wands spectator seed: factor $\sim 45$, not Sorkin $10^{56}$ |
-| `papers/inflation-spectator-residual-atlas.md` | Modern $r\to\sigma_\rho$ atlas — residual band without $10^{56}$ |
-| `papers/h0-running-brachistochrone-bridge.md` | H0 running + time-delay multi-path bridge to open kernel |
-| `papers/h0-bridge-toy-map.md` | Toy path bias: DESI-safe stochastic short of H0 tension |
-| `papers/h0-desqueezing-filter.md` | Reject invented $H_0(z)$ + hand-tuned $\theta$; $\sigma_X\ll 9\%$ |
-| `pytest -q` | Expect **74 passed** (approx.) |
+| `papers/core/FOR_REFEREES.md` | claims and formula sheet |
+| `papers/core/VERIFIED_RESULTS.md` | unit-tested identities |
+| `papers/core/OBSERVABLE_WALL.md` | slip wall |
+| `papers/core/PAST_LIGHT_CONE_INTEGRATION.md` | path RMS |
+| `papers/r1_kernel/NOTE_uniqueness_residual_grain.md` | residual scale uniqueness draft |
+| `papers/r1_kernel/r1-open-kernel.md` | walls vs open kernel |
+| `pytest -q` | should stay green |
 
-This repository remains: DESI residual bounds, model exclusions, and the amplification gap (see `papers/amplification-gap.md`).  
-Theory open kernel (principle for mesoscopic $\ell_*$) lives only in the theory repo.
+This repository stays: DESI residual bounds, model exclusions, amplification gap (`papers/amplification-gap.md`).

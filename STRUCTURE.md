@@ -1,7 +1,7 @@
 # Repository structure
 
 ```
-manuscript/ Unified preprint + referee claim checklist (START HERE for publication)
+manuscript/ Unified preprint + referee claim checklist (start here for publication)
 papers/ Technical notes and data packs (English) — narrative arc in README.md
 scripts/ Analysis code and small demos
  desqueezing/ Open-system desqueezing and timescale mapping
@@ -13,8 +13,10 @@ notes/ Technical notes (desqueezing synthesis, mapping tables)
 local_archive/ Offline drafts (not part of the public scientific claim)
 ```
 
-**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md` 
+**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`  
 **Exploratory repo (separate):** `../stochastic-de-exploratory-notes/`
+
+This layout is how I keep the claim set readable. The work is not peer reviewed.
 
 ---
 
@@ -109,10 +111,10 @@ local_archive/ Offline drafts (not part of the public scientific claim)
 
 Every claim in this repository should be classifiable as one of:
 
-1. **BAO residual / model constraint** (Act I), 
-2. **Geometric interpretation** of smoothness (Act II), 
-3. **Amplification / Euclid protocol** (Act III), 
-4. **Slip Option 0 with amplitude honesty** (Act IV), or 
+1. **BAO residual / model constraint** (Act I),  
+2. **Geometric interpretation** of smoothness (Act II),  
+3. **Amplification / Euclid protocol** (Act III),  
+4. **Slip Option 0 with amplitude honesty** (Act IV), or  
 5. **Explicit no-go / boundary** (Act V).
 
 Anything that is only a lab optics metaphor belongs in Act V or in the **separated** optics project — not in the DESI likelihood narrative.

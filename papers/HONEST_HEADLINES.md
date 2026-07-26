@@ -1,71 +1,41 @@
-# Honest headlines for this corpus
+# How I talk about this work (and how I do not)
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**Status:** Editorial / press discipline — not a scientific claim sheet  
-**Hard claims live in:** [`manuscript/PREPRINT.md`](../manuscript/PREPRINT.md) · [`amplification-gap.md`](amplification-gap.md)
+Jesús Morales Souhail · July 2026  
+[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 
----
-
-## What is *not* ours (never put it in the subject line)
-
-| Phrase | Why banned |
-|:-------|:-----------|
-| “We calculated the vacuum energy” / “energy of the vacuum” as *our* result | \(\rho_\Lambda\) is **imported** standard cosmology (Planck-class \(H_0,\Omega_\Lambda\)). This corpus does **not** derive a new \(\Lambda\). |
-| “We discovered the texture of dark energy” | No positive detection; NP-B path RMS is hand-placed kinematics, not derived open-kernel proof. |
-| “The model is discarded without excuses” (null lensing) | Null excludes a **tested corner**, not the open R1 kernel. |
-| “Gap \(10^{56}\)” attached to DESI \(\sigma_X=1.5\times 10^{-4}\) density math | That ratio is \(\sim 10^{57}\). Use \(10^{56}\) only for the Euclid-scale target \(\sim 10^{-5}\). |
+Hard claims: [`manuscript/PREPRINT.md`](../manuscript/PREPRINT.md) and [`amplification-gap.md`](amplification-gap.md).  
+This file is about language discipline — for me, for emails, for anyone sharing the project.
 
 ---
 
-## What *is* ours (verified)
+## Things I will not put in a subject line
 
-1. **Measured residual bound:** \(\sigma_X < 1.5\times 10^{-4}\) (95% CL, OU kernel, DESI DR2 BAO public stats) — null, honest.  
-2. **Model kill:** coherent tachyonic growth excluded with correct covariance.  
-3. **Amplification walls:** soft \(r\sim 64\) (Euclid target) / \(\sim 66\) (DESI ceiling); path \(\sqrt{N}=\mathcal{O}(10\)–\(100)\); machine Routes 1–3.  
-4. **Two independent routes hit the same wall class** (desqueezing soft gain vs geometric path accumulation): neither closes \(G_{\mathrm{Euclid}}\sim 10^{56}\) or \(G_{\mathrm{DESI}}\sim 10^{57}\).  
-5. **Discipline:** automated tests, gap label rule, anti-binary locks.
-
----
-
-## Recommended headlines (pick one register)
-
-### A — Measurement (null result, sober physics style)
-
-> **Dark energy shows no fluctuations above 1.5 parts in \(10^{4}\), from a rigorous DESI DR2 BAO residual analysis**
-
-True; matches how real limit papers are titled. Does not claim a new \(\Lambda\).
-
-### B — Original contribution (recommended)
-
-> **How far is quantum vacuum noise from being seen: a factor \(\sim 10^{56}\) to Euclid-scale residuals — measured two independent ways that hit the same wall**
-
-Substance: not only “we saw nothing,” but **how much is missing**, with soft open (\(r\sim 64\)) and path accumulation (\(\mathcal{O}(10\)–\(100)\)) both failing to close the gap. Skeptical physicists can check the audit and not find a bait-and-switch.
-
-**Precision variant (if the audience is technical):**
-
-> **Sorkin seed to DESI ceiling is \(\sim 10^{57}\); to Euclid residual \(\sim 10^{-5}\) is \(\sim 10^{56}\) — both unbridgeable by audited soft amplifiers**
-
-### C — Method (less press-friendly, most accurate meta-claim)
-
-> **A stochastic cosmology pipeline where every claim was checked twice before publication — and what survived**
-
-True about process; weaker as a physics headline.
+| Phrase | Why not |
+|:-------|:--------|
+| “I calculated the energy of the vacuum” as *my* result | \(\rho_\Lambda\) is standard cosmology. I did not derive a new \(\Lambda\). |
+| “I discovered the texture of dark energy” | No positive detection. |
+| “The model is discarded with no excuses” after a null | A null kills a tested corner, not every open kernel idea. |
+| “Gap \(10^{56}\)” glued to DESI \(\sigma_X=1.5\times 10^{-4}\) | That ratio is \(\sim 10^{57}\). Keep \(10^{56}\) for the Euclid-scale \(\sim 10^{-5}\) target. |
 
 ---
 
-## One-line abstract for sharing outside the chat
+## Things that are actually mine
 
-> We do **not** compute a new vacuum energy density. We bound fractional late-time DE residuals with DESI DR2 (\(\sigma_X<1.5\times 10^{-4}\), 95% CL), exclude coherent tachyonic growth, and show that a pure Sorkin seed sits \(\sim 10^{56}\) (Euclid target) to \(\sim 10^{57}\) (DESI ceiling) below residual scales — a gap soft amplifiers do not close.
-
----
-
-## Reproduce the gap numbers
-
-```bash
-python scripts/gap_two_targets.py
-```
+1. Residual bound \(\sigma_X < 1.5\times 10^{-4}\) (95% CL, OU kernel, public DESI DR2 BAO).  
+2. Coherent tachyonic growth excluded with the right covariance.  
+3. Amplification walls: soft \(r\sim 64\) (Euclid target) / \(\sim 66\) (DESI ceiling); path \(\sqrt{N}=\mathcal{O}(10\)–\(100)\); machine route scans.  
+4. Two independent soft routes hit the same wall class (desqueezing vs path accumulation).  
+5. Process: tests, gap-label rule, no undeclared free parameters.
 
 ---
 
-*End of headline discipline note.*
+## Headlines I am willing to use
+
+**Measurement**  
+> Dark energy shows no fluctuations above \(1.5\times 10^{-4}\) under a DESI DR2 BAO residual analysis (OU kernel).
+
+**Contribution**  
+> How far quantum vacuum noise is from being seen: a factor \(\sim 10^{56}\) to Euclid-scale residuals — checked two ways that hit the same wall.
+
+**Shorter abstract for sharing**  
+> I do not compute a new vacuum energy density. I bound late-time DE residuals with DESI DR2 (\(\sigma_X<1.5\times 10^{-4}\), 95% CL), exclude coherent tachyonic growth, and show that a pure Sorkin seed sits \(\sim 10^{56}\)–\(10^{57}\) below residual scales — a gap soft amplifiers do not close.
