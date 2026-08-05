@@ -11,7 +11,7 @@ One-page research note (literature + order-of-magnitude) — not a Boltzmann imp
 The BAO / OU pipeline in this repository constrains background residual amplitude only:
 
 
-\sigma_X < 1.5\times 10^{-4}$ (95\% CL),
+\sigma_X < 1.5\times 10^{-4}$ (95% CL),
 
 
 from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not compute $\Phi$, $\Psi$, or the gravitational slip $\eta=\Phi/\Psi$.

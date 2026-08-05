@@ -18,7 +18,7 @@
 I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statistics require a stationary stochastic component in the late-time dark-energy sector, on top of a smooth background. Fluctuations are modelled as an Ornstein–Uhlenbeck (OU) process in logarithmic scale factor $x=\ln a$, with a quasi-normal-mode (QNM) oscillatory extension. Using a Gaussian likelihood with an additive residual covariance kernel, maximum-likelihood estimation drives the stochastic amplitude to the numerical floor. The working 95% confidence upper limit is
 
 
-\sigma_X < 1.5\times 10^{-4}$ (95\% CL)
+\sigma_X < 1.5\times 10^{-4}$ (95% CL)
 
 
 under the stated phenomenological kernel and public BAO summary statistics (diagonal measurement errors in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
@@ -146,7 +146,7 @@ The data do not require a stationary stochastic residual. The preferred stochast
 From the residual analysis (profile / likelihood ratio under the OU kernel as implemented in the public pipeline):
 
 
-\sigma_X < 1.5\times 10^{-4}$ (95% CL).
+$\sigma_X < 1.5\times 10^{-4}$ (95% CL).
 
 
 This is an upper limit on an effective residual amplitude, not a measurement of a Planck-scale seed.
