@@ -6,8 +6,7 @@
 | **Author** | Jesús Morales Souhail · ORCID [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) |
 | **Code** | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 
-This is what I stand behind, and what I do not. The work is
-
+This is what I stand behind, and what I do not. 
 ---
 
 ## Claims (supported by the public pipeline)
@@ -34,7 +33,7 @@ This is what I stand behind, and what I do not. The work is
 | **N4** | I do not report homemade Boltzmann-code results for $\eta(a,k)$ |
 | **N5** | The DESI×SN cross-correlation is **preliminary**, not a primary result |
 | **N6** | Optical tesseract / pupil / wavefront lab metaphors are **outside the claim set** ([exploratory repo](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes)) |
-| **N7** | This work is not peer reviewed |
+| **N7** | This is independent work |
 | **N8** | I do not claim a bound on $\sum m_\nu$; neutrino mass is not in the likelihood. See [`papers/neutrino-de-degeneracy-and-sigma-x.md`](../papers/neutrino-de-degeneracy-and-sigma-x.md) |
 
 ---

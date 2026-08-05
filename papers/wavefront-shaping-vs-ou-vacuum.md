@@ -65,7 +65,7 @@ Identifying
 \langle\delta g_{\mu\nu}(x) \delta g_{\alpha\beta}(x')\rangle \stackrel{?}{=} \sigma_X^2 e^{-\lvert x-x' \rvert/\xi} \times\text{(polarization structure)}
 
 
-with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO pipeline **does not** perform. The published bound $\sigma_X < 1.5\times 10^{-4}$ is **not** a free amplitude for arbitrary metric shear felt by photons.
+with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO pipeline **does not** perform. The published bound $\sigma_X < 1.5\times 10^{-4}$ (95% CL) is **not** a free amplitude for arbitrary metric shear felt by photons.
 
 ---
 

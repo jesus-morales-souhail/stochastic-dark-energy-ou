@@ -1,4 +1,4 @@
-# Act III routes 1–3 — numerical verdict
+# amplification routes 1–3 — numerical verdict
 
 | | |
 |:--|:--|
@@ -6,7 +6,7 @@
 | **Analysis** | Corpus July 2026 |
 | **Parent note** | [`papers/amplification-gap.md`](../../papers/amplification-gap.md) §6.3 |
 | **Scripts** | `scripts/amplification/route{1,2,3}_*.py`, `run_all_routes.py` |
-| **Status** | Machine-checked hygiene freeze of route scans. **Not a DESI detection claim.**  |
+| **Status** | Machine-checked hygiene freeze of route scans. **Not a DESI detection claim.** |
 
 I freeze here the **machine-checked** conclusions of the amplification-route scans.
 I do **not** invent a successful microphysical amplifier. This file is a numerical lock-in for theory bottlenecks — **not** a DESI claim that vacuum noise was seen.

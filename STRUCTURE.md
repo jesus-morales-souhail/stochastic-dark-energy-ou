@@ -16,8 +16,7 @@ local_archive/ Offline drafts (not part of the public scientific claim)
 **Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`
 **Exploratory repo (separate):** `../stochastic-de-exploratory-notes/`
 
-This layout is how I keep the claim set readable. The work is
-
+This layout is how I keep the claim set readable. 
 ---
 
 ## Narrative index (read with README.md)
@@ -52,7 +51,7 @@ This layout is how I keep the claim set readable. The work is
 
 | Path | Role |
 |------|------|
-| `papers/amplification-gap.md` | **Act III closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{57}$; amplifier audit |
+| `papers/amplification-gap.md` | **amplification closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{57}$; amplifier audit |
 | `papers/amplification-no-free-lunch.md` | Redirect stub → `amplification-gap.md` (old bookmarks) |
 | `papers/HONEST_HEADLINES.md` | Title discipline: do not claim vacuum energy was calculated |
 | `scripts/gap_two_targets.py` | Exact two-gap arithmetic |
@@ -62,7 +61,7 @@ This layout is how I keep the claim set readable. The work is
 | `scripts/amplification/route3_nonlinear_avalanche.py` | Route 3: double-well avalanche scan |
 | `scripts/amplification/run_all_routes.py` | Batch runner (`--heavy` for full CPU) |
 | `results/amplification_routes/` | CSV outputs of routes 1–3 |
-| `results/amplification_routes/VERDICT.md` | Machine-checked Act III table (N_eff, freeze gain, avalanche) |
+| `results/amplification_routes/VERDICT.md` | Machine-checked amplification table (N_eff, freeze gain, avalanche) |
 | `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` | Open-system half-life |
 | `papers/fundamental-vs-emergent-vacuum-relaxation.md` | Path-integrated residuals; regions F/E0–E3 |
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |
@@ -79,7 +78,7 @@ This layout is how I keep the claim set readable. The work is
 | `papers/data-pack-option0-internet.md` | arXiv numbers (Maus, Sakr, DESI MG/BAO) |
 | `scripts/slip_bridge.py` | Runnable $\sigma_X\to\|\gamma-1\|$ map; amplitude-starved verdict |
 
-### V — Method hygiene and closed wrong paths
+### V — Method notes and closed wrong paths
 
 | Path | Role |
 |------|------|
@@ -110,12 +109,12 @@ This layout is how I keep the claim set readable. The work is
 
 Every claim in this repository should be classifiable as one of:
 
-1. **BAO residual / model constraint** (Act I),
-2. **Geometric interpretation** of smoothness (Act II),
-3. **Amplification / Euclid protocol** (Act III),
-4. **Slip Option 0 with amplitude honesty** (Act IV), or
-5. **Explicit no-go / boundary** (Act V).
+1. **BAO residual / model constraint** (BAO residuals),
+2. **Geometric interpretation** of smoothness (Geometry notes),
+3. **Amplification / Euclid protocol** (amplification),
+4. **Slip Option 0 with amplitude honesty** (Slip / Option 0), or
+5. **Explicit no-go / boundary** (Closed wrong paths).
 
-Anything that is only a lab optics metaphor belongs in Act V or in the **separated** optics project — not in the DESI likelihood narrative.
+Anything that is only a lab optics metaphor belongs in Closed wrong paths or in the **separated** optics project — not in the DESI likelihood narrative.
 
 See **`README.md`** for the full story and reading order.

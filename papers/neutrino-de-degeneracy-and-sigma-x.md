@@ -1,7 +1,7 @@
 # Neutrino mass, dark energy, and our $\sigma_X$ null
 
-Jesús Morales Souhail  
-[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
+Jesús Morales Souhail
+[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 August 2026
 
 Planning note. No new fit. Not a DESI result of mine.
@@ -47,8 +47,8 @@ Under a free CPL background, DESI DR2 BAO (this pipeline) does not need a statio
 
 **What I will not say:**
 
-- that my $\sigma_X$ null constrains $\sum m_\nu$, or the reverse  
-- that $\sigma_X$ and $\sum m_\nu$ are the same operator (they are not; both just compete with the same smooth DE background)  
+- that my $\sigma_X$ null constrains $\sum m_\nu$, or the reverse
+- that $\sigma_X$ and $\sum m_\nu$ are the same operator (they are not; both just compete with the same smooth DE background)
 - that this note is a likelihood result (nothing new was fitted)
 
 ---

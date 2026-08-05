@@ -10,7 +10,7 @@
 
 ## What this note is
 
-I use this note to pin down a simple setup: highway speed, a millimetre aperture, Newton vs Einstein. I am **not** reporting a cosmological detection, and I am **not** claiming that a car or a pupil measures dark energy. The point is scale and operator discipline — the same hygiene I apply when I refuse wrong-scale claims in the BAO programme.
+I use this note to pin down a simple setup: highway speed, a millimetre aperture, Newton vs Einstein. I am **not** reporting a cosmological detection, and I am **not** claiming that a car or a pupil measures dark energy. The point is scale and operator discipline — the same hygiene I apply when I refuse wrong scale claims in the BAO programme.
 
 **Not included:** hypercubes, Coxeter $B_{4}$, or undeclared 4D optical engines.
 

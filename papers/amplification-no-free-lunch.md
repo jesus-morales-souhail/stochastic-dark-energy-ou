@@ -5,7 +5,7 @@
 ## Canonical document
 
 **→ [`amplification-gap.md`](amplification-gap.md)**
-*Amplification gap: Sorkin seed to BAO residual* (Act III closure)
+*Amplification gap: Sorkin seed to BAO residual* (amplification closure)
 
 **GitHub (stable):**
 https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/blob/main/papers/amplification-gap.md

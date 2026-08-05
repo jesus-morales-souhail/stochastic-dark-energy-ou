@@ -2,7 +2,7 @@
 
 **Author:** Jesús Morales Souhail
 **Date:** July 2026
-**Status:** Act III closure note — theory bottleneck, not a detection claim.
+**Status:** amplification gap — theory bottleneck, not a detection claim.
 **Filename:** `papers/amplification-gap.md`
 **Former name:** `papers/amplification-no-free-lunch.md` ([redirect stub](amplification-no-free-lunch.md))
 
@@ -17,17 +17,16 @@
 
 ---
 
-## 1. The only scientifically open front (after Acts I–II, IV–V)
+## 1. What is still open
 
-Acts I–II give me a **null residual** under the OU/QNM kernel and a **geometric candidate** (SDiff) for isotropic smoothness.
-Acts IV–V close **wrong operators** and **wrong scales** (slip amplitude starvation, Born/band-limit, tesseract $B_{4}$ seal, wavefront $T\neq$ OU).
+I already have a null residual under the OU/QNM kernel and a geometric candidate (SDiff) for isotropic smoothness. Other notes close wrong operators and wrong scales (slip amplitude, Born/band-limit, tesseract $B_{4}$, wavefront $T\neq$ OU).
 
-The corpus already names the remaining hole:
+The remaining hole is named elsewhere:
 
 > *This note does not … identify a microphysical amplifier from $10^{-61}$ to $10^{-5}$.*
 > — `fundamental-vs-emergent-vacuum-relaxation.md`
 
-Here I **fix that gap as a quantitative problem** and audit candidate amplifiers. I do **not** invent a successful mechanism.
+Here I fix that gap as a quantitative problem and audit candidate amplifiers. I do not invent a successful mechanism.
 
 ---
 
@@ -113,7 +112,7 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 | Gain $\sim 10^{56}$ from $\sigma_0$ alone | **Fails** — $e^{60}\sim 10^{26}$ is ~30 decades short of $10^{56}$ if one insists on starting from $\sigma_0$ |
 | Use $H/M_{\mathrm{Pl}}\sim 10^{-5}$ as the seed | **Changes the microphysical story** — no longer pure late-time Sorkin Poisson counting |
 | Late-time “horizon exit” analogue for a **homogeneous DE residual** $X(x)$ | **Not derived** — inflation applies to **perturbation modes** freezing outside the Hubble radius, not automatically to a background OU residual on $x=\ln a$ |
-| Compatibility with BAO smoothness | Any large residual after freeze-out must still satisfy $\sigma_X < 1.5\times 10^{-4}$ |
+| Compatibility with BAO smoothness | Any large residual after freeze-out must still satisfy $\sigma_X < 1.5\times 10^{-4}$ (95% CL) |
 
 **Honest statement:**
 (d) is worth a **separate theory paper** only if one (i) redefines the seed, (ii) derives a late-time freeze-out map for the DE residual, and (iii) re-runs BAO constraints on that map. It is **not** a patch that rescues $\sigma_0\sim 10^{-61}$ inside the current OU likelihood.
@@ -127,7 +126,7 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 
 ---
 
-## 5. How Act III sits in the five-act narrative
+## 5. How amplification sits in the five-act narrative
 
 | Act | Content | Amplification |
 |-----|---------|----------------|
@@ -174,7 +173,7 @@ Need detection-scale residual without free A0?
 ```
 
 **Recommended default for publication of the present corpus:**
-Act III closed as an **amplification gap on linear amplifiers** (no free gain factor across $\sim 10^{56}$); Routes 1–3 listed as **the only open theory cards**, each with a price.
+amplification closed as an **amplification gap on linear amplifiers** (no free gain factor across $\sim 10^{56}$); Routes 1–3 listed as **the only open theory cards**, each with a price.
 
 ### 6.3 Numerical scan results (HEAD — machine tables)
 
@@ -235,7 +234,7 @@ Potential $V=\tfrac14 a X^4-\tfrac12 b X^2$, $a\in\{1,10\}$, $b\in[10^{-6},0.1]$
 
 **Verdict R3:** In the soft-potential, late-$\Delta x=\mathcal{O}(1)$ window I scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains $\mathcal{O}(1)$. Large residuals require **large $\sigma$** (renaming free $A_0$) or a **new** regime $b \Delta x\gg 1$ / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free amplification inside the present corpus.
 
-#### Act III decision after the scan
+#### amplification decision after the scan
 
 ```
 Linear amplifiers (a–c,e) → closed (audit + exclusions)
@@ -287,5 +286,5 @@ The only amplifier class I still think deserves a *serious new theory exam* is a
 
 ---
 
-*End of Act III amplification-gap note.*
+*End of amplification amplification-gap note.*
 Jesús Morales Souhail · July 2026

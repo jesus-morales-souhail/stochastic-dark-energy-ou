@@ -11,7 +11,7 @@
 ## What this note is
 
 I answer three questions that sit at the boundary of optics and the stochastic DE repo. The goal is **analogy discipline**: what transfers, what does not.
-This file is method hygiene. It is **not** part of the peer-review abstract of the main manuscript. Please do **not** cite it as a DESI result.
+This file is method notes. It is **not** part of the peer-review abstract of the main manuscript. Please do **not** cite it as a DESI result.
 
 ---
 

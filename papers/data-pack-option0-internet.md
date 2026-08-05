@@ -96,7 +96,7 @@ Using $\sigma_X \sim 10^{-4}$, $\Omega_{\mathrm{DE}}/\Omega_m\sim 2$, $f=1$:
 
 ---
 
-## F) Closed wrong-scale experiment (local)
+## F) Closed wrong scale experiment (local)
 
 | Item | Value |
 |------|--------|

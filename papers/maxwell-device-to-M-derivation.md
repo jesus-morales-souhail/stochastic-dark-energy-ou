@@ -22,17 +22,17 @@ This is lab-optics hygiene, **not** a BAO residual result and **not** a DESI cla
 Source-free Maxwell in a non-magnetic dielectric $\varepsilon(\mathbf{r})$, monochromatic field
 $\mathfrak{E}(\mathbf{r},t)=\mathrm{Re}[E(\mathbf{r})e^{-i\omega t}]$, gives the Helmholtz equation
 
-$$
+
 (\nabla^{2}+k^{2}n^{2}(\mathbf{r}))E=0,\qquad k=\omega/c.
-$$
+
 
 Write $E(\mathbf{r}_{\perp},z)=e^{ikz}u(\mathbf{r}_{\perp},z)$ and assume paraxial propagation
 ($|\partial_{z}^{2}u|\ll k|\partial_{z}u|$). The slow envelope obeys the paraxial wave equation
 (Schrödinger form, $z$ as “time”, mass $k$):
 
-$$
+
 \partial_{z}u=\frac{i}{2k}\nabla_{\perp}^{2}u+(\text{index terms}).
-$$
+
 
 Free space ($n=1$) is the first term alone.
 
@@ -42,13 +42,13 @@ Free space ($n=1$) is the first term alone.
 
 The solution is a linear operator on $L^{2}(\mathbb{R}^{2})$:
 
-$$
+
 (P_{d}u)(\mathbf{r}'_{\perp})
 =\frac{k}{2\pi i d}
 \int\mathrm{d}^{2}r_{\perp}\,
 \exp\!\Big(i k|\mathbf{r}'_{\perp}-\mathbf{r}_{\perp}|^{2}/(2d)\Big)\,
 u(\mathbf{r}_{\perp}).
-$$
+
 
 $P_{d}$ is unitary. It is the **metaplectic** quantisation of the ray matrix
 $\bigl(\begin{smallmatrix}1&d\\0&1\end{smallmatrix}\bigr)$. This is free-space transfer;
@@ -60,9 +60,9 @@ nothing beyond Maxwell + the paraxial approximation was used.
 
 A thin element of optical thickness adds a phase $\Phi(\mathbf{r}_{\perp})$:
 
-$$
+
 (L_{\Phi}u)(\mathbf{r}_{\perp})=e^{i\Phi(\mathbf{r}_{\perp})}u(\mathbf{r}_{\perp}).
-$$
+
 
 A thin lens of focal length $f$ is the quadratic specialisation
 $\Phi_{f}=-k|\mathbf{r}_{\perp}|^{2}/(2f)$. A general phase-only SLM is an *arbitrary*
@@ -74,10 +74,10 @@ $\Phi(\mathbf{r}_{\perp})$ — **not**, in general, a $2\times 2$ matrix.
 
 A device is a sequence of phase screens and free propagations:
 
-$$
+
 M_{\mathrm{device}}
 =P_{d_{n}}L_{\Phi_{n-1}}\cdots P_{d_{2}}L_{\Phi_{1}}P_{d_{1}},
-$$
+
 
 a composition of Fresnel kernels with phase insertions — i.e. an **integral operator** on the field, not a matrix, unless every $\Phi$ is quadratic.
 
@@ -88,7 +88,7 @@ $(\mathbf{r}_{\perp},\boldsymbol{\theta})$ and reduces to a symplectic matrix
 $M=\bigl(\begin{smallmatrix}A&B\\C&D\end{smallmatrix}\bigr)\in\mathrm{Sp}(2,\mathbb{R})$,
 with the closed-form kernel (Collins integral)
 
-$$
+
 u_{\mathrm{out}}(\mathbf{r}'_{\perp})
 =\frac{1}{i\lambda B}
 \int\mathrm{d}^{2}r_{\perp}\,
@@ -100,7 +100,7 @@ A|\mathbf{r}_{\perp}|^{2}
 \big)
 \Big]
 u_{\mathrm{in}}.
-$$
+
 
 Free propagation $d$ and thin lens $f$ give the textbook factors
 $P_{d}=\bigl(\begin{smallmatrix}1&d\\0&1\end{smallmatrix}\bigr)$,
@@ -108,9 +108,9 @@ $L_{f}=\bigl(\begin{smallmatrix}1&0\\-1/f&1\end{smallmatrix}\bigr)$;
 the imaging condition $B_{\mathrm{tot}}=0$ is Descartes $1/s_{o}+1/s_{i}=1/f$.
 For two transverse planes $(x,\theta_{x},y,\theta_{y})$ the matrix is $4\times 4$ symplectic:
 
-$$
+
 M\in\mathrm{Sp}(4,\mathbb{R}).
-$$
+
 
 That is the only legitimate “4D” object I accept from this derivation.
 
@@ -121,7 +121,7 @@ Result:
 
 ```
 q_ABCD = 0.11554 + 0.08677 i
-q_num  = 0.11554 + 0.08677 i -> relative error 2.2e-13
+q_num = 0.11554 + 0.08677 i -> relative error 2.2e-13
 ```
 
 The device operator *is* the ABCD action on the mode, to machine precision.
@@ -145,9 +145,9 @@ This is the actual controllable dimension. It is set by the device, not by the d
 The tesseract is the 4-cube $\{|x_{i}|\le 1\}\subset\mathbb{R}^{4}$; its boundary has 8 cubic cells.
 Its Coxeter group $B_{4}$ (hyperoctahedral, signed permutations of four coordinates) has order
 
-$$
+
 \lvert B_{4}\rvert = 2^{4}\cdot 4! = 384.
-$$
+
 
 The question is whether $B_{4}$ enters §§1–4. It can, in exactly one way: **as a discrete symmetry of the optical phase space**
 $(x,\theta_{x},y,\theta_{y})\cong\mathbb{R}^{4}$, i.e. as a subgroup of $\mathrm{Sp}(4,\mathbb{R})$.
@@ -157,10 +157,10 @@ so the symmetry reduces the available operator to the group-invariant subalgebra
 **Verification (check 3).** Enumerate all 384 signed-permutation matrices; keep only those preserving the optical symplectic form
 $J=\mathrm{blockdiag}(J_{2},J_{2})$:
 
-$$
+
 \lvert B_{4}\cap\mathrm{Sp}(4,\mathbb{R})\rvert = 32
 \quad\text{(only 32 of 384 preserve the symplectic structure).}
-$$
+
 
 ```
 |B4| = 384
@@ -179,17 +179,17 @@ The combinatorial counts of the 4-cube (8 cells / 16 vertices / 24 faces / 32 ed
 
 Starting from Maxwell and a physical device (phase screen + propagation, optional spectral shaping), the derived transfer operator is
 
-$$
+
 M_{\mathrm{device}}
 =P_{d_{n}}L_{\Phi_{n-1}}\cdots L_{\Phi_{1}}P_{d_{1}}
 \in\mathcal{U}\big(L^{2}(\mathbb{R}^{2})\big),
-$$
+
 
 with the quadratic (first-order) specialisation
 
-$$
+
 M\in\mathrm{Sp}(4,\mathbb{R})
-$$
+
 
 and the controllable dimension $N_{\mathrm{pix}}\,[\times N_{\omega}]$.
 

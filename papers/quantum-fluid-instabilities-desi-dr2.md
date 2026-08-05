@@ -9,7 +9,7 @@ Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ## Abstract
 
-Recent DESI DR2 BAO data show no evidence for a stochastic component on top of a smooth dynamical dark energy evolution, establishing the upper limit $\sigma_X < 1.5\times10^{-4}$ for an Ornstein–Uhlenbeck process (Morales Souhail, 2026). Here I test whether a dark-energy fluid with negative effective mass ($m^{\ast} < 0$) and quartic self-interaction can generate such fluctuations. Starting from a modified Gross–Pitaevskii equation, I derive the Bogoliubov dispersion relation and identify a dynamical instability with maximum growth rate $\Gamma_{\text{max}} = g\lvert\psi_0\rvert^{2}/\hbar \equiv 1/t_c$. The instability amplifies primordial seeds as $\sigma_X(t) = \sigma_0 e^{t/t_c}$. I construct the exact covariance matrix induced by this coherent growing mode and perform a Maximum Likelihood Estimation directly on the DESI DR2 BAO data. The model is strongly disfavoured: the log-likelihood drops by $\Delta\ln\mathcal{L} = -11.35$ relative to $\Lambda$CDM ($\Delta\chi^2 \approx +22.7$). The data exclude any finite collapse time $t_c$; the only acceptable limit is $t_c \to \infty$, which corresponds to no growth. Thus, a globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals.
+Recent DESI DR2 BAO data show no evidence for a stochastic component on top of a smooth dynamical dark energy evolution, establishing the upper limit $\sigma_X < 1.5\times10^{-4}$ (95% CL) for an Ornstein–Uhlenbeck process (Morales Souhail, 2026). Here I test whether a dark-energy fluid with negative effective mass ($m^{\ast} < 0$) and quartic self-interaction can generate such fluctuations. Starting from a modified Gross–Pitaevskii equation, I derive the Bogoliubov dispersion relation and identify a dynamical instability with maximum growth rate $\Gamma_{\text{max}} = g\lvert\psi_0\rvert^{2}/\hbar \equiv 1/t_c$. The instability amplifies primordial seeds as $\sigma_X(t) = \sigma_0 e^{t/t_c}$. I construct the exact covariance matrix induced by this coherent growing mode and perform a Maximum Likelihood Estimation directly on the DESI DR2 BAO data. The model is strongly disfavoured: the log-likelihood drops by $\Delta\ln\mathcal{L} = -11.35$ relative to $\Lambda$CDM ($\Delta\chi^2 \approx +22.7$). The data exclude any finite collapse time $t_c$; the only acceptable limit is $t_c \to \infty$, which corresponds to no growth. Thus, a globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals.
 
 ---
 
@@ -131,7 +131,7 @@ I fix $\sigma_0 = 10^{-61}$ (as in Axiom A2 of the companion OU paper) and scan 
 \Delta\ln\mathcal{L} = \ln\mathcal{L}(t_c) - \ln\mathcal{L}_{\Lambda\text{CDM}} = -11.35,
 
 
-corresponding to $\Delta\chi^2 \approx +22.7$ for one extra parameter ($t_c$). This excludes the coherent growing-mode model at high significance. The OU-derived limit $\sigma_X < 1.5\times10^{-4}$ is not applicable here, as it assumes a stationary variance structure.
+corresponding to $\Delta\chi^2 \approx +22.7$ for one extra parameter ($t_c$). This excludes the coherent growing-mode model at high significance. The OU-derived limit $\sigma_X < 1.5\times10^{-4}$ (95% CL) is not applicable here, as it assumes a stationary variance structure.
 
 ---
 

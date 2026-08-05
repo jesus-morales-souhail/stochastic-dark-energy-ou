@@ -10,7 +10,7 @@ Archived script (not production science): `local_archive/.../quantum_information
 
 ## What this note is
 
-I keep this no-go so I do not mix optical tesseract schemes into cosmology papers. Items below are method hygiene. They are **outside** the peer-review claim set of the BAO residual programme. Do **not** cite this file as a DESI result.
+I keep this no-go so I do not mix optical tesseract schemes into cosmology papers. Items below are method notes. They are **outside** the peer-review claim set of the BAO residual programme. Do **not** cite this file as a DESI result.
 
 ---
 
@@ -41,10 +41,10 @@ A band-limited function can, on a finite interval, oscillate faster than its hig
 
 A standard structural fact of superoscillations: the more extreme the local superoscillation (tighter sub-wavelength focus), the **smaller** the fraction of $L^{2}$-norm in the core relative to the side lobes. Schematically:
 
-$$
+
 \frac{E_{\mathrm{core}}}{E_{\mathrm{total}}} \ll 1
 \qquad\text{(often exponentially small in the “how super” parameter).}
-$$
+
 
 For a single photon, the Born rule identifies $|\psi|^{2}$ with detection probability. If the classical energy fraction in the core is $\varepsilon$, the single-shot probability of detection in the core is of order $\varepsilon$, not $\sim 1$.
 
@@ -70,10 +70,10 @@ $\lvert B_{4}\rvert = 4!\cdot 2^{4} = 384$ signed permutations of $\mathbb{R}^{4
 **Sealed count (optical phase space, first order):**
 On the paraxial phase space $(x,p_x,y,p_y)$ with symplectic form
 
-$$
+
 J=\mathrm{blockdiag}(J_2,J_2),\qquad
 J_2=\begin{pmatrix}0&1\\-1&0\end{pmatrix},
-$$
+
 
 exactly **32** of the 384 signed permutations satisfy $M J M^{\mathsf{T}}=J$
 (check: $4\times 4\times 2=32$ — symplectic rotations in each plane plus exchange of the two planes with compatible signs).
@@ -86,15 +86,15 @@ Runnable verification: `scripts/b4_symplectic_count.py`.
 **What the device actually is (Maxwell → ABCD):**
 Paraxial Helmholtz $\to$ Fresnel propagators $P_d$ (metaplectic) + thin phase screens $L_\Phi$ (e.g. SLM).
 Composition $M=P_{d_n}L_{\Phi_{n-1}}\cdots L_{\Phi_1}P_{d_1}$.
-If every $\Phi$ is quadratic, $$$M\in\mathrm{Sp}(4,\mathbb{R})$ (Collins kernel); the imaging condition $B_{\mathrm{tot}}=0$ recovers Descartes.
-Controllable DOF of a phase-only SLM: $N_{\mathrm{pix}}$ (e.g. $1920\times 1080$) times spectral bins if used — **hardware**, not 8/16/24/32 from the 4-cube.
+If every $\Phi$ is quadratic, $M\in\mathrm{Sp}(4,\mathbb{R})$(Collins kernel); the imaging condition$B_{\mathrm{tot}}=0$recovers Descartes.
+Controllable DOF of a phase-only SLM:$N_{\mathrm{pix}}$(e.g.$1920\times 1080$) times spectral bins if used — **hardware**, not 8/16/24/32 from the 4-cube.
 
 **Not shown in tesseract proposals:**
 
-- A map from “8 projected cubes” to a physical field $E(\mathbf{r},t)$ obeying Maxwell that *extends* $\mathrm{Sp}(4,\mathbb{R})$ or $N_{\mathrm{pix}}$.
+- A map from “8 projected cubes” to a physical field$E(\mathbf{r},t)$obeying Maxwell that *extends*$\mathrm{Sp}(4,\mathbb{R})$or$N_{\mathrm{pix}}$.
 - Any advantage over standard phase conjugation / holography / Fourier optics.
 
-This is the same **pattern of undeclared power** as in the archived script `quantum_information_cosmos.py`: take a clean mathematical object ($\ln 4$, $B_{4}$) and **declare** it sets a physical frequency or optical control law without derivation.
+This is the same **pattern of undeclared power** as in the archived script `quantum_information_cosmos.py`: take a clean mathematical object ($\ln 4$,$B_{4}$) and **declare** it sets a physical frequency or optical control law without derivation.
 
 ### 3.3 Decoherence is secondary to Born
 
@@ -108,25 +108,23 @@ Thermal index fluctuations and inelastic scattering do destroy phase conjugation
 
 **Assumptions**
 
-1. Propagation is linear, band-limited (effective $|k|\le k_{\max}$).
-2. Detection of one photon is described by a POVM / Born rule from a normalized field mode $\psi$.
-3. The “sub-Airy core” is a region $C$ with $\int_C |\psi|^{2}=\varepsilon\ll 1$ for any superoscillatory design that meaningfully beats the diffraction scale on $C$.
+1. Propagation is linear, band-limited (effective$|k|\le k_{\max}$).
+2. Detection of one photon is described by a POVM / Born rule from a normalized field mode$\psi$.
+3. The “sub-Airy core” is a region$C$with$\int_C |\psi|^{2}=\varepsilon\ll 1$for any superoscillatory design that meaningfully beats the diffraction scale on$C$.
 
 **Conclusion**
 
-No choice of deterministic pre-phase (tesseract-inspired or otherwise) that yields such a $\psi$ can make the single-shot detection probability in $C$ approach 1 without either:
+No choice of deterministic pre-phase (tesseract-inspired or otherwise) that yields such a$\psi$can make the single-shot detection probability in$C$approach 1 without either:
 
 - abandoning band-limitation / Maxwell in free space, or
 - post-selecting / discarding trials (which reintroduces the energy cost as failed shots), or
 - changing the definition of “success” (e.g. classical multi-photon intensity peaks without single-photon certainty).
 
-### 4.2 First-order device symmetry: $B_{4}$ versus $\mathrm{Sp}(4,\mathbb{R})$
+### 4.2 First-order device symmetry:$B_{4}$versus$\mathrm{Sp}(4,\mathbb{R})$**Assumptions:** paraxial phase-space maps in$\mathrm{Sp}(4,\mathbb{R})$; candidate “tesseract symmetry” = signed-permutation action of$B_{4}$on$\mathbb{R}^{4}$.
 
-**Assumptions:** paraxial phase-space maps in $\mathrm{Sp}(4,\mathbb{R})$; candidate “tesseract symmetry” = signed-permutation action of $B_{4}$ on $\mathbb{R}^{4}$.
+**Facts (machine-checked):** 32 of 384 elements of$B_{4}$are optical-symplectic; their commutant in$\mathfrak{sp}(4,\mathbb{R})$has dimension **1**.
 
-**Facts (machine-checked):** 32 of 384 elements of $B_{4}$ are optical-symplectic; their commutant in $\mathfrak{sp}(4,\mathbb{R})$ has dimension **1**.
-
-**Conclusion:** Imposing $B_{4}$ as a symmetry **restricts** first-order devices ($10\to 1$ free directions in the Lie algebra, up to that commutant). It cannot be a derivation of **extra** independent optical channels equal to the number of cells or vertices of the 4-cube. Any claim “8 cells → 8 channels” confuses **polytope combinatorics** with **operator rank**.
+**Conclusion:** Imposing$B_{4}$as a symmetry **restricts** first-order devices ($10\to 1$free directions in the Lie algebra, up to that commutant). It cannot be a derivation of **extra** independent optical channels equal to the number of cells or vertices of the 4-cube. Any claim “8 cells → 8 channels” confuses **polytope combinatorics** with **operator rank**.
 
 ---
 
@@ -140,7 +138,7 @@ No choice of deterministic pre-phase (tesseract-inspired or otherwise) that yiel
 | Deterministic single-photon sub-Airy “hit every time” | **No-go** under Born + band-limit |
 | Tesseract as superior phase engine | **Unsupported claim** |
 
-A clean PC-scale project (no ad hoc free-parameter tuning): run `scripts/superoscillation_energy_cost_demo.py` and report $E_{\mathrm{core}}/E_{\mathrm{total}}$ vs bandwidth — **confirming** the tax, not bypassing it.
+A clean PC-scale project (no ad hoc free-parameter tuning): run `scripts/superoscillation_energy_cost_demo.py` and report$E_{\mathrm{core}}/E_{\mathrm{total}}$vs bandwidth — **confirming** the tax, not bypassing it.
 
 ---
 
@@ -148,6 +146,6 @@ A clean PC-scale project (no ad hoc free-parameter tuning): run `scripts/superos
 
 The **publishable** content of this repo is BAO residual limits, model exclusion (e.g. tachyonic fluid), and Option 0 on anisotropic slip (which **inherits** the amplification problem). Optical tesseract schemes are **out of scope** and should not be mixed into DESI/SDiff papers.
 
-I apply the same methodological standard: no elegant object ($\ln 4$, $B_{4}$, SDiff) gets observational power without a derived map to a measurable and an honest amplitude estimate.
+I apply the same methodological standard: no elegant object ($\ln 4$,$B_{4}$, SDiff) gets observational power without a derived map to a measurable and an honest amplitude estimate.
 
 This note itself is **not** a DESI claim.

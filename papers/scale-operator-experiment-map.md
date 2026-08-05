@@ -16,7 +16,7 @@
 
 ## What this note is
 
-I use this map so I do not waste effort on wrong-scale or wrong-operator experiments. The car–drone–pupil and optics branches here are **pedagogy**. Cosmology rows point to the main pipeline; this document itself is **not** a DESI discovery paper.
+I use this map so I do not waste effort on wrong scale or wrong-operator experiments. The car–drone–pupil and optics branches here are **pedagogy**. Cosmology rows point to the main pipeline; this document itself is **not** a DESI discovery paper.
 
 ---
 

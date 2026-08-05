@@ -38,4 +38,4 @@ This file is about language discipline — for me, for emails, for anyone sharin
 > How far quantum vacuum noise is from being seen: a factor $\sim 10^{56}$ to Euclid-scale residuals — checked two ways that hit the same wall.
 
 **Shorter abstract for sharing**
-> I do not compute a new vacuum energy density. I bound late-time DE residuals with DESI DR2 ($\sigma_X<1.5\times 10^{-4}$, 95% CL), exclude coherent tachyonic growth, and show that a pure Sorkin seed sits $\sim 10^{56}$–$10^{57}$ below residual scales — a gap soft amplifiers do not close.
+> I do not compute a new vacuum energy density. I bound late-time DE residuals with DESI DR2 ($\sigma_X<1.5\times 10^{-4}$ (95% CL), 95% CL), exclude coherent tachyonic growth, and show that a pure Sorkin seed sits $\sim 10^{56}$–$10^{57}$ below residual scales — a gap soft amplifiers do not close.

@@ -282,7 +282,7 @@ For every $\theta$ in Section 4, and for both $\Delta x=0.94$ (DESI) and $\Delta
 
 ### 5.2 What DESI actually bounds
 
-The limit $\sigma_X<1.5\times 10^{-4}$ constrains the **effective late-time amplitude** — after any amplification, non-linear growth, or non-Sorkin noise — not the bare $\sigma_0$.
+The limit $\sigma_X<1.5\times 10^{-4}$ (95% CL) constrains the **effective late-time amplitude** — after any amplification, non-linear growth, or non-Sorkin noise — not the bare $\sigma_0$.
 
 ### 5.3 Amplification required for detectability
 

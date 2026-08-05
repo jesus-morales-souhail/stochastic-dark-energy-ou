@@ -64,12 +64,12 @@ Lab optics, tesseract slogans, and undeclared free powers are documented and kep
 ## Layout
 
 ```
-manuscript/   preprint and claims
-papers/       technical notes
-scripts/      analysis code
-data/         local DESI products (public provenance)
-results/      numerical outputs
-notes/        working notes
+manuscript/ preprint and claims
+papers/ technical notes
+scripts/ analysis code
+data/ local DESI products (public provenance)
+results/ numerical outputs
+notes/ working notes
 ```
 
 See [`STRUCTURE.md`](STRUCTURE.md) if present for more detail.
