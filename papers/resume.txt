@@ -14,7 +14,7 @@ Narrative cohesion (how papers fit): see repository README.md
     R2: freeze gain = 1.000; rms/sigma = O(1)  — dead as amplifier alone
     R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; BAO-safe if sigma ≲ 4e-5
   Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~1e-4 best case; O(1e2-1e3)x starved)
-  External lab optics: ~/Proyectos/04_Optica_medios_complejos/ (NOT this paper)
+  External lab optics: separate optics project (NOT this paper)
 Data pack (arXiv links): papers/data-pack-option0-internet.md
 
 ================================================================================

@@ -1,5 +1,3 @@
-/home/ashpokemon/proyectos/stochastic-dark-energy-ou/scripts/ou_bao_likelihood.py:582: SyntaxWarning: invalid escape sequence '\D'
-  ax.set_title('rExclusion Plot: $\Delta\log L$ vs $\Lambda$CDM')
 ======================================================================
 STOCHASTIC DARK ENERGY — OU + QNM KERNEL TEST
 ======================================================================

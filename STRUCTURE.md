@@ -101,8 +101,7 @@ This layout is how I keep the claim set readable. The work is
 
 | Path | Content |
 |------|---------|
-| `../stochastic-de-exploratory-notes/` | Optics / scale-operator pedagogy and no-gos |
-| `~/Proyectos/04_Optica_medios_complejos/` | Lab transmission-matrix wavefront shaping experiment |
+| [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) | Optics notes and scale-operator checks |
 | `papers/EXPLORATORY_BOUNDARY.md` | Fence between claims and digressions |
 
 ---
