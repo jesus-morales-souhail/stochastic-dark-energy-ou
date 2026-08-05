@@ -92,7 +92,7 @@ Every closed channel that looked like a shortcut — anisotropic slip, casual GR
 **Reference:** C. Gordon & D. Wands, Phys. Rev. D **71**, 123505 (2005); arXiv:[astro-ph/0504132](https://arxiv.org/abs/astro-ph/0504132).
 **Theory-repo expansion:** [measurable-stochastic-vacuum `inflation-spectator-seed-gordon-wands.md`](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum/blob/main/papers/inflation-spectator-seed-gordon-wands.md).
 
-They **do not** start from Sorkin $\sigma_0\sim 10^{-61}$. Light spectator: $\mathcal{P}_Q^{1/2}=H_{\mathrm{inf}}/(2\pi)$. For *their* large isocurvature / quadrupole target, frozen evolution conflicts with tensor bounds; they require $\delta Q_f/\delta Q_i>45$ (Mexican-hat radial roll) — **factor $\sim 45$**, not $10^{56}$.
+They **do not** start from Sorkin $\sigma_0\sim 10^{-61}$. Light spectator: $\mathcal{P}_Q^{1/2}=H_{\mathrm{inf}}/(2\pi)$. For *their* large isocurvature / quadrupole target, frozen evolution conflicts with tensor bounds; they require $\delta Q_f/\delta Q_i>45$(Mexican-hat radial roll) — **factor $\sim 45$**, not $10^{56}$.
 
 I do **not** equate that “tachyonic” roll with the **excluded** coherent GPE/tachyonic residual on BAO in this corpus (different seed, different observable, different math).
 I do **not** claim it closes DESI residual detectability without a new seed→BAO map.
@@ -195,7 +195,7 @@ Pure Poisson counting $\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}$:
 
 Implied local scale if $N_{\mathrm{eff}}=N_{\mathrm{BH}}(L/R_H)^p$ (order-of-magnitude only):
 
-| Target | $p=2$ (area) $L$ | $p=3$ (volume) $L$ | $p=4$ (4-vol) $L$ |
+| Target | $p=2$ (area) $L$ | $p=3$ (volume) $L$ | $p=4$(4-vol) $L$ |
 |--------|----------------------|------------------------|------------------------|
 | DESI $N_{\mathrm{eff}}\sim 4.4\times 10^{7}$ | $\sim 10^{-31} \mathrm{m}$ | $\sim 10^{-12} \mathrm{m}$ | $\sim\mathrm{mm}$ |
 | Euclid $N_{\mathrm{eff}}\sim 10^{10}$ | $\sim 10^{-30} \mathrm{m}$ | $\sim 10^{-11} \mathrm{m}$ | $\sim\mathrm{cm}$ |
@@ -229,8 +229,8 @@ Potential $V=\tfrac14 a X^4-\tfrac12 b X^2$, $a\in\{1,10\}$, $b\in[10^{-6},0.1]$
 | BAO-unsafe ($\mathrm{p95}\ge 1.5\times 10^{-4}$) | **72 / 288** — **all** have $\sigma\gtrsim 1.2\times 10^{-4}$ |
 | Euclid window $10^{-5}\le\mathrm{p95}<1.5\times 10^{-4}$ | 72 jobs — residual still $\sim\sigma$, not seed-triggered |
 
-**BAO-safe rule of thumb in this scan:** keep drive noise $\sigma\lesssim 4\times 10^{-5}$ (p95 stays below DESI ceiling for all $(a,b)$ tested).
-**BAO-unsafe:** $\sigma\gtrsim 1.2\times 10^{-4}$ → p95 exceeds DESI for **every** $(a,b)$.
+**BAO-safe rule of thumb in this scan:** keep drive noise $\sigma\lesssim 4\times 10^{-5}$ (p95 stays below DESI ceiling for all $ (a,b)$ tested).
+**BAO-unsafe:** $\sigma\gtrsim 1.2\times 10^{-4}$ → p95 exceeds DESI for **every** $ (a,b)$.
 
 **Verdict R3:** In the soft-potential, late-$\Delta x=\mathcal{O}(1)$ window I scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains $\mathcal{O}(1)$. Large residuals require **large $\sigma$** (renaming free $A_0$) or a **new** regime $b \Delta x\gg 1$ / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free amplification inside the present corpus.
 

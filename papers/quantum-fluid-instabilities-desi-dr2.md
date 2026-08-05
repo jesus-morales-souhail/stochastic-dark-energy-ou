@@ -37,7 +37,7 @@ with the self-interaction potential
 V(\psi) = \frac{1}{2}(m^{\ast})^{2}\lvert\psi\rvert^{2} + \frac{g}{2}\lvert\psi\rvert^{4},
 
 
-where $(m^{\ast})^{2} < 0$ (tachyonic mass) and $g > 0$. In the mean-field approximation, the dynamics of the condensate wavefunction $\psi(\mathbf{x},t)$ is governed by the modified Gross–Pitaevskii equation (GPE) in an expanding universe:
+where $ (m^{\ast})^{2} < 0$ (tachyonic mass) and $g > 0$. In the mean-field approximation, the dynamics of the condensate wavefunction $\psi(\mathbf{x},t)$ is governed by the modified Gross–Pitaevskii equation (GPE) in an expanding universe:
 
 
 i\hbar \frac{\partial\psi}{\partial t} = \left[ -\frac{\hbar^{2}}{2m^{\ast} a^{2}(t)} \nabla^{2} + V_{\text{ext}}(\mathbf{x}) + g\lvert\psi\rvert^{2} \right] \psi,
@@ -128,9 +128,8 @@ with $\mathbf{r} = \boldsymbol{\alpha}_{\mathrm{obs}} - \mathbf{1}$.
 I fix $\sigma_0 = 10^{-61}$ (as in Axiom A2 of the companion OU paper) and scan over $t_c$. The likelihood is maximised only as $t_c \to \infty$ (i.e., no growth). For any finite $t_c$, the fit is significantly worse. The best-finite-$t_c$ case yields
 
 
-\Delta\ln\mathcal{L} = \ln\mathcal{L}(t_c) - \ln\mathcal{L}_{\Lambda\text{CDM}} = -11.35,
-
-
+$$\Delta\ln\mathcal{L} = \ln\mathcal{L}(t_c) - \ln\mathcal{L}_{\Lambda\text{CDM}} = -11.35,
+$$
 corresponding to $\Delta\chi^2 \approx +22.7$ for one extra parameter ($t_c$). This excludes the coherent growing-mode model at high significance. The OU-derived limit $\sigma_X < 1.5\times10^{-4}$ (95% CL) is not applicable here, as it assumes a stationary variance structure.
 
 ---

@@ -35,7 +35,7 @@ Global horizon count $N_{\mathrm{BH}}\sim 10^{122}$ is larger by $\sim 10^{112}$
 
 | Check | Result |
 |:------|:-------|
-| $\mathrm{rms}/\sigma$ | $0.36$–$0.97$ ($\mathcal{O}(1)$) |
+| $\mathrm{rms}/\sigma$ | $0.36$–$0.97$($\mathcal{O}(1)$) |
 | Freeze vs restore ratio | $1.000$ (no freeze bonus at $\Delta x\sim\mathcal{O}(1)$) |
 | Residual scaling | $\propto\sigma$ |
 

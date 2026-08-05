@@ -101,7 +101,7 @@ I track:
 - position variance $\mathrm{Var}(q)$ with $q=(a+a^\dagger)/\sqrt{2}$;
 - the anomalous correlator $\lvert\langle a^2\rangle\rvert$.
 
-The first two quantities oscillate because free evolution rotates the squeeze ellipse in the $(q,p)$ plane. The modulus $\lvert\langle a^2\rangle\rvert$ isolates the **loss of squeezing** without that kinematic rotation.
+The first two quantities oscillate because free evolution rotates the squeeze ellipse in the $ (q,p)$ plane. The modulus $\lvert\langle a^2\rangle\rvert$ isolates the **loss of squeezing** without that kinematic rotation.
 
 ### 2.3 Result
 
@@ -231,7 +231,7 @@ One should **not** impose $\gamma=H_0$ by hand. That equality holds if and only 
 \theta=\ln 2\simeq 0.693, \qquad \gamma=(\ln 2) H_0.
 
 
-For a half-life equal to the $\Lambda$CDM age $t_0\simeq 13.8 \mathrm{Gyr}$ at the paper fiducial, $\theta\simeq 0.73$.
+For a half-life equal to the $\Lambda$CDM age $ t_0\simeq 13.8 \mathrm{Gyr}$ at the paper fiducial, $\theta\simeq 0.73$.
 
 ### 4.3 Repository $\theta$ values translated to $t_{1/2}$
 

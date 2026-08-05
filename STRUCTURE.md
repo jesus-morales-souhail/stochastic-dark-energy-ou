@@ -30,7 +30,7 @@ This layout is how I keep the claim set readable.
 | `papers/quantum-fluid-instabilities-desi-dr2.md` | Tachyonic fluid exclusion |
 | `papers/sensitivity_kernel_table.md` | BAO sensitivity kernel $S(z)$ |
 | `scripts/ou_bao_likelihood.py` | OU / QNM residual kernel |
-| `scripts/eos_efectiva.py` | CPL background + nested $(\sigma,\theta)$ |
+| `scripts/eos_efectiva.py` | CPL background + nested $ (igma,\theta)$ |
 | `scripts/ou_bao_stochastic_test.py` | Alternate OU/QNM pipeline |
 | `scripts/joint_w0wa_sigma_desi.py` | Joint $\{w_0,w_a,\sigma_X\}$ |
 | `scripts/profile_sigma_x_desi.py` | Profile likelihood for $\sigma_X$ |

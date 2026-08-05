@@ -15,19 +15,18 @@ DESI’s own neutrino analysis (DR2 BAO + CMB) reports roughly:
 | Setup | $\sum m_\nu$ (95% CL) |
 |-------|------------------------|
 | $\Lambda$CDM | $< 0.064\,\mathrm{eV}$ |
-| $w_0 w_a$CDM (dynamical DE) | $< 0.16\,\mathrm{eV}$ |
+| $w_0 w_a$ CDM (dynamical DE) | $< 0.16\,\mathrm{eV}$ |
 
-Lab oscillations put a floor near $\sum m_\nu \gtrsim 0.059\,\mathrm{eV}$ for normal ordering. In $\Lambda$CDM the cosmological ceiling sits almost on that floor; inverted ordering is under pressure. Open the dark-energy equation of state and the ceiling rises by about a factor of 2.5. That is a published degeneracy between $(w_0,w_a)$ and $\sum m_\nu$, not something I invented.
+Lab oscillations put a floor near $\sum m_\nu \gtrsim 0.059\,\mathrm{eV}$ for normal ordering. In $\Lambda$CDM the cosmological ceiling sits almost on that floor; inverted ordering is under pressure. Open the dark-energy equation of state and the ceiling rises by about a factor of 2.5. That is a published degeneracy between $ (w_0,w_a)$ and $\sum m_\nu$, not something I invented.
 
 ---
 
 My joint on public DESI DR2 BAO (`joint_w0wa_sigma_desi.py`) varies
 
-$$
-\{w_0,\,w_a,\,\theta,\,\sigma_X\}
+$$\{w_0,\,w_a,\,\theta,\,\sigma_X\}
 $$
 
-with an OU residual kernel on $\alpha_{\mathrm{obs}}-\alpha_{\mathrm{pred}}(w_0,w_a)$. It does **not** vary $\sum m_\nu$. The MLE I already have is $(w_0,w_a)\approx(-0.99,-0.016)$ and $\sigma_X\to 0$.
+with an OU residual kernel on $\alpha_{\mathrm{obs}}-\alpha_{\mathrm{pred}}(w_0,w_a)$. It does **not** vary $\sum m_\nu$. The MLE I already have is $ (w_0,w_a)\approx(-0.99,-0.016)$ and $\sigma_X\to 0$.
 
 So:
 
@@ -37,7 +36,7 @@ So:
 | $w_0,w_a$ | CPL dark energy | dimensionless | yes |
 | $\sum m_\nu$ | total neutrino mass | eV | **no** |
 
-I have looked at how $\sigma_X$ trades with a free CPL background. I have **not** re-derived DESI’s $\sum m_\nu$–$(w_0,w_a)$ result. BAO alone is a weak handle on neutrino mass anyway: distances, not the growth suppression that massive neutrinos leave. Dumping $\sum m_\nu$ into this likelihood without CMB or growth would mostly recover the prior. That is easy to dress up as a “bound.” I will not.
+I have looked at how $\sigma_X$ trades with a free CPL background. I have **not** re-derived DESI’s $\sum m_\nu$–$ (w_0,w_a)$ result. BAO alone is a weak handle on neutrino mass anyway: distances, not the growth suppression that massive neutrinos leave. Dumping $\sum m_\nu$ into this likelihood without CMB or growth would mostly recover the prior. That is easy to dress up as a “bound.” I will not.
 
 ---
 

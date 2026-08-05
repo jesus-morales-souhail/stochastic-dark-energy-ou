@@ -177,7 +177,7 @@ That supports Option 0 (slip for anisotropic stress) and BAO residual kernels â€
 
 **Instead, if pursued at all:**
 
-1. Write a one-page **specification**: which $h_{\mu\nu}$, what correlator in **physical** $(t,\mathbf{x})$, what observable (e.g. $\langle(\Delta t)^2\rangle$ for two energies).
+1. Write a one-page **specification**: which $h_{\mu\nu}$, what correlator in **physical** $ (t,\mathbf{x})$, what observable (e.g. $\langle(\Delta t)^2\rangle$ for two energies).
 2. Compute geometric-optics delay to linear order in $h$.
 3. Insert an **independent** amplitude prior (not silently equal to BAO $\sigma_X$).
 4. Compare order-of-magnitude to published GRB / LIV bounds.

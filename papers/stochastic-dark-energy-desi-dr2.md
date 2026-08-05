@@ -9,7 +9,7 @@ Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ## Abstract
 
-Recent DESI DR2 data, when combined with CMB and supernovae, show a significant preference for dynamical dark energy over a cosmological constant. Within the Chevallier-Polarski-Linder (CPL) parameterization, the best-fit values are $w_0 = -0.87 \pm 0.05$, $w_a = -0.41 \pm 0.28$ (2.5σ) or $w_0 = -0.785 \pm 0.047$, $w_a = -0.43 \pm 0.095$ (4.2σ) depending on the dataset combination.
+Recent DESI DR2 data, when combined with CMB and supernovae, show a significant preference for dynamical dark energy over a cosmological constant. Within the Chevallier-Polarski-Linder (CPL) parameterization, the best-fit values are $w_0 = -0.87 \pm 0.05$, $w_a = -0.41 \pm 0.28$(2.5σ) or $w_0 = -0.785 \pm 0.047$, $w_a = -0.43 \pm 0.095$(4.2σ) depending on the dataset combination.
 
 In this note I test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. I model late-time fluctuations in $\Omega_\Lambda$ as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, I perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude $\sigma_X$ of these fluctuations, assuming the CPL background is fixed to the best-fit values.
 
@@ -135,7 +135,7 @@ which is a smooth, deterministic evolution — no stochastic component.
 
 #### 2.1.3 The Stochastic Continuity Equation: OU as Physical Dynamics
 
-The OU process $dX = -\theta X dx + \sigma dW_x$ (Axiom A3) provides a minimal and physically motivated phenomenological closure. It is obtained by adding a noise term to the standard fluid continuity equation. In physical time, setting $x = \ln a$ and $X \equiv \delta\Omega_\Lambda$:
+The OU process $dX = -\theta X dx + \sigma dW_x$(Axiom A3) provides a minimal and physically motivated phenomenological closure. It is obtained by adding a noise term to the standard fluid continuity equation. In physical time, setting $x = \ln a$ and $X \equiv \delta\Omega_\Lambda$:
 
 
 \frac{d(\delta\rho_\Lambda)}{dt} + 3H(1+w_\Lambda)\delta\rho_\Lambda = \xi(t),
@@ -203,7 +203,7 @@ For the numerical results in Sections 4–6, I use the discrete sensitivity kern
 | **0.934** | **LRG3+ELG1**| **1.208** | **$5.62 \times 10^{-3}$** |
 | 1.321 | ELG2 | 1.462 | $6.80 \times 10^{-3}$ |
 | 1.484 | QSO | 1.541 | $7.17 \times 10^{-3}$ |
-| 2.330 | Ly$\alpha$ | 1.798 | $8.36 \times 10^{-3}$ |
+| 2.330 | Ly $\alpha$ | 1.798 | $8.36 \times 10^{-3}$ |
 
 > **Note:** An exact integral susceptibility kernel $\chi(z, z')$ is given in Appendix C; the main analysis uses the discrete BAO kernel of Sec. 3.
 
@@ -239,13 +239,13 @@ I compute the likelihood using the public DESI DR2 BAO measurements (7 bins from
 
 Using the public DESI DR2 BAO data (arXiv:2503.14738), the Maximum Likelihood Estimation (MLE) yields a definitive null result:
 
-| Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | $\Delta$AIC vs $\Lambda$CDM | $\Delta$BIC vs $\Lambda$CDM |
+| Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | $\Delta$ AIC vs $\Lambda$CDM | $\Delta$ BIC vs $\Lambda$CDM |
 |:--------------------|:----------:|:----------------:|:-----------:|:----------------------------------------:|:-------------------------------:|:-------------------------------:|
 | $\Lambda$CDM | — | — | — | 0.00 (ref) | 0.00 (ref) | 0.00 (ref) |
 | H0: OU free MLE | 0.0010 | $5\times10^{-5}$ | 0 (fixed) | 0.00 | **+4.00** | **+3.89** |
 | H1: QNM free MLE | 0.0010 | $5\times10^{-5}$ | 0.0000 | 0.00 | **+6.00** | **+5.84** |
 
-**Interpretation.** The optimizer drives the stochastic amplitude to the numerical floor ($\sigma_X \to 0$) and the QNM frequency to zero ($\omega_R \to 0$). Because both extended models add free parameters without improving the likelihood ($\Delta\ln L = 0$ exactly), the AIC/BIC penalty is strictly positive: $\Delta\text{AIC} = +4.00$ (H0) and $+6.00$ (H1) relative to $\Lambda$CDM. This confirms that criterion F4 is satisfied: the data show no preference for the stochastic extension once the Occam penalty is correctly propagated.
+**Interpretation.** The optimizer drives the stochastic amplitude to the numerical floor ($\sigma_X \to 0$) and the QNM frequency to zero ($\omega_R \to 0$). Because both extended models add free parameters without improving the likelihood ($\Delta\ln L = 0$ exactly), the AIC/BIC penalty is strictly positive: $\Delta\text{AIC} = +4.00$(H0) and $+6.00$(H1) relative to $\Lambda$CDM. This confirms that criterion F4 is satisfied: the data show no preference for the stochastic extension once the Occam penalty is correctly propagated.
 
 ---
 
@@ -380,7 +380,7 @@ I summarize the status of the model based on the current analysis:
 | **F1** (Variance floor) | $\sigma_X \to 0$ under free MLE | **Consistent with null.** The amplitude is driven to the numerical floor, indicating no evidence for a stochastic component. |
 | **F2** (QNM frequency) | $\omega_R \to 0$ under free MLE | **Consistent with null.** The fit approaches the $\sigma_X = 0$ limit, making the QNM extension effectively degenerate with the OU/null case. |
 | **F3** (Lag correlations) | Predicted positive lags are absent | **Consistent with null.** The observed alternating pattern is the expected algebraic artifact of whitening with $N=7$ when $\sigma_X = 0$. |
-| **F4** (AIC/BIC) | $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM | **Satisfied:** $\Delta\text{AIC} = +4.00$ (H0), $+6.00$ (H1). The Occam penalty correctly penalizes the stochastic extension. |
+| **F4** (AIC/BIC) | $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM | **Satisfied:** $\Delta\text{AIC} = +4.00$(H0), $+6.00$(H1). The Occam penalty correctly penalizes the stochastic extension. |
 | **F5** (Degeneracy) | $\sigma_X = 0$ when $w_0, w_a$ are free | **Robust when background is free.** Joint MLE on the same 7 BAO bins with free $\{w_0, w_a, \theta, \sigma_X\}$ yields best-fit near $w_0 \approx -0.99$, $w_a \approx -0.02$ (essentially $\Lambda$CDM) and $\sigma_X \approx 4.5 \times 10^{-5}$ (numerical floor). The null result is therefore not an artifact of fixing the background. However, when the background is fixed to the external CPL values preferred by CMB+SNe, a larger amplitude appears. See Appendix I for details. |
 
 **Conclusion.** The stochastic model is not favored by the current DESI DR2 BAO data when the background is allowed to vary, and I place a phenomenological upper limit on its amplitude. A definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the $>20$ bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.

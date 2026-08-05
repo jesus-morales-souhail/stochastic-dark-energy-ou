@@ -29,13 +29,13 @@ I compiled this pack so that `scale-operator-experiment-map.md` and `anisotropic
 |-------|--------|
 | Paper | Maus, White, Sailer et al., *A joint analysis of 3D clustering and galaxy × CMB-lensing cross-correlations with DESI DR1 galaxies* |
 | arXiv | [2505.20656](https://arxiv.org/abs/2505.20656) (v3 Oct 2025); JCAP 11 (2025) 077 |
-| Definition | $\gamma = \Phi/\Psi$, $\Phi_\gamma=(\Phi+\Psi)/2=\Psi(1+\gamma)/2$ (Appendix E) |
+| Definition | $\gamma = \Phi/\Psi$, $\Phi_\gamma=(\Phi+\Psi)/2=\Psi(1+\gamma)/2$(Appendix E) |
 | GR value | $\gamma = 1.0$ |
-| Result | $\gamma = 1.17 \pm 0.11$ (~1.5σ from GR; authors note possible projection effects) |
+| Result | $\gamma = 1.17 \pm 0.11$(~1.5σ from GR; authors note possible projection effects) |
 | Data | DESI DR1 BGS+LRG full-shape + recon; Planck PR4 + ACT DR6 κ; photometric Legacy LRGs |
 | Headline structure | $\sigma_8=0.803\pm 0.017$, $\Omega_m=0.3037\pm 0.0069$, $S_8=0.808\pm 0.017$ |
 
-I do not confuse this with the growth index $f=\Omega_m^\gamma$ (GR $\gamma\simeq 0.55$).
+I do not confuse this with the growth index $f=\Omega_m^\gamma$(GR $\gamma\simeq 0.55$).
 
 ### B2. Forecast anisotropic stress $\eta$ (Euclid-like + DESI-like)
 
@@ -58,7 +58,7 @@ Earlier forecast I keep on the list: Amendola et al., arXiv:[1311.4765](https://
 | arXiv | [2411.12026](https://arxiv.org/abs/2411.12026) (companion to full-shape cosmology [2411.12022](https://arxiv.org/abs/2411.12022)) |
 | Parameters | $\mu_0$ (clustering of massive particles), $\Sigma_0$ (lensing-related) |
 | DESI alone (example from 2411.12022 abstract) | $\mu_0 = 0.11^{+0.45}_{-0.54}$ (consistent with GR zero) |
-| DESI + CMB + DESY3 | $\mu_0 = 0.04 \pm 0.22$, $\Sigma_0 = 0.044 \pm 0.047$ (GR-compatible) |
+| DESI + CMB + DESY3 | $\mu_0 = 0.04 \pm 0.22$, $\Sigma_0 = 0.044 \pm 0.047$(GR-compatible) |
 
 These are not the same symbol as Maus slip $\gamma=\Phi/\Psi$, but they are the right scale of structure-growth / MG operators (RSD + lensing), unlike pupil diffraction.
 

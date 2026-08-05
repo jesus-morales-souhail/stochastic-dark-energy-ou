@@ -37,9 +37,8 @@ and establishes a conservative upper limit [1]:
 I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
-\Delta\chi^2 \approx +22.7,
-
-
+$$\Delta\chi^2 \approx +22.7,
+$$
 so the data reject a coherent growing-mode scenario entirely.
 
 I do not read these results as a mere “non-discovery.” They are a structural constraint on the space of possible theories. In this paper I take the empirical limit and follow its logical consequences to the end: the choice of fundamental symmetry that protects the vacuum from local quantum fluctuations.

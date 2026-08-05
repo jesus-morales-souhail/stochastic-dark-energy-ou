@@ -44,9 +44,8 @@ and establishes a conservative upper limit:
 I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
-\Delta\chi^2 \approx +22.7,
-
-
+$$\Delta\chi^2 \approx +22.7,
+$$
 so the data reject a coherent growing-mode scenario entirely.
 
 I do not read these results as a mere “non-discovery.” They are a structural constraint on the space of possible theories. In this paper I take the empirical limit and follow its logical consequences to the end: the choice of fundamental symmetry that protects the vacuum from local quantum fluctuations. I show that unimodular gravity — the theory whose gauge group is the group of volume-preserving diffeomorphisms (SDiff) — is the only known structure that can guarantee $\sigma_X = 0$ in a mathematically consistent way.
@@ -205,7 +204,7 @@ The equation above is not a predictive equation. It is a consistency condition �
 
 So the equation does not determine the numerical value of $\Lambda$. It only tells us that, whatever its value, it is a global constant — fixed by the initial or boundary conditions of the universe — and that local fluctuations of matter cannot affect it.
 
-The smallness of $\Lambda$ ($\sim 10^{-122}$ in Planck units) is not a fine-tuning problem in this framework. It is a consequence of the vastness of the universe: the denominator $V_4$ is enormous, so the average of any finite quantity over it tends to zero. The discrepancy between the quantum prediction and the observed value is not an inconsistency; it is the signature that the quantum fluctuations are local, while $\Lambda$ is global.
+The smallness of $\Lambda$($\sim 10^{-122}$ in Planck units) is not a fine-tuning problem in this framework. It is a consequence of the vastness of the universe: the denominator $V_4$ is enormous, so the average of any finite quantity over it tends to zero. The discrepancy between the quantum prediction and the observed value is not an inconsistency; it is the signature that the quantum fluctuations are local, while $\Lambda$ is global.
 
 ---
 

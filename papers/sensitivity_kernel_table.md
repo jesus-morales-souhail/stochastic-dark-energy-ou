@@ -22,7 +22,7 @@ I compute it numerically for a flat ΛCDM fiducial with $\Omega_m = 0.315$ and $
 | 1.484 | QSO | −0.917 | 0.917 |
 | 2.330 | Lyα | −1.070 | 1.070 |
 
-**Key bin.** At $z = 0.934$ (LRG3+ELG1) the predicted OU floor exceeds the DESI DR2 observational error by ~2.8σ. With the present data that is the cleanest diagnostic bin I have.
+**Key bin.** At $z = 0.934$(LRG3+ELG1) the predicted OU floor exceeds the DESI DR2 observational error by ~2.8σ. With the present data that is the cleanest diagnostic bin I have.
 
 ## Rayleigh cosmological criterion
 

@@ -155,7 +155,7 @@ With $N=7$, no lag is individually significant in the present DESI analysis. Lag
 
 ## 7. Outcome scenarios
 
-**Marginal $\sigma_X$.** Posterior near $10^{-5}$–few$\times 10^{-5}$, $\theta$ unconstrained. Consistent with weak E1; systematics and free $\{w_0,w_a\}$ required before a firm claim.
+**Marginal $\sigma_X$.** Posterior near $10^{-5}$–few $\times 10^{-5}$, $\theta$ unconstrained. Consistent with weak E1; systematics and free $\{w_0,w_a\}$ required before a firm claim.
 
 **Strong null.** Upper limit $\sigma_X\ll 10^{-5}$, $\theta$ prior-like. Compatible with F $\cup$ E0.
 
@@ -186,7 +186,7 @@ I report $\sigma_X$ and $\theta$ conditional on free smooth DE.
 2. Sample $\{w_0,w_a,\theta,\sigma_X\}$ with the priors of §3.
 3. Report the marginal interval or upper limit on $\sigma_X$, the posterior on $\theta$, and nested model comparison versus CPL-only.
 4. Use lag correlations only as diagnostics.
-5. Assign F$\cup$E0 / E1 / E2 / E3 using §§5–7.
+5. Assign F $\cup$ E0 / E1 / E2 / E3 using §§5–7.
 6. Compare fixed versus free $\{w_0,w_a\}$; optionally nest QNM.
 
 ---
@@ -227,7 +227,7 @@ With percent-level BAO uncertainties ($\sigma_\alpha\sim 0.5\%$–$1.2\%$) and $
 
 The scientific window $10^{-5}$–$1.5\times 10^{-4}$ therefore sits below the single-mock SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a 24-bin mock with $\sim 1\%$ errors.
 
-| Scenario (truth) | Fixed $(w_0,w_a)$ | Free $(w_0,w_a)$ |
+| Scenario (truth) | Fixed $ (w_0,w_a)$ | Free $ (w_0,w_a)$ |
 |------------------|---------------------|---------------------|
 | Null $\sigma_X=10^{-6}$ | Prior-like posterior | Same; background widens further |
 | E1 $\sigma_X=0.012,\ \theta=0.1$ | Partial amplitude recovery; $\theta$ weak | Signal largely absorbed by background freedom |

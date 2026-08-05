@@ -106,7 +106,7 @@ Free propagation $d$ and thin lens $f$ give the textbook factors
 $P_{d}=\bigl(\begin{smallmatrix}1&d\\0&1\end{smallmatrix}\bigr)$,
 $L_{f}=\bigl(\begin{smallmatrix}1&0\\-1/f&1\end{smallmatrix}\bigr)$;
 the imaging condition $B_{\mathrm{tot}}=0$ is Descartes $1/s_{o}+1/s_{i}=1/f$.
-For two transverse planes $(x,\theta_{x},y,\theta_{y})$ the matrix is $4\times 4$ symplectic:
+For two transverse planes $ (x,\theta_{x},y,\theta_{y})$ the matrix is $4\times 4$ symplectic:
 
 
 M\in\mathrm{Sp}(4,\mathbb{R}).
@@ -150,7 +150,7 @@ Its Coxeter group $B_{4}$ (hyperoctahedral, signed permutations of four coordina
 
 
 The question is whether $B_{4}$ enters §§1–4. It can, in exactly one way: **as a discrete symmetry of the optical phase space**
-$(x,\theta_{x},y,\theta_{y})\cong\mathbb{R}^{4}$, i.e. as a subgroup of $\mathrm{Sp}(4,\mathbb{R})$.
+$ (x,\theta_{x},y,\theta_{y})\cong\mathbb{R}^{4}$, i.e. as a subgroup of $\mathrm{Sp}(4,\mathbb{R})$.
 A device invariant under such a symmetry is *constrained* by it — its transfer matrix must commute with the group —
 so the symmetry reduces the available operator to the group-invariant subalgebra. It cannot create channels.
 
