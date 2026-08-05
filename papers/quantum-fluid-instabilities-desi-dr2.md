@@ -1,8 +1,8 @@
 # Constraints on Stochastic Dark Energy from Quantum Fluid Instabilities and DESI DR2 Baryon Acoustic Oscillations
 
-Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
-ORCID: [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
+ORCID: [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)
 Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ---

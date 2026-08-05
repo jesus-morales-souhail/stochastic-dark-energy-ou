@@ -6,7 +6,7 @@
 | **Author** | Jesús Morales Souhail · ORCID [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) |
 | **Code** | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 
-This is what I stand behind, and what I do not. The work is not peer reviewed.
+This is what I stand behind, and what I do not. The work is
 
 ---
 

@@ -1,23 +1,23 @@
 # Start here
 
-Jesús Morales Souhail · July 2026 · not peer reviewed  
+Jesús Morales Souhail · July 2026
 [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 
 This is the **empirical** repo: public DESI DR2 BAO and residual models.
 
 ## Read first
 
-1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main manuscript  
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim and what I do not  
-3. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — language I allow myself  
-4. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft $10^{56}$ is closed  
+1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main manuscript
+2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim and what I do not
+3. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — language I allow myself
+4. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft $10^{56}$ is closed
 
-## Sister repos
+## Related repositories
 
 | Repo | Job |
 |:-----|:----|
 | [measurable-stochastic-vacuum](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum) | theory (when residual could be measurable) |
-| [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) | pedagogy only |
+| [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes) | method notes only |
 
 ## One-line result
 

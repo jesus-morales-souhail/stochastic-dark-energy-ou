@@ -1,9 +1,9 @@
 # SDiff as Fundamental Symmetry vs Emergent Feature: Implications for the Cosmological Vacuum
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
-**Status:** Research note — not peer reviewed
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+**Status:** Research note
 
 ---
 
@@ -47,7 +47,7 @@ In this view I impose the restriction to volume-preserving diffeomorphisms at th
 - Fluctuations in the vacuum density are strongly suppressed at the classical level.
 - The cosmological constant $\Lambda$ appears as a constant of integration rather than a dynamical field.
 
-**Strengths:** This interpretation is minimal and gives a direct structural explanation for the observed smoothness of the vacuum.  
+**Strengths:** This interpretation is minimal and gives a direct structural explanation for the observed smoothness of the vacuum.
 **Limitations:** It treats the choice of $\mathrm{SDiff}(M)$ as a fundamental postulate without deriving it from a deeper principle.
 
 ### 3.2 Interpretation B: SDiff as an Emergent Symmetry
@@ -60,7 +60,7 @@ In this alternative view the reduction to volume-preserving diffeomorphisms is n
 - Small residual fluctuations in the effective cosmological constant could exist, although they may be highly suppressed.
 - This interpretation opens the possibility that the value of $\Lambda$ itself could be determined by the entanglement structure of spacetime.
 
-**Strengths:** It connects unimodular gravity with broader ideas in quantum gravity and holography.  
+**Strengths:** It connects unimodular gravity with broader ideas in quantum gravity and holography.
 **Limitations:** It remains speculative, since no complete quantum gravity framework has yet demonstrated the emergence of $\mathrm{SDiff}(M)$ from entanglement.
 
 ### 3.3 Scope and Limitations of the SDiff Protection

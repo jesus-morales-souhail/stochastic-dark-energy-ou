@@ -1,30 +1,30 @@
 # Amplification gap: Sorkin seed to BAO residual
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**Status:** Act III closure note — theory bottleneck, not a detection claim. Not peer reviewed.  
-**Filename:** `papers/amplification-gap.md`  
-**Former name:** `papers/amplification-no-free-lunch.md` ([redirect stub](amplification-no-free-lunch.md))  
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**Status:** Act III closure note — theory bottleneck, not a detection claim.
+**Filename:** `papers/amplification-gap.md`
+**Former name:** `papers/amplification-no-free-lunch.md` ([redirect stub](amplification-no-free-lunch.md))
 
-**Related:**  
-`papers/fundamental-vs-emergent-vacuum-relaxation.md`,  
-`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,  
-`papers/anisotropic-slip-option0.md`,  
-`papers/scale-operator-experiment-map.md`,  
-`papers/resume.txt`,  
-`scripts/amplifier_audit.py`,  
+**Related:**
+`papers/fundamental-vs-emergent-vacuum-relaxation.md`,
+`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,
+`papers/anisotropic-slip-option0.md`,
+`papers/scale-operator-experiment-map.md`,
+`papers/resume.txt`,
+`scripts/amplifier_audit.py`,
 `results/amplification_routes/VERDICT.md`
 
 ---
 
 ## 1. The only scientifically open front (after Acts I–II, IV–V)
 
-Acts I–II give me a **null residual** under the OU/QNM kernel and a **geometric candidate** (SDiff) for isotropic smoothness.  
+Acts I–II give me a **null residual** under the OU/QNM kernel and a **geometric candidate** (SDiff) for isotropic smoothness.
 Acts IV–V close **wrong operators** and **wrong scales** (slip amplitude starvation, Born/band-limit, tesseract $B_{4}$ seal, wavefront $T\neq$ OU).
 
 The corpus already names the remaining hole:
 
-> *This note does not … identify a microphysical amplifier from $10^{-61}$ to $10^{-5}$.*  
+> *This note does not … identify a microphysical amplifier from $10^{-61}$ to $10^{-5}$.*
 > — `fundamental-vs-emergent-vacuum-relaxation.md`
 
 Here I **fix that gap as a quantitative problem** and audit candidate amplifiers. I do **not** invent a successful mechanism.
@@ -51,16 +51,16 @@ These are **different questions**. The answers differ by about **one decade**. I
 
 **Label rule (mandatory for me):**
 
-- “$\sim 10^{56}$” **only** for the **Euclid-scale target** $\sigma\sim 10^{-5}$ (or $A_0^{\min}\sim 10^{-5}$).  
-- “$\sim 10^{57}$” for the **measured DESI ceiling** $\sigma_X=1.5\times 10^{-4}$.  
+- “$\sim 10^{56}$” **only** for the **Euclid-scale target** $\sigma\sim 10^{-5}$ (or $A_0^{\min}\sim 10^{-5}$).
+- “$\sim 10^{57}$” for the **measured DESI ceiling** $\sigma_X=1.5\times 10^{-4}$.
 - Density form of the same ratio: $\lvert\delta\rho\rvert_{\max}/(\sigma_0\rho_\Lambda)=\sigma_{\mathrm{tgt}}/\sigma_0$ — so the DESI density gap is $\sim 10^{57}$, not $10^{56}$.
 
 **What DESI actually measured** is a **null residual bound**, not a new $\rho_\Lambda$. Mean vacuum density $\rho_\Lambda\sim\Omega_{\Lambda 0}\rho_{\mathrm{crit}}$ comes from standard cosmology (e.g. Planck-class $H_0,\Omega_\Lambda$); this corpus constrains the **fractional residual amplitude** $\sigma_X$ on top of that background.
 
-DESI constrains **effective** amplitude after any amplification — **not** $\sigma_0$ itself.  
+DESI constrains **effective** amplitude after any amplification — **not** $\sigma_0$ itself.
 Without a physical map $\sigma_0\to A_0$, “Euclid will see vacuum noise” is **not** a theorem of this repository.
 
-Runnable audit: `python scripts/amplifier_audit.py` · exact ratios: `python scripts/gap_two_targets.py`.  
+Runnable audit: `python scripts/amplifier_audit.py` · exact ratios: `python scripts/gap_two_targets.py`.
 Headline discipline: [`HONEST_HEADLINES.md`](HONEST_HEADLINES.md).
 
 ---
@@ -77,9 +77,9 @@ Headline discipline: [`HONEST_HEADLINES.md`](HONEST_HEADLINES.md).
 
 **No audited channel** maps bare Sorkin $\sigma_0$ to Euclid/DESI residual scales without:
 
-1. already being **excluded** (a),  
-2. delivering only $\mathcal{O}(1)$–$\mathcal{O}(10^{26})$ (b,d),  
-3. reintroducing a **free large $A_0$** (renaming the problem), or  
+1. already being **excluded** (a),
+2. delivering only $\mathcal{O}(1)$–$\mathcal{O}(10^{26})$ (b,d),
+3. reintroducing a **free large $A_0$** (renaming the problem), or
 4. **abandoning** the Sorkin seed definition (d).
 
 Every closed channel that looked like a shortcut — anisotropic slip, casual GRB phase stories, pupil/tesseract optics — **inherits this same gap**. That is why they stay amplitude-starved even when the **operator** is right (Option 0).
@@ -90,16 +90,16 @@ Every closed channel that looked like a shortcut — anisotropic slip, casual GR
 
 ### 4.0 Concrete literature (revalidated): Gordon & Wands (2005)
 
-**Reference:** C. Gordon & D. Wands, Phys. Rev. D **71**, 123505 (2005); arXiv:[astro-ph/0504132](https://arxiv.org/abs/astro-ph/0504132).  
+**Reference:** C. Gordon & D. Wands, Phys. Rev. D **71**, 123505 (2005); arXiv:[astro-ph/0504132](https://arxiv.org/abs/astro-ph/0504132).
 **Theory-repo expansion:** [measurable-stochastic-vacuum `inflation-spectator-seed-gordon-wands.md`](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum/blob/main/papers/inflation-spectator-seed-gordon-wands.md).
 
 They **do not** start from Sorkin $\sigma_0\sim 10^{-61}$. Light spectator: $\mathcal{P}_Q^{1/2}=H_{\mathrm{inf}}/(2\pi)$. For *their* large isocurvature / quadrupole target, frozen evolution conflicts with tensor bounds; they require $\delta Q_f/\delta Q_i>45$ (Mexican-hat radial roll) — **factor $\sim 45$**, not $10^{56}$.
 
-I do **not** equate that “tachyonic” roll with the **excluded** coherent GPE/tachyonic residual on BAO in this corpus (different seed, different observable, different math).  
-I do **not** claim it closes DESI residual detectability without a new seed→BAO map.  
+I do **not** equate that “tachyonic” roll with the **excluded** coherent GPE/tachyonic residual on BAO in this corpus (different seed, different observable, different math).
+I do **not** claim it closes DESI residual detectability without a new seed→BAO map.
 I **do** treat it as a respected, structurally distinct open door: missing factor $\mathcal{O}(10^{1}$–$10^{2})$ + unmeasured $H_{\mathrm{inf}}$, not free $G\sim 10^{56}$ on holographic counting.
 
-**OOM advance (theory repo):** with modern $r\sim 0.036$, $\delta Q/M_p\sim 3\times 10^{-6}$; with $A\sim 45$ and mild $\varepsilon_Q\sim 0.05$, density contrast can sit at $\sim\mathrm{few}\times 10^{-5}$ — residual *decade* without $10^{56}$.  
+**OOM advance (theory repo):** with modern $r\sim 0.036$, $\delta Q/M_p\sim 3\times 10^{-6}$; with $A\sim 45$ and mild $\varepsilon_Q\sim 0.05$, density contrast can sit at $\sim\mathrm{few}\times 10^{-5}$ — residual *decade* without $10^{56}$.
 See [`inflation-spectator-residual-atlas.md`](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum/blob/main/papers/inflation-spectator-residual-atlas.md). Map to BAO kernel still open.
 
 ### 4.1 Why (d) is special
@@ -115,14 +115,14 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 | Late-time “horizon exit” analogue for a **homogeneous DE residual** $X(x)$ | **Not derived** — inflation applies to **perturbation modes** freezing outside the Hubble radius, not automatically to a background OU residual on $x=\ln a$ |
 | Compatibility with BAO smoothness | Any large residual after freeze-out must still satisfy $\sigma_X < 1.5\times 10^{-4}$ |
 
-**Honest statement:**  
+**Honest statement:**
 (d) is worth a **separate theory paper** only if one (i) redefines the seed, (ii) derives a late-time freeze-out map for the DE residual, and (iii) re-runs BAO constraints on that map. It is **not** a patch that rescues $\sigma_0\sim 10^{-61}$ inside the current OU likelihood.
 
 ### 4.3 What I will not do
 
-- I will not claim that desqueezing $r\sim\mathcal{O}(1)$ closes the gap.  
-- I will not claim slip or GRBs will “see” Sorkin seeds without $A_0$.  
-- I will not smuggle $\sqrt{N}$ twice.  
+- I will not claim that desqueezing $r\sim\mathcal{O}(1)$ closes the gap.
+- I will not claim slip or GRBs will “see” Sorkin seeds without $A_0$.
+- I will not smuggle $\sqrt{N}$ twice.
 - I will not treat free $A_0\sim 10^{-5}$ as microphysics.
 
 ---
@@ -139,8 +139,8 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 
 **Programme status if (d) fails as a late-time DE residual theory:**
 
-- The repository remains what it already is: **honest limits, exclusions, and geometric interpretation**.  
-- Amplification stays **formally open** as a theory problem.  
+- The repository remains what it already is: **honest limits, exclusions, and geometric interpretation**.
+- Amplification stays **formally open** as a theory problem.
 - That is a successful scientific posture, not a failed discovery.
 
 ---
@@ -155,12 +155,12 @@ Linear gain $\times 10^{56}$ on white noise is dead. The only coherent ways to *
 | **2. Late horizon exit** | $\theta(x)\to 0$ after mode exits horizon during late acceleration; freeze residual | Stretch / freeze **before** restoration kills the kick | Must derive DE-mode freeze-out (≠ 60 inflation e-folds; late $\Delta x=\mathcal{O}(1)$) | `scripts/amplification/route2_late_horizon_exit.py` |
 | **3. Nonlinear avalanche** | Tiny seed is only a **trigger**; large jump from multi-well / threshold dynamics paid by background potential | Burst amplitude set by potential, not $e^{2r}$ | New $V(X)$; must stay BAO-smooth (not always-large) | `scripts/amplification/route3_nonlinear_avalanche.py` |
 
-**Batch runner:** `python scripts/amplification/run_all_routes.py` (add `--heavy` for denser grids).  
+**Batch runner:** `python scripts/amplification/run_all_routes.py` (add `--heavy` for denser grids).
 **Outputs:** `results/amplification_routes/*.csv`.
 
 ### 6.1 Reading of Route 2 vs classical inflation
 
-Late-time acceleration supplies $\Delta x=\ln(a_0/a_{\mathrm{exit}})\sim\mathcal{O}(1)$, **not** $\sim 60$.  
+Late-time acceleration supplies $\Delta x=\ln(a_0/a_{\mathrm{exit}})\sim\mathcal{O}(1)$, **not** $\sim 60$.
 Even with perfect freeze, a bare $\sigma_0\sim 10^{-61}$ does **not** become $10^{-5}$ from e-fold stretch alone. Route 2 only becomes powerful if combined with Route 1 (larger seed) or a **non-Sorkin** mode amplitude $\sim H/M_{\mathrm{Pl}}$.
 
 ### 6.2 Decision tree
@@ -173,15 +173,15 @@ Need detection-scale residual without free A0?
  └─ None → programme = honest limits + exclusions (success)
 ```
 
-**Recommended default for publication of the present corpus:**  
+**Recommended default for publication of the present corpus:**
 Act III closed as an **amplification gap on linear amplifiers** (no free gain factor across $\sim 10^{56}$); Routes 1–3 listed as **the only open theory cards**, each with a price.
 
 ### 6.3 Numerical scan results (HEAD — machine tables)
 
-**Data:** `results/amplification_routes/`  
-`route1_N_eff_required.csv`, `route1_N_eff_grid.csv` (1800 rows),  
-`route2_horizon_exit_scan.csv` (24 configs × 4000 paths),  
-`route3_avalanche_scan.csv` (288 jobs × 20 000 paths).  
+**Data:** `results/amplification_routes/`
+`route1_N_eff_required.csv`, `route1_N_eff_grid.csv` (1800 rows),
+`route2_horizon_exit_scan.csv` (24 configs × 4000 paths),
+`route3_avalanche_scan.csv` (288 jobs × 20 000 paths).
 **Compact verdict file:** `results/amplification_routes/VERDICT.md`.
 
 #### Route 1 — redefining $N_{\mathrm{eff}}$ (not a gain factor)
@@ -230,7 +230,7 @@ Potential $V=\tfrac14 a X^4-\tfrac12 b X^2$, $a\in\{1,10\}$, $b\in[10^{-6},0.1]$
 | BAO-unsafe ($\mathrm{p95}\ge 1.5\times 10^{-4}$) | **72 / 288** — **all** have $\sigma\gtrsim 1.2\times 10^{-4}$ |
 | Euclid window $10^{-5}\le\mathrm{p95}<1.5\times 10^{-4}$ | 72 jobs — residual still $\sim\sigma$, not seed-triggered |
 
-**BAO-safe rule of thumb in this scan:** keep drive noise $\sigma\lesssim 4\times 10^{-5}$ (p95 stays below DESI ceiling for all $(a,b)$ tested).  
+**BAO-safe rule of thumb in this scan:** keep drive noise $\sigma\lesssim 4\times 10^{-5}$ (p95 stays below DESI ceiling for all $(a,b)$ tested).
 **BAO-unsafe:** $\sigma\gtrsim 1.2\times 10^{-4}$ → p95 exceeds DESI for **every** $(a,b)$.
 
 **Verdict R3:** In the soft-potential, late-$\Delta x=\mathcal{O}(1)$ window I scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains $\mathcal{O}(1)$. Large residuals require **large $\sigma$** (renaming free $A_0$) or a **new** regime $b \Delta x\gg 1$ / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free amplification inside the present corpus.
@@ -287,5 +287,5 @@ The only amplifier class I still think deserves a *serious new theory exam* is a
 
 ---
 
-*End of Act III amplification-gap note.*  
-Jesús Morales Souhail · July 2026 · not peer reviewed
+*End of Act III amplification-gap note.*
+Jesús Morales Souhail · July 2026

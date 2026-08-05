@@ -1,21 +1,21 @@
 # Wavefront shaping vs the OU residual: what transfers and what does not
 
-**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
-**Date:** July 2026  
-**Status:** Boundary note (optics of disordered media ≠ BAO OU model). Hygiene / pedagogy. **Not a DESI claim.** Not peer reviewed.  
-**Related:**  
-`papers/self-shielding-triple-barrier.md`,  
-`papers/optics-ou-analogies-and-limits.md`,  
-`papers/anisotropic-slip-option0.md`,  
-`papers/scale-operator-experiment-map.md`,  
-`papers/stochastic-dark-energy-desi-dr2.md`,  
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
+**Date:** July 2026
+**Status:** Boundary note (optics of disordered media ≠ BAO OU model). Method notes. **Not a DESI claim.**
+**Related:**
+`papers/self-shielding-triple-barrier.md`,
+`papers/optics-ou-analogies-and-limits.md`,
+`papers/anisotropic-slip-option0.md`,
+`papers/scale-operator-experiment-map.md`,
+`papers/stochastic-dark-energy-desi-dr2.md`,
 `papers/EXPLORATORY_BOUNDARY.md`
 
 ---
 
 ## What this note is
 
-I write this boundary so I do not import lab wavefront shaping into the BAO residual programme as if they were the same operator.  
+I write this boundary so I do not import lab wavefront shaping into the BAO residual programme as if they were the same operator.
 Disordered-media optics is real physics. Identifying it with the repo OU process is **not**. Please do **not** cite this file as a DESI result.
 
 ---
@@ -32,7 +32,7 @@ Disordered-media optics is real physics. Identifying it with the repo OU process
 | That calculation is already “well-defined and closed” for DESI $\sigma_X$ and GRB data | **False** — wrong identification of fields and scales |
 | “Principal modes immune to DE fluctuations” as an observational channel today | **Speculation**, not a derived pipeline |
 
-**I do not put wavefront-shaping-of-the-vacuum as a core result of this repository.**  
+**I do not put wavefront-shaping-of-the-vacuum as a core result of this repository.**
 **I do put:** honest scale/operator separation and, if ever, a carefully scoped GR+Maxwell calculation with its own amplitude assumptions.
 
 ---
@@ -75,9 +75,9 @@ with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO p
 
 **Lab truth:** For a **quasi-static** linear medium, the input–output map is a matrix $T$. Measuring $T$ (or optimizing intensity without full $T$) allows focusing through opacity.
 
-**Cosmology transfer:**  
-- There is no operational “measure $T$ of the vacuum” with an SLM.  
-- GRB photons make **one way** trips through an expanding universe; I do not reconfigure the “input” at the source with a measured $T$.  
+**Cosmology transfer:**
+- There is no operational “measure $T$ of the vacuum” with an SLM.
+- GRB photons make **one way** trips through an expanding universe; I do not reconfigure the “input” at the source with a measured $T$.
 - Fluctuations of DE residual on BAO are constrained **after** integration against $S(z)$, not as a scattering matrix on Fourier modes of $E$.
 
 **Useful analogy only:** “If the disorder is unknown and uncontrolled, you cannot shape through it.” That supports **characterization**, not a free focusing tool for DE.
@@ -86,9 +86,9 @@ with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO p
 
 **Lab truth:** For a **time-independent** passive linear medium, phase conjugation undoes multipath.
 
-**Cosmology transfer:**  
-- A photon from a GRB does not reverse through the **same** stochastic realization of $\delta g_{\mu\nu}(x)$.  
-- The background expands; the “medium” is not a fixed lab slab.  
+**Cosmology transfer:**
+- A photon from a GRB does not reverse through the **same** stochastic realization of $\delta g_{\mu\nu}(x)$.
+- The background expands; the “medium” is not a fixed lab slab.
 - Stationarity of an OU process in $x=\ln a$ is **not** the same as time-reversal symmetry of a fixed scatterer for EM waves.
 
 **Verdict:** Time reversal is **not** “valid for the repo” in the lab sense. Gaussianity ≠ optical TR.
@@ -97,9 +97,9 @@ with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO p
 
 **Lab truth:** $Q=-i T^{-1}\partial_\omega T$ defines delay operators; eigenmodes can minimize delay spread in multi-path systems.
 
-**Cosmology transfer:**  
-- Requires a well-defined frequency-dependent EM transmission operator through the medium.  
-- That operator is **not** the BAO OU kernel.  
+**Cosmology transfer:**
+- Requires a well-defined frequency-dependent EM transmission operator through the medium.
+- That operator is **not** the BAO OU kernel.
 - Claiming “modes immune to $\sigma_X$” without deriving $T(\omega)$ from Maxwell + metric is **undeclared power**.
 
 ---
@@ -108,10 +108,10 @@ with the BAO residual $\sigma_X$ is an **extra theoretical step** that the BAO p
 
 A legitimate research program (outside the current BAO code) would look like:
 
-1. Specify the **metric** model: which components of $h_{\mu\nu}$ fluctuate, gauge, correlation length in **physical** coordinates (not just $x=\ln a$).  
-2. Propagate Maxwell (or geometric optics / WKB) on FLRW + $h_{\mu\nu}$.  
-3. Expand the scattering / phase operator in the amplitude of $h$.  
-4. **Map** that amplitude to observables (arrival-time variance, polarization rotation, etc.).  
+1. Specify the **metric** model: which components of $h_{\mu\nu}$ fluctuate, gauge, correlation length in **physical** coordinates (not just $x=\ln a$).
+2. Propagate Maxwell (or geometric optics / WKB) on FLRW + $h_{\mu\nu}$.
+3. Expand the scattering / phase operator in the amplitude of $h$.
+4. **Map** that amplitude to observables (arrival-time variance, polarization rotation, etc.).
 5. **Separately** argue how (if at all) that amplitude relates to the BAO residual $\sigma_X$.
 
 Until (1)–(5) are done, the expansion
@@ -139,7 +139,7 @@ with $\sigma_X$ from DESI BAO is **not** a theorem of this repository.
 
 The **good** methodological move from disordered-media optics is:
 
-> **Characterise the actual operator that couples to your probe.**  
+> **Characterise the actual operator that couples to your probe.**
 > Do not fight a cartoon enemy; do not claim control you do not have.
 
 That supports Option 0 (slip for anisotropic stress) and BAO residual kernels — **not** vacuum wavefront shaping.
@@ -173,14 +173,14 @@ That supports Option 0 (slip for anisotropic stress) and BAO residual kernels �
 
 ## 8. Recommended next step (if any calculation)
 
-**Not:** “derive $T$ for the repo” as if $T$ already exists.  
+**Not:** “derive $T$ for the repo” as if $T$ already exists.
 
 **Instead, if pursued at all:**
 
-1. Write a one-page **specification**: which $h_{\mu\nu}$, what correlator in **physical** $(t,\mathbf{x})$, what observable (e.g. $\langle(\Delta t)^2\rangle$ for two energies).  
-2. Compute geometric-optics delay to linear order in $h$.  
-3. Insert an **independent** amplitude prior (not silently equal to BAO $\sigma_X$).  
-4. Compare order-of-magnitude to published GRB / LIV bounds.  
+1. Write a one-page **specification**: which $h_{\mu\nu}$, what correlator in **physical** $(t,\mathbf{x})$, what observable (e.g. $\langle(\Delta t)^2\rangle$ for two energies).
+2. Compute geometric-optics delay to linear order in $h$.
+3. Insert an **independent** amplitude prior (not silently equal to BAO $\sigma_X$).
+4. Compare order-of-magnitude to published GRB / LIV bounds.
 5. Decide if the bridge to BAO $\sigma_X$ is even possible.
 
 Until then: **I do not** open a “principal transmission modes of dark energy” work package.

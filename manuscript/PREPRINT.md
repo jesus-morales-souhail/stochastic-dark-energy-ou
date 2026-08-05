@@ -7,9 +7,9 @@
 | Email | jmskjym@gmail.com |
 | Affiliation | Independent researcher |
 | Date | July 2026 |
-| Status | Preprint — not peer reviewed |
+| Status | Preprint  |
 | Code | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
-| License | Code MIT · Text CC BY 4.0 |
+| License | MIT (code); CC BY 4.0 (text) |
 
 ---
 
@@ -18,7 +18,7 @@
 I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statistics require a stationary stochastic component in the late-time dark-energy sector, on top of a smooth background. Fluctuations are modelled as an Ornstein–Uhlenbeck (OU) process in logarithmic scale factor $x=\ln a$, with a quasi-normal-mode (QNM) oscillatory extension. Using a Gaussian likelihood with an additive residual covariance kernel, maximum-likelihood estimation drives the stochastic amplitude to the numerical floor. The working 95% confidence upper limit is
 
 
-\sigma_X < 1.5\times 10^{-4}\quad(95\%~\mathrm{CL})
+\sigma_X < 1.5\times 10^{-4}$ (95\% CL)
 
 
 under the stated phenomenological kernel and public BAO summary statistics (diagonal measurement errors in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
@@ -41,18 +41,18 @@ DESI BAO measurements have sharpened late-time distance constraints and, with CM
 
 A finite information bound on the observable universe ($N\sim 10^{122}$ Planck units) has long motivated order-of-magnitude vacuum fluctuations $\delta\Lambda\sim 1/\sqrt{N}$ (Sorkin-type arguments in unimodular / causal-set settings). That seed is many orders of magnitude below BAO precision. The programme I follow is therefore:
 
-1. **Data:** constrain the effective residual amplitude under a minimal, falsifiable kernel.  
-2. **Models:** exclude coherent amplification mechanisms with the correct covariance.  
+1. **Data:** constrain the effective residual amplitude under a minimal, falsifiable kernel.
+2. **Models:** exclude coherent amplification mechanisms with the correct covariance.
 3. **Theory hygiene:** state which amplifiers are closed and which open cards remain—without smuggling free parameters as “microphysics.”
 
 ### 1.2 Scope and non-claims
 
 This paper and the associated public repository address (1)–(3) using public BAO summary statistics and open analysis code. I do **not** claim:
 
-- detection of Planck-scale vacuum noise;  
-- that Euclid will see unamplified Sorkin seeds;  
-- a unique identification of unimodular / SDiff gravity;  
-- peer-reviewed status of this preprint;  
+- detection of Planck-scale vacuum noise;
+- that Euclid will see unamplified Sorkin seeds;
+- a unique identification of unimodular / SDiff gravity;
+- peer-reviewed status of this preprint;
 - results from optical laboratory metaphors (those live in a separate exploratory repository; see Section 8).
 
 ### 1.3 Reading guide
@@ -146,7 +146,7 @@ The data do not require a stationary stochastic residual. The preferred stochast
 From the residual analysis (profile / likelihood ratio under the OU kernel as implemented in the public pipeline):
 
 
-\sigma_X < 1.5\times 10^{-4}\quad(95\%~\mathrm{CL}).
+\sigma_X < 1.5\times 10^{-4}$ (95% CL).
 
 
 This is an upper limit on an effective residual amplitude, not a measurement of a Planck-scale seed.
@@ -255,11 +255,11 @@ I do not implement a homemade Boltzmann hierarchy. Future work, if amplitudes be
 
 ## 7. Limitations
 
-1. **Summary statistics:** baseline residual analysis uses published BAO $\alpha$ and diagonal errors. Full DESI covariance matrices may change the numerical factor in $\sigma_X$ while preserving the null preference if residuals remain consistent with noise.  
-2. **Kernel dependence:** bounds are for the OU/QNM residual kernels stated; other residual models need their own covariance and MLE.  
-3. **Background degeneracy:** with only seven BAO bins, flexible $w(z)$ can absorb residual variance (Section 3.3). Multi-probe fits are a separate analysis.  
-4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.  
-5. **Sorkin seed:** used as motivational UV scale for the amplification discussion, not as a fitted parameter.  
+1. **Summary statistics:** baseline residual analysis uses published BAO $\alpha$ and diagonal errors. Full DESI covariance matrices may change the numerical factor in $\sigma_X$ while preserving the null preference if residuals remain consistent with noise.
+2. **Kernel dependence:** bounds are for the OU/QNM residual kernels stated; other residual models need their own covariance and MLE.
+3. **Background degeneracy:** with only seven BAO bins, flexible $w(z)$ can absorb residual variance (Section 3.3). Multi-probe fits are a separate analysis.
+4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.
+5. **Sorkin seed:** used as motivational UV scale for the amplification discussion, not as a fitted parameter.
 6. **Independent research:** this work has not undergone peer review at the time of writing.
 
 ---
@@ -280,14 +280,14 @@ Method-hygiene digressions, optical analogies, and other non-cosmological scale�
 
 Theory (if the null is not the end of the story)—minimal model as simple as $\Lambda$, residual scale uniqueness—lives here:
 
-**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**  
+**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**
 Start: `START_HERE.md`, `papers/r1_kernel/NOTE_uniqueness_residual_grain.md`, `papers/core/VERIFIED_RESULTS.md` (`pytest -q`).
 
 That theory repo does not alter the empirical claims of this preprint; it uses them only as a posteriori tests.
 
 | In primary repo (claims) | In exploratory repo (not claims) |
 |:-------------------------|:---------------------------------|
-| BAO OU/QNM limits | Car–drone pupil diffraction pedagogy |
+| BAO OU/QNM limits | Car–drone pupil diffraction demo |
 | Tachyonic exclusion | Tesseract / $B_{4}$ optical combinatorics |
 | Amplification audit + routes 1–3 | Wavefront-shaping vs OU vacuum essays |
 | Slip amplitude map | Superoscillation energy-tax demos |
@@ -312,10 +312,10 @@ python scripts/slip_bridge.py
 
 ## 9. Conclusions
 
-1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<1.5\times 10^{-4}$ (95% CL) under the stated kernel.  
-2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +22.7$).  
-3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 1.5\times 10^{-4}$ is $\sim 10^{57}$ (DESI ceiling); audited linear amplifiers fail both; freeze-out and soft avalanche scans do not provide free gain; only redefining $N_{\mathrm{eff}}$ hits target amplitudes.  
-4. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and an amplitude-starved channel in practice.  
+1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<1.5\times 10^{-4}$ (95% CL) under the stated kernel.
+2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +22.7$).
+3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 1.5\times 10^{-4}$ is $\sim 10^{57}$ (DESI ceiling); audited linear amplifiers fail both; freeze-out and soft avalanche scans do not provide free gain; only redefining $N_{\mathrm{eff}}$ hits target amplitudes.
+4. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and an amplitude-starved channel in practice.
 5. **Scientific posture:** the strength of this programme is what it closes—limits, exclusions, and an honest map of open theory prices—not a promised detection.
 
 Future data (Euclid BAO multi-bin products; full DESI covariances) can tighten $\sigma_X$ with the same residual likelihood. Future theory work must pay the price of Routes 1 or 3 (or an inflation-style seed redefinition)—not invent linear gain on white noise.
@@ -330,18 +330,18 @@ This work uses publicly released DESI DR2 BAO products and community literature 
 
 ## Data availability
 
-- DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · [arXiv:2503.14738](https://arxiv.org/abs/2503.14738)  
-- Analysis code: [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou)  
+- DESI DR2 BAO: [data.desi.lbl.gov](https://data.desi.lbl.gov/public/) · [arXiv:2503.14738](https://arxiv.org/abs/2503.14738)
+- Analysis code: [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou)
 - Numerical amplification tables: [`results/amplification_routes/`](../results/amplification_routes/)
 
 ---
 
 ## References
 
-1. DESI Collaboration, *DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations*, [arXiv:2503.14738](https://arxiv.org/abs/2503.14738).  
-2. Maus et al., *Joint 3D clustering and galaxy × CMB-lensing with DESI DR1*, [arXiv:2505.20656](https://arxiv.org/abs/2505.20656).  
-3. Sakr, Zheng & Casas, forecasts on anisotropic stress / $\eta$, [arXiv:2501.07477](https://arxiv.org/abs/2501.07477).  
-4. Ma & Bertschinger, *Cosmological Perturbation Theory in the Synchronous and Conformal Newtonian Gauges*, Astrophys. J. Suppl. (1995), [arXiv:astro-ph/9506072](https://arxiv.org/abs/astro-ph/9506072).  
-5. Clifton, Ferreira, Padilla & Skordis, *Modified Gravity and Cosmology*, Phys. Rep. (2012).  
-6. Sorkin, causal-set / unimodular vacuum fluctuation arguments (see repository notes for curated pointers).  
+1. DESI Collaboration, *DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations*, [arXiv:2503.14738](https://arxiv.org/abs/2503.14738).
+2. Maus et al., *Joint 3D clustering and galaxy × CMB-lensing with DESI DR1*, [arXiv:2505.20656](https://arxiv.org/abs/2505.20656).
+3. Sakr, Zheng & Casas, forecasts on anisotropic stress / $\eta$, [arXiv:2501.07477](https://arxiv.org/abs/2501.07477).
+4. Ma & Bertschinger, *Cosmological Perturbation Theory in the Synchronous and Conformal Newtonian Gauges*, Astrophys. J. Suppl. (1995), [arXiv:astro-ph/9506072](https://arxiv.org/abs/astro-ph/9506072).
+5. Clifton, Ferreira, Padilla & Skordis, *Modified Gravity and Cosmology*, Phys. Rep. (2012).
+6. Sorkin, causal-set / unimodular vacuum fluctuation arguments (see repository notes for curated pointers).
 7. Morales Souhail, J., this repository and companion notes (July 2026).

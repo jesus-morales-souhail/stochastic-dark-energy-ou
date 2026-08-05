@@ -1,8 +1,8 @@
 # Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations
 
-Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
-ORCID: 0009-0000-7637-1818  
+ORCID: 0009-0000-7637-1818
 Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ---

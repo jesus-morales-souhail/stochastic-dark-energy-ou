@@ -2,9 +2,9 @@
 
 Read this before citing anything under Act V.
 
-I keep several notes under `papers/` and demos under `scripts/` for **method hygiene and pedagogy**. They stop me (and anyone reading the repo) from making wrong-scale or wrong-operator claims. They are **not** part of the peer-review abstract of the main manuscript. This work is not peer reviewed.
+I keep several notes under `papers/` and demos under `scripts/` for **method notes**. They document scale and operator mistakes so those claims do not enter the main paper. They are not part of the main manuscript claim set. This work is
 
-| Peer-review claim set | Exploratory / pedagogy |
+| Main claim set | Exploratory notes |
 |----------------------|-------------------------|
 | `manuscript/PREPRINT.md` | car–drone pupil, tesseract $B_{4}$, wavefront $T$, superoscillation demos |
 | BAO OU/QNM limits | Maxwell→device lab notes |

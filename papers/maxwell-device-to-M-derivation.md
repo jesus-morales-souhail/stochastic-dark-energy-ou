@@ -1,9 +1,9 @@
 # Maxwell + device geometry → transfer operator $M$
 
-Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
-July 2026 · hygiene / pedagogy · **not a DESI claim** · not peer reviewed  
+Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
+July 2026 · method notes · **not a DESI claim**
 
-Code: `scripts/derive_M_maxwell_device.py` (checks pass)  
+Code: `scripts/derive_M_maxwell_device.py` (checks pass)
 Related: `papers/optics-ou-analogies-and-limits.md` (Q2), `papers/no-go-superoscillation-tesseract.md`, `papers/EXPLORATORY_BOUNDARY.md`
 
 ---
@@ -12,7 +12,7 @@ Related: `papers/optics-ou-analogies-and-limits.md` (Q2), `papers/no-go-superosc
 
 I close Q2 of `optics-ou-analogies-and-limits.md` — “How does a tesseract projection become an ABCD matrix on an SLM?” — by deriving the transfer operator of a real optical device from Maxwell, and then asking whether a 4-cube / Coxeter group $B_{4}$ / “8 cubic cells” structure can appear in that derivation.
 
-It cannot, except as a *constraint* that reduces freedom. The derivation is independent of any polytope.  
+It cannot, except as a *constraint* that reduces freedom. The derivation is independent of any polytope.
 This is lab-optics hygiene, **not** a BAO residual result and **not** a DESI claim.
 
 ---
@@ -193,7 +193,7 @@ $$
 
 and the controllable dimension $N_{\mathrm{pix}}\,[\times N_{\omega}]$.
 
-**A “tesseract / $B_{4}$ / 8-cube” structure is not produced by this derivation.**  
+**A “tesseract / $B_{4}$ / 8-cube” structure is not produced by this derivation.**
 It enters only if inserted by hand as an ansatz; inserted as a *symmetry* it reduces freedom ($10\to 1$);
 inserted as a *parametrisation* of free parameters using 4-cube combinatorics it is decoration
 (the same “undeclared physical power” pattern as $\ln 4\equiv\omega_{R}$, flagged in `no-go-superoscillation-tesseract.md`).

@@ -1,16 +1,16 @@
 # Self-shielding vs untestability: how the vacuum-noise mechanism hides
 
-**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
-**Date:** July 2026  
-**Status:** Conceptual note — honest status of the programme (hygiene / pedagogy framing). Numbers below restate pipeline results for orientation; **this file itself is not a DESI claim paper.** Not peer reviewed.  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
+**Date:** July 2026
+**Status:** Conceptual note — honest status of the programme (method notes framing). Numbers below restate pipeline results for orientation; **this file itself is not a DESI claim paper.**
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 **Related:** `papers/anisotropic-slip-option0.md`, `papers/sdiff-fundamental-vs-emergent.md`, `papers/fundamental-vs-emergent-vacuum-relaxation.md`, `papers/EXPLORATORY_BOUNDARY.md`, `papers/resume.txt`
 
 ---
 
 ## What this note is
 
-I write this so I do not confuse “small amplitude” with “untestable forever,” and so I do not sell structural smallness as a discovery.  
+I write this so I do not confuse “small amplitude” with “untestable forever,” and so I do not sell structural smallness as a discovery.
 Please read pipeline claims from `manuscript/PREPRINT.md` and `manuscript/CLAIMS.md`. This essay is status honesty, not a measurement release.
 
 ---
@@ -29,7 +29,7 @@ Does the SDiff / unimodular + stochastic residual mechanism **shield itself** so
 
 In unimodular / SDiff-oriented narratives, vacuum pieces $\propto g_{\mu\nu}$ are projected out of the local sourcing of curvature. Dark energy can be read as a **global / integration-constant** sector rather than a new local particle species.
 
-**What this shields against:** naive “look for a new DE particle in the lab” searches.  
+**What this shields against:** naive “look for a new DE particle in the lab” searches.
 **What it does not shield against:** background $w(z)$ tests, residual BAO smoothness, growth/slip if a non-isotropic operator exists, or external premises (e.g. spacetime discreteness via non-gravitational channels).
 
 ### 2.2 Amplitude layer — numbers from this repo
@@ -37,10 +37,10 @@ In unimodular / SDiff-oriented narratives, vacuum pieces $\propto g_{\mu\nu}$ ar
 Public DESI DR2 BAO residual analysis in this repository (main pipeline, not this essay’s claim):
 
 
-\sigma_X < 1.5\times 10^{-4}\quad(95\%~\mathrm{CL}).
+\sigma_X < 1.5\times 10^{-4}$ (95\% CL).
 
 
-MLE drives $\sigma_X\to 0$; stochastic extensions are not preferred (AIC penalty).  
+MLE drives $\sigma_X\to 0$; stochastic extensions are not preferred (AIC penalty).
 See `papers/resume.txt`, `papers/stochastic-dark-energy-desi-dr2.md`, `manuscript/CLAIMS.md`.
 
 **What this means:** any **isotropic residual** of the size of the bare Sorkin-scale seed ($\sim 10^{-61}$) is **hopelessly** below BAO. Even the **effective** bound $10^{-4}$ is already a null for OU/QNM residuals on the kernel used.
@@ -57,7 +57,7 @@ Gravitational slip (Maus et al. arXiv:2505.20656):
 \gamma=\frac{\Phi}{\Psi},\qquad \gamma=1.17\pm 0.11\ \text{(GR: }1\text{)},
 
 
-sensitivity $\mathcal{O}(0.1)$ on $\lvert \gamma-1 \rvert$.  
+sensitivity $\mathcal{O}(0.1)$ on $\lvert \gamma-1 \rvert$.
 Order-of-magnitude from $\sigma_X\sim 10^{-4}$, $f=1$:
 
 
@@ -104,9 +104,9 @@ The good questions (already in the programme’s DNA):
 
 ## 5. What I do not do
 
-- I do not invent tesseract / superoscillation shortcuts for cosmology.  
-- I do not equate $\ln 4 \approx \omega_R$ (archived script) with a DESI discovery — the production QNM fit drives $\omega_R\to 0$.  
-- I do not claim slip will “save” visibility without an amplification model.  
+- I do not invent tesseract / superoscillation shortcuts for cosmology.
+- I do not equate $\ln 4 \approx \omega_R$ (archived script) with a DESI discovery — the production QNM fit drives $\omega_R\to 0$.
+- I do not claim slip will “save” visibility without an amplification model.
 - I do not build home-made Boltzmann codes as the first move (Option 1).
 
 ---

@@ -1,6 +1,6 @@
 # Sensitivity Kernel S(z) for DESI BAO Tracers
 
-Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
 ---
 

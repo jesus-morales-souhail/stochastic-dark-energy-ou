@@ -1,10 +1,10 @@
 # Fundamental versus Emergent Vacuum Smoothness: Path-Integrated Relaxation, Amplification Bounds, and Euclid Discriminators
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
-**Status:** Technical note — not peer reviewed  
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+**Status:** Technical note
 **Related:** `sdiff-fundamental-vs-emergent.md`, `desqueezing-relaxation-vacuum-fluctuations-note.md`, `stochastic-dark-energy-desi-dr2.md`
 
 ---
@@ -85,7 +85,7 @@ For any $\theta\ge 0$ and any path with $\Delta x=\mathcal{O}(1\text{–}10)$,
 \sigma_{\rm res}\le\sigma_0\sim 10^{-61}\ll 10^{-5}.
 
 
-**A pure Poisson discreteness seed is invisible to DESI and to Euclid.**  
+**A pure Poisson discreteness seed is invisible to DESI and to Euclid.**
 DESI therefore constrains the **effective** late-time amplitude after amplification or non-Sorkin coupling — not $\sigma_0$ itself.
 
 ### 3.2 Amplification to reach Euclid on the DESI path
@@ -173,10 +173,10 @@ I specify a Euclid-facing fit with free $\{w_0,w_a,\theta,\sigma_X\}$ in `euclid
 
 ## References
 
-[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2,” this repository (`papers/stochastic-dark-energy-desi-dr2.md`).  
-[2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository.  
-[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`notes/`).  
-[4] DESI Collaboration, arXiv:2503.14738 (2025).  
-[5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).  
-[6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).  
+[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2,” this repository (`papers/stochastic-dark-energy-desi-dr2.md`).
+[2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository.
+[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`notes/`).
+[4] DESI Collaboration, arXiv:2503.14738 (2025).
+[5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
+[6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).
 [7] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).

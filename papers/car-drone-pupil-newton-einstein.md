@@ -1,9 +1,9 @@
 # Car + drone @ 120 km/h: pupil diffraction under Newton and Einstein
 
-**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
-**Date:** July 2026  
-**Status:** Quantitative thought experiment (hygiene / pedagogy). **Not a DESI claim.** Not peer reviewed.  
-**Script:** `scripts/car_drone_pupil_newton_einstein.py`  
+**Author:** Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
+**Date:** July 2026
+**Status:** Quantitative thought experiment (method notes). **Not a DESI claim.**
+**Script:** `scripts/car_drone_pupil_newton_einstein.py`
 **Related:** `papers/self-shielding-vs-untestability.md`, `papers/no-go-superoscillation-tesseract.md`, `papers/EXPLORATORY_BOUNDARY.md`
 
 ---
@@ -59,8 +59,8 @@ Airy angle to first minimum: $\theta \approx 1.22 \lambda/D$.
 
 ### C) Newton / Galileo
 
-Co-moving car and drone: **relative velocity = 0**.  
-Passenger and drone see the **same** local diffraction geometry.  
+Co-moving car and drone: **relative velocity = 0**.
+Passenger and drone see the **same** local diffraction geometry.
 I do not need an absolute-space “diagonal light + $v$” story between them; they share a rest frame.
 
 ### D) Einstein (special relativity)
@@ -74,7 +74,7 @@ I do not need an absolute-space “diagonal light + $v$” story between them; t
 
 ### E) When SR would matter optically
 
-Aberration comparable to Airy (1 mm): $v \sim \theta c \approx 200 \mathrm{km/s}$ ($\sim 6000\times$ 120 km/h).  
+Aberration comparable to Airy (1 mm): $v \sim \theta c \approx 200 \mathrm{km/s}$ ($\sim 6000\times$ 120 km/h).
 $\gamma-1\sim 1\%$: $v\sim 0.14 c$.
 
 ### F) Cosmological expansion during the drive
@@ -91,17 +91,17 @@ Not a 4D optical effect in the pupil. I measure expansion with **redshift of fre
 | Wrong scale for expansion | Wrong operator for generic “does the vacuum tremble?” |
 | Measure free light over cosmic baselines | Measure residuals / slip / specific models with amplitudes |
 
-The “shield” is **local physics at the right scale**, not magic immunity forever.  
+The “shield” is **local physics at the right scale**, not magic immunity forever.
 The blinded question is **mis-scaled**, not “physics fails inside the car.”
 
 ---
 
 ## Conclusion
 
-1. **Newton (co-moving):** same diffraction inside and for the drone.  
-2. **Einstein (co-moving):** same; relative rest.  
-3. **Einstein (drone on road):** SR corrections $\sim 10^{-15}$–$10^{-7}$, negligible vs Airy.  
-4. **No tesseract** appears in any consistent calculation at 120 km/h.  
+1. **Newton (co-moving):** same diffraction inside and for the drone.
+2. **Einstein (co-moving):** same; relative rest.
+3. **Einstein (drone on road):** SR corrections $\sim 10^{-15}$–$10^{-7}$, negligible vs Airy.
+4. **No tesseract** appears in any consistent calculation at 120 km/h.
 5. Same methodological rule as Option 0 / no-go optics: **derive the map, quote the amplitude, or do not claim the effect.**
 
 Run: `python scripts/car_drone_pupil_newton_einstein.py`
@@ -110,8 +110,8 @@ Run: `python scripts/car_drone_pupil_newton_einstein.py`
 
 ## Status: CLOSED
 
-**Result locked:** this setup tests **local EM diffraction + inertial SR at** $\beta\sim 10^{-7}$.  
-It does **not** test cosmic expansion or any tesseract optical engine.  
+**Result locked:** this setup tests **local EM diffraction + inertial SR at** $\beta\sim 10^{-7}$.
+It does **not** test cosmic expansion or any tesseract optical engine.
 It is **not** a DESI result.
 
 | Diagnosis | Content |

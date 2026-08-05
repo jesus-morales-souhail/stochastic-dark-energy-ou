@@ -37,7 +37,7 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 
 Theory programme (Minimal Model, past light cone, Einstein+Morales wall):
 
-**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**  
+**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**
 Start there at `papers/FOR_REFEREES.md`.
 
 Exploratory optics / scale–operator pedagogy:
@@ -51,4 +51,4 @@ Exploratory optics / scale–operator pedagogy:
 
 ## Status
 
-**Preprint — not peer reviewed.** Independent research, July 2026.
+**Preprint .** Independent research, July 2026.

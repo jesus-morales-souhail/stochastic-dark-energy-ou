@@ -1,10 +1,10 @@
 # The Smoothness of the Vacuum and the Unimodular Structure of Spacetime
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**ORCID:** 0009-0000-7637-1818  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
-**Status:** Preprint draft — not peer reviewed
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**ORCID:** 0009-0000-7637-1818
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+**Status:** Preprint draft
 
 ---
 

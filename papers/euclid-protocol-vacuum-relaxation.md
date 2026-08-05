@@ -1,6 +1,6 @@
 # Euclid BAO analysis for vacuum smoothness and mean-reversion
 
-Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026 · not peer reviewed
+Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
 Related notes: `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamental-vs-emergent.md`, `stochastic-dark-energy-desi-dr2.md`.
 
@@ -42,7 +42,7 @@ Baseline Euclid BAO-focused model:
 
 Equivalent reparameterizations (Jacobian handled as usual):
 
-- $\{\theta, A_0\}$ with $\sigma_{\rm res}(z)\sim A_0 e^{-\theta\Delta x(z)}$ for a single frozen kick;  
+- $\{\theta, A_0\}$ with $\sigma_{\rm res}(z)\sim A_0 e^{-\theta\Delta x(z)}$ for a single frozen kick;
 - $\{\Gamma_0, A_0\}$ with $\Gamma_0=\theta H_0$ at $z=0$.
 
 Additive kernel as in this repository:
@@ -182,11 +182,11 @@ I report $\sigma_X$ and $\theta$ conditional on free smooth DE.
 
 ## 9. Analysis sequence
 
-1. Construct the Euclid BAO data vector, $C_{\rm std}$, and $S(z)$.  
-2. Sample $\{w_0,w_a,\theta,\sigma_X\}$ with the priors of §3.  
-3. Report the marginal interval or upper limit on $\sigma_X$, the posterior on $\theta$, and nested model comparison versus CPL-only.  
-4. Use lag correlations only as diagnostics.  
-5. Assign F$\cup$E0 / E1 / E2 / E3 using §§5–7.  
+1. Construct the Euclid BAO data vector, $C_{\rm std}$, and $S(z)$.
+2. Sample $\{w_0,w_a,\theta,\sigma_X\}$ with the priors of §3.
+3. Report the marginal interval or upper limit on $\sigma_X$, the posterior on $\theta$, and nested model comparison versus CPL-only.
+4. Use lag correlations only as diagnostics.
+5. Assign F$\cup$E0 / E1 / E2 / E3 using §§5–7.
 6. Compare fixed versus free $\{w_0,w_a\}$; optionally nest QNM.
 
 ---
@@ -208,9 +208,9 @@ python scripts/desqueezing/euclid_protocol_forecasts.py
 
 ## 11. Summary
 
-- Fit $\{w_0,w_a,\theta,\sigma_X\}$ with weakly informative log priors on $\theta$ and $\sigma_X$.  
-- E1 is the BAO window in which Euclid can favour residual amplitude above a pure Poisson seed.  
-- E2 requires damping large enough to exceed amplitude noise when $A_0>s$; Pearson lags alone are usually insufficient.  
+- Fit $\{w_0,w_a,\theta,\sigma_X\}$ with weakly informative log priors on $\theta$ and $\sigma_X$.
+- E1 is the BAO window in which Euclid can favour residual amplitude above a pure Poisson seed.
+- E2 requires damping large enough to exceed amplitude noise when $A_0>s$; Pearson lags alone are usually insufficient.
 - F versus E0 remains a theoretical distinction under a deep null.
 
 ---
@@ -246,8 +246,8 @@ python scripts/euclid_mock_mcmc.py
 
 Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
 
-- **BAO:** 20 bins, $z\in[0.9,1.8]$, forecast-style $\sigma_\alpha\sim 0.3\%$–$0.7\%$.  
-- **SN:** 25 compressed distance-modulus bins (relative fit), shared $\{w_0,w_a\}$.  
+- **BAO:** 20 bins, $z\in[0.9,1.8]$, forecast-style $\sigma_\alpha\sim 0.3\%$–$0.7\%$.
+- **SN:** 25 compressed distance-modulus bins (relative fit), shared $\{w_0,w_a\}$.
 - **Noise sector:** OU kernel on BAO only.
 
 | Scenario | Probe | $\sigma_X$ (illustrative) | $\theta$ | Comment |
@@ -268,7 +268,7 @@ python scripts/euclid_joint_bao_sne_mcmc.py
 
 ## References
 
-[1] Morales Souhail, J., DESI OU/QNM analysis, this repository.  
-[2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository.  
-[3] DESI Collaboration, arXiv:2503.14738 (2025).  
+[1] Morales Souhail, J., DESI OU/QNM analysis, this repository.
+[2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository.
+[3] DESI Collaboration, arXiv:2503.14738 (2025).
 [4] Euclid Collaboration, DR1 BAO forecasts (as available at analysis time).

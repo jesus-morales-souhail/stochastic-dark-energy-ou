@@ -1,10 +1,10 @@
 # stochastic-dark-energy-ou
 
-Jesús Morales Souhail  
-[ORCID 0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) · jmskjym@gmail.com  
-[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)  
+Jesús Morales Souhail
+[ORCID 0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) · jmskjym@gmail.com
+[github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 
-July 2026 · independent research · not peer reviewed
+July 2026 · independent research
 
 I use this repo for the **data** side: public DESI DR2 BAO, residual models (OU / QNM), what is excluded, and how large the soft-amplification gap is if you start from a pure Sorkin seed.
 
@@ -17,21 +17,19 @@ I use this repo for the **data** side: public DESI DR2 BAO, residual models (OU 
 | [`START_HERE.md`](START_HERE.md) | short map |
 | [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) | main write-up |
 | [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) | claims vs non-claims |
-| [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) | what I will and will not say out loud |
-| [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) | what is *not* part of the paper |
+| [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) | allowed vs forbidden wording |
+| [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) | what is not part of the paper |
 
-**Theory (residual scale, measurability):**  
-https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum  
+Theory: [measurable-stochastic-vacuum](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum)
 
-**Pedagogy / wrong-scale quarantine:**  
-https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes  
+Exploratory notes (not cosmology claims): [stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes)
 
 ---
 
 ## What the project is asking
 
-1. **Data.** Do DESI DR2 BAO residual statistics require a stationary stochastic (OU/QNM) piece on top of a smooth background?  
-2. **Geometry.** Can SDiff / unimodular structure explain why late-time vacuum residuals stay small?  
+1. **Data.** Do DESI DR2 BAO residual statistics require a stationary stochastic (OU/QNM) piece on top of a smooth background?
+2. **Geometry.** Can SDiff / unimodular structure explain why late-time vacuum residuals stay small?
 3. **Method.** Right scale and right operator for each claim — no undeclared free parameters.
 
 ### Data (BAO residuals)

@@ -1,10 +1,10 @@
 # Principle of Late-Time Vacuum Homogeneity
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**ORCID:** 0009-0000-7637-1818  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
-**Status:** Working note — not peer reviewed
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**ORCID:** 0009-0000-7637-1818
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+**Status:** Working note
 
 ---
 
@@ -22,7 +22,7 @@ Any physical mechanism that could generate fluctuations in the dark energy densi
 
 I do not treat this only as an observational upper limit. I propose it as a **working principle** for theoretical model building:
 
-> **Principle of Late-Time Vacuum Homogeneity**  
+> **Principle of Late-Time Vacuum Homogeneity**
 > The late-time cosmological vacuum is extraordinarily smooth. Models of dark energy and quantum gravity should show that they naturally predict an effectively non-stochastic background before they try to explain cosmic acceleration or dynamical dark energy.
 
 ---
@@ -49,4 +49,4 @@ I propose this principle on the basis of current observational constraints. It i
 
 ---
 
-*This document is a concise statement of a working hypothesis that has grown out of my analysis of DESI DR2 data. It is not peer reviewed.*
+*This document is a concise statement of a working hypothesis that has grown out of my analysis of DESI DR2 data. It is *

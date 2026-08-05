@@ -13,10 +13,10 @@ notes/ Technical notes (desqueezing synthesis, mapping tables)
 local_archive/ Offline drafts (not part of the public scientific claim)
 ```
 
-**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`  
+**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`
 **Exploratory repo (separate):** `../stochastic-de-exploratory-notes/`
 
-This layout is how I keep the claim set readable. The work is not peer reviewed.
+This layout is how I keep the claim set readable. The work is
 
 ---
 
@@ -54,7 +54,7 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 |------|------|
 | `papers/amplification-gap.md` | **Act III closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{57}$; amplifier audit |
 | `papers/amplification-no-free-lunch.md` | Redirect stub → `amplification-gap.md` (old bookmarks) |
-| `papers/HONEST_HEADLINES.md` | Press/title discipline: not “vacuum energy calculated” |
+| `papers/HONEST_HEADLINES.md` | Title discipline: do not claim vacuum energy was calculated |
 | `scripts/gap_two_targets.py` | Exact two-gap arithmetic |
 | `scripts/amplifier_audit.py` | Runnable gain table (Sorkin → DESI/Euclid) |
 | `scripts/amplification/route1_local_causal_set_seed.py` | Route 1: N_eff / local seed scan |
@@ -111,10 +111,10 @@ This layout is how I keep the claim set readable. The work is not peer reviewed.
 
 Every claim in this repository should be classifiable as one of:
 
-1. **BAO residual / model constraint** (Act I),  
-2. **Geometric interpretation** of smoothness (Act II),  
-3. **Amplification / Euclid protocol** (Act III),  
-4. **Slip Option 0 with amplitude honesty** (Act IV), or  
+1. **BAO residual / model constraint** (Act I),
+2. **Geometric interpretation** of smoothness (Act II),
+3. **Amplification / Euclid protocol** (Act III),
+4. **Slip Option 0 with amplitude honesty** (Act IV), or
 5. **Explicit no-go / boundary** (Act V).
 
 Anything that is only a lab optics metaphor belongs in Act V or in the **separated** optics project — not in the DESI likelihood narrative.

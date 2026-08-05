@@ -1,10 +1,10 @@
 # The Smoothness of the Vacuum as a Geometric Necessity: Unimodular Gravity and the Null Result of DESI DR2
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**ORCID:** 0009-0000-7637-1818  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/  
-**Status:** Preprint — not peer reviewed  
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**ORCID:** 0009-0000-7637-1818
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/
+**Status:** Preprint
 **Type:** Theoretical synthesis
 
 ---

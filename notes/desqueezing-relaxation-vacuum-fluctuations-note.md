@@ -1,11 +1,11 @@
 # Desqueezing Relaxation Time from Open Quantum Systems and its Mapping to Late-Time Vacuum Fluctuations in Stochastic Dark Energy
 
-**Author:** Jesús Morales Souhail  
-**Date:** July 2026  
-**ORCID:** 0009-0000-7637-1818  
-**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou  
-**Companion numerics:** open quantum simulations (`QuTiP`), project `simulaciones_cuanticas`  
-**Status:** Research note — not peer reviewed  
+**Author:** Jesús Morales Souhail
+**Date:** July 2026
+**ORCID:** 0009-0000-7637-1818
+**Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
+**Companion numerics:** open quantum simulations (`QuTiP`), project `simulaciones_cuanticas`
+**Status:** Research note
 **Type:** Self-contained synthesis note (~paper-length)
 
 ---
@@ -385,17 +385,17 @@ I thank the DESI collaboration for public BAO data products. Numerical simulatio
 
 ## References
 
-[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations,” (2026).  
-[2] Morales Souhail, J., “Principle of Late-Time Vacuum Homogeneity,” (2026).  
-[3] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” (2026).  
-[4] Morales Souhail, J., “The Smoothness of the Vacuum as a Geometric Necessity,” (2026).  
-[5] Morales Souhail, J., “Quantum Fluid Instabilities and DESI DR2,” (2026).  
-[6] DESI Collaboration, “DESI DR2 Results II,” arXiv:2503.14738 (2025).  
-[7] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).  
-[8] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).  
-[9] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).  
-[10] Johansson, J. R., Nation, P. D. & Nori, F., Comp. Phys. Comm. 183, 1760 (2012); 184, 1234 (2013).  
-[11] Walls, D. F. & Milburn, G. J., *Quantum Optics*, Springer.  
+[1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations,” (2026).
+[2] Morales Souhail, J., “Principle of Late-Time Vacuum Homogeneity,” (2026).
+[3] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” (2026).
+[4] Morales Souhail, J., “The Smoothness of the Vacuum as a Geometric Necessity,” (2026).
+[5] Morales Souhail, J., “Quantum Fluid Instabilities and DESI DR2,” (2026).
+[6] DESI Collaboration, “DESI DR2 Results II,” arXiv:2503.14738 (2025).
+[7] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).
+[8] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
+[9] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
+[10] Johansson, J. R., Nation, P. D. & Nori, F., Comp. Phys. Comm. 183, 1760 (2012); 184, 1234 (2013).
+[11] Walls, D. F. & Milburn, G. J., *Quantum Optics*, Springer.
 [12] Breuer, H.-P. & Petruccione, F., *The Theory of Open Quantum Systems*, Oxford.
 
 ---
