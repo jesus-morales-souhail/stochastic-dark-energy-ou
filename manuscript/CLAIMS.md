@@ -41,7 +41,8 @@ This is what I stand behind, and what I do not.
 
 ## Dataset boundary
 
-- **In:** public DESI DR2 BAO summary statistics (baseline: diagonal measurement errors).
+- **In:** public DESI DR2 BAO summary statistics + official Gaussian BAO 13×13 cov projected to α
+  (`papers/covariance-desi-dr2-full.md`). Cross-bin α correlations are zero in that public product.
 - **Out of primary claim:** full multi-probe DESI+CMB+SN dynamical DE preference (I cite it as context only).
 
 ---
