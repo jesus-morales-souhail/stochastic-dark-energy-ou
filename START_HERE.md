@@ -23,3 +23,4 @@ This is the **empirical** repo: public DESI DR2 BAO and residual models.
 ## One-line result
 
 Under the OU/QNM residual kernel I use on public DESI DR2 BAO, a stochastic residual is not required. Working ceiling: $\sigma_X < 1.5\times 10^{-4}$ (95% CL). Soft amplification of a pure Sorkin seed $\sim 10^{-61}$ to telescope-band residuals needs $\sim 10^{56}$–$10^{57}$ and is not free.
+

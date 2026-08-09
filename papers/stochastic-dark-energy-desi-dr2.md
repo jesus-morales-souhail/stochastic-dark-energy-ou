@@ -834,3 +834,4 @@ This should be treated as a preliminary, linearized-fiducial check ($S(z)$ held 
 [8] Ashtekar, A. et al., "BMS supertranslations and Weinberg's soft graviton theorem," *JHEP* 2015, 152 (2015).
 
 [9] Wald, R. M., *General Relativity*, University of Chicago Press (1984).
+

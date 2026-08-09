@@ -30,3 +30,4 @@ Interpretation
   positive AIC penalty). Full DESI analyses use the survey covariance matrix
   and multi-probe combinations; these numbers are a transparent BAO-only
   baseline under the diagonal approximation used in this repository.
+

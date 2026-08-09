@@ -291,3 +291,4 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 [9] Weinberg, S., "The Cosmological Constant Problem," *Rev. Mod. Phys.* 61, 1 (1989).
 
 [10] Carroll, S. M., "Quintessence and the Rest of the World," *Phys. Rev. Lett.* 81, 3067 (1998).
+

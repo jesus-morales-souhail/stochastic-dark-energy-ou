@@ -180,3 +180,4 @@ I specify a Euclid-facing fit with free $\{w_0,w_a,\theta,\sigma_X\}$ in `euclid
 [5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
 [6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).
 [7] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
+

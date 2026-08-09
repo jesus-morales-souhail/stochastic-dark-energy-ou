@@ -210,3 +210,4 @@ That statement links this Option 0 note to the desqueezing / Sorkin-seed discuss
 **Runnable check:** `python scripts/slip_bridge.py`
 
 *End of Option 0 note. No Boltzmann code was modified or added.*
+

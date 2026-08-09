@@ -23,3 +23,4 @@ Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superos
 https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
 Claim checklist for *this* repo: [`manuscript/CLAIMS.md`](../manuscript/CLAIMS.md).
+

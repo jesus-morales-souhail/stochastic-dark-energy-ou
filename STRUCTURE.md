@@ -13,10 +13,10 @@ notes/ Technical notes (desqueezing synthesis, mapping tables)
 local_archive/ Offline drafts (not part of the public scientific claim)
 ```
 
-**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`  
+**Reading guide:** `manuscript/PREPRINT.md` · **Non-claims fence:** `papers/EXPLORATORY_BOUNDARY.md`
 **Exploratory repo (optics / method only):** https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
-This layout is how I keep the claim set readable. 
+This layout is how I keep the claim set readable.
 ---
 
 ## Narrative index (read with README.md)
@@ -104,3 +104,4 @@ Every claim in this repository should be classifiable as one of:
 Lab optics metaphors belong in **stochastic-de-exploratory-notes** — not in the DESI likelihood narrative.
 
 See **`README.md`** for the full story and reading order.
+

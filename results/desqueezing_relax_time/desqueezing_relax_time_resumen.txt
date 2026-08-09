@@ -16,3 +16,4 @@ Cosmological dictionary:
   theta  <->  gamma     (mean-reversion / restoration rate)
   n_th   <->  residual noise floor (not the half-life)
   See notes/desqueezing-relaxation-vacuum-fluctuations-note.md
+

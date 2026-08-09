@@ -4,3 +4,4 @@ N = 150, r in {1.5, 1.8}, omega = gamma = 2.4, n_th = 0.1
 r = 1.5: initial Var(q) matches theory to ~0.05% relative error.
 Both cases thermalize to Var(q) -> 0.6 and <n> -> 0.1.
 See scripts/desqueezing/termico_vs_squeezed_recomendado.py
+

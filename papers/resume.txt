@@ -94,3 +94,4 @@ NOTES
 
 - All BAO results use public DESI data.
 - This document summarizes the current status of the stochastic dark energy analysis as of July 2026.
+

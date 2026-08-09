@@ -21,3 +21,4 @@ Useful theory notes (paths inside that repo):
 | `pytest -q` | should stay green |
 
 This repository stays: DESI residual bounds, model exclusions, amplification gap (`papers/amplification-gap.md`).
+

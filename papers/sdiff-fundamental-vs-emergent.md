@@ -118,3 +118,4 @@ Future data from Euclid DR1 will provide the first quantitative test capable of 
 ## Quantitative follow-up
 
 I develop path-integrated residuals $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$, amplification bounds relative to the Sorkin seed, and a partitioned theory space (F, E0–E3) in `fundamental-vs-emergent-vacuum-relaxation.md`, using the laboratory desqueezing law $t_{1/2}=\ln 2/\gamma$ as the finite-relaxation template.
+

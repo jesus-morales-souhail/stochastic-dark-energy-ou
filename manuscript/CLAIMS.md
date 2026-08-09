@@ -6,7 +6,7 @@
 | **Author** | Jesús Morales Souhail · ORCID [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) |
 | **Code** | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 
-This is what I stand behind, and what I do not. 
+This is what I stand behind, and what I do not.
 ---
 
 ## Claims (supported by the public pipeline)
@@ -54,3 +54,4 @@ python scripts/amplifier_audit.py
 python scripts/amplification/run_all_routes.py
 python scripts/slip_bridge.py
 ```
+

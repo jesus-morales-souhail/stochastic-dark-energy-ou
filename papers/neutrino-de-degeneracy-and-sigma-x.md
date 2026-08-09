@@ -53,3 +53,4 @@ Under a free CPL background, DESI DR2 BAO (this pipeline) does not need a statio
 ---
 
 If I extend the fit later: add $\sum m_\nu$ only with a public CMB or growth prior; keep $\sum m_\nu$ and $\sigma_X$ as separate parameters. Do not fold one into the other’s kernel.
+

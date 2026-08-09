@@ -341,3 +341,4 @@ This work uses publicly released DESI DR2 BAO products and community literature 
 5. Clifton, Ferreira, Padilla & Skordis, *Modified Gravity and Cosmology*, Phys. Rep. (2012).
 6. Sorkin, causal-set / unimodular vacuum fluctuation arguments (see repository notes for curated pointers).
 7. Morales Souhail, J., this repository and companion notes (July 2026).
+

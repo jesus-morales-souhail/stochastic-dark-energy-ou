@@ -20,3 +20,4 @@ https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou/blob/main/pap
 
 Please update bookmarks and citations to **`amplification-gap.md`**.
 Machine tables are still at [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md).
+

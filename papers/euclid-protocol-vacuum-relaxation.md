@@ -272,3 +272,4 @@ python scripts/joint_w0wa_sigma_desi.py
 [2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository.
 [3] DESI Collaboration, arXiv:2503.14738 (2025).
 [4] Euclid Collaboration, DR1 BAO forecasts (as available at analysis time).
+

@@ -422,3 +422,4 @@ H_0=67.4\ \mathrm{km s^{-1} Mpc^{-1}},\quad t_{H_0}\simeq 14.51\ \mathrm{Gyr},\q
 ## Appendix C — One-line summary for readers in a hurry
 
 **Desqueezing dies as $e^{-\gamma t}$; cosmology writes $\gamma=\theta H$; Sorkin’s $10^{-61}$ never reaches Euclid; only an amplified effective $A_0$ could.**
+

@@ -12,3 +12,4 @@ DESI anchors (this repository):
   Seed: sigma_0 ~ 1e-61 (Sorkin / Bekenstein-Hawking)
 
 See notes/mapping_tables.md and notes/desqueezing-relaxation-vacuum-fluctuations-note.md.
+

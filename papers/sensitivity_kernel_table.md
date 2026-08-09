@@ -35,3 +35,4 @@ Survey range $\Delta x = \ln(1+z_{\max}) - \ln(1+z_{\min})$:
 | Euclid DR1 | ~0.9–1.8 | ~0.5 | ~12.6 | BAO floor test |
 
 For $\omega_R < \omega_{R,\min}$, the oscillatory kernel H1 (QNM) cannot be distinguished from the pure OU kernel H0, no matter how good the photometry is. That is a geometric limit set by survey range, not a noise limit.
+

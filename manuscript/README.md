@@ -52,3 +52,4 @@ Exploratory optics / scale–operator pedagogy:
 ## Status
 
 **Preprint .** Independent research, July 2026.
+

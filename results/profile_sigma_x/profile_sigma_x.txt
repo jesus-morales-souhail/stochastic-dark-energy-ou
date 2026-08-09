@@ -6,3 +6,4 @@ max ΔlnL vs LCDM = -0.0000 at σ_X = 1.000e-06
 Paper working limit:     σ_X < 1.5e-4
 Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/profile_sigma_x/profile_sigma_x.json
 Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/profile_sigma_x/profile_sigma_x.png
+
