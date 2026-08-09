@@ -57,7 +57,7 @@ SDiff does not cancel shear. Gravitational slip is the right *kind* of operator,
 
 ### Wrong paths
 
-Lab optics, tesseract slogans, and undeclared free powers are documented and kept out of the DESI claim set. Some of that material is also mirrored in the exploratory repo.
+Lab optics, tesseract slogans, and undeclared free powers live only in the exploratory repo — not under `papers/` here.
 
 ---
 

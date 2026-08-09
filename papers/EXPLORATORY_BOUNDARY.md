@@ -1,19 +1,25 @@
 # Exploratory boundary
 
-Do not cite the notes below as DESI results.
+Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 
-I keep some files under `papers/` and demos under `scripts/` to document scale and operator mistakes. They are not part of the main manuscript.
+**Do not cite exploratory optics notes as DESI results.**
 
-| Main claim set | Exploratory only |
-|----------------|------------------|
-| `manuscript/PREPRINT.md` | car–drone pupil, tesseract $B_{4}$, wavefront $T$, superoscillation demos |
-| BAO OU/QNM limits | Maxwell→device lab notes |
-| Tachyonic exclusion | Pattern-undeclared-power essays |
-| Amplification audit + routes | Self-shielding optics barriers |
-| Slip bridge | Optical analogies without a cosmological operator |
+This repository is the **empirical** claim set only: public DESI DR2 BAO residuals, model exclusions, amplification gap, and related data packs.
 
-Exploratory repository:
+Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superoscillation, Maxwell device, self-shielding language, topological edge analogy) live in a **separate** repository. They are not duplicated under `papers/` here.
+
+| This repository (publishable claim set) | Exploratory only (other repo) |
+|----------------------------------------|-------------------------------|
+| `manuscript/PREPRINT.md` | car–drone pupil Newton/Einstein |
+| BAO OU/QNM residual bounds | tesseract \(B_4\), superoscillation demos |
+| Tachyonic coherent-growth exclusion | Maxwell → device lab notes |
+| Amplification gap + routes | Wavefront \(T\) analogies |
+| Slip / Option 0 data pack | Self-shielding optics barriers |
+| Euclid protocol notes | Pattern / undeclared-power essays |
+| Honest headlines + claim checklist | Scale–operator pedagogy maps |
+
+**Exploratory repository (canonical home for fantasy / method notes):**
 
 https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
-Copies may still sit here so the reading order stays clear. Claim checklist: `manuscript/CLAIMS.md`.
+Claim checklist for *this* repo: [`manuscript/CLAIMS.md`](../manuscript/CLAIMS.md).

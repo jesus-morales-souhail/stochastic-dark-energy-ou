@@ -10,10 +10,12 @@
 `papers/fundamental-vs-emergent-vacuum-relaxation.md`,
 `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,
 `papers/anisotropic-slip-option0.md`,
-`papers/scale-operator-experiment-map.md`,
 `papers/resume.txt`,
 `scripts/amplifier_audit.py`,
 `results/amplification_routes/VERDICT.md`
+
+Method / wrong-scale demos (not part of this claim):  
+[stochastic-de-exploratory-notes](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes)
 
 ---
 
