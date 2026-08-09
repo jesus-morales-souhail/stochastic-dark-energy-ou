@@ -225,56 +225,39 @@ python scripts/desqueezing/euclid_protocol_forecasts.py
 
 ---
 
-## 12. DESI real BAO residual test (repository)
+## 12. Empirical claim set (DESI DR2 real $\alpha$ only)
 
-Reference implementation: `scripts/desi_dr2_real_bao_test.py` (emcee). Euclid-like vector of 24 bins ($z\in[0.9,1.8]$), OU kernel as above; samples $\{\theta,\sigma_X\}$ at fixed background or the full $\{w_0,w_a,\theta,\sigma_X\}$.
+These are the only residual **likelihood** products that count as data constraints in this repository. They use the public DESI DR2 isotropic $\alpha$ vector (Zenodo figure-6 file or the published table fallback), **not** a synthetic Euclid vector.
 
-With percent-level BAO uncertainties ($\sigma_\alpha\sim 0.5\%$–$1.2\%$) and $S(z)\sim\mathcal{O}(1)$, the OU term competes with $C_{\rm std}$ only for
-
-
-$$
-\sigma_X \sim \mathrm{few}\times 10^{-3}\ \text{to}\ 10^{-2}.
-$$
-
-
-The scientific window $10^{-5}$–$1.5\times 10^{-4}$ therefore sits below the single-survey SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a simplified forecast vector with $\sim 1\%$ errors.
-
-| Scenario (truth) | Fixed $ (w_0,w_a)$ | Free $ (w_0,w_a)$ |
-|------------------|---------------------|---------------------|
-| Null $\sigma_X=10^{-6}$ | Prior-like posterior | Same; background widens further |
-| E1 $\sigma_X=0.012,\ \theta=0.1$ | Partial amplitude recovery; $\theta$ weak | Signal largely absorbed by background freedom |
-| E2 $\sigma_X=0.015,\ \theta=1.5$ | Amplitude recovered in order of magnitude; $\theta$ poorly pinned | Recovery degrades with free $w_0,w_a$ |
-
-I free $\{w_0,w_a\}$ before interpreting E1/E2. Products: `results/euclid_mcmc/`, `figures/euclid_mcmc_*_{fixed,free}BG.png`.
+| Script | What it does | Output |
+|--------|----------------|--------|
+| `scripts/desi_dr2_real_bao_test.py` | Diagonal + OU residual MLE on 7 real bins | `results/desi_dr2_real_bao/` |
+| `scripts/profile_sigma_x_desi.py` | Profile likelihood for $\sigma_X$ | `results/profile_sigma_x/` |
+| `scripts/joint_w0wa_sigma_desi.py` | Joint $\{w_0,w_a,\sigma_X\}$ on real $\alpha$ | `results/joint_w0wa_sigma/` |
+| `scripts/ou_bao_likelihood.py` | Full OU/QNM comparison table | `results/ou_bao_desi_dr2_run.txt` |
+| `scripts/tachyonic_rank1_mle.py` | Rank-1 coherent-growth exclusion | `results/tachyonic_rank1/` |
 
 ```bash
-pip install emcee
 python scripts/desi_dr2_real_bao_test.py
+python scripts/profile_sigma_x_desi.py
+python scripts/joint_w0wa_sigma_desi.py
+python scripts/tachyonic_rank1_mle.py
 ```
+
+Working residual ceiling under the OU kernel (this pipeline): $\sigma_X < 1.5\times 10^{-4}$ (95% CL, paper working limit). Profile and joint runs on the real $\alpha$ file are consistent with a null residual (amplitude driven to the floor when the background is free).
 
 ---
 
-## 13. Joint BAO on DESI (real)
+## 13. What is **not** a DESI claim (retired synthetic Euclid MCMC)
 
-Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
+Older folders `results/euclid_mcmc/` and `results/euclid_joint_mcmc/` came from **synthetic** Euclid-like BAO(+SN) vectors. They are **retired**. Do not cite them as DESI or Euclid data.
 
-- **BAO:** 20 bins, $z\in[0.9,1.8]$, forecast-style $\sigma_\alpha\sim 0.3\%$–$0.7\%$.
-- **SN:** 25 compressed distance-modulus bins (relative fit), shared $\{w_0,w_a\}$.
-- **Noise sector:** OU kernel on BAO only.
+- Stubs that redirect to the real DESI test: `scripts/euclid_mock_mcmc.py`, `scripts/euclid_joint_bao_sne_mcmc.py`
+- Fence: `results/euclid_mcmc/RETIRED.md`, `results/euclid_joint_mcmc/RETIRED.md`
 
-| Scenario | Probe | $\sigma_X$ (illustrative) | $\theta$ | Comment |
-|----------|-------|----------------------------:|-----------:|---------|
-| Null | BAO | $\sim 2\times 10^{-4}$ (upper, prior-like) | unconstrained | No false high-$\sigma_X$ peak |
-| Null | BAO+SN | similar $\sigma_X$; tighter $w_0$ | unconstrained | SN helps the background |
-| E1 ($\sigma_X=0.008,\theta=0.1$) | BAO / joint | weak recovery | weak | Edge of optimistic SNR |
-| E2 ($\sigma_X=0.012,\theta=1.5$) | BAO | $\sim 0.016\ [0.000,0.029]$ | poorly pinned | Amplitude recovered at right order |
-| E2 | BAO+SN | $\sim 0.007\ [0.000,0.027]$ | median higher | SN reduces DE–noise trade-off |
+**Still valid as a protocol (not data):** the forecast grids in §10 (`results/euclid_protocol/`, `scripts/desqueezing/euclid_protocol_forecasts.py`). Those are design forecasts over $(\theta,A_0)$, not likelihoods on measured redshifts.
 
-Optimistic Euclid errors move the practical recovery threshold toward $\sigma_X\sim 1\%$, but $10^{-5}$–$10^{-4}$ remains demanding. SN data primarily tighten $\{w_0,w_a\}$. Products: `results/euclid_joint_mcmc/`, `figures/joint_mcmc_*.png`.
-
-```bash
-python scripts/joint_w0wa_sigma_desi.py
-```
+When real Euclid BAO summary statistics are public, replace the retired synthetic MCMC with a loader analogous to `desi_dr2_data.py` and re-run. Until then, empirical residual claims in this repo rest on **DESI DR2 only**.
 
 ---
 

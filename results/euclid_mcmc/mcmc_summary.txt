@@ -1,3 +1,4 @@
+RETIRED (synthetic Euclid vector — not DESI/Euclid data). See RETIRED.md in this folder.
 Euclid mock MCMC — vacuum-relaxation protocol
 ==================================================
 N_bins=24, z in [0.90,1.80]

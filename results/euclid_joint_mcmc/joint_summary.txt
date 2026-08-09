@@ -1,3 +1,4 @@
+RETIRED (synthetic Euclid vector — not DESI/Euclid data). See RETIRED.md in this folder.
 Joint Euclid-like BAO + SN mock MCMC
 ==================================================
 BAO: optimistic forecast-style errors (~0.3–0.7% on alpha).

@@ -445,7 +445,7 @@ I summarize the status of the model based on the current analysis:
 
 ## 9. Near-Term Observational Program: Euclid DR1
 
-Euclid Data Release 1 (expected H2 2026) will provide $>20$ redshift bins, resolving the current degeneracies with unprecedented statistical power. The analysis pipeline is fully ready.
+Euclid Data Release 1 (expected H2 2026) will provide $>20$ redshift bins, resolving the current degeneracies with substantially higher statistical power. The analysis pipeline is fully ready.
 
 Notably, Euclid DR1's narrower redshift baseline ($z \in [0.9, 1.8]$) yields a higher Rayleigh frequency limit ($\omega_{R,\min} \approx 16.2$) than DESI (6.66), meaning Euclid cannot geometrically resolve intermediate-frequency quasi-normal mode (QNM) oscillations that DESI could potentially detect (Appendix D). The decisive contribution of Euclid will be statistical power through $>20$ bins, not oscillatory frequency resolution.
 

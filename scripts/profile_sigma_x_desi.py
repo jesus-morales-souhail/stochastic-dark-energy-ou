@@ -160,8 +160,8 @@ def main():
         f"max ΔlnL vs LCDM = {np.max(dlogL):+.4f} at σ_X = {sig_grid[int(np.argmax(dlogL))]:.3e}",
         f"95% CL upper (profile): σ_X ≤ {s_95:.3e}",
         f"Paper working limit:     σ_X < 1.5e-4",
-        f"Wrote {out_json}",
-        f"Wrote {OUT / 'profile_sigma_x.png'}",
+        f"Wrote results/profile_sigma_x/profile_sigma_x.json",
+        f"Wrote results/profile_sigma_x/profile_sigma_x.png",
     ]
     text = "\n".join(lines) + "\n"
     (OUT / "profile_sigma_x.txt").write_text(text, encoding="utf-8")

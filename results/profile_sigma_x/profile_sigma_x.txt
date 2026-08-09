@@ -4,6 +4,5 @@ ll_LCDM = 24.8955
 max ΔlnL vs LCDM = -0.0000 at σ_X = 1.000e-06
 95% CL upper (profile): σ_X ≤ 2.506e-02
 Paper working limit:     σ_X < 1.5e-4
-Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/profile_sigma_x/profile_sigma_x.json
-Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/profile_sigma_x/profile_sigma_x.png
-
+Wrote results/profile_sigma_x/profile_sigma_x.json
+Wrote results/profile_sigma_x/profile_sigma_x.png

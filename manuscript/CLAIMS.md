@@ -35,6 +35,7 @@ This is what I stand behind, and what I do not.
 | **N6** | Optical tesseract / pupil / wavefront lab metaphors are **outside the claim set** ([exploratory repo](https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes)) |
 | **N7** | This is independent work |
 | **N8** | I do not claim a bound on $\sum m_\nu$; neutrino mass is not in the likelihood. See [`papers/neutrino-de-degeneracy-and-sigma-x.md`](../papers/neutrino-de-degeneracy-and-sigma-x.md) |
+| **N9** | Synthetic Euclid MCMC folders (`results/euclid_mcmc/`, `results/euclid_joint_mcmc/`) are **retired**; not data claims |
 
 ---
 

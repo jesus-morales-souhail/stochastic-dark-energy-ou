@@ -8,7 +8,7 @@ scripts/ Analysis code (BAO, amplification routes, desqueezing, GPE)
  gpe/ Gross–Pitaevskii / Bogoliubov numerics
  amplification/ Routes 1–3 (seed / freeze / avalanche)
 figures/ Figures
-results/ Numerical outputs (BAO fits, forecasts, desqueezing, routes)
+results/ Numerical outputs (BAO fits, forecasts, desqueezing, routes; euclid_mcmc* RETIRED synthetic)
 notes/ Technical notes (desqueezing synthesis, mapping tables)
 local_archive/ Offline drafts (not part of the public scientific claim)
 ```
