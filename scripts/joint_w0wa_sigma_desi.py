@@ -19,15 +19,20 @@ from scipy.linalg import cho_factor, cho_solve
 from scipy.optimize import minimize
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / "scripts"))
+from desi_dr2_data import load_alpha_dv
 OUT = ROOT / "results" / "joint_w0wa_sigma"
 OUT.mkdir(parents=True, exist_ok=True)
 FIG = ROOT / "figures"
 
 # DESI DR2 BAO (repo standard)
-z_eff = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
-alpha_obs = np.array([1.0030, 0.9947, 1.0016, 0.9960, 1.0020, 0.9963, 1.0008])
-sigma_obs = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
-S_z = np.array([-0.284, -0.462, -0.595, -0.719, -0.870, -0.917, -1.070])
+_d = load_alpha_dv(prefer_file=True)
+z_eff = _d["z"]
+alpha_obs = _d["alpha"]
+sigma_obs = _d["sigma"]
+print("joint_w0wa data:", _d["source"])
+S_z = _d["S_z"]
 
 H0, Om, c_kms = 67.4, 0.315, 299792.458
 n = len(z_eff)

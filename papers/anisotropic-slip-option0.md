@@ -32,7 +32,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not c
 |--------|--------|
 | CPL background + OU/QNM residual kernel on BAO distances | Boltzmann hierarchy (CLASS/CAMB) |
 | Joint / profile MLE for $\{w_0,w_a,\sigma_X\}$ | Poisson / slip equations for $\Phi,\Psi$ |
-| Euclid **BAO** mock forecasts | $\eta(a,k)$ likelihoods |
+| Euclid **BAO** forecasts (literature) | $\eta(a,k)$ likelihoods |
 | Unimodular / SDiff narrative notes | Full $\eta(a,k)$ MCMC |
 | `scripts/slip_bridge.py` (scaling map $\sigma_X\to\|\gamma-1\|$) | hi_class / MGCAMB Boltzmann |
 

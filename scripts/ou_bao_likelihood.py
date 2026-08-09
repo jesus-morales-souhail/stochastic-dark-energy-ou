@@ -49,6 +49,11 @@ REFERENCES:
 """
 
 import numpy as np
+import sys
+from pathlib import Path as _Path
+_ROOT = _Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(_ROOT / "scripts"))
+from desi_dr2_data import load_alpha_dv
 from scipy.linalg import cholesky, solve_triangular
 from scipy.optimize import minimize
 from scipy.integrate import quad
@@ -66,9 +71,11 @@ warnings.filterwarnings('ignore')
 # ============================================================
 DATA_SOURCE = "DESI DR2 (arXiv:2503.14738)"
 
-z_eff  = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
-alpha  = np.array([1.0030, 0.9947, 1.0016, 0.9960, 1.0020, 0.9963, 1.0008])
-sigma  = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
+_d = load_alpha_dv(prefer_file=True)
+z_eff = _d["z"]
+alpha = _d["alpha"]
+sigma = _d["sigma"]
+print("ou_bao_likelihood data:", _d["source"])
 
 # Sensitivity kernel S(z) = d ln D_V(z) / d Omega_Lambda
 # Computed for flat ΛCDM fiducial: Omega_m=0.315, H0=67.4 km/s/Mpc

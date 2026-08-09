@@ -225,7 +225,7 @@ With percent-level BAO uncertainties ($\sigma_\alpha\sim 0.5\%$–$1.2\%$) and $
 \sigma_X \sim \mathrm{few}\times 10^{-3}\ \text{to}\ 10^{-2}.
 
 
-The scientific window $10^{-5}$–$1.5\times 10^{-4}$ therefore sits below the single-mock SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a 24-bin mock with $\sim 1\%$ errors.
+The scientific window $10^{-5}$–$1.5\times 10^{-4}$ therefore sits below the single-survey SNR of this simplified forecast. The DESI working limit remains a phenomenological upper bound from multi-bin MLE behaviour, not a high-SNR detection scale in a simplified forecast vector with $\sim 1\%$ errors.
 
 | Scenario (truth) | Fixed $ (w_0,w_a)$ | Free $ (w_0,w_a)$ |
 |------------------|---------------------|---------------------|

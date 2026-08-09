@@ -19,6 +19,10 @@ from scipy.linalg import cho_factor, cho_solve
 from scipy.optimize import minimize_scalar
 
 ROOT = Path(__file__).resolve().parents[1]
+import sys
+sys.path.insert(0, str(ROOT / "scripts"))
+from desi_dr2_data import load_alpha_dv
+
 OUT = ROOT / "results" / "desi_dr2_real_bao"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -39,22 +43,9 @@ S_PUB = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
 
 
 def load_alpha() -> dict:
-    if FIG6.is_file():
-        raw = np.loadtxt(FIG6, comments="#")
-        z = raw[:, 0]
-        a = raw[:, 1]
-        s = raw[:, 2]
-        src = str(FIG6.relative_to(ROOT))
-    else:
-        z, a, s = Z_PUB, A_PUB, S_PUB
-        src = "published_DR2_isotropic_alpha_table (fallback)"
-    return {
-        "z": z.astype(float),
-        "alpha": a.astype(float),
-        "sigma": s.astype(float),
-        "source": src,
-        "n_bins": int(len(z)),
-    }
+    d = load_alpha_dv(prefer_file=True)
+    d["n_bins"] = int(len(d["z"]))
+    return d
 
 
 def build_C(x: np.ndarray, sigma: np.ndarray, S_z: np.ndarray, theta: float, sigma_X: float) -> np.ndarray:
