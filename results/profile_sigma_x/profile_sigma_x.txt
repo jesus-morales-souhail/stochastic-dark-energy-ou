@@ -1,6 +1,6 @@
-Profile likelihood σ_X — DESI DR2 BAO (diagonal)
+Profile likelihood σ_X — DESI DR2 BAO (full meas. cov)
 ==================================================
-ll_LCDM = 24.8955
+ll_LCDM = 24.8996
 max ΔlnL vs LCDM = -0.0000 at σ_X = 1.000e-06
 95% CL upper (profile): σ_X ≤ 2.506e-02
 Paper working limit:     σ_X < 1.5e-4

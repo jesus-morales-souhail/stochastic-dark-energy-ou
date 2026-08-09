@@ -22,7 +22,7 @@ Data pack (arXiv links): papers/data-pack-option0-internet.md
 ================================================================================
 
 Data: DESI DR2 BAO (arXiv:2503.14738) — 7 redshift bins
-      Public summary statistics; diagonal measurement errors in this pipeline.
+      Public summary statistics; measurement cov = DESI Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).
 
 Background (CPL, BAO-only):
   w0 ≈ −0.99

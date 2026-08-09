@@ -1,12 +1,12 @@
 Tachyonic / coherent growing-mode rank-1 MLE (real DESI DR2 alpha)
 source: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt
 n_bins: 7
-ll_LCDM: 24.895485
-chi2_LCDM: 4.493905
+ll_LCDM: 24.899563
+chi2_LCDM: 4.490158
 sigma0: 1.000e-61
 dlnL (no growth, large tc): 0.000000
 representative active tc [Gyr]: 7.408657e-02
-representative ΔlnL vs LCDM: -12.6683
-representative Δχ² ≈ 25.34
-worst active ΔlnL: -30.0366
+representative ΔlnL vs LCDM: -12.6789
+representative Δχ² ≈ 25.36
+worst active ΔlnL: -30.0473
 Likelihood peaks at no growth (tc→∞, ΔlnL→0). When σ0·exp(t/tc) is large enough for the rank-1 term to matter, the model is excluded (ΔlnL ≲ −11, Δχ² ≳ +22).

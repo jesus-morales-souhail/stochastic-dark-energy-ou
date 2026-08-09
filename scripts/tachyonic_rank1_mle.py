@@ -25,7 +25,7 @@ from scipy.linalg import cholesky, solve_triangular
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from desi_dr2_data import load_alpha_dv  # noqa: E402
+from desi_dr2_data import load_alpha_dv, measurement_cov  # noqa: E402
 
 H0 = 67.4
 OM = 0.315
@@ -55,28 +55,29 @@ def log_likelihood(residuals: np.ndarray, cov: np.ndarray) -> float:
         return -np.inf
 
 
-def cov_rank1(sig: np.ndarray, S: np.ndarray, t: np.ndarray, tc: float, sigma0: float) -> np.ndarray:
+def cov_rank1(C_meas: np.ndarray, S: np.ndarray, t: np.ndarray, tc: float, sigma0: float) -> np.ndarray:
     expo = np.clip(t / tc, -700.0, 700.0)
     u = sigma0 * S * np.exp(expo)
     if not np.all(np.isfinite(u)) or np.max(np.abs(u)) > 1.0e12:
-        return np.full((len(sig), len(sig)), np.nan)
-    return np.diag(sig**2) + np.outer(u, u)
+        return np.full((len(S), len(S)), np.nan)
+    return np.array(C_meas, dtype=float, copy=True) + np.outer(u, u)
 
 
 def main() -> None:
-    d = load_alpha_dv(prefer_file=True)
+    d = load_alpha_dv(prefer_file=True, use_full_cov=True)
     z, alpha, sig, S = d["z"], d["alpha"], d["sigma"], d["S_z"]
+    C_MEAS = measurement_cov(d)
     t = np.array([lookback_gyr(float(zi)) for zi in z])
     r = alpha - 1.0
 
-    C0 = np.diag(sig**2)
+    C0 = C_MEAS
     ll0 = log_likelihood(r, C0)
     chi2_0 = float(np.sum((r / sig) ** 2))
 
     tcs = np.logspace(-4, 4, 500)
     rows = []
     for tc in tcs:
-        C = cov_rank1(sig, S, t, tc, SIGMA0)
+        C = cov_rank1(C_MEAS, S, t, tc, SIGMA0)
         ll = log_likelihood(r, C)
         u_max = float(np.max(np.abs(SIGMA0 * S * np.exp(np.clip(t / tc, -700, 700)))))
         if not np.isfinite(u_max):
@@ -109,6 +110,7 @@ def main() -> None:
 
     summary = {
         "source": d["source"],
+        "cov_mode": d.get("cov_mode"),
         "mock": bool(d.get("mock", False)),
         "n_bins": int(len(z)),
         "z": z.tolist(),

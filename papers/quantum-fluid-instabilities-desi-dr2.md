@@ -210,7 +210,7 @@ I run the MLE on the real isotropic $\alpha$ vector from the public DESI DR2 Zen
 |:---------|:------|
 | Bins $n$ | 7 |
 | Data file | DESI DR2 $\alpha$ (real, not mock) |
-| $\ln\mathcal{L}_{\Lambda\mathrm{CDM}}$ (diagonal $C$) | $24.8955$ |
+| $\ln\mathcal{L}_{\Lambda\mathrm{CDM}}$ (diagonal $C$) | $24.8996$ |
 | $\chi^{2}_{\Lambda\mathrm{CDM}}=\sum r_{i}^{2}/\sigma_{i}^{2}$ | $4.49$ |
 | Seed $\sigma_{0}$ | $10^{-61}$ |
 | No-growth limit $t_{c}\to\infty$ | $\Delta\ln\mathcal{L}\to 0$ (preferred) |

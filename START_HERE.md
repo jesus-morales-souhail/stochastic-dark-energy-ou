@@ -11,7 +11,8 @@ This is the **empirical** repo: public DESI DR2 BAO and residual models.
 2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim and what I do not
 3. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — allowed wording
 4. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft $10^{56}$ is closed
-5. [`papers/neutrino-de-degeneracy-and-sigma-x.md`](papers/neutrino-de-degeneracy-and-sigma-x.md) — $\sum m_\nu$ vs DE vs our $\sigma_X$ null (context only)
+5. [`papers/covariance-desi-dr2-full.md`](papers/covariance-desi-dr2-full.md) — full BAO measurement cov
+6. [`papers/neutrino-de-degeneracy-and-sigma-x.md`](papers/neutrino-de-degeneracy-and-sigma-x.md) — $\sum m_\nu$ vs DE vs our $\sigma_X$ null (context only)
 
 ## Related repositories
 

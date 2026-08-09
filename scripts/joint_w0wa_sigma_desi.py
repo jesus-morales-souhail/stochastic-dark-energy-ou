@@ -21,17 +21,18 @@ from scipy.optimize import minimize
 ROOT = Path(__file__).resolve().parents[1]
 import sys
 sys.path.insert(0, str(ROOT / "scripts"))
-from desi_dr2_data import load_alpha_dv
+from desi_dr2_data import load_alpha_dv, measurement_cov, add_ou_kernel, logL_gaussian
 OUT = ROOT / "results" / "joint_w0wa_sigma"
 OUT.mkdir(parents=True, exist_ok=True)
 FIG = ROOT / "figures"
 
 # DESI DR2 BAO (repo standard)
-_d = load_alpha_dv(prefer_file=True)
+_d = load_alpha_dv(prefer_file=True, use_full_cov=True)
 z_eff = _d["z"]
 alpha_obs = _d["alpha"]
 sigma_obs = _d["sigma"]
-print("joint_w0wa data:", _d["source"])
+C_MEAS = measurement_cov(_d)
+print("joint_w0wa data:", _d["source"], "cov_mode:", _d.get("cov_mode"))
 S_z = _d["S_z"]
 
 H0, Om, c_kms = 67.4, 0.315, 299792.458
@@ -111,19 +112,8 @@ def logL_total(w0, wa, theta, sigma_X):
     if not np.all(np.isfinite(pred)):
         return -1e30
     r = alpha_obs - pred
-    C = np.diag(sigma_obs**2)
-    s2 = sigma_X**2
-    for i in range(n):
-        for j in range(n):
-            dx = abs(xbins[i] - xbins[j])
-            C[i, j] += S_z[i] * S_z[j] * s2 * np.exp(-theta * dx)
-    try:
-        c, lower = cho_factor(C, lower=True, check_finite=False)
-        y = cho_solve((c, lower), r, check_finite=False)
-        logdet = 2.0 * np.sum(np.log(np.diag(c)))
-        return float(-0.5 * (r @ y + logdet + n * np.log(2 * np.pi)))
-    except Exception:
-        return -1e30
+    C = add_ou_kernel(C_MEAS, S_z, xbins, theta, sigma_X)
+    return logL_gaussian(r, C)
 
 
 def fit(model: str):
@@ -270,7 +260,8 @@ def main():
         )
 
     summary = {
-        "data": "DESI DR2 BAO 7 bins, diagonal cov, S(z) fixed",
+        "data": "DESI DR2 BAO 7 bins, full meas. cov, S(z) fixed",
+        "cov_mode": _d.get("cov_mode"),
         "models": table,
         "reading": [
             "If joint drives sigma_X→0 and (w0,wa) near LCDM, null stochastic is robust.",
@@ -306,7 +297,7 @@ def main():
     ax.bar(names, dls, color=colors[: len(names)])
     ax.axhline(0, color="k", lw=0.8)
     ax.set_ylabel(r"$\Delta\ln\mathcal{L}$ vs $\Lambda$CDM")
-    ax.set_title("DESI DR2 BAO joint model comparison (diagonal cov)")
+    ax.set_title("DESI DR2 BAO joint model comparison (full meas. cov)")
     ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(OUT / "joint_w0wa_sigma.png", dpi=150)

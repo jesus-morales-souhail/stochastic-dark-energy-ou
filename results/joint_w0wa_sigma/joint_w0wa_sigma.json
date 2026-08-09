@@ -1,5 +1,6 @@
 {
-  "data": "DESI DR2 BAO 7 bins, diagonal cov, S(z) fixed",
+  "data": "DESI DR2 BAO 7 bins, full meas. cov, S(z) fixed",
+  "cov_mode": "diagonal_figure6_errors",
   "models": [
     {
       "model": "lcdm",

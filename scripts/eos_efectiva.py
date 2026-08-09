@@ -2,7 +2,7 @@
 """
 CPL background and optional nested effective-EoS extension on DESI DR2 BAO.
 
-Fits free (w0, wa) to the public DESI DR2 BAO alpha vector (diagonal errors),
+Fits free (w0, wa) to the public DESI DR2 BAO alpha vector (full measurement covariance when available),
 then a nested extension with mean-field amplitude σ and rate θ. Uses multi-start
 Nelder–Mead (derivative-free). Outputs go to ``results/eos_cpl_desi_dr2/``.
 
@@ -18,15 +18,24 @@ import os
 from pathlib import Path
 
 import numpy as np
+import sys
+from pathlib import Path as _Path
+sys.path.insert(0, str(_Path(__file__).resolve().parent))
+from desi_dr2_data import load_alpha_dv, measurement_cov
+from scipy.linalg import cho_factor, cho_solve as _cho_solve
+_d_eos = load_alpha_dv(prefer_file=True, use_full_cov=True)
+C_MEAS = measurement_cov(_d_eos)
+
 from scipy.integrate import quad
 from scipy.optimize import minimize
 
 # ---------------------------------------------------------------------------
-# Real DESI DR2 BAO data (repo standard)
+# Real DESI DR2 BAO data (repo standard; full measurement cov)
 # ---------------------------------------------------------------------------
-z_eff = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
-alpha_obs = np.array([1.0030, 0.9947, 1.0016, 0.9960, 1.0020, 0.9963, 1.0008])
-sigma_obs = np.array([0.0097, 0.0072, 0.0057, 0.0049, 0.0063, 0.0088, 0.0120])
+z_eff = _d_eos["z"]
+alpha_obs = _d_eos["alpha"]
+sigma_obs = _d_eos["sigma"]
+print("eos_efectiva data:", _d_eos["source"], "cov_mode:", _d_eos.get("cov_mode"))
 
 H0 = 67.4
 Om = 0.315
@@ -99,7 +108,13 @@ def chi2_cpl(w0: float, wa: float) -> float:
     pred = alpha_pred_cpl(w0, wa)
     if not np.all(np.isfinite(pred)):
         return np.inf
-    return float(np.sum(((alpha_obs - pred) / sigma_obs) ** 2))
+    r = alpha_obs - pred
+    try:
+        c, lo = cho_factor(C_MEAS, lower=True, check_finite=False)
+        y = _cho_solve((c, lo), r, check_finite=False)
+        return float(r @ y)
+    except Exception:
+        return float(np.sum((r / sigma_obs) ** 2))
 
 
 def logL_cpl(w0: float, wa: float) -> float:
@@ -195,7 +210,13 @@ def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
         return np.inf
     if not np.all(np.isfinite(pred)):
         return np.inf
-    return float(np.sum(((alpha_obs - pred) / sigma_obs) ** 2))
+    r = alpha_obs - pred
+    try:
+        c, lo = cho_factor(C_MEAS, lower=True, check_finite=False)
+        y = _cho_solve((c, lo), r, check_finite=False)
+        return float(r @ y)
+    except Exception:
+        return float(np.sum((r / sigma_obs) ** 2))
 
 
 def logL_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
@@ -351,7 +372,7 @@ def main():
     print()
 
     summary = {
-        "data": "DESI DR2 BAO summary statistics (7 bins, diagonal errors)",
+        "data": "DESI DR2 BAO summary statistics (7 bins, full measurement covariance when available)",
         "fiducial": "flat LCDM, Om=0.315, H0=67.4, w0=-1, wa=0",
         "pure_CPL": {
             "w0": cpl["w0"],
@@ -380,7 +401,7 @@ def main():
         "delta_logL_extension_minus_cpl": float(dlogL),
         "delta_AIC_extension_minus_cpl": float(daic),
         "notes": [
-            "BAO-only fit with diagonal measurement errors.",
+            "BAO-only fit with full measurement covariance (Gaussian BAO projected).",
             "Nested stochastic amplitude is consistent with zero; pure CPL preferred by AIC.",
         ],
     }
@@ -390,7 +411,7 @@ def main():
     lines = [
         "DESI DR2 BAO — CPL background and nested effective-EoS extension",
         "=" * 64,
-        "Data: public DESI DR2 BAO summary statistics (7 bins; diagonal errors).",
+        "Data: public DESI DR2 BAO summary statistics (7 bins; full measurement covariance when available).",
         "Fiducial distances: flat ΛCDM (Ωm = 0.315, H0 = 67.4, w0 = −1, wa = 0).",
         "",
         "Pure CPL (free w0, wa)",

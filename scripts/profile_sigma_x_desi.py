@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Profile likelihood for sigma_X on DESI DR2 BAO (diagonal errors).
+Profile likelihood for sigma_X on DESI DR2 BAO (full measurement cov when available).
 
 For each fixed sigma_X, maximize logL over theta (OU kernel) with free
 optional (w0, wa) in a second pass (background fixed to LCDM first).
@@ -23,16 +23,17 @@ from scipy.optimize import minimize_scalar
 ROOT = Path(__file__).resolve().parents[1]
 import sys
 sys.path.insert(0, str(ROOT / "scripts"))
-from desi_dr2_data import load_alpha_dv
+from desi_dr2_data import load_alpha_dv, measurement_cov, add_ou_kernel, logL_gaussian
 OUT = ROOT / "results" / "profile_sigma_x"
 OUT.mkdir(parents=True, exist_ok=True)
 
-_d = load_alpha_dv(prefer_file=True)
+_d = load_alpha_dv(prefer_file=True, use_full_cov=True)
 z_eff = _d["z"]
 alpha = _d["alpha"]
 sigma_obs = _d["sigma"]
 S_z = _d["S_z"]
-print("profile_sigma_x data:", _d["source"])
+C_MEAS = measurement_cov(_d)
+print("profile_sigma_x data:", _d["source"], "cov_mode:", _d.get("cov_mode"))
 
 residuals = alpha - 1.0
 x = np.log(1.0 + z_eff)
@@ -40,26 +41,13 @@ n = len(z_eff)
 
 
 def build_C(theta: float, sigma_X: float) -> np.ndarray:
-    C = np.diag(sigma_obs**2)
-    s2 = sigma_X**2
-    for i in range(n):
-        for j in range(n):
-            dx = abs(x[i] - x[j])
-            C[i, j] += S_z[i] * S_z[j] * s2 * np.exp(-theta * dx)
-    return C
+    return add_ou_kernel(C_MEAS, S_z, x, theta, sigma_X)
 
 
 def logL(theta: float, sigma_X: float) -> float:
     if theta <= 0 or sigma_X < 0:
         return -1e30
-    C = build_C(theta, sigma_X)
-    try:
-        c, lower = cho_factor(C, lower=True, check_finite=False)
-        y = cho_solve((c, lower), residuals, check_finite=False)
-        logdet = 2.0 * np.sum(np.log(np.diag(c)))
-        return float(-0.5 * (residuals @ y + logdet + n * np.log(2 * np.pi)))
-    except Exception:
-        return -1e30
+    return logL_gaussian(residuals, build_C(theta, sigma_X))
 
 
 def max_logL_over_theta(sigma_X: float) -> tuple[float, float]:
@@ -86,14 +74,8 @@ def max_logL_over_theta(sigma_X: float) -> tuple[float, float]:
 
 
 def main():
-    # LCDM baseline
-    ll0 = logL(1.0, 0.0)  # theta irrelevant if sigma_X=0
-    # exact LCDM
-    C0 = np.diag(sigma_obs**2)
-    c, lower = cho_factor(C0, lower=True)
-    y = cho_solve((c, lower), residuals)
-    logdet = 2.0 * np.sum(np.log(np.diag(c)))
-    ll_lcdm = float(-0.5 * (residuals @ y + logdet + n * np.log(2 * np.pi)))
+    # LCDM baseline (measurement cov only)
+    ll_lcdm = logL_gaussian(residuals, C_MEAS)
 
     # profile over sigma_X
     sig_grid = np.geomspace(1e-6, 5e-2, 48)
@@ -117,7 +99,8 @@ def main():
 
     # also report where dlogL vs LCDM crosses -1.92 (if max is at LCDM)
     summary = {
-        "data": "DESI DR2 BAO 7 bins diagonal (repo arrays)",
+        "data": "DESI DR2 BAO 7 bins, full measurement cov when available",
+        "cov_mode": _d.get("cov_mode"),
         "ll_lcdm": ll_lcdm,
         "max_dlogL_vs_lcdm": float(np.max(dlogL)),
         "sigma_X_at_max": float(sig_grid[int(np.argmax(dlogL))]),
@@ -126,7 +109,7 @@ def main():
         "paper_working_limit": 1.5e-4,
         "profile": profile,
         "notes": [
-            "Diagonal covariance only; full DESI cov would refine the limit.",
+            "Uses official Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).",
             "Background fixed to alpha=1 (LCDM fiducial). Free {w0,wa} is a separate scan.",
         ],
     }
@@ -145,7 +128,7 @@ def main():
     ax.axvline(s_95, color="green", ls="-.", label=rf"profile $95\%$ $\sigma_X\leq{s_95:.2e}$")
     ax.set_xlabel(r"$\sigma_X$")
     ax.set_ylabel(r"$\Delta\ln\mathcal{L}$ (profile over $\theta$)")
-    ax.set_title(r"DESI DR2 BAO: profile likelihood for $\sigma_X$ (OU, diagonal cov)")
+    ax.set_title(r"DESI DR2 BAO: profile likelihood for $\sigma_X$ (OU, full meas. cov)")
     ax.legend(fontsize=8)
     ax.grid(True, which="both", alpha=0.3)
     fig.tight_layout()
@@ -154,7 +137,7 @@ def main():
     plt.close(fig)
 
     lines = [
-        "Profile likelihood σ_X — DESI DR2 BAO (diagonal)",
+        "Profile likelihood σ_X — DESI DR2 BAO (full meas. cov)",
         "=" * 50,
         f"ll_LCDM = {ll_lcdm:.4f}",
         f"max ΔlnL vs LCDM = {np.max(dlogL):+.4f} at σ_X = {sig_grid[int(np.argmax(dlogL))]:.3e}",

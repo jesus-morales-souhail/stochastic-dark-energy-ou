@@ -19,7 +19,7 @@ I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statist
 
 $$\sigma_X < 1.5\times 10^{-4}$$
 
-under the stated phenomenological kernel and public BAO summary statistics (diagonal measurement errors in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
+under the stated phenomenological kernel and public BAO summary statistics (official Gaussian BAO covariance projected to isotropic α in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
 
 Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$).
 

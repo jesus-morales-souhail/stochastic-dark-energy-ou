@@ -26,6 +26,7 @@ This layout is how I keep the claim set readable.
 | Path | Role |
 |------|------|
 | `papers/resume.txt` | Compact numerical summary |
+| `papers/covariance-desi-dr2-full.md` | Official 13×13 BAO cov → α 7×7 |
 | `papers/stochastic-dark-energy-desi-dr2.md` | Main OU/QNM vs DESI DR2 |
 | `papers/quantum-fluid-instabilities-desi-dr2.md` | Tachyonic fluid exclusion |
 | `papers/sensitivity_kernel_table.md` | BAO sensitivity kernel $S(z)$ |

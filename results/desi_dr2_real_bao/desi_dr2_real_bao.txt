@@ -1,8 +1,9 @@
 DESI DR2 REAL BAO residual test
 source: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt
+cov_mode: full_gaussian_bao_projected_13x13
 n_bins: 7
-ll_diag: 24.8955
-best OU: sigma_X=0.000e+00 theta=None ll=24.8955
-dlnL best vs diag: 0.0000
-sigma_X 95% profile upper (approx): 1.648e-02
+ll_meas: 24.8996
+best OU: sigma_X=0.000e+00 theta=None ll=24.8996
+dlnL best vs meas: 0.0000
+sigma_X 95% profile upper (approx): 2.175e-02
 mock: false

@@ -118,18 +118,13 @@ def kernel_QNM(delta_x, theta, sigma_X2, omega_R):
 
 
 def build_cov_total(z_arr, sigma_arr, S_arr, theta, sigma_X2, omega_R=0.0):
-    """
-    Total covariance: C_total = C_inst + C_signal
-
-    C_inst_ii   = sigma_obs(z_i)^2    [measurement noise, diagonal]
-    C_signal_ij = S(z_i) * S(z_j) * K(|x_i - x_j|)  [OU/QNM signal]
-    """
+    """C_total = C_meas + C_signal (OU/QNM)."""
     n = len(z_arr)
     x = np.log(1.0 + z_arr)
-
-    C_inst   = np.diag(sigma_arr**2)
-    C_signal = np.zeros((n, n))
-
+    if "C_MEAS" in globals() and C_MEAS.shape == (n, n):
+        C = np.array(C_MEAS, dtype=float, copy=True)
+    else:
+        C = np.diag(np.asarray(sigma_arr, dtype=float) ** 2)
     for i in range(n):
         for j in range(n):
             dx = abs(x[i] - x[j])
@@ -137,9 +132,9 @@ def build_cov_total(z_arr, sigma_arr, S_arr, theta, sigma_X2, omega_R=0.0):
                 K = kernel_OU(dx, theta, sigma_X2)
             else:
                 K = kernel_QNM(dx, theta, sigma_X2, omega_R)
-            C_signal[i, j] = S_arr[i] * S_arr[j] * K
+            C[i, j] += S_arr[i] * S_arr[j] * K
+    return C
 
-    return C_inst + C_signal
 
 # ============================================================
 # SECTION 4: LIKELIHOOD

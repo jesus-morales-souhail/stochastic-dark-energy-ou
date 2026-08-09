@@ -53,7 +53,7 @@ import sys
 from pathlib import Path as _Path
 _ROOT = _Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_ROOT / "scripts"))
-from desi_dr2_data import load_alpha_dv
+from desi_dr2_data import load_alpha_dv, measurement_cov, add_ou_kernel
 from scipy.linalg import cholesky, solve_triangular
 from scipy.optimize import minimize
 from scipy.integrate import quad
@@ -71,16 +71,13 @@ warnings.filterwarnings('ignore')
 # ============================================================
 DATA_SOURCE = "DESI DR2 (arXiv:2503.14738)"
 
-_d = load_alpha_dv(prefer_file=True)
+_d = load_alpha_dv(prefer_file=True, use_full_cov=True)
 z_eff = _d["z"]
 alpha = _d["alpha"]
 sigma = _d["sigma"]
-print("ou_bao_likelihood data:", _d["source"])
-
-# Sensitivity kernel S(z) = d ln D_V(z) / d Omega_Lambda
-# Computed for flat ΛCDM fiducial: Omega_m=0.315, H0=67.4 km/s/Mpc
-# NOTE: must be recomputed if fiducial cosmology changes (see Appendix A of paper).
-S_z = np.array([-0.284, -0.462, -0.595, -0.719, -0.870, -0.917, -1.070])
+S_z = _d["S_z"]
+C_MEAS = measurement_cov(_d)
+print("ou_bao_likelihood data:", _d["source"], "cov_mode:", _d.get("cov_mode"))
 
 # ============================================================
 # SECTION 2: BASE OU PARAMETERS (calibrated, Section 3.2 of paper)
@@ -125,17 +122,17 @@ def kernel_QNM(delta_x, theta, sigma_X2, omega_R):
 
 def build_cov_total(z_arr, sigma_arr, S_arr, theta, sigma_X2, omega_R=0.0):
     """
-    Total covariance: C_total = C_inst + C_signal
-
-    C_inst_ii   = sigma_obs(z_i)^2    [measurement noise, diagonal]
-    C_signal_ij = S(z_i) * S(z_j) * K(|x_i - x_j|)  [OU/QNM signal]
+    Total covariance: C_total = C_meas + C_signal
+    C_meas = official DESI Gaussian BAO projected to alpha (full when available).
+    C_signal_ij = S_i S_j K(|x_i-x_j|)
     """
     n = len(z_arr)
     x = np.log(1.0 + z_arr)
-
-    C_inst   = np.diag(sigma_arr**2)
-    C_signal = np.zeros((n, n))
-
+    # measurement cov: prefer global C_MEAS if shapes match
+    if "C_MEAS" in globals() and C_MEAS.shape == (n, n):
+        C = np.array(C_MEAS, dtype=float, copy=True)
+    else:
+        C = np.diag(np.asarray(sigma_arr, dtype=float) ** 2)
     for i in range(n):
         for j in range(n):
             dx = abs(x[i] - x[j])
@@ -143,9 +140,9 @@ def build_cov_total(z_arr, sigma_arr, S_arr, theta, sigma_X2, omega_R=0.0):
                 K = kernel_OU(dx, theta, sigma_X2)
             else:
                 K = kernel_QNM(dx, theta, sigma_X2, omega_R)
-            C_signal[i, j] = S_arr[i] * S_arr[j] * K
+            C[i, j] += S_arr[i] * S_arr[j] * K
+    return C
 
-    return C_inst + C_signal
 
 # ============================================================
 # SECTION 4: LIKELIHOOD

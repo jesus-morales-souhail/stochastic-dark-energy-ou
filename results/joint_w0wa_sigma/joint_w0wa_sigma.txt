@@ -7,4 +7,3 @@ joint         w0=-1.0017  wa=+0.0172  θ=0.555044  σ_X=4.239e-10  logL=24.9038 
 
 ΔAIC(joint − cpl) = +4.000
 σ_X joint = 4.239e-10  (→0 means stochastic not needed)
-
