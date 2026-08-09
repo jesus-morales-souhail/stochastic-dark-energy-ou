@@ -1,0 +1,8 @@
+DESI DR2 REAL BAO residual test
+source: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt
+n_bins: 7
+ll_diag: 24.8955
+best OU: sigma_X=0.000e+00 theta=None ll=24.8955
+dlnL best vs diag: 0.0000
+sigma_X 95% profile upper (approx): 1.648e-02
+mock: false

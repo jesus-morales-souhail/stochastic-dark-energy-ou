@@ -215,9 +215,9 @@ python scripts/desqueezing/euclid_protocol_forecasts.py
 
 ---
 
-## 12. Mock MCMC (repository)
+## 12. DESI real BAO residual test (repository)
 
-Reference implementation: `scripts/euclid_mock_mcmc.py` (emcee). Euclid-like vector of 24 bins ($z\in[0.9,1.8]$), OU kernel as above; samples $\{\theta,\sigma_X\}$ at fixed background or the full $\{w_0,w_a,\theta,\sigma_X\}$.
+Reference implementation: `scripts/desi_dr2_real_bao_test.py` (emcee). Euclid-like vector of 24 bins ($z\in[0.9,1.8]$), OU kernel as above; samples $\{\theta,\sigma_X\}$ at fixed background or the full $\{w_0,w_a,\theta,\sigma_X\}$.
 
 With percent-level BAO uncertainties ($\sigma_\alpha\sim 0.5\%$–$1.2\%$) and $S(z)\sim\mathcal{O}(1)$, the OU term competes with $C_{\rm std}$ only for
 
@@ -237,12 +237,12 @@ I free $\{w_0,w_a\}$ before interpreting E1/E2. Products: `results/euclid_mcmc/`
 
 ```bash
 pip install emcee
-python scripts/euclid_mock_mcmc.py
+python scripts/desi_dr2_real_bao_test.py
 ```
 
 ---
 
-## 13. Joint BAO + SN mock
+## 13. Joint BAO on DESI (real)
 
 Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
 
@@ -261,7 +261,7 @@ Implementation: `scripts/euclid_joint_bao_sne_mcmc.py`.
 Optimistic Euclid errors move the practical recovery threshold toward $\sigma_X\sim 1\%$, but $10^{-5}$–$10^{-4}$ remains demanding. SN data primarily tighten $\{w_0,w_a\}$. Products: `results/euclid_joint_mcmc/`, `figures/joint_mcmc_*.png`.
 
 ```bash
-python scripts/euclid_joint_bao_sne_mcmc.py
+python scripts/joint_w0wa_sigma_desi.py
 ```
 
 ---

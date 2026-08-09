@@ -67,8 +67,8 @@ This layout is how I keep the claim set readable.
 | `papers/euclid-protocol-vacuum-relaxation.md` | Euclid BAO protocol |
 | `scripts/desqueezing/desqueezing_relax_time.py` | QuTiP Lindblad scan |
 | `scripts/desqueezing/cosmological_mapping.py` | $\gamma \leftrightarrow \theta H(z)$ |
-| `scripts/euclid_mock_mcmc.py` | Euclid mock MCMC |
-| `scripts/euclid_joint_bao_sne_mcmc.py` | Joint BAO+SN mock MCMC |
+| `scripts/desi_dr2_real_bao_test.py` | DESI DR2 real alpha residual test |
+| `scripts/joint_w0wa_sigma_desi.py` | Joint w0,wa,sigma_X on DESI BAO |
 
 ### IV — Option 0 (slip / anisotropic gap)
 
