@@ -21,7 +21,7 @@ $$\sigma_X < 1.5\times 10^{-4}$$
 
 under the stated phenomenological kernel and public BAO summary statistics (diagonal measurement errors in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
 
-Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -11.35$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +22.7$).
+Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$).
 
 I then quantify an amplification bottleneck: a Sorkin–Bekenstein Poisson seed $\sigma_0\sim 10^{-61}$ lies $\sim 10^{56}$ below Euclid-scale residual amplitudes ($\sim 10^{-5}$) and $\sim 10^{57}$ below the DESI residual ceiling measured here ($1.5\times 10^{-4}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a local effective count $N_{\mathrm{eff}}\sim 4\times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
 
@@ -82,19 +82,25 @@ I use **public DESI DR2 BAO summary statistics** (arXiv:2503.14738): isotropic B
 Let $X(x)\equiv\delta\Omega_X(x)$ with $x=\ln a$. The stationary OU process is
 
 
+$$
 \mathrm{d}X=-\theta X\,\mathrm{d}x+\sigma\,\mathrm{d}W_x,\quad \mathrm{Var}(X)=\frac{\sigma^{2}}{2\theta}\quad(\theta>0).
+$$
 
 
 I work with an effective residual amplitude $\sigma_X$ entering the BAO residual covariance. For bins $i,j$ with logarithmic separation $\Delta x_{ij}$,
 
 
+$$
 C^{\mathrm{OU}}_{ij}=\sigma_X^2 e^{-\theta\Delta x_{ij}},\quad C^{\mathrm{QNM}}_{ij}=\sigma_X^2 e^{-\theta\Delta x_{ij}}\cos(\omega_R\Delta x_{ij}).
+$$
 
 
 The total covariance is $C_{\mathrm{tot}}=C_{\mathrm{meas}}+C_{\mathrm{stoch}}$. The Gaussian log-likelihood is standard:
 
 
+$$
 -2\ln\mathcal{L}=\ln\det C_{\mathrm{tot}}+\mathbf{r}^{\mathrm{T}}C_{\mathrm{tot}}^{-1}\mathbf{r}+\mathrm{const},
+$$
 
 
 with residual vector $\mathbf{r}$ relative to the smooth background prediction.
@@ -162,7 +168,7 @@ When $\{w_0,w_a\}$ are freed together with residual parameters, the stochastic e
 A distinct hypothesis is that a dark-energy quantum fluid with negative effective mass undergoes Bogoliubov instability, yielding a coherent growing mode $\sigma_X(t)=\sigma_0 e^{t/t_c}$. The induced BAO residual covariance is **rank-1**, not OU-stationary. Using that covariance in an MLE on the same BAO summary statistics yields
 
 $$
-\Delta\ln\mathcal{L}=\ln\mathcal{L}(t_c)-\ln\mathcal{L}_{\Lambda\mathrm{CDM}}=-11.35\quad(\Delta\chi^2\approx +22.7).
+\Delta\ln\mathcal{L}=\ln\mathcal{L}(t_c)-\ln\mathcal{L}_{\Lambda\mathrm{CDM}}\approx -12.7\quad(\Delta\chi^2\approx +25)\ \text{at representative active }t_c;\ \text{preferred }t_c\to\infty.
 $$
 
 Any finite collapse / growth time $t_c$ is disfavoured; the acceptable limit is $t_c\to\infty$ (no growth).
@@ -228,7 +234,9 @@ Volume-preserving diffeomorphisms / unimodular structure project out isotropic v
 Anisotropic stress is not of the form $Vg_{\mu\nu}$. Sub-horizon slip satisfies (Newtonian gauge)
 
 
+$$
 \lvert\gamma-1\rvert=\left| \frac{\Phi-\Psi}{\Psi}\right| =2\varepsilon\sigma_X\frac{\rho_X}{\rho_m\lvert\delta_m\rvert},
+$$
 
 
 with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual. With $\sigma_X=1.5\times 10^{-4}$, $\varepsilon=1$, $\delta_m=1$:
@@ -309,7 +317,7 @@ python scripts/slip_bridge.py
 ## 9. Conclusions
 
 1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<1.5\times 10^{-4}$ (95% CL)under the stated kernel.
-2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +22.7$).
+2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +25$).
 3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 1.5\times 10^{-4}$ is $\sim 10^{57}$ (DESI ceiling); linear free amplifiers fail both.
 4. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and an amplitude-starved channel in practice.
 5. **Scientific posture:** the strength of this programme is what it closes—limits, exclusions, and an honest map of open theory prices—not a promised detection.

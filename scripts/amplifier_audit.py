@@ -56,7 +56,7 @@ def main() -> None:
         (
             "(a) coherent / tachyonic growth",
             "—",
-            "EXCLUDED in-repo (rank-1 cov; Δχ² ~ +23)",
+            "EXCLUDED in-repo (rank-1 cov; Δχ² ~ +25)",
         ),
         (
             "(b) desqueezing r=1.5",

@@ -1,0 +1,34 @@
+{
+  "source": "data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt",
+  "mock": false,
+  "n_bins": 7,
+  "z": [
+    0.295,
+    0.51,
+    0.706,
+    0.934,
+    1.321,
+    1.484,
+    2.33
+  ],
+  "lookback_Gyr": [
+    3.491446191209737,
+    5.282650497635403,
+    6.538503942289728,
+    7.673272865169564,
+    9.05411869453979,
+    9.492563850116,
+    10.987567295011887
+  ],
+  "ll_LCDM": 24.895484644425657,
+  "chi2_LCDM": 4.493905479961057,
+  "sigma0": 1e-61,
+  "dlnL_no_growth_large_tc": 0.0,
+  "best_active_tc_Gyr": 0.0858751948484517,
+  "best_active_dlnL": -1.041166441950736e-07,
+  "representative_tc_Gyr": 0.0740865683493956,
+  "representative_dlnL": -12.668272004595059,
+  "representative_dchi2": 25.336544009190117,
+  "worst_active_dlnL": -30.036618009321067,
+  "note": "Likelihood peaks at no growth (tc\u2192\u221e, \u0394lnL\u21920). When \u03c30\u00b7exp(t/tc) is large enough for the rank-1 term to matter, the model is excluded (\u0394lnL \u2272 \u221211, \u0394\u03c7\u00b2 \u2273 +22)."
+}

@@ -15,7 +15,9 @@ At observable cosmological scales ($z \lesssim 2.3$) and with the baryon acousti
 Any physical mechanism that could generate fluctuations in the dark energy density $\rho_\Lambda$ — whether from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below what current surveys can detect:
 
 
+$$
 \sigma_X < 1.5 \times 10^{-4}
+$$
 
 
 **(95% CL).**

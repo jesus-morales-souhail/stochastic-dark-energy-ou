@@ -23,13 +23,17 @@ That expectation has not been fulfilled.
 When I analyse the DESI DR2 BAO data within a phenomenological Ornstein–Uhlenbeck (OU) framework, I find no evidence for stochastic fluctuations [1]. Maximum Likelihood Estimation drives the amplitude to zero:
 
 
+$$
 \sigma_X \to 0, \qquad \omega_R \to 0,
+$$
 
 
 and establishes a conservative upper limit [1]:
 
 
+$$
 \sigma_X < 1.5 \times 10^{-4}
+$$
 
 
 **(95% CL).**
@@ -37,7 +41,7 @@ and establishes a conservative upper limit [1]:
 I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
-$$\Delta\chi^2 \approx +22.7,
+$$\Delta\chi^2 \approx +25,
 $$
 so the data reject a coherent growing-mode scenario entirely.
 

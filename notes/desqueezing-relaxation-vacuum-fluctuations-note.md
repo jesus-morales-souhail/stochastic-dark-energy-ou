@@ -15,13 +15,17 @@
 I present a self-contained research note that closes the loop between (i) a controlled open-quantum-system simulation of **squeezed-state desqueezing** under a thermal Lindblad bath and (ii) the phenomenological **Ornstein–Uhlenbeck (OU)** description of late-time vacuum fluctuations used in my DESI DR2 stochastic dark-energy analysis. The laboratory sector yields a clean half-life for the anomalous correlator,
 
 
+$$
 t_{1/2}\!\left(\lvert\langle a^2\rangle\rvert\right)=\frac{\ln 2}{\gamma},
+$$
 
 
 independent of the bath occupation $n_{\rm th}$ over the scanned range. The cosmological sector identifies the physical damping rate with the repository continuity structure,
 
 
+$$
 \Gamma_{\rm phys}(z)=\theta H(z),
+$$
 
 
 so that at the present epoch $\gamma\leftrightarrow\theta H_0$. Using **only** amplitudes and limits already fixed in the stochastic-dark-energy-ou corpus — in particular the Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ and the DESI bound $\sigma_X<1.5\times 10^{-4}$ (95% CL) — I show that pure Poisson vacuum noise remains unobservable at BAO precision. Euclid DR1 can probe **emergent** vacuum smoothness only if an effective kick amplitude $A_0\gtrsim 10^{-5}$ arises after amplification or from non-Sorkin sources. I discuss implications for volume-preserving diffeomorphisms (SDiff) as a fundamental versus emergent symmetry, and I state explicitly what the null result does and does not constrain.
@@ -35,7 +39,9 @@ so that at the present epoch $\gamma\leftrightarrow\theta H_0$. Using **only** a
 Public DESI DR2 baryon acoustic oscillation (BAO) measurements, analysed within an OU / quasi-normal-mode (QNM) covariance framework, drive the amplitude of stationary stochastic fluctuations of the dark-energy density to the numerical floor. My working 95% confidence upper limit is
 
 
+$$
 \sigma_X < 1.5\times 10^{-4},
+$$
 
 
 where $X\equiv\delta\Omega_\Lambda/\bar{\Omega}_\Lambda$ (or an equivalent fractional density contrast in the notation of the companion papers). This is not merely a non-detection: it is a structural constraint on how “noisy” the late-time vacuum is allowed to be at BAO scales.
@@ -70,25 +76,33 @@ The bare UV seed is the repository value $\sigma_0\sim 10^{-61}$.
 I consider a single damped harmonic oscillator in the Markovian thermal Lindblad equation
 
 
+$$
 \dot\rho=-i[H,\rho] +\gamma(n_{\rm th}+1) \mathcal{D}[a]\rho +\gamma n_{\rm th} \mathcal{D}[a^\dagger]\rho,
+$$
 
 
 with
 
 
+$$
 H=\omega a^\dagger a, \qquad \mathcal{D}[L]\rho=L\rho L^\dagger-\tfrac12\{L^\dagger L,\rho\}.
+$$
 
 
 The initial state is a squeezed vacuum,
 
 
+$$
 \lvert\psi_0\rangle=S(r)\lvert 0\rangle, \qquad S(r)=\exp\!\left[\tfrac{r}{2}\big(a^2-(a^\dagger)^2\big)\right],
+$$
 
 
 with fiducial parameters validated against Hilbert-space truncation:
 
 
+$$
 N=150,\qquad r=1.5,\qquad \omega=2.4
+$$
 
 
 (in simulation units). The thermal occupation $n_{\rm th}$ is scanned independently of $\gamma$.
@@ -108,13 +122,17 @@ The first two quantities oscillate because free evolution rotates the squeeze el
 Across $\gamma\in\{0.6,1.2,2.4,3.6,4.8\}$ and $n_{\rm th}\in[0,1]$,
 
 
+$$
 \boxed{ t_{1/2}\!\left(\lvert\langle a^2\rangle\rvert\right) =\frac{\ln 2}{\gamma} \qquad\text{with}\qquad \gamma t_{1/2}=\ln 2 }
+$$
 
 
 to better than $0.05\%$ relative accuracy. **Independence of $n_{\rm th}$** is a central result: the bath temperature sets the late-time floor
 
 
+$$
 \mathrm{Var}(q)_{\rm ss}=n_{\rm th}+\tfrac12,
+$$
 
 
 but not the half-life of the anomalous correlator.
@@ -122,7 +140,9 @@ but not the half-life of the anomalous correlator.
 Thus the laboratory export is simply
 
 
+$$
 t_{\rm relax}\propto\frac{1}{\gamma}.
+$$
 
 
 ---
@@ -137,13 +157,17 @@ From my main OU analysis:
 - **A2 (Sorkin seed):** discreteness induces Poisson fluctuations $\delta\Lambda\sim 1/\sqrt{N}$, i.e.
 
 
+$$
 \sigma_0\sim 10^{-61}.
+$$
 
 
 - **A3 (OU closure):** fractional fluctuations $X(x)$ in logarithmic scale factor $x=\ln a$ obey
 
 
+$$
 dX=-\theta X dx+\sigma dW_x,
+$$
 
 
 with stationary variance $\mathrm{Var}(X)=\sigma^2/(2\theta)$ when $\theta>0$.
@@ -153,13 +177,17 @@ with stationary variance $\mathrm{Var}(X)=\sigma^2/(2\theta)$ when $\theta>0$.
 Writing the OU process in cosmic time via $dx=H dt$,
 
 
+$$
 \frac{dX}{dt}=-\theta H(t) X+\xi(t).
+$$
 
 
 Therefore
 
 
+$$
 \boxed{\Gamma_{\rm phys}(t)=\theta H(t)=\theta H(z).}
+$$
 
 
 This is not an extra postulate: it is the chain rule applied to the repository definition of $\theta$.
@@ -169,25 +197,33 @@ This is not an extra postulate: it is the chain rule applied to the repository d
 Induced BAO covariance between redshift bins takes the schematic form
 
 
+$$
 (C_{\rm OU})_{ij}=S(z_i)S(z_j) \mathrm{Cov}[X(x_i),X(x_j)],
+$$
 
 
 with
 
 
+$$
 \mathrm{Cov}[X(x_i),X(x_j)]=\frac{\sigma^2}{2\theta} e^{-\theta\lvert x_i-x_j\rvert},
+$$
 
 
 and sensitivity kernel $S(z)=\partial\ln D_V/\partial\Omega_\Lambda$ computed on the flat $\Lambda$CDM fiducial
 
 
+$$
 H_0=67.4 \mathrm{km s^{-1} Mpc^{-1}},\qquad\Omega_m=0.315.
+$$
 
 
 The DESI path width in the repository is
 
 
+$$
 \Delta x_{\rm DESI}=0.94 \quad(z\in[0.295,2.33]).
+$$
 
 
 ### 3.4 Empirical anchors from the repository
@@ -208,19 +244,25 @@ The DESI path width in the repository is
 The Lindblad rate $\gamma$ has dimension of inverse time. The natural identification with the OU sector is
 
 
+$$
 \gamma \longleftrightarrow \Gamma_{\rm phys}(z)=\theta H(z).
+$$
 
 
 At the present epoch,
 
 
+$$
 \gamma=\theta H_0 \qquad\Rightarrow\qquad t_{1/2}=\frac{\ln 2}{\theta H_0}.
+$$
 
 
 Along a finite expansion history, the survival of a frozen kick of amplitude $A_0$ is
 
 
+$$
 \sigma_{\rm res}(x)=A_0 e^{-\theta\Delta x}, \qquad \Delta x=\ln\!\frac{1+z_{\rm past}}{1+z_{\rm now}}.
+$$
 
 
 ### 4.2 What “$\gamma\sim H_0$” really means
@@ -228,7 +270,9 @@ Along a finite expansion history, the survival of a frozen kick of amplitude $A_
 One should **not** impose $\gamma=H_0$ by hand. That equality holds if and only if $\theta\sim 1$. In particular, for a half-life equal to the Hubble time $t_{H_0}=H_0^{-1}\simeq 14.51 \mathrm{Gyr}$,
 
 
+$$
 \theta=\ln 2\simeq 0.693, \qquad \gamma=(\ln 2) H_0.
+$$
 
 
 For a half-life equal to the $\Lambda$CDM age $ t_0\simeq 13.8 \mathrm{Gyr}$ at the paper fiducial, $\theta\simeq 0.73$.
@@ -269,13 +313,17 @@ Page-time half-lives correspond to mean-reversion rates **invisible** on BAO e-f
 With the Sorkin seed fixed by the repository,
 
 
+$$
 \sigma_{\rm res}=\sigma_0 e^{-\theta\Delta x}, \qquad \sigma_0\sim 10^{-61}.
+$$
 
 
 For every $\theta$ in Section 4, and for both $\Delta x=0.94$ (DESI) and $\Delta x\simeq 7$ (since recombination),
 
 
+$$
 \sigma_{\rm res}\sim 10^{-61}\ll 10^{-5}\ll 1.5\times 10^{-4}.
+$$
 
 
 **Pure Poisson discreteness is unobservable at DESI and Euclid precision.** This is the first-principles conclusion.
@@ -289,13 +337,17 @@ The limit $\sigma_X<1.5\times 10^{-4}$ (95% CL) constrains the **effective late-
 Inverting $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$,
 
 
+$$
 A_0=\mathrm{target}\times e^{+\theta\Delta x}.
+$$
 
 
 To reach Euclid’s $\sim 10^{-5}$ on the DESI path with $\theta\sim 10^{-3}$ already needs $A_0\sim 10^{-5}$, i.e.
 
 
+$$
 \frac{A_0}{\sigma_0}\sim 10^{56}.
+$$
 
 
 Hubble-scale damping on a recombination-length path still requires $A_0/\sigma_0\sim 10^{56}$–$10^{58}$ depending on $\theta$. Any **observable** residual under emergent SDiff therefore demands physics beyond bare Sorkin Poisson noise.
@@ -416,7 +468,9 @@ I thank the DESI collaboration for public BAO data products. Numerical simulatio
 ## Appendix B — Constants used
 
 
+$$
 H_0=67.4\ \mathrm{km s^{-1} Mpc^{-1}},\quad t_{H_0}\simeq 14.51\ \mathrm{Gyr},\quad \Omega_m=0.315,\quad \Delta x_{\rm DESI}=0.94,\quad N\sim 10^{122},\quad \sigma_0\sim 10^{-61},\quad \sigma_X^{\rm DESI}<1.5\times 10^{-4},\quad \sigma_X^{\rm Euclid\ target}\sim 10^{-5}.
+$$
 
 
 ## Appendix C — One-line summary for readers in a hurry

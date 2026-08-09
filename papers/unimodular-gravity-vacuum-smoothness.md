@@ -14,7 +14,9 @@
 Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: $\sigma_X < 1.5 \times 10^{-4}$ (95% CL) [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
 
 
+$$
 \Lambda = \frac{1}{4V_4} \int_M d^4x \sqrt{-g} \left(R + 8\pi G T^{\lambda}{}_{\lambda}\right),
+$$
 
 
 which is a consistency condition, not a predictive equation. The value of $\Lambda$ remains a free global parameter, but its fluctuations are rigorously zero. I conclude that the observed smoothness of the vacuum is not an accident; it is a geometric necessity that singles out unimodular gravity as the only known structure compatible with the data. Future surveys, such as Euclid DR1, will provide the decisive test.
@@ -30,13 +32,17 @@ That expectation has not been fulfilled.
 When I analyse the DESI DR2 BAO data within a phenomenological Ornstein–Uhlenbeck (OU) framework, I find no evidence for stochastic fluctuations [1]. Maximum Likelihood Estimation drives the amplitude to zero:
 
 
+$$
 \sigma_X \to 0, \qquad \omega_R \to 0,
+$$
 
 
 and establishes a conservative upper limit:
 
 
+$$
 \sigma_X < 1.5 \times 10^{-4}
+$$
 
 
 **(95% CL).**
@@ -44,7 +50,7 @@ and establishes a conservative upper limit:
 I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
-$$\Delta\chi^2 \approx +22.7,
+$$\Delta\chi^2 \approx +25,
 $$
 so the data reject a coherent growing-mode scenario entirely.
 

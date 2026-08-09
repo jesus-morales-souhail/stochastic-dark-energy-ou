@@ -70,7 +70,7 @@ Headline discipline: [`HONEST_HEADLINES.md`](HONEST_HEADLINES.md).
 
 | Amplifier | Schematic gain | Verdict in this corpus |
 |-----------|----------------|------------------------|
-| **(a)** Coherent / tachyonic growth | Exponential in $t/t_c$ | **Excluded** in-repo with the correct rank-1 covariance ($\Delta\chi^2\sim +23$) — `quantum-fluid-instabilities-desi-dr2.md` |
+| **(a)** Coherent / tachyonic growth | Exponential in $t/t_c$ | **Excluded** in-repo with the correct rank-1 covariance ($\Delta\chi^2\sim +25$) — `quantum-fluid-instabilities-desi-dr2.md` |
 | **(b)** Desqueezing, $r=1.5$ | $e^{2r}\approx 20\sim 10^{1}$ | **Orders short** (~55 decades missing to $10^{56}$) |
 | **(c)** RMS accumulate $\sqrt{N}$ | $\sqrt{N}\sim 10^{61}$ | Seed is **already** $1/\sqrt{N}$; a free $\sqrt{N}$ boost **double-counts** unless growth is **coherent** → reduces to (a) |
 | **(d)** Inflation-style freeze-out (~60 e-folds) | $e^{60}\sim 10^{26}$ | Only $\mathcal{O}(10^{26})$; and the natural seed is $H/M_{\mathrm{Pl}}\sim 10^{-5}$, **not** $\sigma_0\sim 10^{-61}$. Mapping inflationary noise onto Sorkin is a **new ansatz** |
@@ -255,25 +255,33 @@ Default publication posture → limits + exclusions + hypothesis map
 Path residual:
 
 
+$$
 \sigma_{\rm res}(x)=A_0 e^{-\theta\Delta x}.
+$$
 
 
 Stationary OU variance (when $\theta>0$):
 
 
+$$
 \mathrm{Var}(X)=\frac{\sigma^2}{2\theta}.
+$$
 
 
 Desqueezing half-life (open systems):
 
 
+$$
 t_{1/2}=\frac{\ln 2}{\gamma},\qquad \gamma\leftrightarrow\theta H_0\ \text{(map, not identity of units)}.
+$$
 
 
 Bare seed motivation:
 
 
+$$
 \sigma_0\sim\frac{1}{\sqrt{N}},\quad N\sim 10^{122}.
+$$
 
 
 ---

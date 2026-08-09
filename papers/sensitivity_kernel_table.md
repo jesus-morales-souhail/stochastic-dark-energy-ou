@@ -7,7 +7,9 @@ Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 I define the sensitivity kernel as
 
 
+$$
 S(z) = \frac{\partial \ln D_V(z)}{\partial \Omega_\Lambda}.
+$$
 
 
 I compute it numerically for a flat ΛCDM fiducial with $\Omega_m = 0.315$ and $H_0 = 67.4$ km/s/Mpc.

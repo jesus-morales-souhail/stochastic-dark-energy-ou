@@ -9,146 +9,237 @@ Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ## Abstract
 
-Recent DESI DR2 BAO data show no evidence for a stochastic component on top of a smooth dynamical dark energy evolution, establishing the upper limit $\sigma_X < 1.5\times10^{-4}$ (95% CL) for an Ornstein–Uhlenbeck process (Morales Souhail, 2026). Here I test whether a dark-energy fluid with negative effective mass ($m^{\ast} < 0$) and quartic self-interaction can generate such fluctuations. Starting from a modified Gross–Pitaevskii equation, I derive the Bogoliubov dispersion relation and identify a dynamical instability with maximum growth rate $\Gamma_{\text{max}} = g\lvert\psi_0\rvert^{2}/\hbar \equiv 1/t_c$. The instability amplifies primordial seeds as $\sigma_X(t) = \sigma_0 e^{t/t_c}$. I construct the exact covariance matrix induced by this coherent growing mode and perform a Maximum Likelihood Estimation directly on the DESI DR2 BAO data. The model is strongly disfavoured: the log-likelihood drops by $\Delta\ln\mathcal{L} = -11.35$ relative to $\Lambda$CDM ($\Delta\chi^2 \approx +22.7$). The data exclude any finite collapse time $t_c$; the only acceptable limit is $t_c \to \infty$, which corresponds to no growth. Thus, a globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals.
+Recent DESI DR2 BAO data show no evidence for a stationary stochastic residual on top of a smooth background, with a working upper limit $\sigma_X < 1.5\times 10^{-4}$ (95% CL) under an Ornstein–Uhlenbeck kernel in this repository. Here I test a different hypothesis: a dark-energy fluid with negative effective mass ($m^{\ast}<0$) and quartic self-interaction. From a modified Gross–Pitaevskii equation I derive the Bogoliubov growth rate $\Gamma_{\max}=g\lvert\psi_0\rvert^{2}/\hbar\equiv 1/t_c$ and the induced rank-1 residual covariance. An MLE on the public DESI DR2 isotropic $\alpha$ vector (7 bins, real Zenodo figure-6 file) shows that the likelihood peaks at no growth ($t_c\to\infty$, $\Delta\ln\mathcal{L}\to 0$). When growth is large enough that the rank-1 term matters, the model is excluded at the level $\Delta\ln\mathcal{L}\approx -12.7$ ($\Delta\chi^{2}\approx +25$) for a representative active $t_c$, and can be worse deeper in the active window. A globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals under this pipeline.
 
 ---
 
 ## 1. Introduction
 
-Baryon Acoustic Oscillation (BAO) measurements from DESI DR2 have provided precise constraints on the expansion history of the late-time universe. When interpreted within a phenomenological Ornstein–Uhlenbeck (OU) model, the data drive the stochastic amplitude to zero, yielding $\sigma_X < 1.5\times10^{-4}$ (95% CL) [2]. This null result imposes a severe limit on any mechanism that would generate stochastic fluctuations in the dark-energy density.
+Baryon Acoustic Oscillation (BAO) measurements from DESI DR2 constrain the late-time expansion history. In the companion OU analysis in this repository, a stationary residual amplitude is driven toward zero, with working ceiling $\sigma_X < 1.5\times 10^{-4}$ (95% CL) [2]. That null result limits mechanisms that would source stochastic fluctuations in the dark-energy density.
 
-One class of models that could a priori produce such fluctuations is a dark-energy fluid described by a quantum condensate with negative effective mass. In condensed-matter physics, Bose–Einstein condensates with engineered dispersion relations exhibit an effective mass $m^{\ast}$ that can become negative, leading to dynamical instabilities that exponentially amplify density fluctuations [3]. If the dark-energy sector shared such properties, it might generate a stochastic variance $\sigma_X$ that would be detectable in BAO data.
+One class of models that could, *a priori*, produce such fluctuations is a dark-energy fluid described as a quantum condensate with negative effective mass. In condensed-matter physics, Bose–Einstein condensates with engineered dispersion can have $m^{\ast}<0$ and undergo dynamical instabilities that amplify density fluctuations [3]. If the dark-energy sector shared that structure, it might generate a residual $\sigma_X$ visible in BAO data.
 
-In this note I formalise that connection. I derive the growth rate of the Bogoliubov instability for a tachyonic fluid, compute the induced variance $\sigma_X(t)$, and construct the correct covariance matrix. I then confront this model directly with the DESI DR2 BAO data using a full MLE. The result is a definitive exclusion of the coherent growing-mode scenario, independent of the value of $t_c$.
+In this note I formalise that connection: Bogoliubov growth rate, induced variance, **rank-1** residual covariance, and an MLE on the real DESI DR2 isotropic $\alpha$ vector. The coherent growing-mode scenario is excluded whenever growth is active at the seed amplitude used in this programme; the preferred limit is $t_c\to\infty$ (no growth).
 
 ---
 
 ## 2. Theoretical Framework: The Quantum Fluid Action
 
-I consider a complex scalar field $\psi$ whose macroscopically condensed state mimics dark energy. The action in an FLRW background (with $c=\hbar=1$ for convenience, though I restore $\hbar$ when needed) is
+I consider a complex scalar field $\psi$ whose macroscopically condensed state mimics dark energy. The action in an FLRW background is
 
-
-\mathcal{S} = \int d^4x \sqrt{-g} \left[ -\frac{1}{2}g^{\mu\nu}\partial_\mu\psi^\dagger\partial_\nu\psi - V(\psi) \right],
-
+$$
+\mathcal{S}
+=
+\int \mathrm{d}^{4}x\,\sqrt{-g}
+\left[
+-\frac{1}{2}g^{\mu\nu}\partial_{\mu}\psi^{\dagger}\partial_{\nu}\psi
+-
+V(\psi)
+\right],
+$$
 
 with the self-interaction potential
 
+$$
+V(\psi)
+=
+\frac{1}{2}(m^{\ast})^{2}\lvert\psi\rvert^{2}
++
+\frac{g}{2}\lvert\psi\rvert^{4},
+$$
 
-V(\psi) = \frac{1}{2}(m^{\ast})^{2}\lvert\psi\rvert^{2} + \frac{g}{2}\lvert\psi\rvert^{4},
+where $(m^{\ast})^{2}<0$ (tachyonic mass term) and $g>0$. In the mean-field approximation, the condensate wavefunction $\psi(\mathbf{x},t)$ obeys a modified Gross–Pitaevskii equation (GPE) in an expanding universe. Restoring $\hbar$ and writing the inertial mass as $m^{\ast}=-\lvert m^{\ast}\rvert$,
 
+$$
+\mathrm{i}\hbar\frac{\partial\psi}{\partial t}
+=
+\left[
+-\frac{\hbar^{2}}{2m^{\ast}a^{2}(t)}\nabla^{2}
++
+V_{\mathrm{ext}}(\mathbf{x})
++
+g\lvert\psi\rvert^{2}
+\right]\psi.
+$$
 
-where $ (m^{\ast})^{2} < 0$ (tachyonic mass) and $g > 0$. In the mean-field approximation, the dynamics of the condensate wavefunction $\psi(\mathbf{x},t)$ is governed by the modified Gross–Pitaevskii equation (GPE) in an expanding universe:
-
-
-i\hbar \frac{\partial\psi}{\partial t} = \left[ -\frac{\hbar^{2}}{2m^{\ast} a^{2}(t)} \nabla^{2} + V_{\text{ext}}(\mathbf{x}) + g\lvert\psi\rvert^{2} \right] \psi,
-
-
-with $m^{\ast} = -\lvert m^{\ast}\rvert$. For cosmological homogeneity, I set $V_{\text{ext}} = 0$ and identify the background dark-energy density as $\rho_\Lambda \simeq \lvert\psi_0\rvert^{2}$.
+For cosmological homogeneity I set $V_{\mathrm{ext}}=0$ and identify the background dark-energy density scale with the condensate density, $\rho_{\Lambda}\simeq\lvert\psi_{0}\rvert^{2}$ (mean-field bookkeeping; not a full stress-tensor derivation).
 
 ---
 
 ## 3. Bogoliubov Excitations and the Instability Growth Rate
 
-I linearise the GPE around the homogeneous background, writing $\psi = \psi_0 + \delta\psi$. Expanding the density perturbation $\delta\rho_\Lambda = \psi_0^{\ast}\delta\psi + \psi_0\delta\psi^{\ast}$ in Fourier modes, the Bogoliubov–de Gennes equations yield the dispersion relation for the physical wavenumber $q$ (comoving). For a genuine negative mass $m^{\ast} = -\lvert m^{\ast}\rvert$, the kinetic term changes sign, giving
+I linearise around a homogeneous background, $\psi=\psi_{0}+\delta\psi$, and expand the density perturbation $\delta\rho_{\Lambda}=\psi_{0}^{\ast}\delta\psi+\psi_{0}\delta\psi^{\ast}$ in comoving Fourier modes $q$. With $m^{\ast}=-\lvert m^{\ast}\rvert$ the kinetic term flips sign relative to the usual positive-mass GPE. Defining the kinetic energy scale
 
+$$
+\varepsilon_{q}
+\equiv
+\frac{\hbar^{2}q^{2}}{2\lvert m^{\ast}\rvert a^{2}(t)},
+$$
 
-\omega_q^{2} = \varepsilon_q^{2} - 2\varepsilon_q g\lvert\psi_0\rvert^{2}, \qquad \varepsilon_q \equiv \frac{\hbar^{2} q^{2}}{2\lvert m^{\ast}\rvert a^{2}}.
+the Bogoliubov frequency (as an energy) satisfies
 
+$$
+\omega_{q}^{2}
+=
+\varepsilon_{q}^{2}
+-
+2\varepsilon_{q}\,g\lvert\psi_{0}\rvert^{2}.
+$$
 
-For low momenta, $\omega_q^{2} < 0$, leading to dynamical instability. The growth rate $\Gamma_q = \sqrt{-\omega_q^{2}}$ is
+For $\varepsilon_{q}<2g\lvert\psi_{0}\rvert^{2}$ one has $\omega_{q}^{2}<0$ and a dynamical instability. The growth rate is
 
+$$
+\Gamma_{q}
+=
+\frac{1}{\hbar}
+\sqrt{\varepsilon_{q}\bigl(2g\lvert\psi_{0}\rvert^{2}-\varepsilon_{q}\bigr)}.
+$$
 
-\Gamma_q = \frac{\hbar q}{\lvert m^{\ast}\rvert a^{2}} \sqrt{2\lvert m^{\ast}\rvert g\lvert\psi_0\rvert^{2} - \hbar^{2} q^{2}}.
+Equivalently, for $\varepsilon_{q}<2g\lvert\psi_{0}\rvert^{2}$,
 
+$$
+\Gamma_{q}
+=
+\frac{q}{a^{2}\sqrt{2\lvert m^{\ast}\rvert}}
+\sqrt{
+2g\lvert\psi_{0}\rvert^{2}
+-
+\frac{\hbar^{2}q^{2}}{2\lvert m^{\ast}\rvert a^{2}}
+}.
+$$
 
-This is the correct expression; note that an earlier version of this work contained a sign error in the intermediate $\omega_q^{2}$ formula, but the final $\Gamma_q$ is unchanged. The fastest-growing mode occurs at
+The fastest-growing mode sits at $\varepsilon_{q}=g\lvert\psi_{0}\rvert^{2}$, i.e.
 
+$$
+q_{\max}
+=
+\frac{a}{\hbar}
+\sqrt{2\lvert m^{\ast}\rvert\,g\lvert\psi_{0}\rvert^{2}},
+$$
 
-q_{\text{max}} = \frac{\sqrt{2\lvert m^{\ast}\rvert g\lvert\psi_0\rvert^{2}}}{\hbar a},
+with maximum growth rate
 
+$$
+\Gamma_{\max}
+=
+\frac{g\lvert\psi_{0}\rvert^{2}}{\hbar}
+\equiv
+\frac{1}{t_{c}}.
+$$
 
-and the maximum growth rate is
-
-
-\Gamma_{\text{max}} = \frac{g\lvert\psi_0\rvert^{2}}{\hbar} \equiv \frac{1}{t_c},
-
-
-where $t_c$ is the characteristic collapse time of the quantum fluid.
+Here $t_{c}$ is the characteristic collapse / growth time of the quantum fluid. An older draft wrote $q_{\max}\propto 1/a$ instead of $\propto a$; that was bookkeeping. $\Gamma_{\max}$ is unchanged.
 
 ---
 
-## 4. Stochastic Evolution and Variance of $\Omega_\Lambda$
+## 4. Stochastic Evolution and Variance of $\Omega_{\Lambda}$
 
-In the linear regime, the density fluctuations evolve as
+In the linear regime,
 
+$$
+\delta\rho_{\Lambda}(q,t)
+=
+\delta\rho_{\Lambda}^{(0)}(q)\,e^{\Gamma_{q}t},
+$$
 
-\delta\rho_\Lambda(q,t) = \delta\rho_\Lambda^{(0)}(q) e^{\Gamma_q t},
+where $\delta\rho_{\Lambda}^{(0)}$ is a primordial seed (Planck-scale granularity or Sorkin-type Poisson fluctuations [4,5]). The dimensionless residual variance is
 
+$$
+\sigma_{X}^{2}(t)
+\equiv
+\frac{\langle(\delta\rho_{\Lambda})^{2}\rangle}{\rho_{\Lambda}^{2}}
+=
+\frac{1}{\rho_{\Lambda}^{2}}
+\int\frac{\mathrm{d}^{3}q}{(2\pi)^{3}}
+P_{0}(q)\,e^{2\Gamma_{q}t}.
+$$
 
-where $\delta\rho_\Lambda^{(0)}$ denotes the primordial seed (e.g., Planck-scale granularity or Sorkin-type Poisson fluctuations [4,5]). The variance of the dimensionless dark-energy density parameter is
+A saddle-point estimate around $q_{\max}$ gives the working form used below,
 
+$$
+\sigma_{X}(t)\sim\sigma_{0}\,e^{t/t_{c}},
+$$
 
-\sigma_X^{2}(t) \equiv \frac{\langle (\delta\rho_\Lambda)^2\rangle}{\rho_\Lambda^{2}} = \frac{1}{\rho_\Lambda^{2}}\int \frac{d^3q}{(2\pi)^3} P_0(q) e^{2\Gamma_q t}.
-
-
-Approximating the integral by the saddle point around $q_{\text{max}}$, I get
-
-
-\sigma_X(t) \sim \sigma_0 e^{t/t_c},
-
-
-where $\sigma_0 \sim 10^{-61}$ is the amplitude of the primordial seed (estimated from the Bekenstein–Hawking bound or causal-set fluctuations).
+with seed amplitude $\sigma_{0}\sim 10^{-61}$ (Bekenstein–Hawking / causal-set counting, same order used in the amplification-gap notes).
 
 ---
 
 ## 5. Observational Coupling with DESI DR2 BAO Data
 
-BAO measurements constrain the spherically-averaged distance $D_V(z) = [D_M^{2}(z) c z / H(z)]^{1/3}$. The sensitivity of $D_V$ to $\Omega_\Lambda$ is encoded in the kernel
+BAO summary statistics constrain the isotropic dilation $\alpha(z)\equiv D_{V}(z)/r_{s}$ relative to a fiducial cosmology. The sensitivity of $D_{V}$ to $\Omega_{\Lambda}$ is
 
-
-S(z) \equiv \frac{\partial \ln D_V(z)}{\partial \Omega_\Lambda}.
-
-
-The stochastic variance $\sigma_X^{2}(z)$ induces an additional covariance in the BAO data. Crucially, the instability amplifies a single frozen primordial field by a redshift-dependent factor. Therefore, the covariance is not of OU type; it is a rank-1 matrix:
-
-
-C_{ij}^{\text{BAO}} = \delta_{ij}\sigma_i^{2} + \sigma_0^{2} S(z_i)S(z_j) e^{(t(z_i)+t(z_j))/t_c},
-
-
-where $t(z)$ is the cosmic lookback time and $\sigma_i$ are the measurement errors.
-
-I perform a Maximum Likelihood Estimation (MLE) using the public DESI DR2 BAO data (7 bins, from [1]). The log-likelihood is
-
-
-\ln\mathcal{L} = -\frac{1}{2}\left[\mathbf{r}^\top C^{-1} \mathbf{r} + \ln\lvert C\rvert + n\ln(2\pi)\right],
-
-
-with $\mathbf{r} = \boldsymbol{\alpha}_{\mathrm{obs}} - \mathbf{1}$.
-
-I fix $\sigma_0 = 10^{-61}$ (as in Axiom A2 of the companion OU paper) and scan over $t_c$. The likelihood is maximised only as $t_c \to \infty$ (i.e., no growth). For any finite $t_c$, the fit is significantly worse. The best-finite-$t_c$ case yields
-
-
-$$\Delta\ln\mathcal{L} = \ln\mathcal{L}(t_c) - \ln\mathcal{L}_{\Lambda\text{CDM}} = -11.35,
 $$
-corresponding to $\Delta\chi^2 \approx +22.7$ for one extra parameter ($t_c$). This excludes the coherent growing-mode model at high significance. The OU-derived limit $\sigma_X < 1.5\times10^{-4}$ (95% CL) is not applicable here, as it assumes a stationary variance structure.
+S(z)
+\equiv
+\frac{\partial\ln D_{V}(z)}{\partial\Omega_{\Lambda}}.
+$$
+
+A single coherent growing mode does **not** produce an OU-stationary residual covariance. It produces a **rank-1** update. With residual $\mathbf{r}=\boldsymbol{\alpha}_{\mathrm{obs}}-\mathbf{1}$ and lookback time $t(z)$,
+
+$$
+C_{ij}
+=
+\delta_{ij}\sigma_{i}^{2}
++
+\sigma_{0}^{2}
+S(z_{i})S(z_{j})
+\exp\bigl[(t(z_{i})+t(z_{j}))/t_{c}\bigr],
+$$
+
+where $\sigma_{i}$ are the published measurement errors on $\alpha$. Equivalently, $C=\mathrm{diag}(\sigma^{2})+\mathbf{u}\mathbf{u}^{\mathsf{T}}$ with $u_{i}=\sigma_{0}S_{i}e^{t_{i}/t_{c}}$.
+
+The Gaussian log-likelihood is
+
+$$
+\ln\mathcal{L}
+=
+-\frac{1}{2}
+\left[
+\mathbf{r}^{\mathsf{T}}C^{-1}\mathbf{r}
++
+\ln\lvert C\rvert
++
+n\ln(2\pi)
+\right].
+$$
+
+### 5.1 Real DESI DR2 numbers (this repository)
+
+I run the MLE on the real isotropic $\alpha$ vector from the public DESI DR2 Zenodo pack (`figure6/DESI_DR2_alpha_DV_over_rs.txt`; loader `scripts/desi_dr2_data.py`). Pipeline: `scripts/tachyonic_rank1_mle.py`. Output: `results/tachyonic_rank1/SUMMARY.txt`.
+
+| Quantity | Value |
+|:---------|:------|
+| Bins $n$ | 7 |
+| Data file | DESI DR2 $\alpha$ (real, not mock) |
+| $\ln\mathcal{L}_{\Lambda\mathrm{CDM}}$ (diagonal $C$) | $24.8955$ |
+| $\chi^{2}_{\Lambda\mathrm{CDM}}=\sum r_{i}^{2}/\sigma_{i}^{2}$ | $4.49$ |
+| Seed $\sigma_{0}$ | $10^{-61}$ |
+| No-growth limit $t_{c}\to\infty$ | $\Delta\ln\mathcal{L}\to 0$ (preferred) |
+| Representative *active* $t_{c}$ (rank-1 term visible) | $\approx 0.074\,\mathrm{Gyr}$ |
+| $\Delta\ln\mathcal{L}$ at that $t_{c}$ | $\approx -12.67$ |
+| $\Delta\chi^{2}\approx -2\Delta\ln\mathcal{L}$ | $\approx +25.3$ |
+| Deeper in the active window | $\Delta\ln\mathcal{L}$ can reach $\lesssim -30$ |
+
+**Reading of the scan.** With $\sigma_{0}=10^{-61}$, most large $t_{c}$ leave the rank-1 term invisible (recovering $\Lambda$CDM). When $t_{c}$ is short enough that $\sigma_{0}e^{t/t_{c}}$ is no longer negligible compared with the BAO errors, the log-likelihood drops by $\mathcal{O}(10)$ or more. The data therefore do **not** prefer a finite growth time: the acceptable limit is $t_{c}\to\infty$ (no coherent growth). The older headline $\Delta\ln\mathcal{L}=-11.35$ ($\Delta\chi^{2}\approx +22.7$) was the same exclusion class; the recomputed representative point on the real $\alpha$ file is $\Delta\ln\mathcal{L}\approx -12.7$ ($\Delta\chi^{2}\approx +25$).
+
+The stationary OU ceiling $\sigma_{X}<1.5\times 10^{-4}$ is a **different** operator and must not be mixed into this rank-1 test.
 
 ---
 
 ## 6. Exclusion of the Coherent Quantum Fluid
 
-The conventional approach of equating $\sigma_X(z) \sim 1.5\times10^{-4}$ from a stationary OU prior is invalid for a non-stationary growing mode. When the correct covariance is used, the data do not yield a lower bound on $t_c$; they yield a definitive rejection of any finite $t_c$. The exponential amplification of a global seed is incompatible with the observed distribution of BAO residuals across redshift bins.
+Equating a stationary OU prior $\sigma_{X}\sim 10^{-4}$ to this non-stationary growing mode is invalid. With the rank-1 covariance above, the data do not return a useful lower bound on $t_{c}$; they reject the region of parameter space where coherent growth is large enough to matter, and they are happy with $t_{c}\to\infty$.
 
-I conclude that the late-time universe does not exhibit the coherent, large-scale quantum granularity predicted by a homogeneous tachyonic fluid. Any viable model must either (i) produce fluctuations that are spatially localised (breaking the rank-1 coherence), or (ii) possess a self-interaction $g$ so weak that effectively $t_c \to \infty$, reducing the model to a smooth background.
+I conclude that the late-time BAO residuals do not show the coherent, large-scale quantum granularity of a homogeneous tachyonic fluid. Any viable model must either (i) break the global rank-1 coherence (localised fluctuations), or (ii) keep $g$ so small that $t_{c}\to\infty$, i.e. reduce to a smooth background under this probe.
 
 ---
 
 ## 7. Discussion and Conclusion
 
-I have critically examined a dark-energy model based on a tachyonic quantum fluid with quartic self-interaction. While the algebraic derivation of the instability growth rate contains a sign error in the intermediate dispersion relation, the physical growth rate $\Gamma_{\mathrm{max}} = g\lvert\psi_0\rvert^{2}/\hbar$ is robust.
+I examined a dark-energy model based on a tachyonic quantum fluid with quartic self-interaction. The Bogoliubov analysis gives a clean maximum growth rate $\Gamma_{\max}=g\lvert\psi_{0}\rvert^{2}/\hbar$. The observationally relevant object is not that formula alone but the **rank-1 residual covariance** it induces on BAO $\alpha$ measurements.
 
-However, when the actual non-stationary covariance induced by this coherent growth is applied to the DESI DR2 BAO data, the model is excluded with high statistical significance ($\Delta\chi^2 \approx +22.7$). The data are incompatible with a global, synchronously growing vacuum fluctuation. Therefore, while the theoretical mechanism remains mathematically sound in condensed-matter analogues, it cannot describe the late-time cosmological vacuum. The universe remains phenomenologically equivalent to a smooth $\Lambda$CDM background within the reach of current BAO surveys.
+On public DESI DR2 data (real $\alpha$ vector, 7 bins), that model is excluded whenever growth is active at the Sorkin seed scale used in this programme. The smooth diagonal-$\Lambda$CDM residual description remains preferred. Condensed-matter analogues of negative-mass hydrodynamics remain interesting laboratory physics; they are not a description of late-time cosmological vacuum residuals at DESI precision under this pipeline.
 
-Future surveys such as Euclid DR1, with $>20$ bins, will further constrain any residual stochastic component, but this particular class of coherent quantum-fluid models is already falsified.
+Future surveys (e.g. Euclid) will tighten residual tests further, but this coherent rank-1 class is already ruled out as a DESI-scale explanation of BAO residuals.
 
 ---
 
@@ -162,7 +253,7 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 [1] DESI Collaboration, "DESI DR2 Results II: Measurements of BAO and Cosmological Constraints," arXiv:2503.14738 (2025).
 
-[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations," in preparation (2026).
+[2] Morales Souhail, J., "Constraints on Stochastic Dark Energy from DESI DR2: A Null Result for Ornstein-Uhlenbeck Fluctuations," in preparation (2026); this repository, `papers/stochastic-dark-energy-desi-dr2.md`.
 
 [3] Khamehchi, M. A. et al., "Negative-Mass Hydrodynamics in a Spin-Orbit–Coupled Bose–Einstein Condensate," Phys. Rev. Lett. **118**, 155301 (2017).
 
@@ -178,5 +269,11 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 ## Addendum: Principle of Late-Time Vacuum Homogeneity
 
-This exclusion is consistent with the broader Principle of Late-Time Vacuum Homogeneity: at observable cosmological scales and with current BAO precision, the dark-energy sector behaves as a perfectly homogeneous and non-stochastic background. Any mechanism generating fluctuations in $\rho_\Lambda$ must be suppressed below the level detectable by DESI DR2. See `principle-of-vacuum-smoothness.md`.
+This exclusion is consistent with the broader Principle of Late-Time Vacuum Homogeneity: at observable cosmological scales and with current BAO precision, the dark-energy sector behaves as a homogeneous, non-stochastic background under the tests in this repository. Any mechanism generating fluctuations in $\rho_{\Lambda}$ must sit below the level probed by DESI DR2 residuals. See `principle-of-vacuum-smoothness.md`.
 
+## Reproducibility
+
+```bash
+python scripts/tachyonic_rank1_mle.py
+# writes results/tachyonic_rank1/SUMMARY.txt and SUMMARY.json
+```

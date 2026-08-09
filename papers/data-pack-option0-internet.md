@@ -12,7 +12,7 @@ I compiled this pack so that `scale-operator-experiment-map.md` and `anisotropic
 |----------|-------|----------------|
 | $\sigma_X$ (95% CL upper limit) | $< 1.5\times 10^{-4}$ | `papers/resume.txt`, DESI DR2 BAO residual OU |
 | Best-fit behaviour | $\sigma_X \to 0$, $\omega_R \to 0$ | MLE; $\Delta\mathrm{AIC}=+4$ vs ΛCDM for free OU |
-| Tachyonic coherent growth | Excluded ($\Delta\chi^2\sim +23$) | `papers/quantum-fluid-instabilities-desi-dr2.md` |
+| Tachyonic coherent growth | Excluded ($\Delta\chi^2\sim +25$) | `papers/quantum-fluid-instabilities-desi-dr2.md` |
 | Motivational seed | $\sigma_0\sim 10^{-61}\sim 1/\sqrt{N}$, $N\sim 10^{122}$ | Bekenstein–Hawking / Sorkin (motivational, not a detection) |
 | BAO public data used | DESI DR2 summary stats | arXiv:[2503.14738](https://arxiv.org/abs/2503.14738) |
 
@@ -83,7 +83,9 @@ This is the correct scale+operator family for $\sigma_X$ residual tests on dista
 Using $\sigma_X \sim 10^{-4}$, $\Omega_{\mathrm{DE}}/\Omega_m\sim 2$, $f=1$:
 
 
+$$
 \lvert \eta-1 \rvert\sim \mathcal{O}\!\left(f\cdot\frac{\Omega_{\mathrm{DE}}}{\Omega_m}\cdot\sigma_X\right)\sim 2\times 10^{-4}.
+$$
 
 
 | Probe | Rough reach on $\lvert \eta-1 \rvert$ or $\lvert \gamma-1 \rvert$ | vs $2\times 10^{-4}$ |

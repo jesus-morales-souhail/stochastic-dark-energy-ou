@@ -32,19 +32,25 @@ If fundamental, local vacuum stresses of the form $T_{\mu\nu}=V(x)g_{\mu\nu}$ ar
 I take fractional fluctuations $X\equiv\delta\Omega_\Lambda$ in $x=\ln a$:
 
 
+$$
 dX=-\theta X dx+\sigma dW_x.
+$$
 
 
 With $dx=H dt$,
 
 
+$$
 \Gamma_{\rm phys}(z)=\theta H(z).
+$$
 
 
 For the homogeneous mean (noise off), a frozen kick of amplitude $A_0$ damps as
 
 
+$$
 \boxed{\sigma_{\rm res}(x)=A_0 e^{-\theta\Delta x}, \qquad \Delta x=\ln\frac{1+z_{\rm past}}{1+z_{\rm now}}.}
+$$
 
 
 ### 2.2 Laboratory desqueezing
@@ -52,13 +58,17 @@ For the homogeneous mean (noise off), a frozen kick of amplitude $A_0$ damps as
 Open-system simulations (QuTiP Lindblad, $N=150$, $r=1.5$) yield
 
 
+$$
 \boxed{t_{1/2}\!\left(\lvert\langle a^2\rangle\rvert\right)=\frac{\ln 2}{\gamma},}
+$$
 
 
 independent of thermal occupation $n_{\rm th}$ for this metric. The present-epoch dictionary is
 
 
+$$
 \gamma \longleftrightarrow \theta H_0 \qquad\Rightarrow\qquad t_{1/2}=\frac{\ln 2}{\theta H_0}.
+$$
 
 
 Cosmic-age half-life requires $\theta\sim\mathcal{O}(1)$. The DESI MLE numerical floor $\theta\sim 10^{-3}$ implies essentially no damping on the DESI path $\Delta x\simeq 0.94$.
@@ -82,7 +92,9 @@ Cosmic-age half-life requires $\theta\sim\mathcal{O}(1)$. The DESI MLE numerical
 For any $\theta\ge 0$ and any path with $\Delta x=\mathcal{O}(1\text{–}10)$,
 
 
+$$
 \sigma_{\rm res}\le\sigma_0\sim 10^{-61}\ll 10^{-5}.
+$$
 
 
 **A pure Poisson discreteness seed is invisible to DESI and to Euclid.**
@@ -105,7 +117,9 @@ Any **observable** residual under an emergent picture requires physics beyond ba
 ### 3.3 Physical half-life (Mapping A)
 
 
+$$
 t_{1/2}=\frac{\ln 2}{\theta H_0}.
+$$
 
 
 | $\theta$ | $t_{1/2}$ |

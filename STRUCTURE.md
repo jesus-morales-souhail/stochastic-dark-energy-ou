@@ -36,6 +36,8 @@ This layout is how I keep the claim set readable.
 | `scripts/profile_sigma_x_desi.py` | Profile likelihood for $\sigma_X$ |
 | `scripts/cross_correlation_DESI.py` | Galaxy × residual cross-check |
 | `scripts/gpe/gpe_sim.py` | GPE illustration |
+| `scripts/tachyonic_rank1_mle.py` | Rank-1 coherent growth MLE on real DESI $\alpha$ |
+| `papers/quantum-fluid-instabilities-desi-dr2.md` | Tachyonic / GPE exclusion note |
 | `results/eos_cpl_desi_dr2/` | CPL fit outputs |
 
 ### II — Geometry of vacuum smoothness
