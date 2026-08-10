@@ -55,7 +55,7 @@ The tachyonic rank-1 test is a *different* covariance (\(C^{\mathrm{meas}}+\math
 
 \(\theta\) in the OU is mean reversion of \(X\) in \(\ln a\). It is not the BAO wiggle damping scale, not a Jeans wavenumber, and not the tachyonic \(t_c\).
 
-Baryonic feedback, WHIM, clusters, kSZ matter for large-scale structure and systematics. They are real work. They are not the residual \(\sigma_X\) object.
+Baryonic feedback, WHIM, clusters, kSZ matter for large-scale structure and systematics. They are real work. They are not the residual \(\sigma_X\) object. In particular, the ceiling \(2.5\times 10^{-2}\) is **not** an invitation to hunt “baryons at amplitude 0.025”; \(\omega_b\approx 0.022\) is a different constant.
 
 ---
 
