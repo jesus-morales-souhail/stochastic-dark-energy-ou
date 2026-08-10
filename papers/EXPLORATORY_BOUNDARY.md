@@ -17,9 +17,8 @@ Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superos
 | Slip / Option 0 data pack | Self-shielding optics barriers |
 | Euclid protocol notes | Pattern / undeclared-power essays |
 | Honest headlines + claim checklist | Scale–operator pedagogy maps |
-| Operator/scale separation (A residual DE / B counting / C VLBI) | EHT / photon-sphere essays (if any; not residual claims) |
 
-**Do not fuse** residual DESI \(\sigma_X\), baryon density \(\omega_b\), and strong-field VLBI. See [`operator-scale-separation.md`](operator-scale-separation.md).
+I keep residual DESI, baryon density \(\omega_b\), and VLBI / black-hole imaging as separate problems. Short note: [`scope-and-mixups.md`](scope-and-mixups.md).
 
 **Exploratory repository (canonical home for fantasy / method notes):**
 

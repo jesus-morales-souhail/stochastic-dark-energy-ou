@@ -16,8 +16,7 @@ This file is about language discipline — for me, for emails, for anyone sharin
 | “I discovered the texture of dark energy” | No positive detection. |
 | “The model is discarded with no excuses” after a null | A null kills a tested corner, not every open kernel idea. |
 | “Gap $10^{56}$” glued to DESI $\sigma_X=2.5\times 10^{-2}$ | That ratio is $\sim 10^{59}$. Keep $10^{56}$ for the Euclid-scale $\sim 10^{-5}$ target. |
-| “$\sigma_X\sim 0.025$ is the baryon density” | Residual amplitude $\neq\omega_b\approx 0.022$. See `operator-scale-separation.md`. |
-| “DESI residual grain = EHT photon sphere” | Different scale, operator, instrument. Outside claim set. |
+| Residual $\sigma_X$ sold as baryon density, or as an EHT photon-ring result | Different quantities; see `scope-and-mixups.md` |
 
 ---
 
