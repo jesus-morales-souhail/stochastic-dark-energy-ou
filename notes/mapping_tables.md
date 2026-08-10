@@ -21,21 +21,21 @@ Fiducial: $H_0=67.4$, $\Omega_m=0.315$, $t_0=13.796 \mathrm{Gyr}$.
 
 | $\theta$ case | path | target | $A_0$ required | $A_0/\sigma_0$ |
 |----------------|------|--------|-----------------:|-----------------:|
-| theta_MLE=0.001 | DESI_0.94 | DESI_limit_1.5e-4 | 1.501e-04 | 1.501e+57 |
+| theta_MLE=0.001 | DESI_0.94 | DESI_limit_2.5e-2 | 1.501e-04 | 1.501e+57 |
 | theta_MLE=0.001 | DESI_0.94 | Euclid_1e-5 | 1.001e-05 | 1.001e+56 |
-| theta_MLE=0.001 | recomb | DESI_limit_1.5e-4 | 1.511e-04 | 1.511e+57 |
+| theta_MLE=0.001 | recomb | DESI_limit_2.5e-2 | 1.511e-04 | 1.511e+57 |
 | theta_MLE=0.001 | recomb | Euclid_1e-5 | 1.007e-05 | 1.007e+56 |
-| theta=1.2 (old) | DESI_0.94 | DESI_limit_1.5e-4 | 4.634e-04 | 4.634e+57 |
+| theta=1.2 (old) | DESI_0.94 | DESI_limit_2.5e-2 | 4.634e-04 | 4.634e+57 |
 | theta=1.2 (old) | DESI_0.94 | Euclid_1e-5 | 3.089e-05 | 3.089e+56 |
-| theta=1.2 (old) | recomb | DESI_limit_1.5e-4 | 6.630e-01 | 6.630e+60 |
+| theta=1.2 (old) | recomb | DESI_limit_2.5e-2 | 6.630e-01 | 6.630e+60 |
 | theta=1.2 (old) | recomb | Euclid_1e-5 | 4.420e-02 | 4.420e+59 |
-| theta=ln2~0.693 (Hubble half-life) | DESI_0.94 | DESI_limit_1.5e-4 | 2.878e-04 | 2.878e+57 |
+| theta=ln2~0.693 (Hubble half-life) | DESI_0.94 | DESI_limit_2.5e-2 | 2.878e-04 | 2.878e+57 |
 | theta=ln2~0.693 (Hubble half-life) | DESI_0.94 | Euclid_1e-5 | 1.919e-05 | 1.919e+56 |
-| theta=ln2~0.693 (Hubble half-life) | recomb | DESI_limit_1.5e-4 | 1.913e-02 | 1.913e+59 |
+| theta=ln2~0.693 (Hubble half-life) | recomb | DESI_limit_2.5e-2 | 1.913e-02 | 1.913e+59 |
 | theta=ln2~0.693 (Hubble half-life) | recomb | Euclid_1e-5 | 1.275e-03 | 1.275e+58 |
-| theta=0.099 (half over recomb path) | DESI_0.94 | DESI_limit_1.5e-4 | 1.646e-04 | 1.646e+57 |
+| theta=0.099 (half over recomb path) | DESI_0.94 | DESI_limit_2.5e-2 | 1.646e-04 | 1.646e+57 |
 | theta=0.099 (half over recomb path) | DESI_0.94 | Euclid_1e-5 | 1.098e-05 | 1.098e+56 |
-| theta=0.099 (half over recomb path) | recomb | DESI_limit_1.5e-4 | 3.000e-04 | 3.000e+57 |
+| theta=0.099 (half over recomb path) | recomb | DESI_limit_2.5e-2 | 3.000e-04 | 3.000e+57 |
 | theta=0.099 (half over recomb path) | recomb | Euclid_1e-5 | 2.000e-05 | 2.000e+56 |
 
 ## Table 3 — Page/scrambling with $S=10^{122}$

@@ -106,10 +106,11 @@ def main():
         "sigma_X_at_max": float(sig_grid[int(np.argmax(dlogL))]),
         "sigma_X_95CL_upper_profile": s_95,
         "criterion": "95% CL: Delta logL >= -1.92 from profile max (1 dof)",
-        "paper_working_limit": 1.5e-4,
+        "sigma_X_95CL_upper_profile_claim": 2.5e-2,  # rounded; exact from grid ~2.506e-2
         "profile": profile,
         "notes": [
             "Uses official Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).",
+            "Former 1.5e-4 was a working target not equal to this 7-bin free-θ profile; corrected to 2.5e-2.",
             "Background fixed to alpha=1 (LCDM fiducial). Free {w0,wa} is a separate scan.",
         ],
     }
@@ -124,7 +125,7 @@ def main():
     ax.semilogx(sig_grid, dlogL_rel, "b-o", ms=3, lw=1.5)
     ax.axhline(0, color="k", lw=0.8)
     ax.axhline(thr, color="r", ls="--", label=r"$95\%$ CL ($\Delta\ln\mathcal{L}=-1.92$)")
-    ax.axvline(1.5e-4, color="orange", ls=":", label=r"paper working limit $1.5\times10^{-4}$")
+    ax.axvline(2.5e-2, color="orange", ls=":", label=r"95% CL profile claim $1.5\times10^{-4}$")
     ax.axvline(s_95, color="green", ls="-.", label=rf"profile $95\%$ $\sigma_X\leq{s_95:.2e}$")
     ax.set_xlabel(r"$\sigma_X$")
     ax.set_ylabel(r"$\Delta\ln\mathcal{L}$ (profile over $\theta$)")
@@ -142,7 +143,7 @@ def main():
         f"ll_LCDM = {ll_lcdm:.4f}",
         f"max ΔlnL vs LCDM = {np.max(dlogL):+.4f} at σ_X = {sig_grid[int(np.argmax(dlogL))]:.3e}",
         f"95% CL upper (profile): σ_X ≤ {s_95:.3e}",
-        f"Paper working limit:     σ_X < 1.5e-4",
+        f"95% CL profile claim:     σ_X < 2.5e-2",
         f"Wrote results/profile_sigma_x/profile_sigma_x.json",
         f"Wrote results/profile_sigma_x/profile_sigma_x.png",
     ]

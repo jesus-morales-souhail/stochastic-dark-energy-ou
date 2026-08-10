@@ -14,10 +14,10 @@ This is what I stand behind, and what I do not.
 | ID | Claim | Evidence |
 |:---|:------|:---------|
 | **C1** | No preference for a stationary OU/QNM residual over smooth BAO residuals | MLE floor; $\Delta\ln\mathcal{L}=0$ vs $\Lambda$CDM; AIC not preferred |
-| **C2** | $\sigma_X < 1.5\times 10^{-4}$ (95% CL) under the OU kernel and public BAO summary statistics (measurement cov = official Gaussian BAO 13×13 projected to α) | Profile / residual pipeline in this repo |
+| **C2** | $\sigma_X < 2.5\times 10^{-2}$ (95% CL, profile over $\theta$, 7 isotropic $\alpha$ bins, full meas. cov). Best fit $\sigma_X\to 0$ (null preferred). Former $1.5\times 10^{-4}$ was a working target **not** equal to this profile — corrected. | `profile_sigma_x_desi.py` / `results/profile_sigma_x/` |
 | **C3** | Nested free background plus stochastic extension is not preferred ($\Delta\mathrm{AIC}\approx +4$) | `eos_efectiva.py` / joint fits |
 | **C4** | Coherent tachyonic growth (rank-1 cov) is excluded: $\Delta\ln\mathcal{L}\approx -12.7$ | Quantum-fluid MLE |
-| **C5** | Gap $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (**Euclid target**); gap $\to 1.5\times 10^{-4}$ is $\sim 10^{57}$ (**DESI ceiling**); linear amplifiers fail both | `gap_two_targets.py` + `amplifier_audit.py` + PREPRINT §5 |
+| **C5** | Gap $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (**Euclid target**); gap $\to 2.5\times 10^{-2}$ is $\sim 10^{59}$ (**DESI ceiling**); linear amplifiers fail both | `gap_two_targets.py` + `amplifier_audit.py` + PREPRINT §5 |
 | **C6** | Late freeze-out: gain $=1$; soft avalanche gain $\sim 2$; only $N_{\mathrm{eff}}$ redefinition hits amplitude | [`VERDICT.md`](../results/amplification_routes/VERDICT.md) |
 | **C7** | Even $\varepsilon=1$ anisotropic fraction of the BAO-bounded residual gives $\|\gamma-1\|\sim 10^{-4}$ | `scripts/slip_bridge.py` |
 

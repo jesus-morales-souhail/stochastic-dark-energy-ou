@@ -22,11 +22,11 @@ AMPLIFICATION to reach Euclid (1e-5) on DESI path:
 INTERPRETIVE REGIONS:
   F: Fundamental SDiff => effective A0_geo = 0 (local V g_munu projected out).
   E0: Emergent + Sorkin only => null at all foreseeable BAO precision.
-  E1: Emergent + amplified A0 in [1e-5, 1.5e-4] + theta small
-      => possible Euclid detection; DESI-compatible if residual < 1.5e-4.
+  E1: Emergent + amplified A0 in [1e-5, 2.5e-2] + theta small
+      => possible Euclid detection; DESI-compatible if residual < 2.5e-2.
   E2: Emergent + theta ~ O(1) + A0 ~ 1e-5..1e-3
       => strong path damping; residual may sit near Euclid edge after recomb path.
-  E3: theta ~ 1e-3 (MLE floor) + A0 > 1.5e-4 => already tension with DESI null.
+  E3: theta ~ 1e-3 (MLE floor) + A0 > 2.5e-2 => already tension with DESI null.
 
 OBSERVATIONAL TESTS:
   1) Euclid residual 0 < sigma_X <~ 1e-4 with free {w0,wa}:

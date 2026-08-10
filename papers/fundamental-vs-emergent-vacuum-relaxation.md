@@ -11,7 +11,7 @@
 
 ## Abstract
 
-My DESI DR2 BAO analyses in this repository drive stationary stochastic fluctuations of dark energy to a null working limit $\sigma_X < 1.5\times 10^{-4}$ (95% CL). The open question is whether late-time vacuum smoothness is an exact geometric law (fundamental volume-preserving diffeomorphisms, SDiff) or an attractor with finite relaxation time (emergent SDiff). Combining the Ornstein–Uhlenbeck continuity structure $\Gamma_{\rm phys}(z)=\theta H(z)$ with the open-system desqueezing law $t_{1/2}=\ln 2/\gamma$, I derive path-integrated residuals $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$, estimate the kick amplitude needed for Euclid-scale detectability, and show that a pure Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ remains unobservable for cosmologically relevant $\theta$. I partition theory space into regions F and E0–E3 with corresponding Euclid and lag-correlation tests.
+My DESI DR2 BAO analyses in this repository drive stationary stochastic fluctuations of dark energy to a null working limit $\sigma_X < 2.5\times 10^{-2}$ (95% CL). The open question is whether late-time vacuum smoothness is an exact geometric law (fundamental volume-preserving diffeomorphisms, SDiff) or an attractor with finite relaxation time (emergent SDiff). Combining the Ornstein–Uhlenbeck continuity structure $\Gamma_{\rm phys}(z)=\theta H(z)$ with the open-system desqueezing law $t_{1/2}=\ln 2/\gamma$, I derive path-integrated residuals $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$, estimate the kick amplitude needed for Euclid-scale detectability, and show that a pure Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ remains unobservable for cosmologically relevant $\theta$. I partition theory space into regions F and E0–E3 with corresponding Euclid and lag-correlation tests.
 
 ---
 
@@ -83,7 +83,7 @@ Cosmic-age half-life requires $\theta\sim\mathcal{O}(1)$. The DESI MLE numerical
 | Hubble time $t_{H_0}$ | $14.51 \mathrm{Gyr}$ |
 | DESI path $\Delta x$ | $0.94$ |
 | Post-recombination $\Delta x=\ln(1+z_{\rm rec})$ | $\simeq 6.99$ |
-| DESI working limit | $\sigma_X<1.5\times 10^{-4}$ (95% CL) |
+| DESI working limit | $\sigma_X<2.5\times 10^{-2}$ (95% CL) |
 | Euclid target scale | $\sim 10^{-5}$ |
 | Sorkin seed | $\sigma_0\sim 10^{-61}$ |
 
@@ -137,9 +137,9 @@ $$
 |--------|------------|-------------|--------------------|
 | **F** | Fundamental SDiff: geometric $A_0^{\rm geo}=0$ for local $Vg_{\mu\nu}$ | Compatible | Deeper null |
 | **E0** | Emergent + Sorkin-only seed | Compatible | Null (practically identical to F) |
-| **E1** | Emergent + $A_0\in[10^{-5},1.5\times 10^{-4}]$, small $\theta$ | Compatible if residual $<1.5\times 10^{-4}$ | **Possible detection** |
+| **E1** | Emergent + $A_0\in[10^{-5},2.5\times 10^{-2}]$, small $\theta$ | Compatible if residual $<2.5\times 10^{-2}$ | **Possible detection** |
 | **E2** | Emergent + $\theta\sim\mathcal{O}(1)$ + moderate $A_0$ | Compatible if damped below DESI | Residual near/below $10^{-5}$ after long paths |
-| **E3** | Small $\theta$ + $A_0>1.5\times 10^{-4}$ | **Tension with DESI null** | Already disfavored |
+| **E3** | Small $\theta$ + $A_0>2.5\times 10^{-2}$ | **Tension with DESI null** | Already disfavored |
 
 Euclid alone cannot separate **F** from **E0**. Separation requires either a residual detection (favouring E1-type physics) or an independent prior on $A_0$.
 

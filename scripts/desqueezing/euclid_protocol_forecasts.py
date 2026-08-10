@@ -18,7 +18,7 @@ H0, OM = 67.4, 0.315
 T_H0 = 977.8 / H0
 H0_GYR = 1.0 / T_H0
 LN2 = np.log(2.0)
-SIGMA_DESI, SIGMA_EUCLID = 1.5e-4, 1e-5
+SIGMA_DESI, SIGMA_EUCLID = 2.5e-2, 1e-5
 DX_DESI = 0.94
 DX_EUCLID_NARROW = np.log((1 + 1.8) / (1 + 0.9))
 DX_RECOMB = np.log(1 + 1090)
@@ -33,7 +33,7 @@ def theta_min_shape(dx_spacing, rho_err, k=2.0):
 
 def main():
     thetas = np.array([1e-3, 0.05, 0.1, 0.3, 0.5, 0.693, 1.0, 1.2, 2.0, 3.0, 5.0])
-    A0s = np.array([1e-61, 1e-10, 1e-6, 1e-5, 3e-5, 1e-4, 1.5e-4, 5e-4, 0.018])
+    A0s = np.array([1e-61, 1e-10, 1e-6, 1e-5, 3e-5, 1e-4, 2.5e-2, 5e-4, 0.018])
     rows = []
     for A0 in A0s:
         for th in thetas:

@@ -52,7 +52,7 @@ Results:
 Conclusion:
 - No statistical evidence for stochastic fluctuations in the dark energy sector.
 - The BAO summary statistics are consistent with a smooth background near ΛCDM.
-- 95% CL upper limit: σ_X < 1.5 × 10⁻⁴
+- 95% CL upper limit: σ_X < 2.5 × 10⁻²
 - The stochastic amplitude is driven to zero when the background is free.
   Nested CPL + (σ, θ) extensions are not preferred (ΔAIC ≈ +4).
 

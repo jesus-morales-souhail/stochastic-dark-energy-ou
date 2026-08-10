@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: $\sigma_X < 1.5 \times 10^{-4}$ (95% CL) [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
+Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: $\sigma_X < 2.5\times 10^{-2}$ (95% CL) [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
 
 
 $$
@@ -41,7 +41,7 @@ and establishes a conservative upper limit:
 
 
 $$
-\sigma_X < 1.5 \times 10^{-4}
+\sigma_X < 2.5\times 10^{-2}
 $$
 
 
@@ -69,7 +69,7 @@ X(x) \equiv \frac{\delta\rho_\Lambda(x)}{\bar{\rho}_\Lambda},
 with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
 
 
-\sigma_X < 1.5 \times 10^{-4}
+\sigma_X < 2.5\times 10^{-2}
 
 
 **(95% CL).**
@@ -254,7 +254,7 @@ If Euclid DR1 detects any stochastic fluctuation in the dark-energy density abov
 
 ## 9. Conclusion
 
-I have traced the empirical limit $\sigma_X < 1.5 \times 10^{-4}$ to its logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms $\mathrm{SDiff}(M)$.
+I have traced the empirical limit $\sigma_X < 2.5\times 10^{-2}$ to its logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms $\mathrm{SDiff}(M)$.
 
 This conclusion does not rest on speculative models. It follows from:
 

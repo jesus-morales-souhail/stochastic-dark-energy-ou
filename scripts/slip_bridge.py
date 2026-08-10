@@ -42,7 +42,7 @@ OM_M0 = 0.315
 OM_L0 = 0.685
 
 # ---- Repo bound (DESI DR2 BAO, Morales Souhail 2026) ----
-SIGMA_X_95 = 1.5e-4  # 95% CL upper limit on fractional DE residual
+SIGMA_X_95 = 2.5e-2  # 95% CL upper limit on fractional DE residual
 
 # ---- Observational targets ----
 # Maus et al. 2025 (arXiv:2505.20656): γ ≡ Φ/Ψ, GR = 1
@@ -138,8 +138,8 @@ def main() -> None:
 
     print("VERDICT:")
     print("  The SDiff 'grieta' (anisotropic stress is not canceled) is real")
-    print("  in principle, but σ_X < 1.5×10⁻⁴ caps the mechanism. Even eps=1")
-    print("  gives |γ−1| ~ 10⁻⁴ — O(10²–10³)× below Maus/Sakr targets.")
+    print("  in principle, but σ_X < 2.5×10⁻² caps the mechanism. Even eps=1")
+    print("  gives |γ−1| ~ few×10⁻² — still O(1)–O(10)× below Maus/Sakr targets.")
     print("  Observable slip requires shear DECOUPLED from the BAO-bounded")
     print("  isotropic residual (or amplification of A0). That is no longer")
     print("  this stochastic mechanism alone — it is generic anisotropic")

@@ -8,7 +8,7 @@ Related notes: `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamenta
 
 ## Abstract
 
-I set out a Euclid-scale BAO analysis for residual stochastic fluctuations of dark energy, extending the DESI DR2 working limit $\sigma_X < 1.5\times 10^{-4}$ (95% CL). The fit uses the parameter vector $\{w_0,w_a,\theta,\sigma_X\}$, with optional $\omega_R$ for a nested QNM kernel. Path residuals of the form $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$ define operational regions (F, E0–E3). For $\theta\sim\mathcal{O}(1)$, amplitude-based damping can be visible when $A_0$ exceeds the measurement noise, while lag–shape tests with a Pearson estimator alone are weak unless $N$ is large or the full OU kernel is used in the likelihood. A BAO-only null does not separate fundamental geometric silence (F) from an emergent but unobservable seed (E0); a residual in $10^{-5}\lesssim\sigma_X\lesssim 10^{-4}$ would favour E1-type effective physics.
+I set out a Euclid-scale BAO analysis for residual stochastic fluctuations of dark energy, extending the DESI DR2 working limit $\sigma_X < 2.5\times 10^{-2}$ (95% CL). The fit uses the parameter vector $\{w_0,w_a,\theta,\sigma_X\}$, with optional $\omega_R$ for a nested QNM kernel. Path residuals of the form $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$ define operational regions (F, E0–E3). For $\theta\sim\mathcal{O}(1)$, amplitude-based damping can be visible when $A_0$ exceeds the measurement noise, while lag–shape tests with a Pearson estimator alone are weak unless $N$ is large or the full OU kernel is used in the likelihood. A BAO-only null does not separate fundamental geometric silence (F) from an emergent but unobservable seed (E0); a residual in $10^{-5}\lesssim\sigma_X\lesssim 10^{-4}$ would favour E1-type effective physics.
 
 ---
 
@@ -118,9 +118,9 @@ With residual scale of order $\sigma_X$:
 |--------|-----------|----------------|
 | **F** | $\sigma_X$ consistent with 0; no shape signal | Compatible with geometric silence |
 | **E0** | Observationally as F; theory assumes a Sorkin-only seed | Emergent but invisible |
-| **E1** | $10^{-5}\lesssim \sigma_X \lesssim 1.5\times 10^{-4}$, $\theta$ small | Emergent amplitude above the Poisson seed |
+| **E1** | $10^{-5}\lesssim \sigma_X \lesssim 2.5\times 10^{-2}$, $\theta$ small | Emergent amplitude above the Poisson seed |
 | **E2** | $\theta$ constrained away from 0 with reduced amplitude relative to no-damping | Detectable mean-reversion |
-| **E3** | $\sigma_X \gtrsim 1.5\times 10^{-4}$ with free background | Tension with the DESI null |
+| **E3** | $\sigma_X \gtrsim 2.5\times 10^{-2}$ with free background | Tension with the DESI null |
 
 Euclid alone cannot split F from E0. A null should be reported as **F $\cup$ E0**.
 
@@ -145,7 +145,7 @@ Examples for a DESI-wide path $\Delta x=0.94$:
 | $10^{-5}$ | $3\times 10^{-5}$ | $\sim 0.4$ |
 | $10^{-5}$ | $10^{-4}$ | $\sim 0.1$ |
 | $3\times 10^{-5}$ | $10^{-4}$ | $\sim 0.4$ |
-| $5\times 10^{-5}$ | $1.5\times 10^{-4}$ | $\sim 0.4$ |
+| $5\times 10^{-5}$ | $2.5\times 10^{-2}$ | $\sim 0.4$ |
 
 On a narrower Euclid DR1 path ($\Delta x\sim 0.39$), the same amplitude criterion requires larger $\theta$ by a factor $\sim 0.94/0.39\sim 2.4$. Thus $\theta\sim\mathcal{O}(1)$ is relevant when $A_0$ is a few times the noise $s$.
 
@@ -244,7 +244,7 @@ python scripts/joint_w0wa_sigma_desi.py
 python scripts/tachyonic_rank1_mle.py
 ```
 
-Working residual ceiling under the OU kernel (this pipeline): $\sigma_X < 1.5\times 10^{-4}$ (95% CL, paper working limit). Profile and joint runs on the real $\alpha$ file are consistent with a null residual (amplitude driven to the floor when the background is free).
+Working residual ceiling under the OU kernel (this pipeline): $\sigma_X < 2.5\times 10^{-2}$ (95% CL, free-$\theta$ profile, 7 bins). Profile and joint runs on the real $\alpha$ file are consistent with a null residual (amplitude driven to the floor when the background is free).
 
 ---
 

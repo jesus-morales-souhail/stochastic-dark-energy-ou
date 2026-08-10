@@ -7,7 +7,7 @@ Mapping A (z=0):  gamma = theta * H0
 Mapping B (OU):   Delta x_1/2 = ln(2) / theta
 
 DESI anchors (this repository):
-  sigma_X < 1.5e-4 (95% CL)
+  sigma_X < 2.5e-2 (95% CL)
   MLE floor: theta ~ 1e-3, sigma_X ~ 5e-5
   Seed: sigma_0 ~ 1e-61 (Sorkin / Bekenstein-Hawking)
 

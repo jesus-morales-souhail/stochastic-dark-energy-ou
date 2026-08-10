@@ -35,7 +35,7 @@ Z_EFF = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
 S_Z = np.array([-0.284, -0.462, -0.595, -0.719, -0.870, -0.917, -1.070])
 
 # DESI DR2 MLE (resume.txt, stochastic-dark-energy-desi-dr2.md)
-SIGMA_X_LIMIT_95 = 1.5e-4
+SIGMA_X_LIMIT_95 = 2.5e-2
 SIGMA_X_MLE_FLOOR = 5.0e-5
 THETA_MLE_FLOOR = 1.0e-3
 THETA_MIN_OPT = 1.0e-3
@@ -206,7 +206,7 @@ def main():
     ]:
         for path_name, dx in [("DESI_0.94", DX_DESI), ("recomb", dx_recomb)]:
             for target_name, target in [
-                ("DESI_limit_1.5e-4", SIGMA_X_LIMIT_95),
+                ("DESI_limit_2.5e-2", SIGMA_X_LIMIT_95),
                 ("Euclid_1e-5", SIGMA_X_EUCLID_TARGET),
             ]:
                 A0_need = target * np.exp(th * dx)
@@ -264,9 +264,9 @@ def main():
     p("")
     p("--- CRITICAL FIRST-PRINCIPLES CONCLUSIONS ---")
     p("1) Pure Sorkin seed A0~1e-61: after ANY cosmological path,")
-    p("   residual sigma_X ~ 1e-61 << DESI (1.5e-4) and Euclid (1e-5).")
+    p("   residual sigma_X ~ 1e-61 << DESI (2.5e-2) and Euclid (1e-5).")
     p("   => Euclid CANNOT see pure Sorkin Poisson noise without amplification.")
-    p("2) DESI null (sigma_X < 1.5e-4) does NOT constrain Sorkin seed;")
+    p("2) DESI null (sigma_X < 2.5e-2) does NOT constrain Sorkin seed;")
     p("   it constrains effective late-time amplitude after any growth/amplification.")
     p("3) For t_1/2 ~ age of Universe: theta ~ O(1), gamma ~ H0 (Map A).")
     p("4) MLE theta~0.001: essentially NO damping on DESI path (Dx=0.94);")

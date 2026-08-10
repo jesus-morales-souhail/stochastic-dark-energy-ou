@@ -308,7 +308,7 @@ def main():
         "  tras una perturbación del vacío (squeezing = 'arranque' fuera del vacío liso).",
         "SDiff emergente ⇒ τ_relax finito (como este t_½).",
         "SDiff fundamental ⇒ σ_X=0 exacto (equivalente a no acoplar ruido local a la geometría).",
-        f"Límite cosmológico memorizado: σ_X < 1.5e-4 (95% CL, DESI DR2).",
+        f"Límite cosmológico memorizado: σ_X < 2.5e-2 (95% CL, DESI DR2).",
         "",
         "Tabla (gamma, n_th, gamma_eff, t_half_a2, t_half_theory):",
     ]

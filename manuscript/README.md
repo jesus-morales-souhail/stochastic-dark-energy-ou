@@ -28,7 +28,7 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 ## What is *in* the paper
 
 - DESI DR2 BAO residual constraints (OU / QNM)
-- $\sigma_X < 1.5\times 10^{-4}$ (95% CL) under the stated kernel
+- $\sigma_X < 2.5\times 10^{-2}$ (95% CL) under the stated kernel
 - Tachyonic coherent growth exclusion
 - Amplification bottleneck $10^{56}$ + Routes 1–3 numerical verdicts
 - Gravitational-slip amplitude starvation (Option 0)

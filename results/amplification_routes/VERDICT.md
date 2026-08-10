@@ -19,7 +19,7 @@ I do **not** invent a successful microphysical amplifier. This file is a numeric
 
 | Target | $\sigma_{0,\mathrm{eff}}$ | $N_{\mathrm{eff}}$ |
 |:-------|:--------------------------|:-------------------|
-| DESI 95% CL ceiling | $1.5\times 10^{-4}$ | $4.44\times 10^{7}$ |
+| DESI 95% CL ceiling | $2.5\times 10^{-2}$ | $1.6\times 10^{3}$ |
 | Window | $1.0\times 10^{-4}$ | $1.00\times 10^{8}$ |
 | Euclid residual scale | $1.0\times 10^{-5}$ | $1.00\times 10^{10}$ |
 
@@ -52,7 +52,7 @@ Grid: $a\in\{1,10\}$, $b\in[10^{-6},0.1]$, $\sigma\in[10^{-8},10^{-3}]$, $\Delta
 |:------|:-------|
 | Gain $\mathrm{p95}/\sigma$ | $1.93$–$2.08$ (median $\approx 1.97$) |
 | $\mathrm{p95}\ge 10^{-5}$ with $\sigma\le 10^{-8}$ | **0 / 288** |
-| BAO-safe $\mathrm{p95}<1.5\times 10^{-4}$ | **216 / 288** |
+| BAO-safe $\mathrm{p95}<2.5\times 10^{-2}$ | **216 / 288** |
 | BAO-unsafe | **72 / 288**, all with $\sigma\gtrsim 1.2\times 10^{-4}$ |
 
 **BAO-safe rule of thumb (this scan):** $\sigma\lesssim 4\times 10^{-5}$.

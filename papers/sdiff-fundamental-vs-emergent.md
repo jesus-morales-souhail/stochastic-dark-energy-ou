@@ -16,7 +16,7 @@ I distinguish two logically distinct interpretations:
 - **Interpretation A:** $\mathrm{SDiff}(M)$ is a *fundamental* symmetry imposed at the level of the action.
 - **Interpretation B:** $\mathrm{SDiff}(M)$ is an *emergent* low-energy symmetry arising from the quantum entanglement structure of spacetime.
 
-Both interpretations are compatible with current data ($\sigma_X < 1.5 \times 10^{-4}$ from DESI DR2), but they make different predictions for future observations.
+Both interpretations are compatible with current data ($\sigma_X < 2.5\times 10^{-2}$ from DESI DR2), but they make different predictions for future observations.
 
 ---
 
@@ -69,7 +69,7 @@ I want to be clear about the precise scope of the protection offered by volume-p
 
 This protection applies specifically to **local, inhomogeneous fluctuations**. It does not constrain the **homogeneous background evolution** of dark energy. A dynamical dark energy component with a time-varying equation of state $w(z)$ (for example within the Chevallier–Polarski–Linder parametrization) remains compatible with the unimodular structure, provided that fluctuations around this homogeneous background are sufficiently suppressed.
 
-In other words, unimodular gravity offers a natural explanation for the observed smoothness of the vacuum ($\sigma_X < 1.5 \times 10^{-4}$) but does not, by itself, favour a cosmological constant over a dynamical dark energy model at the background level. Whether $w = -1$ exactly or $w(z)$ varies remains an independent issue that must be settled by cosmological observations (DESI, Euclid, and so on), not by the gauge structure of spacetime alone.
+In other words, unimodular gravity offers a natural explanation for the observed smoothness of the vacuum ($\sigma_X < 2.5\times 10^{-2}$) but does not, by itself, favour a cosmological constant over a dynamical dark energy model at the background level. Whether $w = -1$ exactly or $w(z)$ varies remains an independent issue that must be settled by cosmological observations (DESI, Euclid, and so on), not by the gauge structure of spacetime alone.
 
 ---
 
@@ -92,7 +92,7 @@ Current and near-future data can distinguish between the two interpretations:
 
 From the perspective of existing data and theoretical economy:
 
-- **Fundamental SDiff** is currently the more economical and consistent framework. It explains the observed smoothness of the vacuum ($\sigma_X < 1.5 \times 10^{-4}$) without additional assumptions.
+- **Fundamental SDiff** is currently the more economical and consistent framework. It explains the observed smoothness of the vacuum ($\sigma_X < 2.5\times 10^{-2}$) without additional assumptions.
 - **Emergent SDiff** remains an interesting possibility but needs further development within a quantum gravity framework.
 
 The reduction of the gauge group to volume-preserving diffeomorphisms is the only known structural mechanism that naturally protects the cosmological vacuum from local quantum fluctuations while remaining compatible with all current observations.

@@ -6,7 +6,7 @@
   "sigma_X_at_max": 1e-06,
   "sigma_X_95CL_upper_profile": 0.025063155506929828,
   "criterion": "95% CL: Delta logL >= -1.92 from profile max (1 dof)",
-  "paper_working_limit": 0.00015,
+  "sigma_X_95CL_upper_profile_claim": 0.025,
   "profile": [
     {
       "sigma_X": 1e-06,
@@ -299,6 +299,7 @@
   ],
   "notes": [
     "Uses official Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).",
+    "Former 1.5e-4 was a working target not equal to this 7-bin free-\u03b8 profile; corrected to 2.5e-2.",
     "Background fixed to alpha=1 (LCDM fiducial). Free {w0,wa} is a separate scan."
   ]
 }

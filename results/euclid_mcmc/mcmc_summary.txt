@@ -5,7 +5,7 @@ N_bins=24, z in [0.90,1.80]
 walkers=28, steps=1600, discard=500, thin=3
 Tier A: fixed (w0,wa)=truth. Tier B: free {w0,wa,theta,sigma_X}.
 Note: illustrative sigma_X ~ 0.01 under ~1% BAO errors;
-targets 1e-5..1.5e-4 require multi-survey power beyond this mock.
+targets 1e-5..2.5e-2 require multi-survey power beyond this mock.
 
 [null_F_E0_fixedBG] decision=borderline_or_weak
   truth={'w0': -1.0, 'wa': 0.0, 'theta': 0.5, 'sigma_X': 1e-06}

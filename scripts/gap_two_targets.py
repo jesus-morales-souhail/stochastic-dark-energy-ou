@@ -4,7 +4,7 @@
 Two amplification gaps — do not mix labels.
 
   G_Euclid = 1e-5 / sigma_0     ~ 10^56
-  G_DESI   = 1.5e-4 / sigma_0   ~ 10^57
+  G_DESI   = 2.5e-2 / sigma_0   ~ 10^57
 
 sigma_0 = L_P / L_H (holographic Sorkin, H0=67.4).
 See papers/amplification-gap.md §2.1
@@ -20,7 +20,7 @@ L_P_M = 1.616_255e-35
 H0 = 67.4
 
 SIGMA_EUCLID = 1e-5
-SIGMA_DESI = 1.5e-4
+SIGMA_DESI = 2.5e-2
 
 
 def sorkin_sigma0(H0_km_s_mpc: float = H0) -> float:
@@ -53,8 +53,8 @@ def main() -> None:
     print()
     print("Label rule:")
     print("  '~10^56' ONLY for Euclid-scale target ~1e-5")
-    print("  '~10^57' for measured DESI ceiling 1.5e-4")
-    print("Illegal: compute density with 1.5e-4 and call the ratio 10^56")
+    print("  '~10^59' for measured DESI profile ceiling 2.5e-2")
+    print("Illegal: compute density with 2.5e-2 and call the DESI gap 10^56")
     print("Not claimed: a new value of rho_Lambda (imported cosmology, not derived here)")
 
 

@@ -54,7 +54,7 @@ This layout is how I keep the claim set readable.
 
 | Path | Role |
 |------|------|
-| `papers/amplification-gap.md` | **amplification closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{57}$; amplifier audit |
+| `papers/amplification-gap.md` | **amplification closure:** $G_{\mathrm{Euclid}}\sim 10^{56}$, $G_{\mathrm{DESI}}\sim 10^{59}$; amplifier audit |
 | `papers/amplification-no-free-lunch.md` | Redirect stub → `amplification-gap.md` (old bookmarks) |
 | `papers/HONEST_HEADLINES.md` | Title discipline: do not claim vacuum energy was calculated |
 | `scripts/gap_two_targets.py` | Exact two-gap arithmetic |

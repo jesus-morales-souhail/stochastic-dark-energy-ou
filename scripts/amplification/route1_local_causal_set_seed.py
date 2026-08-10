@@ -13,7 +13,7 @@ can be much larger than 10^{-61} without inventing a linear gain factor.
 
 This script:
   - Scans N_eff and L/R_H for area (p=2), volume (p=3), 4-volume (p=4) counting
-  - Reports N_eff needed for sigma_0_eff in {1e-5, 1.5e-4, 1e-4}
+  - Reports N_eff needed for sigma_0_eff in {1e-5, 2.5e-2, 1e-4}
   - Does NOT claim the correct causal-set counting is known
 
 Run (uses all CPU cores for grid):
@@ -39,7 +39,7 @@ L_P_M = 1.616255e-35
 
 TARGETS = {
     "euclid_1e-5": 1.0e-5,
-    "desi_1p5e-4": 1.5e-4,
+    "desi_1p5e-4": 2.5e-2,
     "window_1e-4": 1.0e-4,
 }
 

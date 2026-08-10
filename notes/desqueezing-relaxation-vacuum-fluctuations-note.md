@@ -28,7 +28,7 @@ $$
 $$
 
 
-so that at the present epoch $\gamma\leftrightarrow\theta H_0$. Using **only** amplitudes and limits already fixed in the stochastic-dark-energy-ou corpus — in particular the Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ and the DESI bound $\sigma_X<1.5\times 10^{-4}$ (95% CL) — I show that pure Poisson vacuum noise remains unobservable at BAO precision. Euclid DR1 can probe **emergent** vacuum smoothness only if an effective kick amplitude $A_0\gtrsim 10^{-5}$ arises after amplification or from non-Sorkin sources. I discuss implications for volume-preserving diffeomorphisms (SDiff) as a fundamental versus emergent symmetry, and I state explicitly what the null result does and does not constrain.
+so that at the present epoch $\gamma\leftrightarrow\theta H_0$. Using **only** amplitudes and limits already fixed in the stochastic-dark-energy-ou corpus — in particular the Sorkin–Bekenstein seed $\sigma_0\sim 10^{-61}$ and the DESI bound $\sigma_X<2.5\times 10^{-2}$ (95% CL) — I show that pure Poisson vacuum noise remains unobservable at BAO precision. Euclid DR1 can probe **emergent** vacuum smoothness only if an effective kick amplitude $A_0\gtrsim 10^{-5}$ arises after amplification or from non-Sorkin sources. I discuss implications for volume-preserving diffeomorphisms (SDiff) as a fundamental versus emergent symmetry, and I state explicitly what the null result does and does not constrain.
 
 ---
 
@@ -40,7 +40,7 @@ Public DESI DR2 baryon acoustic oscillation (BAO) measurements, analysed within 
 
 
 $$
-\sigma_X < 1.5\times 10^{-4},
+\sigma_X < 2.5\times 10^{-2},
 $$
 
 
@@ -230,7 +230,7 @@ $$
 
 | Quantity | Value | Status |
 |----------|------:|--------|
-| $\sigma_X$ (95% CL) | $<1.5\times 10^{-4}$ | DESI DR2 working limit |
+| $\sigma_X$ (95% CL) | $<2.5\times 10^{-2}$ | DESI DR2 working limit |
 | MLE floor | $\theta\sim 10^{-3}$, $\sigma_X\sim 5\times 10^{-5}$ | numerical boundary |
 | Superseded script calibration | $\theta=1.2$, $\sigma_X\simeq 0.023$ | **not** preferred after free MLE |
 | Euclid target / window | $\sim 10^{-5}$; detection $0<\sigma_X\lesssim 10^{-4}$ | forecast / discrimination |
@@ -322,7 +322,7 @@ For every $\theta$ in Section 4, and for both $\Delta x=0.94$ (DESI) and $\Delta
 
 
 $$
-\sigma_{\rm res}\sim 10^{-61}\ll 10^{-5}\ll 1.5\times 10^{-4}.
+\sigma_{\rm res}\sim 10^{-61}\ll 10^{-5}\ll 2.5\times 10^{-2}.
 $$
 
 
@@ -330,7 +330,7 @@ $$
 
 ### 5.2 What DESI actually bounds
 
-The limit $\sigma_X<1.5\times 10^{-4}$ (95% CL) constrains the **effective late-time amplitude** — after any amplification, non-linear growth, or non-Sorkin noise — not the bare $\sigma_0$.
+The limit $\sigma_X<2.5\times 10^{-2}$ (95% CL) constrains the **effective late-time amplitude** — after any amplification, non-linear growth, or non-Sorkin noise — not the bare $\sigma_0$.
 
 ### 5.3 Amplification required for detectability
 
@@ -388,7 +388,7 @@ The open-system analogy **demonstrates** that finite relaxation is dynamically n
 |----------|--------------------|
 | Fundamental SDiff | Null at $\sigma_X\sim 10^{-5}$ and below |
 | Emergent + Sorkin only | Null (same as fundamental for practical purposes) |
-| Emergent + amplified / non-Sorkin $A_0\gtrsim 10^{-5}$ | Possible detection; compare to DESI limit $1.5\times 10^{-4}$ |
+| Emergent + amplified / non-Sorkin $A_0\gtrsim 10^{-5}$ | Possible detection; compare to DESI limit $2.5\times 10^{-2}$ |
 | Emergent + $\theta\sim\mathcal{O}(1)$ + moderate $A_0$ | Amplitude reduced along $\Delta x$; joint $\{\theta,\sigma_X\}$ fit becomes meaningful |
 
 ---
@@ -469,7 +469,7 @@ I thank the DESI collaboration for public BAO data products. Numerical simulatio
 
 
 $$
-H_0=67.4\ \mathrm{km s^{-1} Mpc^{-1}},\quad t_{H_0}\simeq 14.51\ \mathrm{Gyr},\quad \Omega_m=0.315,\quad \Delta x_{\rm DESI}=0.94,\quad N\sim 10^{122},\quad \sigma_0\sim 10^{-61},\quad \sigma_X^{\rm DESI}<1.5\times 10^{-4},\quad \sigma_X^{\rm Euclid\ target}\sim 10^{-5}.
+H_0=67.4\ \mathrm{km s^{-1} Mpc^{-1}},\quad t_{H_0}\simeq 14.51\ \mathrm{Gyr},\quad \Omega_m=0.315,\quad \Delta x_{\rm DESI}=0.94,\quad N\sim 10^{122},\quad \sigma_0\sim 10^{-61},\quad \sigma_X^{\rm DESI}<2.5\times 10^{-2},\quad \sigma_X^{\rm Euclid\ target}\sim 10^{-5}.
 $$
 
 

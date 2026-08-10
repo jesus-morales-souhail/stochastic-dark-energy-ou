@@ -38,7 +38,7 @@ Exploratory notes (not cosmology claims): [stochastic-de-exploratory-notes](http
 |:-------|:-------|
 | CPL background (BAO-only) | $w_0\approx -0.99$, $w_a\approx -0.02$ (near $\Lambda$CDM) |
 | OU / QNM residuals | amplitude driven to the floor when the background is free |
-| Working upper limit | $\sigma_X < 1.5\times 10^{-4}$ (95% CL) under the OU kernel I use |
+| Working upper limit | $\sigma_X < 2.5\times 10^{-2}$ (95% CL) under the OU kernel I use |
 | Tachyonic quantum fluid | coherent growing mode excluded ($\Delta\ln\mathcal{L}\approx -11.35$ vs $\Lambda$CDM) |
 
 Notes: `papers/stochastic-dark-energy-desi-dr2.md`, `papers/quantum-fluid-instabilities-desi-dr2.md`, `papers/resume.txt`.
@@ -49,7 +49,7 @@ Unimodular / SDiff projects out isotropic vacuum stress $T_{\mu\nu}\propto g_{\m
 
 ### Amplification gap
 
-A pure Sorkin seed $\sigma_0\sim 10^{-61}$ needs roughly $G\sim 10^{56}$ to hit Euclid-scale residuals $\sim 10^{-5}$, and $\sim 10^{57}$ to the DESI ceiling $1.5\times 10^{-4}$. Soft desqueezing gives $\mathcal{O}(10)$ at $r\sim 1.5$, not $10^{56}$. See `papers/amplification-gap.md` and `papers/HONEST_HEADLINES.md`.
+A pure Sorkin seed $\sigma_0\sim 10^{-61}$ needs roughly $G\sim 10^{56}$ to hit Euclid-scale residuals $\sim 10^{-5}$, and $\sim 10^{59}$ to the DESI ceiling $2.5\times 10^{-2}$. Soft desqueezing gives $\mathcal{O}(10)$ at $r\sim 1.5$, not $10^{56}$. See `papers/amplification-gap.md` and `papers/HONEST_HEADLINES.md`.
 
 ### Slip (Option 0)
 

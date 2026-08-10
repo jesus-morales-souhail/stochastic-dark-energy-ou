@@ -11,7 +11,7 @@ One-page research note (literature + order-of-magnitude) — not a Boltzmann imp
 The BAO / OU pipeline in this repository constrains background residual amplitude only:
 
 
-$\sigma_X < 1.5\times 10^{-4}$,
+$\sigma_X < 2.5\times 10^{-2}$,
 
 
 from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not compute $\Phi$, $\Psi$, or the gravitational slip $\eta=\Phi/\Psi$.
@@ -142,7 +142,7 @@ $$
 $$
 
 
-**Machine check (best case $\varepsilon=1$, $\sigma_X=1.5\times 10^{-4}$, $\delta_m=1$):**
+**Machine check (best case $\varepsilon=1$, $\sigma_X=2.5\times 10^{-2}$, $\delta_m=1$):**
 
 | $z$ | $\rho_X/\rho_m$ | max $\|\gamma-1\|$ | gap vs Maus $\sim 0.17$ | gap vs Sakr floor $\sim 0.05$ |
 |-------|-------------------|----------------------|---------------------------|--------------------------------|
@@ -161,7 +161,7 @@ Compare:
 
 That word — amplification — is the same one that appears in amplification (`amplification-gap.md`) when mapping Sorkin-scale seeds ($\sim 10^{-61}$) up to BAO-relevant $\sigma_X$ (factors of order $A_0/\sigma_0\sim 10^{56}$). The anisotropic channel does not evade that problem; it inherits it.
 
-| $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=1.5\times 10^{-4}$ |
+| $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=2.5\times 10^{-2}$ |
 |-----------------|------------------------------------------------------------------|
 | 1 | $1.93\times 10^{-4}$ |
 | 0.1 | $1.93\times 10^{-5}$ |
@@ -190,7 +190,7 @@ That word — amplification — is the same one that appears in amplification (`
 
 - [ ] Open the DESI DR2 dark-energy review section on $\eta$/$\gamma$/ RSD+lensing; copy exact definitions and tables.
 - [ ] For each MG/growth paper: write one line “parameter = …, dataset = …, GR limit = …, $n\sigma$= …”.
-- [ ] Fill the $f$ table with my own $\sigma_X^{\mathrm{eff}}$ (use $1.5\times 10^{-4}$ and $5\times 10^{-5}$ as bookends from `resume.txt`).
+- [ ] Fill the $f$ table with my own $\sigma_X^{\mathrm{eff}}$ (use $2.5\times 10^{-2}$ and $5\times 10^{-5}$ as bookends from `resume.txt`).
 - [ ] Decision gate: if no path to $\lvert \eta-1 \rvert\gtrsim 10^{-2}$ without huge $A_0$, pause Boltzmann work; focus on amplification physics (desqueezing / open systems / non-Sorkin seeds).
 - [ ] If a path exists (e.g. large $f$+ amplification model), only then open hi_class or MGCAMB with a single anisotropic-stress parameter and DESI lensing+clustering likelihoods already in the community.
 

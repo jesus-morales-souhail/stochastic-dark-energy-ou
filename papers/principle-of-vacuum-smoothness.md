@@ -16,7 +16,7 @@ Any physical mechanism that could generate fluctuations in the dark energy densi
 
 
 $$
-\sigma_X < 1.5 \times 10^{-4}
+\sigma_X < 2.5\times 10^{-2}
 $$
 
 
