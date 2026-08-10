@@ -3,9 +3,6 @@
 **Author:** Jesús Morales Souhail
 **Date:** July 2026
 **Status:** amplification gap — theory bottleneck, not a detection claim.
-**Filename:** `papers/amplification-gap.md`
-**Former name:** `papers/amplification-no-free-lunch.md` ([redirect stub](amplification-no-free-lunch.md))
-
 **Related:**
 `papers/fundamental-vs-emergent-vacuum-relaxation.md`,
 `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,

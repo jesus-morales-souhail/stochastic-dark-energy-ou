@@ -284,8 +284,8 @@ Method-hygiene digressions, optical analogies, and other non-cosmological scale�
 
 Theory (if the null is not the end of the story)—minimal model as simple as $\Lambda$, residual scale uniqueness—lives here:
 
-**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**
-Start: `START_HERE.md`, `papers/r1_kernel/NOTE_uniqueness_residual_grain.md`, `papers/core/VERIFIED_RESULTS.md` (`pytest -q`).
+**https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum**  
+Start with the README there, then `papers/r1_kernel/NOTE_uniqueness_residual_grain.md` and `papers/core/VERIFIED_RESULTS.md` (`pytest -q`).
 
 That theory repo does not alter the empirical claims of this preprint; it uses them only as a posteriori tests.
 

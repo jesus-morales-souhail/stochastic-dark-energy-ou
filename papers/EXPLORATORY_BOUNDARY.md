@@ -4,25 +4,13 @@ Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://github.com/
 
 **Do not cite exploratory optics notes as DESI results.**
 
-This repository is the **empirical** claim set only: public DESI DR2 BAO residuals, model exclusions, amplification gap, and related data packs.
+This repository is the empirical claim set: public DESI DR2 BAO residuals, model exclusions, the amplification gap, and related data packs.
 
-Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superoscillation, Maxwell device, self-shielding language, topological edge analogy) live in a **separate** repository. They are not duplicated under `papers/` here.
+Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superoscillation, Maxwell device, self-shielding language, topological edge analogy) live in a **separate** repository. They are not under `papers/` here.
 
-| This repository (publishable claim set) | Exploratory only (other repo) |
-|----------------------------------------|-------------------------------|
-| `manuscript/PREPRINT.md` | car–drone pupil Newton/Einstein |
-| BAO OU/QNM residual bounds | tesseract \(B_4\), superoscillation demos |
-| Tachyonic coherent-growth exclusion | Maxwell → device lab notes |
-| Amplification gap + routes | Wavefront \(T\) analogies |
-| Slip / Option 0 data pack | Self-shielding optics barriers |
-| Euclid protocol notes | Pattern / undeclared-power essays |
-| Honest headlines + claim checklist | Scale–operator pedagogy maps |
-
-I keep residual DESI, baryon density \(\omega_b\), and VLBI / black-hole imaging as separate problems. Short note: [`scope-and-mixups.md`](scope-and-mixups.md).
-
-**Exploratory repository (canonical home for fantasy / method notes):**
-
+Exploratory home:  
 https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
-Claim checklist for *this* repo: [`manuscript/CLAIMS.md`](../manuscript/CLAIMS.md).
+I also keep residual DESI, baryon density \(\omega_b\), and VLBI / black-hole imaging as separate problems — see [`scope-and-mixups.md`](scope-and-mixups.md).
 
+Claim checklist: [`manuscript/CLAIMS.md`](../manuscript/CLAIMS.md).
