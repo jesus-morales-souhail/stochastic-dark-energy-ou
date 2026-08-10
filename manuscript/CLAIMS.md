@@ -36,6 +36,8 @@ This is what I stand behind, and what I do not.
 | **N7** | This is independent work |
 | **N8** | I do not claim a bound on $\sum m_\nu$; neutrino mass is not in the likelihood. See [`papers/neutrino-de-degeneracy-and-sigma-x.md`](../papers/neutrino-de-degeneracy-and-sigma-x.md) |
 | **N9** | Synthetic Euclid MCMC folders (`results/euclid_mcmc/`, `results/euclid_joint_mcmc/`) are **retired**; not data claims |
+| **N10** | I do not identify the residual ceiling \(\sigma_X<2.5\times 10^{-2}\) with the baryon density \(\omega_b\approx 0.022\); different quantities |
+| **N11** | VLBI / EHT / photon sphere (\(1.5\,R_s\)) are **outside** the residual claim set; no map to \(\ell_\ast\) or \(\sigma_X\). Hygiene: [`papers/operator-scale-separation.md`](../papers/operator-scale-separation.md) |
 
 ---
 
