@@ -558,7 +558,9 @@ This derivation is not used in the main analysis but is provided as a roadmap fo
 Starting from the perturbed Hubble parameter:
 
 
+$$
 H^2(z) = H_0^2 \left[ \Omega_m (1+z)^3 + \Omega_\Lambda + X(z) \right],
+$$
 
 
 one obtains, to first order in $X$:

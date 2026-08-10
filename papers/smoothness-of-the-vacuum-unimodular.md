@@ -41,7 +41,8 @@ $$
 I also exclude a specific class of models — those based on a tachyonic quantum fluid with negative effective mass — with high significance [2]:
 
 
-$$\Delta\chi^2 \approx +25,
+$$
+\Delta\chi^2 \approx +25
 $$
 so the data reject a coherent growing-mode scenario entirely.
 
@@ -54,18 +55,22 @@ I do not read these results as a mere “non-discovery.” They are a structural
 I define the fractional fluctuation of the dark-energy density as:
 
 
+$$
 X(x) \equiv \frac{\delta\rho_\Lambda(x)}{\bar{\rho}_\Lambda},
+$$
 
 
 with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
 
 
+$$
 \sigma_X < 2.5\times 10^{-2}
+$$
 
 
 **(95% CL).**
 
-This is a direct empirical statement: the dark-energy density is homogeneous to better than one part in ten thousand across the observable universe.
+This is a direct empirical statement: the dark-energy density is homogeneous at the level of the residual bound (profile 95% CL $\sigma_X<2.5\times 10^{-2}$; null preferred) across the observable universe.
 
 ---
 
@@ -78,13 +83,17 @@ Under the classical theory of fields and Einstein’s equations, only two struct
 If dark energy is a pure cosmological constant, its energy-momentum tensor is
 
 
+$$
 T_{\mu\nu} = -\Lambda g_{\mu\nu}.
+$$
 
 
 By the Bianchi identity, $\nabla_\mu T^{\mu\nu} = 0$ implies $\partial_\mu \Lambda = 0$. There are no local degrees of freedom. Consequently,
 
 
+$$
 \sigma_X = 0 \quad \text{exactly}.
+$$
 
 
 ### 3.2 A dynamical field frozen by Hubble friction
@@ -92,19 +101,25 @@ By the Bianchi identity, $\nabla_\mu T^{\mu\nu} = 0$ implies $\partial_\mu \Lamb
 If dark energy is a scalar field $\phi$ with energy density
 
 
+$$
 \rho_\phi = \frac{1}{2}\dot{\phi}^2 + V(\phi),
+$$
 
 
 then small fluctuations $\delta\phi$ obey the wave equation in an expanding universe:
 
 
+$$
 \delta\ddot{\phi} + 3H \delta\dot{\phi} + \left(\frac{k^2}{a^2} + m_\phi^2\right)\delta\phi = 0.
+$$
 
 
 If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3H \delta\dot{\phi}$ forces the mode into the “frozen” regime and effectively erases inhomogeneities. The limits I derived in [1] give:
 
 
+$$
 m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left| \frac{V'}{V}\right| M_{\mathrm{Pl}} \lesssim 10^{-2}.
+$$
 
 
 In this regime the field is observationally indistinguishable from a cosmological constant. Both alternatives lead to the same phenomenological outcome: $\sigma_X$ is zero or below detection.
@@ -122,7 +137,9 @@ Weyl invariance requires the action to be invariant under local rescalings of th
 **Problem:** At the quantum level, Weyl invariance is broken by the conformal anomaly:
 
 
+$$
 \langle T^{\mu}{}_{\mu} \rangle_{\mathrm{anomaly}} \propto R^2 + C_{\mu\nu\rho\sigma} C^{\mu\nu\rho\sigma}.
+$$
 
 
 Since the local curvature $R(x)$ varies in space and time because of structure formation, the anomaly reintroduces local vacuum fluctuations. Weyl invariance therefore cannot guarantee $\sigma_X = 0$ in a universe with matter.
@@ -132,25 +149,33 @@ Since the local curvature $R(x)$ varies in space and time because of structure f
 In unimodular gravity the gauge group is reduced from the full diffeomorphism group $\mathrm{Diff}(M)$ to the subgroup that preserves the four-volume element:
 
 
+$$
 \sqrt{-g} = \text{constant}.
+$$
 
 
 The resulting field equation is the trace-free part of Einstein’s equation:
 
 
+$$
 R_{\mu\nu} - \frac{1}{4} R g_{\mu\nu} = 8\pi G \left(T_{\mu\nu} - \frac{1}{4} T^{\lambda}{}_{\lambda} g_{\mu\nu}\right).
+$$
 
 
 Any local vacuum fluctuation of matter has the form
 
 
+$$
 T_{\mu\nu}^{\mathrm{vac}}(x) = V(x) g_{\mu\nu}.
+$$
 
 
 Substituting into the trace-free equation:
 
 
+$$
 V(x) g_{\mu\nu} - \frac{1}{4}(4V(x)) g_{\mu\nu} = 0 \quad \text{identically}.
+$$
 
 
 **Conclusion:** In unimodular gravity the trace-free projection cancels any local vacuum fluctuation, regardless of its magnitude or inhomogeneity. This is a purely algebraic cancellation, independent of the details of the quantum fields.
@@ -167,7 +192,9 @@ V(x) g_{\mu\nu} - \frac{1}{4}(4V(x)) g_{\mu\nu} = 0 \quad \text{identically}.
 The mathematical structure of unimodular gravity is the only known symmetry that can absolutely shield the cosmic volume element from local quantum noise. The cosmological constant $\Lambda$ emerges as an integration constant from the conservation law:
 
 
+$$
 \nabla_\mu \left(R + 8\pi G T^{\lambda}{}_{\lambda}\right) = 0 \quad \Longrightarrow \quad R + 8\pi G T^{\lambda}{}_{\lambda} = 4\Lambda = \text{global constant}.
+$$
 
 
 Thus $\Lambda$ is a single number for the entire universe. It has no local dynamics, no propagating degrees of freedom, and no fluctuations: $\sigma_X = 0$ exactly.

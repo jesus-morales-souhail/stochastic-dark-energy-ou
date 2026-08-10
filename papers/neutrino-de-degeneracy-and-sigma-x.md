@@ -23,7 +23,8 @@ Lab oscillations put a floor near $\sum m_\nu \gtrsim 0.059\,\mathrm{eV}$ for no
 
 My joint on public DESI DR2 BAO (`joint_w0wa_sigma_desi.py`) varies
 
-$$\{w_0,\,w_a,\,\theta,\,\sigma_X\}
+$$
+\{w_0,\,w_a,\,\theta,\,\sigma_X\}
 $$
 
 with an OU residual kernel on $\alpha_{\mathrm{obs}}-\alpha_{\mathrm{pred}}(w_0,w_a)$. It does **not** vary $\sum m_\nu$. The MLE I already have is $ (w_0,w_a)\approx(-0.99,-0.016)$ and $\sigma_X\to 0$.

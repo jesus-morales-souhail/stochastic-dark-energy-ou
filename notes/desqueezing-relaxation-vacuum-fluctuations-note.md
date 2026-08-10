@@ -289,7 +289,9 @@ For a half-life equal to the $\Lambda$CDM age $ t_0\simeq 13.8 \mathrm{Gyr}$ at 
 The MLE floor implies **essentially no damping** across the DESI path,
 
 
+$$
 e^{-10^{-3}\times 0.94}\simeq 0.999.
+$$
 
 
 Hubble-scale restoration of smoothness requires $\theta\sim\mathcal{O}(1)$.
