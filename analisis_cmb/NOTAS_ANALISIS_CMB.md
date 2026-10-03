@@ -285,3 +285,15 @@ Fuente: `resultados/takahashi/malla/{malla.json, malla.md}`. 0 fallos en los 20 
   dominado por el término cruzado con los residuos de Planck (∝ σ_X); la contribución propia del modelo
   (cuadrática, ∝ σ_X²) es 1–2 órdenes de magnitud menor.
 - Resumen final: `RESULTADO.md`.
+
+## Oscilador determinista (`oscilador/`, 2026-10-03, sin commit)
+
+- X(ln a) = A sin(2π ln a / P + φ), 60 curvas; mismo pipeline; derivada analítica, sin Δ.
+- BAO: **las funciones de distancia del repo no se pueden reutilizar sin modificarlas** (sólo CPL, H0 y Ω_m
+  fijos, sin r_d). Se reutiliza el cargador `load_gaussian_bao_vector` (13 D/r_d, cov 13×13) y las
+  distancias salen de CAMB. El cargador reescribe `results/desi_cov/desi_gaussian_bao_ALL_GCcomb_cov.txt`
+  con contenido idéntico (git limpio).
+- ΛCDM con parámetros Planck: χ²_BAO = 29.84 (13 puntos). "Permitida" = Δχ²_BAO < 4 frente a esa ΛCDM.
+- Resultado (`oscilador/resultados/tabla.md`): 0 fallos; 58/60 permitidas (fuera: A=0.025, P=1, φ=0,
+  Δχ²_BAO = 4.23; A=0.025, P=2, φ=3π/2, 5.67); 0/60 distinguibles en CMB (máx Δχ²_TT = 0.070,
+  máx Δχ²_φφ = 0.631).
