@@ -29,3 +29,7 @@ results/euclid_mcmc/*.npz
 results/euclid_mcmc/*.npy
 results/euclid_joint_mcmc/*.npz
 plots/
+
+# analisis_cmb (datos descargables y entorno)
+analisis_cmb/datos_planck/
+analisis_cmb/venv/
