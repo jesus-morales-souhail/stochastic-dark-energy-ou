@@ -1,0 +1,6 @@
+[takahashi] sigma=2.506e-02 theta0.001_Delta0.05: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.362
+[takahashi] sigma=2.506e-02 theta0.001_Delta0.10: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.361
+[takahashi] sigma=2.506e-02 theta1_Delta0.05: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.357
+[takahashi] sigma=2.506e-02 theta1_Delta0.10: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.357
+[takahashi] sigma=2.506e-02 theta20_Delta0.05: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.357
+[takahashi] sigma=2.506e-02 theta20_Delta0.10: rho<=0=0 fallos TT=0 pp=0 H0=0 H0 p50=67.380

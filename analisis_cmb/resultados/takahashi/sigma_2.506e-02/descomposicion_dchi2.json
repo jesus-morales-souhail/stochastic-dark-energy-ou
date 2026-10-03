@@ -1,0 +1,23 @@
+{
+  "source": "resultados/takahashi/sigma_2.506e-02/observables_theta1_Delta0.05.npz",
+  "obs": {
+    "TT": {
+      "p95_linear": 0.06323959007408914,
+      "p95_quadratic": 0.0006267108061058579,
+      "p50_linear": -0.002408040495053558,
+      "p50_quadratic": 8.057772699644946e-05,
+      "p95_dchi2": 0.06363933637008859,
+      "max_abs_remainder": 7.52447149726665e-15,
+      "fraction_bins_side_flip": 0.0
+    },
+    "pp": {
+      "p95_linear": 0.05020673070867455,
+      "p95_quadratic": 0.0073738055094286995,
+      "p50_linear": -0.0029238249842787455,
+      "p50_quadratic": 0.0010090869497836358,
+      "p95_dchi2": 0.05136515655909693,
+      "max_abs_remainder": 2.618131406117996e-15,
+      "fraction_bins_side_flip": 0.0
+    }
+  }
+}

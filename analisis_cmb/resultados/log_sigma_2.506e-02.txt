@@ -1,0 +1,6 @@
+sigma=2.506e-02 theta0.001_Delta0.05: rho<=0=0 camb_fail=0 TT:p95=0.0105 pp:p95=0.0015 thetastar:p95=0.266
+sigma=2.506e-02 theta0.001_Delta0.10: rho<=0=0 camb_fail=0 TT:p95=0.0101 pp:p95=0.0015 thetastar:p95=0.245
+sigma=2.506e-02 theta1_Delta0.05: rho<=0=0 camb_fail=1 TT:p95=0.277 pp:p95=0.109 thetastar:p95=70.5
+sigma=2.506e-02 theta1_Delta0.10: rho<=0=0 camb_fail=0 TT:p95=0.252 pp:p95=0.0925 thetastar:p95=66.8
+sigma=2.506e-02 theta20_Delta0.05: rho<=0=0 camb_fail=46 TT:p95=0.208 pp:p95=0.169 thetastar:p95=66.7
+sigma=2.506e-02 theta20_Delta0.10: rho<=0=0 camb_fail=0 TT:p95=0.193 pp:p95=0.0497 thetastar:p95=34.5

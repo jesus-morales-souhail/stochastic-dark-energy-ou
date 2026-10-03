@@ -1,0 +1,58 @@
+{
+  "theta": 1.0,
+  "sigma_X": 0.025063155506929828,
+  "seed": 20261003,
+  "pad_lna": 0.4,
+  "sigma_X_source": "results/profile_sigma_x/profile_sigma_x.json",
+  "Omega_L0": 0.6847269693665721,
+  "ar1_vs_cholesky_max_rel": 2.4778643863418763e-14,
+  "planck_files": {
+    "TT": "COM_PowerSpect_CMB-TT-full_R3.01.txt",
+    "pp": "smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8_bandpowers.dat (planck_2018_lensing.native, conservative L=8-400)",
+    "thetastar": "Planck 2018 VI Table 2 (TT,TE,EE+lowE+lensing): 100theta_* = 1.04110 +- 0.00031"
+  },
+  "tt_error_convention": "min(-dDl, +dDl) per l (grid difference has no sign)",
+  "convergence_500_vs_2000": {
+    "0.05": {
+      "TT_max_diff_over_planck_err": 0.00026675751921396946,
+      "TT_l_at_max": 6,
+      "pp_max_diff_over_planck_err": 0.0005017872550611244,
+      "pp_bin_at_max": 2,
+      "thetastar_diff_over_planck_err": 0.01375831791935205,
+      "Xs_at_a1_500_vs_2000": [
+        0.004248533714363897,
+        0.004205363521874604
+      ],
+      "pass_all_lt_1pct": false
+    },
+    "0.1": {
+      "TT_max_diff_over_planck_err": 0.000740079923982978,
+      "TT_l_at_max": 2,
+      "pp_max_diff_over_planck_err": 0.000999499996117492,
+      "pp_bin_at_max": 3,
+      "thetastar_diff_over_planck_err": 0.05479907772070765,
+      "Xs_at_a1_500_vs_2000": [
+        0.005746835724340802,
+        0.005567353168810901
+      ],
+      "pass_all_lt_1pct": false
+    }
+  },
+  "rho_camb_vs_ours_max_rel": {
+    "0.05_500": 0.00022099344234360885,
+    "0.05_2000": 1.3826002187355968e-05,
+    "0.1_500": 4.981591223196524e-05,
+    "0.1_2000": 3.009564697453726e-06
+  },
+  "thetastar100_by_case": {
+    "0.05_500": 1.0401995060162776,
+    "0.05_2000": 1.0402037710948326,
+    "0.1_500": 1.040027248837196,
+    "0.1_2000": 1.0400442365512894
+  },
+  "thetastar100_Delta0.1_minus_Delta0.05_over_err_N2000": -0.5146275598168618,
+  "lcdm": {
+    "thetastar100": 1.041198155180563,
+    "cosmomc_theta100": 1.0409821708267732
+  }
+}

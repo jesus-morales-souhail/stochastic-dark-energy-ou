@@ -1,0 +1,3 @@
+Delta chi2 split, theta1_Delta0.05, sigma_X=2.506e-2 (source resultados/takahashi/sigma_2.506e-02/observables_theta1_Delta0.05.npz)
+TT: p95 linear=0.06324 p95 quadratic=0.0006267 p95 dchi2=0.06364 | p50 linear=-0.00241 p50 quad=8.06e-05 | max|remainder|=7.5e-15 side flips=0.000
+pp: p95 linear=0.05021 p95 quadratic=0.007374 p95 dchi2=0.05137 | p50 linear=-0.00292 p50 quad=0.00101 | max|remainder|=2.6e-15 side flips=0.000

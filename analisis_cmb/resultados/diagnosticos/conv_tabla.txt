@@ -1,0 +1,2 @@
+D=0.05 tabla N=2000 vs N=7997 (camino h_tab/64) (10 semillas, max): TT 1.54e-05 pp 1.06e-04 th* 1.11e-03 (mediana th* 5.6e-04)
+D=0.1 tabla N=2000 vs N=7997 (camino h_tab/64) (10 semillas, max): TT 9.25e-06 pp 1.37e-05 th* 5.91e-04 (mediana th* 2.1e-04)

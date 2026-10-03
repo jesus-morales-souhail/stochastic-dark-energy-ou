@@ -1,0 +1,464 @@
+{
+  "sigma_X": 0.025063155506929828,
+  "n_real": 200,
+  "seed": 20261003,
+  "Omega_L0": 0.6847269693665721,
+  "n_tab": 2000,
+  "k_path": 16,
+  "pad_lna": 0.4,
+  "references_wa_w0": {
+    "LCDM": [
+      -1.0,
+      0.0
+    ],
+    "CPL_repo": [
+      -0.9898956968059271,
+      -0.015902984131323503
+    ],
+    "CPL_joint": [
+      -1.0016540106177185,
+      0.0172470528926633
+    ],
+    "DESI_DR2_CMB": [
+      -0.42,
+      -1.75
+    ]
+  },
+  "cases": {
+    "theta0.001_Delta0.05": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 0,
+      "camb_fail_messages": {},
+      "w_range_all": [
+        -1.0050078906334783,
+        -0.9939227873227096
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": -0.000462741425179658,
+          "dchi2_p95": 0.010493040137680154,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.002098322715838743,
+          "dchi2_vs_CPL_repo_p95": -0.04951324668243906,
+          "dchi2_vs_CPL_joint_p95": -0.02328298175415533,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": -0.00019789401440029053,
+          "dchi2_p95": 0.0015016325666377555,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.003782230821832056,
+          "dchi2_vs_CPL_repo_p95": -0.0077258665375931745,
+          "dchi2_vs_CPL_joint_p95": -0.014790926832825858,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": -0.013060831935537282,
+          "dchi2_p95": 0.2661577666275792,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.18647689966586325,
+          "dchi2_vs_CPL_repo_p95": -3.5414332975614538,
+          "dchi2_vs_CPL_joint_p95": -1.047231057010685,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.041195912561406,
+          "p16": 1.0411403473416665,
+          "p84": 1.041254015413083
+        }
+      }
+    },
+    "theta0.001_Delta0.10": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 0,
+      "camb_fail_messages": {},
+      "w_range_all": [
+        -1.0035022048083895,
+        -0.9962350503986898
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": -0.0005857923706127366,
+          "dchi2_p95": 0.010142324339975417,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.0020177286654970567,
+          "dchi2_vs_CPL_repo_p95": -0.0498639624801438,
+          "dchi2_vs_CPL_joint_p95": -0.023633697551860067,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": -0.00019723903259638575,
+          "dchi2_p95": 0.0014987044548885988,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.0034153135198097513,
+          "dchi2_vs_CPL_repo_p95": -0.0077287946493423305,
+          "dchi2_vs_CPL_joint_p95": -0.014793854944575014,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": -0.005807173161290945,
+          "dchi2_p95": 0.24463881528270665,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.1709021144810193,
+          "dchi2_vs_CPL_repo_p95": -3.5629522489063263,
+          "dchi2_vs_CPL_joint_p95": -1.0687500083555574,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.0411959005653295,
+          "p16": 1.0411451755250738,
+          "p84": 1.0412496239494209
+        }
+      }
+    },
+    "theta1_Delta0.05": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 1,
+      "camb_fail_messages": {
+        "175": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out"
+      },
+      "w_range_all": [
+        -1.1506575436494182,
+        -0.8127030877391371
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": 0.004837580013845155,
+          "dchi2_p95": 0.2766086301757181,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.05627943481779285,
+          "dchi2_vs_CPL_repo_p95": 0.21660234335559883,
+          "dchi2_vs_CPL_joint_p95": 0.24283260828388256,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": 0.01043452107620979,
+          "dchi2_p95": 0.1092064775851866,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.07819573983212176,
+          "dchi2_vs_CPL_repo_p95": 0.09997897848095567,
+          "dchi2_vs_CPL_joint_p95": 0.09291391818572299,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": 8.733336740080095,
+          "dchi2_p95": 70.51238249641851,
+          "frac_dchi2_gt_4": 0.628140703517588,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 4.675754062905528,
+          "dchi2_vs_CPL_repo_p95": 66.70479143222948,
+          "dchi2_vs_CPL_joint_p95": 69.19899367278025,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.0411325295242237,
+          "p16": 1.0397486714210622,
+          "p84": 1.042470711257297
+        }
+      }
+    },
+    "theta1_Delta0.10": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 0,
+      "camb_fail_messages": {},
+      "w_range_all": [
+        -1.1005397513486972,
+        -0.8904458283399985
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": 0.004536103772208477,
+          "dchi2_p95": 0.25163236339077205,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.05066647022779024,
+          "dchi2_vs_CPL_repo_p95": 0.19162607657065286,
+          "dchi2_vs_CPL_joint_p95": 0.2178563414989366,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": 0.0076663855085765675,
+          "dchi2_p95": 0.09253356037428975,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.07109441017249385,
+          "dchi2_vs_CPL_repo_p95": 0.08330606127005882,
+          "dchi2_vs_CPL_joint_p95": 0.07624100097482614,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": 6.610321733186051,
+          "dchi2_p95": 66.77977765557404,
+          "frac_dchi2_gt_4": 0.605,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 4.237298232353275,
+          "dchi2_vs_CPL_repo_p95": 62.97218659138501,
+          "dchi2_vs_CPL_joint_p95": 65.46638883193577,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.0411303242132104,
+          "p16": 1.0398845927285334,
+          "p84": 1.0423514414569903
+        }
+      }
+    },
+    "theta20_Delta0.05": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 46,
+      "camb_fail_messages": {
+        "3": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "7": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "8": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "25": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "30": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "31": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "38": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "43": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "44": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "54": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "56": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "60": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "63": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "68": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "71": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "73": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "75": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "81": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "84": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "85": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "87": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "91": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "92": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "95": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "96": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "106": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "109": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "110": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "117": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "123": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "124": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "131": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "132": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "133": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "135": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "138": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "146": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "152": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "156": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "168": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "172": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "175": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "176": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "178": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "179": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out",
+        "187": "CAMBError: Error in Fortran called from calc_transfer: HMCode INTEGRATE, Integration timed out"
+      },
+      "w_range_all": [
+        -1.3982463362693236,
+        -0.5678122634507037
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": -0.044515767760618274,
+          "dchi2_p95": 0.20835884347558176,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.07104641760147246,
+          "dchi2_vs_CPL_repo_p95": NaN,
+          "dchi2_vs_CPL_joint_p95": NaN,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": 0.012007961103853049,
+          "dchi2_p95": 0.16919745120005353,
+          "frac_dchi2_gt_4": 0.006711409395973154,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.08283997982418509,
+          "dchi2_vs_CPL_repo_p95": NaN,
+          "dchi2_vs_CPL_joint_p95": NaN,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": 9.21871954946089,
+          "dchi2_p95": 66.74911399796599,
+          "frac_dchi2_gt_4": 0.6688311688311688,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 5.230706807048169,
+          "dchi2_vs_CPL_repo_p95": 62.941522933776966,
+          "dchi2_vs_CPL_joint_p95": 65.43572517432773,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.040879265649207,
+          "p16": 1.039576636070378,
+          "p84": 1.0421629251210616
+        }
+      }
+    },
+    "theta20_Delta0.10": {
+      "n_bad_rho_le_0": 0,
+      "rho_bad_indices": [],
+      "n_camb_fail": 0,
+      "camb_fail_messages": {},
+      "w_range_all": [
+        -1.1649525723207217,
+        -0.8373634413130779
+      ],
+      "obs": {
+        "TT": {
+          "dchi2_p50": 0.0015769996407044573,
+          "dchi2_p95": 0.19262924922866909,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.037971944702773715,
+          "dchi2_vs_CPL_repo_p95": NaN,
+          "dchi2_vs_CPL_joint_p95": NaN,
+          "chi2_refs": {
+            "LCDM": 20.28344383108788,
+            "CPL_repo": 20.343450117908,
+            "CPL_joint": 20.317219852979715,
+            "DESI_DR2_CMB": 21.650375608587833
+          }
+        },
+        "pp": {
+          "dchi2_p50": 0.004352433887653717,
+          "dchi2_p95": 0.0496639303574236,
+          "frac_dchi2_gt_4": 0.0,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 0.04854726844490329,
+          "dchi2_vs_CPL_repo_p95": NaN,
+          "dchi2_vs_CPL_joint_p95": NaN,
+          "chi2_refs": {
+            "LCDM": 8.279593082249013,
+            "CPL_repo": 8.288820581353244,
+            "CPL_joint": 8.295885641648477,
+            "DESI_DR2_CMB": 8.022948934357872
+          }
+        },
+        "thetastar": {
+          "dchi2_p50": 4.786641035995757,
+          "dchi2_p95": 34.502960894058255,
+          "frac_dchi2_gt_4": 0.53,
+          "band68_gap_vs_LCDM_sigma": 0.0,
+          "band68_edge_vs_LCDM_sigma": 3.5205676085725557,
+          "dchi2_vs_CPL_repo_p95": 30.695369829869225,
+          "dchi2_vs_CPL_joint_p95": 33.18957207041999,
+          "chi2_refs": {
+            "LCDM": 0.10025431291732231,
+            "CPL_repo": 3.907845377106355,
+            "CPL_joint": 1.4136431365555864,
+            "DESI_DR2_CMB": 1441.5668088104712
+          },
+          "mean": 1.0412526998631926,
+          "p16": 1.0403353665575361,
+          "p84": 1.0422895311392204
+        }
+      }
+    }
+  },
+  "reference_observables": {
+    "LCDM": {
+      "thetastar100": 1.041198155180563,
+      "dchi2_TT_vs_LCDM": 0.0,
+      "dchi2_pp_vs_LCDM": 0.0,
+      "dchi2_thetastar_vs_LCDM": 0.0
+    },
+    "CPL_repo": {
+      "thetastar100": 1.0417128164005147,
+      "dchi2_TT_vs_LCDM": 0.060006286820119215,
+      "dchi2_pp_vs_LCDM": 0.00922749910423093,
+      "dchi2_thetastar_vs_LCDM": 3.8075910641890327
+    },
+    "CPL_joint": {
+      "thetastar100": 1.0414685798494532,
+      "dchi2_TT_vs_LCDM": 0.033776021891835484,
+      "dchi2_pp_vs_LCDM": 0.016292559399463613,
+      "dchi2_thetastar_vs_LCDM": 1.313388823638264
+    },
+    "DESI_DR2_CMB": {
+      "thetastar100": 1.0528700709567396,
+      "dchi2_TT_vs_LCDM": 1.3669317774999534,
+      "dchi2_pp_vs_LCDM": -0.25664414789114076,
+      "dchi2_thetastar_vs_LCDM": 1441.466554497554
+    }
+  }
+}

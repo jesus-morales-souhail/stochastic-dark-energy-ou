@@ -1,0 +1,11 @@
+obs theta n_valid(D0.05) n_valid(D0.10) max|dp16|/sigma max|dp84|/sigma
+TT 0.001 200 200 0.000 0.000
+pp 0.001 200 200 0.000 0.000
+thetastar 0.001 200 200 0.016 0.014
+TT 1 199 200 0.002 0.001
+pp 1 199 200 0.003 0.007
+thetastar 1 199 200 0.438 0.385
+TT 20 149 199 0.013 0.003
+pp 20 149 199 0.009 0.044
+thetastar 20 154 200 2.448 0.408
+TT sigma = mean of asymmetric errors

@@ -1,0 +1,5 @@
+Realizacion unica theta=1.0 sigma_X=2.5063e-02 seed=20261003 pad=0.4
+AR(1) vs Cholesky max rel diff: 2.48e-14
+Delta=0.05: TT 2.668e-04 (l=6), pp 5.018e-04 (bin 2), theta* 1.376e-02  -> pass=False
+Delta=0.1: TT 7.401e-04 (l=2), pp 9.995e-04 (bin 3), theta* 5.480e-02  -> pass=False
+theta*(Delta=0.1) - theta*(Delta=0.05), N=2000: -0.515 sigma_Planck

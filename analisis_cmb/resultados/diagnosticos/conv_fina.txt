@@ -1,0 +1,4 @@
+D=0.05 k4 vs k16 (10 semillas, max): TT 1.35e-04 pp 1.17e-04 th* 8.80e-03 (mediana th* 3.3e-03)
+D=0.05 k16 vs k64 (10 semillas, max): TT 4.84e-05 pp 3.96e-05 th* 3.48e-03 (mediana th* 1.5e-03)
+D=0.1 k4 vs k16 (10 semillas, max): TT 1.09e-04 pp 9.90e-05 th* 7.21e-03 (mediana th* 2.9e-03)
+D=0.1 k16 vs k64 (10 semillas, max): TT 3.12e-05 pp 2.88e-05 th* 2.22e-03 (mediana th* 8.2e-04)
