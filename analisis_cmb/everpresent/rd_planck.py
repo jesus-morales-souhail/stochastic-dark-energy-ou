@@ -49,7 +49,7 @@ def main() -> None:
     H = lambda z: 100 * np.sqrt(om * (1 + z) ** 3 + orad * (1 + z) ** 4 + (h * h - om - orad))
     v2 = vec(lambda z: quad(lambda x: C / H(x), 0, z, epsrel=1e-10)[0], lambda z: C / H(z), bao, rd)
     d1, d2 = v1 - bao["mean"], v2 - bao["mean"]
-    out = {"rdrag_Mpc": rd, "H0": p.H0, "omega_m_incl_nu": om, "omega_r": orad,
+    out = {"rdrag_Mpc": rd, "zdrag": r.get_derived_params()["zdrag"], "H0": p.H0, "omega_m_incl_nu": om, "omega_r": orad,
            "chi2_lcdm_camb": float(d1 @ ci @ d1), "chi2_lcdm_analytic": float(d2 @ ci @ d2),
            "max_rel_diff_distances": float(np.max(np.abs(v2 / v1 - 1)))}
     rf = float(rd_aubourg(p.ombh2, p.ombh2 + p.omch2, p.omnuh2))

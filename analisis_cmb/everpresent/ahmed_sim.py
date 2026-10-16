@@ -142,11 +142,16 @@ def _tau_init_mr(a0: float, om: float, orad: float) -> float:
 
 
 def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad: float = OMR_H2, n: int = 10000,
-            i_ini: int = 1, z_rec: float | None = None, sub_rel: float = 0.02, z_obs=None) -> dict:
+            i_ini: int = 1, z_rec: float | None = None, sub_rel: float = 0.02, z_obs=None,
+            rd_wm=None, z_win=None) -> dict:
     """Model 1 as in Das I Sec. 4.2. Within each a-step Lambda is fixed and the J_k are integrated
     with RK4 substeps of relative size <= sub_rel (stands in for their Romberg integration).
     Optional: records u(a) for a >= 1/(1+z_rec); records conformal time tau and u at the grid
-    point nearest to each z in z_obs (tau in units c/(100 km/s/Mpc))."""
+    point nearest to each z in z_obs (tau in units c/(100 km/s/Mpc)).
+    rd_wm: omega_m values for which r_d is accumulated in the run from a_start to a_d(omega_m), with
+    H_k^2 = w_k a^-3 + orad a^-4 + u w_k / om (Das I Sec. 4.4 scaling, radiation not rescaled);
+    Simpson per step with the step's Lambda. Returns the part z < 1/a_start - 1 (no normalisation).
+    z_win: z values where Omega_de = u / H^2 (at om) is stored."""
     rng = np.random.default_rng(seed)
     a_grid = np.arange(i_ini, n + 1) / n
     J0 = np.append(_j_init_mr(a_grid[0], om, orad), _tau_init_mr(a_grid[0], om, orad))  # row 4 = tau
@@ -164,6 +169,16 @@ def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad:
     obs_a = a_grid[i_obs] if len(i_obs) else np.zeros(0)
     obs_tau = np.full((len(i_obs), n_real), np.nan)
     obs_u = np.full((len(i_obs), n_real), np.nan)
+    if rd_wm is not None:
+        import rdcalc
+
+        rd_wm = np.asarray(rd_wm, dtype=float)
+        a_d = 1.0 / (1.0 + rdcalc.zd(rd_wm))
+        rd_acc = np.zeros((len(rd_wm), n_real))
+        a_max_rd = float(a_d.max())
+    z_win = np.atleast_1d(z_win) if z_win is not None else np.zeros(0)
+    i_win = np.array([int(np.argmin(np.abs(a_grid - 1.0 / (1.0 + z)))) for z in z_win], dtype=int)
+    win_ode = np.full((len(i_win), n_real), np.nan)
 
     def rhs(a, J, u):
         H2 = om / a**3 + orad / a**4 + u
@@ -178,6 +193,17 @@ def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad:
 
     for i in range(1, len(a_grid)):
         a0, a1 = a_grid[i - 1], a_grid[i]
+        if rd_wm is not None and a0 < a_max_rd:
+            # r_d integrand c_s / (a^2 H_k) over [a0, min(a1, a_d_k)], Lambda of this step (u)
+            b = np.minimum(a1, a_d)[:, None]
+            ok_k = (a0 < a_d)[:, None]
+            acc = np.zeros_like(rd_acc)
+            am = 0.5 * (a0 + b)
+            for aa, wgt in ((np.full_like(b, a0), 1.0), (am, 4.0), (b, 1.0)):
+                H2 = rd_wm[:, None] / aa**3 + orad / aa**4 + u[None, :] * rd_wm[:, None] / om
+                H = 100.0 * np.sqrt(np.where(H2 > 0, H2, np.nan))
+                acc += wgt * rdcalc.cs(1.0 / aa - 1.0) / (aa * aa * H)
+            rd_acc += np.where(ok_k & alive[None, :], acc * (b - a0) / 6.0, 0.0)
         m = max(1, int(np.ceil((a1 - a0) / (sub_rel * a0))))
         h = (a1 - a0) / m
         Jn = J.copy()
@@ -208,10 +234,13 @@ def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad:
         for k in np.nonzero(i_obs == i)[0]:
             obs_tau[k] = J[4]
             obs_u[k] = u
+        for k in np.nonzero(i_win == i)[0]:
+            win_ode[k] = np.where(alive, u / (om / a1**3 + orad / a1**4 + u), np.nan)
     H0 = 100.0 * np.sqrt(om + orad + u)
     return {"alive": alive, "a_death": a_death, "rec_a": rec_a, "rec_u": rec_u, "om": om, "orad": orad,
             "H0": np.where(alive, H0, np.nan), "OmL0": np.where(alive, u / (om + orad + u), np.nan), "V0hat": V,
-            "tau0": J[4], "obs_a": obs_a, "obs_tau": obs_tau, "obs_u": obs_u}
+            "tau0": J[4], "obs_a": obs_a, "obs_tau": obs_tau, "obs_u": obs_u,
+            "rd_part": rd_acc if rd_wm is not None else None, "win_ode": win_ode}
 
 
 def main_das() -> None:

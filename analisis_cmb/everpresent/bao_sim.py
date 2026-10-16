@@ -191,12 +191,16 @@ def main_m1(alpha: float, nseeds: int, chunk: int = 20000) -> None:
 
     zu = np.unique(ZR)
     z_obs = np.append(zu, Z_REC)
-    rows = {k: [] for k in ("chi2", "H0", "OmL0", "Ode_rec", "seed_chunk", "idx", "dmh", "eh")}
+    rows = {k: [] for k in ("chi2", "H0", "OmL0", "Ode_rec", "seed_chunk", "idx", "dmh", "eh", "rd_part", "win_ode")}
+    # r_d per run (rdcalc): omega_m grid for the in-run integral, and the z window for the CMB proxy
+    WM_RD = np.unique(np.append(np.geomspace(0.10, 0.20, 24), OM))
+    Z_WIN = np.geomspace(1000.0, 1.0e4, 25)
     n_done = n_alive = 0
     t0 = time.time()
     for c in range(int(np.ceil(nseeds / chunk))):
         m = min(chunk, nseeds - n_done)
-        r = run_das(alpha, m, seed=SEED + c, om=OM, orad=ORAD, n=100000, i_ini=10, z_obs=z_obs)
+        r = run_das(alpha, m, seed=SEED + c, om=OM, orad=ORAD, n=100000, i_ini=10, z_obs=z_obs,
+                    rd_wm=WM_RD, z_win=Z_WIN)
         ok = r["alive"]
         n_done += m
         n_alive += int(ok.sum())
@@ -218,9 +222,13 @@ def main_m1(alpha: float, nseeds: int, chunk: int = 20000) -> None:
         H0c = r["H0"][ok][None, :]
         rows["dmh"].append((DM_u * H0c / C).T)
         rows["eh"].append((H0c / H[:-1]).T)
+        rows["rd_part"].append(r["rd_part"][:, ok].T)  # (n_complete, 25): z < 1e4 part, unnormalised, Mpc
+        rows["win_ode"].append(r["win_ode"][:, ok].T)  # (n_complete, 25): Omega_de at Z_WIN
         print(f"  chunk {c}: {m} semillas, completan {ok.sum()}, acumulado {n_done} en {time.time() - t0:.0f} s", flush=True)
     R = {k: np.concatenate(v) for k, v in rows.items()}
     R["z_unique"] = zu
+    R["wm_rd"] = WM_RD
+    R["z_win"] = Z_WIN
     np.savez_compressed(OUT / f"bao_m1_alpha{alpha}.npz", **R)
     proxy = np.abs(R["Ode_rec"]) < 0.25
     out = {"alpha": alpha, "n_seeds": n_done, "n_complete": n_alive, "frac_complete": n_alive / n_done,

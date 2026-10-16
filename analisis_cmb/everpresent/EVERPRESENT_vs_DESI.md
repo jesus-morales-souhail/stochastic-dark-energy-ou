@@ -200,6 +200,16 @@ Responde a la objeción de "parámetros fijos". Script `robustez.py`; resultados
 con Ω_m = 0.2971 y H0·r_d = 10155 km/s, es decir h·r_d = 101.55 Mpc (`robustez.json` → `lcdm_desi`).
 A (χ² ≤ 29.84, ΛCDM-Planck) es el criterio generoso; A' (χ² ≤ 10.28) es el exigente.
 
+Validación del pipeline frente al paper de DESI DR2 (arXiv:2503.14738, fuente TeX):
+
+| | Ω_m | h·r_d [Mpc] | χ²/dof |
+|---|---|---|---|
+| DESI DR2, ΛCDM con solo DESI: Sec. 6, ec. `constraints_lcdm_desi`, y tabla `tab:cosmo_constraints`, fila "DESI" bajo ΛCDM (Ω_m) | 0.2975 ± 0.0086 | 101.54 ± 0.73 | 10.2/(13 − 2) (Sec. 3, "DESI Distance Measurements") |
+| este pipeline (mejor ajuste, `robustez.json` → `lcdm_desi`) | 0.2971 | 101.55 | 10.28/11 |
+
+DESI da medias posteriores y nosotros el mejor ajuste; las diferencias son 0.05σ en Ω_m y 0.01σ en
+h·r_d.
+
 **Modelo 2 (20000 realizaciones, α = 0.8824, μ = 0.9804).** Fracciones sobre las 20000
 (`m2_fixed`, `m2_free_wm`, `m2_joint_over_all`, `m2_within_1pct_planck_wm`):
 
@@ -237,6 +247,82 @@ entre el 3.8 % y el 40 % de distancia, y entre el 5.3 % y el 35 % si además pas
 (`m2_passing_B`). En el Modelo 1, a −25 % y +22 %. Ninguna pasa con ω_m a ±1 % de Planck, y ninguna
 del Modelo 1 pasa A'.
 
+### 3e. r_d por realización
+
+Hasta aquí r_d era fijo (3a–3c) o salía de una fórmula con ω_m (3d), suponiendo que no hay energía
+oscura antes de la recombinación. Aquí se calcula con la historia de cada realización. Scripts
+`rdcalc.py` y `rd_real.py`; resultados en `resultados/rd_real.json` y
+`rd_real_m2.npz` / `rd_real_m1_alpha*.npz`.
+
+**Montaje.**
+- r_d = ∫_{z_d}^∞ c_s/H dz, con c_s = c/√(3(1 + R)), R = 3ω_b/(4ω_γ(1+z)), ω_b = 0.02237.
+- z_d = 1059.93 (CAMB, `rd_planck.json`), escalado con ω_m por la fórmula de Eisenstein–Hu; no se
+  recalcula con la historia de cada realización.
+- Validación: con Ω_de ≡ 0, la integral sin normalizar da 146.936 Mpc, −0.11 % frente a CAMB (147.103)
+  y −0.087 % frente a Aubourg (147.063) (`rdcalc.py`). Todo r_d se normaliza a CAMB con ese único
+  factor (1.00114), y la cuadratura de `rd_real.py` reproduce CAMB a 4 × 10⁻⁷ con Ω_de ≡ 0
+  (`model2.check_rd_no_de`).
+- **Modelo 2:** el proceso se extiende a λ ∈ [−ln 10⁵, −ln 1000] con paso 0.1, más los 10 puntos de
+  la ventana: 57 puntos nuevos. Se muestrean condicionados a Ω̂(λ_rec); los 401 puntos anteriores
+  conservan sus valores, y la correlación con el resto es < 3.2 × 10⁻⁷. La integral llega a z = 10⁵,
+  y más allá se usa el integrando estándar (2.65 Mpc de ∼147).
+- **Modelo 1:** r_d se acumula dentro de cada run para 25 valores de ω_m (escalado de [D1] Sec. 4.4,
+  radiación sin reescalar), desde z_d hasta z = 9999, donde arranca la simulación. Para z > 9999 se
+  usa el integrando estándar (Λ = 0, coherente con S_0 = 0 al arranque): 24.4 Mpc de 146.9, el 16.6 %.
+  Comprobación con α = 0: la r_d acumulada más la cola coincide con la integral estándar a
+  1.5 × 10⁻⁵.
+- **Proxy de CMB en ventana:** |Ω_de(z)| < 0.25 en todo z ∈ [1000, 5000]. En el Modelo 2, en 10 puntos
+  log-espaciados; en el Modelo 1, en los puntos de la malla de 25 en [1000, 10⁴] que caen en
+  [1000, 5000].
+- **Criterios:** (a) r_d propio, ω_m fijo; (b) r_d propio, ω_m libre en [0.10, 0.20]; (c) r_d propio,
+  proxy en ventana y ω_m a ±1.6 % de Planck (±2σ). **(c) es el criterio final.** Con 0 éxitos, el
+  límite al 95 % es 3/N.
+
+**Modelo 2 (20000 realizaciones, α = 0.8824, μ = 0.9804)** (`rd_real.json` → `model2`):
+
+- r_d propio, p16/p50/p84 = 96 / 143 / 179 Mpc. Con α = 0.88 la energía oscura no es despreciable
+  antes de la recombinación.
+- Proxy: el de un solo punto (z = 1100) lo pasa el 22.8 %; el de ventana, el **2.2 % (444/20000)**.
+
+| | A (≤ 29.84) | B (Δχ² < 4) | A' (≤ 10.28) | mejor χ² |
+|---|---|---|---|---|
+| (a) ω_m fijo | 1 (5 × 10⁻⁵) | 2 (1.0 × 10⁻⁴) | 0 | 10.6 |
+| (a) + ventana | 0 | 0 | 0 | 254 |
+| (b) ω_m libre | 37 (1.85 × 10⁻³) | 46 (2.3 × 10⁻³) | 4 (2 × 10⁻⁴) | 6.8 (ω_m = 0.186, falla la ventana) |
+| (b) + ventana | 1 (5 × 10⁻⁵) | 1 (5 × 10⁻⁵) | 0 | 16.5 |
+| (c) ventana y ω_m ±1.6 % | **0 (< 1.5 × 10⁻⁴)** | **0** | **0** | **230.7** (ω_m = 0.1453, r_d = 156.5) |
+| (c) sin ventana (referencia) | 6 (3 × 10⁻⁴) | 6 (3 × 10⁻⁴) | 1 | 9.0 |
+
+**Modelo 1 (run_das, n = 10⁵; 300000 + 200000 semillas)** (`rd_real.json` → `model1_alpha*`).
+Fracciones sobre semillas. La resimulación con las mismas semillas da json idénticos salvo el tiempo
+de cálculo.
+
+| | α = 0.01 | α = 0.005 |
+|---|---|---|
+| r_d propio a ω_m0, p16/p50/p84 | 132 / 149 / 165 Mpc | 139 / 148 / 156 Mpc |
+| pasan el proxy en ventana (17 puntos en [1000, 5000]) | **1 de 82795 completados** | **2033 de 198858 (1.0 %)** |
+| (a) ω_m fijo: A / B / A' | 1 / 1 / 0 (χ² = 18.1) | 0 / 0 / 0 (mejor 51.9) |
+| (a) + ventana | 0 / 0 / 0 | 0 / 0 / 0 (mejor 93.9) |
+| (b) ω_m libre: A / B / A' | 2 / 2 / 0 (mejor 17.76, ω_m = 0.142, H0 = 58.5, falla la ventana) | 1 / 1 / 0 (mejor 16.27, ω_m = 0.134, H0 = 54.8, falla la ventana) |
+| (b) + ventana | 0 / 0 / 0 | 0 / 0 / 0 (mejor 88.8) |
+| **(c) ventana y ω_m ±1.6 %** | **0 / 0 / 0 (< 1.0 × 10⁻⁵)** | **0 / 0 / 0 (< 1.5 × 10⁻⁵); mejor χ² = 89.3, H0 = 51.6, Ω_Λ(0) = 0.47** |
+| (c) sin ventana (referencia) | 1 / 1 / 0 (χ² = 17.76) | 0 / 0 / 0 (mejor 44.0) |
+
+Notas:
+- Con α = 0.01, en el 49 % de los runs completados algún ω_m de la malla da H² < 0 al reescalar Λ con
+  ω_m sin reescalar la radiación (`frac_rd_nan_any_wm`); esos ω_m quedan excluidos de la minimización.
+- El único run con α = 0.01 que pasa la ventana tiene Ω_Λ(0) ≈ 0.02 y H0 ≈ 38: un universo casi sin
+  energía oscura, con χ² = 11889.
+- Con el r_d propio, el mejor run con α = 0.01 pasa A con ω_m dentro de ±1.6 % (χ² = 17.76), cosa que
+  con r_d de fórmula requería ω_m = 0.108. Pero ese run falla el proxy (Ω_de(1100) = 0.58).
+
+**Resultado final (criterio c):** con r_d calculado con la historia de cada realización, energía
+oscura pequeña en toda la ventana de recombinación y ω_m a ±2σ de Planck, **ninguna** realización de
+ninguno de los dos modelos ajusta DESI DR2 tan bien como ΛCDM-Planck, ni con Δχ² < 4:
+
+- Modelo 2: 0/20000, < 1.5 × 10⁻⁴.
+- Modelo 1: 0/300000 (α = 0.01), < 1.0 × 10⁻⁵; y 0/200000 (α = 0.005), < 1.5 × 10⁻⁵.
+
 ### Comparación con [D2]
 
 | modelo | datos | realizaciones | mejor que ΛCDM (A) | Δχ² < 4 (B) | fichero |
@@ -252,6 +338,9 @@ del Modelo 1 pasa A'.
 | Modelo 2, ω_m libre | DESI DR2 BAO | 20000 | 25 (1.25 × 10⁻³) | 29 (1.45 × 10⁻³) | `robustez.json` |
 | Modelo 2, ω_m libre y proxy CMB | DESI DR2 BAO + \|Ω_de(1100)\| < 0.25 | 20000 | 7 (3.5 × 10⁻⁴) | 9 (4.5 × 10⁻⁴) | `robustez.json` |
 | Modelo 2, ω_m a ±1 % de Planck | DESI DR2 BAO | 20000 | 0 | 0 | `robustez.json` |
+| **Modelo 2, criterio final (c)** | DESI DR2 BAO + ventana CMB, r_d propio, ω_m ±1.6 % | 20000 | **0 (< 1.5 × 10⁻⁴)** | **0** | `rd_real.json` |
+| **Modelo 1, α = 0.01, criterio final (c)** | ídem | 300000 | **0 (< 1.0 × 10⁻⁵)** | **0** | `rd_real.json` |
+| **Modelo 1, α = 0.005, criterio final (c)** | ídem | 200000 | **0 (< 1.5 × 10⁻⁵)** | **0** | `rd_real.json` |
 
 Diferencia de método: [D2] optimiza Ω_m h², α y M_B por semilla. En 3a–3c los parámetros están fijos
 (Planck para ω_b, ω_c y r_d; α del caso). En 3d se optimiza ω_m por realización (con r_d(ω_m)), pero
@@ -261,12 +350,14 @@ no α.
 
 ## 4. Limitaciones
 
-- **r_d no sale de la historia de cada realización.** Es fijo (147.103 Mpc, 3a–3c) o viene de la
-  fórmula de Aubourg con ω_m (3d), que supone una física pre-recombinación estándar. En el Modelo 1,
-  Λ no es despreciable a z > 1100 (Ω_de(1100) se distribuye con ∼40–70 % de los runs dentro de ±0.25,
-  `bao_m1_alpha*.json` → `f_cmb`), y eso cambiaría r_d realización a realización. No se ha calculado.
-- **CMB solo por proxy.** Se usa |Ω_de(1100)| < 0.25 (el criterio de [Z]) en vez de la verosimilitud
-  de Planck. [D2] Sec. 5 sí usa la verosimilitud: su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor con la
+- **r_d en el Modelo 1 por encima de z = 10⁴.** La simulación arranca en z ≈ 10⁴; para z > 9999 se
+  usa el integrando estándar sin energía oscura, que es el 16.6 % de r_d. Si el modelo tuviera Λ de
+  orden uno también a z > 10⁴, ese tramo cambiaría. En el Modelo 2 el tramo análogo es z > 10⁵, el
+  1.8 %.
+- **z_d no se recalcula por realización.** Es el de CAMB escalado con ω_m (Eisenstein–Hu); la energía
+  oscura cerca de z_d lo movería ligeramente.
+- **CMB solo por proxy.** Se usa |Ω_de| < 0.25 (en z = 1100 en 3a–3d, en la ventana z ∈ [1000, 5000]
+  en 3e) en vez de la verosimilitud de Planck. [D2] Sec. 5 sí usa la verosimilitud: su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor con la
   energía oscura suprimida en la última dispersión (Sec. 7).
 - **α fijo en el Modelo 1.** Dos valores, 0.01 y 0.005, sin perfilar en α. [D2] usa α ∈ [0.001,
   0.025] en el MCMC. En el Modelo 2 hay malla en α (3b) pero solo con ω_m fijo.
@@ -291,28 +382,29 @@ no α.
    Hubble con α = 0.01 (`das_model1.json`). El "1 de 3 desde a = 10⁻³²" de [A] no se reproduce.
 
 2. **Modelo 1 frente a DESI DR2.**
-   - A parámetros fijos, ninguna de las 500000 semillas (α = 0.01 y 0.005) ajusta DESI DR2 tan bien
-     como ΛCDM-Planck, ni con Δχ² < 4 (< 1.0 × 10⁻⁵ al 95 % con α = 0.01).
-   - Con ω_m libre en ±40 % por run, pasa 1 semilla de 300000 (α = 0.01) y 1 de 200000 (α = 0.005).
-     Es decir 3–5 × 10⁻⁶, unas 35–55 veces por debajo del 16/90000 = 1.8 × 10⁻⁴ de [D2] con
-     supernovas.
-   - Esas semillas necesitan ω_m 22–25 % lejos de Planck y H0 = 51–62, y ninguna pasa el criterio
-     exigente A' (χ² ≤ 10.28 de ΛCDM ajustado a DESI) (`bao_m1_alpha*.json`, `robustez.json`).
+   - Criterio final (c): r_d calculado con la historia de cada run, |Ω_de| < 0.25 en todo
+     z ∈ [1000, 5000] y ω_m a ±1.6 % de Planck. Pasan **0 de 300000** semillas con α = 0.01
+     (< 1.0 × 10⁻⁵ al 95 %) y **0 de 200000** con α = 0.005 (< 1.5 × 10⁻⁵), con los tres criterios
+     A, B y A'.
+   - El mejor run en ventana tiene χ² = 89.3 con H0 = 51.6 (α = 0.005).
+   - Sin el proxy, o con ω_m libre en ±40 %, pasan 1–2 runs, todos con H0 = 51–62 y energía oscura de
+     orden uno en la recombinación (`rd_real.json`).
 
 3. **Modelo 2 frente a DESI DR2.**
-   - En el mejor ajuste de [Z] con ω_m de Planck, pasa 1 de 20000, y esa falla el proxy de CMB; en la
-     malla α ∈ [0.02, 0.88], 0/2000 en todos los puntos (`bao_m2.json`).
-   - Con ω_m libre en ±40 %, la fracción sube a 1.25 × 10⁻³ (A), o 3.5 × 10⁻⁴ con el proxy de CMB,
-     del orden del 1.8 × 10⁻⁴ de [D2] con supernovas. Con el criterio exigente A' es 1 de 20000.
-   - Todas esas realizaciones requieren ω_m al menos un 3.8 % lejos de Planck (5.3 % con el proxy de
-     CMB); con ω_m a ±1 % de Planck, la precisión del CMB, son 0/20000 (`robustez.json`).
+   - Criterio final (c): **0 de 20000** (< 1.5 × 10⁻⁴), y el mejor χ² en ventana con ω_m a ±1.6 % es
+     230.7 (`rd_real.json`).
+   - El proxy en ventana lo pasa solo el 2.2 % de las realizaciones, frente al 22.8 % del proxy en un
+     solo punto.
+   - Con ω_m libre y sin proxy, el r_d propio deja pasar 37/20000 (1.85 × 10⁻³) en A; con ω_m a
+     ±1.6 % y sin proxy, 6/20000. Todas tienen energía oscura de orden uno en la recombinación.
 
-4. **Por qué BAO es más duro que SN para este modelo.** En SN, M_B es libre y absorbe la
-   normalización de la escala de distancias, de modo que H0 queda sin medir: una realización con el
-   H0 ≈ 40 típico del modelo puede ajustar la forma de la curva de Hubble. En BAO, D/r_d mide H0·r_d,
-   y r_d lo fija la física pre-recombinación (ω_b, ω_cb), así que el H0 bajo y la variación de
-   Ω_Λ(z) en 0.3 < z < 2.3 se penalizan directamente. Solo se compensan moviendo ω_m muy por fuera de
-   lo que permite el CMB.
+4. **BAO frente a SN.** DESI DR2 BAO solo, con ω_m libre, deja pasar una fracción del orden de la de
+   SN en [D2]: 1.25–1.85 × 10⁻³ en el Modelo 2, frente a 1.8 × 10⁻⁴. En SN, M_B absorbe la
+   normalización y H0 queda libre. En BAO, D/r_d mide H0·r_d con r_d fijado por la física
+   pre-recombinación, pero esa restricción se puede esquivar moviendo ω_m o dejando que la energía
+   oscura cambie r_d. **Lo que excluye el modelo es BAO junto con lo que fija el CMB:** ω_m a ±2σ de
+   Planck y energía oscura pequeña alrededor de la recombinación. Con esas dos condiciones, 0
+   realizaciones en los dos modelos.
 
 5. **Cotas lineales.** Como fluctuación pequeña alrededor de ΛCDM, DESI DR2 limita la amplitud a
    α_Zwane < 1.85 × 10⁻² (μ fijo) o < 2.41 × 10⁻² (μ libre, que se va a su borde 0.1), y a
