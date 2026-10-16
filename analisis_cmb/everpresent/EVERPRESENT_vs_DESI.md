@@ -416,5 +416,6 @@ no α.
    estacionario pequeño X de media cero. Everpresent Λ no tiene constante: Λ es solo ruido de media
    cero, cuya amplitud tiene que ser del orden de Ω_Λ0 para dar la aceleración actual. DESI DR2 admite
    el primero con σ_X < 2.5 × 10⁻². El segundo, en las dos implementaciones publicadas, solo deja
-   pasar realizaciones raras, y todas necesitan un ω_m incompatible con el CMB. Valen las limitaciones
-   de la sección 4.
+   pasar realizaciones raras, y todas necesitan un ω_m incompatible con el CMB o energía oscura de
+   orden uno en la recombinación. Con el criterio final (c), ninguna. Valen las limitaciones de la
+   sección 4.
