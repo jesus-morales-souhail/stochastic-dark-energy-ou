@@ -5,5 +5,12 @@
   "omega_r": 4.1834061101839876e-05,
   "chi2_lcdm_camb": 29.840271401429217,
   "chi2_lcdm_analytic": 29.802050958612373,
-  "max_rel_diff_distances": 6.109281235833208e-05
+  "max_rel_diff_distances": 6.109281235833208e-05,
+  "rd_aubourg": {
+    "omega_b": 0.02237,
+    "omega_cb": 0.14237,
+    "omega_nu": 0.0006448993754203254,
+    "rd_formula_Mpc": 147.06303008488774,
+    "rel_diff_vs_camb": -0.00026967279162237734
+  }
 }

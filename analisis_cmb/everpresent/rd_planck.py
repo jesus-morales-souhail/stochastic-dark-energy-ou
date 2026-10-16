@@ -23,6 +23,11 @@ from desi_dr2_data import load_gaussian_bao_vector  # noqa: E402  (local copy)
 C = 299792.458
 
 
+def rd_aubourg(omega_b: float, omega_cb, omega_nu: float):
+    """Aubourg et al. 2015 (arXiv:1411.1074), Sec. II, eq. labelled eqn:rd; quoted accuracy 0.021 %."""
+    return 55.154 * np.exp(-72.3 * (omega_nu + 0.0006) ** 2) / (np.asarray(omega_cb) ** 0.25351 * omega_b**0.12807)
+
+
 def vec(DM, DH, bao, rd):
     out = []
     for z, lab in zip(bao["z_rows"], bao["labels"]):
@@ -47,6 +52,9 @@ def main() -> None:
     out = {"rdrag_Mpc": rd, "H0": p.H0, "omega_m_incl_nu": om, "omega_r": orad,
            "chi2_lcdm_camb": float(d1 @ ci @ d1), "chi2_lcdm_analytic": float(d2 @ ci @ d2),
            "max_rel_diff_distances": float(np.max(np.abs(v2 / v1 - 1)))}
+    rf = float(rd_aubourg(p.ombh2, p.ombh2 + p.omch2, p.omnuh2))
+    out["rd_aubourg"] = {"omega_b": p.ombh2, "omega_cb": p.ombh2 + p.omch2, "omega_nu": p.omnuh2,
+                         "rd_formula_Mpc": rf, "rel_diff_vs_camb": rf / rd - 1}
     (HERE / "resultados" / "rd_planck.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(json.dumps(out, indent=2))
 

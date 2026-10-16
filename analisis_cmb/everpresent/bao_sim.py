@@ -191,7 +191,7 @@ def main_m1(alpha: float, nseeds: int, chunk: int = 20000) -> None:
 
     zu = np.unique(ZR)
     z_obs = np.append(zu, Z_REC)
-    rows = {k: [] for k in ("chi2", "H0", "OmL0", "Ode_rec", "seed_chunk", "idx")}
+    rows = {k: [] for k in ("chi2", "H0", "OmL0", "Ode_rec", "seed_chunk", "idx", "dmh", "eh")}
     n_done = n_alive = 0
     t0 = time.time()
     for c in range(int(np.ceil(nseeds / chunk))):
@@ -213,8 +213,14 @@ def main_m1(alpha: float, nseeds: int, chunk: int = 20000) -> None:
         rows["Ode_rec"].append(u[-1] / (H[-1] / 100.0) ** 2)
         rows["seed_chunk"].append(np.full(ok.sum(), SEED + c))
         rows["idx"].append(np.nonzero(ok)[0])
+        # dimensionless distances at the unique DESI z (invariant under omega_m rescaling, Das I Sec. 4.4):
+        # D_M H0 / c and H0 / H(z); shape (n_complete, 7)
+        H0c = r["H0"][ok][None, :]
+        rows["dmh"].append((DM_u * H0c / C).T)
+        rows["eh"].append((H0c / H[:-1]).T)
         print(f"  chunk {c}: {m} semillas, completan {ok.sum()}, acumulado {n_done} en {time.time() - t0:.0f} s", flush=True)
     R = {k: np.concatenate(v) for k, v in rows.items()}
+    R["z_unique"] = zu
     np.savez_compressed(OUT / f"bao_m1_alpha{alpha}.npz", **R)
     proxy = np.abs(R["Ode_rec"]) < 0.25
     out = {"alpha": alpha, "n_seeds": n_done, "n_complete": n_alive, "frac_complete": n_alive / n_done,

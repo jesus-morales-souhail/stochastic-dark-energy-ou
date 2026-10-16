@@ -1,18 +1,18 @@
-  chunk 0: 20000 semillas, completan 5449, acumulado 20000 en 102 s
-  chunk 1: 20000 semillas, completan 5496, acumulado 40000 en 200 s
-  chunk 2: 20000 semillas, completan 5569, acumulado 60000 en 301 s
-  chunk 3: 20000 semillas, completan 5609, acumulado 80000 en 405 s
-  chunk 4: 20000 semillas, completan 5522, acumulado 100000 en 508 s
-  chunk 5: 20000 semillas, completan 5429, acumulado 120000 en 629 s
-  chunk 6: 20000 semillas, completan 5661, acumulado 140000 en 717 s
-  chunk 7: 20000 semillas, completan 5418, acumulado 160000 en 818 s
-  chunk 8: 20000 semillas, completan 5553, acumulado 180000 en 922 s
-  chunk 9: 20000 semillas, completan 5498, acumulado 200000 en 1025 s
-  chunk 10: 20000 semillas, completan 5567, acumulado 220000 en 1127 s
-  chunk 11: 20000 semillas, completan 5397, acumulado 240000 en 1227 s
-  chunk 12: 20000 semillas, completan 5567, acumulado 260000 en 1332 s
-  chunk 13: 20000 semillas, completan 5529, acumulado 280000 en 1433 s
-  chunk 14: 20000 semillas, completan 5531, acumulado 300000 en 1530 s
+  chunk 0: 20000 semillas, completan 5449, acumulado 20000 en 101 s
+  chunk 1: 20000 semillas, completan 5496, acumulado 40000 en 204 s
+  chunk 2: 20000 semillas, completan 5569, acumulado 60000 en 302 s
+  chunk 3: 20000 semillas, completan 5609, acumulado 80000 en 421 s
+  chunk 4: 20000 semillas, completan 5522, acumulado 100000 en 504 s
+  chunk 5: 20000 semillas, completan 5429, acumulado 120000 en 605 s
+  chunk 6: 20000 semillas, completan 5661, acumulado 140000 en 708 s
+  chunk 7: 20000 semillas, completan 5418, acumulado 160000 en 806 s
+  chunk 8: 20000 semillas, completan 5553, acumulado 180000 en 904 s
+  chunk 9: 20000 semillas, completan 5498, acumulado 200000 en 1003 s
+  chunk 10: 20000 semillas, completan 5567, acumulado 220000 en 1103 s
+  chunk 11: 20000 semillas, completan 5397, acumulado 240000 en 1198 s
+  chunk 12: 20000 semillas, completan 5567, acumulado 260000 en 1301 s
+  chunk 13: 20000 semillas, completan 5529, acumulado 280000 en 1402 s
+  chunk 14: 20000 semillas, completan 5531, acumulado 300000 en 1499 s
 {
  "alpha": 0.01,
  "n_seeds": 300000,
@@ -21,7 +21,7 @@
  "omega_m": 0.14301489937542033,
  "n_steps": 100000,
  "a_start": 0.0001,
- "seconds": 1530.3209280967712,
+ "seconds": 1515.902622461319,
  "unconditional_over_seeds": {
   "nA": 0,
   "nB": 0,

@@ -233,8 +233,14 @@ Parameter), 5 Results (5.1 Statistical Distributions, 5.2 Frequency of Completed
   denominador de (4.12), no en el numerador fluctuante; los resultados "do not appear to be sensitive"
   a V_0; S_0 > 0 añade un sesgo positivo persistente. El estudio de S_0 usa α = 0.015, V_0 = 1,
   i_initial = 1, n = 10000, S_0 de 0 a 1. El α = 0.02 de Sec. 5.2 es "if we take S_0 = 0".
-- **Ω_m h².** Fijado a 0.14 en Sec. 5.1 ("For our universe Ω_m⁰h² ≈ 0.14"). Sec. 4.4: con S_0 = 0 y
-  semilla fija, Λ, H² y 1/√V escalan con ρ_m⁰, así que Ω_m y Ω_Λ no dependen de Ω_m⁰h².
+- **Ω_m h².** Fijado a 0.14 en Sec. 5.1 ("For our universe Ω_m⁰h² ≈ 0.14"). Con S_0 = 0, ρ_m es un
+  parámetro de escala. Sec. 4.4, literal: "if we keep the seed and α fixed, and then make the change ρ_m⁰ → c_0 ρ_m⁰, the
+  quantities Λ, H², and 1/√V also get re-scaled by c_0 (assuming that S_0 = 0) … In particular, this
+  means that the ratio ρ_m/Λ and hence Ω_m and Ω_Λ remain unchanged for fixed α and random number
+  series {ξ_i} in (3.16). In addition, Ω_Λ remains unchanged after a re-scaling of ρ_m in the
+  radiation domination era as well, but this time simply because ρ_m is sub-dominant in the
+  background." (La invariancia es exacta solo si la radiación se reescala igual; con ω_r fijo es
+  aproximada al nivel ω_r(1+z)/ω_m ∼ 10⁻³ a z ∼ 2.)
 - **Fracciones de runs completados.** Pie de Fig. 3 (Sec. 5.1), 10000 semillas cada una:
   **9990** (α = 0.005), **3228** (α = 0.01), **535** (α = 0.012). Sec. 5.2: α = 0.02, "less than 10
   out of 10,000 for any given Δτ" (pasos constantes en tiempo conforme). Sec. 5.1 no da el número de
@@ -270,6 +276,10 @@ Using CMB, 7 Discussion and Conclusion.
   semillas: α̃ → < 0.1 o Ω_m⁰ > 0.9, H0 ≈ 40. Sobre Zwane: "their equation of state parameter w(z) was
   restricted to a narrow negative range … Therefore, our results should not be compared to those of
   this previous work" (Sec. 5.2).
+- **Carácter de los modelos** (Sec. 6, primer párrafo): "both of these models are phenomenological, as
+  we require a more developed theory of quantum gravity to inform the correct dynamics for Everpresent
+  Λ." [D1] Sec. 6: "It is perhaps a bit premature to test these simple models against the full range
+  of data, but we can nevertheless learn from the analysis."
 - **Conclusión** (Sec. 7): "the most basic models of Everpresent Λ have difficulty describing both the
   SN Ia and CMB data."
 

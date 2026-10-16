@@ -1,13 +1,13 @@
-  chunk 0: 20000 semillas, completan 19875, acumulado 20000 en 85 s
-  chunk 1: 20000 semillas, completan 19885, acumulado 40000 en 169 s
-  chunk 2: 20000 semillas, completan 19869, acumulado 60000 en 254 s
-  chunk 3: 20000 semillas, completan 19883, acumulado 80000 en 340 s
-  chunk 4: 20000 semillas, completan 19893, acumulado 100000 en 427 s
-  chunk 5: 20000 semillas, completan 19875, acumulado 120000 en 513 s
-  chunk 6: 20000 semillas, completan 19898, acumulado 140000 en 600 s
-  chunk 7: 20000 semillas, completan 19889, acumulado 160000 en 687 s
-  chunk 8: 20000 semillas, completan 19888, acumulado 180000 en 790 s
-  chunk 9: 20000 semillas, completan 19903, acumulado 200000 en 860 s
+  chunk 0: 20000 semillas, completan 19875, acumulado 20000 en 82 s
+  chunk 1: 20000 semillas, completan 19885, acumulado 40000 en 181 s
+  chunk 2: 20000 semillas, completan 19869, acumulado 60000 en 246 s
+  chunk 3: 20000 semillas, completan 19883, acumulado 80000 en 328 s
+  chunk 4: 20000 semillas, completan 19893, acumulado 100000 en 410 s
+  chunk 5: 20000 semillas, completan 19875, acumulado 120000 en 492 s
+  chunk 6: 20000 semillas, completan 19898, acumulado 140000 en 574 s
+  chunk 7: 20000 semillas, completan 19889, acumulado 160000 en 673 s
+  chunk 8: 20000 semillas, completan 19888, acumulado 180000 en 738 s
+  chunk 9: 20000 semillas, completan 19903, acumulado 200000 en 819 s
 {
  "alpha": 0.005,
  "n_seeds": 200000,
@@ -16,7 +16,7 @@
  "omega_m": 0.14301489937542033,
  "n_steps": 100000,
  "a_start": 0.0001,
- "seconds": 859.8605124950409,
+ "seconds": 820.1299238204956,
  "unconditional_over_seeds": {
   "nA": 0,
   "nB": 0,

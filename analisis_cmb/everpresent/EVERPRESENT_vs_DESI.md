@@ -122,6 +122,10 @@ La única realización que pasa A y B (índice 18324: χ² = 22.6, H0 = 69.5, Ω
 Ω_de(z=1) = 0.21) tiene Ω_de(z = 1100) = 0.54, así que falla el proxy de CMB (`passing_realisations`).
 H0 de las 20000: p16/p50/p84 = 29.0 / 37.9 / 69.7.
 
+Comprobación independiente del generador: la fracción con |Ω_de(1100)| < 0.25 es 22.8 %
+(`bao_m2.json` → `best_fit_zwane.f_cmb`), frente al "∼23 %" que da [Z] Sec. 3 para el mismo criterio y
+los mismos (α, μ) ("this can happen with probability ∼23%").
+
 ### 3b. Modelo 2, malla en α (μ = 0.9804, 2000 realizaciones por punto, mismos números aleatorios)
 
 Fichero: `bao_m2.json` → `alpha_grid`; χ² en `bao_m2_alphagrid.npz`.
@@ -168,6 +172,71 @@ completado.
 
 Los límites "< x al 95 %" con 0 éxitos son la regla de 3 (3/N).
 
+### 3d. Robustez: ω_m libre por realización
+
+Responde a la objeción de "parámetros fijos". Script `robustez.py`; resultados en
+`resultados/robustez.{json,txt}`; sin simular de nuevo el Modelo 2.
+
+**Montaje.**
+- Para una realización fija, la historia Ω_Λ(z) es invariante al reescalar ω_m. En el Modelo 1 lo
+  dice [D1] Sec. 4.4: "if we keep the seed and α fixed, and then make the change ρ_m⁰ → c_0 ρ_m⁰, the
+  quantities Λ, H², and 1/√V also get re-scaled by c_0 (assuming that S_0 = 0) … the ratio ρ_m/Λ and
+  hence Ω_m and Ω_Λ remain unchanged". En el Modelo 2 es así por construcción.
+- Entonces H0 ∝ √ω_m, y D_M·H0/c y H0/H(z) son invariantes.
+- r_d(ω_m) con la fórmula de Aubourg et al. 2015 (arXiv:1411.1074, Sec. II, ec. `eqn:rd`), con
+  ω_b = 0.02237 y ω_ν = 0.000645 fijos. A ω_m de Planck da 147.063 Mpc, frente a 147.103 con CAMB:
+  −0.027 % (`rd_planck.json` → `rd_aubourg`). Se normaliza a CAMB en ω_m0.
+- Todos los D/r_d escalan con el mismo factor s(ω_m) = √(ω_m0/ω_m)·r_d(ω_m0)/r_d(ω_m), así que el
+  mínimo de χ² en ω_m ∈ [0.10, 0.20] es exacto: s* = b/a, recortado al rango s ∈ [0.921, 1.092].
+- La radiación no se reescala, y eso introduce un error de ∼10⁻⁴ en H(z) a z ∼ 2. En el Modelo 2
+  las 31 realizaciones con χ² reescalado < 35.84 se reminimizan exactamente; la diferencia exacta
+  menos reescalada es como mucho 0.13 (`check_exact_m2`). En el Modelo 1 no se puede sin resimular,
+  así que se dan los runs a menos de 1 de cada umbral.
+- Distancias del Modelo 1: el npz original no las guardaba. Se resimularon las mismas 300000 + 200000
+  semillas guardando D_M·H0/c y H0/H(z) en los 7 z. El χ² a ω_m fijo coincide con el guardado a
+  3 × 10⁻¹⁰, y los json son idénticos salvo el tiempo de cálculo.
+
+**Referencia exigente A'.** ΛCDM ajustado solo a DESI DR2 (Ω_m y H0·r_d libres) da χ²_min = **10.28**
+con Ω_m = 0.2971 y H0·r_d = 10155 km/s, es decir h·r_d = 101.55 Mpc (`robustez.json` → `lcdm_desi`).
+A (χ² ≤ 29.84, ΛCDM-Planck) es el criterio generoso; A' (χ² ≤ 10.28) es el exigente.
+
+**Modelo 2 (20000 realizaciones, α = 0.8824, μ = 0.9804).** Fracciones sobre las 20000
+(`m2_fixed`, `m2_free_wm`, `m2_joint_over_all`, `m2_within_1pct_planck_wm`):
+
+| | A (≤ 29.84) | B (Δχ² < 4) | A' (≤ 10.28) |
+|---|---|---|---|
+| ω_m fijo (Planck) | 1 (5 × 10⁻⁵) | 1 (5 × 10⁻⁵) | 0 |
+| ω_m libre en [0.10, 0.20] | **25 (1.25 × 10⁻³)** | **29 (1.45 × 10⁻³)** | 2 (1.0 × 10⁻⁴) |
+| ω_m libre y proxy CMB | **7 (3.5 × 10⁻⁴)** | **9 (4.5 × 10⁻⁴)** | 1 (5 × 10⁻⁵) |
+| ω_m libre pero a ±1 % de Planck (lo que permite el CMB) | 0 | 0 | 0 |
+
+- Mejor realización: χ² = 7.89 con ω_m = 0.197 (+38 % sobre Planck) y H0 = 69.4, pero Ω_de(1100) =
+  0.92, así que falla el proxy.
+- Mejor realización que pasa el proxy: χ² = 9.71 con ω_m = 0.127 (−11 %), H0 = 61.3, Ω_de(0) = 0.66.
+- De las 29 que pasan B, la más cercana a Planck tiene ω_m = 0.1485 (+3.8 %) (`m2_passing_B`).
+- El óptimo cae en el borde del rango en el 66 % de las realizaciones (ω_m = 0.20) y en el 24 %
+  (ω_m = 0.10).
+
+**Modelo 1 (run_das, n = 10⁵).** Fracciones sobre semillas (sobre completados entre paréntesis)
+(`m1_alpha0.01`, `m1_alpha0.005`):
+
+| | α = 0.01 (300000 semillas, 82795 completan) | α = 0.005 (200000, 198858) |
+|---|---|---|
+| A, ω_m fijo | 0 | 0 |
+| A, ω_m libre | **1 (3.3 × 10⁻⁶; 1.2 × 10⁻⁵)** | **1 (5.0 × 10⁻⁶; 5.0 × 10⁻⁶)** |
+| B, ω_m libre | **2 (6.7 × 10⁻⁶)**; entre 1 y 3 contando los runs a ±1 del umbral (χ² = 33.25 y 34.40) | **1 (5.0 × 10⁻⁶)**; entre 1 y 2 (χ² = 34.19) |
+| A', ω_m libre | 0 | 0 |
+| A y proxy CMB / B y proxy CMB | 0 / 1 (el de χ² = 33.25, a 0.6 del umbral) | 1 / 1 |
+| mejor χ² | 17.76: ω_m = 0.108 (−25 %), H0 = 50.9, Ω_Λ(0) = 0.58, Ω_de(1100) = 0.58 (falla el proxy) | 16.27: ω_m = 0.174 (+22 %), H0 = 62.4, Ω_Λ(0) = 0.55, Ω_de(1100) = −0.09 |
+| óptimo en el borde ω_m = 0.20 | 86 % | 99 % |
+| H0 tras optimizar, p16/p50/p84 | 37.4 / 46.4 / 55.9 | 40.3 / 45.2 / 50.4 |
+
+En los dos modelos, liberar ω_m multiplica el número de realizaciones compatibles. Las que pasan lo
+hacen con ω_m lejos del valor de Planck, que el CMB fija al 1 %. En el Modelo 2, las que pasan B están
+entre el 3.8 % y el 40 % de distancia, y entre el 5.3 % y el 35 % si además pasan el proxy de CMB
+(`m2_passing_B`). En el Modelo 1, a −25 % y +22 %. Ninguna pasa con ω_m a ±1 % de Planck, y ninguna
+del Modelo 1 pasa A'.
+
 ### Comparación con [D2]
 
 | modelo | datos | realizaciones | mejor que ΛCDM (A) | Δχ² < 4 (B) | fichero |
@@ -178,10 +247,38 @@ Los límites "< x al 95 %" con 0 éxitos son la regla de 3 (3/N).
 | Modelo 2, este trabajo, (0.8824, 0.9804) | DESI DR2 BAO | 20000 realizaciones | 1 (5 × 10⁻⁵) | 1 (5 × 10⁻⁵) | `bao_m2.json` |
 | Modelo 2, ídem, con proxy CMB | DESI DR2 BAO + \|Ω_de(1100)\| < 0.25 | 20000 | **0** (< 1.5 × 10⁻⁴) | **0** (< 1.5 × 10⁻⁴) | `bao_m2.json` |
 | Modelo 2, α ∈ {0.02 … 0.8824} | DESI DR2 BAO | 2000 por α | 0 en todos (< 1.5 × 10⁻³) | 0 en todos | `bao_m2.json` → `alpha_grid` |
+| Modelo 1, α = 0.01, ω_m libre | DESI DR2 BAO | 300000 | 1 (3.3 × 10⁻⁶) | 2 (6.7 × 10⁻⁶) | `robustez.json` |
+| Modelo 1, α = 0.005, ω_m libre | DESI DR2 BAO | 200000 | 1 (5.0 × 10⁻⁶) | 1 (5.0 × 10⁻⁶) | `robustez.json` |
+| Modelo 2, ω_m libre | DESI DR2 BAO | 20000 | 25 (1.25 × 10⁻³) | 29 (1.45 × 10⁻³) | `robustez.json` |
+| Modelo 2, ω_m libre y proxy CMB | DESI DR2 BAO + \|Ω_de(1100)\| < 0.25 | 20000 | 7 (3.5 × 10⁻⁴) | 9 (4.5 × 10⁻⁴) | `robustez.json` |
+| Modelo 2, ω_m a ±1 % de Planck | DESI DR2 BAO | 20000 | 0 | 0 | `robustez.json` |
 
-Diferencia de método: [D2] optimiza Ω_m h², α y M_B por semilla; aquí los parámetros están fijos
-(Planck para ω_b, ω_c y r_d; α del caso) y cada realización da un único χ². Las fracciones de aquí son
-por tanto fracciones a parámetros fijos.
+Diferencia de método: [D2] optimiza Ω_m h², α y M_B por semilla. En 3a–3c los parámetros están fijos
+(Planck para ω_b, ω_c y r_d; α del caso). En 3d se optimiza ω_m por realización (con r_d(ω_m)), pero
+no α.
+
+---
+
+## 4. Limitaciones
+
+- **r_d no sale de la historia de cada realización.** Es fijo (147.103 Mpc, 3a–3c) o viene de la
+  fórmula de Aubourg con ω_m (3d), que supone una física pre-recombinación estándar. En el Modelo 1,
+  Λ no es despreciable a z > 1100 (Ω_de(1100) se distribuye con ∼40–70 % de los runs dentro de ±0.25,
+  `bao_m1_alpha*.json` → `f_cmb`), y eso cambiaría r_d realización a realización. No se ha calculado.
+- **CMB solo por proxy.** Se usa |Ω_de(1100)| < 0.25 (el criterio de [Z]) en vez de la verosimilitud
+  de Planck. [D2] Sec. 5 sí usa la verosimilitud: su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor con la
+  energía oscura suprimida en la última dispersión (Sec. 7).
+- **α fijo en el Modelo 1.** Dos valores, 0.01 y 0.005, sin perfilar en α. [D2] usa α ∈ [0.001,
+  0.025] en el MCMC. En el Modelo 2 hay malla en α (3b) pero solo con ω_m fijo.
+- **Discretización.** La fracción de runs que completan depende del paso y del arranque (sección 1).
+  Se usa n = 10⁵ y arranque en z ≈ 10⁴. La invariancia en ω_m del Modelo 1 es aproximada porque la
+  radiación no se reescala; en el Modelo 2 el error medido es ≤ 0.13 en χ².
+- **Modelos fenomenológicos.** Los Modelos 1 y 2 son implementaciones fenomenológicas que sus autores
+  presentan como preliminares. [D2] Sec. 6: "both of these models are phenomenological, as we require a
+  more developed theory of quantum gravity to inform the correct dynamics for Everpresent Λ"; [D1]
+  Sec. 6: "It is perhaps a bit premature to test these simple models against the full range of data".
+  Los resultados de aquí valen para esas implementaciones, no para la idea de Everpresent Λ en
+  general.
 
 ---
 
@@ -193,29 +290,39 @@ por tanto fracciones a parámetros fijos.
    sobreviven depende del arranque y del paso, porque el colapso es un suceso a ∼1.5σ por tiempo de
    Hubble con α = 0.01 (`das_model1.json`). El "1 de 3 desde a = 10⁻³²" de [A] no se reproduce.
 
-2. **Modelo 1 frente a DESI DR2.** Con r_d de Planck y H0 sacado de la propia simulación, ninguna de
-   las 300000 semillas con α = 0.01 ni de las 200000 con α = 0.005 ajusta DESI DR2 tan bien como
-   ΛCDM-Planck, ni siquiera dentro de Δχ² < 4. Eso es una fracción < 1.0 × 10⁻⁵ (95 %), unas 18
-   veces por debajo del 16/90000 = 1.8 × 10⁻⁴ de [D2] con supernovas. El mejor run encontrado está en
-   Δχ² = +17.3, con H0 = 55.5. De los 1317 runs con H0 entre 63 y 77, ninguno pasa; el mejor tiene
-   χ² = 98.4 (`bao_m1_alpha0.01.json`). Salvedad: [D2] optimiza (Ω_m h², α, M_B) por semilla y aquí
-   los parámetros están fijos, así que la comparación es de órdenes de magnitud, no de método.
+2. **Modelo 1 frente a DESI DR2.**
+   - A parámetros fijos, ninguna de las 500000 semillas (α = 0.01 y 0.005) ajusta DESI DR2 tan bien
+     como ΛCDM-Planck, ni con Δχ² < 4 (< 1.0 × 10⁻⁵ al 95 % con α = 0.01).
+   - Con ω_m libre en ±40 % por run, pasa 1 semilla de 300000 (α = 0.01) y 1 de 200000 (α = 0.005).
+     Es decir 3–5 × 10⁻⁶, unas 35–55 veces por debajo del 16/90000 = 1.8 × 10⁻⁴ de [D2] con
+     supernovas.
+   - Esas semillas necesitan ω_m 22–25 % lejos de Planck y H0 = 51–62, y ninguna pasa el criterio
+     exigente A' (χ² ≤ 10.28 de ΛCDM ajustado a DESI) (`bao_m1_alpha*.json`, `robustez.json`).
 
-3. **Modelo 2 frente a DESI DR2.** En el mejor ajuste de [Z], 1 de 20000 realizaciones pasa A y B, y
-   esa falla el criterio de CMB del propio [Z]. Con el proxy de CMB, 0/20000 (< 1.5 × 10⁻⁴). En la malla
-   α ∈ [0.02, 0.88], 0/2000 en todos los puntos: no hay α en el que la fracción compatible supere el
-   5 %, porque un α pequeño no deja energía oscura (χ² ≈ 15047, H0 ≈ 38) y un α grande la hace variar
-   en el rango de DESI (`bao_m2.json`).
+3. **Modelo 2 frente a DESI DR2.**
+   - En el mejor ajuste de [Z] con ω_m de Planck, pasa 1 de 20000, y esa falla el proxy de CMB; en la
+     malla α ∈ [0.02, 0.88], 0/2000 en todos los puntos (`bao_m2.json`).
+   - Con ω_m libre en ±40 %, la fracción sube a 1.25 × 10⁻³ (A), o 3.5 × 10⁻⁴ con el proxy de CMB,
+     del orden del 1.8 × 10⁻⁴ de [D2] con supernovas. Con el criterio exigente A' es 1 de 20000.
+   - Todas esas realizaciones requieren ω_m al menos un 3.8 % lejos de Planck (5.3 % con el proxy de
+     CMB); con ω_m a ±1 % de Planck, la precisión del CMB, son 0/20000 (`robustez.json`).
 
-4. **Cotas lineales.** Como fluctuación pequeña alrededor de ΛCDM, DESI DR2 limita la amplitud a
+4. **Por qué BAO es más duro que SN para este modelo.** En SN, M_B es libre y absorbe la
+   normalización de la escala de distancias, de modo que H0 queda sin medir: una realización con el
+   H0 ≈ 40 típico del modelo puede ajustar la forma de la curva de Hubble. En BAO, D/r_d mide H0·r_d,
+   y r_d lo fija la física pre-recombinación (ω_b, ω_cb), así que el H0 bajo y la variación de
+   Ω_Λ(z) en 0.3 < z < 2.3 se penalizan directamente. Solo se compensan moviendo ω_m muy por fuera de
+   lo que permite el CMB.
+
+5. **Cotas lineales.** Como fluctuación pequeña alrededor de ΛCDM, DESI DR2 limita la amplitud a
    α_Zwane < 1.85 × 10⁻² (μ fijo) o < 2.41 × 10⁻² (μ libre, que se va a su borde 0.1), y a
    σ_X < 1.29 × 10⁻² con la correlación del proceso de [A] (θ* = 2.72)
    (`profile_desi_everpresent.json`). El "4.8σ" y el "F = 72" de la versión anterior se retiran como
    números: estaban fuera del régimen lineal.
 
-5. **Diferencia con el modelo del repo.** El modelo del repo es una constante Ω_Λ0 ≈ 0.685 más un ruido
+6. **Diferencia con el modelo del repo.** El modelo del repo es una constante Ω_Λ0 ≈ 0.685 más un ruido
    estacionario pequeño X de media cero. Everpresent Λ no tiene constante: Λ es solo ruido de media
    cero, cuya amplitud tiene que ser del orden de Ω_Λ0 para dar la aceleración actual. DESI DR2 admite
-   el primero con σ_X < 2.5 × 10⁻² y rechaza el segundo en las dos implementaciones publicadas
-   (Modelos 1 y 2), a los parámetros de sus autores. En el Modelo 1, 0 de 500000 semillas; en el
-   Modelo 2, 1 de 20000 realizaciones, y esa falla el criterio de CMB.
+   el primero con σ_X < 2.5 × 10⁻². El segundo, en las dos implementaciones publicadas, solo deja
+   pasar realizaciones raras, y todas necesitan un ω_m incompatible con el CMB. Valen las limitaciones
+   de la sección 4.
