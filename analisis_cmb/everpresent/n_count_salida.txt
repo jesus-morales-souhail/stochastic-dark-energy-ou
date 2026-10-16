@@ -1,0 +1,13 @@
+Planck 2018: H0 = 67.36, Om = 0.31377, Or = 9.220e-05, OL = 0.68614
+R_H = c/H0 = 1.3733e+26 m,  l_P = 1.616255e-35 m
+particle horizon today eta0 = 3.1849 c/H0 = 14174.5 Mpc
+V4 (past light cone, Ahmed eq.3) = 0.12347 (c/H0)^4 = 4.3918e+103 m^4
+   [Zwane eq.2.6 as printed: 28.40681 (c/H0)^4 -- reference only]
+
+conteo                            N         dL/L      X equiv   X/2.506e-2
+4-volumen V4/l_P^4       6.436e+242   3.942e-122   2.705e-122   1.079e-120
+area A_H/(4 l_P^2)       2.268e+122    6.640e-62    4.556e-62    1.818e-60
+
+Normalizacion de los papers (Delta rho_L ~ 1/sqrt(V) absoluto, coeficiente 1):
+  unidades reducidas (8piG=c=hbar=1) dL/L0 = 1.383  X = 0.949  X/2.506e-2 = 37.8
+  unidades sin reducir (G=c=hbar=1)  dL/L0 = 34.748  X = 23.842  X/2.506e-2 = 951.3
