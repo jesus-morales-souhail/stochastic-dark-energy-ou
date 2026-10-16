@@ -1,0 +1,18 @@
+H0^4 V sin energia oscura (om = 0.14, m + r): 0.0338  (H0 propio 37.42 km/s/Mpc); EdS analitico 0.0338
+  el 'V sin Lambda' anterior: 0.3435 en unidades de H0 fiducial 67.36; x (H0 propio/H0 fid)^4 = 0.0338
+H^2 sqrt(V): RD 0.1223, MD 0.1840;  |Lambda|/(3H^2) = 68.5 alpha (RD), 45.5 alpha (MD)
+  alpha 0.005: completan 1321/2000 = 0.6605 +- 0.0106   (Das I: 9990/10000)   H0 37.9 +- 4.4  sigma(OmL0) 0.246
+  alpha 0.01: completan 263/2000 = 0.1315 +- 0.0076   (Das I: 3228/10000)   H0 39.5 +- 8.5  sigma(OmL0) 0.530
+  alpha 0.012: completan 63/2000 = 0.0315 +- 0.0039   (Das I: 535/10000)   H0 39.1 +- 9.3  sigma(OmL0) 0.693
+  alpha 0.02: completan 0/2000 = 0.0000 +- 0.0000   (Das I: <10/10000)
+Dependencia con la discretizacion (mismo arranque a = 1e-4):
+  n=  10000 alpha=0.005: 1321/2000 = 0.6605  H0 37.9 +- 4.4
+  n=  10000 alpha=0.01: 263/2000 = 0.1315  H0 39.5 +- 8.5
+  n=  10000 alpha=0.012: 63/2000 = 0.0315  H0 39.1 +- 9.3
+  n= 100000 alpha=0.005: 992/1000 = 0.9920  H0 37.9 +- 4.4
+  n= 100000 alpha=0.01: 275/1000 = 0.2750  H0 40.3 +- 8.5
+  n= 100000 alpha=0.012: 41/1000 = 0.0410  H0 41.2 +- 11.1
+  n=1000000 alpha=0.005: 300/300 = 1.0000  H0 38.3 +- 4.3
+  n=1000000 alpha=0.01: 69/300 = 0.2300  H0 41.3 +- 9.3
+  n=1000000 alpha=0.012: 4/300 = 0.0133  H0 46.9 +- 10.0
+Escrito resultados/das_model1.json

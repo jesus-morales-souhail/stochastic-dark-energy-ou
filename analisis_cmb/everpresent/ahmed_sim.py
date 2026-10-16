@@ -107,6 +107,154 @@ def run(alpha: float, conv: str, n_real: int = N_REAL, h: float = H_STEP, seed: 
     return {"alive": alive, "a_death": a_death, "rec_lna": rec_lna, "rec": rec, "OmL0": rec[-1], "nsteps": nsteps}
 
 
+# ---------------------------------------------------------------------------------------------
+# Das, Nasiri, Yazdi (arXiv:2304.03819, "Das I"), Model 1, followed literally. Kept in parallel
+# to run() above (Ahmed-style, steps in ln a from a = 1e-32), which is not modified.
+#   Lambda_i = 8 pi G S_i / V_i,  S_i = S_{i-1} + alpha sqrt(V_i - V_{i-1}) xi_i / G   (4.11)-(4.12)
+#     => Lambda_i = 8 pi alpha sum_j sqrt(dV_j) xi_j / V_i                              (3.16), c = 1
+#   H^2 = 8 pi G (rho_m + rho_r)/3 + Lambda/3                                           (4.2)
+#   crash when H^2 < 0 (Sec. 4.3); steps uniform in a, a_i = i/n (Sec. 4.2);
+#   start z ~ 1e4 with the volume up to then from matter + radiation only (Sec. 5.2),
+#   S_0 = 0; n = 10000, i_initial = 1 (the values quoted in Sec. 5.3 and in Das II Sec. 4.1);
+#   Omega_m h^2 = 0.14 (Sec. 5.1).
+# In units H = 100 km/s/Mpc, lengths c/(100 km/s/Mpc):  H^2 = om a^-3 + orad a^-4 + u,
+#   u = Lambda/3 = (8 pi alpha / 3) Sh / Vh  -> K_Das = 8 pi / 3 (= K["NR"] above).
+# ---------------------------------------------------------------------------------------------
+OMR_H2 = OMR * (0.6736**2)  # omega_r of n_count (photons + 3.046 massless nu)
+K_DAS = 8.0 * np.pi / 3.0
+
+
+def _j_init_mr(a0: float, om: float, orad: float) -> np.ndarray:
+    """J_k(a0) = int_0^a0 a^3 (eta(a0) - eta(a))^k dt for a matter + radiation universe, no Lambda."""
+    from scipy.integrate import quad
+
+    H = lambda a: np.sqrt(om / a**3 + orad / a**4)
+    eta = lambda a: quad(lambda x: 1.0 / (x * x * H(x)), 0.0, a, epsabs=0, epsrel=1e-12, limit=200)[0]
+    e0 = eta(a0)
+    return np.array([quad(lambda a: a**2 / H(a) * (e0 - eta(a)) ** k, 0.0, a0, epsabs=0, epsrel=1e-10, limit=200)[0]
+                     for k in range(4)])
+
+
+def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad: float = OMR_H2, n: int = 10000,
+            i_ini: int = 1, z_rec: float = 3.0, sub_rel: float = 0.02) -> dict:
+    """Model 1 as in Das I Sec. 4.2. Within each a-step Lambda is fixed and the J_k are integrated
+    with RK4 substeps of relative size <= sub_rel (stands in for their Romberg integration).
+    Records u(a) for a >= 1/(1+z_rec) of the runs that are alive."""
+    rng = np.random.default_rng(seed)
+    a_grid = np.arange(i_ini, n + 1) / n
+    J = np.repeat(_j_init_mr(a_grid[0], om, orad)[:, None], n_real, axis=1)
+    V = 4 * np.pi / 3 * J[3]
+    S = np.zeros(n_real)
+    u = np.zeros(n_real)
+    alive = np.ones(n_real, bool)
+    a_death = np.full(n_real, np.nan)
+    i_rec = int(np.searchsorted(a_grid, 1.0 / (1.0 + z_rec)))
+    rec_a = a_grid[i_rec:]
+    rec_u = np.full((len(rec_a), n_real), np.nan)
+
+    def rhs(a, J, u):
+        H2 = om / a**3 + orad / a**4 + u
+        bad = H2 <= 0
+        H = np.sqrt(np.where(bad, np.nan, H2))
+        d = np.empty_like(J)
+        d[0] = a**2 / H
+        for j in (1, 2, 3):
+            d[j] = j * J[j - 1] / (a * a * H)
+        return d, bad
+
+    for i in range(1, len(a_grid)):
+        a0, a1 = a_grid[i - 1], a_grid[i]
+        m = max(1, int(np.ceil((a1 - a0) / (sub_rel * a0))))
+        h = (a1 - a0) / m
+        Jn = J.copy()
+        bad = np.zeros(n_real, bool)
+        for k in range(m):
+            a = a0 + k * h
+            k1, b1 = rhs(a, Jn, u)
+            k2, b2 = rhs(a + h / 2, Jn + h / 2 * k1, u)
+            k3, b3 = rhs(a + h / 2, Jn + h / 2 * k2, u)
+            k4, b4 = rhs(a + h, Jn + h * k3, u)
+            Jn = Jn + h / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+            bad |= b1 | b2 | b3 | b4
+        xi = rng.standard_normal(n_real)
+        died = alive & (bad | ~np.all(np.isfinite(Jn), axis=0))
+        Vn = 4 * np.pi / 3 * Jn[3]
+        dV = np.where(alive & ~died, Vn - V, 0.0)
+        Sn = S + xi * np.sqrt(np.maximum(dV, 0.0))
+        un = K_DAS * alpha * Sn / Vn
+        died |= alive & (om / a1**3 + orad / a1**4 + un <= 0)
+        a_death[died] = a1
+        alive &= ~died
+        J = np.where(alive, Jn, J)
+        V = np.where(alive, Vn, V)
+        S = np.where(alive, Sn, S)
+        u = np.where(alive, un, u)
+        if i >= i_rec:
+            rec_u[i - i_rec] = np.where(alive, un, np.nan)
+    H0 = 100.0 * np.sqrt(om + orad + u)
+    return {"alive": alive, "a_death": a_death, "rec_a": rec_a, "rec_u": rec_u, "om": om, "orad": orad,
+            "H0": np.where(alive, H0, np.nan), "OmL0": np.where(alive, u / (om + orad + u), np.nan), "V0hat": V}
+
+
+def main_das() -> None:
+    from scipy.integrate import quad
+
+    OUT.mkdir(exist_ok=True)
+    out = {"source": "Das, Nasiri, Yazdi arXiv:2304.03819 Model 1", "seed": SEED, "omega_m": 0.14, "omega_r": OMR_H2,
+           "n": 10000, "i_initial": 1, "a_start": 1e-4, "S0": 0.0}
+
+    # Check H0^4 V for a universe without dark energy (Das I Sec. 5.1: 0.033)
+    om = 0.14
+    H = lambda a: np.sqrt(om / a**3 + OMR_H2 / a**4)
+    J = _j_init_mr(1.0, om, OMR_H2)
+    h_own = np.sqrt(om + OMR_H2)
+    v_own = 4 * np.pi / 3 * J[3] * h_own**4
+    eds = 36 * np.pi * 3 * factorial(8) * factorial(3) / factorial(12) * (2 / 3) ** 4
+    # our earlier number: same m + r universe, V in units of the fiducial H0 = 67.36 (n_count.py)
+    v_fid = 4 * np.pi / 3 * _j_init_mr(1.0, OMM, OMR)[3]
+    out["check_V"] = {"H0own4_V_matter_radiation_om0.14": float(v_own), "H0_own_kms": float(100 * h_own),
+                      "EdS_analytic": float(eds), "earlier_0.3435_in_fiducial_H0_units": float(v_fid),
+                      "earlier_times_(H0own/H0fid)^4": float(v_fid * (OMM + OMR) ** 2)}
+    print(f"H0^4 V sin energia oscura (om = 0.14, m + r): {v_own:.4f}  (H0 propio {100 * h_own:.2f} km/s/Mpc);"
+          f" EdS analitico {eds:.4f}")
+    print(f"  el 'V sin Lambda' anterior: {v_fid:.4f} en unidades de H0 fiducial 67.36; x (H0 propio/H0 fid)^4 ="
+          f" {v_fid * (OMM + OMR) ** 2:.4f}")
+
+    # Typical |Lambda|/(3H^2) = 8 pi alpha / (3 H^2 sqrt(V)) in radiation and matter domination (no Lambda)
+    rd = np.sqrt(4 * np.pi / 3 * factorial(4) * factorial(3) / factorial(8))  # H^2 sqrt(V), pure radiation
+    md = np.sqrt(eds)  # H0^2 sqrt(V), Einstein-de Sitter
+    out["typical_amplitude"] = {"H2sqrtV_RD": float(rd), "H2sqrtV_MD": float(md),
+                                "OmL_per_alpha_RD": float(K_DAS / rd), "OmL_per_alpha_MD": float(K_DAS / md)}
+    print(f"H^2 sqrt(V): RD {rd:.4f}, MD {md:.4f};  |Lambda|/(3H^2) = {K_DAS / rd:.1f} alpha (RD), {K_DAS / md:.1f} alpha (MD)")
+
+    das_ref = {0.005: "9990/10000", 0.01: "3228/10000", 0.012: "535/10000", 0.02: "<10/10000"}
+    out["fractions"] = {}
+    for al in (0.005, 0.01, 0.012, 0.02):
+        r = run_das(al, 2000)
+        k = int(r["alive"].sum())
+        p = k / 2000
+        err = np.sqrt(p * (1 - p) / 2000)
+        h0 = r["H0"][r["alive"]]
+        o0 = r["OmL0"][r["alive"]]
+        out["fractions"][str(al)] = {"complete": k, "n": 2000, "frac": p, "binom_err": err, "das": das_ref[al],
+                                     "H0_mean": float(np.mean(h0)) if k else None, "H0_std": float(np.std(h0)) if k else None,
+                                     "OmL0_std": float(np.std(o0)) if k else None}
+        print(f"  alpha {al}: completan {k}/2000 = {p:.4f} +- {err:.4f}   (Das I: {das_ref[al]})"
+              + (f"   H0 {np.mean(h0):.1f} +- {np.std(h0):.1f}  sigma(OmL0) {np.std(o0):.3f}" if k else ""))
+    print("Dependencia con la discretizacion (mismo arranque a = 1e-4):")
+    out["discretization"] = {}
+    for n, i_ini, nr in ((10000, 1, 2000), (100000, 10, 1000), (1000000, 100, 300)):
+        for al in (0.005, 0.01, 0.012):
+            r = run_das(al, nr, n=n, i_ini=i_ini)
+            k = int(r["alive"].sum())
+            h0 = r["H0"][r["alive"]]
+            out["discretization"][f"n{n}_alpha{al}"] = {"complete": k, "n_seeds": nr, "frac": k / nr,
+                                                       "H0_mean": float(np.mean(h0)), "H0_std": float(np.std(h0))}
+            print(f"  n={n:>7} alpha={al}: {k}/{nr} = {k / nr:.4f}  H0 {np.mean(h0):.1f} +- {np.std(h0):.1f}")
+    (OUT / "das_model1.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    print("Escrito resultados/das_model1.json")
+
+
 def stats(res: dict) -> dict:
     ok = res["alive"]
     om0 = res["OmL0"][ok]
@@ -226,4 +374,6 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    main_das() if len(sys.argv) > 1 and sys.argv[1] == "das" else main()

@@ -197,3 +197,86 @@ X se lee como δΩ_Λ; θ se perfila libre en (10⁻³, 20)
 
 Cifra para la fila "Amplitud": 0.8824 / 2.506 × 10⁻² ≈ 35 (α de [Z] frente a la cota σ_X; α es
 la σ de Ω̂_de antes del tanh, tanh(0.8824) ≈ 0.71).
+
+---
+
+## [D1] Das, Nasiri, Yazdi, "Aspects of Everpresent Λ (I)", arXiv:2304.03819
+
+Fuente `EverLam1.tex` (fichero de arXiv fechado 2024-02-22). Ecuaciones numeradas por sección.
+Secciones: 2 Background (2.1 Causal sets, 2.2 Unimodular gravity), 3 Everpresent Λ (3.1 Model 1),
+4 Methodology (4.1 FLRW, 4.2 Numerical Recipe, 4.3 H²<0 Crashed Runs, 4.4 ρ_m as a Scaling
+Parameter), 5 Results (5.1 Statistical Distributions, 5.2 Frequency of Completed Runs,
+5.3 Initial Conditions, 5.4 Auto-Correlation Time), 6 Discussion.
+
+- **N y V.** Correspondencia número–volumen: ⟨N⟩ = ρ_cs V, ρ_cs ≡ 1/ℓ_cs⁴, con N poissoniano
+  (2.1) y δV = √N/ρ_cs (2.2). V es el 4-volumen del cono de luz pasado de un punto (Sec. 3.1, tras
+  3.11), (4.4): V(τ) = (4π/3) ∫_{τ_i}^{τ} dτ' a(τ')⁴ (τ − τ')³, equivalente en tiempo cósmico a [A]
+  ec. (3) (nota al pie de 4.4).
+- **Incertidumbre.** (3.4)–(3.6): δΛ/(8πG) · δV ≥ ħ/2 → δΛ = 4π (ℓ_p/ℓ_cs)² /√V, con ℓ_p = √(Għ).
+- **α.** (3.8) δΛ = (8πα/ℓ_cs²)(1/√N), con (3.9) **α ≡ ½ (ℓ_p/ℓ_cs)²**.
+- **S y Λ.** S_Λ = (ℓ_cs⁴/8πℓ_p²) Σ_x Λ|_x (3.11); S_Λ|_pasado de x = Λ(x)V(x)/(8πG) (3.12);
+  Λ(x) ∼ 𝒩(0, 8πα/√V) (3.13). Recursión (3.14)–(3.15):
+  Λ(x_n) = [Λ(x_{n−1}) V(x_{n−1}) + 8πα √ΔV_n ξ_n] / V(x_n), y sumada (3.16):
+  Λ(x_n) = [8πG S_0 + 8πα Σ_{i=1}^{n} √ΔV_i ξ_i] / V(x_n).
+  En la receta numérica (Sec. 4.2): S_i = S_{i−1} + α √(V_i − V_{i−1}) ξ_i / G (4.11),
+  Λ_i = 8πG S_i / V_i (4.12). Es decir, α entra multiplicando a 8π en la fluctuación de Λ
+  (geométrica, c = 1), sin ℓ_p: Λ = 8πα Σ√ΔV ξ / V.
+- **Friedmann.** (4.2): H² = (8πG/3)(ρ_m + ρ_r) + Λ/3. Solo se usa esta ecuación (Sec. 4.1).
+  En la receta, dτ/da = √(3 / [8πG a⁴(ρ_m + ρ_r) + a⁴ Λ_{i−1}]) (4.6)–(4.7), con Λ_{i−1} fijo en el
+  paso. Pasos uniformes en a: "the value of a is i/n" (Sec. 4.2).
+- **Criterio de muerte.** H² < 0 ("H² < 0 crash", Sec. 4.3): "we will disregard universes that reach
+  H² < 0 before the present, and terminate their evolutions at this point."
+- **Condición inicial.** Parámetros: S_0, V_0, n, i_initial (Sec. 4.2). Sec. 5.2: "we start the
+  simulations from z ≈ 10⁴, and except in the next subsection, we calculate the volume up to this time
+  using only the matter and the radiation component of the universe"; con arranque en z ∼ 10⁸ y paso
+  logarítmico "the crashing fraction is almost 100% for α = 0.01". Sec. 5.3: V_0 solo entra en el
+  denominador de (4.12), no en el numerador fluctuante; los resultados "do not appear to be sensitive"
+  a V_0; S_0 > 0 añade un sesgo positivo persistente. El estudio de S_0 usa α = 0.015, V_0 = 1,
+  i_initial = 1, n = 10000, S_0 de 0 a 1. El α = 0.02 de Sec. 5.2 es "if we take S_0 = 0".
+- **Ω_m h².** Fijado a 0.14 en Sec. 5.1 ("For our universe Ω_m⁰h² ≈ 0.14"). Sec. 4.4: con S_0 = 0 y
+  semilla fija, Λ, H² y 1/√V escalan con ρ_m⁰, así que Ω_m y Ω_Λ no dependen de Ω_m⁰h².
+- **Fracciones de runs completados.** Pie de Fig. 3 (Sec. 5.1), 10000 semillas cada una:
+  **9990** (α = 0.005), **3228** (α = 0.01), **535** (α = 0.012). Sec. 5.2: α = 0.02, "less than 10
+  out of 10,000 for any given Δτ" (pasos constantes en tiempo conforme). Sec. 5.1 no da el número de
+  pasos; [D2] Sec. 4.1 dice "when dividing the history of the Universe into 10,000 timesteps". Sec. 5.2:
+  "as we decrease the size of the time step, the fraction reaching the present day increases (in fact
+  it starts to plateau for the smallest values of Δτ)".
+- **Otros números.** H0 medio cerca de 40 km/s/Mpc en los tres α; sin energía oscura H0 ≈ 37.7
+  (Sec. 5.1). "H0⁴V = 0.033" para un universo sin energía oscura (Sec. 5.1). Autocorrelación ajustada
+  ≈ exp(−3.2 (Δλ)^0.48) (Sec. 5.4, Fig. 5).
+
+## [D2] Das, Nasiri, Yazdi, "Aspects of Everpresent Λ (II)", arXiv:2307.13743
+
+Fuente `EverLam2.tex` (fichero de arXiv fechado 2024-10-07). Secciones: 2 Overview (2.1 Model 1,
+2.2 Model 2), 3 Cosmological Observations, 4 Fitting Model 1 to Supernova Data (4.1 MCMC, 4.2
+Diagnosing Good Seeds, 4.3 Mock Data), 5 Fitting Model 1 to CMB Data, 6 Constraining Dark Energy
+Using CMB, 7 Discussion and Conclusion.
+
+- **Modelo 1** (Sec. 2.1): V_t (2.1) igual que [A] ec. (3); Λ_t = [Λ_{t−dt}V_{t−dt} + 8πα ξ_t √(V_t −
+  V_{t−dt})]/V_t (2.2); ρ_Λ = Λ/(8πG) (2.3); Friedmann (2.4): ȧ²/a² = (8πG/3)(ρ_t + ρ_Λ) =
+  (8πG ρ_cr⁰/3)(Ω_m⁰a⁻³ + Ω_r⁰a⁻⁴ + ρ_Λ/ρ_cr⁰), con ρ_cr⁰ = 3H0²/(8πG) y "H0 … taken to be
+  approximately 70 km/s/Mpc", una constante de normalización, no el H0 de la simulación. c = 1.
+  Condición inicial: "we set it during the radiation-dominated era by specifying an initial non-zero
+  four-volume V_0 (calculated using a radiation-dominated universe without dark energy)".
+  Mismo criterio de muerte H² < 0.
+- **Modelo 2** (Sec. 2.2): Ω_Λ = tanh Ω̂_Λ, ⟨Ω̂Ω̂⟩ = α̃² e^{−μ(λ_1−λ_2)²/2}, λ = log a.
+- **Supernovas** (Sec. 4.1–4.2): Pantheon+SH0ES; 90000 semillas, un MCMC por semilla en
+  (Ω_m⁰h², α, M_B), α ∈ [0.001, 0.025]. ΛCDM: χ² ≈ 1485.3. 55 semillas con χ² en [1481, 1490];
+  **16 mejores que ΛCDM: "16 out of 90000, or about 0.017%"** (Sec. 4.2). Con mocks del propio
+  Modelo 1: f_D entre 0.026 y 0.205, media 0.076 (Sec. 4.3).
+- **CMB** (Sec. 5): 100000 semillas; tras cortes (H0 > 60 para algún α, Ω_m^min ≤ 0.45), 3106; 91
+  con χ² < 3000; mejor χ² = 2495.56 frente a 2339.0 de ΛCDM (∼157 peor), con H0 entre 40 y 51.
+  Con supresión de la energía oscura en la última dispersión, ∼20 peor (Sec. 7). Modelo 2 con 3000
+  semillas: α̃ → < 0.1 o Ω_m⁰ > 0.9, H0 ≈ 40. Sobre Zwane: "their equation of state parameter w(z) was
+  restricted to a narrow negative range … Therefore, our results should not be compared to those of
+  this previous work" (Sec. 5.2).
+- **Conclusión** (Sec. 7): "the most basic models of Everpresent Λ have difficulty describing both the
+  SN Ia and CMB data."
+
+## [B] Barrow 2007, "A Strong Constraint on Ever-Present Lambda", gr-qc/0612128, PRD 75, 067301
+
+Solo el abstract (API de arXiv; fuente no descargada): "strongly constrained by the isotropy of the
+microwave background. Fluctuations generated by stochastic lambda generation which are consistent with
+COBE and WMAP observations are far too small to dominate the expansion dynamics at z<1000 and so cannot
+explain the observed late-time acceleration of the universe." [Z] Sec. 2.3 lo resume como una cota
+∼10⁻⁶ en las fluctuaciones de Λ, bajo la hipótesis de Λ(x) local con parches del CMB no correlacionados.
