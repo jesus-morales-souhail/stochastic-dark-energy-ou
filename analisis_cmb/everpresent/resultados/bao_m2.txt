@@ -1,0 +1,9 @@
+checks: LCDM por este pipeline chi2 29.798 (H0 67.36); Omega_de = 0: chi2 15047 (H0 37.82)
+M2 (0.8824, 0.9804), 20000: chi2 p5/p50/p95 1585.4/26335.0/87560.1 min 22.63; A 1 (0.0050%); B 1 (0.0050%); CMB-proxy 4569 (22.845%); A&CMB 0; B&CMB 0 (0.0000%)
+  alpha 0.02  : chi2 p50  15088.4  fA 0.0000  fB 0.0000  f_cmb 1.000
+  alpha 0.05  : chi2 p50  15154.8  fA 0.0000  fB 0.0000  f_cmb 1.000
+  alpha 0.1   : chi2 p50  15267.3  fA 0.0000  fB 0.0000  f_cmb 0.992
+  alpha 0.2   : chi2 p50  15517.0  fA 0.0000  fB 0.0000  f_cmb 0.788
+  alpha 0.4   : chi2 p50  16623.5  fA 0.0000  fB 0.0000  f_cmb 0.478
+  alpha 0.8824: chi2 p50  26498.3  fA 0.0000  fB 0.0000  f_cmb 0.228
+Escrito resultados/bao_m2.json, bao_m2_bestfit.npz, bao_m2_alphagrid.npz

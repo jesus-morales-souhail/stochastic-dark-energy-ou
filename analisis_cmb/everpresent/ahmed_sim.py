@@ -135,22 +135,35 @@ def _j_init_mr(a0: float, om: float, orad: float) -> np.ndarray:
                      for k in range(4)])
 
 
+def _tau_init_mr(a0: float, om: float, orad: float) -> float:
+    from scipy.integrate import quad
+
+    return quad(lambda x: 1.0 / (x * x * np.sqrt(om / x**3 + orad / x**4)), 0.0, a0, epsabs=0, epsrel=1e-12)[0]
+
+
 def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad: float = OMR_H2, n: int = 10000,
-            i_ini: int = 1, z_rec: float = 3.0, sub_rel: float = 0.02) -> dict:
+            i_ini: int = 1, z_rec: float | None = None, sub_rel: float = 0.02, z_obs=None) -> dict:
     """Model 1 as in Das I Sec. 4.2. Within each a-step Lambda is fixed and the J_k are integrated
     with RK4 substeps of relative size <= sub_rel (stands in for their Romberg integration).
-    Records u(a) for a >= 1/(1+z_rec) of the runs that are alive."""
+    Optional: records u(a) for a >= 1/(1+z_rec); records conformal time tau and u at the grid
+    point nearest to each z in z_obs (tau in units c/(100 km/s/Mpc))."""
     rng = np.random.default_rng(seed)
     a_grid = np.arange(i_ini, n + 1) / n
-    J = np.repeat(_j_init_mr(a_grid[0], om, orad)[:, None], n_real, axis=1)
+    J0 = np.append(_j_init_mr(a_grid[0], om, orad), _tau_init_mr(a_grid[0], om, orad))  # row 4 = tau
+    J = np.repeat(J0[:, None], n_real, axis=1)
     V = 4 * np.pi / 3 * J[3]
     S = np.zeros(n_real)
     u = np.zeros(n_real)
     alive = np.ones(n_real, bool)
     a_death = np.full(n_real, np.nan)
-    i_rec = int(np.searchsorted(a_grid, 1.0 / (1.0 + z_rec)))
+    i_rec = int(np.searchsorted(a_grid, 1.0 / (1.0 + z_rec))) if z_rec is not None else len(a_grid)
     rec_a = a_grid[i_rec:]
     rec_u = np.full((len(rec_a), n_real), np.nan)
+    z_obs = np.atleast_1d(z_obs) if z_obs is not None else np.zeros(0)
+    i_obs = np.array([int(np.argmin(np.abs(a_grid - 1.0 / (1.0 + z)))) for z in z_obs], dtype=int)
+    obs_a = a_grid[i_obs] if len(i_obs) else np.zeros(0)
+    obs_tau = np.full((len(i_obs), n_real), np.nan)
+    obs_u = np.full((len(i_obs), n_real), np.nan)
 
     def rhs(a, J, u):
         H2 = om / a**3 + orad / a**4 + u
@@ -160,6 +173,7 @@ def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad:
         d[0] = a**2 / H
         for j in (1, 2, 3):
             d[j] = j * J[j - 1] / (a * a * H)
+        d[4] = 1.0 / (a * a * H)
         return d, bad
 
     for i in range(1, len(a_grid)):
@@ -191,9 +205,13 @@ def run_das(alpha: float, n_real: int, seed: int = SEED, om: float = 0.14, orad:
         u = np.where(alive, un, u)
         if i >= i_rec:
             rec_u[i - i_rec] = np.where(alive, un, np.nan)
+        for k in np.nonzero(i_obs == i)[0]:
+            obs_tau[k] = J[4]
+            obs_u[k] = u
     H0 = 100.0 * np.sqrt(om + orad + u)
     return {"alive": alive, "a_death": a_death, "rec_a": rec_a, "rec_u": rec_u, "om": om, "orad": orad,
-            "H0": np.where(alive, H0, np.nan), "OmL0": np.where(alive, u / (om + orad + u), np.nan), "V0hat": V}
+            "H0": np.where(alive, H0, np.nan), "OmL0": np.where(alive, u / (om + orad + u), np.nan), "V0hat": V,
+            "tau0": J[4], "obs_a": obs_a, "obs_tau": obs_tau, "obs_u": obs_u}
 
 
 def main_das() -> None:

@@ -125,6 +125,7 @@ Categorías:
 | scripts/desqueezing/cosmological_mapping.py | 39, 137 | `SIGMA_X_MLE_FLOOR = 5.0e-5` | Comentario "(run antiguo, cov diagonal)" | D | T |
 | scripts/ou_bao_likelihood.py; scripts/ou_bao_stochastic_test.py | 86, 583; 83 | `SIGMA_OU = 2.31e-2` "calibrated…"; scatter (0.001, 5e-5) "MLE best fit (DR2)" | "# SUPERSEDED DR1 calibration, NOT the 95% CL 2.5e-2"; label "(old diagonal-cov run)" | C (se confunde fácilmente con 2.5e-2) y D | T |
 | scripts/cross_correlation_DESI.py | 32, 280, 650 | `SIGMA_X = 0.018`; "σ_X calibrado del paper" | "ilustrativo, calibración DR1 obsoleta" | C | T |
+| results/profile_sigma_x/profile_sigma_x.json (y todo lo que cite 2.5e-2 / 2.506e-2) | `sigma_X_95CL_upper_profile` | "0.025063155506929828" (2.506e-2) | Es un nodo de la malla geomspace(1e-6, 5e-2, 48), el último con ΔlnL ≥ −1.92; la raíz refinada entre nodos es **2.633e-2**. Decidir si el paper dice σ_X < 2.5e-2 (nodo de malla) o < 2.6e-2 (raíz), y decirlo igual en todas partes | `analisis_cmb/everpresent/resultados/profile_desi_everpresent.json` → `T0_ou_theta_profiled` (upper95_grid 2.506316e-2, upper95_refined 2.6328e-2; copia del script con malla y datos idénticos) | N |
 
 ### 2b. Apariciones correctas (no cambiar)
 
