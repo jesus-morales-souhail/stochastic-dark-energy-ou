@@ -1,0 +1,16 @@
+data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt | cov_mode: full_gaussian_bao_projected_13x13 | lnL(null) = 24.899563
+T0 OU theta perfilado: 95% grid 2.506316e-02  (vigente 2.506316e-02)  refinado 2.6328e-02
+T1_ou_theta1: max dlnL -2.97e-08 en 1.00e-06; 95% grid 1.2563e-02  refinado 1.4443e-02
+T2_ou_theta_fit: max dlnL -2.65e-08 en 1.00e-06; 95% grid 1.2563e-02  refinado 1.2944e-02  (theta = 2.7197)
+Z1_zwane_mu_fixed: mejor alpha 1.00e-06 (mu 0.98), max dlnL -3.21e-08; 95% grid 1.6876e-02 refinado 1.8488e-02 (mu ahi 0.9804); alpha=0.8824: mu 0.9804 dlnL -11.58 dchi2 23.15 -> 4.81 sigma
+Z2_zwane_mu_free: mejor alpha 1.00e-06 (mu 10), max dlnL -2.86e-08; 95% grid 2.0278e-02 refinado 2.4072e-02 (mu ahi 0.1); alpha=0.8824: mu 0.1 dlnL -8.57 dchi2 17.15 -> 4.14 sigma
+Z1 con tanh (cov exacta de tanh, alpha=0.8824, mu=0.9804): std 0.5910 dlnL -10.78 dchi2 21.56 -> 4.64 sigma
+Z2 mu a lo largo del perfil (alpha >= 1e-3):
+   alpha 1.074e-03  mu 10
+   alpha 3.232e-03  mu 10
+   alpha 9.727e-03  mu 0.1
+   alpha 2.928e-02  mu 0.1
+   alpha 8.813e-02  mu 0.1
+   alpha 2.653e-01  mu 0.1
+   alpha 7.984e-01  mu 0.1
+Escrito resultados/profile_desi_everpresent.json

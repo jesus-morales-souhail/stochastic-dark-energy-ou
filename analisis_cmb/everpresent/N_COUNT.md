@@ -14,6 +14,12 @@ Fórmulas:
 - N_área = A_H/(4ℓ_P²), A_H = 4π(c/H0)².
 - δΛ/Λ ~ 1/√N;  X = Ω_Λ δΛ/Λ con Ω_Λ = 0.686.
 
+> **DESCARTADA (2026-10-16).** La tabla siguiente lee 1/√N como δΛ/Λ_obs. Era un error del
+> enunciado: en [A] y [Z], 1/√V es la fluctuación *absoluta* δρ_Λ = α/√V en unidades de
+> Planck, no una fracción de Λ_obs. La cantidad correcta y su conversión a X están en la
+> "Nota de normalización" de más abajo y en `EVERPRESENT_vs_DESI.md`. Se deja la tabla como
+> registro de por qué no se usa.
+
 | conteo | N | δΛ/Λ | X equivalente | X / 2.506e-2 |
 |---|---|---|---|---|
 | 4-volumen V_4/ℓ_P⁴ | 6.44 × 10²⁴² | 3.94 × 10⁻¹²² | 2.71 × 10⁻¹²² | 1.08 × 10⁻¹²⁰ |

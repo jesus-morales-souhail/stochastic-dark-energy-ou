@@ -1,0 +1,229 @@
+#!/usr/bin/env python3
+"""
+Reproduction of Ahmed, Dodelson, Greene, Sorkin (astro-ph/0209274), Sec. III.
+
+Their eq. (5):  S_{i+1} = S_i + alpha xi_{i+1} sqrt(dN_i),  rho_L = S/N,
+                dN_i = V(t_{i+1}) - V(t_i)               (eq. 4),
+                V(t) = 4pi/3 int_0^t dt' a'^3 [int_t'^t dt''/a'']^3   (eq. 3, past light cone),
+Friedmann only (eq. 6), radiation + matter + rho_L, S_0 = 0 at a = 1e-32. A run dies when
+rho_tot <= 0.
+
+Two unit conventions for "N = V" and rho_L:
+  (R)  8 pi G = hbar = c = 1:  H^2 = rho / 3,      N = V / l_red^4
+  (NR) G = hbar = c = 1:       H^2 = 8 pi rho / 3, N = V / l_P^4
+Writing time in 1/H0, lengths in c/H0, Vh = V H0^4/c^4 and Sh = sum xi sqrt(dVh), every
+power of (H0 t_unit) cancels and the dark-energy term in E^2 = H^2/H0^2 is
+        u = K alpha Sh / Vh,     K = 1/3 (R)  or  8 pi / 3 (NR).
+So the two conventions differ only by K (a factor 8 pi), and no 10^240 numbers appear.
+
+V is integrated without cancellation through J_k(t) = int_0^t dt' a'^3 (eta - eta')^k:
+        dJ_0/dt = a^3,  dJ_k/dt = k J_{k-1} / a,  V = 4pi/3 J_3,
+with J_k(a_i) from pure radiation (a^2 proportional to t):
+        J_k = a^{5+k} / C^{k+1} * 4! k! / (5+k)!,  C = sqrt(Omega_r).
+Steps are uniform in ln a (h ~ 0.01); rho_L is held fixed within a step (RK4 for the J's)
+and updated at the end of it, as in eq. (5). Background: Planck 2018 (n_count.py).
+"""
+
+from __future__ import annotations
+
+import json
+from math import factorial
+from pathlib import Path
+
+import numpy as np
+
+from n_count import OMM, OMR
+
+HERE = Path(__file__).resolve().parent
+OUT = HERE / "resultados"
+SEED = 20261016
+A_INI = 1e-32
+N_REAL = 200
+H_STEP = 0.01
+K = {"R": 1.0 / 3.0, "NR": 8.0 * np.pi / 3.0}
+SIGMA_X = 0.025063155506929828  # results/profile_sigma_x/profile_sigma_x.json
+Z_DESI = (0.3, 2.3)
+Z_REC_MAX = 3.0  # record Omega_L(z) for z <= Z_REC_MAX
+
+
+def run(alpha: float, conv: str, n_real: int = N_REAL, h: float = H_STEP, seed: int = SEED, a_ini: float = A_INI) -> dict:
+    lna0 = np.log(a_ini)
+    nsteps = int(round(-lna0 / h))
+    h = -lna0 / nsteps
+    k = K[conv]
+    rng = np.random.default_rng(seed)
+    xi = rng.standard_normal((nsteps, n_real))
+
+    C = np.sqrt(OMR)
+    a = a_ini
+    J = np.array([a ** (5 + j) / C ** (j + 1) * factorial(4) * factorial(j) / factorial(5 + j) for j in range(4)])
+    J = np.repeat(J[:, None], n_real, axis=1)
+    V = 4 * np.pi / 3 * J[3]
+    S = np.zeros(n_real)
+    u = np.zeros(n_real)
+    alive = np.ones(n_real, bool)
+    a_death = np.full(n_real, np.nan)
+
+    n_rec = int(np.ceil(np.log(1 + Z_REC_MAX) / h)) + 1
+    rec_lna = lna0 + h * np.arange(nsteps + 1)[-n_rec:]
+    rec = np.full((n_rec, n_real), np.nan)
+    i_rec0 = nsteps + 1 - n_rec
+
+    def rhs(lna, J, u):
+        aa = np.exp(lna)
+        E2 = OMR / aa**4 + OMM / aa**3 + u
+        bad = E2 <= 0
+        H = np.sqrt(np.where(bad, np.nan, E2))
+        d = np.empty_like(J)
+        d[0] = aa**3 / H
+        for j in (1, 2, 3):
+            d[j] = j * J[j - 1] / (aa * H)
+        return d, bad
+
+    for i in range(nsteps):
+        lna = lna0 + i * h
+        k1, b1 = rhs(lna, J, u)
+        k2, b2 = rhs(lna + h / 2, J + h / 2 * k1, u)
+        k3, b3 = rhs(lna + h / 2, J + h / 2 * k2, u)
+        k4, b4 = rhs(lna + h, J + h * k3, u)
+        Jn = J + h / 6 * (k1 + 2 * k2 + 2 * k3 + k4)
+        died = alive & (b1 | b2 | b3 | b4 | ~np.all(np.isfinite(Jn), axis=0))
+        Vn = 4 * np.pi / 3 * Jn[3]
+        dV = np.where(died | ~alive, 0.0, Vn - V)
+        Sn = S + xi[i] * np.sqrt(np.maximum(dV, 0.0))
+        un = k * alpha * Sn / Vn
+        an = np.exp(lna + h)
+        E2n = OMR / an**4 + OMM / an**3 + un
+        died |= alive & (E2n <= 0)
+        a_death[died] = an
+        alive &= ~died
+        J = np.where(alive, Jn, J)
+        V = np.where(alive, Vn, V)
+        S = np.where(alive, Sn, S)
+        u = np.where(alive, un, u)
+        if i + 1 >= i_rec0:
+            rec[i + 1 - i_rec0] = np.where(alive, un / E2n, np.nan)
+
+    return {"alive": alive, "a_death": a_death, "rec_lna": rec_lna, "rec": rec, "OmL0": rec[-1], "nsteps": nsteps}
+
+
+def stats(res: dict) -> dict:
+    ok = res["alive"]
+    om0 = res["OmL0"][ok]
+    out = {"n": int(len(ok)), "n_complete": int(ok.sum()), "frac_complete": float(ok.mean())}
+    if ok.sum() >= 2:
+        p16, p50, p84 = np.percentile(om0, [16, 50, 84])
+        out.update(OmL0_p16=float(p16), OmL0_p50=float(p50), OmL0_p84=float(p84), OmL0_std=float(np.std(om0, ddof=1)),
+                   OmL0_mean_abs=float(np.mean(np.abs(om0))))
+        # Omega_L(z) on a grid uniform in ln(1+z), z in DESI range
+        x_rec = -res["rec_lna"]  # ln(1+z) at recorded steps (ascending as index decreases)
+        order = np.argsort(x_rec)
+        xs, R = x_rec[order], res["rec"][order][:, ok]
+        xg = np.linspace(np.log(1 + Z_DESI[0]), np.log(1 + Z_DESI[1]), 50)
+        Og = np.array([np.interp(xg, xs, R[:, j]) for j in range(R.shape[1])]).T  # (50, n_ok)
+        dO = Og - om0[None, :]
+        per_z = np.std(dO, axis=1, ddof=1)
+        o05 = np.array([np.interp(np.log(1.5), xs, R[:, j]) for j in range(R.shape[1])])
+        o2 = np.array([np.interp(np.log(3.0), xs, R[:, j]) for j in range(R.shape[1])])
+        corr = float(np.corrcoef(o05, o2)[0, 1])
+        out.update(
+            dOmL_DESI_std_pooled=float(np.std(dO, ddof=1)),
+            dOmL_DESI_std_perz_min=float(per_z.min()),
+            dOmL_DESI_std_perz_max=float(per_z.max()),
+            corr_z05_z2=corr,
+            theta_equiv=float(-np.log(corr) / np.log(2.0)) if corr > 0 else None,  # dx = ln(3/1.5)
+            ratio_to_sigmaX=float(np.std(dO, ddof=1) / SIGMA_X),
+        )
+    return out
+
+
+def process(res: dict, z_eff: np.ndarray) -> dict:
+    """Normalisation-independent shape of the process, over runs that reach a = 1.
+
+    (i)  r = sigma(Omega_L(z) - Omega_L(0), pooled over 0.3 < z < 2.3) / sigma(Omega_L(0))
+    (ii) 7x7 correlation of Omega_L at the DESI z_eff, and the OU theta that best fits its
+         off-diagonal entries with exp(-theta |d ln(1+z)|) (least squares).
+    """
+    from scipy.optimize import minimize_scalar
+
+    s = stats(res)
+    ok = res["alive"]
+    x_rec = -res["rec_lna"]
+    order = np.argsort(x_rec)
+    xs, R = x_rec[order], res["rec"][order][:, ok]
+    xz = np.log1p(z_eff)
+    Oz = np.array([np.interp(xz, xs, R[:, j]) for j in range(R.shape[1])])  # (n_ok, 7)
+    xg = np.linspace(np.log(1 + Z_DESI[0]), np.log(1 + Z_DESI[1]), 50)
+    Og = np.array([np.interp(xg, xs, R[:, j]) for j in range(R.shape[1])])
+    Cz = np.corrcoef(Oz.T)
+    dx = np.abs(xz[:, None] - xz[None, :])
+    iu = np.triu_indices(len(xz), 1)
+    fit = minimize_scalar(lambda th: np.sum((Cz[iu] - np.exp(-th * dx[iu])) ** 2), bounds=(1e-3, 20), method="bounded")
+    return {
+        "n_complete": s["n_complete"],
+        "sigma_OmL0": s["OmL0_std"],
+        "sigma_dOmL_DESI": s["dOmL_DESI_std_pooled"],
+        "r": s["dOmL_DESI_std_pooled"] / s["OmL0_std"],
+        "r_level": float(np.std(Og, ddof=1) / s["OmL0_std"]),  # sigma(Omega_L(z)) itself, not minus today
+        "z_eff": [float(z) for z in z_eff],
+        "corr_7x7": Cz.tolist(),
+        "theta_fit": float(fit.x),
+        "theta_fit_rms_resid": float(np.sqrt(fit.fun / len(iu[0]))),
+    }
+
+
+def main() -> None:
+    from desi_dr2_data import load_alpha_dv
+
+    OUT.mkdir(exist_ok=True)
+    summary = {"seed": SEED, "a_ini": A_INI, "n_real": N_REAL, "h_lna": H_STEP, "conventions": {}, "h_check": {},
+               "f_scan": {}, "process": {}}
+
+    print(f"Etapa 3a: alpha = 0.02, {N_REAL} realizaciones, seed {SEED}")
+    for h in (H_STEP, 0.003):
+        for conv in ("R", "NR"):
+            r = run(0.02, conv, h=h)
+            s = stats(r)
+            ad = r["a_death"][~r["alive"]]
+            if len(ad):
+                s["a_death_p16_p50_p84"] = [float(v) for v in np.percentile(ad, [16, 50, 84])]
+            (summary["conventions"] if h == H_STEP else summary["h_check"])[conv] = s
+            line = f"  h={h:<5} {conv:>2}: completan {s['n_complete']}/{s['n']}"
+            if "OmL0_std" in s:
+                line += (f"  Omega_L(a=1) p16 {s['OmL0_p16']:+.4f} p50 {s['OmL0_p50']:+.4f} "
+                         f"p84 {s['OmL0_p84']:+.4f} std {s['OmL0_std']:.4f}")
+            if len(ad):
+                line += f"  a_muerte p16/p50/p84 {np.percentile(ad, [16, 50, 84])}"
+            print(line)
+    for a_ini in (1.0 / 1100,):
+        for conv in ("R", "NR"):
+            s = stats(run(0.02, conv, a_ini=a_ini))
+            summary["conventions"][f"{conv}_from_a{a_ini:.3g}"] = s
+            print(f"  desde a={a_ini:.3g} {conv:>2}: completan {s['n_complete']}/{s['n']}"
+                  + (f"  std {s['OmL0_std']:.4f}" if "OmL0_std" in s else ""))
+
+    print("\nBarrido diagnostico: K = f * (1/3), alpha = 0.02")
+    for f in (1, 2, 3, 4, 5, 6, 6.5, 7, 7.5, 8, 12, 8 * np.pi):
+        K["f"] = K["R"] * f
+        s = stats(run(0.02, "f"))
+        summary["f_scan"][f"{f:.4g}"] = s
+        print(f"  f={f:6.3g}: completan {s['n_complete']:3d}/200"
+              + (f"  std {s['OmL0_std']:.3f}  <|OmL0|> {s['OmL0_mean_abs']:.3f}" if "OmL0_std" in s else ""))
+
+    z_eff = load_alpha_dv(prefer_file=True, use_full_cov=True)["z"]
+    print("\nForma del proceso (normalizacion-independiente)")
+    for lab, conv, al, f in (("R_alpha0.02", "R", 0.02, None), ("R_alpha0.01", "R", 0.01, None), ("f7_alpha0.02", "f", 0.02, 7.0)):
+        if f is not None:
+            K["f"] = K["R"] * f
+        p = process(run(al, conv), z_eff)
+        summary["process"][lab] = p
+        print(f"  {lab}: n={p['n_complete']}  sigma(OmL0)={p['sigma_OmL0']:.4f}  sigma(dOmL DESI)={p['sigma_dOmL_DESI']:.4f}"
+              f"  r={p['r']:.4f}  r_level={p['r_level']:.4f}  theta_fit={p['theta_fit']:.4f} (rms resid {p['theta_fit_rms_resid']:.3f})")
+    print("  corr 7x7 (R_alpha0.02), z_eff =", np.round(z_eff, 3))
+    print(np.array2string(np.array(summary["process"]["R_alpha0.02"]["corr_7x7"]), precision=3, suppress_small=True))
+    (OUT / "ahmed_sim.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    print("\nEscrito resultados/ahmed_sim.json")
+
+
+if __name__ == "__main__":
+    main()
