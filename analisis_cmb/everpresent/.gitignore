@@ -1,2 +1,6 @@
 fuentes/
 __pycache__/
+
+# Resultados > 50 MB: se regeneran (comando y prueba de identidad en EVERPRESENT_vs_DESI.md, "Reproducción").
+# El blob de 96 MB sigue en el historial (commit a65c4f8); no se reescribe.
+resultados/bao_m1_alpha0.005.npz

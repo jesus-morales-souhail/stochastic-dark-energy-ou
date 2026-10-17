@@ -359,8 +359,20 @@ no α.
 - **CMB solo por proxy.** Se usa |Ω_de| < 0.25 (en z = 1100 en 3a–3d, en la ventana z ∈ [1000, 5000]
   en 3e) en vez de la verosimilitud de Planck. [D2] Sec. 5 sí usa la verosimilitud: su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor con la
   energía oscura suprimida en la última dispersión (Sec. 7).
+- **El umbral 0.25 del proxy es generoso.** Planck 2015 XIV (arXiv:1502.01590), Sec. 5.1.5, Tabla 3:
+  con la parametrización de energía oscura temprana de Doran & Robbers (2006), ec. (26),
+  Ω_de(a) = [Ω_de⁰ − Ω_e(1 − a^{−3w₀})]/[Ω_de⁰ + Ω_m⁰ a^{3w₀}] + Ω_e(1 − a^{−3w₀}), que tiende a una
+  fracción constante Ω_e a alto z, la cota al 95 % es Ω_e < 0.0071 (Planck TT+lowP+lensing+BSH) y
+  Ω_e < 0.0036 (Planck TT,TE,EE+lowP+BSH). Con energía oscura solo a partir de z_e (parametrización
+  "EDE3", ec. (27)), la cota se relaja a Ω_e ≲ 2 % para z_e ≈ 50 (mismo apartado, Fig. 11). Esas
+  parametrizaciones son suaves y de signo fijo, no un ruido de media cero como el de Everpresent, así
+  que la comparación es solo de orden de magnitud: 0.25 es unas 35–70 veces la cota de Ω_e. Como el
+  proxy laxo deja pasar más realizaciones, el 0 de (c) es conservador a favor del modelo. Planck
+  2018 VI (arXiv:1807.06209) no da cota sobre Ω_e.
 - **α fijo en el Modelo 1.** Dos valores, 0.01 y 0.005, sin perfilar en α. [D2] usa α ∈ [0.001,
-  0.025] en el MCMC. En el Modelo 2 hay malla en α (3b) pero solo con ω_m fijo.
+  0.025] en el MCMC.
+- **Malla en α del Modelo 2 solo con r_d fijo.** La malla en α de 3b (α ∈ {0.02 … 0.8824}) se hizo con
+  r_d fijo y ω_m fijo. Con r_d propio (3e) solo se evaluó el α de [Z] (0.8824).
 - **Discretización.** La fracción de runs que completan depende del paso y del arranque (sección 1).
   Se usa n = 10⁵ y arranque en z ≈ 10⁴. La invariancia en ω_m del Modelo 1 es aproximada porque la
   radiación no se reescala; en el Modelo 2 el error medido es ≤ 0.13 en χ².
@@ -387,8 +399,11 @@ no α.
      (< 1.0 × 10⁻⁵ al 95 %) y **0 de 200000** con α = 0.005 (< 1.5 × 10⁻⁵), con los tres criterios
      A, B y A'.
    - El mejor run en ventana tiene χ² = 89.3 con H0 = 51.6 (α = 0.005).
-   - Sin el proxy, o con ω_m libre en ±40 %, pasan 1–2 runs, todos con H0 = 51–62 y energía oscura de
-     orden uno en la recombinación (`rd_real.json`).
+   - Sin el proxy en ventana, pasan A 1–2 runs por α (3 runs distintos en total, criterios (a), (b) y
+     (c) sin ventana), con H0 = 54.8–75.9 en su ω_m óptimo y |Ω_de| = 0.72–1.66 en algún punto de
+     z ∈ [1000, 5000] (`rd_real.json`, `rd_real_m1_alpha*.npz`): α = 0.01, run 5367 (χ² = 17.76,
+     ω_m = 0.142, H0 = 58.5) y run 29757 (χ² = 27.32, ω_m = 0.163, H0 = 75.9, solo con ω_m libre);
+     α = 0.005, run 51223 (χ² = 16.27, ω_m = 0.134, H0 = 54.8, solo con ω_m libre).
 
 3. **Modelo 2 frente a DESI DR2.**
    - Criterio final (c): **0 de 20000** (< 1.5 × 10⁻⁴), y el mejor χ² en ventana con ω_m a ±1.6 % es
@@ -398,11 +413,13 @@ no α.
    - Con ω_m libre y sin proxy, el r_d propio deja pasar 37/20000 (1.85 × 10⁻³) en A; con ω_m a
      ±1.6 % y sin proxy, 6/20000. Todas tienen energía oscura de orden uno en la recombinación.
 
-4. **BAO frente a SN.** DESI DR2 BAO solo, con ω_m libre, deja pasar una fracción del orden de la de
-   SN en [D2]: 1.25–1.85 × 10⁻³ en el Modelo 2, frente a 1.8 × 10⁻⁴. En SN, M_B absorbe la
+4. **BAO frente a SN.** DESI DR2 BAO solo, con ω_m libre, deja pasar más realizaciones que SN en [D2],
+   no menos: en el Modelo 2 con r_d propio pasan A 37/20000 = 1.85 × 10⁻³ (`rd_real.json` →
+   `model2.b_rd_real_wm_free`), frente a 16/90000 = 1.8 × 10⁻⁴ en [D2] Sec. 4.2: unas 10 veces
+   más. En SN, M_B absorbe la
    normalización y H0 queda libre. En BAO, D/r_d mide H0·r_d con r_d fijado por la física
    pre-recombinación, pero esa restricción se puede esquivar moviendo ω_m o dejando que la energía
-   oscura cambie r_d. **Lo que excluye el modelo es BAO junto con lo que fija el CMB:** ω_m a ±2σ de
+   oscura cambie r_d. **Lo que excluye es BAO junto con lo que fija el CMB:** ω_m a ±2σ de
    Planck y energía oscura pequeña alrededor de la recombinación. Con esas dos condiciones, 0
    realizaciones en los dos modelos.
 
@@ -419,3 +436,35 @@ no α.
    pasar realizaciones raras, y todas necesitan un ω_m incompatible con el CMB o energía oscura de
    orden uno en la recombinación. Con el criterio final (c), ninguna. Valen las limitaciones de la
    sección 4.
+
+---
+
+## Reproducción
+
+**Ficheros grandes fuera de git.** De los `.npz` de `resultados/`, solo uno pasa de 50 MB.
+
+| fichero | tamaño | en git |
+|---|---|---|
+| bao_m1_alpha0.005.npz | 100.9 MB | no (`.gitignore` de esta carpeta) |
+| rd_real_m1_alpha0.005.npz | 40.9 MB | sí |
+| bao_m1_alpha0.01.npz | 40.4 MB | sí |
+| rd_real_m1_alpha0.01.npz | 15.5 MB | sí |
+| rd_real_m2.npz | 4.2 MB | sí |
+| bao_m2_bestfit.npz | 0.5 MB | sí |
+| bao_m2_alphagrid.npz | 0.1 MB | sí |
+
+Regeneración de `resultados/bao_m1_alpha0.005.npz`, desde `analisis_cmb/everpresent/`:
+
+    python3 bao_sim.py m1 0.005 200000
+
+- Tarda unos 860 s (`seconds` del json).
+- Usa 10 bloques de 20000 semillas, con semilla 20261016 + bloque.
+- Escribe también `bao_m1_alpha0.005.{json,txt}`.
+- `rd_real.py` lee ese `.npz`: después de regenerarlo, `python3 rd_real.py m1` reproduce `rd_real_m1_alpha*.npz` y la parte `model1_alpha*` de `rd_real.json`.
+
+Prueba de identidad (2026-10-17): se regeneró en un directorio aparte, con `bao_sim.OUT` redirigido y el mismo comando.
+- `json`: idéntico salvo `seconds` (852.999 frente a 861.203).
+- `npz`: las 13 matrices son idénticas bit a bit (`np.array_equal`), y el fichero también: sha256 `2d4a41153a17cbaf…` en los dos.
+- El fichero en disco es el blob `8c2fa0a7` del commit a65c4f8 (`git hash-object`).
+
+**Historial:** no se ha reescrito. El blob de 96 MB (100883443 bytes) de `resultados/bao_m1_alpha0.005.npz` sigue en a65c4f8. También están en el historial las versiones anteriores, más pequeñas y sin `rd_part`, de cb6a250 y ba4a0b2. Desde el commit siguiente, el fichero sale del índice (`git rm --cached`) y queda solo en disco.
