@@ -17,6 +17,9 @@ This file is about language discipline — for me, for emails, for anyone sharin
 | “The model is discarded with no excuses” after a null | A null kills a tested corner, not every open kernel idea. |
 | “Gap $10^{56}$” glued to DESI $\sigma_X=2.6\times 10^{-2}$ | That ratio is $\sim 10^{59}$. Keep $10^{56}$ for the Euclid-scale $\sim 10^{-5}$ target. |
 | Residual $\sigma_X$ sold as baryon density, or as an EHT photon-ring result | Different quantities; see `scope-and-mixups.md` |
+| “Causal sets / Sorkin are excluded” | The σ_X bound tests a small residual, not Everpresent Λ; the published Everpresent implementations are tested separately (`analisis_cmb/everpresent/`) and only under their own assumptions. |
+| “The residual explains the Hubble tension” | Its CMB imprint is σ(H0) ≈ 0.48 km/s/Mpc, ≈12× smaller than 5.68 km/s/Mpc. |
+| “Planck tightens σ_X” | It does not: p95(Δχ²) ≤ 0.067 at the DESI ceiling. |
 
 ---
 
@@ -27,6 +30,7 @@ This file is about language discipline — for me, for emails, for anyone sharin
 3. Amplification walls: soft $r\sim 64$ (Euclid target) / $\sim 68$ (DESI ceiling); path $\sqrt{N}=\mathcal{O}(10$–$100)$; machine route scans.
 4. Two independent soft routes hit the same wall class (desqueezing vs path accumulation).
 5. Process: tests, gap-label rule, no undeclared free parameters.
+6. CMB consistency (Planck 2018): the OU residual at the DESI ceiling and a percent-level harmonic residual are both invisible in TT ℓ<30 and lensing; no H0-tension explanation.
 
 ---
 

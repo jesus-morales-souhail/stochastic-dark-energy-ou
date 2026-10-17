@@ -161,6 +161,8 @@ $$
 \sigma_0\sim 10^{-61}.
 $$
 
+The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice. (Ahmed et al. 2004; Zwane et al. 2018.)
+
 
 - **A3 (OU closure):** fluctuations $X(x)\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$ in logarithmic scale factor $x=\ln a$ obey
 
@@ -371,7 +373,7 @@ The open-system analogy **demonstrates** that finite relaxation is dynamically n
 
 ---
 
-## 7. What Euclid DR1 can and cannot see (emergent scenario)
+## 7. What the full Euclid DR1 release (expected mid-2027) can and cannot see (emergent scenario)
 
 ### 7.1 Cannot see (with repo seed only)
 
@@ -382,7 +384,7 @@ The open-system analogy **demonstrates** that finite relaxation is dynamically n
 ### 7.2 Can see (if nature supplies larger effective $A_0$)
 
 - A residual in the window $0<\sigma_X\lesssim 10^{-4}$, as anticipated in the SDiff fundamental-vs-emergent note.
-- Path-dependent damping if $\theta\sim\mathcal{O}(0.1$–$1)$ and the effective kick is not negligible: then the BAO covariance kernel shape (not only the amplitude) becomes informative once $N_{\rm bins}\gtrsim 20$.
+- Path-dependent damping if $\theta\sim\mathcal{O}(0.1$–$1)$ and the effective kick is not negligible: then the BAO covariance kernel shape (not only the amplitude) becomes informative once $N_{\rm bins}\gtrsim 20$ (design assumption for Euclid).
 
 ### 7.3 Operational forecast
 
@@ -423,7 +425,7 @@ Upstream, it supplies a dynamical language — relaxation time, bath rate, resid
 1. Open-system desqueezing yields a robust law $t_{1/2}=\ln 2/\gamma$, independent of $n_{\rm th}$ for $\lvert\langle a^2\rangle\rvert$.
 2. Repository OU dynamics imply $\Gamma_{\rm phys}(z)=\theta H(z)$; the lab–cosmos map is $\gamma\leftrightarrow\theta H_0$ at $z=0$.
 3. Cosmic-age relaxation requires $\theta\sim\mathcal{O}(1)$; the DESI MLE floor $\theta\sim 10^{-3}$ implies almost no path damping.
-4. With the repository seed $\sigma_0\sim 10^{-61}$, residuals stay unobservable: **Euclid cannot see pure Sorkin noise**.
+4. With the repository seed $\sigma_0\sim 10^{-61}$, residuals stay unobservable: **Euclid cannot see a pure horizon-area Sorkin seed**.
 5. A Euclid detection in $0<\sigma_X\lesssim 10^{-4}$ would require effective amplitudes far above $\sigma_0$, and would favour **emergent** residual vacuum noise over pure fundamental silence — but only in that amplified sector.
 6. A persistent null is compatible with fundamental SDiff and with emergent SDiff that never amplifies the seed.
 
@@ -446,7 +448,7 @@ I thank the DESI collaboration for public BAO data products. Numerical simulatio
 [5] Morales Souhail, J., “Quantum Fluid Instabilities and DESI DR2,” (2026).
 [6] DESI Collaboration, “DESI DR2 Results II,” arXiv:2503.14738 (2025).
 [7] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).
-[8] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
+[8] Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
 [9] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
 [10] Johansson, J. R., Nation, P. D. & Nori, F., Comp. Phys. Comm. 183, 1760 (2012); 184, 1234 (2013).
 [11] Walls, D. F. & Milburn, G. J., *Quantum Optics*, Springer.
@@ -477,5 +479,5 @@ $$
 
 ## Appendix C — One-line summary for readers in a hurry
 
-**Desqueezing dies as $e^{-\gamma t}$; cosmology writes $\gamma=\theta H$; Sorkin’s $10^{-61}$ never reaches Euclid; only an amplified effective $A_0$ could.**
+**Desqueezing dies as $e^{-\gamma t}$; cosmology writes $\gamma=\theta H$; the horizon-area $10^{-61}$ never reaches Euclid; only an amplified effective $A_0$ could.**
 

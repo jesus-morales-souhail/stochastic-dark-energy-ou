@@ -38,6 +38,8 @@ Here I fix that gap as a quantitative problem and audit candidate amplifiers. I 
 | Euclid-scale residual target | $\sim 10^{-5}$ | **Aspirational** path-integrated residual of interest |
 | Minimum kick for detection (small $\theta$) | $A_0^{\min}\sim 10^{-5}$ | From $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$ |
 
+The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice. (Ahmed et al. 2004; Zwane et al. 2018.)
+
 ### 2.1 Two gaps (do not mix labels)
 
 These are **different questions**. The answers differ by about **three decades** ($10^{56}$ vs $10^{59}$). I never paste “$\sim 10^{56}$” onto a calculation that used the DESI ceiling.
@@ -54,6 +56,8 @@ These are **different questions**. The answers differ by about **three decades**
 - Density form: with $X\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$, $\lvert\delta\rho\rvert_{\max}=\sigma_X\rho_{{\rm crit},0}=(\sigma_X/\Omega_{\Lambda0})\rho_\Lambda$, so $\lvert\delta\rho\rvert_{\max}/(\sigma_0\rho_\Lambda)=\sigma_X/(\Omega_{\Lambda0}\sigma_0)\approx 3.3\times 10^{59}$ for the DESI ceiling — still $\sim 10^{59}$, not $10^{56}$.
 
 **What DESI actually measured** is a **null residual bound**, not a new $\rho_\Lambda$. Mean vacuum density $\rho_\Lambda\sim\Omega_{\Lambda 0}\rho_{\mathrm{crit}}$ comes from standard cosmology (e.g. Planck-class $H_0,\Omega_\Lambda$); this corpus constrains the **residual amplitude** $\sigma_X$ (in units of $\rho_{{\rm crit},0}$) on top of that background.
+
+The CMB does not tighten this amplitude below the DESI ceiling (Planck 2018 TT ℓ<30 + lensing, `analisis_cmb/RESULTADO.md`).
 
 DESI constrains **effective** amplitude after any amplification — **not** $\sigma_0$ itself.
 Without a physical map $\sigma_0\to A_0$, “Euclid will see vacuum noise” is **not** a theorem of this repository.
@@ -80,7 +84,7 @@ Headline discipline: [`HONEST_HEADLINES.md`](HONEST_HEADLINES.md).
 3. reintroducing a **free large $A_0$** (renaming the problem), or
 4. **abandoning** the Sorkin seed definition (d).
 
-Every closed channel that looked like a shortcut — anisotropic slip, casual GRB phase stories, pupil/tesseract optics — **inherits this same gap**. That is why they stay amplitude-starved even when the **operator** is right (Option 0).
+Every closed channel that looked like a shortcut — anisotropic slip, casual GRB phase stories, pupil/tesseract optics — inherits the seed gap (σ_0 → σ_X). Slip with σ_X already at the DESI bound is a separate question: there it is marginal, not starved (see `anisotropic-slip-option0.md`).
 
 ---
 
@@ -201,6 +205,8 @@ Implied local scale if $N_{\mathrm{eff}}=N_{\mathrm{BH}}(L/R_H)^p$ (order-of-mag
 
 **Verdict R1:** The **only** card that reaches DESI/Euclid residual *amplitudes* without linear gain. **Price:** abandon global horizon counting; justify a meso-scale causal-set / correlation volume. That is a **new theory claim**, not a free amplification on $\sigma_0\sim 10^{-61}$.
 
+The published version of this redefinition is Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018): four-volume counting, order-one fluctuations. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. Tested against DESI DR2 BAO with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none of the realizations of its two published implementations fits as well as ΛCDM (0/20000 for the model of Zwane et al.; 0/500000 for the model of Das et al., α = 0.01 and 0.005; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). This applies to those phenomenological implementations, not to the idea of Everpresent Λ in general.
+
 #### Route 2 — late freeze-out toy (96k paths total)
 
 SDE $dX=-\theta(x)X dx+\sigma dW$ with $\theta$ dropping after a late $x_{\mathrm{exit}}$ ($\Delta x\sim\mathcal{O}(1)$).
@@ -278,6 +284,8 @@ Bare seed motivation:
 $$
 \sigma_0\sim\frac{1}{\sqrt{N}},\quad N\sim 10^{122}.
 $$
+
+(Horizon-area counting. Four-volume counting gives order-one fluctuations — Everpresent Λ, Ahmed et al. 2004.)
 
 
 ---

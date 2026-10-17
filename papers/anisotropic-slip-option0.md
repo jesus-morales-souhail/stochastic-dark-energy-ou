@@ -22,7 +22,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not c
 2. Can they be compared, even roughly, to $\sigma_X$ if a fraction $f$ of the noise is anisotropic?
 3. Is the anisotropic channel a shortcut around the amplification problem already discussed in the desqueezing note?
 
-**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable — but with $\sigma_X\lesssim 2.6\times 10^{-2}$ it inherits the same amplitude problem as the isotropic residual. It is an additional channel that turns on with amplification, not free amplification.
+**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable. With $\sigma_X\lesssim 2.6\times 10^{-2}$ the best case (ε = 1, δ_m = 1) reaches $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, level with Euclid-like forecasts: marginal, not starved. Its visibility depends on ε, δ_m and z rather than on amplification.
 
 ---
 
@@ -38,7 +38,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not c
 
 Scripts such as `ou_bao_likelihood.py`, `joint_w0wa_sigma_desi.py`, `profile_sigma_x_desi.py`, `eos_efectiva.py`, and `euclid_*` operate on distances ($D_V$, $D_M$, $D_H$) obtained from $\int dz/H(z)$. That is by design: the primary DESI DR2 product I use here is BAO-only residual smoothness.
 
-**Implication.** The “grieta” (anisotropic leakage past SDiff) is quantified as amplitude-starved via `slip_bridge.py`, not tested as a new MCMC. Option 0 remains literature + scaling.
+**Implication.** The “grieta” (anisotropic leakage past SDiff) is quantified as marginal in amplitude via `slip_bridge.py` (best case ≈1.0× the forecast floor at z = 0.5), not tested as a new MCMC. Option 0 remains literature + scaling.
 
 ---
 
@@ -115,7 +115,7 @@ $$
 - Confusing the two was the earlier table error: a slip $\gamma\sim 1.17$ is near GR’s $1.0$; a growth index $\gamma\sim 1.17$ would be a catastrophe. Once the definition is read, the number is internally consistent.
 
 **For this Option 0 note:** this is better than a random growth-index: it is a published DESI-era slip constraint of the type I care about (RSD + lensing).
-With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, far above the $\sim 5\times 10^{-2}$ scale of the $f=1$, $\sigma_X=2.6\times 10^{-2}$ estimate below.
+With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, a factor $\sim 2$ above the $\sim 5\times 10^{-2}$ scale of the $f=1$, $\sigma_X=2.6\times 10^{-2}$ estimate below.
 
 ### 3.3 Forecasts on slip $\eta$ (or equivalent $\gamma=\Phi/\Psi$)
 
@@ -154,12 +154,12 @@ Compare:
 
 | Instrument / status | Rough sensitivity to $\eta-1$ | vs $\sim 5\times 10^{-2}$ (best case) |
 |---------------------|----------------------------------|----------------------------------|
-| Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **above** prediction ($\sim 2\times$) |
+| Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **∼2× above** prediction (0.17 is ≈3.4× the best case) |
 | Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **comparable**: $\sim 0.6$–$1.0\times$ |
 
-**Interpretation.** Even the most optimistic anisotropic fraction does not make the gap visible at current DESI precision, nor automatically at Euclid, unless there is amplification of the bare residual amplitude (or a shear sector decoupled from the BAO-bounded isotropic $\sigma_X$).
+**Interpretation.** The most optimistic anisotropic fraction does not make the gap visible at current DESI precision (≈3.4× short at z = 0.5); at Euclid-like forecast precision it is marginal (≈1.0× the Sakr et al. floor) for ε ≈ 1, δ_m ≈ 1, z ≈ 0.5, and out of reach for ε ≲ 0.5 or z ≳ 1. The map is order-of-magnitude.
 
-That word — amplification — is the same one that appears in amplification (`amplification-gap.md`) when mapping Sorkin-scale seeds ($\sim 10^{-61}$) up to BAO-relevant $\sigma_X$ (factors of order $A_0/\sigma_0\sim 10^{56}$). The anisotropic channel does not evade that problem; it inherits it.
+That word — amplification — is the same one that appears in amplification (`amplification-gap.md`) when mapping Sorkin-scale seeds ($\sim 10^{-61}$) up to BAO-relevant $\sigma_X$ (factors of order $A_0/\sigma_0\sim 10^{56}$). The anisotropic channel does not evade the seed problem (σ_0 → σ_X); given σ_X at the DESI bound, it is marginal rather than starved.
 
 | $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=2.633\times 10^{-2}$ |
 |-----------------|------------------------------------------------------------------|
@@ -180,7 +180,7 @@ That word — amplification — is the same one that appears in amplification (`
 
 **Does not conclude:**
 
-- That Euclid will “easily” see the gap without amplification.
+- That Euclid will see the gap: the best case (ε = 1, δ_m = 1, z ≈ 0.5) is only level with the forecast floor, and anything less is below it.
 - That $\eta\neq 1$ would uniquely select emergent SDiff.
 - That any $\gamma\sim 1.17$ number can be cited without checking the paper’s definition.
 

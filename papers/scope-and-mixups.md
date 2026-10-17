@@ -50,8 +50,11 @@ The tachyonic rank-1 test is a *different* covariance (\(C^{\mathrm{meas}}+\math
 | \(\omega_b \approx 0.022\) | Physical baryon density from BBN/CMB |
 | \(\sigma_{\mathrm{free}} \approx 8.5\times 10^{-5}\) | Counting amplitude if \(\ell_\ast=R_{\mathrm{nl}}\), \(d=3\) |
 | \(\sigma_0 \sim 10^{-61}\) | Motivational Sorkin / holographic seed |
+| \(\delta\Lambda/\Lambda \sim \mathcal{O}(1)\) | Everpresent Λ (Ahmed et al. 2004): not \(\sigma_X\), not \(\sigma_0\) |
 
 \(\sigma_X\) in the likelihood is the residual amplitude. It is not \(\omega_b\). It is not the Sorkin seed unless someone builds a map. In the OU SDE, the diffusion coefficient \(\sigma\) and the reported \(\sigma_X\) only match after \(\sigma_X = \sigma/\sqrt{2\theta}\); the three-gate number \(\sigma_{\mathrm{free}}\) is already compared to \(\sigma_X\) as an *amplitude*, so I do not divide it by \(\sqrt{2\theta}\) again.
+
+Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ.
 
 \(\theta\) in the OU is mean reversion of \(X\) in \(\ln a\). It is not the BAO wiggle damping scale, not a Jeans wavenumber, and not the tachyonic \(t_c\).
 

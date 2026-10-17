@@ -14,6 +14,7 @@ I compiled this pack so that `scale-operator-experiment-map.md` and `anisotropic
 | Best-fit behaviour | $\sigma_X \to 0$, $\omega_R \to 0$ | MLE; $\Delta\mathrm{AIC}=+4$ vs ΛCDM for free OU |
 | Tachyonic coherent growth | Excluded ($\Delta\chi^2\sim +25$) | `papers/quantum-fluid-instabilities-desi-dr2.md` |
 | Motivational seed | $\sigma_0\sim 10^{-61}\sim 1/\sqrt{N}$, $N\sim 10^{122}$ | Bekenstein–Hawking / Sorkin (motivational, not a detection) |
+| Everpresent Λ (four-volume counting, order-one) | Ahmed et al., arXiv:astro-ph/0209274; Zwane et al., arXiv:1703.06265 | Different model; tested in `analisis_cmb/everpresent/` |
 | BAO public data used | DESI DR2 summary stats | arXiv:[2503.14738](https://arxiv.org/abs/2503.14738) |
 
 **Operator in repo:** residual kernel on BAO distances $D_V,D_M,D_H$.
@@ -94,7 +95,7 @@ $$
 | Sakr et al. forecast (const $\eta$) | $\sim 5\% = 0.05$ | ~1× (comparable) |
 | Sakr free $z,k$ | $\gtrsim 30\%$ | ~6× |
 
-**Conclusion (unchanged):** the external literature confirms Option 0. The correct operator exists and is measured or forecast; the amplitude still requires amplification before a detection story makes sense.
+**Conclusion (revised):** the external literature confirms Option 0. The correct operator exists and is measured or forecast; with σ_X at the DESI bound, the best-case slip (≈5×10⁻², `scripts/slip_bridge.py`) is comparable to the Sakr et al. constant-η forecast floor — marginal, not starved, and order-of-magnitude only.
 
 ---
 

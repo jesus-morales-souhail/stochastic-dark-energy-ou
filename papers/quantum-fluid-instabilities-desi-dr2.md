@@ -111,6 +111,8 @@ $$
 
 with seed amplitude $\sigma_{0}\sim 10^{-61}$ (Bekenstein–Hawking / causal-set counting, same order used in the amplification-gap notes).
 
+The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice.
+
 ---
 
 ## 5. Observational Coupling with DESI DR2 BAO Data
@@ -191,7 +193,7 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 [3] Khamehchi, M. A. et al., "Negative-Mass Hydrodynamics in a Spin-Orbit–Coupled Bose–Einstein Condensate," Phys. Rev. Lett. **118**, 155301 (2017).
 
-[4] Sorkin, R. D., "Is the Cosmological 'Constant' a Nonlocal Quantum Residual?," arXiv:gr-qc/0503057 (2005).
+[4] Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
 
 [5] Bekenstein, J. D., "Black Holes and Entropy," Phys. Rev. D **7**, 2333 (1973).
 

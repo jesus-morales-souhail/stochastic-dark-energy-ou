@@ -23,7 +23,9 @@ $$
 
 **(95% CL).**
 
-I caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the $>20$ bins of Euclid DR1 (expected H2 2026).
+I caution that this result is subject to degeneracies between the stochastic component and the CPL parameters, which cannot be fully resolved with only 7 BAO bins. The primary contribution of this work is a validated analysis pipeline and a benchmark for future analyses with the full Euclid DR1 release with cosmology products (expected mid-2027; the DR1-Foundation release of November 2026 does not include the LE3 high-level products).
+
+A CMB consistency check with Planck 2018 (TT at ℓ < 30 and lensing bandpowers, via CAMB with the OU history mapped to w(a), H0 solved to keep θ_* fixed) does not distinguish the OU residual from ΛCDM at the DESI ceiling: the 95th percentile of Δχ² is ≤ 0.067 (TT) and ≤ 0.054 (lensing) at σ_X = 2.633×10⁻², and no realization reaches Δχ² > 4. Its only imprint is a scatter in the inferred H0 of 0.48 km/s/Mpc (θ = 1), about 12 times smaller than the Planck–SH0ES difference, so it neither tightens σ_X nor explains the H0 tension. A deterministic harmonic modulation X = A sin(2π ln a/P + φ) with A ≤ 0.025 and P ∈ [0.1, 2] is allowed by DESI DR2 BAO in 58 of 60 cases (Δχ²_BAO < 4) and is indistinguishable from ΛCDM in the CMB in all 60. (Appendix J.)
 
 ---
 
@@ -31,7 +33,7 @@ I caution that this result is subject to degeneracies between the stochastic com
 
 The $\Lambda$CDM model has been remarkably successful in describing a wide range of cosmological observations. However, recent BAO measurements from DESI, when combined with CMB and supernova data, have shown a statistical preference for dynamical dark energy in the $w_0 > -1$, $w_a < 0$ quadrant, with tensions ranging from 2.6σ to 4.2σ depending on dataset combinations [1, 2]. While not yet a discovery, these tensions motivate exploring minimal, falsifiable extensions that do not require new classical fields.
 
-This work proposes one such extension. The starting point is the Bekenstein–Hawking entropy bound, which implies that the observable universe has a finite number of effective degrees of freedom ($N \sim 10^{122}$ in Planck units). In unimodular gravity, the cosmological constant $\Lambda$ appears as an integration constant conjugate to spacetime four-volume. If spacetime is fundamentally discrete (as in causal-set theory), Poisson fluctuations in the number of elements $N$ induce residual fluctuations $\delta\Lambda \sim 1/\sqrt{N}$. This is not a derivation of the observed value of $\Lambda$, but it provides a plausible order-of-magnitude motivation for a small stochastic component.
+This work proposes one such extension. The starting point is the Bekenstein–Hawking entropy bound, which implies that the observable universe has a finite number of effective degrees of freedom ($N \sim 10^{122}$ in Planck units). In unimodular gravity, the cosmological constant $\Lambda$ appears as an integration constant conjugate to spacetime four-volume. If spacetime is fundamentally discrete (as in causal-set theory), Poisson fluctuations in the number of elements $N$ induce residual fluctuations $\delta\Lambda \sim 1/\sqrt{N}$. (For the causal-set version of this idea, see Ahmed et al. 2004 and Sorkin 2007; it predicts order-one fluctuations, Everpresent Λ, which is a different model from the small residual studied here — Axiom A2.) This is not a derivation of the observed value of $\Lambda$, but it provides a plausible order-of-magnitude motivation for a small stochastic component.
 
 Rather than attempting a full quantum-gravity derivation, I work at the phenomenological level and model the late-time fluctuations of $\Omega_\Lambda$ as an Ornstein–Uhlenbeck process in $\ln a$. The key observable consequence is an additive covariance term in BAO distance measurements: a redshift-dependent "precision floor" that cannot be beaten by increasing sample size alone. I test this prediction against public DESI DR1/DR2 BAO products and Pantheon+ supernova data, and I outline the analysis protocol for the upcoming Euclid DR1.
 
@@ -55,7 +57,7 @@ For the observable universe, $A \sim 10^{122}$ (in Planck units), which implies 
 
 ### Axiom A2: Stochastic $\Lambda$ from Discreteness (Sorkin Mechanism)
 
-In unimodular gravity, $\Lambda$ can be interpreted as a constant of integration conjugate to the spacetime four-volume. If spacetime consists of $N$ discrete elements with $N = V / L_P^4$, Poisson fluctuations yield
+In unimodular gravity, Λ can be interpreted as a constant of integration conjugate to the spacetime four-volume. If spacetime consists of N discrete elements, Poisson fluctuations in N yield
 
 
 $$
@@ -63,7 +65,7 @@ $$
 $$
 
 
-With $N \sim 10^{122}$, this gives $\delta\Lambda \sim 10^{-61}$ in Planck units. This motivates the existence of a small, non-zero stochastic component, though I do not claim a full derivation of $\rho_\Lambda$ from this argument.
+Two countings give very different amplitudes, and I keep them apart. Counting the elements of the past four-volume, N = V/L_P⁴, gives δΛ ∼ V^{-1/2} ∼ H²: fluctuations of the order of the critical density in every epoch. This is Everpresent Λ (Ahmed et al. 2004; Sorkin 2007; Zwane et al. 2018), and it is not the model tested here. Counting horizon-area degrees of freedom, N ∼ 10¹²², gives the much smaller relative seed σ_0 ∼ 1/√N ∼ 10⁻⁶¹ that I use below only as a motivational UV scale. Whether either applies is an empirical question: the order-one version, in its two published implementations, does not fit DESI DR2 BAO together with the CMB (0/20000 and 0/500000 realizations; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`), and a small stationary version is bounded here by σ_X < 2.6×10⁻². I do not claim a full derivation of ρ_Λ from either counting.
 
 ### Axiom A3: Effective Stochastic Dynamics (OU Closure)
 
@@ -96,6 +98,8 @@ $$
 
 
 where $x = \ln(1/(1+z))$. However, for the redshift range probed by DESI ($z \lesssim 2.3$) and Euclid ($z \lesssim 2.0$), $g(z)$ is essentially unconstrained by data. I set $z_* = 1.5$ (illustrative), with the understanding that this parameter is degenerate with $\sigma$ and cannot be independently calibrated. For all numerical results in Sections 4–6, $g(z) \approx 1$ in the observed range, meaning the effective amplitude $\sigma_X$ absorbs any early-time suppression.
+
+Note: at the DESI ceiling the CMB does not require this activation factor: with g ≡ 1 the OU residual is indistinguishable from ΛCDM in Planck 2018 TT and lensing (p95 Δχ² ≤ 0.067; Appendix J). g(z) is kept only as a modelling option.
 
 ---
 
@@ -377,13 +381,13 @@ The null result is consistent with models where dark energy is a smooth, determi
 
 I emphasize that this constraint applies specifically to the additive OU/QNM kernel tested here, assuming a fixed CPL background. The results do not rule out stochastic models that are degenerate with the background evolution or that operate on scales not probed by BAO. Future analyses that jointly fit $\{w_0, w_a, \sigma_X\}$ will be needed to resolve this degeneracy.
 
+The CMB does not tighten this bound: at σ_X = 2.633×10⁻² the residual is indistinguishable from ΛCDM in Planck 2018 TT and lensing, and its only imprint is an H0 scatter of 0.48 km/s/Mpc (Appendix J).
+
 ### 7.3 Implications for Quantum Gravity and Information-Theoretic Models
 
-A rigorous Bayesian assessment using verified data from the Pantheon+ supernova compilation and the DESI baryon acoustic oscillations consensus measurements establishes strict observational boundaries for stochastic vacuum coupling models.
+The residual analysis bounds stationary stochastic variance around a smooth background; it does not single out a mechanism. In particular, it does not exclude oscillatory modulations of the expansion history at the amplitudes probed: a deterministic harmonic residual X = A sin(2π ln a/P + φ) with A ≤ 0.025 and P ∈ [0.1, 2] is allowed by DESI DR2 BAO in 58 of 60 cases (Δχ²_BAO < 4; Appendix J), and is indistinguishable from ΛCDM in the CMB. A vacuum modulated by horizon quasi-normal modes is therefore not ruled out at this level by the continuity between the LRG and Lyman-α data, and the smooth, dissipative OU closure is a modelling choice, not the only viable mechanism. What the data do show is that any such residual, stochastic or harmonic, must stay at the percent level in X.
 
-While the localized $\sim 2.3\sigma$ tension observed in the DESI high-redshift tracers allows a theoretical baseline for dynamical dark energy, the simultaneous flat constraints imposed by the lower-redshift LRG bins severely penalize any oscillatory behavior. A cosmic vacuum modulated by horizon quasi-normal modes would induce harmonic variations in the expansion rate that are macroscopically ruled out by the continuity between the LRG data and the Lyman-$\alpha$ forest measurements.
-
-Consequently, the empirical data strongly disfavors non-linear field self-interactions, leaving a smooth, dissipative Ornstein-Uhlenbeck evolution as the only mathematically viable mechanism for a time-varying cosmological constant. Under the Price epistemic framework, the current cosmological horizon remains highly smooth and Gaussian, setting a definitive upper limit on the information-theoretic coupling of the quantum vacuum.
+Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. Tested against DESI DR2 BAO with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none of the realizations of its two published implementations fits as well as ΛCDM (0/20000 for the model of Zwane et al.; 0/500000 for the model of Das et al., α = 0.01 and 0.005; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). This applies to those phenomenological implementations, not to the idea of Everpresent Λ in general.
 
 ### 7.4 Connection to Varying Fundamental Constants (Optional — Speculative)
 
@@ -438,24 +442,27 @@ I summarize the status of the model based on the current analysis:
 | **F3** (Lag correlations) | Predicted positive lags are absent | **Consistent with null.** The observed alternating pattern is the expected algebraic artifact of whitening with $N=7$ when $\sigma_X = 0$. |
 | **F4** (AIC/BIC) | $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM | **Satisfied:** $\Delta\text{AIC} = +4.00$(H0), $+6.00$(H1). The Occam penalty correctly penalizes the stochastic extension. |
 | **F5** (Degeneracy) | $\sigma_X = 0$ when $w_0, w_a$ are free | **Robust when background is free.** Joint MLE on the same 7 BAO bins with free $\{w_0, w_a, \theta, \sigma_X\}$ yields best-fit near $w_0 \approx -1.001$, $w_a \approx +0.014$ (essentially $\Lambda$CDM) and $\sigma_X \approx 5 \times 10^{-10}$ ($\to 0$), $\Delta\text{AIC} = +4.00$ vs CPL (`results/joint_w0wa_sigma/`, projected covariance). The null result is therefore not an artifact of fixing the background. However, when the background is fixed to the external CPL values preferred by CMB+SNe, a larger amplitude appears. See Appendix I for details. |
+| **F6** (CMB) | No CMB imprint beyond Planck 2018 errors at the DESI ceiling | **Consistent.** p95(Δχ²) ≤ 0.067 (TT ℓ<30) and ≤ 0.054 (lensing) at σ_X = 2.633×10⁻²; H0 scatter 0.48 km/s/Mpc (Appendix J). |
 
-**Conclusion.** The stochastic model is not favored by the current DESI DR2 BAO data when the background is allowed to vary, and I place a phenomenological upper limit on its amplitude. A definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the $>20$ bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.
+**Conclusion.** The stochastic model is not favored by the current DESI DR2 BAO data when the background is allowed to vary, and I place a phenomenological upper limit on its amplitude. A definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the BAO vector of the full Euclid DR1 release (expected mid-2027), with whatever number of bins it publishes. This work provides the necessary pipeline and a reference limit for that future analysis. The Planck 2018 CMB does not add a constraint at this amplitude (F6, Appendix J).
 
 ---
 
-## 9. Near-Term Observational Program: Euclid DR1
+## 9. Near-Term Observational Program: Euclid DR1 (full release, expected mid-2027)
 
-Euclid Data Release 1 (expected H2 2026) will provide $>20$ redshift bins, resolving the current degeneracies with substantially higher statistical power. The analysis pipeline is fully ready.
+The decisive test will come from the full Euclid DR1 release with cosmology products (expected mid-2027; the DR1-Foundation release of November 2026 does not include the LE3 high-level products). Assuming its BAO vector has many more redshift bins than the 7 of DESI DR2 (a design assumption: no Euclid BAO binning has been published), it will resolve the current degeneracies with substantially higher statistical power. The analysis pipeline is ready to take that vector.
 
-Notably, Euclid DR1's narrower redshift baseline ($z \in [0.9, 1.8]$) yields a higher Rayleigh frequency limit ($\omega_{R,\min} \approx 16.2$) than DESI (6.66), meaning Euclid cannot geometrically resolve intermediate-frequency quasi-normal mode (QNM) oscillations that DESI could potentially detect (Appendix D). The decisive contribution of Euclid will be statistical power through $>20$ bins, not oscillatory frequency resolution.
+Notably, if the Euclid BAO baseline is narrower than DESI's — I assume $z \in [0.9, 1.8]$ as a design case, not a published Euclid binning — the Rayleigh frequency limit is higher ($\omega_{R,\min} \approx 16.2$) than DESI's (6.66), so such a survey could not geometrically resolve intermediate-frequency QNM oscillations that DESI could potentially detect (Appendix D). Euclid's decisive contribution would then be statistical power from more bins, not oscillatory frequency resolution.
 
-Upon release of Euclid DR1, I will:
+Upon release of the full Euclid DR1 with LE3 cosmology products (expected mid-2027; the November 2026 DR1-Foundation release has no BAO vector), I will:
 1. Replace the DESI BAO data vector with Euclid's.
 2. Recompute $S(z)$ for the Euclid fiducial cosmology.
 3. Perform a joint fit of $\{w_0, w_a, \theta, \sigma_X\}$.
 4. Report either a detection or a tighter upper limit ($\sigma_X \lesssim 10^{-5}$).
 
 Both outcomes are scientifically valuable.
+
+The CMB gives no extra leverage on σ_X at the DESI ceiling (Appendix J); the decisive test remains BAO.
 
 ---
 
@@ -476,6 +483,8 @@ $$
 A scalar-field reading would translate $\sigma_X$ into a bound on $m_\phi$; it is not derived here.
 
 More broadly, $\sigma_X < 2.6\times 10^{-2}$ implies that any microscopic mechanism responsible for the observed value of $\Lambda$ must either strongly protect the coupling of the scalar field to the Standard Model (e.g., via shift symmetries), or operate at scales that leave an absolutely minimal cosmological imprint.
+
+A CMB consistency check with Planck 2018 (TT at ℓ < 30 and lensing bandpowers, via CAMB with the OU history mapped to w(a), H0 solved to keep θ_* fixed) does not distinguish the OU residual from ΛCDM at the DESI ceiling: the 95th percentile of Δχ² is ≤ 0.067 (TT) and ≤ 0.054 (lensing) at σ_X = 2.633×10⁻², and no realization reaches Δχ² > 4. Its only imprint is a scatter in the inferred H0 of 0.48 km/s/Mpc (θ = 1), about 12 times smaller than the Planck–SH0ES difference, so it neither tightens σ_X nor explains the H0 tension. A deterministic harmonic modulation X = A sin(2π ln a/P + φ) with A ≤ 0.025 and P ∈ [0.1, 2] is allowed by DESI DR2 BAO in 58 of 60 cases (Δχ²_BAO < 4) and is indistinguishable from ΛCDM in the CMB in all 60.
 
 The correlation function derived in Appendix F provides a falsifiable prediction for Euclid DR1: if a stochastic component exists, the whitened BAO residuals should follow:
 
@@ -606,7 +615,7 @@ Any oscillation with $\omega_R < \omega_{R, \rm min}$ produces less than one vis
 | Survey | $z$ range | $\Delta x$ | $\omega_{R, \rm min}$ | Can see $\omega_R = 8$? |
 |:------:|:---------:|:----------:|:---------------------:|:---------------------:|
 | DESI DR2 | [0.295, 2.330] | 0.944 | 6.66 | ✓ Yes |
-| Euclid DR1 | [0.9, 1.8] | 0.388 | 16.2 | ✗ No (geometric limit) |
+| Euclid DR1 (design assumption) | [0.9, 1.8] (assumed) | 0.388 | 16.2 | ✗ No (geometric limit) |
 
 **Implication.** If the true dark-energy kernel is QNM with $\omega_R \sim 8$, DESI can detect it but Euclid DR1 geometrically cannot — regardless of photometric precision. The decisive contribution of Euclid will be the amplitude $\sigma_X$ and decay rate $\theta$, not the oscillatory frequency.
 
@@ -926,6 +935,20 @@ I interpret this as: the null result is not an artifact of an arbitrary backgrou
 
 This should be treated as a preliminary, linearized-fiducial check ($S(z)$ held fixed rather than recomputed at each $w_0, w_a$; DESI Gaussian BAO covariance projected to α) pending a full re-analysis with a proper MCMC sampler (e.g., emcee) to confirm the $w_0 \approx -0.99$ minimum is not a local artifact.
 
+## Appendix J — CMB Consistency (Planck 2018)
+
+**Construction.** X is a stationary Gaussian process with the BAO kernel covariance σ_X² exp(−θ|Δ ln(1+z)|), smoothed on Δ = 0.05 in ln a. Reading (a), δ ln ρ_DE = X/Ω_Λ0 (with [X-std]), gives ρ_DE(a) = ρ_Λ0[1 + (X_s(a) − X_s(1))/Ω_Λ0] and w = −1 − (1/3) d ln ρ_DE/d ln a, passed to CAMB through `DarkEnergyPPF.set_w_a_table`. ω_b, ω_c and Σm_ν are fixed to Planck 2018, the universe is flat, and H0 is solved for each curve so that 100θ_* = 1.041198 (the ΛCDM value). Non-linear lensing uses halofit (Takahashi). Data: Planck 2018 TT (2 ≤ ℓ < 30) and the lensing bandpowers (L = 8–400). 200 realizations, common random numbers across θ, Δ and σ_X.
+
+**Results at σ_X = 2.633×10⁻² (Δ = 0.05).** θ = 1: Δχ²_TT p50/p95 = −2.5×10⁻³ / 0.067, Δχ²_φφ = −2.8×10⁻³ / 0.054; θ = 0.001: −1.5×10⁻⁴ / 2.7×10⁻³ and −1.2×10⁻⁴ / 2.3×10⁻³. No realization has Δχ² > 4. H0 p16/p50/p84 = 66.92/67.36/67.88 (θ = 1) and 67.34/67.36/67.38 (θ = 0.001); 3.5 % and 0 % of the realizations fall outside Planck's ±2σ.
+
+**Grid (2.506×10⁻² → 10⁻⁴, ten values, θ ∈ {0.001, 1}).** p95(Δχ²) < 4 in all twenty cases; p95 ∝ σ_X^n with n = 0.998–1.007, and σ(H0) ∝ σ_X^m with m = 0.999–1.001. The 95th percentile is dominated by the cross term with the Planck residuals, 2Σ r_b δ_b/σ_b²; the model's own quadratic term is 6.3×10⁻⁴ (TT) and 7.4×10⁻³ (lensing) at θ = 1, σ_X = 2.506×10⁻².
+
+**Harmonic residual.** For X = A sin(2π ln a/P + φ) (A ∈ {0.005, 0.01, 0.025}, P ∈ {0.1, 0.2, 0.5, 1, 2}, φ ∈ {0, π/2, π, 3π/2}), 58 of 60 curves are allowed by DESI DR2 BAO (Δχ²_BAO < 4 with the 13 distances and full covariance; distances and r_d from CAMB), and none is distinguishable in the CMB; among the allowed, the largest Δχ² is 0.070 (TT) and 0.63 (lensing).
+
+**Limitations.** Cosmological parameters other than H0 are fixed (no full MCMC; not run because Δχ² ≤ 0.067 in the worst case). Δ is a parameter of this analysis, not of the theory. Reading (b), δ ln ρ_DE = X, would multiply the amplitude by 1/Ω_Λ0 ≈ 1.46. The treatment of a tabulated w(a) by halofit in PPF has not been verified.
+
+Code and outputs: `analisis_cmb/` (`realizaciones.py`, `estadisticos.py`, `RESULTADO.md`) and `analisis_cmb/oscilador/`.
+
 ---
 
 ## References
@@ -936,7 +959,9 @@ This should be treated as a preliminary, linearized-fiducial check ($S(z)$ held 
 
 [3] Bekenstein, J. D., "Black Holes and Entropy," *Phys. Rev. D* 7, 2333 (1973).
 
-[4] Sorkin, R. D., "Is the Cosmological 'Constant' a Nonlocal Quantum Residual?," arXiv:gr-qc/0503057 (2005).
+[4] Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
+[4b] Ahmed, M., Dodelson, S., Greene, P. B., & Sorkin, R. D., "Everpresent Λ," Phys. Rev. D 69, 103523 (2004), arXiv:astro-ph/0209274.
+[4c] Zwane, N., Afshordi, N., & Sorkin, R. D., "Cosmological tests of Everpresent Λ," Class. Quantum Grav. (2018), doi:10.1088/1361-6382/aadc36, arXiv:1703.06265.
 
 [5] Scolnic, D. et al. (Pantheon+ Collaboration), "The Pantheon+ Analysis: Cosmological Constraints," *ApJ* 938, 113 (2022).
 

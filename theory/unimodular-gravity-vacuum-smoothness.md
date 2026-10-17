@@ -19,7 +19,7 @@ $$
 $$
 
 
-which is a consistency condition, not a predictive equation. The value of $\Lambda$ remains a free global parameter, but its fluctuations are rigorously zero. I conclude that the observed smoothness of the vacuum is not an accident; it is a geometric necessity that singles out unimodular gravity as the only known structure compatible with the data. Future surveys, such as Euclid DR1, will provide the decisive test.
+which is a consistency condition, not a predictive equation. The value of $\Lambda$ remains a free global parameter, but its local fluctuations of the form $V(x)g_{\mu\nu}$ are cancelled identically. The same framework with causal-set discreteness predicts order-one fluctuations of the global $\Lambda$ (Everpresent Λ, Ahmed et al. 2004); which case holds is decided by data (Section 7). Future surveys, such as Euclid DR1, will provide the decisive test.
 
 ---
 
@@ -80,6 +80,8 @@ $$
 **(95% CL).**
 
 This is a direct empirical statement: the dark-energy density is homogeneous at the level of the residual bound (profile 95% CL $\sigma_X<2.6\times 10^{-2}$; null preferred) across the observable universe.
+
+The Planck 2018 CMB does not add a bound at this level: at σ_X = 2.633×10⁻² the residual is indistinguishable from ΛCDM in TT (ℓ < 30) and lensing (`analisis_cmb/RESULTADO.md`).
 
 ---
 
@@ -240,6 +242,8 @@ So the equation does not determine the numerical value of $\Lambda$. It only tel
 
 The smallness of $\Lambda$($\sim 10^{-122}$ in Planck units) is not a fine-tuning problem in this framework. It is a consequence of the vastness of the universe: the denominator $V_4$ is enormous, so the average of any finite quantity over it tends to zero. The discrepancy between the quantum prediction and the observed value is not an inconsistency; it is the signature that the quantum fluctuations are local, while $\Lambda$ is global.
 
+The same four-volume, built from discrete elements, is the origin of the Everpresent Λ fluctuation δΛ ∼ V_4^{-1/2} (Ahmed et al. 2004; Sorkin 2007); see the end of Section 7.
+
 ---
 
 ## 7. The Cancellation of Local Vacuum Fluctuations ($\sigma_X = 0$)
@@ -269,18 +273,22 @@ $$
 \sigma_X = 0.
 $$
 
+**Relation to Everpresent Λ.** Ahmed, Dodelson, Greene and Sorkin (2004) start from the same unimodular framework — Λ conjugate to the four-volume V_4 — and, adding causal-set discreteness, reach the opposite conclusion: Λ fluctuates, δΛ ∼ V_4^{-1/2}, at the level of the critical density in every epoch (Everpresent Λ; Zwane et al. 2018). The two statements concern different objects. The cancellation in this section acts on the local term V(x) g_μν of the trace-free equations; it says nothing about the global Λ conjugate to V_4, which is the object whose fluctuations Everpresent Λ predicts. Which picture describes our universe is decided empirically, not by this algebra. The order-one version, in its two published implementations, does not fit DESI DR2 BAO together with the CMB: once r_d is computed for each realization, dark energy is small around recombination and ω_m is within ±2σ of Planck, no realization fits as well as ΛCDM (0/20000 and 0/500000; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). A small stationary version is bounded by σ_X < 2.6×10⁻². In this sense σ_X = 0 is the prediction of the local cancellation for local fluctuations, not a theorem about Λ.
+
 
 ---
 
-## 8. Observational Prospects: The Test of Euclid DR1
+## 8. Observational Prospects: The Test of the Full Euclid DR1 Release (expected mid-2027)
 
 The hypothesis that unimodular gravity is the true regulatory framework behind cosmic homogeneity is highly testable in the medium term through empirical exclusion:
 
 | Test | Prediction of Unimodular Gravity | What would falsify it |
 |:-----|:--------------------------------|:---------------------|
-| Euclid DR1 BAO (2026) | $\sigma_X = 0$ exactly (within experimental uncertainty) | Any statistically significant deviation ($\sigma_X > 0$) |
+| Euclid DR1 BAO (full release, expected mid-2027) | $\sigma_X = 0$ exactly (within experimental uncertainty) | Any statistically significant deviation ($\sigma_X > 0$) |
 | Gravitational waves | Only two tensor polarisations (same as GR) | Detection of a scalar polarisation mode |
 | ISW effect | No late-time ISW anomaly from dark-energy clustering | Detection of a residual ISW signal from dark-energy perturbations |
+
+*Note on the ISW row: at the DESI ceiling, Planck 2018 TT at ℓ < 30 and lensing do not distinguish the residual from ΛCDM (p95 Δχ² ≤ 0.067), so with current precision this row cannot falsify anything.*
 
 If Euclid DR1 detects any stochastic fluctuation in the dark-energy density above the noise, unimodular gravity would be ruled out. If it confirms the null result (and tightens the limit to $\sigma_X \lesssim 10^{-5}$), the case for unimodular gravity would become compelling.
 
@@ -300,7 +308,7 @@ The cosmological constant $\Lambda$ emerges as a global integration constant, fi
 
 I therefore propose that the **Principle of Vacuum Smoothness** — the requirement that $\sigma_X = 0$ exactly — is not an ad-hoc assumption but a necessary condition for any consistent theory of gravity coupled to quantum matter. Unimodular gravity satisfies this principle naturally.
 
-Future surveys, such as Euclid DR1 (expected 2026), may further tighten the limit on $\sigma_X$ or even detect a residual signal. If the smoothness persists, I think the theoretical community must take seriously the possibility that the universe is geometrically unimodular at its foundation.
+Future surveys, such as the full Euclid DR1 release with cosmology products (expected mid-2027), may further tighten the limit on $\sigma_X$ or even detect a residual signal. If the smoothness persists, I think the theoretical community must take seriously the possibility that the universe is geometrically unimodular at its foundation.
 
 ---
 

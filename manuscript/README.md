@@ -31,7 +31,8 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 - $\sigma_X < 2.6\times 10^{-2}$ (95% CL) under the stated kernel
 - Tachyonic coherent growth exclusion
 - Amplification bottleneck $10^{56}$ + Routes 1–3 numerical verdicts
-- Gravitational-slip amplitude starvation (Option 0)
+- Gravitational slip: marginal amplitude (Option 0)
+- CMB consistency (Planck 2018): OU residual at the DESI ceiling and harmonic residual (§3.5)
 
 ## What is *not* in the paper
 

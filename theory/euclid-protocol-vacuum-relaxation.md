@@ -22,6 +22,8 @@ Three layers enter the interpretation:
 | Microscopic seed | Sorkin / Bekenstein–Hawking $\sigma_0\sim 10^{-61}$ | Always $\ll$ BAO noise |
 | Effective BAO residual | $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$ after the expansion path | What DESI and Euclid constrain |
 
+Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ. The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice.
+
 Euclid therefore constrains the effective residual amplitude and, when the data allow, the shape of the OU kernel. It does not measure $\sigma_0$ directly. A deep null remains compatible with both F and E0.
 
 ---
@@ -97,7 +99,7 @@ $$
 $$
 
 
-For Euclid, I replace the DESI 7-bin vector by the Euclid BAO vector ($\gtrsim 20$ bins when available) and recompute $S(z)$.
+For Euclid, I replace the DESI 7-bin vector by the BAO vector of the full Euclid DR1 release with cosmology products (expected mid-2027; the DR1-Foundation release of November 2026 does not include the LE3 high-level products) — I assume $\gtrsim 20$ bins as a design case; no Euclid binning has been published — and recompute $S(z)$.
 
 | Question | Statistic |
 |----------|-----------|
@@ -147,7 +149,7 @@ Examples for a DESI-wide path $\Delta x=0.94$:
 | $3\times 10^{-5}$ | $10^{-4}$ | $\sim 0.4$ |
 | $5\times 10^{-5}$ | $2.6\times 10^{-2}$ | $\sim 2\times 10^{-3}$ |
 
-On a narrower Euclid DR1 path ($\Delta x\sim 0.39$), the same amplitude criterion requires larger $\theta$ by a factor $\sim 0.94/0.39\sim 2.4$. Thus $\theta\sim\mathcal{O}(1)$ is relevant when $A_0$ is a few times the noise $s$.
+In the design case of a narrower Euclid path ($\Delta x\sim 0.39$, assumed, not published), the same amplitude criterion requires larger $\theta$ by a factor $\sim 0.94/0.39\sim 2.4$. Thus $\theta\sim\mathcal{O}(1)$ is relevant when $A_0$ is a few times the noise $s$.
 
 ### 6.2 Lag correlations
 
@@ -158,6 +160,8 @@ For lag-1 Pearson correlations with error $\sim 1/\sqrt{N-3}$:
 | DESI-like | 7 | $\sim 0.5$ | $\sim 4$ (unusable) |
 | Euclid-like | 20 | $\sim 0.24$ | $\gtrsim 5$ |
 | Euclid-like | 40 | $\sim 0.16$ | $\gtrsim 7$ |
+
+*The Euclid-like rows (20 and 40 bins) are design assumptions, not a published Euclid binning.*
 
 With $N=7$, no lag is individually significant in the present DESI analysis. Lag tables remain useful diagnostics; E2 claims should rest on the joint posterior of $\theta$ from $C_{\rm OU}$.
 
@@ -185,6 +189,8 @@ If Euclid BAO leaves F/E0 degenerate, a natural joint analysis includes:
 | Growth $f\sigma_8$ | Smooth DE versus clustering |
 | ISW / CMB lensing | DE perturbations if present |
 | Imaging systematics weights | Required for angular cross-correlations |
+
+*With Planck 2018 this channel has no leverage at σ_X ≲ 2.6×10⁻²: p95 Δχ² ≤ 0.067 (TT ℓ<30) and ≤ 0.054 (lensing) (`analisis_cmb/RESULTADO.md`).*
 
 I report $\sigma_X$ and $\theta$ conditional on free smooth DE.
 
@@ -246,6 +252,8 @@ python scripts/tachyonic_rank1_mle.py
 
 Working residual ceiling under the OU kernel (this pipeline): $\sigma_X < 2.6\times 10^{-2}$ (95% CL, free-$\theta$ profile, 7 bins). Profile and joint runs on the real $\alpha$ file are consistent with a null residual (amplitude driven to the floor when the background is free).
 
+Consistency check: at that ceiling the residual is invisible to Planck 2018 (TT ℓ<30 + lensing) and its H0 imprint is 0.48 km/s/Mpc (`analisis_cmb/RESULTADO.md`).
+
 ---
 
 ## 13. What is **not** a DESI claim (retired synthetic Euclid MCMC)
@@ -257,7 +265,7 @@ Older folders `archive/results/euclid_mcmc/` and `archive/results/euclid_joint_m
 
 **Still valid as a protocol (not data):** the forecast grids in §10 (`exploratory/results/euclid_protocol/`, `exploratory/scripts/euclid_protocol_forecasts.py`). Those are design forecasts over $(\theta,A_0)$, not likelihoods on measured redshifts.
 
-When real Euclid BAO summary statistics are public, replace the retired synthetic MCMC with a loader analogous to `desi_dr2_data.py` and re-run. Until then, empirical residual claims in this repo rest on **DESI DR2 only**.
+BAO summary statistics are expected with the full Euclid DR1 release (mid-2027; the November 2026 DR1-Foundation release does not include them). When real Euclid BAO summary statistics are public, replace the retired synthetic MCMC with a loader analogous to `desi_dr2_data.py` and re-run. Until then, empirical residual claims in this repo rest on **DESI DR2 only**.
 
 ---
 
@@ -266,5 +274,5 @@ When real Euclid BAO summary statistics are public, replace the retired syntheti
 [1] Morales Souhail, J., DESI OU/QNM analysis, this repository.
 [2] Morales Souhail, J., Fundamental vs emergent vacuum relaxation, this repository.
 [3] DESI Collaboration, arXiv:2503.14738 (2025).
-[4] Euclid Collaboration, DR1 BAO forecasts (as available at analysis time).
+[4] ESA, Euclid DR1 timeline, https://www.cosmos.esa.int/web/euclid/dr1-timeline (update of 15 June 2026): DR1-Foundation November 2026; full DR1 with cosmology products mid-2027.
 

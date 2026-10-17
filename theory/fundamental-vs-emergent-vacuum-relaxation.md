@@ -100,6 +100,8 @@ $$
 **A pure Poisson discreteness seed is invisible to DESI and to Euclid.**
 DESI therefore constrains the **effective** late-time amplitude after amplification or non-Sorkin coupling — not $\sigma_0$ itself.
 
+"Invisible" holds for the horizon-area seed only. The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice.
+
 ### 3.2 Amplification to reach Euclid on the DESI path
 
 Minimum kick $A_0^{\min}=\sigma_{\rm target} e^{+\theta\Delta x}$:
@@ -148,7 +150,7 @@ Euclid alone cannot separate **F** from **E0**. Separation requires either a res
 ## 5. Observational tests
 
 1. **Euclid residual** $0<\sigma_X\lesssim 10^{-4}$ in a joint fit with free $\{w_0,w_a\}$: disfavours pure **F** (if systematics are controlled).
-2. **Euclid null** $\sigma_X\ll 10^{-5}$ with $\gtrsim 20$ bins: forces $A_0 e^{-\theta\Delta x}$ small; compatible with **F** and **E0**.
+2. **Euclid null** $\sigma_X\ll 10^{-5}$ with the BAO vector of the full Euclid DR1 release (expected mid-2027; $\gtrsim 20$ bins is a design assumption): forces $A_0 e^{-\theta\Delta x}$ small; compatible with **F** and **E0**.
 3. **Lag structure** in whitened BAO residuals matching an OU kernel: supports dynamical mean-reversion rather than pure algebraic projection.
 4. **Open-system map:** a Markovian bath mapped to cosmology should obey $t_{1/2}=\ln 2/\gamma$ with $\gamma\leftrightarrow\theta H$.
 
@@ -191,7 +193,7 @@ I specify a Euclid-facing fit with free $\{w_0,w_a,\theta,\sigma_X\}$ in `euclid
 [2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository.
 [3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`exploratory/notes/`).
 [4] DESI Collaboration, arXiv:2503.14738 (2025).
-[5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
+[5] Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
 [6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).
 [7] Uhlenbeck, G. E. & Ornstein, L. S., Phys. Rev. 36, 823 (1930).
 

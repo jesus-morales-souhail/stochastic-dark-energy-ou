@@ -80,7 +80,7 @@ Current and near-future data can distinguish between the two interpretations:
 | Observable | Fundamental SDiff | Emergent SDiff | Discriminating Power |
 |-------------------------------|--------------------------------------------|---------------------------------------------|----------------------|
 | Stochastic amplitude $\sigma_X$ | Exactly zero (or below numerical floor) | Small but non-zero residual possible | High (Euclid DR1) |
-| Euclid DR1 (2026) | No detection of stochastic signal | Possible detection of small $\sigma_X$ | High |
+| Euclid DR1, full release (expected mid-2027) | No detection of stochastic signal | Possible detection of small $\sigma_X$ | High |
 | Primordial gravitational waves | No scalar mode | Possible scalar mode at high energies | Medium |
 | DESI DR2 (current) | Compatible | Compatible | None (already passed) |
 
@@ -106,6 +106,8 @@ Three major questions emerge from this framework:
 1. **Topology:** Is the total four-volume $\mathcal{V}_4$ a fixed global observable determined from the Big Bang, or can it be influenced by quantum dynamics?
 2. **Thermodynamics of the gauge group:** Is $\mathrm{SDiff}(M)$ a fundamental symmetry, or does it emerge from maximal entanglement at low energies?
 3. **Structure of spacetime:** Do the DESI limits on $\sigma_X$ rule out models with significant local metric fluctuations (for example spacetime foam or discrete causal sets with large variance)?
+
+Not directly. Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. Tested against DESI DR2 BAO with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none of the realizations of its two published implementations fits as well as ΛCDM (0/20000 for the model of Zwane et al.; 0/500000 for the model of Das et al., α = 0.01 and 0.005; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). This applies to those phenomenological implementations, not to the idea of Everpresent Λ in general.
 
 Future data from Euclid DR1 will provide the first quantitative test capable of distinguishing these possibilities.
 

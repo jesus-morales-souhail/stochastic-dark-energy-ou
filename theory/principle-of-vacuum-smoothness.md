@@ -35,11 +35,13 @@ I have analysed public DESI DR2 BAO data with both stationary (Ornstein–Uhlenb
 
 That robustness across different statistical frameworks suggests that the smoothness of the dark energy sector is not an accident of one model assumption. It is a genuine feature that future theories should accommodate from the start.
 
+Two further checks (`analisis_cmb/`): the Planck 2018 CMB does not distinguish the residual from ΛCDM at the DESI ceiling, and a deterministic harmonic residual of percent amplitude is equally allowed by DESI BAO (58/60) and CMB-invisible. "Perfectly homogeneous" (above) therefore means homogeneous to σ_X ≲ 2.6×10⁻² in X, for stochastic and harmonic residuals alike.
+
 ---
 
 ## Implications
 
-- **For quantum gravity and emergent spacetime models:** Mechanisms that predict residual fluctuations in $\Lambda$ (for example causal set theory or the Sorkin mechanism) need a strong suppression mechanism at late times.
+- **For quantum gravity and emergent spacetime models:** Mechanisms that predict residual fluctuations in $\Lambda$ (for example causal set theory or the Sorkin mechanism) need a strong suppression mechanism at late times. This applies to small residuals around a mean Λ. Everpresent Λ (Ahmed et al. 2004) is a zero-mean, order-one model; Zwane et al. (2018) found that it fits the data of that time about as well as ΛCDM, while its published implementations do not fit DESI DR2 BAO together with the CMB (`analisis_cmb/everpresent/`).
 - **For scalar field dark energy:** Couplings that would induce observable variations in fundamental constants or stochastic behaviour are strongly constrained.
 - **For model building:** Any new proposal should first explain why $\sigma_X \approx 0$, rather than treating smoothness as a tuning problem to be fixed after the fact.
 
@@ -47,7 +49,7 @@ That robustness across different statistical frameworks suggests that the smooth
 
 ## Status
 
-I propose this principle on the basis of current observational constraints. It is falsifiable: a statistically significant detection of stochastic fluctuations in future high-precision surveys (for example Euclid DR1 or DESI Year 3+) would force me to revise or abandon it.
+I propose this principle on the basis of current observational constraints. It is falsifiable: a statistically significant detection of stochastic fluctuations in future high-precision surveys (for example the full Euclid DR1 release, expected mid-2027, or later DESI data) would force me to revise or abandon it.
 
 ---
 

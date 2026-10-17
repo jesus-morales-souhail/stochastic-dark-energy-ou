@@ -16,11 +16,12 @@ Method / optics notes only: [stochastic-de-exploratory-notes](https://github.com
 ## Read these first
 
 1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main write-up  
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C7) and what I do not (N1–N10)  
+2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C9) and what I do not (N1–N13)  
 3. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft \(10^{56}\) is not free  
 4. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — wording I allow myself  
 5. [`theory/EXPLORATORY_BOUNDARY.md`](theory/EXPLORATORY_BOUNDARY.md) — what is not part of the paper  
 6. [`papers/scope-and-mixups.md`](papers/scope-and-mixups.md) — residual \(\sigma_X\) is not \(\omega_b\), not EHT  
+7. [`analisis_cmb/RESULTADO.md`](analisis_cmb/RESULTADO.md) — CMB consistency check (Planck 2018)
 
 ---
 
@@ -32,7 +33,9 @@ Under the OU/QNM residual kernel on public DESI DR2 BAO, a stochastic residual i
 \sigma_X < 2.6\times 10^{-2}.
 \]
 
-Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure Sorkin seed \(\sim 10^{-61}\) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.
+Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure horizon-area Sorkin seed \(\sim 10^{-61}\) (not Everpresent Λ, which is a different, order-one model) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.
+
+Planck 2018 (TT ℓ<30 + lensing) does not distinguish this residual from ΛCDM at the DESI ceiling (p95 Δχ² ≤ 0.067) and adds no bound; its H0 imprint, 0.48 km/s/Mpc, does not explain the H0 tension. A percent-level harmonic residual is equally allowed (58/60) and CMB-invisible. See `analisis_cmb/RESULTADO.md`.
 
 Main long notes: [`papers/stochastic-dark-energy-desi-dr2.md`](papers/stochastic-dark-energy-desi-dr2.md), [`papers/quantum-fluid-instabilities-desi-dr2.md`](papers/quantum-fluid-instabilities-desi-dr2.md).  
 Geometry / unimodular discussion (theory, outside the claim set): [`theory/unimodular-gravity-vacuum-smoothness.md`](theory/unimodular-gravity-vacuum-smoothness.md) and the short principle [`theory/principle-of-vacuum-smoothness.md`](theory/principle-of-vacuum-smoothness.md).  

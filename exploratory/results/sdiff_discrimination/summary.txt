@@ -31,7 +31,7 @@ INTERPRETIVE REGIONS:
 OBSERVATIONAL TESTS:
   1) Euclid residual 0 < sigma_X <~ 1e-4 with free {w0,wa}:
      disfavours pure fundamental SDiff (if systematics controlled).
-  2) Euclid null << 1e-5 with >20 bins:
+  2) Euclid null << 1e-5 (full DR1, expected mid-2027; >20 bins assumed):
      forces A0_eff * exp(-theta Dx) small; compatible with F and E0.
   3) Lag structure matching an OU kernel:
      supports dynamical mean-reversion rather than pure algebraic projection.
