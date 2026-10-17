@@ -61,10 +61,29 @@ def main() -> None:
     ou = run_script("scripts/ou_bao_likelihood.py", timeout=180)
     if "Traceback" in ou:
         errors.append("ou_bao_likelihood raised an exception")
-    if "ω_R = 0.0000" not in ou and "ω_R = 0" not in ou:
-        errors.append("Expected ω_R → 0 for free QNM on DR2")
     if "H0 preferred" not in ou:
         errors.append("Expected H0 preferred over H1")
+
+    # OU / QNM checks from the machine-readable summary written by ou_bao_likelihood.py
+    mpath = ROOT / "results" / "ou_qnm_mle" / "ou_qnm_mle.json"
+    if not mpath.is_file():
+        errors.append(f"Missing {mpath}")
+    else:
+        mle = json.loads(mpath.read_text())
+        s_min = mle["search_bounds"]["sigma_X_min"]
+
+        def check(label: str, ok: bool, value: str) -> None:
+            print(f"  {'OK  ' if ok else 'FAIL'} {label}: {value}")
+            if not ok:
+                errors.append(f"{label}: {value}")
+
+        l0 = mle["LCDM"]["logL"]
+        check("lnL(LCDM) = 24.899562 ± 1e-5", abs(l0 - 24.899562) <= 1e-5, f"{l0:.6f}")
+        for name, daic in (("OU", 4.00), ("QNM", 6.00)):
+            r = mle[name]
+            at_min = abs(r["sigma_X"] - s_min) <= 0.01 * s_min
+            check(f"{name} sigma_X at the lower bound of the search range ({s_min:.4e})", at_min, f"{r['sigma_X']:.4e}")
+            check(f"{name} dAIC vs LCDM = +{daic:.2f} ± 0.01", abs(r["dAIC_vs_LCDM"] - daic) <= 0.01, f"{r['dAIC_vs_LCDM']:+.4f}")
 
     if errors:
         print("VERIFY: FAIL")
@@ -74,7 +93,7 @@ def main() -> None:
 
     print("VERIFY: OK")
     print("  CPL background near ΛCDM; nested σ not preferred")
-    print("  OU/QNM residual amplitude at floor; ω_R → 0")
+    print("  OU/QNM: sigma_X at the lower bound of the search range; dAIC = +4 / +6 vs LCDM (results/ou_qnm_mle/)")
 
 
 if __name__ == "__main__":
