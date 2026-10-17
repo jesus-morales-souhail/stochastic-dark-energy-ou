@@ -17,8 +17,8 @@ Physics (Newtonian gauge, flat, sub-horizon k ≫ aH):
   Anisotropy:  k² (Φ − Ψ) = 8π G a² π_T           (traceless ij)
   ⇒  (Φ − Ψ)/Ψ = −2 π_T / (ρ_m δ_m)
 
-  π_T = eps · σ_X · ρ_X
-  |γ − 1| = 2 · eps · σ_X · (ρ_X/ρ_m) / |δ_m|
+  π_T = eps · σ_X · ρ_crit,0          (X ≡ δρ_DE/ρ_crit,0, so rms δρ_DE = σ_X ρ_crit,0)
+  |γ − 1| = 2 · eps · σ_X · (ρ_crit,0/ρ_m) / |δ_m|
 
 Independent of (ρ+p) and of w: sidesteps the (1+w)→0 issue for a Λ-like
 fluid because π_T is the raw shear amplitude.
@@ -43,7 +43,7 @@ from desi_bound import desi_sigma_x_bound
 
 # ---- Cosmology (Planck / DESI-ish) ----
 OM_M0 = 0.315
-OM_L0 = 0.685
+OM_L0 = 0.685  # not used by the slip map: π_T is σ_X ρ_crit,0, not σ_X ρ_Λ (block C)
 
 # ---- Repo bound (DESI DR2 BAO, Morales Souhail 2026) ----
 SIGMA_X_95 = desi_sigma_x_bound()  # 95% CL upper limit (profile root, results/profile_sigma_x/)
@@ -62,9 +62,9 @@ FORECAST_FLOOR_ZK = 0.30  # z,k-dependent η
 DELTA_M = 1.0
 
 
-def rho_ratio_x_over_m(z: float) -> float:
-    """ρ_DE / ρ_m at redshift z (DE ~ cosmological constant)."""
-    return OM_L0 / (OM_M0 * (1.0 + z) ** 3)
+def rho_crit0_over_m(z: float) -> float:
+    """ρ_crit,0 / ρ_m(z) = 1 / [Ω_m0 (1+z)^3]; σ_X is in units of ρ_crit,0 ([X-std])."""
+    return 1.0 / (OM_M0 * (1.0 + z) ** 3)
 
 
 def slip_deviation(
@@ -74,12 +74,12 @@ def slip_deviation(
     delta_m: float = DELTA_M,
 ) -> float:
     """|γ − 1| from anisotropic fraction eps of stochastic σ_X."""
-    return 2.0 * eps * sigma_x * rho_ratio_x_over_m(z) / abs(delta_m)
+    return 2.0 * eps * sigma_x * rho_crit0_over_m(z) / abs(delta_m)
 
 
 def eps_needed(target_dev: float, z: float, sigma_x: float = SIGMA_X_95) -> float:
     """eps required to reach target |γ−1| at fixed σ_X (can exceed 1)."""
-    denom = 2.0 * sigma_x * rho_ratio_x_over_m(z)
+    denom = 2.0 * sigma_x * rho_crit0_over_m(z)
     return target_dev / denom if denom > 0 else math.inf
 
 
@@ -100,8 +100,8 @@ def main() -> None:
     print()
 
     for z in (0.5, 1.0, 1.5):
-        r = rho_ratio_x_over_m(z)
-        print(f"--- z = {z}   (ρ_X/ρ_m = {r:.3f}) ---")
+        r = rho_crit0_over_m(z)
+        print(f"--- z = {z}   (ρ_crit,0/ρ_m = {r:.3f}) ---")
         for eps in (1.0, 0.1, 0.01):
             dev = slip_deviation(eps, SIGMA_X_95, z)
             gap_obs = DEV_OBS / dev if dev > 0 else math.inf

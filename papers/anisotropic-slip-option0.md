@@ -115,7 +115,7 @@ $$
 - Confusing the two was the earlier table error: a slip $\gamma\sim 1.17$ is near GR’s $1.0$; a growth index $\gamma\sim 1.17$ would be a catastrophe. Once the definition is read, the number is internally consistent.
 
 **For this Option 0 note:** this is better than a random growth-index: it is a published DESI-era slip constraint of the type I care about (RSD + lensing).
-With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, far above the $\sim 3\times 10^{-2}$ scale of the $f=1$, $\sigma_X=2.6\times 10^{-2}$ estimate below.
+With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, far above the $\sim 5\times 10^{-2}$ scale of the $f=1$, $\sigma_X=2.6\times 10^{-2}$ estimate below.
 
 ### 3.3 Forecasts on slip $\eta$ (or equivalent $\gamma=\Phi/\Psi$)
 
@@ -134,28 +134,28 @@ Model-independent forecasts combining Euclid-like and DESI-like surveys for anis
 ## 4. Order-of-magnitude map $\sigma_X \rightarrow \lvert \eta-1 \rvert$**Runnable bridge:** `python scripts/slip_bridge.py`
 (sub-horizon anisotropy equation; not a Boltzmann code).
 
-Let $\varepsilon\in[0,1]$ (also written $f $ below) be the fraction of the DE-sector residual stress that is anisotropic (shear), and let $\sigma_X$ be the fractional residual amplitude constrained by BAO. With $\pi_T=\varepsilon \sigma_X \rho_X$ and $\delta_m\sim 1$:
+Let $\varepsilon\in[0,1]$ (also written $f $ below) be the fraction of the DE-sector residual stress that is anisotropic (shear), and let $\sigma_X$ be the residual amplitude constrained by BAO, in units of today's critical density ($X\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$). With $\pi_T=\varepsilon \sigma_X \rho_{{\rm crit},0}$ and $\delta_m\sim 1$:
 
 
 $$
-\lvert \gamma-1 \rvert = 2 \varepsilon \sigma_X \frac{\rho_X}{\rho_m \lvert \delta_m \rvert}.
+\lvert \gamma-1 \rvert = 2 \varepsilon \sigma_X \frac{\rho_{{\rm crit},0}}{\rho_m \lvert \delta_m \rvert}.
 $$
 
 
 **Machine check (best case $\varepsilon=1$, $\sigma_X=2.633\times 10^{-2}$, $\delta_m=1$):**
 
-| $z$ | $\rho_X/\rho_m$ | max $\|\gamma-1\|$ | gap vs Maus $\sim 0.17$ | gap vs Sakr floor $\sim 0.05$ |
+| $z$ | $\rho_{{\rm crit},0}/\rho_m$ | max $\|\gamma-1\|$ | gap vs Maus $\sim 0.17$ | gap vs Sakr floor $\sim 0.05$ |
 |-------|-------------------|----------------------|---------------------------|--------------------------------|
-| 0.5 | 0.644 | $3.39\times 10^{-2}$ | $\sim 5.0\times$ | $\sim 1.5\times$ |
-| 1.0 | 0.272 | $1.43\times 10^{-2}$ | $\sim 12\times$ | $\sim 3.5\times$ |
-| 1.5 | 0.139 | $7.33\times 10^{-3}$ | $\sim 23\times$ | $\sim 6.8\times$ |
+| 0.5 | 0.941 | $4.95\times 10^{-2}$ | $\sim 3.4\times$ | $\sim 1.0\times$ |
+| 1.0 | 0.397 | $2.09\times 10^{-2}$ | $\sim 8.1\times$ | $\sim 2.4\times$ |
+| 1.5 | 0.203 | $1.07\times 10^{-2}$ | $\sim 16\times$ | $\sim 4.7\times$ |
 
 Compare:
 
-| Instrument / status | Rough sensitivity to $\eta-1$ | vs $\sim 3\times 10^{-2}$ (best case) |
+| Instrument / status | Rough sensitivity to $\eta-1$ | vs $\sim 5\times 10^{-2}$ (best case) |
 |---------------------|----------------------------------|----------------------------------|
-| Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **far above** prediction |
-| Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **still above** by $\sim 0.9$–$1.5\times$ |
+| Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **above** prediction ($\sim 2\times$) |
+| Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **comparable**: $\sim 0.6$–$1.0\times$ |
 
 **Interpretation.** Even the most optimistic anisotropic fraction does not make the gap visible at current DESI precision, nor automatically at Euclid, unless there is amplification of the bare residual amplitude (or a shear sector decoupled from the BAO-bounded isotropic $\sigma_X$).
 
@@ -163,9 +163,9 @@ That word — amplification — is the same one that appears in amplification (`
 
 | $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=2.633\times 10^{-2}$ |
 |-----------------|------------------------------------------------------------------|
-| 1 | $3.39\times 10^{-2}$ |
-| 0.1 | $3.39\times 10^{-3}$ |
-| 0.01 | $3.39\times 10^{-4}$ |
+| 1 | $4.95\times 10^{-2}$ |
+| 0.1 | $4.95\times 10^{-3}$ |
+| 0.01 | $4.95\times 10^{-4}$ |
 
 ---
 
@@ -174,7 +174,7 @@ That word — amplification — is the same one that appears in amplification (`
 **Does conclude:**
 
 1. DESI BAO residual bounds ($\sigma_X$) do not by themselves kill an anisotropic gap — they bound a different operator (isotropic residual covariance on distances).
-2. Published growth/MG analyses with DESI-like data are GR-compatible at the $\mathcal{O}(0.1)$ level, which is still too coarse to see $\lvert \eta-1 \rvert\sim 3\times 10^{-2}$.
+2. Published growth/MG analyses with DESI-like data are GR-compatible at the $\mathcal{O}(0.1)$ level, which is still too coarse to see $\lvert \eta-1 \rvert\sim 5\times 10^{-2}$.
 3. $\eta$ remains the conceptually correct crack to watch if a large amplification of vacuum residual ever becomes physical.
 4. I do not build homemade Boltzmann codes (Option 1) as the next step. If code is needed later: hi_class / MGCAMB / EFTCAMB (Option 2), with a pre-specified target amplitude from the table above.
 

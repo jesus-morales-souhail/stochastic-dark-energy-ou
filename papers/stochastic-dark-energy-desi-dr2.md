@@ -67,7 +67,7 @@ With $N \sim 10^{122}$, this gives $\delta\Lambda \sim 10^{-61}$ in Planck units
 
 ### Axiom A3: Effective Stochastic Dynamics (OU Closure)
 
-Define $X(x) \equiv \delta\Omega_\Lambda(x)$, where $x = \ln a$ is the logarithmic scale factor. I model $X$ as an Ornstein–Uhlenbeck process:
+Define $X(x) \equiv \delta\rho_{\rm DE}(x)/\rho_{{\rm crit},0}$ ($= \delta\Omega_\Lambda$ in today's units; $\delta\ln\rho_{\rm DE} = X/\Omega_{\Lambda0}$), where $x = \ln a$ is the logarithmic scale factor. I model $X$ as an Ornstein–Uhlenbeck process:
 
 
 $$
@@ -79,7 +79,7 @@ with stationary variance
 
 
 $$
-\mathrm{Var}(X) = \frac{\sigma^2}{2\theta}.
+\sigma_X^2 \equiv \mathrm{Var}(X) = \frac{\sigma^2}{2\theta} \qquad (\sigma_X:\ \text{stationary standard deviation, not the diffusion } \sigma).
 $$
 
 
@@ -169,17 +169,17 @@ where $\xi(t)$ is a Gaussian white noise with:
 
 
 $$
-\langle \xi(t) \rangle = 0, \qquad \langle \xi(t) \xi(t') \rangle = \frac{\sigma^2 H^2 \rho_{\Lambda,0}^2}{2\theta} \cdot \delta_D(t - t').
+\langle \xi(t) \rangle = 0, \qquad \langle \xi(t) \xi(t') \rangle = \sigma^2 H \rho_{{\rm crit},0}^2 \, \delta_D(t - t').
 $$
 
 
-Converting to the logarithmic scale factor $x = \ln a$ (using $dt = dx/H$ and defining $X = \delta\rho_\Lambda / \rho_{\Lambda,0}$), this becomes exactly Axiom A3. The mean-reversion rate $\theta$ is the effective damping of fluctuations by the Hubble friction term $3H(1+w_\Lambda)$; the diffusion amplitude $\sigma$ encodes the strength of the microscopic noise source from Axiom A2.
+Converting to the logarithmic scale factor $x = \ln a$ (using $dt = dx/H$, so that $dW_x = \sqrt{H}\,dW_t$, with $X = \delta\rho_{\rm DE} / \rho_{{\rm crit},0}$), this becomes exactly Axiom A3. The mean-reversion rate $\theta$ is the effective damping of fluctuations by the Hubble friction term $3H(1+w_\Lambda)$; the diffusion amplitude $\sigma$ encodes the strength of the microscopic noise source from Axiom A2.
 
 The stationary solution has variance:
 
 
 $$
-\mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
+\sigma_X^2 \equiv \mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
 $$
 
 
@@ -269,7 +269,7 @@ and
 
 
 $$
-\mathrm{Cov}[X(x_i), X(x_j)] = \frac{\sigma^2}{2\theta} \exp\left[-\theta \lvert x_i - x_j \rvert\right],
+\mathrm{Cov}[X(x_i), X(x_j)] = \sigma_X^2 \exp\left[-\theta \lvert x_i - x_j \rvert\right], \qquad \sigma_X^2 \equiv \frac{\sigma^2}{2\theta},
 $$
 
 
@@ -369,7 +369,7 @@ The best fit drives the stochastic noise parameter to zero, and the profile like
 
 The upper limit $\sigma_X < 2.6\times 10^{-2}$ comes from a formal profile likelihood scan over $\sigma_X$ (`scripts/profile_sigma_x_desi.py`): root of $\Delta\ln\mathcal{L}=-1.92$ at $\sigma_X=2.633\times 10^{-2}$, between grid nodes; with only 7 bins the profile is flat at small $\sigma_X$ and the best fit is $\sigma_X\to 0$.
 
-The upper limit $\sigma_X < 2.6\times 10^{-2}$ implies that the dark energy density is not only fine-tuned to a specific value, but that this value is realized with extraordinary homogeneity across the observable universe. Whatever cancellation mechanism is responsible for the smallness of $\Lambda$ (whether anthropic selection, a symmetry, or a dynamical attractor), it must operate with such precision that it suppresses local fluctuations by more than four orders of magnitude relative to the background density.
+The upper limit $\sigma_X < 2.6\times 10^{-2}$ implies that the dark energy density is not only fine-tuned to a specific value, but that this value is realized with extraordinary homogeneity across the observable universe. Whatever cancellation mechanism is responsible for the smallness of $\Lambda$ (whether anthropic selection, a symmetry, or a dynamical attractor), it must operate with such precision that it suppresses local fluctuations by $\sim 1.6$ orders of magnitude relative to the critical density ($\log_{10}(1/\sigma_X) = 1.58$), or $1.42$ relative to $\rho_\Lambda$ ($\log_{10}(\Omega_{\Lambda0}/\sigma_X)$).
 
 ### 7.2 Implications for Models of Dark Energy
 
@@ -397,11 +397,11 @@ $$
 $$
 
 
-where $\beta$ is the effective coupling constant. Assuming $\rho_\Lambda \approx V(\phi)$, the fractional fluctuation in $\rho_\Lambda$ is:
+where $\beta$ is the effective coupling constant. Assuming $\rho_\Lambda \approx V(\phi)$, the rms relative fluctuation of $\rho_\Lambda$ is, with $\delta\ln\rho_{\rm DE} = X/\Omega_{\Lambda0}$:
 
 
 $$
-\sigma_X \equiv \frac{\delta \rho_\Lambda}{\rho_\Lambda} \approx \frac{V'(\phi)}{V(\phi)} \delta \phi.
+\frac{\mathrm{rms}(\delta \rho_\Lambda)}{\rho_\Lambda} = \frac{\sigma_X}{\Omega_{\Lambda0}} \approx \frac{V'(\phi)}{V(\phi)}\, \mathrm{rms}(\delta \phi).
 $$
 
 
@@ -409,15 +409,15 @@ Combining both expressions:
 
 
 $$
-\frac{\Delta \alpha}{\alpha} \approx \beta \frac{V(\phi)}{V'(\phi)} \sigma_X.
+\frac{\Delta \alpha}{\alpha} \approx \beta \frac{V(\phi)}{V'(\phi)} \frac{\sigma_X}{\Omega_{\Lambda0}}.
 $$
 
 
-My upper bound $\sigma_X < 2.6\times 10^{-2}$ therefore implies:
+My upper bound $\sigma_X < 2.6\times 10^{-2}$, i.e. $\sigma_X/\Omega_{\Lambda0} < 3.84\times 10^{-2}$, therefore implies:
 
 
 $$
-\left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (2.6\times 10^{-2}).
+\left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (3.84\times 10^{-2}).
 $$
 
 
@@ -473,7 +473,7 @@ $$
 
 **(95% CL).**
 
-The upper limit translates into a constraint on the mass of a possible scalar field mediating dark energy: $m_\phi \lesssim 10^{-5}\ \text{eV}$ [valor no reproducible; pendiente de decisión del autor]. This is consistent with ultralight boson scenarios and with astrophysical bounds on the variation of fundamental constants ($\Delta\alpha/\alpha \lesssim 10^{-5}$ from quasar spectroscopy).
+A scalar-field reading would translate $\sigma_X$ into a bound on $m_\phi$; it is not derived here.
 
 More broadly, $\sigma_X < 2.6\times 10^{-2}$ implies that any microscopic mechanism responsible for the observed value of $\Lambda$ must either strongly protect the coupling of the scalar field to the Standard Model (e.g., via shift symmetries), or operate at scales that leave an absolutely minimal cosmological imprint.
 
@@ -563,7 +563,7 @@ H^2(z) = H_0^2 \left[ \Omega_m (1+z)^3 + \Omega_\Lambda + X(z) \right],
 $$
 
 
-one obtains, to first order in $X$:
+with $X(z) \equiv \delta\rho_{\rm DE}(z)/\rho_{{\rm crit},0}$ (in reading (a), $X(z) - X(0)$, so that $E(0) = 1$), one obtains, to first order in $X$:
 
 
 $$
@@ -618,15 +618,10 @@ The following sections provide theoretical interpretations of the phenomenologic
 
 ### E.1 Scalar Field Mass (Canonical Quintessence)
 
-Assuming that dark energy is a canonical scalar field $\phi$ with $\rho_\Lambda \approx V(\phi)$ and $\phi \sim M_{\rm Pl}$, and using $\sigma_X \sim m_\phi^2 M_{\rm Pl} H_0 / (2\pi \rho_\Lambda)$, the limit $\sigma_X < 2.5\times 10^{-2}$ implies:
+A scalar-field reading would translate $\sigma_X$ into a bound on $m_\phi$; it is not derived here.
 
 
-$$
-m_\phi \lesssim 9.45 \times 10^{-5} \text{eV}. \quad \text{[valor no reproducible; pendiente de decisión del autor]}
-$$
-
-
-This is consistent with ultralight boson scenarios. However, this translation depends on the assumed normalization of $\phi$ and the relation between $\sigma_X$ and $\delta\phi$. It is not a direct measurement from DESI data.
+Such a translation would depend on the assumed normalization of $\phi$ and on the relation between $\sigma_X$ and $\delta\phi$; it would not be a direct measurement from DESI data.
 
 ### E.2 Symmetries and Stochastic Dynamics
 
@@ -650,7 +645,7 @@ This derivation is provided for theoretical completeness and as a foundation for
 
 ### F.1 Setup and Symmetry Conditions
 
-Define the fractional fluctuation field $X(x, \mathbf{r}) \equiv \delta\rho_\Lambda(x, \mathbf{r}) / \rho_{\Lambda,0}$, where $x = \ln a$ and $\mathbf{r}$ is the comoving position vector. The two-point correlation function is:
+Define the fluctuation field $X(x, \mathbf{r}) \equiv \delta\rho_{\rm DE}(x, \mathbf{r}) / \rho_{{\rm crit},0}$ (as in Axiom A3), where $x = \ln a$ and $\mathbf{r}$ is the comoving position vector. The two-point correlation function is:
 
 
 $$
@@ -818,11 +813,11 @@ $$
 $$
 
 
-where $V'(\phi) = dV/d\phi$. The dimensionless stochastic amplitude defined in the main text is:
+where $V'(\phi) = dV/d\phi$. With the definition of the main text, $X \equiv \delta\rho_{\rm DE}/\rho_{{\rm crit},0}$, the rms relative fluctuation of $\rho_\Lambda$ is:
 
 
 $$
-\sigma_X \equiv \frac{\delta\rho_\Lambda}{\rho_\Lambda}.
+\frac{\mathrm{rms}(\delta\rho_\Lambda)}{\rho_\Lambda} = \frac{\sigma_X}{\Omega_{\Lambda 0}}.
 $$
 
 
@@ -830,7 +825,7 @@ Combining these expressions yields:
 
 
 $$
-\sigma_X \simeq \frac{V'(\phi)}{V(\phi)} \delta\phi \quad \Longrightarrow \quad \delta\phi \simeq \sigma_X \frac{V(\phi)}{V'(\phi)}. \tag{H.2}
+\frac{\sigma_X}{\Omega_{\Lambda 0}} \simeq \frac{V'(\phi)}{V(\phi)} \delta\phi \quad \Longrightarrow \quad \delta\phi \simeq \frac{\sigma_X}{\Omega_{\Lambda 0}} \frac{V(\phi)}{V'(\phi)}. \tag{H.2}
 $$
 
 
@@ -838,7 +833,7 @@ Substituting into Eq. (H.1) gives the exact link between the spectroscopic obser
 
 
 $$
-\boxed{ \frac{\Delta\alpha}{\alpha} \simeq \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \sigma_X }. \tag{H.3}
+\boxed{ \frac{\Delta\alpha}{\alpha} \simeq \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \frac{\sigma_X}{\Omega_{\Lambda 0}} }. \tag{H.3}
 $$
 
 
@@ -862,11 +857,11 @@ $$
 $$
 
 
-Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 2.6\times 10^{-2}$ at 95% CL) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
+Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 2.6\times 10^{-2}$ at 95% CL, i.e. $\sigma_X/\Omega_{\Lambda 0} < 3.84\times 10^{-2}$) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
 
 
 $$
-\left| \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \right| \lesssim \frac{2.7 \times 10^{-6}}{2.633\times 10^{-2}} \approx 1.0 \times 10^{-4}. \tag{H.5}
+\left| \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \right| \lesssim \frac{2.7 \times 10^{-6}}{3.84\times 10^{-2}} \approx 7.0 \times 10^{-5}. \tag{H.5}
 $$
 
 
@@ -880,11 +875,11 @@ If the scalar field interacts with the gauge sector with a strength comparable t
 
 
 $$
-\left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.0 \times 10^{-4}.
+\left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 7.0 \times 10^{-5}.
 $$
 
 
-For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 9.8\times 10^{3}$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
+For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 1.4\times 10^{4}$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
 
 **Case 2: Slow-roll quintessence potential** ($\lambda \lesssim 1$)
 
@@ -892,11 +887,11 @@ For the field to reproduce the observed accelerated expansion, the potential mus
 
 
 $$
-\lvert \zeta \rvert \lesssim 1.0 \times 10^{-4}.
+\lvert \zeta \rvert \lesssim 7.0 \times 10^{-5}.
 $$
 
 
-This implies a suppression scale $M_{\rm cut} \equiv M_{\rm Pl} / \lvert \zeta \rvert \gtrsim 9.8\times 10^{3} M_{\rm Pl}$, placing the new-physics scale well above the Planck scale. Such a suppression is technically unnatural and requires a protective symmetry mechanism, such as an axionic shift symmetry, to suppress quantum corrections from charged-particle loops [3].
+This implies a suppression scale $M_{\rm cut} \equiv M_{\rm Pl} / \lvert \zeta \rvert \gtrsim 1.4\times 10^{4} M_{\rm Pl}$, placing the new-physics scale well above the Planck scale. Such a suppression is technically unnatural and requires a protective symmetry mechanism, such as an axionic shift symmetry, to suppress quantum corrections from charged-particle loops [3].
 
 ### H.5 Conclusion for the Stochastic Model
 

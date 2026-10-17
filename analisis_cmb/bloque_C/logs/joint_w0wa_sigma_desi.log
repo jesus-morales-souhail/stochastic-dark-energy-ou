@@ -1,0 +1,20 @@
+joint_w0wa data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+Joint DESI DR2 BAO fits...
+  fitting lcdm...
+    w0=-1.0000 wa=+0.0000 th=None sX=0.000e+00 logL=24.8996
+  fitting cpl...
+    w0=-1.0009 wa=+0.0137 th=None sX=0.000e+00 logL=24.9073
+  fitting ou_fixed_bg...
+    w0=-1.0000 wa=+0.0000 th=1.897936248779298 sX=3.815e-10 logL=24.8996
+  fitting joint...
+    w0=-1.0009 wa=+0.0137 th=0.7340124004551962 sX=5.337e-10 logL=24.9073
+Joint MLE DESI DR2 BAO {w0,wa,theta,sigma_X}
+=======================================================
+lcdm          w0=-1.0000  wa=+0.0000  θ=    None  σ_X=0.000e+00  logL=24.8996  ΔlnL=+0.0000  AIC=None
+cpl           w0=-1.0009  wa=+0.0137  θ=    None  σ_X=0.000e+00  logL=24.9073  ΔlnL=+0.0078  AIC=-45.8146980629498
+ou_fixed_bg   w0=-1.0000  wa=+0.0000  θ=1.897936  σ_X=3.815e-10  logL=24.8996  ΔlnL=+0.0000  AIC=-45.799125041278245
+joint         w0=-1.0009  wa=+0.0137  θ=0.734012  σ_X=5.337e-10  logL=24.9073  ΔlnL=+0.0078  AIC=-41.81469806295033
+
+ΔAIC(joint − cpl) = +4.000
+σ_X joint = 5.337e-10  (→0 means stochastic not needed)
+

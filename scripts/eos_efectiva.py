@@ -132,7 +132,9 @@ def logL_cpl(w0: float, wa: float) -> float:
 
 # ---------------------------------------------------------------------------
 # Optional OU-style additive correction on w (nested extension)
-# w_eff(z) = w_CPL(z) + δw(z),  δw ~ σ²/(2θ) (1 - e^{-2θ t}) / Ω_DE  (toy)
+# w_eff(z) = w_CPL(z) + δw(z),  δw ~ σ_w²/(2θ) (1 - e^{-2θ t}) / Ω_DE  (toy)
+# sigma_w is the amplitude of this toy δw correction; it is NOT σ_X (the BAO residual amplitude).
+# The output key "sigma" (results/eos_cpl_desi_dr2/) is sigma_w; kept for compatibility.
 # No hard phantom clamp — that created a flat ΛCDM plateau.
 # ---------------------------------------------------------------------------
 def conformal_time_to_z(z: float) -> float:
@@ -144,12 +146,12 @@ def conformal_time_to_z(z: float) -> float:
     return quad(integrand, 0.0, z, limit=80, epsabs=1e-6)[0]
 
 
-def Omega_DE_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
+def Omega_DE_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
     """Integrate continuity equation for DE with optional mean-field OU correction."""
 
     def integrand(zp: float) -> float:
         w_cpl = w0 + wa * zp / (1.0 + zp)
-        if sigma <= 0.0:
+        if sigma_w <= 0.0:
             w_eff = w_cpl
         else:
             tz = conformal_time_to_z(zp)
@@ -157,9 +159,9 @@ def Omega_DE_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> 
             e2_bg = E2_cpl(zp, W0_FID, WA_FID)
             omega_bg = (1.0 - Om) / e2_bg
             if theta < 1e-8:
-                corr = (sigma**2) * tz / max(omega_bg, 1e-12)
+                corr = (sigma_w**2) * tz / max(omega_bg, 1e-12)
             else:
-                corr = (sigma**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
+                corr = (sigma_w**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
                     1.0 - np.exp(-2.0 * theta * tz)
                 )
             w_eff = w_cpl + corr
@@ -169,21 +171,21 @@ def Omega_DE_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> 
     return (1.0 - Om) * np.exp(exponent)
 
 
-def E2_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
-    return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma, theta)
+def E2_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
+    return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma_w, theta)
 
 
-def H_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
-    e2 = E2_eff(z, w0, wa, sigma, theta)
+def H_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
+    e2 = E2_eff(z, w0, wa, sigma_w, theta)
     if e2 <= 0.0 or not np.isfinite(e2):
         return np.nan
     return H0 * np.sqrt(e2)
 
 
-def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarray:
+def alpha_pred_eff(w0: float, wa: float, sigma_w: float, theta: float) -> np.ndarray:
     def DM(z: float) -> float:
         def integrand(zp: float) -> float:
-            h = H_eff(zp, w0, wa, sigma, theta)
+            h = H_eff(zp, w0, wa, sigma_w, theta)
             if not np.isfinite(h) or h <= 0.0:
                 raise ValueError("non-positive H_eff")
             return 1.0 / h
@@ -191,7 +193,7 @@ def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarr
         return c_kms * quad(integrand, 0.0, z, limit=100, epsabs=1e-6)[0]
 
     def DH(z: float) -> float:
-        h = H_eff(z, w0, wa, sigma, theta)
+        h = H_eff(z, w0, wa, sigma_w, theta)
         if not np.isfinite(h) or h <= 0.0:
             raise ValueError("non-positive H_eff")
         return c_kms / h
@@ -209,9 +211,9 @@ def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarr
     return out
 
 
-def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
+def chi2_eff(w0: float, wa: float, sigma_w: float, theta: float) -> float:
     try:
-        pred = alpha_pred_eff(w0, wa, sigma, theta)
+        pred = alpha_pred_eff(w0, wa, sigma_w, theta)
     except (ValueError, FloatingPointError, ZeroDivisionError, OverflowError):
         return np.inf
     if not np.all(np.isfinite(pred)):
@@ -225,8 +227,8 @@ def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
         return float(np.sum((r / sigma_obs) ** 2))
 
 
-def logL_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
-    c2 = chi2_eff(w0, wa, sigma, theta)
+def logL_eff(w0: float, wa: float, sigma_w: float, theta: float) -> float:
+    c2 = chi2_eff(w0, wa, sigma_w, theta)
     if not np.isfinite(c2):
         return -np.inf
     return -0.5 * c2
@@ -275,7 +277,7 @@ def fit_cpl_pure(starts=None):
 
 
 def fit_eff_nested(starts=None):
-    """Joint {w0, wa, sigma, theta}; sigma>=0, theta>0."""
+    """Joint {w0, wa, sigma_w, theta}; sigma_w>=0, theta>0 (output key "sigma")."""
     if starts is None:
         starts = [
             [-1.0, 0.0, 1e-5, 0.1],

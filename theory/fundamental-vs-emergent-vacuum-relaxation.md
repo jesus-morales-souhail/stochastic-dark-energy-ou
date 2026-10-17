@@ -29,7 +29,7 @@ If fundamental, local vacuum stresses of the form $T_{\mu\nu}=V(x)g_{\mu\nu}$ ar
 
 ### 2.1 OU sector (this repository)
 
-I take fractional fluctuations $X\equiv\delta\Omega_\Lambda$ in $x=\ln a$:
+I take fluctuations $X\equiv\delta\Omega_\Lambda=\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$ in $x=\ln a$:
 
 
 $$

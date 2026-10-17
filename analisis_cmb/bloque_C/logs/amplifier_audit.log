@@ -1,0 +1,29 @@
+========================================================================
+AMPLIFIER AUDIT: Sorkin seed → BAO / Euclid residual
+========================================================================
+sigma_0 (Sorkin/Bekenstein)     : 1.000e-61  (~ 1/sqrt(N), N~1e+122)
+DESI bound sigma_X (95% CL)     : < 2.633e-02
+Euclid-scale residual target    : ~ 1.000e-05
+A0_min / sigma_0 (table ~1e-5)  : ~ 1.000e+56
+sigma_X_DESI / sigma_0          : ~ 2.633e+59
+
+Required gain to DESI ceiling   : ~ 10^59
+Required gain to Euclid target  : ~ 10^56
+
+Amplifier                                  Gain                         Verdict
+----------------------------------------------------------------------------------------------------
+(a) coherent / tachyonic growth            —                            EXCLUDED in-repo (rank-1 cov; Δχ² ~ +25)
+(b) desqueezing r=1.5                      e^{2r} ≈ 20.1  (~10^1)       Orders short (~55 decades missing)
+(c) rms accumulate √N                      √N ~ 1.000e+61 but seed already 1/√N No free gain unless coherent → (a)
+(d) inflation-style freeze-out ~60 e-folds e^{60} ~ 1.142e+26 (~10^{26}) Gain O(10^26) only; seed is H/MPl~1e-5, NOT sigma_0 — new ansatz
+(e) phase-transition jump                  discrete feature             Constrained by BAO residual smoothness
+
+VERDICT:
+  No audited channel maps bare Sorkin sigma_0 → 1e-5 without:
+    • already being excluded (a),
+    • delivering only O(1)–O(10^26) (b,d),
+    • reintroducing a free large A0, or
+    • abandoning the Sorkin seed definition (d).
+  Slip / GRB / wrong-scale optics inherit the same amplitude gap.
+  Only (d) merits a *new* theory paper — and only after redefining the seed.
+========================================================================

@@ -51,9 +51,9 @@ These are **different questions**. The answers differ by about **three decades**
 
 - “$\sim 10^{56}$” **only** for the **Euclid-scale target** $\sigma\sim 10^{-5}$ (or $A_0^{\min}\sim 10^{-5}$).
 - “$\sim 10^{59}$” for the **measured DESI ceiling** $\sigma_X=2.6\times 10^{-2}$.
-- Density form of the same ratio: $\lvert\delta\rho\rvert_{\max}/(\sigma_0\rho_\Lambda)=\sigma_{\mathrm{tgt}}/\sigma_0$ — so the DESI density gap is $\sim 10^{59}$, not $10^{56}$.
+- Density form: with $X\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$, $\lvert\delta\rho\rvert_{\max}=\sigma_X\rho_{{\rm crit},0}=(\sigma_X/\Omega_{\Lambda0})\rho_\Lambda$, so $\lvert\delta\rho\rvert_{\max}/(\sigma_0\rho_\Lambda)=\sigma_X/(\Omega_{\Lambda0}\sigma_0)\approx 3.3\times 10^{59}$ for the DESI ceiling — still $\sim 10^{59}$, not $10^{56}$.
 
-**What DESI actually measured** is a **null residual bound**, not a new $\rho_\Lambda$. Mean vacuum density $\rho_\Lambda\sim\Omega_{\Lambda 0}\rho_{\mathrm{crit}}$ comes from standard cosmology (e.g. Planck-class $H_0,\Omega_\Lambda$); this corpus constrains the **fractional residual amplitude** $\sigma_X$ on top of that background.
+**What DESI actually measured** is a **null residual bound**, not a new $\rho_\Lambda$. Mean vacuum density $\rho_\Lambda\sim\Omega_{\Lambda 0}\rho_{\mathrm{crit}}$ comes from standard cosmology (e.g. Planck-class $H_0,\Omega_\Lambda$); this corpus constrains the **residual amplitude** $\sigma_X$ (in units of $\rho_{{\rm crit},0}$) on top of that background.
 
 DESI constrains **effective** amplitude after any amplification — **not** $\sigma_0$ itself.
 Without a physical map $\sigma_0\to A_0$, “Euclid will see vacuum noise” is **not** a theorem of this repository.

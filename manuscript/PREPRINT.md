@@ -25,7 +25,7 @@ Separately, a coherent tachyonic growth model with the correct rank-1 covariance
 
 I then quantify an amplification bottleneck: a Sorkin–Bekenstein Poisson seed $\sigma_0\sim 10^{-61}$ lies $\sim 10^{56}$ below Euclid-scale residual amplitudes ($\sim 10^{-5}$) and $\sim 10^{59}$ below the DESI residual ceiling measured here ($2.6\times 10^{-2}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a local effective count $N_{\mathrm{eff}}\sim 4\times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
 
-Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, but inherits the same amplitude starvation: even full anisotropy of the BAO-bounded residual gives $\lvert\gamma-1\rvert\sim 3\times 10^{-2}$, of order $1.5$–$7\times$ below current and forecast floors.
+Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, but inherits the same amplitude starvation: even full anisotropy of the BAO-bounded residual gives at most $\lvert\gamma-1\rvert\sim 5\times 10^{-2}$ ($z=0.5$, $\delta_m=1$): $\sim 3$–$16\times$ below the current measurement and $1.0$–$4.7\times$ below the forecast floor, which it only reaches in that best case.
 
 I claim limits, exclusions, and a map of open hypotheses—not a detection of vacuum discreteness or a new dark-energy fluid.
 
@@ -79,19 +79,19 @@ I use **public DESI DR2 BAO summary statistics** (arXiv:2503.14738): isotropic B
 
 ### 2.2 Residual process
 
-Let $X(x)\equiv\delta\Omega_X(x)$ with $x=\ln a$. The stationary OU process is
+Let $X(x)\equiv\delta\rho_{\mathrm{DE}}(x)/\rho_{\mathrm{crit},0}$ ($=\delta\Omega_\Lambda$ in today's units) with $x=\ln a$, so that $\delta\ln\rho_{\mathrm{DE}}=X/\Omega_{\Lambda0}$. The stationary OU process is
 
 
 $$
-\mathrm{d}X=-\theta X\,\mathrm{d}x+\sigma\,\mathrm{d}W_x,\quad \mathrm{Var}(X)=\frac{\sigma^{2}}{2\theta}\quad(\theta>0).
+\mathrm{d}X=-\theta X\,\mathrm{d}x+\sigma\,\mathrm{d}W_x,\quad \sigma_X^2\equiv\mathrm{Var}(X)=\frac{\sigma^{2}}{2\theta}\quad(\theta>0).
 $$
 
 
-I work with an effective residual amplitude $\sigma_X$ entering the BAO residual covariance. For bins $i,j$ with logarithmic separation $\Delta x_{ij}$,
+I work with the effective residual amplitude $\sigma_X$ (the stationary standard deviation of $X$, not the diffusion $\sigma$), which enters the BAO residual covariance through the sensitivity kernel $S_i\equiv S(z_i)=\partial\ln D_V(z_i)/\partial\Omega_\Lambda$ (flat), $\delta\alpha_i=S_iX(z_i)$. For bins $i,j$ with logarithmic separation $\Delta x_{ij}$,
 
 
 $$
-C^{\mathrm{OU}}_{ij}=\sigma_X^2 e^{-\theta\Delta x_{ij}},\quad C^{\mathrm{QNM}}_{ij}=\sigma_X^2 e^{-\theta\Delta x_{ij}}\cos(\omega_R\Delta x_{ij}).
+C^{\mathrm{OU}}_{ij}=S_iS_j\,\sigma_X^2 e^{-\theta\Delta x_{ij}},\quad C^{\mathrm{QNM}}_{ij}=S_iS_j\,\sigma_X^2 e^{-\theta\Delta x_{ij}}\cos(\omega_R\Delta x_{ij}).
 $$
 
 
@@ -235,17 +235,17 @@ Anisotropic stress is not of the form $Vg_{\mu\nu}$. Sub-horizon slip satisfies 
 
 
 $$
-\lvert\gamma-1\rvert=\left| \frac{\Phi-\Psi}{\Psi}\right| =2\varepsilon\sigma_X\frac{\rho_X}{\rho_m\lvert\delta_m\rvert},
+\lvert\gamma-1\rvert=\left| \frac{\Phi-\Psi}{\Psi}\right| =2\varepsilon\sigma_X\frac{\rho_{\mathrm{crit},0}}{\rho_m\lvert\delta_m\rvert},
 $$
 
 
-with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual. With $\sigma_X=2.633\times 10^{-2}$, $\varepsilon=1$, $\delta_m=1$:
+with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual, $\pi_T=\varepsilon\sigma_X\rho_{\mathrm{crit},0}$ (since $X\equiv\delta\rho_{\mathrm{DE}}/\rho_{\mathrm{crit},0}$). With $\sigma_X=2.633\times 10^{-2}$, $\varepsilon=1$, $\delta_m=1$:
 
 | $z$ | max $\lvert\gamma-1\rvert$ | vs Maus $\lvert\gamma-1\rvert\sim 0.17$ | vs forecast floor $\sim 0.05$ |
 |:------|:-----------------------------|:------------------------------------------|:--------------------------------|
-| 0.5 | $3.39\times 10^{-2}$ | $\sim 5.0\times$ short | $\sim 1.5\times$ short |
-| 1.0 | $1.43\times 10^{-2}$ | $\sim 12\times$ short | $\sim 3.5\times$ short |
-| 1.5 | $7.33\times 10^{-3}$ | $\sim 23\times$ short | $\sim 6.8\times$ short |
+| 0.5 | $4.95\times 10^{-2}$ | $\sim 3.4\times$ short | $\sim 1.0\times$ (at the floor) |
+| 1.0 | $2.09\times 10^{-2}$ | $\sim 8.1\times$ short | $\sim 2.4\times$ short |
+| 1.5 | $1.07\times 10^{-2}$ | $\sim 16\times$ short | $\sim 4.7\times$ short |
 
 References: Maus et al., arXiv:2505.20656; Sakr et al., arXiv:2501.07477; runnable map: [`scripts/slip_bridge.py`](../scripts/slip_bridge.py).
 

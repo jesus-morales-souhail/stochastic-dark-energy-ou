@@ -61,15 +61,15 @@ I do not read these results as a mere “non-discovery.” They are a structural
 
 ## 2. The Observational Constraint
 
-I define the fractional fluctuation of the dark-energy density as:
+I define the dark-energy density fluctuation in units of today's critical density as:
 
 
 $$
-X(x) \equiv \frac{\delta\rho_\Lambda(x)}{\bar{\rho}_\Lambda},
+X(x) \equiv \frac{\delta\rho_{\rm DE}(x)}{\rho_{{\rm crit},0}} = \Omega_{\Lambda 0}\,\frac{\delta\rho_\Lambda(x)}{\bar{\rho}_\Lambda},
 $$
 
 
-with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
+with variance $\sigma_X^2 \equiv \langle X^2 \rangle$ ($= \sigma^2/2\theta$ for the OU process; equivalently, rms $\delta\rho_\Lambda/\bar{\rho}_\Lambda = \sigma_X/\Omega_{\Lambda 0}$, below $3.84\times 10^{-2}$ for the bound that follows). The DESI DR2 BAO data, combined with the sensitivity kernel $S(z) = \partial \ln D_V / \partial \Omega_\Lambda$, yield [1]:
 
 
 $$
@@ -123,12 +123,7 @@ $$
 $$
 
 
-If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3H \delta\dot{\phi}$ forces the mode into the “frozen” regime and effectively erases inhomogeneities. The limits I derived in [1] give:
-
-
-$$
-m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left| \frac{V'}{V}\right| M_{\mathrm{Pl}} \lesssim 10^{-2}. \quad \text{[valor no reproducible; pendiente de decisión del autor]}
-$$
+If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3H \delta\dot{\phi}$ forces the mode into the “frozen” regime and effectively erases inhomogeneities. A scalar-field reading would translate $\sigma_X$ into a bound on $m_\phi$; it is not derived here.
 
 
 In this regime the field is observationally indistinguishable from a cosmological constant. Both alternatives lead to the same phenomenological outcome: $\sigma_X$ is zero or below detection.

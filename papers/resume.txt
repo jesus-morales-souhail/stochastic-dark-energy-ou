@@ -13,7 +13,7 @@ Narrative cohesion (how papers fit): see repository README.md
     R1: N_eff ~ 1.4e3 (DESI) / 1e10 (Euclid)  — only amplitude card (redefine seed)
     R2: freeze gain = 1.000; rms/sigma = O(1)  — dead as amplifier alone
     R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; all 288 jobs BAO-safe (max p95 2.1e-3)
-  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~3e-2 best case; ~1.5-7x starved)
+  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~5e-2 best case; ~1-5x below forecast floor)
   External lab optics: separate optics project (NOT this paper)
 Data pack (arXiv links): exploratory/notes/data-pack-option0-internet.md
 

@@ -84,8 +84,8 @@ print("ou_bao_likelihood data:", _d["source"], "cov_mode:", _d.get("cov_mode"))
 # SECTION 2: BASE OU PARAMETERS (calibrated, Section 3.2 of paper)
 # ============================================================
 THETA_BASE = 1.2        # mean-reversion rate (calibrated)
-SIGMA_OU   = 2.31e-2    # sigma_X (calibrated from DESI DR1 anchor bin)
-SIGMA_X2   = SIGMA_OU**2
+SIGMA_X_DR1 = 2.31e-2   # stationary std of X (sigma_X, not the diffusion sigma); obsolete DR1 calibration, used only as a starting value
+SIGMA_X2   = SIGMA_X_DR1**2
 
 # Physical constraint: in de Sitter QNM, theta and omega_R are not
 # independent. The dispersion relation gives:

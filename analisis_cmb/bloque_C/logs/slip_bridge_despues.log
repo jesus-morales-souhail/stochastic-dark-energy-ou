@@ -1,0 +1,53 @@
+========================================================================
+STOCHASTIC-DE → GRAVITATIONAL SLIP  (Option 0 bridge)
+========================================================================
+σ_X 95% CL bound (repo, DESI DR2 BAO) : 2.63e-02
+Observed slip  γ = 1.17 ± 0.11  (Maus+ 2025, arXiv:2505.20656)  → |γ−1| = 0.170
+Forecast floor on |η−1|: 0.05 (const), 0.30 (z,k)  (Sakr+ 2025, arXiv:2501.07477)
+δ_m (fiducial linear rms)             : 1.0
+
+--- z = 0.5   (ρ_crit,0/ρ_m = 0.941) ---
+  eps=1.0   : |γ−1| = 4.953e-02   gap vs observed(0.17):        3×  vs forecast(0.05):        1×
+  eps=0.1   : |γ−1| = 4.953e-03   gap vs observed(0.17):       34×  vs forecast(0.05):       10×
+  eps=0.01  : |γ−1| = 4.953e-04   gap vs observed(0.17):      343×  vs forecast(0.05):      101×
+
+--- z = 1.0   (ρ_crit,0/ρ_m = 0.397) ---
+  eps=1.0   : |γ−1| = 2.090e-02   gap vs observed(0.17):        8×  vs forecast(0.05):        2×
+  eps=0.1   : |γ−1| = 2.090e-03   gap vs observed(0.17):       81×  vs forecast(0.05):       24×
+  eps=0.01  : |γ−1| = 2.090e-04   gap vs observed(0.17):      814×  vs forecast(0.05):      239×
+
+--- z = 1.5   (ρ_crit,0/ρ_m = 0.203) ---
+  eps=1.0   : |γ−1| = 1.070e-02   gap vs observed(0.17):       16×  vs forecast(0.05):        5×
+  eps=0.1   : |γ−1| = 1.070e-03   gap vs observed(0.17):      159×  vs forecast(0.05):       47×
+  eps=0.01  : |γ−1| = 1.070e-04   gap vs observed(0.17):     1589×  vs forecast(0.05):      467×
+
+========================================================================
+BEST CASE: eps = 1 (all bounded residual is uncanceled shear)
+========================================================================
+  z=0.5: max |γ−1| = 4.953e-02
+         to reach observed 0.17 need eps = 3  (impossible)
+         to reach forecast 0.05 need eps = 1  (impossible)
+  z=1.0: max |γ−1| = 2.090e-02
+         to reach observed 0.17 need eps = 8  (impossible)
+         to reach forecast 0.05 need eps = 2  (impossible)
+  z=1.5: max |γ−1| = 1.070e-02
+         to reach observed 0.17 need eps = 16  (impossible)
+         to reach forecast 0.05 need eps = 5  (impossible)
+
+========================================================================
+ROBUSTNESS: δ_m bracket at z=0.5, eps=1
+========================================================================
+  δ_m=0.5  → |γ−1| = 9.906e-02  (gap vs 0.05: 1×)
+  δ_m=1.0  → |γ−1| = 4.953e-02  (gap vs 0.05: 1×)
+  δ_m=2.0  → |γ−1| = 2.476e-02  (gap vs 0.05: 2×)
+
+VERDICT:
+  The SDiff 'grieta' (anisotropic stress is not canceled) is real
+  in principle, but σ_X < 2.633e-02 caps the mechanism. Even eps=1
+  gives |γ−1| ~ few×10⁻² — still O(1)–O(10)× below Maus/Sakr targets.
+  Observable slip requires shear DECOUPLED from the BAO-bounded
+  isotropic residual (or amplification of A0). That is no longer
+  this stochastic mechanism alone — it is generic anisotropic
+  stress / MG (Clifton+Ferreira+Padilla+Skordis degeneracy).
+
+  Act IV inherits Act III: amplification gap on amplitude (no free gain).

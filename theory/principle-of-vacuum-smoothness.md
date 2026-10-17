@@ -12,7 +12,7 @@
 
 At observable cosmological scales ($z \lesssim 2.3$) and with the baryon acoustic oscillation precision we have today, I find that the dark energy sector behaves as a **perfectly homogeneous and non-stochastic background**.
 
-Any physical mechanism that could generate fluctuations in the dark energy density $\rho_\Lambda$ — whether from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below what current surveys can detect:
+Any physical mechanism that could generate fluctuations in the dark energy density $\rho_\Lambda$ — whether from spacetime discreteness, horizon quasi-normal modes, scalar field dynamics, or quantum gravitational effects — must be naturally suppressed below what current surveys can detect. With $\sigma_X$ the standard deviation of $X\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$ (equivalently, rms $\delta\rho_\Lambda/\rho_\Lambda=\sigma_X/\Omega_{\Lambda 0}<3.84\times 10^{-2}$):
 
 
 $$

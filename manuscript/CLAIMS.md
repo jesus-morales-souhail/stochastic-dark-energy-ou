@@ -19,7 +19,7 @@ This is what I stand behind, and what I do not.
 | **C4** | Coherent tachyonic growth (rank-1 cov) is excluded: $\Delta\ln\mathcal{L}\approx -12.7$ | Quantum-fluid MLE |
 | **C5** | Gap $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (**Euclid target**); gap $\to 2.6\times 10^{-2}$ is $\sim 10^{59}$ (**DESI ceiling**); linear amplifiers fail both | `gap_two_targets.py` + `amplifier_audit.py` + PREPRINT §5 |
 | **C6** | Late freeze-out: gain $=1$; soft avalanche gain $\sim 2$; only $N_{\mathrm{eff}}$ redefinition hits amplitude | [`VERDICT.md`](../results/amplification_routes/VERDICT.md) |
-| **C7** | Even $\varepsilon=1$ anisotropic fraction of the BAO-bounded residual gives $\|\gamma-1\|\lesssim 3\times 10^{-2}$ ($z=0.5$, $\delta_m=1$) | `scripts/slip_bridge.py` |
+| **C7** | Even $\varepsilon=1$ anisotropic fraction of the BAO-bounded residual gives $\|\gamma-1\|\lesssim 5\times 10^{-2}$ ($z=0.5$, $\delta_m=1$), at best level with the forecast floor $\sim 0.05$ | `scripts/slip_bridge.py` |
 
 ---
 

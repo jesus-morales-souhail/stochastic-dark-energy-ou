@@ -100,7 +100,7 @@ $$
 where $\delta\rho_{\Lambda}^{(0)}$ is a primordial seed (Planck-scale granularity or Sorkin-type Poisson fluctuations [4,5]). The dimensionless residual variance is
 
 $$
-\sigma_{X}^{2}(t)\equiv\frac{\langle(\delta\rho_{\Lambda})^{2}\rangle}{\rho_{\Lambda}^{2}}=\frac{1}{\rho_{\Lambda}^{2}}\int\frac{\mathrm{d}^{3}q}{(2\pi)^{3}}P_{0}(q)\,e^{2\Gamma_{q}t}.
+\sigma_{X}^{2}(t)\equiv\frac{\langle(\delta\rho_{\mathrm{DE}})^{2}\rangle}{\rho_{\mathrm{crit},0}^{2}}=\frac{1}{\rho_{\mathrm{crit},0}^{2}}\int\frac{\mathrm{d}^{3}q}{(2\pi)^{3}}P_{0}(q)\,e^{2\Gamma_{q}t}.
 $$
 
 A saddle-point estimate around $q_{\max}$ gives the working form used below,

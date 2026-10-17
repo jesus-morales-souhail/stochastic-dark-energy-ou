@@ -44,7 +44,7 @@ $$
 $$
 
 
-where $X\equiv\delta\Omega_\Lambda/\bar{\Omega}_\Lambda$ (or an equivalent fractional density contrast in the notation of the companion papers). This is not merely a non-detection: it is a structural constraint on how “noisy” the late-time vacuum is allowed to be at BAO scales.
+where $X\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$ ($=\delta\Omega_\Lambda$ in today's units; $\delta\ln\rho_{\rm DE}=X/\Omega_{\Lambda0}$) and $\sigma_X^2\equiv\mathrm{Var}\,X=\sigma^2/(2\theta)$. This is not merely a non-detection: it is a structural constraint on how “noisy” the late-time vacuum is allowed to be at BAO scales.
 
 ### 1.2 The theoretical fork
 
@@ -162,7 +162,7 @@ $$
 $$
 
 
-- **A3 (OU closure):** fractional fluctuations $X(x)$ in logarithmic scale factor $x=\ln a$ obey
+- **A3 (OU closure):** fluctuations $X(x)\equiv\delta\rho_{\rm DE}/\rho_{{\rm crit},0}$ in logarithmic scale factor $x=\ln a$ obey
 
 
 $$
@@ -170,7 +170,7 @@ dX=-\theta X dx+\sigma dW_x,
 $$
 
 
-with stationary variance $\mathrm{Var}(X)=\sigma^2/(2\theta)$ when $\theta>0$.
+with stationary variance $\sigma_X^2\equiv\mathrm{Var}(X)=\sigma^2/(2\theta)$ when $\theta>0$ ($\sigma_X$ is the stationary standard deviation, not the diffusion $\sigma$).
 
 ### 3.2 Continuity form and physical rate
 
@@ -206,7 +206,7 @@ with
 
 
 $$
-\mathrm{Cov}[X(x_i),X(x_j)]=\frac{\sigma^2}{2\theta} e^{-\theta\lvert x_i-x_j\rvert},
+\mathrm{Cov}[X(x_i),X(x_j)]=\sigma_X^2 e^{-\theta\lvert x_i-x_j\rvert},\qquad \sigma_X^2\equiv\frac{\sigma^2}{2\theta},
 $$
 
 

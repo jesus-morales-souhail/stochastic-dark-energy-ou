@@ -222,7 +222,12 @@ def measurement_cov(data: dict | None = None) -> np.ndarray:
 
 
 def add_ou_kernel(C_meas: np.ndarray, S_z: np.ndarray, x: np.ndarray, theta: float, sigma_X: float) -> np.ndarray:
-    """C_total = C_meas + OU residual signal."""
+    """C_total = C_meas + OU residual signal: C_ij += S_i S_j σ_X² exp(−θ |x_i − x_j|).
+
+    X(x) ≡ δρ_DE(x)/ρ_crit,0 (= δΩ_Λ in today's units); δ ln ρ_DE = X/Ω_Λ0;
+    σ_X² ≡ Var X = σ²/(2θ): sigma_X is the stationary standard deviation, not the diffusion σ.
+    S_z = ∂ln D_V/∂Ω_Λ (flat), so δα_i = S_i X(z_i).
+    """
     C = np.array(C_meas, dtype=float, copy=True)
     s2 = float(sigma_X) ** 2
     n = len(S_z)
