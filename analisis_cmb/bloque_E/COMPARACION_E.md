@@ -87,6 +87,11 @@ QNM      0.04303  4.5400e-05   6.9313  24.899524 -3.82e-05   -43.799   -43.961  
 - **σ_X al borde:** en los dos modelos σ_X cae en el **borde inferior del rango de búsqueda**, 4.540×10⁻⁵ (ln σ_X² = −20). En el PREPRINT se dice así, y no "numerical floor". Con σ_X en el borde, θ y ω_R no quedan acotados: θ = 266 en OU; θ = 0.043 y ω_R = 6.93 en QNM.
 - **Cuidado:** `verify_bao_pipelines.py` comprueba "ω_R = 0". Lo sigue encontrando en la línea "ω_R = 0 (fixed)" de OU, pero el ω_R libre de QNM ya no es 0, sino 6.93, sin acotar. La comprobación pasa por la línea de OU, no porque se cumpla en QNM.
 
+**Corrección durante el bloque** (commit siguiente a `a8b5952`):
+- **Qué pasó:** en `a8b5952` el abstract quedó corrupto ("A CMB consistency check OU residual is invisible…"). Dos cambios se solapaban: el ancla de la frase de Everpresent incluía "A CMB consistency check", que ya formaba parte del párrafo del CMB que se sustituía, y el motor aplica por posiciones.
+- **Cómo se rehízo:** se restauraron los 7 ficheros de texto desde `e285ec3`, se cambió el ancla de la frase de Everpresent por una que no se solapa, el motor rechaza ahora los cambios solapados, y el bloque se volvió a aplicar entero.
+- **Resultado:** frente a `a8b5952`, solo cambia esa línea del abstract. Los cambios de abajo son los de esta segunda aplicación.
+
 ## Cambios de texto (por fichero y línea)
 
 ### `manuscript/PREPRINT.md`
@@ -103,10 +108,8 @@ QNM      0.04303  4.5400e-05   6.9313  24.899524 -3.82e-05   -43.799   -43.961  
 ```diff
 - Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$).
 - 
-- At the DESI ceiling the OU residual is invisible to Planck 2018 (TT at ℓ < 30 and lensing; 95th percentile of Δχ² ≤ 0.067), so the CMB gives no leverage on σ_X, and its only imprint, a scatter σ(H0) ≈ 0.48 km/s/Mpc, is 12 times smaller than the H0 tension. A percent-level harmonic residual is likewise allowed by DESI and invisible in the CMB (§3.5).
 + Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$). The two published implementations of Everpresent Λ, a zero-mean Λ with order-one fluctuations, do not fit the same BAO data together with the CMB: with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none fits as well as ΛCDM (0/20000 and 0/500000 realizations).
 + 
-+ A CMB consistency check OU residual is invisible to Planck 2018 (TT at ℓ < 30 and lensing; 95th percentile of Δχ² ≤ 0.067), so the CMB gives no leverage on σ_X, and its only imprint, a scatter σ(H0) ≈ 0.48 km/s/Mpc, is 12 times smaller than the H0 tension. A percent-level harmonic residual is likewise allowed by DESI and invisible in the CMB (§3.5).
 ```
 
 **l.26** — punto 5. Abstract (CMB): Abstract: párrafo del CMB a dos frases (los números detallados están en §3.5)
