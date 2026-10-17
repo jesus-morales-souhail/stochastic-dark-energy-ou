@@ -59,11 +59,11 @@ Ejecutados con el directorio de trabajo en `/tmp`, para comprobar que no depende
 | `euclid_protocol_forecasts.py` | 0 | 1 s | `exploratory/results/euclid_protocol/` | ninguna |
 | `sdiff_discrimination.py` | 0 | 1 s | `exploratory/results/sdiff_discrimination/` | ninguna |
 | `desqueezing_relax_time.py` | 0 | 36 s | `exploratory/results/desqueezing_relax_time/` | solo las 3 rutas del resumen (`results/…` → `exploratory/results/…`); se versiona |
-| `desqueezing_heavy_scan.py` | 0 | 135 s | `exploratory/results/desqueezing_heavy/` | resumen, JSON y PNG distintos (ver nota 1); no se versionan |
+| `desqueezing_heavy_scan.py` | 0 | 135 s | `exploratory/results/desqueezing_heavy/` | resumen, JSON y PNG distintos (ver nota 1, ya resuelta) |
 
-Notas (problemas anteriores a la reorganización; quedan sin resolver):
+Notas (problemas anteriores a la reorganización):
 
-1. **`desqueezing_heavy_scan.py` no reproduce su salida versionada.** El resumen versionado dice «t_1/2 = ln2/γ», con error relativo mediano 1.3e-4. El script actual compara con ln2/[γ(1+2 n_th)] y da error mediano 0.60 y máximo 2.0, pero imprime «Law … holds across grid». También escribe la ruta absoluta local en el JSON y en el resumen. La ley que sostienen la salida versionada y `desqueezing_relax_time.py` (corregida en B1b) es t½ = ln2/γ; el script heavy conserva la fórmula antigua. Se restauraron las salidas versionadas: hay que corregir el script.
+1. ~~`desqueezing_heavy_scan.py` no reproducía su salida versionada~~ — **resuelto** el 2026-10-17 en el commit «exploratory: fórmula de t½ corregida en heavy_scan, salida regenerada» (antes/después en `exploratory/README.md`, sección *Correction log*).
 2. **`termico_vs_squeezed_recomendado_resumen.txt` versionado** es un resumen corto en inglés escrito a mano; el script escribe uno largo en español. Los números coinciden (Var(0) con error 0.0497 %, termalización a Var(q) = 0.6 y ⟨n⟩ = 0.1). Se restauró la versión versionada.
 
 `scripts/gpe/gpe_sim.py` (nuevo `savefig`): ejecutado desde `/tmp`, código 0, escribe en `results/gpe/` y nada en el cwd; los dos PNG salen idénticos a los versionados.

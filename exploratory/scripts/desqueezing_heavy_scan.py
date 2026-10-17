@@ -2,7 +2,8 @@
 """
 Heavy desqueezing scan with QuTiP: grid over (gamma, n_th, r).
 
-Validates t_1/2(|⟨a²⟩|) ≈ ln2 / [γ(1+2 n_th)] across a wider domain.
+Checks t_1/2(|⟨a²⟩|) = ln2 / γ across a wider domain
+(n_th sets the stationary state, not the rate; same correction as B1b in desqueezing_relax_time.py).
 Public-repo compatible.
 """
 
@@ -21,6 +22,7 @@ OUT = ROOT / "exploratory" / "results" / "desqueezing_heavy"
 OUT.mkdir(parents=True, exist_ok=True)
 
 N = 100  # Hilbert space (balance cost vs accuracy)
+LAW_TOL = 0.05  # "law holds" only if the median relative error is below this
 omega = 2.4
 t_max = 6.0
 n_t = 400
@@ -59,8 +61,9 @@ def run_one(gamma, n_th, r):
     res = qt.mesolve(H, psi0, tlist, c_ops, e_ops=[a * a], options={"nsteps": 50000})
     abs_a2 = np.abs(res.expect[0])
     t_half = first_half(tlist, abs_a2)
-    gamma_eff = gamma * (1.0 + 2.0 * n_th)
-    t_th = np.log(2.0) / gamma_eff
+    # |⟨a²⟩| ~ e^{-γ t}. n_th sets the stationary state (Var(q)_ss = n_th + 1/2), not the rate.
+    gamma_eff = gamma * (1.0 + 2.0 * n_th)  # kept as a column; it is not the rate of |⟨a²⟩|
+    t_th = np.log(2.0) / gamma
     rel = abs(t_half - t_th) / t_th if np.isfinite(t_half) and t_th > 0 else np.nan
     return {
         "gamma": float(gamma),
@@ -98,15 +101,18 @@ def main():
         w.writerows(rows)
 
     errs = [r["rel_err"] for r in rows if r["rel_err"] is not None]
+    law_holds = bool(np.median(errs) < LAW_TOL)
     summary = {
         "N": N,
         "n_runs": total,
         "median_rel_err": float(np.median(errs)),
         "max_rel_err": float(np.max(errs)),
         "mean_rel_err": float(np.mean(errs)),
-        "law": "t_1/2 = ln2 / [gamma (1+2 n_th)]",
+        "law": "t_1/2 = ln2 / gamma",
+        "law_tolerance_median_rel_err": LAW_TOL,
+        "law_holds": law_holds,
         "independent_of_r": True,
-        "csv": str(csv_path),
+        "csv": csv_path.relative_to(ROOT).as_posix(),
     }
     (OUT / "desqueezing_heavy_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
@@ -125,7 +131,7 @@ def main():
             ax.plot(xs, yth, "k--", alpha=0.3)
     ax.set_xlabel(r"$\gamma$")
     ax.set_ylabel(r"$t_{1/2}$")
-    ax.set_title(r"$t_{1/2}$ vs $\gamma$ (r=1.5); dashed=theory")
+    ax.set_title(r"$t_{1/2}$ vs $\gamma$ (r=1.5); dashed = ln2/$\gamma$")
     ax.legend(fontsize=7)
     ax.grid(True, alpha=0.3)
 
@@ -155,8 +161,10 @@ def main():
         f"Heavy desqueezing: {total} runs, N={N}\n"
         f"median rel err = {summary['median_rel_err']:.4e}\n"
         f"max rel err    = {summary['max_rel_err']:.4e}\n"
-        f"Law t_1/2 = ln2/[γ(1+2n_th)] holds across grid.\n"
-        f"CSV: {csv_path}\n"
+        + (f"Law t_1/2 = ln2/γ holds across grid (median rel err < {LAW_TOL:.0%}).\n" if law_holds
+           else f"Law t_1/2 = ln2/γ does NOT hold (median rel err >= {LAW_TOL:.0%}).\n")
+        + f"n_th sets the stationary state, not the rate.\n"
+        f"CSV: {csv_path.relative_to(ROOT).as_posix()}\n"
     )
     (OUT / "desqueezing_heavy_summary.txt").write_text(text, encoding="utf-8")
     print(text)
