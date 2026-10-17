@@ -1,0 +1,15 @@
+Two amplification gaps (exact under holographic Sorkin)
+  sigma_0 = L_P/L_H = 1.177602e-61  (H0=67.4)
+
+  G_Euclid = 1e-05/sigma_0 = 8.492e+55  ~ 10^{56}
+    soft r needed = 64.39
+  G_DESI   = 2.6e-02/sigma_0 = 2.236e+59  ~ 10^{59}
+    soft r needed = 68.33
+
+  Ratio G_DESI/G_Euclid = 2632.83  (exactly sigma_DESI/sigma_Euclid = 2632.8)
+
+Label rule:
+  '~10^56' ONLY for Euclid-scale target ~1e-5
+  '~10^59' for measured DESI profile ceiling 2.633e-02
+Illegal: compute density with 2.633e-02 and call the DESI gap 10^56
+Not claimed: a new value of rho_Lambda (imported cosmology, not derived here)

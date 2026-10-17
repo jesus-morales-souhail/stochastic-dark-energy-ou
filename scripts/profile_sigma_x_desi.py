@@ -18,7 +18,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy.linalg import cho_factor, cho_solve
-from scipy.optimize import minimize_scalar
+from scipy.optimize import brentq, minimize_scalar
 
 ROOT = Path(__file__).resolve().parents[1]
 import sys
@@ -93,9 +93,18 @@ def main():
     dlogL_rel = dlogL - np.max(dlogL)
     above = np.where(dlogL_rel >= thr)[0]
     if len(above):
-        s_95 = float(sig_grid[above[-1]])
+        s_95_grid = float(sig_grid[above[-1]])
     else:
-        s_95 = float(sig_grid[0])
+        s_95_grid = float(sig_grid[0])
+    # Refined root of the profile, Delta lnL(rel. to max) = thr, between the two grid nodes that bracket it
+    # (same as analisis_cmb/everpresent/profile_desi_everpresent.py, upper95_refined)
+    ll_max = float(np.max(dlogL)) + ll_lcdm
+    j = above[-1] if len(above) else 0
+    s_95 = s_95_grid
+    if j + 1 < len(sig_grid):
+        g = lambda s: max_logL_over_theta(float(s))[0] - ll_max - thr
+        s_95 = float(brentq(g, sig_grid[j], sig_grid[j + 1], xtol=1e-10 * sig_grid[j]))
+    th_95 = max_logL_over_theta(s_95)[1]
 
     # also report where dlogL vs LCDM crosses -1.92 (if max is at LCDM)
     summary = {
@@ -105,12 +114,14 @@ def main():
         "max_dlogL_vs_lcdm": float(np.max(dlogL)),
         "sigma_X_at_max": float(sig_grid[int(np.argmax(dlogL))]),
         "sigma_X_95CL_upper_profile": s_95,
-        "criterion": "95% CL: Delta logL >= -1.92 from profile max (1 dof)",
-        "sigma_X_95CL_upper_profile_claim": 2.5e-2,  # rounded; exact from grid ~2.506e-2
+        "sigma_X_95CL_upper_profile_grid": s_95_grid,
+        "theta_best_at_upper": th_95,
+        "criterion": "95% CL: Delta logL = -1.92 from profile max (1 dof); root by brentq between grid nodes",
+        "sigma_X_95CL_upper_profile_claim": 2.6e-2,  # rounded root (author decision 2026-10-17)
         "profile": profile,
         "notes": [
             "Uses official Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).",
-            "Former 1.5e-4 was a working target not equal to this 7-bin free-θ profile; corrected to 2.5e-2.",
+            "Former 1.5e-4 was a working target not equal to this 7-bin free-θ profile; corrected to 2.5e-2 (grid node), then to the refined root 2.6e-2 (2026-10-17).",
             "Background fixed to alpha=1 (LCDM fiducial). Free {w0,wa} is a separate scan.",
         ],
     }
@@ -125,8 +136,8 @@ def main():
     ax.semilogx(sig_grid, dlogL_rel, "b-o", ms=3, lw=1.5)
     ax.axhline(0, color="k", lw=0.8)
     ax.axhline(thr, color="r", ls="--", label=r"$95\%$ CL ($\Delta\ln\mathcal{L}=-1.92$)")
-    ax.axvline(2.5e-2, color="orange", ls=":", label=r"95% CL profile claim $1.5\times10^{-4}$")
-    ax.axvline(s_95, color="green", ls="-.", label=rf"profile $95\%$ $\sigma_X\leq{s_95:.2e}$")
+    ax.axvline(s_95_grid, color="orange", ls=":", label=rf"last grid node $\sigma_X={s_95_grid:.3e}$")
+    ax.axvline(s_95, color="green", ls="-.", label=rf"profile $95\%$ (root) $\sigma_X<{s_95:.3e}$")
     ax.set_xlabel(r"$\sigma_X$")
     ax.set_ylabel(r"$\Delta\ln\mathcal{L}$ (profile over $\theta$)")
     ax.set_title(r"DESI DR2 BAO: profile likelihood for $\sigma_X$ (OU, full meas. cov)")
@@ -142,8 +153,9 @@ def main():
         "=" * 50,
         f"ll_LCDM = {ll_lcdm:.4f}",
         f"max ΔlnL vs LCDM = {np.max(dlogL):+.4f} at σ_X = {sig_grid[int(np.argmax(dlogL))]:.3e}",
-        f"95% CL upper (profile): σ_X ≤ {s_95:.3e}",
-        f"95% CL profile claim:     σ_X < 2.5e-2",
+        f"95% CL upper (profile, root of ΔlnL = -1.92): σ_X < {s_95:.4e}  (θ_best = {th_95:.4g})",
+        f"last grid node with ΔlnL >= -1.92:            σ_X = {s_95_grid:.4e}",
+        f"95% CL profile claim:     σ_X < 2.6e-2",
         f"Wrote results/profile_sigma_x/profile_sigma_x.json",
         f"Wrote results/profile_sigma_x/profile_sigma_x.png",
     ]

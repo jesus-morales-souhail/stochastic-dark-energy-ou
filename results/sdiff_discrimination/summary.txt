@@ -2,7 +2,7 @@ Fundamental vs emergent vacuum relaxation — summary
 ============================================================
 Age t0 = 13.7963 Gyr; t_H0 = 14.5074 Gyr
 Dx_DESI = 0.94; Dx_recomb = 6.9948
-sigma_0 = 1.0e-61; DESI lim = 1.5e-04; Euclid ~ 1.0e-05
+sigma_0 = 1.0e-61; DESI lim = 2.633e-02; Euclid ~ 1.0e-05
 
 KEY THEOREM (OU mean, no noise):
   residual after path = A0 * exp(-theta * Delta x)
@@ -13,20 +13,20 @@ SORKIN-ONLY COROLLARY:
   residual <= 1e-61 << 1e-5. Pure Sorkin seed is invisible to DESI and Euclid.
 
 AMPLIFICATION to reach Euclid (1e-5) on DESI path:
-  theta=  0.0010:  A0_min=1.001e-05  = 1.001e+56 x Sorkin
-  theta=  0.1000:  A0_min=1.099e-05  = 1.099e+56 x Sorkin
-  theta=  0.6931:  A0_min=1.919e-05  = 1.919e+56 x Sorkin
-  theta=  1.2000:  A0_min=3.089e-05  = 3.089e+56 x Sorkin
-  theta=  5.0000:  A0_min=1.099e-03  = 1.099e+58 x Sorkin
+  theta=  0.0010:  A0_min=1.001e-05  = 1.001e+56 x Sorkin   [csv line 27: 1e-10/sigma_res_DESI_path(amp_1e-5)]
+  theta=  0.1000:  A0_min=1.099e-05  = 1.099e+56 x Sorkin   [csv line 30]
+  theta=  0.6931:  A0_min=1.919e-05  = 1.919e+56 x Sorkin   [csv line 32 has theta=0.693: 1.918e-05]
+  theta=  1.2000:  A0_min=3.089e-05  = 3.089e+56 x Sorkin   [csv line 34]
+  theta=  5.0000:  A0_min=1.099e-03  = 1.099e+58 x Sorkin   [csv line 36]
 
 INTERPRETIVE REGIONS:
   F: Fundamental SDiff => effective A0_geo = 0 (local V g_munu projected out).
   E0: Emergent + Sorkin only => null at all foreseeable BAO precision.
-  E1: Emergent + amplified A0 in [1e-5, 2.5e-2] + theta small
-      => possible Euclid detection; DESI-compatible if residual < 2.5e-2.
+  E1: Emergent + amplified A0 in [1e-5, 2.633e-2] + theta small
+      => possible Euclid detection; DESI-compatible if residual < 2.633e-2.
   E2: Emergent + theta ~ O(1) + A0 ~ 1e-5..1e-3
       => strong path damping; residual may sit near Euclid edge after recomb path.
-  E3: theta ~ 1e-3 (MLE floor) + A0 > 2.5e-2 => already tension with DESI null.
+  E3: theta ~ 1e-3 (MLE floor) + A0 > 2.633e-2 => already tension with DESI null.
 
 OBSERVATIONAL TESTS:
   1) Euclid residual 0 < sigma_X <~ 1e-4 with free {w0,wa}:
@@ -39,4 +39,8 @@ OBSERVATIONAL TESTS:
 
 CSV: results/sdiff_discrimination/sdiff_discrimination_grid.csv
 Figures: results/sdiff_discrimination/ and figures/sdiff_*.png
+
+Updated by hand 2026-10-17 (no script writes this file): DESI lim = sigma_X_95CL_upper_profile of
+results/profile_sigma_x/profile_sigma_x.json (was 1.5e-4 / 2.5e-2). Other numbers unchanged; the grid csv
+does not depend on the DESI bound (identical after regeneration).
 

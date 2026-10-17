@@ -1,3 +1,4 @@
+cov diagonal; superseded por results/profile_sigma_x/ (2026-10-17)
 ======================================================================
 STOCHASTIC DARK ENERGY — OU + QNM KERNEL TEST
 ======================================================================

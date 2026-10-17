@@ -13,11 +13,15 @@ Run:
 from __future__ import annotations
 
 import math
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parent))
+from desi_bound import desi_sigma_x_bound
 
 # --- Fixed corpus numbers (resume + fundamental-vs-emergent note) ---
 SIGMA_0 = 1e-61
 N_BH = 1e122  # Bekenstein-Hawking DOF scale
-SIGMA_X_DESI = 2.5e-2  # 95% CL upper (OU residual)
+SIGMA_X_DESI = desi_sigma_x_bound()  # 95% CL upper (OU residual), profile root
 SIGMA_EUCLID = 1e-5  # indicative residual target
 A0_MIN_EUCLID = 1e-5  # for small theta, A0 ~ target (path-integrated)
 

@@ -4,9 +4,11 @@
   "ll_lcdm": 24.899562520639115,
   "max_dlogL_vs_lcdm": -1.9847718135679315e-08,
   "sigma_X_at_max": 1e-06,
-  "sigma_X_95CL_upper_profile": 0.025063155506929828,
-  "criterion": "95% CL: Delta logL >= -1.92 from profile max (1 dof)",
-  "sigma_X_95CL_upper_profile_claim": 0.025,
+  "sigma_X_95CL_upper_profile": 0.0263282756994459,
+  "sigma_X_95CL_upper_profile_grid": 0.025063155506929828,
+  "theta_best_at_upper": 0.001,
+  "criterion": "95% CL: Delta logL = -1.92 from profile max (1 dof); root by brentq between grid nodes",
+  "sigma_X_95CL_upper_profile_claim": 0.026,
   "profile": [
     {
       "sigma_X": 1e-06,
@@ -299,7 +301,7 @@
   ],
   "notes": [
     "Uses official Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).",
-    "Former 1.5e-4 was a working target not equal to this 7-bin free-\u03b8 profile; corrected to 2.5e-2.",
+    "Former 1.5e-4 was a working target not equal to this 7-bin free-\u03b8 profile; corrected to 2.5e-2 (grid node), then to the refined root 2.6e-2 (2026-10-17).",
     "Background fixed to alpha=1 (LCDM fiducial). Free {w0,wa} is a separate scan."
   ]
 }

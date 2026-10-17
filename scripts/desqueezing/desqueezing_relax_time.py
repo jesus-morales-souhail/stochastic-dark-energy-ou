@@ -28,10 +28,14 @@ from __future__ import annotations
 import os
 import csv
 import numpy as np
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+from desi_bound import desi_sigma_x_bound
 import matplotlib.pyplot as plt
 import qutip as qt
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in scripts/desqueezing/)
 RESULTS = os.path.join(ROOT, "results", "desqueezing_relax_time")
 os.makedirs(RESULTS, exist_ok=True)
 
@@ -308,7 +312,7 @@ def main():
         "  tras una perturbación del vacío (squeezing = 'arranque' fuera del vacío liso).",
         "SDiff emergente ⇒ τ_relax finito (como este t_½).",
         "SDiff fundamental ⇒ σ_X=0 exacto (equivalente a no acoplar ruido local a la geometría).",
-        f"Límite cosmológico memorizado: σ_X < 2.5e-2 (95% CL, DESI DR2).",
+        f"Límite cosmológico memorizado: σ_X < {desi_sigma_x_bound():.3e} (95% CL, DESI DR2).",
         "",
         "Tabla (gamma, n_th, gamma_eff, t_half_a2, t_half_theory):",
     ]

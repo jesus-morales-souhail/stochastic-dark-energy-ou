@@ -125,7 +125,7 @@ Categorías:
 | scripts/desqueezing/cosmological_mapping.py | 39, 137 | `SIGMA_X_MLE_FLOOR = 5.0e-5` | Comentario "(run antiguo, cov diagonal)" | D | T |
 | scripts/ou_bao_likelihood.py; scripts/ou_bao_stochastic_test.py | 86, 583; 83 | `SIGMA_OU = 2.31e-2` "calibrated…"; scatter (0.001, 5e-5) "MLE best fit (DR2)" | "# SUPERSEDED DR1 calibration, NOT the 95% CL 2.5e-2"; label "(old diagonal-cov run)" | C (se confunde fácilmente con 2.5e-2) y D | T |
 | scripts/cross_correlation_DESI.py | 32, 280, 650 | `SIGMA_X = 0.018`; "σ_X calibrado del paper" | "ilustrativo, calibración DR1 obsoleta" | C | T |
-| results/profile_sigma_x/profile_sigma_x.json (y todo lo que cite 2.5e-2 / 2.506e-2) | `sigma_X_95CL_upper_profile` | "0.025063155506929828" (2.506e-2) | Es un nodo de la malla geomspace(1e-6, 5e-2, 48), el último con ΔlnL ≥ −1.92; la raíz refinada entre nodos es **2.633e-2**. Decidir si el paper dice σ_X < 2.5e-2 (nodo de malla) o < 2.6e-2 (raíz), y decirlo igual en todas partes | `analisis_cmb/everpresent/resultados/profile_desi_everpresent.json` → `T0_ou_theta_profiled` (upper95_grid 2.506316e-2, upper95_refined 2.6328e-2; copia del script con malla y datos idénticos) | N |
+| results/profile_sigma_x/profile_sigma_x.json (y todo lo que cite 2.5e-2 / 2.506e-2) | `sigma_X_95CL_upper_profile` | "0.025063155506929828" (2.506e-2) | Es un nodo de la malla geomspace(1e-6, 5e-2, 48), el último con ΔlnL ≥ −1.92; la raíz refinada entre nodos es **2.633e-2**. Decidir si el paper dice σ_X < 2.5e-2 (nodo de malla) o < 2.6e-2 (raíz), y decirlo igual en todas partes. **Decisión del autor (2026-10-17): σ_X < 2.6e-2, raíz refinada 2.633e-2** (bloque B) | `analisis_cmb/everpresent/resultados/profile_desi_everpresent.json` → `T0_ou_theta_profiled` (upper95_grid 2.506316e-2, upper95_refined 2.6328e-2; copia del script con malla y datos idénticos) | N |
 
 ### 2b. Apariciones correctas (no cambiar)
 
@@ -156,7 +156,10 @@ Vigente 2.5e-2, bien descrita:
 - scripts: amplifier_audit.py 20; slip_bridge.py 45, 141; profile_sigma_x_desi.py 109, 113, 146; sdiff_discrimination.py; cosmological_mapping.py 38, 136, 209, 267, 269; desqueezing_relax_time.py 311; gap_two_targets.py 23, 56
 
 Marcados ya como obsoletos:
-- 1.5e-4: CLAIMS 17, BOUND_CORRECTION, scope-and-mixups 35, profile json 302
+- 1.5e-4: CLAIMS 17, BOUND_CORRECTION, scope-and-mixups 35, profile json 304 (nota; era l.302 antes de B1) y scripts/profile_sigma_x_desi.py 124 (la misma nota)
+- 1.5e-4 / 2.5e-2 como valor anterior anotado a mano en B1 (2026-10-17): results/amplification_routes/VERDICT.md 58; results/sdiff_discrimination/summary.txt 44
+- 2.506e-2 como nodo de rejilla: profile json 8 (`sigma_X_95CL_upper_profile_grid`) y 278 (fila del perfil en ese nodo)
+- 2.5e-2 en mock retirado: results/euclid_mcmc/mcmc_summary.txt 8 (fichero con cabecera RETIRED, l.1)
 - 0.018: stochastic 220, sdiff grid "old_calib"
 - 0.023: notes 235
 - 2.31e-2: cosmological_mapping.py 43
@@ -381,6 +384,8 @@ Comprobación:
 - `git diff results/desi_cov/` está vacío: el loader reescribe ese 7×7.
 
 ### (B) Regenerar los ficheros R con σ_X vigente
+
+**Decisión del autor (2026-10-17):** la cota es σ_X < 2.6e-2, raíz refinada del perfil 2.633e-2 (brentq entre los nodos 2.506e-2 y 3.155e-2), no el nodo de rejilla 2.506e-2. B1 regenera los resultados con ese valor; el texto de los papers va en B2.
 
 Prerrequisito: corregir las etiquetas T de los scripts implicados (tabla 2a), porque si no la regeneración reproduce las etiquetas viejas:
 - profile_sigma_x_desi.py l.128;

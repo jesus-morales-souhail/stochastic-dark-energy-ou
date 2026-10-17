@@ -12,14 +12,16 @@
 - Lensing no lineal halofit takahashi en todas las curvas. NOTAS: "Cambio de método".
 - 200 realizaciones, semilla 20261003, números aleatorios comunes en θ, Δ y σ_X. NOTAS: "Estadístico y cota".
 
-## 2. σ_X = 2.506e-2, Δ = 0.05
+## 2. σ_X = 2.633e-2 (cota vigente) y 2.506e-2, Δ = 0.05
 
-Fuente: `resultados/takahashi/sigma_2.506e-02/resumen.json`. Δχ² = χ²(OU_r) − χ²(ΛCDM), datos Planck (`COM_PowerSpect_CMB-TT-full_R3.01.txt`; `smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8_bandpowers.dat`). Fallos (ρ≤0, CAMB, NaN, H0): 0.
+Fuente: `resultados/takahashi/sigma_2.633e-02/resumen.json` (raíz del perfil, decisión del autor 2026-10-17) y `resultados/takahashi/sigma_2.506e-02/resumen.json` (nodo de rejilla, versión anterior). Δχ² = χ²(OU_r) − χ²(ΛCDM), datos Planck (`COM_PowerSpect_CMB-TT-full_R3.01.txt`; `smicadx12_Dec5_ftl_mv2_ndclpp_p_teb_consext8_bandpowers.dat`). Fallos (ρ≤0, CAMB, NaN, H0): 0.
 
-| θ | Δχ² TT p50 / p95 | Δχ² φφ p50 / p95 | frac Δχ²>4 | hueco banda68–ΛCDM | H0 p16 / p50 / p84 | H0 p2.5 / p97.5 | fuera Planck ±2σ |
-|---|---|---|---|---|---|---|---|
-| 0.001 | −1.4e-4 / 2.5e-3 | −1.2e-4 / 2.2e-3 | 0 | 0 | 67.34 / 67.36 / 67.38 | 67.32 / 67.40 | 0 |
-| 1 | −2.4e-3 / 0.064 | −2.7e-3 / 0.051 | 0 | 0 | 66.94 / 67.36 / 67.85 | 66.55 / 68.28 | 0.025 |
+| σ_X | θ | Δχ² TT p50 / p95 | Δχ² φφ p50 / p95 | frac Δχ²>4 | hueco banda68–ΛCDM | H0 p16 / p50 / p84 | H0 p2.5 / p97.5 | fuera Planck ±2σ |
+|---|---|---|---|---|---|---|---|---|
+| 2.633e-2 | 0.001 | −1.5e-4 / 2.7e-3 | −1.2e-4 / 2.3e-3 | 0 | 0 | 67.34 / 67.36 / 67.38 | 67.32 / 67.40 | 0 |
+| 2.633e-2 | 1 | −2.5e-3 / 0.067 | −2.8e-3 / 0.054 | 0 | 0 | 66.92 / 67.36 / 67.88 | 66.51 / 68.33 | 0.035 |
+| 2.506e-2 (nodo de rejilla, versión anterior) | 0.001 | −1.4e-4 / 2.5e-3 | −1.2e-4 / 2.2e-3 | 0 | 0 | 67.34 / 67.36 / 67.38 | 67.32 / 67.40 | 0 |
+| 2.506e-2 (nodo de rejilla, versión anterior) | 1 | −2.4e-3 / 0.064 | −2.7e-3 / 0.051 | 0 | 0 | 66.94 / 67.36 / 67.85 | 66.55 / 68.28 | 0.025 |
 
 Planck H0 = 67.36 ± 0.54 (arXiv:1807.06209, tabla 2, TT,TE,EE+lowE+lensing).
 
@@ -31,6 +33,7 @@ Fuente: `resultados/takahashi/malla/malla.json` (`malla.md`). Fallos: 0 en los 2
 - p95(Δχ²) ∝ σ_X^n: θ = 1: n = 0.998 (TT), 1.007 (φφ); θ = 0.001: n = 1.002 (TT), 0.998 (φφ). rms del residuo log10 ≤ 0.0037. El valor esperado era n ≈ 2; sale n ≈ 1.
 - El p95 medido está dominado por el término cruzado con los residuos de Planck, 2Σ r_b δ_b/σ_b² (r = ΛCDM − dato); la contribución propia del modelo (cuadrática, Σ δ_b²/σ_b²) es p95 = 6.3e-4 (TT) y 7.4e-3 (φφ) a θ = 1, σ_X = 2.506e-2, frente a 0.063 y 0.050 del término cruzado (`resultados/takahashi/sigma_2.506e-02/descomposicion_dchi2.json`).
 - σ(H0) ≡ (p84 − p16)/2 ∝ σ_X^m: θ = 1: m = 1.001; θ = 0.001: m = 0.999. rms del residuo log10 ≤ 0.0028.
+- El punto alto de la malla es el nodo 2.506e-2, no la cota vigente 2.633e-2. La malla no se repite: como el p95 escala con exponente 1 (medido arriba), a 2.633e-2 vale ×2.633/2.506 = ×1.05. La ejecución directa a 2.633e-2 (sección 2) da TT 0.0668/0.0636 = 1.050 y φφ 0.0541/0.0514 = 1.053 a θ = 1.
 
 ## 4. Conclusiones
 

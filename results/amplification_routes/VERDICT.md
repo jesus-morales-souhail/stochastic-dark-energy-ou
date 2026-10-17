@@ -19,11 +19,11 @@ I do **not** invent a successful microphysical amplifier. This file is a numeric
 
 | Target | $\sigma_{0,\mathrm{eff}}$ | $N_{\mathrm{eff}}$ |
 |:-------|:--------------------------|:-------------------|
-| DESI 95% CL ceiling | $2.5\times 10^{-2}$ | $1.6\times 10^{3}$ |
+| DESI 95% CL ceiling | $2.633\times 10^{-2}$ | $1.44\times 10^{3}$ (`route1_N_eff_required.csv` line 3) |
 | Window | $1.0\times 10^{-4}$ | $1.00\times 10^{8}$ |
 | Euclid residual scale | $1.0\times 10^{-5}$ | $1.00\times 10^{10}$ |
 
-Global horizon count $N_{\mathrm{BH}}\sim 10^{122}$ is larger by $\sim 10^{112}$–$10^{114}$ for these $N_{\mathrm{eff}}$.
+Global horizon count $N_{\mathrm{BH}}\sim 10^{122}$ is larger by $\sim 10^{112}$–$10^{119}$ for these $N_{\mathrm{eff}}$ ($10^{112.0}$ Euclid, line 2; $10^{114.0}$ window, line 4; $10^{118.8}$ DESI, line 3).
 
 **Verdict:** Only route that reaches target **amplitudes** — by **redefining** $\sigma_0$, not by multiplying $10^{-61}$.
 
@@ -52,10 +52,10 @@ Grid: $a\in\{1,10\}$, $b\in[10^{-6},0.1]$, $\sigma\in[10^{-8},10^{-3}]$, $\Delta
 |:------|:-------|
 | Gain $\mathrm{p95}/\sigma$ | $1.93$–$2.08$ (median $\approx 1.97$) |
 | $\mathrm{p95}\ge 10^{-5}$ with $\sigma\le 10^{-8}$ | **0 / 288** |
-| BAO-safe $\mathrm{p95}<2.5\times 10^{-2}$ | **216 / 288** |
-| BAO-unsafe | **72 / 288**, all with $\sigma\gtrsim 1.2\times 10^{-4}$ |
+| BAO-safe $\mathrm{p95}<2.633\times 10^{-2}$ | **288 / 288** (max p95 = $2.08\times 10^{-3}$, `route3_avalanche_scan.csv` line 289: $a=10$, $b=0.1$, $\sigma=10^{-3}$) |
+| BAO-unsafe | **0 / 288** |
 
-**BAO-safe rule of thumb (this scan):** $\sigma\lesssim 4\times 10^{-5}$.
+**BAO-safe (this scan):** the whole grid ($\sigma\le 10^{-3}$) is BAO-safe. *(Updated 2026-10-17 with the DESI bound $2.633\times10^{-2}$ from `results/profile_sigma_x/profile_sigma_x.json`; the former 216/288, 72/288 and $\sigma\lesssim 4\times10^{-5}$ were computed with the old $1.5\times10^{-4}$ target.)*
 
 **Verdict:** Soft-potential avalanche is **not** a seed→Euclid free amplification. Large residuals track large $\sigma$.
 

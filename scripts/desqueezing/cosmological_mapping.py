@@ -13,10 +13,14 @@ import os
 import csv
 import numpy as np
 from scipy.integrate import quad
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+from desi_bound import desi_sigma_x_bound
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in scripts/desqueezing/)
 RESULTS = os.path.join(ROOT, "results", "cosmological_mapping")
-DOCS = os.path.join(ROOT, "docs")
+DOCS = os.path.join(ROOT, "notes")  # tracked copy: notes/mapping_tables.md
 os.makedirs(RESULTS, exist_ok=True)
 
 # =============================================================================
@@ -35,8 +39,8 @@ Z_EFF = np.array([0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330])
 S_Z = np.array([-0.284, -0.462, -0.595, -0.719, -0.870, -0.917, -1.070])
 
 # DESI DR2 MLE (resume.txt, stochastic-dark-energy-desi-dr2.md)
-SIGMA_X_LIMIT_95 = 2.5e-2
-SIGMA_X_MLE_FLOOR = 5.0e-5
+SIGMA_X_LIMIT_95 = desi_sigma_x_bound()
+SIGMA_X_MLE_FLOOR = 5.0e-5  # old run, diagonal cov (results/ou_bao_desi_dr2_run.txt); not the bound
 THETA_MLE_FLOOR = 1.0e-3
 THETA_MIN_OPT = 1.0e-3
 
@@ -134,7 +138,7 @@ def main():
     # ---- Repo observational anchors ----
     p("--- Repo observational anchors ---")
     p(f"sigma_X < {SIGMA_X_LIMIT_95:.1e} (95% CL, DESI DR2)")
-    p(f"MLE floor: theta ~ {THETA_MLE_FLOOR}, sigma_X ~ {SIGMA_X_MLE_FLOOR:.1e}")
+    p(f"MLE floor: theta ~ {THETA_MLE_FLOOR}, sigma_X ~ {SIGMA_X_MLE_FLOOR:.1e} (old run, diagonal cov)")
     p(f"Old (superseded) calibration: theta={THETA_BASE_OLD}, sigma_X={SIGMA_OU_OLD}")
     p(f"N_BH ~ {N_BH:.0e}, sigma_0 = 1/sqrt(N) = {SIGMA_0_SORKIN:.3e}")
     p(f"sigma_0 (repo GPE text) = {SIGMA_0_REPO:.1e}")
@@ -206,7 +210,7 @@ def main():
     ]:
         for path_name, dx in [("DESI_0.94", DX_DESI), ("recomb", dx_recomb)]:
             for target_name, target in [
-                ("DESI_limit_2.5e-2", SIGMA_X_LIMIT_95),
+                (f"DESI_limit_{SIGMA_X_LIMIT_95:.3e}", SIGMA_X_LIMIT_95),
                 ("Euclid_1e-5", SIGMA_X_EUCLID_TARGET),
             ]:
                 A0_need = target * np.exp(th * dx)
@@ -264,9 +268,9 @@ def main():
     p("")
     p("--- CRITICAL FIRST-PRINCIPLES CONCLUSIONS ---")
     p("1) Pure Sorkin seed A0~1e-61: after ANY cosmological path,")
-    p("   residual sigma_X ~ 1e-61 << DESI (2.5e-2) and Euclid (1e-5).")
+    p(f"   residual sigma_X ~ 1e-61 << DESI ({SIGMA_X_LIMIT_95:.3e}) and Euclid (1e-5).")
     p("   => Euclid CANNOT see pure Sorkin Poisson noise without amplification.")
-    p("2) DESI null (sigma_X < 2.5e-2) does NOT constrain Sorkin seed;")
+    p(f"2) DESI null (sigma_X < {SIGMA_X_LIMIT_95:.3e}) does NOT constrain Sorkin seed;")
     p("   it constrains effective late-time amplitude after any growth/amplification.")
     p("3) For t_1/2 ~ age of Universe: theta ~ O(1), gamma ~ H0 (Map A).")
     p("4) MLE theta~0.001: essentially NO damping on DESI path (Dx=0.94);")

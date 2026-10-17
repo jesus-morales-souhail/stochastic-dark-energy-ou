@@ -45,12 +45,16 @@ DELTAS = (0.05, 0.10)
 N_WORKERS = 8
 
 # Reference curves (w0, wa)
+_RES = Path(__file__).resolve().parents[1] / "results"
+_EOS = json.loads((_RES / "eos_cpl_desi_dr2" / "eos_cpl_summary.json").read_text(encoding="utf-8"))["pure_CPL"]
+_JNT = {m["model"]: m for m in json.loads((_RES / "joint_w0wa_sigma" / "joint_w0wa_sigma.json")
+                                          .read_text(encoding="utf-8"))["models"]}["cpl"]
 REFS = {
     "LCDM": (-1.0, 0.0),
-    # results/eos_cpl_desi_dr2/eos_cpl_summary.json (pure_CPL; DIAGONAL errors)
-    "CPL_repo": (-0.9898956968059271, -0.015902984131323503),
-    # results/joint_w0wa_sigma/joint_w0wa_sigma.json (model 'cpl'; cov_mode contradictory)
-    "CPL_joint": (-1.0016540106177185, 0.0172470528926633),
+    # results/eos_cpl_desi_dr2/eos_cpl_summary.json (pure_CPL; full projected cov, figure6 alpha since bloque A)
+    "CPL_repo": (_EOS["w0"], _EOS["wa"]),
+    # results/joint_w0wa_sigma/joint_w0wa_sigma.json (model 'cpl'; full projected cov since bloque A)
+    "CPL_joint": (_JNT["w0"], _JNT["wa"]),
     # arXiv:2503.14738 eq:w0wa_DESI_CMB (DESI+CMB, no SNe)
     "DESI_DR2_CMB": (-0.42, -1.75),
 }

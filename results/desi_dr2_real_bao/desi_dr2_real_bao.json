@@ -36,7 +36,7 @@
     "theta": null
   },
   "delta_lnL_best_vs_meas": 0.0,
-  "sigma_X_95_profile_upper": 0.02175257993422772,
+  "sigma_X_95_profile_upper_approx": 0.02175257993422772,
   "profile": [
     {
       "sigma_X": 1e-06,

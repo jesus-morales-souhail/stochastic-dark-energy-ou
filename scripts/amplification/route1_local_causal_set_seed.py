@@ -13,7 +13,7 @@ can be much larger than 10^{-61} without inventing a linear gain factor.
 
 This script:
   - Scans N_eff and L/R_H for area (p=2), volume (p=3), 4-volume (p=4) counting
-  - Reports N_eff needed for sigma_0_eff in {1e-5, 2.5e-2, 1e-4}
+  - Reports N_eff needed for sigma_0_eff in {1e-5, DESI 95% CL bound, 1e-4}
   - Does NOT claim the correct causal-set counting is known
 
 Run (uses all CPU cores for grid):
@@ -27,6 +27,10 @@ import os
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 import numpy as np
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+from desi_bound import desi_sigma_x_bound
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "results", "amplification_routes")
@@ -39,7 +43,7 @@ L_P_M = 1.616255e-35
 
 TARGETS = {
     "euclid_1e-5": 1.0e-5,
-    "desi_1p5e-4": 2.5e-2,
+    "desi_2p6e-2": desi_sigma_x_bound(),
     "window_1e-4": 1.0e-4,
 }
 

@@ -7,6 +7,10 @@ from scipy.integrate import quad
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import sys as _sys
+from pathlib import Path as _P
+_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+from desi_bound import desi_sigma_x_bound
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "results", "sdiff_discrimination")
@@ -18,7 +22,7 @@ H0, OM, OL = 67.4, 0.315, 0.685
 T_H0 = 977.8 / H0
 H0_GYR = 1.0 / T_H0
 LN2 = np.log(2.0)
-SIGMA_X_DESI, SIGMA_X_EUCLID, SIGMA_0 = 2.5e-2, 1.0e-5, 1.0e-61
+SIGMA_X_DESI, SIGMA_X_EUCLID, SIGMA_0 = desi_sigma_x_bound(), 1.0e-5, 1.0e-61
 DX_DESI, Z_RECOMB = 0.94, 1090.0
 DX_RECOMB = np.log(1.0 + Z_RECOMB)
 
@@ -64,7 +68,7 @@ def main():
         if A0 < 1e-20:
             continue
         ax.loglog(theta_plot, residual(A0, theta_plot, DX_DESI), label=name)
-    ax.axhline(SIGMA_X_DESI, color="k", ls="--", lw=1, label="DESI 2.5e-2")
+    ax.axhline(SIGMA_X_DESI, color="k", ls="--", lw=1, label=f"DESI {SIGMA_X_DESI:.3e}")
     ax.axhline(SIGMA_X_EUCLID, color="k", ls=":", lw=1, label="Euclid ~1e-5")
     ax.set_xlabel(r"$\theta$"); ax.set_ylabel(r"$\sigma_{\rm res}$")
     ax.set_title(rf"DESI path $\Delta x={DX_DESI}$"); ax.legend(fontsize=7)

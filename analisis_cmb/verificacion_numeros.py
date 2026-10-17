@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Recalcula los números marcados (verificar) en analisis_cmb/AUDITORIA.md con sigma_X = 2.506e-2
-(results/profile_sigma_x/profile_sigma_x.json -> sigma_X_95CL_upper_profile; theta_best = 0.001 en ese
-nodo, borde inferior de la malla de theta). Sin escrituras: sólo imprime. La tabla está en
+Recalcula los números marcados (verificar) en analisis_cmb/AUDITORIA.md con la cota vigente
+(results/profile_sigma_x/profile_sigma_x.json -> sigma_X_95CL_upper_profile = 2.633e-2, raíz del perfil desde
+2026-10-17; theta_best_at_upper = 0.001, borde inferior de la malla de theta). Sin escrituras: sólo imprime. La tabla está en
 verificacion_numeros.md.
 
 Constantes: las del script del repo del que sale cada número (slip_bridge.py, gap_two_targets.py,
@@ -19,8 +19,8 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 PROF = json.loads((ROOT / "results" / "profile_sigma_x" / "profile_sigma_x.json").read_text())
-SX = PROF["sigma_X_95CL_upper_profile"]  # 2.506e-2
-TH = [r["theta_best"] for r in PROF["profile"] if r["sigma_X"] == SX][0]
+SX = PROF["sigma_X_95CL_upper_profile"]  # 2.633e-2 (root); grid node: sigma_X_95CL_upper_profile_grid
+TH = PROF["theta_best_at_upper"]
 SX_OLD = 1.5e-4
 OL0 = 0.685  # AUDITORIA.md l.19; slip_bridge.py l.42
 OM0 = 0.315  # slip_bridge.py l.41
@@ -68,7 +68,7 @@ for sig, name in ((SX, "DESI"), (SX_OLD, "1.5e-4 (old)"), (1e-5, "Euclid")):
 
 # ---------------------------------------------------------------- 4. theta_min (euclid-protocol l.137)
 print("\n# 4. theta_min = -ln(1 - s/A0)/dx, dx = 0.94 (euclid-protocol-vacuum-relaxation.md l.137-141)")
-for s, A0 in ((1e-5, 3e-5), (1e-5, 1e-4), (3e-5, 1e-4), (5e-5, 2.5e-2), (5e-5, SX), (5e-5, SX_OLD)):
+for s, A0 in ((1e-5, 3e-5), (1e-5, 1e-4), (3e-5, 1e-4), (5e-5, 2.5e-2), (5e-5, SX), (5e-5, SX_OLD)):  # 2.5e-2 = value printed at l.148
     show(f"s={s:g}, A0={A0:g}", f"{-math.log1p(-s / A0) / 0.94:.3e}")
 
 # ---------------------------------------------------------------- 5. H.5, lambda, zeta (stochastic App. H)

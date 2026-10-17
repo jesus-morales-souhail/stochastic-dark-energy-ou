@@ -2,7 +2,8 @@ Profile likelihood σ_X — DESI DR2 BAO (full meas. cov)
 ==================================================
 ll_LCDM = 24.8996
 max ΔlnL vs LCDM = -0.0000 at σ_X = 1.000e-06
-95% CL upper (profile): σ_X ≤ 2.506e-02
-95% CL profile claim:     σ_X < 2.5e-2
+95% CL upper (profile, root of ΔlnL = -1.92): σ_X < 2.6328e-02  (θ_best = 0.001)
+last grid node with ΔlnL >= -1.92:            σ_X = 2.5063e-02
+95% CL profile claim:     σ_X < 2.6e-2
 Wrote results/profile_sigma_x/profile_sigma_x.json
 Wrote results/profile_sigma_x/profile_sigma_x.png

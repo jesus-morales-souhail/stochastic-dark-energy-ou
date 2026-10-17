@@ -1,0 +1,42 @@
+Fundamental vs emergent vacuum relaxation — summary
+============================================================
+Age t0 = 13.7963 Gyr; t_H0 = 14.5074 Gyr
+Dx_DESI = 0.94; Dx_recomb = 6.9948
+sigma_0 = 1.0e-61; DESI lim = 1.5e-04; Euclid ~ 1.0e-05
+
+KEY THEOREM (OU mean, no noise):
+  residual after path = A0 * exp(-theta * Delta x)
+  t_1/2(z=0) = ln2 / (theta * H0)   [Mapping A]
+
+SORKIN-ONLY COROLLARY:
+  For any theta >= 0 and any cosmological path with Delta x ~ O(1-10),
+  residual <= 1e-61 << 1e-5. Pure Sorkin seed is invisible to DESI and Euclid.
+
+AMPLIFICATION to reach Euclid (1e-5) on DESI path:
+  theta=  0.0010:  A0_min=1.001e-05  = 1.001e+56 x Sorkin
+  theta=  0.1000:  A0_min=1.099e-05  = 1.099e+56 x Sorkin
+  theta=  0.6931:  A0_min=1.919e-05  = 1.919e+56 x Sorkin
+  theta=  1.2000:  A0_min=3.089e-05  = 3.089e+56 x Sorkin
+  theta=  5.0000:  A0_min=1.099e-03  = 1.099e+58 x Sorkin
+
+INTERPRETIVE REGIONS:
+  F: Fundamental SDiff => effective A0_geo = 0 (local V g_munu projected out).
+  E0: Emergent + Sorkin only => null at all foreseeable BAO precision.
+  E1: Emergent + amplified A0 in [1e-5, 2.5e-2] + theta small
+      => possible Euclid detection; DESI-compatible if residual < 2.5e-2.
+  E2: Emergent + theta ~ O(1) + A0 ~ 1e-5..1e-3
+      => strong path damping; residual may sit near Euclid edge after recomb path.
+  E3: theta ~ 1e-3 (MLE floor) + A0 > 2.5e-2 => already tension with DESI null.
+
+OBSERVATIONAL TESTS:
+  1) Euclid residual 0 < sigma_X <~ 1e-4 with free {w0,wa}:
+     disfavours pure fundamental SDiff (if systematics controlled).
+  2) Euclid null << 1e-5 with >20 bins:
+     forces A0_eff * exp(-theta Dx) small; compatible with F and E0.
+  3) Lag structure matching an OU kernel:
+     supports dynamical mean-reversion rather than pure algebraic projection.
+  4) Open-system map: t_1/2 = ln2/gamma with gamma <-> theta H.
+
+CSV: results/sdiff_discrimination/sdiff_discrimination_grid.csv
+Figures: results/sdiff_discrimination/ and figures/sdiff_*.png
+

@@ -96,7 +96,7 @@ def main() -> int:
         "ll_measurement_cov_LCDM": ll_meas,
         "best_ou": best,
         "delta_lnL_best_vs_meas": best["ll"] - ll_meas,
-        "sigma_X_95_profile_upper": sx_up,
+        "sigma_X_95_profile_upper_approx": sx_up,
         "profile": profile,
         "mock": False,
         "note": (

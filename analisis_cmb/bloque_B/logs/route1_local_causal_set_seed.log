@@ -1,0 +1,36 @@
+========================================================================
+ROUTE 1: Local / meso-scale causal-set seed (redefine N_eff)
+========================================================================
+Global N_BH = 1.000e+122  →  sigma_0_global = 1.000e-61
+
+--- N_eff required for target seeds (pure 1/sqrt(N) counting) ---
+  euclid_1e-5       sigma=1.0e-05  ⇒  N_eff = 1.000e+10
+  desi_2p6e-2       sigma=2.6e-02  ⇒  N_eff = 1.443e+03
+  window_1e-4       sigma=1.0e-04  ⇒  N_eff = 1.000e+08
+
+Scanning 1800 (power, L/R_H) points on 16 cores...
+
+--- L/R_H so that sigma_0_eff ≥ 1e-5 under N_eff = N_BH (L/R_H)^p ---
+    (smaller patch ⇒ larger seed; these L are typically ≪ any meso scale)
+  p=2: L/R_H ≲ 8.063e-57  (L ≈ 1.129e-30 m ≪ R_H, N_eff ≈ 6.502e+09, σ_eff ≈ 1.240e-05)
+       → Under global-N rescaling, a 'local' seed of 1e-5 forces sub-physical L; Route 1 needs a *different counting rule*, not a fraction of N_BH.
+  p=3: L/R_H ≲ 4.342e-38  (L ≈ 6.079e-12 m ≪ R_H, N_eff ≈ 8.188e+09, σ_eff ≈ 1.105e-05)
+       → Under global-N rescaling, a 'local' seed of 1e-5 forces sub-physical L; Route 1 needs a *different counting rule*, not a fraction of N_BH.
+  p=4: L/R_H ≲ 8.980e-29  (L ≈ 1.257e-02 m ≪ R_H, N_eff ≈ 6.502e+09, σ_eff ≈ 1.240e-05)
+       → Under global-N rescaling, a 'local' seed of 1e-5 forces sub-physical L; Route 1 needs a *different counting rule*, not a fraction of N_BH.
+
+--- Pure Planck counting N=(L/l_P)^p for σ_eff=1e-5 ---
+  p=2: L/l_P = 1.000e+05  ⇒  L = 1.616e-30 m  (1.154e-56 R_H)
+  p=3: L/l_P = 2.154e+03  ⇒  L = 3.482e-32 m  (2.487e-58 R_H)
+  p=4: L/l_P = 3.162e+02  ⇒  L = 5.111e-33 m  (3.651e-59 R_H)
+
+Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/amplification_routes/route1_N_eff_grid.csv
+Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/amplification_routes/route1_N_eff_required.csv
+
+INTERPRETATION:
+  Route 1 does NOT multiply sigma_0 by 1e56.
+  It *redefines* the counting volume so the bare seed is larger.
+  Price: justify local causal-set / meso-scale N_eff from first principles.
+  Under N_eff = N_BH (L/R_H)^p with p=2 (area-like), L must be ~ R_H to
+  recover global counting; smaller patches raise sigma_0_eff.
+========================================================================

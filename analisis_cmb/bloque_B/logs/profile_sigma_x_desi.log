@@ -1,0 +1,63 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+  sigma_X=1.000e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.259e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.585e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.995e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=2.511e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=3.161e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=3.980e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=5.010e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=6.307e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=7.940e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=9.995e-06  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.258e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.584e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=1.994e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=2.510e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=3.160e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=3.978e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=5.008e-05  theta=20.0000  dlogL=-0.0000
+  sigma_X=6.304e-05  theta=20.0000  dlogL=-0.0001
+  sigma_X=7.936e-05  theta=20.0000  dlogL=-0.0001
+  sigma_X=9.990e-05  theta=20.0000  dlogL=-0.0002
+  sigma_X=1.258e-04  theta=20.0000  dlogL=-0.0003
+  sigma_X=1.583e-04  theta=20.0000  dlogL=-0.0005
+  sigma_X=1.993e-04  theta=20.0000  dlogL=-0.0008
+  sigma_X=2.509e-04  theta=20.0000  dlogL=-0.0012
+  sigma_X=3.158e-04  theta=20.0000  dlogL=-0.0020
+  sigma_X=3.976e-04  theta=20.0000  dlogL=-0.0031
+  sigma_X=5.005e-04  theta=20.0000  dlogL=-0.0050
+  sigma_X=6.301e-04  theta=20.0000  dlogL=-0.0079
+  sigma_X=7.932e-04  theta=20.0000  dlogL=-0.0124
+  sigma_X=9.985e-04  theta=20.0000  dlogL=-0.0196
+  sigma_X=1.257e-03  theta=20.0000  dlogL=-0.0310
+  sigma_X=1.582e-03  theta=20.0000  dlogL=-0.0488
+  sigma_X=1.992e-03  theta=20.0000  dlogL=-0.0766
+  sigma_X=2.508e-03  theta=20.0000  dlogL=-0.1195
+  sigma_X=3.157e-03  theta=20.0000  dlogL=-0.1849
+  sigma_X=3.974e-03  theta=20.0000  dlogL=-0.2830
+  sigma_X=5.003e-03  theta=20.0000  dlogL=-0.4268
+  sigma_X=6.297e-03  theta=20.0000  dlogL=-0.6319
+  sigma_X=7.928e-03  theta=0.0010  dlogL=-0.8142
+  sigma_X=9.980e-03  theta=0.0010  dlogL=-1.0070
+  sigma_X=1.256e-02  theta=0.0010  dlogL=-1.2123
+  sigma_X=1.582e-02  theta=0.0010  dlogL=-1.4264
+  sigma_X=1.991e-02  theta=0.0010  dlogL=-1.6468
+  sigma_X=2.506e-02  theta=0.0010  dlogL=-1.8715
+  sigma_X=3.155e-02  theta=0.0010  dlogL=-2.0995
+  sigma_X=3.972e-02  theta=0.0010  dlogL=-2.3305
+  sigma_X=5.000e-02  theta=0.0010  dlogL=-2.5646
+Profile likelihood σ_X — DESI DR2 BAO (full meas. cov)
+==================================================
+ll_LCDM = 24.8996
+max ΔlnL vs LCDM = -0.0000 at σ_X = 1.000e-06
+95% CL upper (profile, root of ΔlnL = -1.92): σ_X < 2.6328e-02  (θ_best = 0.001)
+last grid node with ΔlnL >= -1.92:            σ_X = 2.5063e-02
+95% CL profile claim:     σ_X < 2.6e-2
+Wrote results/profile_sigma_x/profile_sigma_x.json
+Wrote results/profile_sigma_x/profile_sigma_x.png
+
+
+real	0m1.466s
+user	0m2.501s
+sys	0m0.163s
