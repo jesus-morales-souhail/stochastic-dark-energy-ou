@@ -170,3 +170,73 @@ En papers/, manuscript/ y notes/ quedan muchas más; son B2.
 - **Resultados:** los de la sección 3, más `results/profile_sigma_x/*`, `figures/{profile_sigma_x,euclid_A0_theta_plane,sdiff_A0_min_for_detection,sdiff_residual_vs_theta,desqueezing_relax_time}.png` y `analisis_cmb/resultados/takahashi/sigma_2.633e-02/`.
 - **Texto en analisis_cmb/:** `AUDITORIA.md` (decisión en 2a y en B; lista 2b), `RESULTADO.md` (§2, §3), `verificacion_numeros.md`.
 - **Nuevos en `analisis_cmb/bloque_B/`:** `antes/`, `logs/` y este fichero.
+
+---
+
+## B1b (2026-10-17)
+
+### 1. `scripts/desqueezing/desqueezing_relax_time.py`: fórmula de t½ y rutas
+
+**La fórmula buena es t½ = ln2/γ.**
+- En el baño térmico markoviano, d⟨a²⟩/dt = −(2iω + γ)⟨a²⟩: los términos en n_th se cancelan.
+- n_th fija el estado estacionario, Var(q)_ss = n_th + 1/2, no la tasa.
+- La propia simulación lo confirma: t½ = 0.28883 para todo n_th a γ = 2.4.
+
+`gamma_eff` = γ(1+2n_th) se conserva como columna del csv con un comentario, pero ya no se usa como tasa. La figura (panel 3) pasa de t½ frente a 1/γ_eff a t½ frente a 1/γ.
+
+Líneas del script:
+
+| línea | antes | después |
+|---|---|---|
+| 110–113 | `# Para baño térmico Markoviano, \|⟨a²⟩\| ~ e^{-γ(1+2 n_th) t}`; `t_half_theory = ln2 / gamma_eff` | `# … d⟨a²⟩/dt = -(2iω + γ)⟨a²⟩ … n_th fija el estado estacionario …, no la tasa`; `t_half_theory = ln2 / gamma` |
+| 256 | `inv = 1.0 / geff` | `inv = 1.0 / gamma` (por fila) |
+| 260–263 | etiqueta "teoría ln2 / γ_eff", eje "1 / γ_eff [γ_eff = γ(1+2n_th)]", título "t_relax ∝ 1/γ_eff" | "teoría ln2 / γ", eje "1 / γ", título "t_relax ∝ 1/γ (independiente de n_th)" |
+| 266, 271 | fit "a / γ_eff" | fit "a / γ" |
+| 302–305 | "Teoría Markoviana: \|⟨a²⟩\|(t) ∝ exp[-γ(1+2n_th) t]"; "⇒ t_½ = ln(2) / [γ(1+2n_th)] = ln2 / γ_eff"; "Fit lineal … / γ_eff" | "… ∝ exp[-γ t] (n_th fija el estado estacionario, no la tasa)"; "⇒ t_½ = ln(2) / γ"; "Fit lineal … / γ" |
+| 313 | "Aquí: γ_eff = γ(1+2n_th) juega el rol de tasa…" | "Aquí: γ juega el rol de tasa…" |
+| 327–329, 338 | rutas absolutas (`fig_path`, `csv_path`, `npz_path`, `RESULTS`) | `os.path.relpath(…, ROOT)` |
+
+**Resumen regenerado** (`results/desqueezing_relax_time/desqueezing_relax_time_resumen.txt`; log `logs/desqueezing_relax_time_B1b.log`):
+
+| línea | antes (B1) | después (B1b) |
+|---|---|---|
+| 4 | Teoría Markoviana: \|⟨a²⟩\|(t) ∝ exp[-γ(1+2n_th) t] | Teoría Markoviana: \|⟨a²⟩\|(t) ∝ exp[-γ t] (n_th fija el estado estacionario, no la tasa) |
+| 5 | ⇒ t_½ = ln(2) / [γ(1+2n_th)] = ln2 / γ_eff | ⇒ t_½ = ln(2) / γ |
+| 7 | Fit lineal t_½ ≈ 0.7650 / γ_eff + 0.0560 | Fit lineal t_½ ≈ 0.6931 / γ + 0.0000 |
+| 9 | Ratio sim/teoría (media ± std): 1.4701 ± 0.5798 | Ratio sim/teoría (media ± std): **1.0001 ± 0.0001** |
+| 13 | Aquí: γ_eff = γ(1+2n_th) juega el rol de tasa de restauración de lisura | Aquí: γ juega el rol de tasa de restauración de lisura |
+| 20–24 | t½_th = 0.96270 / 0.48135 / 0.24068 / 0.16045 / 0.12034 (γ = 0.6 … 4.8, n_th = 0.1) | t½_th = 1.15525 / 0.57762 / 0.28881 / 0.19254 / 0.14441 |
+| 26–29 | t½_th = 0.26256 / 0.18051 / 0.14441 / 0.09627 (γ = 2.4, n_th = 0.05 … 1) | t½_th = 0.28881 en las cuatro |
+| 31–33 | `figura: /home/ashpokemon/Proyectos/…/results/desqueezing_relax_time/desqueezing_relax_time.png` (y csv, npz) | `figura: results/desqueezing_relax_time/desqueezing_relax_time.png` (y csv, npz) |
+
+Otros ficheros:
+- `results/desqueezing_relax_time/t_relax_tabla.csv`: solo cambia la columna `t_half_theory`; las columnas de la simulación son idénticas.
+- La figura se regenera y la copia en `figures/` se actualiza.
+
+### 2. `notes/mapping_tables.md` restaurada y salida literal del script aparte
+
+- **`cosmological_mapping.py`:** `DOCS = RESULTS` y el fichero pasa a llamarse `mapping_tables_script.md`. La salida literal va ahora a `results/cosmological_mapping/mapping_tables_script.md` (nuevo). Los csv y `mapping_summary.txt` no cambian al volver a ejecutarlo.
+- **`notes/mapping_tables.md`:** vuelve a la versión de `bloque_B/antes/notes/` (prosa original). Solo se sustituyen los números de las 8 filas DESI de la Tabla 2, tomados de `results/cosmological_mapping/table2_A0_required.csv`, y se añade la línea de fuente.
+
+Diff de la nota frente a la versión anterior a B1:
+
+```diff
+-| theta_MLE=0.001 | DESI_0.94 | DESI_limit_2.5e-2 | 1.501e-04 | 1.501e+57 |
++| theta_MLE=0.001 | DESI_0.94 | DESI_limit_2.633e-2 | 2.635e-02 | 2.635e+59 |
+-| theta_MLE=0.001 | recomb | DESI_limit_2.5e-2 | 1.511e-04 | 1.511e+57 |
++| theta_MLE=0.001 | recomb | DESI_limit_2.633e-2 | 2.651e-02 | 2.651e+59 |
+-| theta=1.2 (old) | DESI_0.94 | DESI_limit_2.5e-2 | 4.634e-04 | 4.634e+57 |
++| theta=1.2 (old) | DESI_0.94 | DESI_limit_2.633e-2 | 8.134e-02 | 8.134e+59 |
+-| theta=1.2 (old) | recomb | DESI_limit_2.5e-2 | 6.630e-01 | 6.630e+60 |
++| theta=1.2 (old) | recomb | DESI_limit_2.633e-2 | 1.164e+02 | 1.164e+63 |
+-| theta=ln2~0.693 (Hubble half-life) | DESI_0.94 | DESI_limit_2.5e-2 | 2.878e-04 | 2.878e+57 |
++| theta=ln2~0.693 (Hubble half-life) | DESI_0.94 | DESI_limit_2.633e-2 | 5.051e-02 | 5.051e+59 |
+-| theta=ln2~0.693 (Hubble half-life) | recomb | DESI_limit_2.5e-2 | 1.913e-02 | 1.913e+59 |
++| theta=ln2~0.693 (Hubble half-life) | recomb | DESI_limit_2.633e-2 | 3.358e+00 | 3.358e+61 |
+-| theta=0.099 (half over recomb path) | DESI_0.94 | DESI_limit_2.5e-2 | 1.646e-04 | 1.646e+57 |
++| theta=0.099 (half over recomb path) | DESI_0.94 | DESI_limit_2.633e-2 | 2.890e-02 | 2.890e+59 |
+-| theta=0.099 (half over recomb path) | recomb | DESI_limit_2.5e-2 | 3.000e-04 | 3.000e+57 |
++| theta=0.099 (half over recomb path) | recomb | DESI_limit_2.633e-2 | 5.266e-02 | 5.266e+59 |
++
++DESI rows: `results/cosmological_mapping/table2_A0_required.csv` (DESI bound 2.633e-2 = `sigma_X_95CL_upper_profile` of `results/profile_sigma_x/profile_sigma_x.json`, 2026-10-17).
+```

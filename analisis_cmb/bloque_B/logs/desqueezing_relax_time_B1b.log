@@ -1,0 +1,67 @@
+============================================================
+DES-SQUEEZING: t_relax(γ, n_th)
+N=150, r=1.5, omega=2.4, t_max=8.0
+============================================================
+
+--- Barrido γ (n_th = 0.100) ---
+  mesolve γ=0.6 ...
+    t_½(|a²|)=1.1553  t_½ theory=1.1552  t_½ fit=1.1552  γ_eff=0.720
+  mesolve γ=1.2 ...
+    t_½(|a²|)=0.5776  t_½ theory=0.5776  t_½ fit=0.5776  γ_eff=1.440
+  mesolve γ=2.4 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  t_½ fit=0.2888  γ_eff=2.880
+  mesolve γ=3.6 ...
+    t_½(|a²|)=0.1926  t_½ theory=0.1925  t_½ fit=0.1925  γ_eff=4.320
+  mesolve γ=4.8 ...
+    t_½(|a²|)=0.1445  t_½ theory=0.1444  t_½ fit=0.1444  γ_eff=5.760
+
+--- Barrido n_th (γ = 2.400) ---
+  mesolve n_th=0.0 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=2.400
+  mesolve n_th=0.05 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=2.640
+  (reutilizado) n_th=0.1
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=2.880
+  mesolve n_th=0.3 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=3.840
+  mesolve n_th=0.5 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=4.800
+  mesolve n_th=1.0 ...
+    t_½(|a²|)=0.2888  t_½ theory=0.2888  γ_eff=7.200
+
+=== Des-squeezing / tiempo de relajación ===
+N=150, r=1.5, omega=2.4
+Métrica: t_½ de |⟨a²⟩| (correlador anómalo)
+Teoría Markoviana: |⟨a²⟩|(t) ∝ exp[-γ t]  (n_th fija el estado estacionario, no la tasa)
+  ⇒ t_½ = ln(2) / γ
+
+Fit lineal t_½ ≈ 0.6931 / γ + 0.0000
+  (teoría: pendiente = ln2 ≈ 0.6931)
+Ratio sim/teoría (media ± std): 1.0001 ± 0.0001
+
+--- Conexión con stochastic-dark-energy-ou ---
+OU: dX = -θ X dx + σ dW  →  tiempo de correlación τ_OU = 1/θ
+Aquí: γ juega el rol de tasa de restauración de lisura
+  tras una perturbación del vacío (squeezing = 'arranque' fuera del vacío liso).
+SDiff emergente ⇒ τ_relax finito (como este t_½).
+SDiff fundamental ⇒ σ_X=0 exacto (equivalente a no acoplar ruido local a la geometría).
+Límite cosmológico memorizado: σ_X < 2.633e-02 (95% CL, DESI DR2).
+
+Tabla (gamma, n_th, gamma_eff, t_half_a2, t_half_theory):
+  γ= 0.60  n_th=0.10  γ_eff= 0.720  t½=1.15525  t½_th=1.15525
+  γ= 1.20  n_th=0.10  γ_eff= 1.440  t½=0.57764  t½_th=0.57762
+  γ= 2.40  n_th=0.10  γ_eff= 2.880  t½=0.28883  t½_th=0.28881
+  γ= 3.60  n_th=0.10  γ_eff= 4.320  t½=0.19257  t½_th=0.19254
+  γ= 4.80  n_th=0.10  γ_eff= 5.760  t½=0.14446  t½_th=0.14441
+  γ= 2.40  n_th=0.00  γ_eff= 2.400  t½=0.28883  t½_th=0.28881
+  γ= 2.40  n_th=0.05  γ_eff= 2.640  t½=0.28883  t½_th=0.28881
+  γ= 2.40  n_th=0.30  γ_eff= 3.840  t½=0.28883  t½_th=0.28881
+  γ= 2.40  n_th=0.50  γ_eff= 4.800  t½=0.28883  t½_th=0.28881
+  γ= 2.40  n_th=1.00  γ_eff= 7.200  t½=0.28883  t½_th=0.28881
+
+figura: results/desqueezing_relax_time/desqueezing_relax_time.png
+csv:    results/desqueezing_relax_time/t_relax_tabla.csv
+npz:    results/desqueezing_relax_time/t_relax_series.npz
+memoria repo: docs/MEMORIA_REPO_stochastic-dark-energy-ou.md
+
+Guardado en results/desqueezing_relax_time

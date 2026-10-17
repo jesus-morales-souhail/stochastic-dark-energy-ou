@@ -107,10 +107,10 @@ def run_squeezed(gamma: float, n_th: float):
     t_half_a2 = first_half_time(tlist, abs_a2, half_a2, decreasing=True)
     t_half_var = first_half_time(tlist, var_q, Vmid, decreasing=False)
 
-    # tasa efectiva teórica (desfase / damping del correlador anómalo)
-    # Para baño térmico Markoviano, |⟨a²⟩| ~ e^{-γ(1+2 n_th) t} * e^{-i 2 ω t}
-    gamma_eff = gamma * (1.0 + 2.0 * n_th)
-    t_half_theory = np.log(2.0) / gamma_eff if gamma_eff > 0 else np.nan
+    # Baño térmico Markoviano: d⟨a²⟩/dt = -(2iω + γ)⟨a²⟩, sin término de n_th, así que
+    # |⟨a²⟩| ~ e^{-γ t}. n_th fija el estado estacionario (Var(q)_ss = n_th + 1/2), no la tasa.
+    gamma_eff = gamma * (1.0 + 2.0 * n_th)  # se conserva como columna; no es la tasa de |⟨a²⟩|
+    t_half_theory = np.log(2.0) / gamma if gamma > 0 else np.nan
 
     # fit log |⟨a²⟩| en ventana temprana (antes de ruido numérico)
     mask = (tlist > 0) & (abs_a2 > 1e-6 * max(abs_a2_0, 1e-30)) & (tlist < min(3.0, t_max))
@@ -253,22 +253,22 @@ def main():
     geff = np.array([r0["gamma_eff"] for r0 in rows])
     th = np.array([r0["t_half_a2"] for r0 in rows])
     th_th = np.array([r0["t_half_theory"] for r0 in rows])
-    inv = 1.0 / geff
+    inv = 1.0 / np.array([r0["gamma"] for r0 in rows])
     ax.scatter(inv, th, s=50, label="simulación t_½(|a²|)", zorder=3)
     # línea teórica
     inv_line = np.linspace(inv.min() * 0.8, inv.max() * 1.1, 50)
-    ax.plot(inv_line, np.log(2.0) * inv_line, "k--", label="teoría ln2 / γ_eff")
-    ax.set_xlabel("1 / γ_eff   [γ_eff = γ(1+2n_th)]")
+    ax.plot(inv_line, np.log(2.0) * inv_line, "k--", label="teoría ln2 / γ")
+    ax.set_xlabel("1 / γ")
     ax.set_ylabel("t_½")
-    ax.set_title(r"$t_{\rm relax} \propto 1/\gamma_{\rm eff}$")
+    ax.set_title(r"$t_{\rm relax} \propto 1/\gamma$ (independiente de $n_{\rm th}$)")
     ax.legend()
     ax.grid(True, alpha=0.3)
 
-    # fit lineal t = a / γ_eff
+    # fit lineal t = a / γ
     coeff = np.polyfit(inv, th, 1)
     slope, intercept = coeff[0], coeff[1]
     ax.plot(inv_line, slope * inv_line + intercept, "r:", alpha=0.8,
-            label=f"fit: {slope:.3f}/γ_eff + {intercept:.3f}")
+            label=f"fit: {slope:.3f}/γ + {intercept:.3f}")
     ax.legend(fontsize=8)
 
     # 4) Var(q) ejemplo + mapa conceptual
@@ -299,16 +299,16 @@ def main():
         "=== Des-squeezing / tiempo de relajación ===",
         f"N={N}, r={r}, omega={omega}",
         f"Métrica: t_½ de |⟨a²⟩| (correlador anómalo)",
-        f"Teoría Markoviana: |⟨a²⟩|(t) ∝ exp[-γ(1+2n_th) t]",
-        f"  ⇒ t_½ = ln(2) / [γ(1+2n_th)] = ln2 / γ_eff",
+        f"Teoría Markoviana: |⟨a²⟩|(t) ∝ exp[-γ t]  (n_th fija el estado estacionario, no la tasa)",
+        f"  ⇒ t_½ = ln(2) / γ",
         "",
-        f"Fit lineal t_½ ≈ {slope:.4f} / γ_eff + {intercept:.4f}",
+        f"Fit lineal t_½ ≈ {slope:.4f} / γ + {intercept:.4f}",
         f"  (teoría: pendiente = ln2 ≈ {np.log(2):.4f})",
         f"Ratio sim/teoría (media ± std): {ratio_mean:.4f} ± {ratio_std:.4f}",
         "",
         "--- Conexión con stochastic-dark-energy-ou ---",
         "OU: dX = -θ X dx + σ dW  →  tiempo de correlación τ_OU = 1/θ",
-        "Aquí: γ_eff = γ(1+2n_th) juega el rol de tasa de restauración de lisura",
+        "Aquí: γ juega el rol de tasa de restauración de lisura",
         "  tras una perturbación del vacío (squeezing = 'arranque' fuera del vacío liso).",
         "SDiff emergente ⇒ τ_relax finito (como este t_½).",
         "SDiff fundamental ⇒ σ_X=0 exacto (equivalente a no acoplar ruido local a la geometría).",
@@ -324,9 +324,9 @@ def main():
         )
     lines += [
         "",
-        f"figura: {fig_path}",
-        f"csv:    {csv_path}",
-        f"npz:    {npz_path}",
+        f"figura: {os.path.relpath(fig_path, ROOT)}",
+        f"csv:    {os.path.relpath(csv_path, ROOT)}",
+        f"npz:    {os.path.relpath(npz_path, ROOT)}",
         f"memoria repo: docs/MEMORIA_REPO_stochastic-dark-energy-ou.md",
     ]
     summary = "\n".join(lines)
@@ -335,7 +335,7 @@ def main():
         f.write(summary + "\n")
 
     print("\n" + summary)
-    print(f"\nGuardado en {RESULTS}")
+    print(f"\nGuardado en {os.path.relpath(RESULTS, ROOT)}")
 
 
 if __name__ == "__main__":

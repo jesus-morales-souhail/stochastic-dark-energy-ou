@@ -20,7 +20,7 @@ from desi_bound import desi_sigma_x_bound
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in scripts/desqueezing/)
 RESULTS = os.path.join(ROOT, "results", "cosmological_mapping")
-DOCS = os.path.join(ROOT, "notes")  # tracked copy: notes/mapping_tables.md
+DOCS = RESULTS  # literal script output; notes/mapping_tables.md is the hand-edited note
 os.makedirs(RESULTS, exist_ok=True)
 
 # =============================================================================
@@ -313,7 +313,7 @@ def main():
         f.write("\n".join(lines) + "\n")
 
     # Update mapping_tables.md with FIRST PRINCIPLES version
-    md_path = os.path.join(DOCS, "mapping_tables.md")
+    md_path = os.path.join(DOCS, "mapping_tables_script.md")
     with open(md_path, "w", encoding="utf-8") as f:
         f.write("# First-Principles Mapping Tables (repo anchors only)\n\n")
         f.write("**Seed \(A_0=0.01\).** Seed: \(\\sigma_0\\sim 10^{-61}\) (repo Axiom A2 / GPE paper).\n\n")
