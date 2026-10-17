@@ -340,3 +340,134 @@ Ningún cambio N afecta a la cota σ_X < 2.5e-2 ni a los resultados de `analisis
 - los números marcados **(verificar)**: r, m_φ, λ, longitudes de N_eff, θ_min, ratios del slip frente a Maus/Sakr, órdenes de magnitud de l.372, normalización del ruido en l.164;
 - el volumen y la página de Zwane et al.;
 - los valores DESI externos de stochastic l.12/924.
+
+---
+
+## Orden propuesto de corrección (2026-10-17)
+
+Cuatro bloques, en este orden. A y B tocan resultados; C y D, texto. Los números marcados **(verificar)** en las tablas anteriores están recalculados en `analisis_cmb/verificacion_numeros.md` (script `verificacion_numeros.py`); donde allí pone "fórmula deducida", el número no está validado.
+
+**Decisión previa, del autor (fila 2a l.128):** ¿σ_X < 2.5e-2 (nodo de malla) o < 2.6e-2 (raíz refinada)? B y la propagación de números dependen de ella. `verificacion_numeros.md` usa el nodo, 2.506e-2.
+
+### (A) Etiquetas falsas de covarianza: joint_w0wa_sigma y eos_cpl
+
+Ficheros:
+- `scripts/joint_w0wa_sigma_desi.py` l.263 y l.300: etiqueta "full meas. cov" escrita a mano.
+- `scripts/eos_efectiva.py` l.5, 33, 375, 404, 414 y 443: "diagonal approximation" escrita a mano.
+- Salidas:
+  - `results/joint_w0wa_sigma/joint_w0wa_sigma.{json,txt,png}` y `figures/joint_w0wa_sigma.png`;
+  - `results/eos_cpl_desi_dr2/eos_cpl_summary.{json,txt}`.
+- Texto que cita estos CPL (tabla 3):
+  - papers/resume.txt l.25–33;
+  - PREPRINT l.76–78;
+  - stochastic l.440, l.922–926 y l.430/932;
+  - neutrino-de-degeneracy l.30;
+  - covariance-desi-dr2-full l.68/72;
+  - NOTAS_ANALISIS_CMB y RESULTADO §5.
+
+Pasos:
+1. Sustituir las etiquetas fijas por `cov_mode` del loader, en los dos scripts.
+2. Con `data/` (los ficheros DESI DR2 locales, que no se versionan) presente, para que `load_alpha_dv(use_full_cov=True)` tome la rama completa (desi_dr2_data.py l.184–194), correr:
+   - `python scripts/joint_w0wa_sigma_desi.py`, que escribe json, txt y las dos png;
+   - `python scripts/eos_efectiva.py`.
+3. `python scripts/verify_bao_pipelines.py`.
+4. Llevar los (w0, wa, σ_X, lnL) nuevos al texto de la tabla 3.
+
+Comprobación:
+- Los dos json dicen `"cov_mode": "full_gaussian_bao_projected_13x13"`, la etiqueta `data` coincide con ella y `source` apunta a figure6, no a la tabla fallback.
+- El logL de ΛCDM del joint coincide con `ll_lcdm` = 24.899562520639115 de `results/profile_sigma_x/profile_sigma_x.json` (mismos datos, misma covarianza y la misma `logL_gaussian`) si `alpha_pred_cpl(−1, 0)` ≡ 1, que es el residuo del perfil (profile_sigma_x_desi.py l.38). Si no coincide, hay que explicar la diferencia antes de seguir. El diagonal daba 24.8955.
+- Los logL del joint ya no son idénticos bit a bit a los de `9e8b6bf`.
+- El χ² de ΛCDM de eos coincide con el del joint en (w0, wa) = (−1, 0).
+- `git diff results/desi_cov/` está vacío: el loader reescribe ese 7×7.
+
+### (B) Regenerar los ficheros R con σ_X vigente
+
+Prerrequisito: corregir las etiquetas T de los scripts implicados (tabla 2a), porque si no la regeneración reproduce las etiquetas viejas:
+- profile_sigma_x_desi.py l.128;
+- euclid_protocol_forecasts.py l.36/66;
+- cosmological_mapping.py l.39/137;
+- route1_local_causal_set_seed.py l.42;
+- desi_dr2_real_bao_test.py: renombrar la clave a `…_approx`.
+
+| salida | script | comprobación |
+|---|---|---|
+| `notes/mapping_tables.md` l.24–38; `results/cosmological_mapping/table2_A0_required.csv`; `results/cosmological_mapping/mapping_summary.txt` l.11 | `python scripts/desqueezing/cosmological_mapping.py` | Ni `1.5e-4`, ni `0.00015`, ni `1p5` en las tres salidas; los A0 de la fila "DESI" calculados con 2.5e-2; l.11 marcada "(run antiguo, cov diagonal)" |
+| `results/euclid_protocol/euclid_forecast_grid.csv` l.68–78, 90–100 | `python scripts/desqueezing/euclid_protocol_forecasts.py` | Ninguna fila con A0 = 0.00015; las de 0.018, etiquetadas como calibración DR1 obsoleta o retiradas |
+| `results/sdiff_discrimination/summary.txt` l.5 (y l.34, Euclid, en D) | `python scripts/desqueezing/sdiff_discrimination.py` | l.5 dice 2.5e-02 |
+| `results/amplification_routes/route1_N_eff_required.csv` | `python scripts/amplification/route1_local_causal_set_seed.py` | Etiqueta `desi_2p5e-2`; N_eff = 1600 (sin cambio de valor) |
+| `results/amplification_routes/VERDICT.md` l.26, 55–58 | **Ningún script lo escribe** (los "VERDICT:" de amplifier_audit.py y slip_bridge.py son prints): edición a mano con `route3_avalanche_scan.csv` y `route1_N_eff_required.csv` | "288/288 safe, 0 unsafe"; "∼10¹¹²–10¹¹⁹" (verificacion_numeros fila 3: 10^118.8) |
+| `results/profile_sigma_x/*` y `figures/profile_sigma_x.png` | `python scripts/profile_sigma_x_desi.py` | `sigma_X_95CL_upper_profile` sigue siendo 0.025063155506929828 y el json no cambia salvo en lo decidido en el paso previo; el label del PNG dice 2.5×10⁻² |
+| `results/desi_dr2_real_bao/desi_dr2_real_bao.json` l.39 | `python scripts/desi_dr2_real_bao_test.py` | La clave termina en `_approx`; el valor sigue en 0.02175 |
+| `results/ou_bao_desi_dr2_run.txt` l.19–20 (y l.30, 50–51 en D) | **Ningún script versionado lo escribe** (no hay referencia a ese nombre en `scripts/`) | Cabecera a mano: "cov diagonal; superseded por results/profile_sigma_x/". No regenerar sin identificar antes qué lo produjo |
+
+Después, propagar a los papers los números N derivados de σ_X (tablas 2a y 1): slip, N_eff, G_DESI/r, BAO-safe, H.5/λ/ζ, m_φ, θ_min y órdenes de magnitud. Fuente: `verificacion_numeros.md`. No usar los números de las filas con fórmula deducida (2, 13 y 14) ni las de m_φ (6–8), cuyo valor publicado no se reproduce con ninguna convención, hasta que el autor las valide.
+
+Comprobación global de B:
+- Ni `git grep -n "1\.5e-4\|1\.5\\\\times 10\^{-4}\|0\.00015"` ni `4.44` sacan nada fuera de las apariciones marcadas como obsoletas en 2b ("Marcados ya como obsoletos").
+- `git grep -n "1\.27\\\\times 10\^{59}\|r\\\\approx 65.7\|r\\\\sim 64"` está vacío.
+
+### (C) Unificar X y el factor S_iS_j en los papers
+
+Decisión previa, del autor: el texto [X-std] (punto 1) y la lectura (a), δ ln ρ_DE = X/Ω_Λ0.
+
+Ficheros (tabla 1):
+- `manuscript/PREPRINT.md` l.82, l.86–94: [X-std] y C^OU_ij = S_iS_j σ_X² e^{−θΔx}.
+- `papers/stochastic-dark-energy-desi-dr2.md`:
+  - l.70, l.82/182/264/272;
+  - l.164/172/176: normalización del ruido. La forma deducida en verificacion_numeros fila 14, σ²Hρ_ref² δ_D, es "fórmula deducida" y la tiene que validar el autor.
+  - l.404 (+412, 420), l.562, l.653, l.825/833.
+- `papers/unimodular-gravity-vacuum-smoothness.md` l.68/72; `papers/fundamental-vs-emergent-vacuum-relaxation.md` l.32; `papers/quantum-fluid-instabilities-desi-dr2.md` l.103; `papers/principle-of-vacuum-smoothness.md` l.15–19.
+- `papers/amplification-gap.md` l.54/56 y `papers/anisotropic-slip-option0.md` l.137/141/149–151. Aquí el factor 1/Ω_Λ0 cambia números (verificacion_numeros fila 2: 3.1×10⁵⁹, no 1.85×10⁵⁹).
+- `notes/desqueezing-relaxation-vacuum-fluctuations-note.md` l.47, 165, 173, 209.
+- Scripts, solo comentarios o nombres:
+  - `scripts/desi_dr2_data.py` l.224–233 (docstring);
+  - `scripts/ou_bao_likelihood.py` l.86 y `ou_bao_stochastic_test.py` l.83 (SIGMA_OU);
+  - `scripts/eos_efectiva.py` l.129/150–156 (sigma → sigma_w);
+  - `scripts/slip_bridge.py` l.45/73.
+
+Scripts a correr: solo los que se tocan, para comprobar que los renombres no cambian salidas:
+- `python scripts/slip_bridge.py`, si se cambia el ρ_X de l.73;
+- `python scripts/eos_efectiva.py`, después de A.
+
+Comprobación:
+- `git grep -n "δρ_Λ/ρ_Λ\|delta\\\\rho_\\\\Lambda/\\\\rho_\\\\Lambda\|fractional"` en papers/, manuscript/ y notes/ solo saca frases del tipo "rms δρ_Λ/ρ_Λ = σ_X/Ω_Λ0".
+- Ninguna C^OU sin S_iS_j.
+- 3.65e-2 aparece donde se habla de δρ_Λ/ρ_Λ.
+- Correr de nuevo los scripts renombrados deja `git diff --stat results/` vacío, salvo que se cambie la física de slip_bridge l.73.
+
+### (D) Texto: Euclid, Everpresent, resultados nuevos
+
+**Euclid (punto 4).**
+- Ficheros: los de la tabla 4 (stochastic l.442–452, 480, 609, 611, 761; resume.txt l.88; unimodular l.280–308; sdiff l.83; euclid-protocol l.100–269; fundamental l.151; notes l.374/385; principle l.50).
+- Además: results/sdiff_discrimination/summary.txt l.34, después de B, y results/ou_bao_desi_dr2_run.txt l.30/50–51, como anotación a mano.
+- Fuente: la página ESA citada en el punto 4, con el texto [E].
+- Comprobación:
+  - `git grep -n "H2 2026\|expected 2026\|(2026)"` junto a "Euclid" está vacío;
+  - ">20 bins", "z∈[0.9,1.8]" y "Δx∼0.39" aparecen como supuesto;
+  - stochastic l.450 y papers/sensitivity_kernel_table.md l.37 ya no dan ω_R,min distintos sin decir de dónde sale cada uno.
+
+**Everpresent Λ (punto 5).**
+- Fuente de los resultados: `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`, sección 3e y conclusiones 2, 3, 4 y 6.
+  - Criterio final (c): 0/20000 en el Modelo 2, 0/300000 y 0/200000 en el Modelo 1.
+  - BAO solo con ω_m libre deja pasar unas 10 veces más que SN.
+  - La lectura de los papers está en `everpresent/LECTURA_EVERPRESENT.md`.
+  - Esto afecta a las filas de la tabla 5 que se apoyan en D4 ("Zwane et al. ajusta tan bien como ΛCDM"): PREPRINT l.266, CLAIMS l.39, stochastic l.384, principle l.42, sdiff l.108 y unimodular l.256.
+- **La redacción de Everpresent Λ y del Axioma A2 (stochastic l.58/66: 4-volumen frente a área) sigue marcada como "decisión del autor, pendiente de lectura".** No se propone texto.
+- Correcciones factuales independientes de esa redacción:
+  - la referencia [4] gr-qc/0503057 → arXiv:0710.1675 (stochastic l.944, quantum-fluid l.194, fundamental l.194, notes l.449);
+  - el volumen y la página de Zwane et al., todavía por verificar.
+- Comprobación:
+  - `git grep -n "0503057"` está vacío;
+  - Ahmed et al. 2004 y Zwane et al. 2018 aparecen en las referencias de PREPRINT y stochastic;
+  - cada número sobre Everpresent en el texto coincide con `everpresent/resultados/rd_real.json` o con el fichero que cite EVERPRESENT_vs_DESI.md.
+
+**Resultados nuevos (punto 6).**
+- Ficheros: los de la tabla 6.
+- Fuente: R1 = `analisis_cmb/RESULTADO.md`, R2 = `analisis_cmb/oscilador/resultados/tabla.md`.
+- Hay que reescribir stochastic §7.3, l.384/386, que R2 contradice.
+- Comprobación:
+  - todo número de CMB del texto está en RESULTADO.md, `resultados/takahashi/malla/malla.json` o `oscilador/resultados/tabla.md`: 58/60, 0/60, p95 máx 0.0636/0.0514, banda de H0 [66.94, 67.85];
+  - `git grep -n "analisis_cmb/RESULTADO.md"` saca PREPRINT, CLAIMS, README y HONEST_HEADLINES;
+  - stochastic l.386 ya no dice "only mathematically viable mechanism".
+
+Fuera de los cuatro bloques, pendiente: los valores DESI externos de stochastic l.12/924 (punto 3, último bloque de filas), sin contrastar con los papers de DESI.
