@@ -29,7 +29,7 @@ Method / optics notes only: [stochastic-de-exploratory-notes](https://github.com
 Under the OU/QNM residual kernel on public DESI DR2 BAO, a stochastic residual is not required. Profile 95% CL (free \(\theta\), 7 isotropic \(\alpha\) bins, full measurement covariance):
 
 \[
-\sigma_X < 2.5\times 10^{-2}.
+\sigma_X < 2.6\times 10^{-2}.
 \]
 
 Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure Sorkin seed \(\sim 10^{-61}\) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.

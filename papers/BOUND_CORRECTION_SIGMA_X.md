@@ -7,8 +7,8 @@
 
 | | Former (working target) | Corrected (profile 95% CL) |
 |--|-------------------------|----------------------------|
-| Number | $\sigma_X < 1.5\times 10^{-4}$ | $\sigma_X < 2.5\times 10^{-2}$ |
-| Exact grid | — | $2.506\times 10^{-2}$ |
+| Number | $\sigma_X < 1.5\times 10^{-4}$ | $\sigma_X < 2.6\times 10^{-2}$ |
+| Exact | — | $2.633\times 10^{-2}$ (root of the profile; last grid node $2.506\times 10^{-2}$, previous version) |
 | Criterion | not equal to free-$\theta$ profile | $\Delta\ln\mathcal{L}\ge -1.92$ (1 dof) from profile max |
 | Data | 7 isotropic $\alpha$ | same |
 | Cov | earlier diagonal / aspirational | full Gaussian BAO $13\times13$ projected to $\alpha$ |
@@ -26,6 +26,6 @@ With only 7 compressed BAO $\alpha$ bins and free mean-reversion $\theta$, the f
 ## Downstream
 
 - Amplification gap to DESI ceiling: $\sim 10^{59}$ (was $\sim 10^{57}$).
-- Three-gate G1 headroom: $\mathrm{ceiling}/\sigma_{\mathrm{free}}\approx 2.5\times 10^{-2}/8.5\times 10^{-5}\approx 294$ (was $\sim 1.76$).
+- Three-gate G1 headroom: $\mathrm{ceiling}/\sigma_{\mathrm{free}}\approx 2.633\times 10^{-2}/8.5\times 10^{-5}\approx 310$ (was $\sim 1.76$).
 - Slip upper bound from residual ceiling is weaker (larger ceiling) — still far below Maus/Sakr if one uses the *measured* null preference rather than the upper edge alone.
 

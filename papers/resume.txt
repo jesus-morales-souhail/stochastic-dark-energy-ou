@@ -10,10 +10,10 @@ Narrative cohesion (how papers fit): see repository README.md
   Act III closure: papers/amplification-gap.md
   Gap: A0/sigma_0 ~ 1e56 (sigma_0~1e-61 → Euclid residual ~1e-5)
   Routes 1–3 scan (results/amplification_routes/VERDICT.md):
-    R1: N_eff ~ 4.4e7 (DESI) / 1e10 (Euclid)  — only amplitude card (redefine seed)
+    R1: N_eff ~ 1.4e3 (DESI) / 1e10 (Euclid)  — only amplitude card (redefine seed)
     R2: freeze gain = 1.000; rms/sigma = O(1)  — dead as amplifier alone
-    R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; BAO-safe if sigma ≲ 4e-5
-  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~1e-4 best case; O(1e2-1e3)x starved)
+    R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; all 288 jobs BAO-safe (max p95 2.1e-3)
+  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~3e-2 best case; ~1.5-7x starved)
   External lab optics: separate optics project (NOT this paper)
 Data pack (arXiv links): papers/data-pack-option0-internet.md
 
@@ -38,13 +38,13 @@ Results:
 
   OU model (H0):
     θ     = 0.001  (≈ boundary, effectively undamped)
-    σ_X   = 5 × 10⁻⁵
+    σ_X   = 5 × 10⁻⁵   (old run, diagonal cov: results/ou_bao_desi_dr2_run.txt)
     Δlogℒ vs ΛCDM = 0.00
     AIC = -50.03 | BIC = -50.14
 
   QNM model (H1):
     θ     = 0.001
-    σ_X   = 5 × 10⁻⁵
+    σ_X   = 5 × 10⁻⁵   (old run, diagonal cov)
     ω_R   = 0.00
     Δlogℒ vs ΛCDM = 0.00
     AIC = -48.03 | BIC = -48.19
@@ -52,7 +52,7 @@ Results:
 Conclusion:
 - No statistical evidence for stochastic fluctuations in the dark energy sector.
 - The BAO summary statistics are consistent with a smooth background near ΛCDM.
-- 95% CL upper limit: σ_X < 2.5 × 10⁻²
+- 95% CL upper limit: σ_X < 2.6 × 10⁻² (profile over θ, background fixed at α = 1)
 - The stochastic amplitude is driven to zero when the background is free.
   Nested CPL + (σ, θ) extensions are not preferred (ΔAIC ≈ +4).
 
@@ -80,8 +80,8 @@ Note: Systematics not fully controlled. A reanalysis with DESI DR2 (including th
 Main result:
 The stationary stochastic model (Ornstein–Uhlenbeck + QNM) is **not favored** by DESI DR2 BAO data.
 
-- When marginalizing over the background cosmology, the stochastic amplitude is consistent with zero.
-- This constitutes a **strict upper limit**, not a detection.
+- When the background (w0, wa) is left free (results/joint_w0wa_sigma), the stochastic amplitude is consistent with zero.
+- The 95% CL bound is a profile over θ with the background fixed at α = 1: an upper limit, not a detection.
 - The result supports the working hypothesis of **Late-Time Vacuum Homogeneity** at currently observable scales.
 
 Future tests:

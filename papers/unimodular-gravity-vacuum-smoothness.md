@@ -11,7 +11,7 @@
 
 ## Abstract
 
-Recent DESI DR2 BAO data establish a strict upper limit on stochastic fluctuations of the dark-energy density: $\sigma_X < 2.5\times 10^{-2}$ (95% CL) [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
+Recent DESI DR2 BAO data give a 95% CL profile upper limit (over $\theta$) on stochastic fluctuations of the dark-energy density: $\sigma_X < 2.6\times 10^{-2}$ [1]. I take this empirical fact as forcing a logical dichotomy: dark energy is either (i) a pure geometric constant with no local degrees of freedom, or (ii) a dynamical scalar field so ultralight and Hubble-frozen that it is observationally indistinguishable from a constant. I then ask: what symmetry of nature can enforce this rigidity in the presence of local quantum fluctuations of matter? I examine the two candidate symmetries — conformal (Weyl) invariance and volume-preserving diffeomorphisms (SDiff). Classical Weyl invariance is broken by the conformal anomaly, which reintroduces local vacuum fluctuations. In contrast, unimodular gravity — whose gauge group is SDiff — cancels any local vacuum fluctuation $V(x) g_{\mu\nu}$ identically through the trace-free Einstein equations. I show that the cosmological constant emerges as a global integration constant,
 
 
 $$
@@ -29,7 +29,7 @@ The $\Lambda$CDM model has been the standard framework of cosmology for decades.
 
 That expectation has not been fulfilled.
 
-When I analyse the DESI DR2 BAO data within a phenomenological Ornstein–Uhlenbeck (OU) framework, I find no evidence for stochastic fluctuations [1]. Maximum Likelihood Estimation drives the amplitude to zero:
+When I analyse the DESI DR2 BAO data within a phenomenological Ornstein–Uhlenbeck (OU) framework, I find no evidence for stochastic fluctuations [1]. The best fit drives the amplitude to zero:
 
 
 $$
@@ -37,11 +37,11 @@ $$
 $$
 
 
-and establishes a conservative upper limit:
+and the profile likelihood over $\theta$ gives the 95% CL upper limit:
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}
+\sigma_X < 2.6\times 10^{-2}
 $$
 
 
@@ -73,13 +73,13 @@ with variance $\sigma_X^2 \equiv \langle X^2 \rangle$. The DESI DR2 BAO data, co
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}
+\sigma_X < 2.6\times 10^{-2}
 $$
 
 
 **(95% CL).**
 
-This is a direct empirical statement: the dark-energy density is homogeneous at the level of the residual bound (profile 95% CL $\sigma_X<2.5\times 10^{-2}$; null preferred) across the observable universe.
+This is a direct empirical statement: the dark-energy density is homogeneous at the level of the residual bound (profile 95% CL $\sigma_X<2.6\times 10^{-2}$; null preferred) across the observable universe.
 
 ---
 
@@ -127,7 +127,7 @@ If $m_\phi \ll H_0$ (where $H_0 \sim 10^{-33}\ \text{eV}$), the friction term $3
 
 
 $$
-m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left| \frac{V'}{V}\right| M_{\mathrm{Pl}} \lesssim 10^{-2}.
+m_\phi \lesssim 10^{-5}\ \text{eV}, \qquad \left| \frac{V'}{V}\right| M_{\mathrm{Pl}} \lesssim 10^{-2}. \quad \text{[valor no reproducible; pendiente de decisión del autor]}
 $$
 
 
@@ -293,11 +293,11 @@ If Euclid DR1 detects any stochastic fluctuation in the dark-energy density abov
 
 ## 9. Conclusion
 
-I have traced the empirical limit $\sigma_X < 2.5\times 10^{-2}$ to its logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms $\mathrm{SDiff}(M)$.
+I have traced the empirical limit $\sigma_X < 2.6\times 10^{-2}$ to its logical conclusion. The only known structure that can guarantee the absolute smoothness of the vacuum in the presence of local quantum fluctuations is unimodular gravity — a theory whose gauge group is the group of volume-preserving diffeomorphisms $\mathrm{SDiff}(M)$.
 
 This conclusion does not rest on speculative models. It follows from:
 
-- the observational constraint that $\sigma_X$ is below $10^{-4}$;
+- the observational constraint that $\sigma_X$ is below $2.6\times 10^{-2}$ (95% CL);
 - the logical dichotomy that only a pure constant or a frozen field can satisfy this bound;
 - the mathematical fact that Weyl invariance is broken by the conformal anomaly, while SDiff cancels local vacuum fluctuations identically.
 

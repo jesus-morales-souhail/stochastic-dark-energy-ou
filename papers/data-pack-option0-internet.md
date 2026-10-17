@@ -10,7 +10,7 @@ I compiled this pack so that `scale-operator-experiment-map.md` and `anisotropic
 
 | Quantity | Value | Source in repo |
 |----------|-------|----------------|
-| $\sigma_X$ (95% CL upper limit) | $< 2.5\times 10^{-2}$ | `papers/resume.txt`, DESI DR2 BAO residual OU |
+| $\sigma_X$ (95% CL upper limit) | $< 2.6\times 10^{-2}$ | `papers/resume.txt`, DESI DR2 BAO residual OU |
 | Best-fit behaviour | $\sigma_X \to 0$, $\omega_R \to 0$ | MLE; $\Delta\mathrm{AIC}=+4$ vs ΛCDM for free OU |
 | Tachyonic coherent growth | Excluded ($\Delta\chi^2\sim +25$) | `papers/quantum-fluid-instabilities-desi-dr2.md` |
 | Motivational seed | $\sigma_0\sim 10^{-61}\sim 1/\sqrt{N}$, $N\sim 10^{122}$ | Bekenstein–Hawking / Sorkin (motivational, not a detection) |
@@ -80,19 +80,19 @@ This is the correct scale+operator family for $\sigma_X$ residual tests on dista
 
 ## E) Order-of-magnitude comparison (repo + internet)
 
-Using $\sigma_X \sim 10^{-4}$, $\Omega_{\mathrm{DE}}/\Omega_m\sim 2$, $f=1$:
+Using $\sigma_X = 2.6\times 10^{-2}$, $\Omega_{\mathrm{DE}}/\Omega_m\sim 2$, $f=1$:
 
 
 $$
-\lvert \eta-1 \rvert\sim \mathcal{O}\!\left(f\cdot\frac{\Omega_{\mathrm{DE}}}{\Omega_m}\cdot\sigma_X\right)\sim 2\times 10^{-4}.
+\lvert \eta-1 \rvert\sim \mathcal{O}\!\left(f\cdot\frac{\Omega_{\mathrm{DE}}}{\Omega_m}\cdot\sigma_X\right)\sim 5\times 10^{-2}.
 $$
 
 
-| Probe | Rough reach on $\lvert \eta-1 \rvert$ or $\lvert \gamma-1 \rvert$ | vs $2\times 10^{-4}$ |
+| Probe | Rough reach on $\lvert \eta-1 \rvert$ or $\lvert \gamma-1 \rvert$ | vs $5\times 10^{-2}$ |
 |-------|-----------------------------------------------|------------------------|
-| Maus et al. slip $\sigma(\gamma)\sim 0.11$ | $\mathcal{O}(0.1)$ | ~500× larger than prediction |
-| Sakr et al. forecast (const $\eta$) | $\sim 5\% = 0.05$ | ~250× larger |
-| Sakr free $z,k$ | $\gtrsim 30\%$ | still ≫ |
+| Maus et al. slip $\sigma(\gamma)\sim 0.11$ | $\mathcal{O}(0.1)$ | ~2× larger than prediction |
+| Sakr et al. forecast (const $\eta$) | $\sim 5\% = 0.05$ | ~1× (comparable) |
+| Sakr free $z,k$ | $\gtrsim 30\%$ | ~6× |
 
 **Conclusion (unchanged):** the external literature confirms Option 0. The correct operator exists and is measured or forecast; the amplitude still requires amplification before a detection story makes sense.
 

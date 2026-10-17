@@ -11,13 +11,13 @@ Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 Recent DESI DR2 data, when combined with CMB and supernovae, show a significant preference for dynamical dark energy over a cosmological constant. Within the Chevallier-Polarski-Linder (CPL) parameterization, the best-fit values are $w_0 = -0.87 \pm 0.05$, $w_a = -0.41 \pm 0.28$(2.5σ) or $w_0 = -0.785 \pm 0.047$, $w_a = -0.43 \pm 0.095$(4.2σ) depending on the dataset combination.
 
-In this note I test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. I model late-time fluctuations in $\Omega_\Lambda$ as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, I perform a Maximum Likelihood Estimation (MLE) to constrain the amplitude $\sigma_X$ of these fluctuations, assuming the CPL background is fixed to the best-fit values.
+In this note I test whether there is additional room for a stochastic component on top of this smooth dynamical evolution. I model late-time fluctuations in $\Omega_\Lambda$ as an Ornstein-Uhlenbeck (OU) process, with a quasi-normal mode (QNM) extension. Using the public DESI DR2 BAO data, I constrain the amplitude $\sigma_X$ of these fluctuations with a profile likelihood over $\theta$ (official Gaussian BAO covariance projected to $\alpha$), with the background fixed at $\alpha=1$ ($\Lambda$CDM fiducial).
 
-I find that the MLE drives the stochastic amplitude to the numerical floor: $\sigma_X \to 0$ and $\omega_R \to 0$. The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. This result places a phenomenological upper limit on the amplitude of such fluctuations:
+I find that the best fit drives the stochastic amplitude to zero: $\sigma_X \to 0$ and $\omega_R \to 0$. The data are fully consistent with a smooth CPL evolution plus instrumental noise; no stochastic component is required. The profile ($\Delta\ln\mathcal{L}=-1.92$) places a phenomenological upper limit on the amplitude of such fluctuations:
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}
+\sigma_X < 2.6\times 10^{-2}
 $$
 
 
@@ -221,7 +221,7 @@ Earlier versions of this work used an illustrative calibration with $f_{\text{ne
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}.
+\sigma_X < 2.6\times 10^{-2}.
 $$
 
 
@@ -275,7 +275,7 @@ $$
 
 modulated by the activation factor $g(z)$.
 
-I compute the likelihood using the public DESI DR2 BAO measurements (7 bins from arXiv:2503.14738, Table 1) and the standard diagonal covariance from measurement errors. The OU kernel is computed with the sensitivity kernel $S(z)$ from Appendix A.
+I compute the likelihood using the public DESI DR2 BAO measurements (7 bins from arXiv:2503.14738, Table 1); the runs in the table below use the diagonal covariance from measurement errors (old runs), while the bound of Sec. 7.1 uses the official covariance projected to $\alpha$. The OU kernel is computed with the sensitivity kernel $S(z)$ from Appendix A.
 
 ### 4.2 Results
 
@@ -284,8 +284,8 @@ Using the public DESI DR2 BAO data (arXiv:2503.14738), the Maximum Likelihood Es
 | Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | $\Delta$ AIC vs $\Lambda$CDM | $\Delta$ BIC vs $\Lambda$CDM |
 |:--------------------|:----------:|:----------------:|:-----------:|:----------------------------------------:|:-------------------------------:|:-------------------------------:|
 | $\Lambda$CDM | — | — | — | 0.00 (ref) | 0.00 (ref) | 0.00 (ref) |
-| H0: OU free MLE | 0.0010 | $5\times10^{-5}$ | 0 (fixed) | 0.00 | **+4.00** | **+3.89** |
-| H1: QNM free MLE | 0.0010 | $5\times10^{-5}$ | 0.0000 | 0.00 | **+6.00** | **+5.84** |
+| H0: OU free MLE (old run, diagonal cov) | 0.0010 | $5\times10^{-5}$ | 0 (fixed) | 0.00 | **+4.00** | **+3.89** |
+| H1: QNM free MLE (old run, diagonal cov) | 0.0010 | $5\times10^{-5}$ | 0.0000 | 0.00 | **+6.00** | **+5.84** |
 
 **Interpretation.** The optimizer drives the stochastic amplitude to the numerical floor ($\sigma_X \to 0$) and the QNM frequency to zero ($\omega_R \to 0$). Because both extended models add free parameters without improving the likelihood ($\Delta\ln L = 0$ exactly), the AIC/BIC penalty is strictly positive: $\Delta\text{AIC} = +4.00$(H0) and $+6.00$(H1) relative to $\Lambda$CDM. This confirms that criterion F4 is satisfied: the data show no preference for the stochastic extension once the Occam penalty is correctly propagated.
 
@@ -365,15 +365,15 @@ The predicted positive correlations of the OU model are completely absent, which
 
 ### 7.1 A Strict Upper Limit on Vacuum Granularity
 
-The Maximum Likelihood Estimation (MLE) drives the stochastic noise parameter to the numerical floor, yielding a conservative $95\%$ confidence level upper limit of $\sigma_X < 2.5\times 10^{-2}$. This limit applies to the specific OU/QNM kernel tested here, assuming a fixed CPL background.
+The best fit drives the stochastic noise parameter to zero, and the profile likelihood over $\theta$ ($\Delta\ln\mathcal{L}=-1.92$) gives the $95\%$ confidence level upper limit $\sigma_X < 2.6\times 10^{-2}$. This limit applies to the specific OU kernel tested here, with the background fixed at $\alpha=1$ ($\Lambda$CDM fiducial).
 
-The upper limit $\sigma_X < 2.5\times 10^{-2}$ is a conservative estimate based on the numerical floor of the MLE ($\sigma_X \approx 5 \times 10^{-5}$), multiplied by a factor of 3 to account for the flatness of the likelihood in $\sigma_X$ with only 7 bins. A formal 95% CL profile likelihood scan over $\sigma_X$ is deferred to Euclid DR1; with the current dataset, the likelihood is dominated by the optimizer's numerical floor.
+The upper limit $\sigma_X < 2.6\times 10^{-2}$ comes from a formal profile likelihood scan over $\sigma_X$ (`scripts/profile_sigma_x_desi.py`): root of $\Delta\ln\mathcal{L}=-1.92$ at $\sigma_X=2.633\times 10^{-2}$, between grid nodes; with only 7 bins the profile is flat at small $\sigma_X$ and the best fit is $\sigma_X\to 0$.
 
-The upper limit $\sigma_X < 2.5\times 10^{-2}$ implies that the dark energy density is not only fine-tuned to a specific value, but that this value is realized with extraordinary homogeneity across the observable universe. Whatever cancellation mechanism is responsible for the smallness of $\Lambda$ (whether anthropic selection, a symmetry, or a dynamical attractor), it must operate with such precision that it suppresses local fluctuations by more than four orders of magnitude relative to the background density.
+The upper limit $\sigma_X < 2.6\times 10^{-2}$ implies that the dark energy density is not only fine-tuned to a specific value, but that this value is realized with extraordinary homogeneity across the observable universe. Whatever cancellation mechanism is responsible for the smallness of $\Lambda$ (whether anthropic selection, a symmetry, or a dynamical attractor), it must operate with such precision that it suppresses local fluctuations by more than four orders of magnitude relative to the background density.
 
 ### 7.2 Implications for Models of Dark Energy
 
-The null result is consistent with models where dark energy is a smooth, deterministic field (quintessence) or a cosmological constant. It places a phenomenological constraint on models that predict additional stochastic variance: any such model must have an amplitude $\sigma_X < 2.5\times 10^{-2}$ to be compatible with DESI DR2.
+The null result is consistent with models where dark energy is a smooth, deterministic field (quintessence) or a cosmological constant. It places a phenomenological constraint on models that predict additional stochastic variance: any such model must have an amplitude $\sigma_X < 2.6\times 10^{-2}$ to be compatible with DESI DR2.
 
 I emphasize that this constraint applies specifically to the additive OU/QNM kernel tested here, assuming a fixed CPL background. The results do not rule out stochastic models that are degenerate with the background evolution or that operate on scales not probed by BAO. Future analyses that jointly fit $\{w_0, w_a, \sigma_X\}$ will be needed to resolve this degeneracy.
 
@@ -413,11 +413,11 @@ $$
 $$
 
 
-My upper bound $\sigma_X < 2.5\times 10^{-2}$ therefore implies:
+My upper bound $\sigma_X < 2.6\times 10^{-2}$ therefore implies:
 
 
 $$
-\left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (2.5\times 10^{-2}).
+\left| \frac{\Delta \alpha}{\alpha}\right| \lesssim \lvert \beta \rvert \left| \frac{V}{V'}\right| (2.6\times 10^{-2}).
 $$
 
 
@@ -467,15 +467,15 @@ This result places a phenomenological upper limit on the amplitude of such fluct
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}
+\sigma_X < 2.6\times 10^{-2}
 $$
 
 
 **(95% CL).**
 
-The upper limit translates into a constraint on the mass of a possible scalar field mediating dark energy: $m_\phi \lesssim 10^{-5}\ \text{eV}$. This is consistent with ultralight boson scenarios and with astrophysical bounds on the variation of fundamental constants ($\Delta\alpha/\alpha \lesssim 10^{-5}$ from quasar spectroscopy).
+The upper limit translates into a constraint on the mass of a possible scalar field mediating dark energy: $m_\phi \lesssim 10^{-5}\ \text{eV}$ [valor no reproducible; pendiente de decisión del autor]. This is consistent with ultralight boson scenarios and with astrophysical bounds on the variation of fundamental constants ($\Delta\alpha/\alpha \lesssim 10^{-5}$ from quasar spectroscopy).
 
-More broadly, $\sigma_X < 2.5\times 10^{-2}$ implies that any microscopic mechanism responsible for the observed value of $\Lambda$ must either strongly protect the coupling of the scalar field to the Standard Model (e.g., via shift symmetries), or operate at scales that leave an absolutely minimal cosmological imprint.
+More broadly, $\sigma_X < 2.6\times 10^{-2}$ implies that any microscopic mechanism responsible for the observed value of $\Lambda$ must either strongly protect the coupling of the scalar field to the Standard Model (e.g., via shift symmetries), or operate at scales that leave an absolutely minimal cosmological imprint.
 
 The correlation function derived in Appendix F provides a falsifiable prediction for Euclid DR1: if a stochastic component exists, the whitened BAO residuals should follow:
 
@@ -614,7 +614,7 @@ Any oscillation with $\omega_R < \omega_{R, \rm min}$ produces less than one vis
 
 ## Appendix E — Model-Dependent Interpretations of the Upper Limit
 
-The following sections provide theoretical interpretations of the phenomenological limit $\sigma_X < 2.5\times 10^{-2}$. These interpretations require additional assumptions beyond the data and should be treated as speculative.
+The following sections provide theoretical interpretations of the phenomenological limit $\sigma_X < 2.6\times 10^{-2}$. These interpretations require additional assumptions beyond the data and should be treated as speculative.
 
 ### E.1 Scalar Field Mass (Canonical Quintessence)
 
@@ -622,7 +622,7 @@ Assuming that dark energy is a canonical scalar field $\phi$ with $\rho_\Lambda 
 
 
 $$
-m_\phi \lesssim 9.45 \times 10^{-5} \text{eV}.
+m_\phi \lesssim 9.45 \times 10^{-5} \text{eV}. \quad \text{[valor no reproducible; pendiente de decisión del autor]}
 $$
 
 
@@ -862,11 +862,11 @@ $$
 $$
 
 
-Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 2.5\times 10^{-2}$ at 95% CL) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
+Combining this with the upper bound on the stochastic amplitude (Sec. 4.2, $\sigma_X < 2.6\times 10^{-2}$ at 95% CL) and using Eq. (H.3), I obtain a combined constraint on the product of the coupling and the potential slope:
 
 
 $$
-\left| \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \right| \lesssim \frac{2.7 \times 10^{-6}}{2.5\times 10^{-2}} \approx 1.8 \times 10^{-2}. \tag{H.5}
+\left| \zeta \left( \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right) \right| \lesssim \frac{2.7 \times 10^{-6}}{2.633\times 10^{-2}} \approx 1.0 \times 10^{-4}. \tag{H.5}
 $$
 
 
@@ -880,11 +880,11 @@ If the scalar field interacts with the gauge sector with a strength comparable t
 
 
 $$
-\left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.8 \times 10^{-2}.
+\left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.0 \times 10^{-4}.
 $$
 
 
-For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 55.5$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
+For an exponential potential $V(\phi) = V_0 \exp(-\lambda \phi / M_{\rm Pl})$, the above ratio is $1/\lambda$, hence $\lambda \gtrsim 9.8\times 10^{3}$. However, a scalar field with $\lambda > \sqrt{24\pi} \approx 8.7$ (or even $\lambda > 3$ in the slow-roll limit) cannot produce acceleration at the present epoch; instead it enters a tracking solution where the field energy density scales as matter or radiation, and the equation of state deviates significantly from $-1$ [2]. This scenario is therefore incompatible with DESI DR2 observations that favour a background close to $\Lambda$CDM.
 
 **Case 2: Slow-roll quintessence potential** ($\lambda \lesssim 1$)
 
@@ -892,20 +892,20 @@ For the field to reproduce the observed accelerated expansion, the potential mus
 
 
 $$
-\lvert \zeta \rvert \lesssim 1.8 \times 10^{-2}.
+\lvert \zeta \rvert \lesssim 1.0 \times 10^{-4}.
 $$
 
 
-This implies a suppression scale $M_{\rm cut} \equiv M_{\rm Pl} / \lvert \zeta \rvert \gtrsim 55 M_{\rm Pl}$, placing the new-physics scale well above the Planck scale. Such a suppression is technically unnatural and requires a protective symmetry mechanism, such as an axionic shift symmetry, to suppress quantum corrections from charged-particle loops [3].
+This implies a suppression scale $M_{\rm cut} \equiv M_{\rm Pl} / \lvert \zeta \rvert \gtrsim 9.8\times 10^{3} M_{\rm Pl}$, placing the new-physics scale well above the Planck scale. Such a suppression is technically unnatural and requires a protective symmetry mechanism, such as an axionic shift symmetry, to suppress quantum corrections from charged-particle loops [3].
 
 ### H.5 Conclusion for the Stochastic Model
 
 The cross-check of spectroscopic (ESPRESSO) and cosmological (DESI DR2) data shows that the stochastic dark-energy model can survive only in two specific niches:
 
 1. The scalar field is trapped in a local minimum or false vacuum ($V' \to 0$), which kills the variation of fundamental constants but reduces the model to a pure cosmological constant, in tension with the dynamical evidence from DESI DR2.
-2. The coupling to the electromagnetic sector is strongly suppressed ($\lvert \zeta \rvert \lesssim 10^{-2}$), shifting the problem to the need for a screening mechanism (such as the chameleon or symmetron effect) that decouples the field in high-density environments like the quasar absorption systems probed by ESPRESSO.
+2. The coupling to the electromagnetic sector is strongly suppressed ($\lvert \zeta \rvert \lesssim 10^{-4}$), shifting the problem to the need for a screening mechanism (such as the chameleon or symmetron effect) that decouples the field in high-density environments like the quasar absorption systems probed by ESPRESSO.
 
-In either case, the combined limits exclude a free-rolling quintessence field with natural coupling as the origin of the proposed stochastic fluctuations. This result reinforces the interpretation of the bound $\sigma_X < 2.5\times 10^{-2}$ as a robust phenomenological constraint, rather than a window to new fundamental physics.
+In either case, the combined limits exclude a free-rolling quintessence field with natural coupling as the origin of the proposed stochastic fluctuations. This result reinforces the interpretation of the bound $\sigma_X < 2.6\times 10^{-2}$ as a robust phenomenological constraint, rather than a window to new fundamental physics.
 
 **References for Appendix H:**
 
@@ -921,7 +921,7 @@ Section 4's null result fixes the background to $\alpha = 1$, equivalent to $w_0
 
 **(a)** Background fixed at $w_0 = -1$, $w_a = 0$ [`results/joint_w0wa_sigma/`, model `ou_fixed_bg`]: $\sigma_X \to 4 \times 10^{-10}$, $\theta = 1.90$ (unconstrained at $\sigma_X \to 0$), $\ln L = 24.8996$.
 
-**(b)** Background fixed at $w_0 = -0.87$, $w_a = -0.41$ [the quoted CPL best fit]: the null result disappears. $\theta = 0.146$, $\sigma_X \approx 9.2 \times 10^{-3}$ — nearly 200 times larger than the reported limit, and of the same order as the DR1-era calibration amplitude. The residuals show the same sign (systematic, not noise), and the OU fit absorbs them readily.
+**(b)** Background fixed at $w_0 = -0.87$, $w_a = -0.41$ [the quoted CPL best fit]: the null result disappears. $\theta = 0.146$, $\sigma_X \approx 9.2 \times 10^{-3}$ — about 0.35 of the 95% CL limit $2.6\times 10^{-2}$ (≈180× the $5\times 10^{-5}$ floor of the old diagonal run), and of the same order as the DR1-era calibration amplitude. The residuals show the same sign (systematic, not noise), and the OU fit absorbs them readily.
 
 **(c)** Joint fit $\{w_0, w_a, \theta, \sigma_X\}$ free: with only 7 points and 4 parameters, the fit is weakly determined — treat it as qualitative, not as a measurement. The optimum falls near $w_0 \approx -1.001$, $w_a \approx +0.014$ (nearly pure $\Lambda$CDM), with $\sigma_X \approx 5 \times 10^{-10}$ — $\sigma_X \to 0$ as in (a) — and a log-likelihood improvement of only $(+3 \times 10^{-13})$ over the 2-parameter fit, not significant for 2 extra degrees of freedom.
 

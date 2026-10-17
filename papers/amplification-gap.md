@@ -34,23 +34,23 @@ Here I fix that gap as a quantitative problem and audit candidate amplifiers. I 
 | Quantity | Value | Role |
 |----------|-------|------|
 | Sorkin / Bekenstein seed | $\sigma_0 \sim 1.18\times 10^{-61}$ ($H_0=67.4$) | Motivational UV amplitude (holographic $d=2$) |
-| DESI DR2 BAO residual bound | $\sigma_X < 2.5\times 10^{-2}$ (95% CL) | **Measured** effective late-time amplitude (OU kernel) |
+| DESI DR2 BAO residual bound | $\sigma_X < 2.6\times 10^{-2}$ (95% CL) | **Measured** effective late-time amplitude (OU kernel) |
 | Euclid-scale residual target | $\sim 10^{-5}$ | **Aspirational** path-integrated residual of interest |
 | Minimum kick for detection (small $\theta$) | $A_0^{\min}\sim 10^{-5}$ | From $\sigma_{\rm res}=A_0 e^{-\theta\Delta x}$ |
 
 ### 2.1 Two gaps (do not mix labels)
 
-These are **different questions**. The answers differ by about **one decade**. I never paste “$\sim 10^{56}$” onto a calculation that used the DESI ceiling.
+These are **different questions**. The answers differ by about **three decades** ($10^{56}$ vs $10^{59}$). I never paste “$\sim 10^{56}$” onto a calculation that used the DESI ceiling.
 
 | Gap | Definition | Exact OOM ($\sigma_0=1.18\times 10^{-61}$) | Soft $r$ needed ($e^{2r}\sigma_0=\sigma_{\mathrm{tgt}}$) |
 |:----|:-----------|:---------------------------------------------|:-----------------------------------------------------------|
 | **$G_{\mathrm{Euclid}}$** | $10^{-5}/\sigma_0$ | $\mathbf{8.47\times 10^{55}\approx 10^{56}}$ | $r\approx 64.4$ |
-| **$G_{\mathrm{DESI}}$** | $2.5\times 10^{-2}/\sigma_0$ | $\mathbf{1.27\times 10^{59}\approx 10^{59}}$ | $r\approx 65.7$ |
+| **$G_{\mathrm{DESI}}$** | $2.6\times 10^{-2}/\sigma_0$ | $\mathbf{2.24\times 10^{59}\approx 10^{59}}$ | $r\approx 68.3$ |
 
 **Label rule (mandatory for me):**
 
 - “$\sim 10^{56}$” **only** for the **Euclid-scale target** $\sigma\sim 10^{-5}$ (or $A_0^{\min}\sim 10^{-5}$).
-- “$\sim 10^{59}$” for the **measured DESI ceiling** $\sigma_X=2.5\times 10^{-2}$.
+- “$\sim 10^{59}$” for the **measured DESI ceiling** $\sigma_X=2.6\times 10^{-2}$.
 - Density form of the same ratio: $\lvert\delta\rho\rvert_{\max}/(\sigma_0\rho_\Lambda)=\sigma_{\mathrm{tgt}}/\sigma_0$ — so the DESI density gap is $\sim 10^{59}$, not $10^{56}$.
 
 **What DESI actually measured** is a **null residual bound**, not a new $\rho_\Lambda$. Mean vacuum density $\rho_\Lambda\sim\Omega_{\Lambda 0}\rho_{\mathrm{crit}}$ comes from standard cosmology (e.g. Planck-class $H_0,\Omega_\Lambda$); this corpus constrains the **fractional residual amplitude** $\sigma_X$ on top of that background.
@@ -111,7 +111,7 @@ Inflation is the **only** standard paradigm known to convert sub-horizon quantum
 | Gain $\sim 10^{56}$ from $\sigma_0$ alone | **Fails** — $e^{60}\sim 10^{26}$ is ~30 decades short of $10^{56}$ if one insists on starting from $\sigma_0$ |
 | Use $H/M_{\mathrm{Pl}}\sim 10^{-5}$ as the seed | **Changes the microphysical story** — no longer pure late-time Sorkin Poisson counting |
 | Late-time “horizon exit” analogue for a **homogeneous DE residual** $X(x)$ | **Not derived** — inflation applies to **perturbation modes** freezing outside the Hubble radius, not automatically to a background OU residual on $x=\ln a$ |
-| Compatibility with BAO smoothness | Any large residual after freeze-out must still satisfy $\sigma_X < 2.5\times 10^{-2}$ (95% CL) |
+| Compatibility with BAO smoothness | Any large residual after freeze-out must still satisfy $\sigma_X < 2.6\times 10^{-2}$ (95% CL) |
 
 **Honest statement:**
 (d) is worth a **separate theory paper** only if one (i) redefines the seed, (ii) derives a late-time freeze-out map for the DE residual, and (iii) re-runs BAO constraints on that map. It is **not** a patch that rescues $\sigma_0\sim 10^{-61}$ inside the current OU likelihood.
@@ -188,7 +188,7 @@ Pure Poisson counting $\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}$:
 
 | Target residual | $\sigma_{0,\mathrm{eff}}$ | $N_{\mathrm{eff}}$ required | vs $N_{\mathrm{BH}}\sim 10^{122}$ |
 |-----------------|-----------------------------|-------------------------------|-------------------------------------|
-| DESI 95% ceiling | $2.5\times 10^{-2}$ | $\mathbf{4.44\times 10^{7}}$ | smaller by $\sim 10^{114}$ |
+| DESI 95% ceiling | $2.6\times 10^{-2}$ | $\mathbf{1.44\times 10^{3}}$ | smaller by $\sim 10^{119}$ |
 | Intermediate window | $10^{-4}$ | $1.00\times 10^{8}$ | $\sim 10^{114}$ |
 | Euclid-scale residual | $10^{-5}$ | $\mathbf{1.00\times 10^{10}}$ | smaller by $\sim 10^{112}$ |
 
@@ -196,7 +196,7 @@ Implied local scale if $N_{\mathrm{eff}}=N_{\mathrm{BH}}(L/R_H)^p$ (order-of-mag
 
 | Target | $p=2$ (area) $L$ | $p=3$ (volume) $L$ | $p=4$(4-vol) $L$ |
 |--------|----------------------|------------------------|------------------------|
-| DESI $N_{\mathrm{eff}}\sim 4.4\times 10^{7}$ | $\sim 10^{-31} \mathrm{m}$ | $\sim 10^{-12} \mathrm{m}$ | $\sim\mathrm{mm}$ |
+| DESI $N_{\mathrm{eff}}\sim 1.4\times 10^{3}$ | $\sim 5\times 10^{-34} \mathrm{m}$ | $\sim 3\times 10^{-14} \mathrm{m}$ | $\sim 0.3\,\mathrm{mm}$ |
 | Euclid $N_{\mathrm{eff}}\sim 10^{10}$ | $\sim 10^{-30} \mathrm{m}$ | $\sim 10^{-11} \mathrm{m}$ | $\sim\mathrm{cm}$ |
 
 **Verdict R1:** The **only** card that reaches DESI/Euclid residual *amplitudes* without linear gain. **Price:** abandon global horizon counting; justify a meso-scale causal-set / correlation volume. That is a **new theory claim**, not a free amplification on $\sigma_0\sim 10^{-61}$.
@@ -224,12 +224,11 @@ Potential $V=\tfrac14 a X^4-\tfrac12 b X^2$, $a\in\{1,10\}$, $b\in[10^{-6},0.1]$
 | Linearized growth ceiling $e^{b\Delta x}$ at $b_{\max}=0.1$ | $\approx 1.11$ (scan not in deep-avalanche regime) |
 | Jobs with $\mathrm{p95}\ge 10^{-5}$ and $\sigma\le 10^{-8}$ | **0 / 288** |
 | Jobs with $\mathrm{p95}\ge 10^{-5}$ and $\sigma < 10^{-6}$ | **0 / 288** |
-| BAO-safe ($\mathrm{p95}<2.5\times 10^{-2}$) | **216 / 288** |
-| BAO-unsafe ($\mathrm{p95}\ge 2.5\times 10^{-2}$) | **72 / 288** — **all** have $\sigma\gtrsim 1.2\times 10^{-4}$ |
-| Euclid window $10^{-5}\le\mathrm{p95}<2.5\times 10^{-2}$ | 72 jobs — residual still $\sim\sigma$, not seed-triggered |
+| BAO-safe ($\mathrm{p95}<2.6\times 10^{-2}$) | **288 / 288** |
+| BAO-unsafe ($\mathrm{p95}\ge 2.6\times 10^{-2}$) | **0 / 288** (max p95 $=2.1\times 10^{-3}$) |
+| Euclid window $10^{-5}\le\mathrm{p95}<2.6\times 10^{-2}$ | 144 jobs — residual still $\sim\sigma$, not seed-triggered |
 
-**BAO-safe rule of thumb in this scan:** keep drive noise $\sigma\lesssim 4\times 10^{-5}$ (p95 stays below DESI ceiling for all $ (a,b)$ tested).
-**BAO-unsafe:** $\sigma\gtrsim 1.2\times 10^{-4}$ → p95 exceeds DESI for **every** $ (a,b)$.
+**BAO-safe in this scan:** the whole grid ($\sigma\le 10^{-3}$) keeps p95 below the DESI ceiling for all $ (a,b)$ tested.
 
 **Verdict R3:** In the soft-potential, late-$\Delta x=\mathcal{O}(1)$ window I scanned here, the “avalanche” **does not** convert a tiny seed into a DESI/Euclid residual. Gain remains $\mathcal{O}(1)$. Large residuals require **large $\sigma$** (renaming free $A_0$) or a **new** regime $b \Delta x\gg 1$ / multi-e-fold threshold dynamics **not** present in this grid — that would be a separate theory paper, not a free amplification inside the present corpus.
 

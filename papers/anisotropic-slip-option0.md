@@ -11,7 +11,7 @@ One-page research note (literature + order-of-magnitude) — not a Boltzmann imp
 The BAO / OU pipeline in this repository constrains background residual amplitude only:
 
 
-$\sigma_X < 2.5\times 10^{-2}$,
+$\sigma_X < 2.6\times 10^{-2}$,
 
 
 from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not compute $\Phi$, $\Psi$, or the gravitational slip $\eta=\Phi/\Psi$.
@@ -22,7 +22,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not c
 2. Can they be compared, even roughly, to $\sigma_X$ if a fraction $f$ of the noise is anisotropic?
 3. Is the anisotropic channel a shortcut around the amplification problem already discussed in the desqueezing note?
 
-**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable — but with $\sigma_X\sim 10^{-4}$ it inherits the same amplitude problem as the isotropic residual. It is an additional channel that turns on with amplification, not free amplification.
+**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable — but with $\sigma_X\lesssim 2.6\times 10^{-2}$ it inherits the same amplitude problem as the isotropic residual. It is an additional channel that turns on with amplification, not free amplification.
 
 ---
 
@@ -115,7 +115,7 @@ $$
 - Confusing the two was the earlier table error: a slip $\gamma\sim 1.17$ is near GR’s $1.0$; a growth index $\gamma\sim 1.17$ would be a catastrophe. Once the definition is read, the number is internally consistent.
 
 **For this Option 0 note:** this is better than a random growth-index: it is a published DESI-era slip constraint of the type I care about (RSD + lensing).
-With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, far above the $\sim 10^{-4}$ scale of the $f=1$, $\sigma_X\sim 10^{-4}$ estimate below.
+With $\sigma(\gamma)\sim 0.11$, current sensitivity to $\lvert \eta-1 \rvert$ (or $\lvert \gamma-1 \rvert$) is still $\mathcal{O}(0.1)$, far above the $\sim 3\times 10^{-2}$ scale of the $f=1$, $\sigma_X=2.6\times 10^{-2}$ estimate below.
 
 ### 3.3 Forecasts on slip $\eta$ (or equivalent $\gamma=\Phi/\Psi$)
 
@@ -142,30 +142,30 @@ $$
 $$
 
 
-**Machine check (best case $\varepsilon=1$, $\sigma_X=2.5\times 10^{-2}$, $\delta_m=1$):**
+**Machine check (best case $\varepsilon=1$, $\sigma_X=2.633\times 10^{-2}$, $\delta_m=1$):**
 
 | $z$ | $\rho_X/\rho_m$ | max $\|\gamma-1\|$ | gap vs Maus $\sim 0.17$ | gap vs Sakr floor $\sim 0.05$ |
 |-------|-------------------|----------------------|---------------------------|--------------------------------|
-| 0.5 | 0.644 | $1.93\times 10^{-4}$ | $\sim 880\times$ | $\sim 260\times$ |
-| 1.0 | 0.272 | $8.16\times 10^{-5}$ | $\sim 2\times 10^{3}$ | $\sim 610\times$ |
-| 1.5 | 0.139 | $4.18\times 10^{-5}$ | $\sim 4\times 10^{3}$ | $\sim 1.2\times 10^{3}$ |
+| 0.5 | 0.644 | $3.39\times 10^{-2}$ | $\sim 5.0\times$ | $\sim 1.5\times$ |
+| 1.0 | 0.272 | $1.43\times 10^{-2}$ | $\sim 12\times$ | $\sim 3.5\times$ |
+| 1.5 | 0.139 | $7.33\times 10^{-3}$ | $\sim 23\times$ | $\sim 6.8\times$ |
 
 Compare:
 
-| Instrument / status | Rough sensitivity to $\eta-1$ | vs $\sim 10^{-4}$ (best case) |
+| Instrument / status | Rough sensitivity to $\eta-1$ | vs $\sim 3\times 10^{-2}$ (best case) |
 |---------------------|----------------------------------|----------------------------------|
 | Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **far above** prediction |
-| Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **still above** by $\sim 10^{2}$–$10^{3}$ |
+| Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **still above** by $\sim 0.9$–$1.5\times$ |
 
 **Interpretation.** Even the most optimistic anisotropic fraction does not make the gap visible at current DESI precision, nor automatically at Euclid, unless there is amplification of the bare residual amplitude (or a shear sector decoupled from the BAO-bounded isotropic $\sigma_X$).
 
 That word — amplification — is the same one that appears in amplification (`amplification-gap.md`) when mapping Sorkin-scale seeds ($\sim 10^{-61}$) up to BAO-relevant $\sigma_X$ (factors of order $A_0/\sigma_0\sim 10^{56}$). The anisotropic channel does not evade that problem; it inherits it.
 
-| $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=2.5\times 10^{-2}$ |
+| $\varepsilon$ | $\|\gamma-1\|$ at $z=0.5$, $\sigma_X=2.633\times 10^{-2}$ |
 |-----------------|------------------------------------------------------------------|
-| 1 | $1.93\times 10^{-4}$ |
-| 0.1 | $1.93\times 10^{-5}$ |
-| 0.01 | $1.93\times 10^{-6}$ |
+| 1 | $3.39\times 10^{-2}$ |
+| 0.1 | $3.39\times 10^{-3}$ |
+| 0.01 | $3.39\times 10^{-4}$ |
 
 ---
 
@@ -174,7 +174,7 @@ That word — amplification — is the same one that appears in amplification (`
 **Does conclude:**
 
 1. DESI BAO residual bounds ($\sigma_X$) do not by themselves kill an anisotropic gap — they bound a different operator (isotropic residual covariance on distances).
-2. Published growth/MG analyses with DESI-like data are GR-compatible at the $\mathcal{O}(0.1)$ level, which is still too coarse to see $\lvert \eta-1 \rvert\sim 10^{-4}$.
+2. Published growth/MG analyses with DESI-like data are GR-compatible at the $\mathcal{O}(0.1)$ level, which is still too coarse to see $\lvert \eta-1 \rvert\sim 3\times 10^{-2}$.
 3. $\eta$ remains the conceptually correct crack to watch if a large amplification of vacuum residual ever becomes physical.
 4. I do not build homemade Boltzmann codes (Option 1) as the next step. If code is needed later: hi_class / MGCAMB / EFTCAMB (Option 2), with a pre-specified target amplitude from the table above.
 
@@ -190,7 +190,7 @@ That word — amplification — is the same one that appears in amplification (`
 
 - [ ] Open the DESI DR2 dark-energy review section on $\eta$/$\gamma$/ RSD+lensing; copy exact definitions and tables.
 - [ ] For each MG/growth paper: write one line “parameter = …, dataset = …, GR limit = …, $n\sigma$= …”.
-- [ ] Fill the $f$ table with my own $\sigma_X^{\mathrm{eff}}$ (use $2.5\times 10^{-2}$ and $5\times 10^{-5}$ as bookends from `resume.txt`).
+- [ ] Fill the $f$ table with my own $\sigma_X^{\mathrm{eff}}$ (use $2.6\times 10^{-2}$ and $\sigma_X\to 0$, the profile best fit, as bookends; `results/profile_sigma_x/profile_sigma_x.json`).
 - [ ] Decision gate: if no path to $\lvert \eta-1 \rvert\gtrsim 10^{-2}$ without huge $A_0$, pause Boltzmann work; focus on amplification physics (desqueezing / open systems / non-Sorkin seeds).
 - [ ] If a path exists (e.g. large $f$+ amplification model), only then open hi_class or MGCAMB with a single anisotropic-stress parameter and DESI lensing+clustering likelihoods already in the community.
 

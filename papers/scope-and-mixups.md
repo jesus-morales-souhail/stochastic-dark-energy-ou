@@ -28,7 +28,7 @@ The number I report is the residual amplitude \(\sigma_X\) in that second equati
 
 
 $$
-\sigma_X < 2.5\times 10^{-2}\quad\text{(95\% CL)}.
+\sigma_X < 2.6\times 10^{-2}\quad\text{(95\% CL)}.
 $$
 
 
@@ -46,7 +46,7 @@ The tachyonic rank-1 test is a *different* covariance (\(C^{\mathrm{meas}}+\math
 
 | Number | What it is |
 |:-------|:-----------|
-| \(\sigma_X < 2.5\times 10^{-2}\) | Residual amplitude ceiling on DESI BAO \(\alpha\) |
+| \(\sigma_X < 2.6\times 10^{-2}\) | Residual amplitude ceiling on DESI BAO \(\alpha\) |
 | \(\omega_b \approx 0.022\) | Physical baryon density from BBN/CMB |
 | \(\sigma_{\mathrm{free}} \approx 8.5\times 10^{-5}\) | Counting amplitude if \(\ell_\ast=R_{\mathrm{nl}}\), \(d=3\) |
 | \(\sigma_0 \sim 10^{-61}\) | Motivational Sorkin / holographic seed |
@@ -55,7 +55,7 @@ The tachyonic rank-1 test is a *different* covariance (\(C^{\mathrm{meas}}+\math
 
 \(\theta\) in the OU is mean reversion of \(X\) in \(\ln a\). It is not the BAO wiggle damping scale, not a Jeans wavenumber, and not the tachyonic \(t_c\).
 
-Baryonic feedback, WHIM, clusters, kSZ matter for large-scale structure and systematics. They are real work. They are not the residual \(\sigma_X\) object. In particular, the ceiling \(2.5\times 10^{-2}\) is **not** an invitation to hunt “baryons at amplitude 0.025”; \(\omega_b\approx 0.022\) is a different constant.
+Baryonic feedback, WHIM, clusters, kSZ matter for large-scale structure and systematics. They are real work. They are not the residual \(\sigma_X\) object. In particular, the ceiling \(2.6\times 10^{-2}\) is **not** an invitation to hunt “baryons at amplitude 0.026”; \(\omega_b\approx 0.022\) is a different constant.
 
 ---
 

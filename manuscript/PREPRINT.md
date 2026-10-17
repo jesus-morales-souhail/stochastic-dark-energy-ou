@@ -15,17 +15,17 @@
 
 ## Abstract
 
-I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statistics require a stationary stochastic component in the late-time dark-energy sector, on top of a smooth background. Fluctuations are modelled as an Ornstein–Uhlenbeck (OU) process in logarithmic scale factor $x=\ln a$, with a quasi-normal-mode (QNM) oscillatory extension. Using a Gaussian likelihood with an additive residual covariance kernel, maximum-likelihood estimation drives the stochastic amplitude to the numerical floor. The working 95% confidence upper limit is
+I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statistics require a stationary stochastic component in the late-time dark-energy sector, on top of a smooth background. Fluctuations are modelled as an Ornstein–Uhlenbeck (OU) process in logarithmic scale factor $x=\ln a$, with a quasi-normal-mode (QNM) oscillatory extension. Using a Gaussian likelihood with an additive residual covariance kernel, the best fit drives the stochastic amplitude to zero, and the profile likelihood over $\theta$ ($\Delta\ln\mathcal{L}=-1.92$, full measurement covariance) gives the 95% confidence upper limit
 
-$$\sigma_X < 2.5\times 10^{-2}$$
+$$\sigma_X < 2.6\times 10^{-2}$$
 
 under the stated phenomenological kernel and public BAO summary statistics (official Gaussian BAO covariance projected to isotropic α in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
 
 Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$).
 
-I then quantify an amplification bottleneck: a Sorkin–Bekenstein Poisson seed $\sigma_0\sim 10^{-61}$ lies $\sim 10^{56}$ below Euclid-scale residual amplitudes ($\sim 10^{-5}$) and $\sim 10^{59}$ below the DESI residual ceiling measured here ($2.5\times 10^{-2}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a local effective count $N_{\mathrm{eff}}\sim 4\times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
+I then quantify an amplification bottleneck: a Sorkin–Bekenstein Poisson seed $\sigma_0\sim 10^{-61}$ lies $\sim 10^{56}$ below Euclid-scale residual amplitudes ($\sim 10^{-5}$) and $\sim 10^{59}$ below the DESI residual ceiling measured here ($2.6\times 10^{-2}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a local effective count $N_{\mathrm{eff}}\sim 4\times 10^{7}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
 
-Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, but inherits the same amplitude starvation: even full anisotropy of the BAO-bounded residual gives $\lvert\gamma-1\rvert\sim 10^{-4}$, of order $10^{2}$–$10^{3}$ below current and forecast floors.
+Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, but inherits the same amplitude starvation: even full anisotropy of the BAO-bounded residual gives $\lvert\gamma-1\rvert\sim 3\times 10^{-2}$, of order $1.5$–$7\times$ below current and forecast floors.
 
 I claim limits, exclusions, and a map of open hypotheses—not a detection of vacuum discreteness or a new dark-energy fluid.
 
@@ -141,14 +141,14 @@ Under fixed smooth background and public BAO summary statistics, the MLE drives 
 
 | Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | AIC | BIC |
 |:------|:-----------|:-------------|:-------------|:-------------------------------------------|:----|:----|
-| OU (H0) | $0.001$ (boundary) | $5\times 10^{-5}$ | — | $0.00$ | $-50.03$ | $-50.14$ |
-| QNM (H1) | $0.001$ | $5\times 10^{-5}$ | $0.00$ | $0.00$ | $-48.03$ | $-48.19$ |
+| OU (H0; old run, diagonal cov) | $0.001$ (boundary) | $5\times 10^{-5}$ | — | $0.00$ | $-50.03$ | $-50.14$ |
+| QNM (H1; old run, diagonal cov) | $0.001$ | $5\times 10^{-5}$ | $0.00$ | $0.00$ | $-48.03$ | $-48.19$ |
 
 The data do not require a stationary stochastic residual. The preferred stochastic amplitude is consistent with zero within the resolution of the likelihood surface; reported floor values reflect optimizer bounds, not a detection.
 
 ### 3.2 Working upper limit
 
-From the residual analysis (profile / likelihood ratio under the OU kernel as implemented in the public pipeline): $\sigma_X < 2.5\times 10^{-2}$ (95% CL).
+From the residual analysis (profile / likelihood ratio under the OU kernel as implemented in the public pipeline): $\sigma_X < 2.6\times 10^{-2}$ (95% CL).
 
 
 This is an upper limit on an effective residual amplitude, not a measurement of a Planck-scale seed.
@@ -188,12 +188,12 @@ This exclusion is logically independent of the stationary OU bound: the covarian
 | Quantity | Value |
 |:---------|:------|
 | Motivational UV seed (Sorkin / Bekenstein) | $\sigma_0\approx 1.18\times 10^{-61}$ ($H_0=67.4$) |
-| DESI residual bound (this work, measured) | $\sigma_X<2.5\times 10^{-2}$ (95% CL)|
+| DESI residual bound (this work, measured) | $\sigma_X<2.6\times 10^{-2}$ (95% CL)|
 | Euclid-scale residual of interest (aspirational) | $\sim 10^{-5}$ |
 | $G_{\mathrm{Euclid}}=10^{-5}/\sigma_0$ | $8.5\times 10^{55}\approx 10^{56}$ |
-| $G_{\mathrm{DESI}}=2.5\times 10^{-2}/\sigma_0$ | $1.27\times 10^{59}\approx 10^{59}$ |
+| $G_{\mathrm{DESI}}=2.6\times 10^{-2}/\sigma_0$ | $2.24\times 10^{59}\approx 10^{59}$ |
 
-The headline “$\sim 10^{56}$” always means the **Euclid-scale** target. Using the DESI ceiling in a density ratio and labelling it $10^{56}$ is incorrect by a factor $\sim 15$. Both gaps remain unbridgeable by soft linear amplifiers ($r\sim 64$–$66$).
+The headline “$\sim 10^{56}$” always means the **Euclid-scale** target. Using the DESI ceiling in a density ratio and labelling it $10^{56}$ is incorrect by a factor $\sim 2\times 10^{3}$. Both gaps remain unbridgeable by soft linear amplifiers ($r\sim 64$–$68$).
 
 DESI constrains the **effective** residual amplitude after any amplification—not $\sigma_0$, and not a new value of $\rho_\Lambda$. Without a physical map $\sigma_0\to A_0$, “Euclid will see vacuum noise” is not a theorem of this analysis.
 
@@ -211,15 +211,15 @@ DESI constrains the **effective** residual amplitude after any amplification—n
 
 | Route | Idea | Numerical verdict |
 |:------|:-----|:------------------|
-| **1. Local $N_{\mathrm{eff}}$** | $\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}$, $N_{\mathrm{eff}}\ll N_{\mathrm{BH}}$ | $N_{\mathrm{eff}}\sim 4.44\times 10^{7}$ (DESI), $1.00\times 10^{10}$ (Euclid). Only amplitude card—redefines the seed. |
+| **1. Local $N_{\mathrm{eff}}$** | $\sigma_{0,\mathrm{eff}}=1/\sqrt{N_{\mathrm{eff}}}$, $N_{\mathrm{eff}}\ll N_{\mathrm{BH}}$ | $N_{\mathrm{eff}}\sim 1.44\times 10^{3}$ (DESI), $1.00\times 10^{10}$ (Euclid). Only amplitude card—redefines the seed. |
 | **2. Late freeze-out** | $\theta\to 0$ after late exit, $\Delta x\sim\mathcal{O}(1)$ | Freeze/restore gain $=1.000$; $\mathrm{rms}/\sigma=\mathcal{O}(1)$. Dead as amplifier alone. |
-| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma\sim 2$; 0/288 jobs with $\mathrm{p95}\ge 10^{-5}$ and $\sigma\le 10^{-8}$. BAO-safe if $\sigma\lesssim 4\times 10^{-5}$. No free gain. |
+| **3. Soft avalanche** | double-well Langevin trigger | Gain $\mathrm{p95}/\sigma\sim 2$; 0/288 jobs with $\mathrm{p95}\ge 10^{-5}$ and $\sigma\le 10^{-8}$. All 288 jobs BAO-safe (max p95 $=2.1\times 10^{-3}$). No free gain. |
 
 Full tables: [`results/amplification_routes/VERDICT.md`](../results/amplification_routes/VERDICT.md) and [`papers/amplification-gap.md`](../papers/amplification-gap.md) §6.3.
 
 ### 5.4 Claim statement (amplification)
 
-3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.5\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
+3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.6\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
 
 ---
 
@@ -239,13 +239,13 @@ $$
 $$
 
 
-with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual. With $\sigma_X=2.5\times 10^{-2}$, $\varepsilon=1$, $\delta_m=1$:
+with $\varepsilon\in[0,1]$ the anisotropic fraction of the residual. With $\sigma_X=2.633\times 10^{-2}$, $\varepsilon=1$, $\delta_m=1$:
 
 | $z$ | max $\lvert\gamma-1\rvert$ | vs Maus $\lvert\gamma-1\rvert\sim 0.17$ | vs forecast floor $\sim 0.05$ |
 |:------|:-----------------------------|:------------------------------------------|:--------------------------------|
-| 0.5 | $1.93\times 10^{-4}$ | $\sim 880\times$ short | $\sim 260\times$ short |
-| 1.0 | $8.16\times 10^{-5}$ | $\sim 2\times 10^{3}$ short | $\sim 610\times$ short |
-| 1.5 | $4.18\times 10^{-5}$ | $\sim 4\times 10^{3}$ short | $\sim 1.2\times 10^{3}$ short |
+| 0.5 | $3.39\times 10^{-2}$ | $\sim 5.0\times$ short | $\sim 1.5\times$ short |
+| 1.0 | $1.43\times 10^{-2}$ | $\sim 12\times$ short | $\sim 3.5\times$ short |
+| 1.5 | $7.33\times 10^{-3}$ | $\sim 23\times$ short | $\sim 6.8\times$ short |
 
 References: Maus et al., arXiv:2505.20656; Sakr et al., arXiv:2501.07477; runnable map: [`scripts/slip_bridge.py`](../scripts/slip_bridge.py).
 
@@ -259,7 +259,7 @@ I do not implement a homemade Boltzmann hierarchy. Future work, if amplitudes be
 
 ## 7. Limitations
 
-1. **Summary statistics:** baseline residual analysis uses published BAO $\alpha$ and diagonal errors. Full DESI covariance matrices may change the numerical factor in $\sigma_X$ while preserving the null preference if residuals remain consistent with noise.
+1. **Summary statistics:** baseline residual analysis uses published BAO $\alpha$ with the official Gaussian BAO covariance projected to $\alpha$ (block-diagonal across bins). Cross-bin covariances, if released, may change the numerical factor in $\sigma_X$ while preserving the null preference if residuals remain consistent with noise.
 2. **Kernel dependence:** bounds are for the OU/QNM residual kernels stated; other residual models need their own covariance and MLE.
 3. **Background degeneracy:** with only seven BAO bins, flexible $w(z)$ can absorb residual variance (Section 3.3). Multi-probe fits are a separate analysis.
 4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.
@@ -316,9 +316,9 @@ python scripts/slip_bridge.py
 
 ## 9. Conclusions
 
-1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<2.5\times 10^{-2}$ (95% CL)under the stated kernel.
+1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<2.6\times 10^{-2}$ (95% CL)under the stated kernel.
 2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +25$).
-3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.5\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
+3. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.6\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
 4. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and an amplitude-starved channel in practice.
 5. **Scientific posture:** the strength of this programme is what it closes—limits, exclusions, and an honest map of open theory prices—not a promised detection.
 

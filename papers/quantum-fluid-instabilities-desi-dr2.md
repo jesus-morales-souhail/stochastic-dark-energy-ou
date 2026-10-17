@@ -9,13 +9,13 @@ Repository: https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 
 ## Abstract
 
-Recent DESI DR2 BAO data show no evidence for a stationary stochastic residual on top of a smooth background. Under the free-$\theta$ OU profile on seven isotropic $\alpha$ bins with full measurement covariance, the 95% CL upper limit is $\sigma_X < 2.5\times 10^{-2}$ (exact grid $2.506\times 10^{-2}$); the best fit is $\sigma_X\to 0$. Here I test a different hypothesis: a dark-energy fluid with negative effective mass ($m^{\ast}<0$) and quartic self-interaction. From a modified Gross–Pitaevskii equation I derive the Bogoliubov growth rate $\Gamma_{\max}=g|\psi_0|^2/\hbar\equiv 1/t_c$ and the induced rank-1 residual covariance. An MLE on the real DESI DR2 isotropic $\alpha$ vector shows that the likelihood peaks at no growth ($t_c\to\infty$, $\Delta\ln\mathcal{L}\to 0$). When growth is large enough that the rank-1 term matters, the model is excluded at $\Delta\ln\mathcal{L}\approx -12.7$ ($\Delta\chi^{2}\approx +25$) for a representative active $t_c$. A globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals under this pipeline.
+Recent DESI DR2 BAO data show no evidence for a stationary stochastic residual on top of a smooth background. Under the free-$\theta$ OU profile on seven isotropic $\alpha$ bins with full measurement covariance, the 95% CL upper limit is $\sigma_X < 2.6\times 10^{-2}$ (root of the profile $2.633\times 10^{-2}$); the best fit is $\sigma_X\to 0$. Here I test a different hypothesis: a dark-energy fluid with negative effective mass ($m^{\ast}<0$) and quartic self-interaction. From a modified Gross–Pitaevskii equation I derive the Bogoliubov growth rate $\Gamma_{\max}=g|\psi_0|^2/\hbar\equiv 1/t_c$ and the induced rank-1 residual covariance. An MLE on the real DESI DR2 isotropic $\alpha$ vector shows that the likelihood peaks at no growth ($t_c\to\infty$, $\Delta\ln\mathcal{L}\to 0$). When growth is large enough that the rank-1 term matters, the model is excluded at $\Delta\ln\mathcal{L}\approx -12.7$ ($\Delta\chi^{2}\approx +25$) for a representative active $t_c$. A globally coherent tachyonic quantum fluid is incompatible with the observed BAO residuals under this pipeline.
 
 ---
 
 ## 1. Introduction
 
-Baryon Acoustic Oscillation (BAO) measurements from DESI DR2 constrain the late-time expansion history. In the companion OU analysis in this repository, a stationary residual amplitude is driven toward zero. The free-$\theta$ profile 95% CL ceiling is $\sigma_X < 2.5\times 10^{-2}$ (7 bins, full meas. cov.) [2]; the null ($\sigma_X\to 0$) is preferred. That limits mechanisms that would source stochastic fluctuations in the dark-energy density.
+Baryon Acoustic Oscillation (BAO) measurements from DESI DR2 constrain the late-time expansion history. In the companion OU analysis in this repository, a stationary residual amplitude is driven toward zero. The free-$\theta$ profile 95% CL ceiling is $\sigma_X < 2.6\times 10^{-2}$ (7 bins, full meas. cov.) [2]; the null ($\sigma_X\to 0$) is preferred. That limits mechanisms that would source stochastic fluctuations in the dark-energy density.
 
 One class of models that could, *a priori*, produce such fluctuations is a dark-energy fluid described as a quantum condensate with negative effective mass. In condensed-matter physics, Bose–Einstein condensates with engineered dispersion can have $m^{\ast}<0$ and undergo dynamical instabilities that amplify density fluctuations [3]. If the dark-energy sector shared that structure, it might generate a residual $\sigma_X$ visible in BAO data.
 
@@ -155,7 +155,7 @@ I run the MLE on the real isotropic $\alpha$ vector from the public DESI DR2 Zen
 
 **Reading of the scan.** With $\sigma_{0}=10^{-61}$, most large $t_{c}$ leave the rank-1 term invisible (recovering $\Lambda$CDM). When $t_{c}$ is short enough that $\sigma_{0}e^{t/t_{c}}$ is no longer negligible compared with the BAO errors, the log-likelihood drops by $\mathcal{O}(10)$ or more. The data therefore do **not** prefer a finite growth time: the acceptable limit is $t_{c}\to\infty$ (no coherent growth).
 
-The stationary OU profile ceiling $\sigma_{X}<2.5\times 10^{-2}$ is a **different** operator and must not be mixed into this rank-1 test.
+The stationary OU profile ceiling $\sigma_{X}<2.6\times 10^{-2}$ is a **different** operator and must not be mixed into this rank-1 test.
 
 ---
 
@@ -187,7 +187,7 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 [1] DESI Collaboration, "DESI DR2 Results II: Measurements of BAO and Cosmological Constraints," arXiv:2503.14738 (2025).
 
-[2] Morales Souhail, J., this repository: `papers/stochastic-dark-energy-desi-dr2.md`, `scripts/profile_sigma_x_desi.py` (2026). Profile 95% CL $\sigma_X<2.5\times 10^{-2}$; null preferred.
+[2] Morales Souhail, J., this repository: `papers/stochastic-dark-energy-desi-dr2.md`, `scripts/profile_sigma_x_desi.py` (2026). Profile 95% CL $\sigma_X<2.6\times 10^{-2}$; null preferred.
 
 [3] Khamehchi, M. A. et al., "Negative-Mass Hydrodynamics in a Spin-Orbit–Coupled Bose–Einstein Condensate," Phys. Rev. Lett. **118**, 155301 (2017).
 
