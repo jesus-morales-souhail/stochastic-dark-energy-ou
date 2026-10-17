@@ -82,10 +82,8 @@
 ```diff
 - $$
 - \mathrm{Var}(X) = \frac{\sigma^2}{2\theta}.
-- $$
 + $$
 + \sigma_X^2 \equiv \mathrm{Var}(X) = \frac{\sigma^2}{2\theta} \qquad (\sigma_X:\ \text{stationary standard deviation, not the diffusion } \sigma).
-+ $$
 ```
 
 **`papers/stochastic-dark-energy-desi-dr2.md` l.176** — tabla 1 (l.176): D3 → [X-std]; y el cambio de variable que da un solo H (fila 14)
@@ -100,10 +98,8 @@
 ```diff
 - $$
 - \mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
-- $$
 + $$
 + \sigma_X^2 \equiv \mathrm{Var}(X) = \frac{\sigma^2}{2\theta},
-+ $$
 ```
 
 **`papers/stochastic-dark-energy-desi-dr2.md` l.272** — tabla 1 (l.264/272): σ_X² ≡ σ²/(2θ) en la covarianza (el factor S(z_i)S(z_j) ya está en l.264)
@@ -224,77 +220,45 @@
 
 ```diff
 - # w_eff(z) = w_CPL(z) + δw(z),  δw ~ σ²/(2θ) (1 - e^{-2θ t}) / Ω_DE  (toy)
-- # No hard phantom clamp — that created a flat ΛCDM plateau.
 + # w_eff(z) = w_CPL(z) + δw(z),  δw ~ σ_w²/(2θ) (1 - e^{-2θ t}) / Ω_DE  (toy)
 + # sigma_w is the amplitude of this toy δw correction; it is NOT σ_X (the BAO residual amplitude).
 + # The output key "sigma" (results/eos_cpl_desi_dr2/) is sigma_w; kept for compatibility.
-+ # No hard phantom clamp — that created a flat ΛCDM plateau.
 ```
 
 **`scripts/eos_efectiva.py` l.147, 152, 160, 162, 172, 173, 176, 177, 183, 186, 194, 212, 214, 228, 229, 280** — renombre `sigma` → `sigma_w` en las funciones del toy δw (16 líneas; las claves `"sigma"` de la salida no cambian).
 
 ```diff
 - def Omega_DE_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
-    """Integrate continuity equation for DE with optional mean-field OU correction."""
--         if sigma <= 0.0:
-            w_eff = w_cpl
--                 corr = (sigma**2) * tz / max(omega_bg, 1e-12)
-            else:
--                 corr = (sigma**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
-                    1.0 - np.exp(-2.0 * theta * tz)
-- def E2_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
-    return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma_w, theta)
--     return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma, theta)
-
-- def H_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
-    e2 = E2_eff(z, w0, wa, sigma_w, theta)
--     e2 = E2_eff(z, w0, wa, sigma, theta)
-    if e2 <= 0.0 or not np.isfinite(e2):
-- def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarray:
-    def DM(z: float) -> float:
--             h = H_eff(zp, w0, wa, sigma, theta)
-            if not np.isfinite(h) or h <= 0.0:
--         h = H_eff(z, w0, wa, sigma, theta)
-        if not np.isfinite(h) or h <= 0.0:
-- def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
-    try:
--         pred = alpha_pred_eff(w0, wa, sigma, theta)
-    except (ValueError, FloatingPointError, ZeroDivisionError, OverflowError):
-- def logL_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
-    c2 = chi2_eff(w0, wa, sigma_w, theta)
--     c2 = chi2_eff(w0, wa, sigma, theta)
-    if not np.isfinite(c2):
--     """Joint {w0, wa, sigma, theta}; sigma>=0, theta>0."""
 + def Omega_DE_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
-    """Integrate continuity equation for DE with optional mean-field OU correction."""
+-         if sigma <= 0.0:
 +         if sigma_w <= 0.0:
-            w_eff = w_cpl
+-                 corr = (sigma**2) * tz / max(omega_bg, 1e-12)
 +                 corr = (sigma_w**2) * tz / max(omega_bg, 1e-12)
-            else:
+-                 corr = (sigma**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
 +                 corr = (sigma_w**2 / (2.0 * theta * max(omega_bg, 1e-12))) * (
-                    1.0 - np.exp(-2.0 * theta * tz)
+- def E2_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
 + def E2_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
-    return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma_w, theta)
+-     return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma, theta)
 +     return Om * (1.0 + z) ** 3 + Omega_DE_eff(z, w0, wa, sigma_w, theta)
-
+- def H_eff(z: float, w0: float, wa: float, sigma: float, theta: float) -> float:
 + def H_eff(z: float, w0: float, wa: float, sigma_w: float, theta: float) -> float:
-    e2 = E2_eff(z, w0, wa, sigma_w, theta)
+-     e2 = E2_eff(z, w0, wa, sigma, theta)
 +     e2 = E2_eff(z, w0, wa, sigma_w, theta)
-    if e2 <= 0.0 or not np.isfinite(e2):
+- def alpha_pred_eff(w0: float, wa: float, sigma: float, theta: float) -> np.ndarray:
 + def alpha_pred_eff(w0: float, wa: float, sigma_w: float, theta: float) -> np.ndarray:
-    def DM(z: float) -> float:
+-             h = H_eff(zp, w0, wa, sigma, theta)
 +             h = H_eff(zp, w0, wa, sigma_w, theta)
-            if not np.isfinite(h) or h <= 0.0:
+-         h = H_eff(z, w0, wa, sigma, theta)
 +         h = H_eff(z, w0, wa, sigma_w, theta)
-        if not np.isfinite(h) or h <= 0.0:
+- def chi2_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
 + def chi2_eff(w0: float, wa: float, sigma_w: float, theta: float) -> float:
-    try:
+-         pred = alpha_pred_eff(w0, wa, sigma, theta)
 +         pred = alpha_pred_eff(w0, wa, sigma_w, theta)
-    except (ValueError, FloatingPointError, ZeroDivisionError, OverflowError):
+- def logL_eff(w0: float, wa: float, sigma: float, theta: float) -> float:
 + def logL_eff(w0: float, wa: float, sigma_w: float, theta: float) -> float:
-    c2 = chi2_eff(w0, wa, sigma_w, theta)
+-     c2 = chi2_eff(w0, wa, sigma, theta)
 +     c2 = chi2_eff(w0, wa, sigma_w, theta)
-    if not np.isfinite(c2):
+-     """Joint {w0, wa, sigma, theta}; sigma>=0, theta>0."""
 +     """Joint {w0, wa, sigma_w, theta}; sigma_w>=0, theta>0 (output key "sigma")."""
 ```
 
@@ -401,9 +365,7 @@
 
 ```diff
 - \left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 1.0 \times 10^{-4}.
-- $$
 + \left| \frac{V(\phi)}{M_{\rm Pl} V'(\phi)} \right| \lesssim 7.0 \times 10^{-5}.
-+ $$
 ```
 
 **`papers/stochastic-dark-energy-desi-dr2.md` l.887** — propagación: λ ≳ 1/7.0e-5 = 1.4e4 (fila 11, 'con D3')
@@ -417,9 +379,7 @@
 
 ```diff
 - \lvert \zeta \rvert \lesssim 1.0 \times 10^{-4}.
-- $$
 + \lvert \zeta \rvert \lesssim 7.0 \times 10^{-5}.
-+ $$
 ```
 
 **`papers/stochastic-dark-energy-desi-dr2.md` l.899** — propagación: M_cut = M_Pl/|ζ| ≳ 1.4e4 M_Pl
@@ -460,9 +420,7 @@
 
 ```diff
 - OM_L0 = 0.685
-- 
 + OM_L0 = 0.685  # not used by the slip map: π_T is σ_X ρ_crit,0, not σ_X ρ_Λ (block C)
-+ 
 ```
 
 **`scripts/slip_bridge.py` l.65** — [X-std]: X ≡ δρ_DE/ρ_crit,0, so the shear is ε σ_X ρ_crit,0 (fórmula deducida b, validada por el autor)
