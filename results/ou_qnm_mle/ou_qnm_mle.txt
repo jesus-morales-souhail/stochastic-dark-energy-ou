@@ -1,0 +1,6 @@
+OU / QNM free MLE on data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt (cov_mode: full_gaussian_bao_projected_13x13, 7 bins)
+LCDM: logL = 24.899563  (AIC = BIC = -49.799, k = 0)
+search bounds: theta >= 0.001, sigma_X >= 4.540e-05, omega_R in [0, 10]
+model      theta     sigma_X  omega_R       logL     dlogL       AIC       BIC    dAIC    dBIC  bounds
+OU         266.1  4.5400e-05   0.0000  24.899523 -3.95e-05   -45.799   -45.907  +4.000  +3.892  at lower bound: sigma_X
+QNM      0.04303  4.5400e-05   6.9313  24.899524 -3.82e-05   -43.799   -43.961  +6.000  +5.838  at lower bound: sigma_X

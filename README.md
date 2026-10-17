@@ -16,7 +16,7 @@ Method / optics notes only: [stochastic-de-exploratory-notes](https://github.com
 ## Read these first
 
 1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main write-up  
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C9) and what I do not (N1–N13)  
+2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C10) and what I do not (N1–N13)  
 3. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft \(10^{56}\) is not free  
 4. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — wording I allow myself  
 5. [`theory/EXPLORATORY_BOUNDARY.md`](theory/EXPLORATORY_BOUNDARY.md) — what is not part of the paper  

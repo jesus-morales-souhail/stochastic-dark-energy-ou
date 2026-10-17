@@ -22,7 +22,7 @@ from public DESI DR2 BAO summary statistics (`papers/resume.txt`). It does not c
 2. Can they be compared, even roughly, to $\sigma_X$ if a fraction $f$ of the noise is anisotropic?
 3. Is the anisotropic channel a shortcut around the amplification problem already discussed in the desqueezing note?
 
-**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable. With $\sigma_X\lesssim 2.6\times 10^{-2}$ the best case (ε = 1, δ_m = 1) reaches $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, level with Euclid-like forecasts: marginal, not starved. Its visibility depends on ε, δ_m and z rather than on amplification.
+**Conclusion (preview).** The anisotropic “gap” is a real structural crack in SDiff protection, and $\eta$ is the right kind of observable. With $\sigma_X\lesssim 2.6\times 10^{-2}$ the best case (ε = 1, δ_m = 1) reaches $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, level with Euclid-like forecasts: marginal, not starved. Its visibility depends on ε, δ_m and z rather than on amplification; the estimate holds for δ_m ≈ 1 (quasi-linear scales) and does not extrapolate to δ_m ≪ 1, and ε < 1 or z ≳ 1 push it below reach.
 
 ---
 
@@ -157,7 +157,7 @@ Compare:
 | Current DESI-era slip (Maus $\gamma=1.17\pm 0.11$) | $\mathcal{O}(0.1)$ | **∼2× above** prediction (0.17 is ≈3.4× the best case) |
 | Euclid-like forecasts (Sakr et al.) | $\mathcal{O}(0.03\text{–}0.05)$ | **comparable**: $\sim 0.6$–$1.0\times$ |
 
-**Interpretation.** The most optimistic anisotropic fraction does not make the gap visible at current DESI precision (≈3.4× short at z = 0.5); at Euclid-like forecast precision it is marginal (≈1.0× the Sakr et al. floor) for ε ≈ 1, δ_m ≈ 1, z ≈ 0.5, and out of reach for ε ≲ 0.5 or z ≳ 1. The map is order-of-magnitude.
+**Interpretation.** The most optimistic anisotropic fraction does not make the gap visible at current DESI precision (≈3.4× short at z = 0.5); at Euclid-like forecast precision it is marginal (≈1.0× the Sakr et al. floor) for ε ≈ 1, δ_m ≈ 1, z ≈ 0.5, and out of reach for ε ≲ 0.5 or z ≳ 1. The map is order-of-magnitude: it holds for δ_m ≈ 1 (quasi-linear scales) and does not extrapolate to δ_m ≪ 1.
 
 That word — amplification — is the same one that appears in amplification (`amplification-gap.md`) when mapping Sorkin-scale seeds ($\sim 10^{-61}$) up to BAO-relevant $\sigma_X$ (factors of order $A_0/\sigma_0\sim 10^{56}$). The anisotropic channel does not evade the seed problem (σ_0 → σ_X); given σ_X at the DESI bound, it is marginal rather than starved.
 

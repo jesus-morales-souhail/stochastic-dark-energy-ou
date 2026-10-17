@@ -1,0 +1,51 @@
+{
+  "data": "data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt",
+  "cov_mode": "full_gaussian_bao_projected_13x13",
+  "n_bins": 7,
+  "LCDM": {
+    "logL": 24.899562520639115,
+    "AIC": -49.79912504127823,
+    "BIC": -49.79912504127823,
+    "cov": "same measurement covariance as OU/QNM"
+  },
+  "OU": {
+    "theta": 266.0517526750649,
+    "sigma_X": 4.539992976503344e-05,
+    "omega_R": 0.0,
+    "logL": 24.899522989860017,
+    "AIC": -45.799045979720034,
+    "BIC": -45.90722568160941,
+    "k": 2,
+    "dlogL_vs_LCDM": -3.953077909812919e-05,
+    "dAIC_vs_LCDM": 4.000079061558196,
+    "dBIC_vs_LCDM": 3.8918993596688196,
+    "theta_at_lower_bound": false,
+    "sigma_X_at_lower_bound": true
+  },
+  "QNM": {
+    "theta": 0.04303323331422608,
+    "sigma_X": 4.539992976341132e-05,
+    "omega_R": 6.931335933702627,
+    "logL": 24.89952436183372,
+    "AIC": -43.79904872366744,
+    "BIC": -43.9613182765015,
+    "k": 3,
+    "dlogL_vs_LCDM": -3.8158805395482887e-05,
+    "dAIC_vs_LCDM": 6.000076317610791,
+    "dBIC_vs_LCDM": 5.8378067647767296,
+    "theta_at_lower_bound": false,
+    "sigma_X_at_lower_bound": true
+  },
+  "search_bounds": {
+    "theta_min": 0.001,
+    "sigma_X_min": 4.5399929762484854e-05,
+    "omega_R": [
+      0.0,
+      10.0
+    ],
+    "log_sigma_X2": [
+      -20.0,
+      -1.0
+    ]
+  }
+}

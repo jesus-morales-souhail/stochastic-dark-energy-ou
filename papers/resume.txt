@@ -13,7 +13,7 @@ Narrative cohesion (how papers fit): see repository README.md
     R1: N_eff ~ 1.4e3 (DESI) / 1e10 (Euclid)  — only amplitude card (redefine seed)
     R2: freeze gain = 1.000; rms/sigma = O(1)  — dead as amplifier alone
     R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; all 288 jobs BAO-safe (max p95 2.1e-3)
-  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~5e-2 best case at z=0.5: ~1.0x forecast floor, ~3.4x below Maus; marginal, not starved)
+  Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~5e-2 best case at z=0.5: ~1.0x forecast floor, ~3.4x below Maus; marginal, not starved; holds for delta_m ~ 1, not for delta_m << 1; eps < 1 or z >~ 1 push it below reach)
   External lab optics: separate optics project (NOT this paper)
   CMB check: Planck 2018 TT l<30 + lensing — OU at sigma_X=2.633e-2 invisible (p95 dchi2 <= 0.067); sigma(H0)=0.48 (theta=1); harmonic X: 58/60 BAO-allowed, 0/60 CMB-distinguishable
 Data pack (arXiv links): exploratory/notes/data-pack-option0-internet.md

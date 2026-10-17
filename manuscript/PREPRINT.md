@@ -6,7 +6,7 @@
 | ORCID | [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) |
 | Email | jmskjym@gmail.com |
 | Affiliation | Independent researcher |
-| Date | July 2026 |
+| Date | v2, October 2026 (v1: July 2026) |
 | Status | Preprint |
 | Code | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 | License | MIT (code); CC BY 4.0 (text) |
@@ -21,13 +21,13 @@ $$\sigma_X < 2.6\times 10^{-2}$$
 
 under the stated phenomenological kernel and public BAO summary statistics (official Gaussian BAO covariance projected to isotropic α in the baseline pipeline). Nested extensions that free $\{w_0,w_a,\sigma_X,\theta\}$ are not preferred over a smooth background ($\Delta\mathrm{AIC}\approx +4$).
 
-Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$).
+Separately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: $\Delta\ln\mathcal{L}\approx -12.7$ relative to $\Lambda$CDM ($\Delta\chi^2\approx +25$). The two published implementations of Everpresent Λ, a zero-mean Λ with order-one fluctuations, do not fit the same BAO data together with the CMB: with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none fits as well as ΛCDM (0/20000 and 0/500000 realizations).
 
-A CMB consistency check with Planck 2018 (TT at ℓ < 30 and lensing bandpowers, via CAMB with the OU history mapped to w(a), H0 solved to keep θ_* fixed) does not distinguish the OU residual from ΛCDM at the DESI ceiling: the 95th percentile of Δχ² is ≤ 0.067 (TT) and ≤ 0.054 (lensing) at σ_X = 2.633×10⁻², and no realization reaches Δχ² > 4. Its only imprint is a scatter in the inferred H0 of 0.48 km/s/Mpc (θ = 1), about 12 times smaller than the Planck–SH0ES difference, so it neither tightens σ_X nor explains the H0 tension. A deterministic harmonic modulation X = A sin(2π ln a/P + φ) with A ≤ 0.025 and P ∈ [0.1, 2] is allowed by DESI DR2 BAO in 58 of 60 cases (Δχ²_BAO < 4) and is indistinguishable from ΛCDM in the CMB in all 60.
+A CMB consistency check OU residual is invisible to Planck 2018 (TT at ℓ < 30 and lensing; 95th percentile of Δχ² ≤ 0.067), so the CMB gives no leverage on σ_X, and its only imprint, a scatter σ(H0) ≈ 0.48 km/s/Mpc, is 12 times smaller than the H0 tension. A percent-level harmonic residual is likewise allowed by DESI and invisible in the CMB (§3.5).
 
 I then quantify an amplification bottleneck: a Sorkin–Bekenstein Poisson seed with horizon-area counting, $\sigma_0\sim 10^{-61}$ (four-volume counting gives order-one fluctuations instead — Everpresent Λ, a different model) lies $\sim 10^{56}$ below Euclid-scale residual amplitudes ($\sim 10^{-5}$) and $\sim 10^{59}$ below the DESI residual ceiling measured here ($2.6\times 10^{-2}$). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain $\sim 2$, and only a local effective count $N_{\mathrm{eff}}\sim 1.4\times 10^{3}$ (DESI) / $10^{10}$ (Euclid) reaches target amplitudes—by redefining the microphysical seed, not by free amplification.
 
-Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, and with the BAO-bounded residual it is marginal, not starved: full anisotropy gives at most $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, about $3.4\times$ below the current measurement (Maus et al.) and at the level of the Sakr et al. forecast floor ($\approx 1.0\times$), falling to $2.4\times$ and $4.7\times$ below that floor at $z=1$ and $1.5$. The σ_X → slip map is an order-of-magnitude estimate and the best case requires ε = 1, δ_m = 1 and z ≈ 0.5.
+Gravitational slip $\gamma=\Phi/\Psi$ is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, and with the BAO-bounded residual it is marginal, not starved: full anisotropy gives at most $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, about $3.4\times$ below the current measurement (Maus et al.) and at the level of the Sakr et al. forecast floor ($\approx 1.0\times$), falling to $2.4\times$ and $4.7\times$ below that floor at $z=1$ and $1.5$. The σ_X → slip map is an order-of-magnitude estimate: it holds for δ_m ≈ 1 (quasi-linear scales) and does not extrapolate to δ_m ≪ 1; ε < 1 or z ≳ 1 push it below reach.
 
 I claim limits, exclusions, and a map of open hypotheses—not a detection of vacuum discreteness or a new dark-energy fluid.
 
@@ -46,7 +46,7 @@ A finite information bound on the observable universe ($N\sim 10^{122}$ Planck u
 2. **Models:** exclude coherent amplification mechanisms with the correct covariance.
 3. **Theory hygiene:** state which amplifiers are closed and which open cards remain—without smuggling free parameters as “microphysics.”
 
-These arguments come in two versions that should not be confused (Ahmed et al. 2004; Sorkin 2007; Zwane et al. 2018). The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice. Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ.
+Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018), in which the same counting applied to the four-volume gives order-one fluctuations, is a different model, tested directly in §4.2.
 
 ### 1.2 Scope and non-claims
 
@@ -64,7 +64,7 @@ This paper and the associated public repository address (1)–(3) using public B
 |:--------|:--------|
 | 2 | Data and likelihood |
 | 3 | Stationary OU / QNM null, $\sigma_X$ limit and CMB consistency (§3.5) |
-| 4 | Exclusion of coherent tachyonic growth |
+| 4 | Exclusions: coherent tachyonic growth (§4.1) and Everpresent Λ (§4.2) |
 | 5 | Amplification bottleneck and route scans |
 | 6 | Slip / SDiff structural remark (amplitude honesty) |
 | 7 | Limitations |
@@ -136,6 +136,9 @@ Primary scripts (repository root):
 | `scripts/amplifier_audit.py` | Amplification audit |
 | `scripts/amplification/route{1,2,3}_*.py` | Non-linear cards |
 | `scripts/slip_bridge.py` | map $\sigma_X\to\lvert\gamma-1\rvert$ (order of magnitude) |
+| `analisis_cmb/realizaciones.py`, `analisis_cmb/estadisticos.py` | CMB consistency: OU realizations through CAMB, $\Delta\chi^2$ against Planck 2018 (§3.5) |
+| `analisis_cmb/oscilador/oscilador.py` | Harmonic residual against DESI BAO and Planck 2018 (§3.5) |
+| `analisis_cmb/everpresent/bao_sim.py`, `rd_real.py`, `robustez.py` | Everpresent Λ realizations against DESI DR2 BAO (§4.2) |
 
 ---
 
@@ -143,14 +146,19 @@ Primary scripts (repository root):
 
 ### 3.1 Maximum-likelihood point
 
-Under fixed smooth background and public BAO summary statistics, the MLE drives the stochastic amplitude to the numerical floor:
+Under a fixed smooth background and public BAO summary statistics, with the official DESI measurement covariance in all three likelihoods, the MLE drives the stochastic amplitude to the lower bound of the search range, $\sigma_X = 4.54\times 10^{-5}$ ($\ln\sigma_X^2 = -20$):
 
-| Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | AIC | BIC |
-|:------|:-----------|:-------------|:-------------|:-------------------------------------------|:----|:----|
-| OU (H0; old run, diagonal cov) | $0.001$ (boundary) | $5\times 10^{-5}$ | — | $0.00$ | $-50.03$ | $-50.14$ |
-| QNM (H1; old run, diagonal cov) | $0.001$ | $5\times 10^{-5}$ | $0.00$ | $0.00$ | $-48.03$ | $-48.19$ |
+| Model | $\theta$ | $\sigma_X$ | $\omega_R$ | $\ln\mathcal{L}$ | $\Delta\ln\mathcal{L}$ vs $\Lambda$CDM | AIC | BIC |
+|:------|:-----------|:-------------|:-------------|:------------------|:-------------------------------------------|:----|:----|
+| $\Lambda$CDM | — | — | — | $24.8996$ | $0$ (ref) | $-49.80$ | $-49.80$ |
+| OU (H0) | $266$ (unconstrained) | $4.54\times 10^{-5}$ (lower bound) | — | $24.8995$ | $-4.0\times 10^{-5}$ | $-45.80$ | $-45.91$ |
+| QNM (H1) | $0.043$ (unconstrained) | $4.54\times 10^{-5}$ (lower bound) | $6.93$ (unconstrained) | $24.8995$ | $-3.8\times 10^{-5}$ | $-43.80$ | $-43.96$ |
 
-The data do not require a stationary stochastic residual. The preferred stochastic amplitude is consistent with zero within the resolution of the likelihood surface; reported floor values reflect optimizer bounds, not a detection.
+Relative to $\Lambda$CDM, $\Delta$AIC $= +4.00$ (OU) and $+6.00$ (QNM), $\Delta$BIC $= +3.89$ and $+5.84$: the extra parameters bring no gain in likelihood. With $\sigma_X$ at the bound, $\theta$ and $\omega_R$ are not constrained. Source: [`results/ou_qnm_mle/ou_qnm_mle.json`](../results/ou_qnm_mle/ou_qnm_mle.json) (`scripts/ou_bao_likelihood.py`).
+
+An earlier diagonal-covariance run (old run, [`archive/results/ou_bao_desi_dr2_run.txt`](../archive/results/ou_bao_desi_dr2_run.txt)) gave $\theta = 0.001$, $\sigma_X = 5\times 10^{-5}$ and AIC $-50.03$ / $-48.03$ (OU / QNM).
+
+The data do not require a stationary stochastic residual. The preferred stochastic amplitude is consistent with zero within the resolution of the likelihood surface; values at the bound reflect the search range, not a detection.
 
 ### 3.2 Working upper limit
 
@@ -184,7 +192,9 @@ Figure and data: `analisis_cmb/RESULTADO.md`, `analisis_cmb/oscilador/`.
 
 ---
 
-## 4. Results II — Coherent tachyonic growth excluded
+## 4. Results II — Model exclusions
+
+### 4.1 Coherent tachyonic growth
 
 A distinct hypothesis is that a dark-energy quantum fluid with negative effective mass undergoes Bogoliubov instability, yielding a coherent growing mode $\sigma_X(t)=\sigma_0 e^{t/t_c}$. The induced BAO residual covariance is **rank-1**, not OU-stationary. Using that covariance in an MLE on the same BAO summary statistics yields
 
@@ -199,6 +209,19 @@ Any finite collapse / growth time $t_c$ is disfavoured; the acceptable limit is 
 > A globally coherent tachyonic growing mode with rank-1 residual covariance is incompatible with DESI DR2 BAO residuals under the pipeline stated in the repository.
 
 This exclusion is logically independent of the stationary OU bound: the covariance structure is different, and the correct structure must be used.
+
+### 4.2 Everpresent Λ tested directly
+
+The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. The order-one alternative to the area-counting seed has been tested directly. In its two published implementations (Zwane et al. 2018, Model 2; Das et al. 2023, Model 1), computing r_d with each realization's own history, requiring small dark energy over z ∈ [1000, 5000] and ω_m within ±2σ of Planck, none of the realizations fits DESI DR2 BAO as well as ΛCDM, nor within Δχ² < 4: 0/20000 for Model 2 (< 1.5×10⁻⁴ at 95 %) and 0/300000 and 0/200000 for Model 1 with α = 0.01 and 0.005 (< 1.0×10⁻⁵, < 1.5×10⁻⁵). Without the CMB conditions, rare realizations pass, all with ω_m far from Planck or order-one dark energy at recombination. As small fluctuations around ΛCDM, DESI DR2 bounds the Zwane et al. amplitude to α < 1.85×10⁻² (μ fixed). These results hold for those phenomenological implementations, with the CMB only through a proxy (|Ω_de| < 0.25), not for the idea of Everpresent Λ in general.
+
+| Implementation | Realizations | Parameters fixed to Planck (r_d, ω_m): pass A / B | Final criterion (c): pass A / B | 95 % upper limit, (c) |
+|:--|--:|:--|:--|:--|
+| Model 2 (Zwane et al. 2018; α = 0.8824, μ = 0.9804) | 20000 | 1 / 1 (fails the CMB proxy) | 0 / 0 | < 1.5×10⁻⁴ |
+| Model 1 (Das et al. 2023), α = 0.01 | 300000 | 0 / 0 (best Δχ² = +17.3) | 0 / 0 | < 1.0×10⁻⁵ |
+| Model 1, α = 0.005 | 200000 | 0 / 0 (best Δχ² = +30.5) | 0 / 0 | < 1.5×10⁻⁵ |
+| Final criterion (c), all realizations | 520000 | — | **0 / 0** | — |
+
+Conditions of criterion (c): r_d computed from each realization's own expansion history; small dark energy around recombination, $\lvert\Omega_{\rm de}\rvert < 0.25$ over $z\in[1000, 5000]$ (CMB proxy); $\omega_m$ within ±1.6 % (±2σ) of Planck 2018. Data: DESI DR2 BAO, 13 distances with full covariance. Pass A: χ² ≤ 29.84 (ΛCDM with Planck parameters); pass B: Δχ² < 4. Source: [`analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`](../analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md) §3a, §3c and §3e.
 
 ---
 
@@ -217,8 +240,6 @@ This exclusion is logically independent of the stationary OU bound: the covarian
 The headline “$\sim 10^{56}$” always means the **Euclid-scale** target. Using the DESI ceiling in a density ratio and labelling it $10^{56}$ is incorrect by a factor $\sim 2\times 10^{3}$. Both gaps remain unbridgeable by soft linear amplifiers ($r\sim 64$–$68$).
 
 DESI constrains the **effective** residual amplitude after any amplification—not $\sigma_0$, and not a new value of $\rho_\Lambda$. Without a physical map $\sigma_0\to A_0$, “Euclid will see vacuum noise” is not a theorem of this analysis.
-
-**Everpresent Λ.** The seed σ_0 ∼ 10⁻⁶¹ uses N ∼ 10¹²² from horizon-area (Bekenstein–Hawking) counting. With the four-volume counting of Everpresent Λ, δΛ tracks H² and the relative amplitude is of order one with no amplifier; the ∼10⁵⁶ gap is specific to the area-counting choice. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. The order-one alternative to the area-counting seed has been tested directly. In its two published implementations (Zwane et al. 2018, Model 2; Das et al. 2023, Model 1), computing r_d with each realization's own history, requiring small dark energy over z ∈ [1000, 5000] and ω_m within ±2σ of Planck, none of the realizations fits DESI DR2 BAO as well as ΛCDM, nor within Δχ² < 4: 0/20000 for Model 2 (< 1.5×10⁻⁴ at 95 %) and 0/300000 and 0/200000 for Model 1 with α = 0.01 and 0.005 (< 1.0×10⁻⁵, < 1.5×10⁻⁵). Without the CMB conditions, rare realizations pass, all with ω_m far from Planck or order-one dark energy at recombination. As small fluctuations around ΛCDM, DESI DR2 bounds the Zwane et al. amplitude to α < 1.85×10⁻² (μ fixed). These results hold for those phenomenological implementations, with the CMB only through a proxy (|Ω_de| < 0.25), not for the idea of Everpresent Λ in general.
 
 ### 5.2 Linear amplifier audit
 
@@ -276,7 +297,7 @@ References: Maus et al., arXiv:2505.20656; Sakr et al., arXiv:2501.07477; runnab
 
 **Claim (Slip / Option 0):**
 
-> Slip is the correct *kind* of operator for anisotropic leakage past SDiff. With the BAO-bounded residual amplitude it is marginal, not starved: at ε = 1 it reaches $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, level with the forecast floor ($\approx 1.0\times$) and $\approx 3.4\times$ below the current measurement. It is not a demonstrated shortcut: ε < 1, δ_m > 1 or z ≳ 1 push it below reach. The σ_X → slip map is an order-of-magnitude estimate and the best case requires ε = 1, δ_m = 1 and z ≈ 0.5.
+> Slip is the correct *kind* of operator for anisotropic leakage past SDiff. With the BAO-bounded residual amplitude it is marginal, not starved: at ε = 1 it reaches $\lvert\gamma-1\rvert\approx 5\times 10^{-2}$ at $z=0.5$, level with the forecast floor ($\approx 1.0\times$) and $\approx 3.4\times$ below the current measurement. It is not a demonstrated shortcut. The σ_X → slip map is an order-of-magnitude estimate: it holds for δ_m ≈ 1 (quasi-linear scales) and does not extrapolate to δ_m ≪ 1; ε < 1 or z ≳ 1 push it below reach.
 
 I do not implement a homemade Boltzmann hierarchy. Future work, if amplitudes become reachable, should use community codes (e.g. hi_class / MGCAMB) with a pre-specified target. (The CMB consistency check of §3.5 uses CAMB with the residual mapped to a tabulated w(a) in the PPF module; it is not a Boltzmann treatment of anisotropic stress.)
 
@@ -288,9 +309,10 @@ I do not implement a homemade Boltzmann hierarchy. Future work, if amplitudes be
 2. **Kernel dependence:** bounds are for the OU/QNM residual kernels stated; other residual models need their own covariance and MLE.
 3. **Background degeneracy:** with only seven BAO bins, flexible $w(z)$ can absorb residual variance (Section 3.3). Multi-probe fits are a separate analysis. The CMB check of §3.5 is a consistency test with parameters fixed except H0, not a multi-probe fit.
 4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`archive/scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.
-5. **Sorkin seed:** used as motivational UV scale (horizon-area counting) for the amplification discussion, not as a fitted parameter. Everpresent Λ (Ahmed et al. 2004; Zwane et al. 2018) is a different model from the one tested here: Λ has zero mean and fluctuates, with an amplitude fixed by causal-set counting of the past four-volume (δΛ ∼ V^{-1/2}), at the level of the critical density in every epoch and with no free amplitude. The residual X of this work is a small stationary perturbation around a non-zero mean Λ, with free σ_X and θ. The bound on σ_X does not, by itself, test Everpresent Λ. Zwane et al. (2018) find that Everpresent Λ fits the CMB, BAO and SN data of that time about as well as ΛCDM and eases the low-redshift H0 and Lyα BAO tensions. Tested against DESI DR2 BAO with r_d computed for each realization, small dark energy around recombination and ω_m within ±2σ of Planck, none of the realizations of its two published implementations fits as well as ΛCDM (0/20000 for the model of Zwane et al.; 0/500000 for the model of Das et al., α = 0.01 and 0.005; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). This applies to those phenomenological implementations, not to the idea of Everpresent Λ in general.
+5. **Sorkin seed:** used as motivational UV scale (horizon-area counting) for the amplification discussion, not as a fitted parameter. See §4.2 for Everpresent Λ.
 6. **Independent research:** this work has not undergone peer review at the time of writing.
 7. **CMB check:** parameters other than H0 fixed to Planck 2018 (no MCMC); smoothing scale Δ introduced for the check; reading (a), δ ln ρ_DE = X/Ω_Λ0 (reading (b) would scale the amplitude by 1.46); halofit with tabulated w(a) in PPF not verified.
+8. **Everpresent Λ test:** the results of §4.2 hold for the two published phenomenological implementations, with the CMB only through a proxy ($\lvert\Omega_{\rm de}\rvert < 0.25$ over $z\in[1000,5000]$), not for the idea of Everpresent Λ in general.
 
 ---
 
@@ -336,22 +358,31 @@ python scripts/profile_sigma_x_desi.py
 python scripts/amplifier_audit.py
 python scripts/amplification/run_all_routes.py
 python scripts/slip_bridge.py
-# CMB consistency (requires CAMB; see analisis_cmb/README.md)
-cd analisis_cmb && ./venv/bin/python realizaciones.py --halofit takahashi && ./venv/bin/python estadisticos.py resultados/takahashi/sigma_2.633e-02
+# CMB consistency: requires CAMB (pip install camb) and the Planck files listed in analisis_cmb/README.md
+cd analisis_cmb && python realizaciones.py --halofit takahashi && python estadisticos.py resultados/takahashi/sigma_2.633e-02
 ```
 
 ---
 
 ## 9. Conclusions
 
-1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<2.6\times 10^{-2}$ (95% CL)under the stated kernel.
+1. **Null residual:** DESI DR2 BAO summary statistics do not favour stationary OU/QNM stochastic dark energy; $\sigma_X<2.6\times 10^{-2}$ (95% CL) under the stated kernel.
 2. **Model kill:** coherent tachyonic growth with rank-1 covariance is excluded ($\Delta\chi^2\approx +25$).
-3. **CMB consistency:** at the DESI ceiling the OU residual is invisible to Planck 2018 (p95 Δχ² ≤ 0.067) and does not explain the H0 tension (σ(H0) ≈ 0.48 km/s/Mpc); a percent-level harmonic residual is equally allowed by DESI (58/60) and invisible in the CMB.
-4. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.6\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
-5. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and a marginal channel in practice — at best level with forecast floors ($\approx 1.0\times$ the Sakr et al. floor, $\approx 3.4\times$ below Maus et al., at $z=0.5$). The σ_X → slip map is an order-of-magnitude estimate and the best case requires ε = 1, δ_m = 1 and z ≈ 0.5.
-6. **Scientific posture:** the strength of this programme is what it closes—limits, exclusions, and an honest map of open theory prices—not a promised detection.
+3. **Everpresent Λ:** its two published implementations do not fit DESI DR2 BAO together with the CMB conditions (0/20000 and 0/500000 realizations; §4.2).
+4. **CMB consistency:** at the DESI ceiling the OU residual is invisible to Planck 2018 (p95 Δχ² ≤ 0.067) and does not explain the H0 tension (σ(H0) ≈ 0.48 km/s/Mpc); a percent-level harmonic residual is equally allowed by DESI (58/60) and invisible in the CMB.
+5. **Amplification gap:** $\sigma_0\to 10^{-5}$ is $\sim 10^{56}$ (Euclid target); $\sigma_0\to 2.6\times 10^{-2}$ is $\sim 10^{59}$ (DESI ceiling); linear free amplifiers fail both.
+6. **Slip honesty:** anisotropic leakage past SDiff is a real structural crack in principle and a marginal channel in practice — at best level with forecast floors ($\approx 1.0\times$ the Sakr et al. floor, $\approx 3.4\times$ below Maus et al., at $z=0.5$). The σ_X → slip map is an order-of-magnitude estimate: it holds for δ_m ≈ 1 (quasi-linear scales) and does not extrapolate to δ_m ≪ 1; ε < 1 or z ≳ 1 push it below reach.
+7. **Scientific posture:** the strength of this programme is what it closes—limits, exclusions, and an honest map of open theory prices—not a promised detection.
 
 Future data (Euclid BAO multi-bin products; full DESI covariances) can tighten $\sigma_X$ with the same residual likelihood. The CMB gives no additional leverage at this amplitude (Section 3.5); BAO remains the route. Future theory work must pay the price of Routes 1 or 3 (or an inflation-style seed redefinition)—not invent linear gain on white noise.
+
+---
+
+## Version history
+
+- **v1 (July 2026):** σ_X bound quoted as the grid node 2.5×10⁻²; derived numbers (amplification gaps, N_eff, slip, appendix bounds) computed with an earlier working target of 1.5×10⁻⁴; CPL fits with diagonal covariance.
+- **v2 (October 2026):** bound = root of the profile, 2.6×10⁻² (2.633×10⁻²); all derived numbers regenerated; CPL fits with the official DESI covariance; CMB consistency and harmonic residual (§3.5) and Everpresent Λ (§4.2) added; slip map corrected (π_T = εσ_X ρ_crit,0).
+- Audit and before/after records: [`analisis_cmb/AUDITORIA.md`](../analisis_cmb/AUDITORIA.md); blocks [A](../analisis_cmb/bloque_A/COMPARACION.md), [B1](../analisis_cmb/bloque_B/COMPARACION_B1.md), [B2](../analisis_cmb/bloque_B/COMPARACION_B2.md), [C](../analisis_cmb/bloque_C/COMPARACION_C.md), [D](../analisis_cmb/bloque_D/COMPARACION_D.md), [E](../analisis_cmb/bloque_E/COMPARACION_E.md).
 
 ---
 
@@ -379,5 +410,5 @@ This work uses publicly released DESI DR2 BAO products and community literature 
 6. Ahmed, M., Dodelson, S., Greene, P. B., & Sorkin, R. D., "Everpresent Λ," Phys. Rev. D 69, 103523 (2004), arXiv:astro-ph/0209274.
 7. Zwane, N., Afshordi, N., & Sorkin, R. D., "Cosmological tests of Everpresent Λ," Class. Quantum Grav. (2018), doi:10.1088/1361-6382/aadc36, arXiv:1703.06265.
 8. Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
-9. Morales Souhail, J., this repository and companion notes (July 2026).
+9. Morales Souhail, J., this repository and companion notes (October 2026).
 

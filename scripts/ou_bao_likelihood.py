@@ -328,8 +328,8 @@ def lag_correlation_whitened(residuals, cov_matrix, lag_k):
 
 residuals = alpha - 1.0
 
-# ΛCDM baseline (diagonal covariance)
-C_LCDM    = np.diag(sigma**2)
+# ΛCDM baseline: same official measurement covariance as the OU/QNM fits
+C_LCDM    = np.array(C_MEAS, dtype=float, copy=True)
 logL_LCDM = log_likelihood_gaussian(residuals, C_LCDM)
 
 # OU calibrated (fixed parameters from paper Section 3.2)
@@ -471,6 +471,45 @@ print("  F6:  θ/ω_R inconsistent across DESI/Euclid  → QNM kernel incoherent
 print("  F7:  ω_R → 0 in Euclid fit                  → OU pure recovered, not QNM")
 print()
 print(SEP)
+
+# ============================================================
+# SECTION 9b: MACHINE-READABLE SUMMARY (results/ou_qnm_mle/)
+# ============================================================
+import json as _json
+_OUT = _ROOT / "results" / "ou_qnm_mle"
+_OUT.mkdir(parents=True, exist_ok=True)
+_SIGMA_X_MIN = float(np.exp(-10.0))   # search bound: log(sigma_X^2) >= -20
+
+def _summ(r):
+    d = {k: float(r[k]) for k in ("theta", "sigma_X", "omega_R", "logL", "AIC", "BIC")}
+    d["k"] = int(r["k"])
+    d["dlogL_vs_LCDM"] = float(r["logL"] - logL_LCDM)
+    d["dAIC_vs_LCDM"] = float(r["AIC"] - (-2.0 * logL_LCDM))
+    d["dBIC_vs_LCDM"] = float(r["BIC"] - (-2.0 * logL_LCDM))
+    d["theta_at_lower_bound"] = bool(r["theta"] < 1.01 * THETA_MIN)
+    d["sigma_X_at_lower_bound"] = bool(r["sigma_X"] < 1.01 * _SIGMA_X_MIN)
+    return d
+
+_summary = {
+    "data": _d["source"], "cov_mode": _d.get("cov_mode"), "n_bins": int(len(z_eff)),
+    "LCDM": {"logL": float(logL_LCDM), "AIC": float(-2.0 * logL_LCDM),
+             "BIC": float(-2.0 * logL_LCDM), "cov": "same measurement covariance as OU/QNM"},
+    "OU": _summ(result_OU), "QNM": _summ(result_QNM),
+    "search_bounds": {"theta_min": THETA_MIN, "sigma_X_min": _SIGMA_X_MIN,
+                      "omega_R": [0.0, OMEGA_R_MAX], "log_sigma_X2": [-20.0, -1.0]},
+}
+(_OUT / "ou_qnm_mle.json").write_text(_json.dumps(_summary, indent=2) + "\n", encoding="utf-8")
+_lines = [f"OU / QNM free MLE on {_summary['data']} (cov_mode: {_summary['cov_mode']}, {_summary['n_bins']} bins)",
+          f"LCDM: logL = {logL_LCDM:.6f}  (AIC = BIC = {-2.0 * logL_LCDM:.3f}, k = 0)",
+          f"search bounds: theta >= {THETA_MIN:g}, sigma_X >= {_SIGMA_X_MIN:.3e}, omega_R in [0, {OMEGA_R_MAX:g}]",
+          f"{'model':<6} {'theta':>9} {'sigma_X':>11} {'omega_R':>8} {'logL':>10} {'dlogL':>9} {'AIC':>9} {'BIC':>9} {'dAIC':>7} {'dBIC':>7}  bounds"]
+for _name in ("OU", "QNM"):
+    _r = _summary[_name]
+    _b = ",".join(n for n, f in (("theta", _r["theta_at_lower_bound"]), ("sigma_X", _r["sigma_X_at_lower_bound"])) if f) or "-"
+    _lines.append(f"{_name:<6} {_r['theta']:>9.4g} {_r['sigma_X']:>11.4e} {_r['omega_R']:>8.4f} {_r['logL']:>10.6f} "
+                  f"{_r['dlogL_vs_LCDM']:>+9.2e} {_r['AIC']:>9.3f} {_r['BIC']:>9.3f} {_r['dAIC_vs_LCDM']:>+7.3f} {_r['dBIC_vs_LCDM']:>+7.3f}  at lower bound: {_b}")
+(_OUT / "ou_qnm_mle.txt").write_text("\n".join(_lines) + "\n", encoding="utf-8")
+print("Summary written: results/ou_qnm_mle/ou_qnm_mle.{json,txt}")
 
 # ============================================================
 # SECTION 10: FIGURES (4 panels)

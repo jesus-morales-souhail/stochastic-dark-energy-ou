@@ -30,6 +30,7 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 - DESI DR2 BAO residual constraints (OU / QNM)
 - $\sigma_X < 2.6\times 10^{-2}$ (95% CL) under the stated kernel
 - Tachyonic coherent growth exclusion
+- Everpresent Λ tested directly: both published implementations excluded with the CMB conditions (§4.2)
 - Amplification bottleneck $10^{56}$ + Routes 1–3 numerical verdicts
 - Gravitational slip: marginal amplitude (Option 0)
 - CMB consistency (Planck 2018): OU residual at the DESI ceiling and harmonic residual (§3.5)
@@ -52,5 +53,5 @@ Exploratory optics / scale–operator pedagogy:
 
 ## Status
 
-**Preprint .** Independent research, July 2026.
+**Preprint, v2 (October 2026; v1: July 2026).** Independent research. Version history at the end of `PREPRINT.md`.
 
