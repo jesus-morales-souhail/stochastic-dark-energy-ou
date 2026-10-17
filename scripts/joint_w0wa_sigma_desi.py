@@ -33,6 +33,12 @@ alpha_obs = _d["alpha"]
 sigma_obs = _d["sigma"]
 C_MEAS = measurement_cov(_d)
 print("joint_w0wa data:", _d["source"], "cov_mode:", _d.get("cov_mode"))
+COV_LABELS = {
+    "full_gaussian_bao_projected_13x13": "full measurement cov (DESI Gaussian BAO 13x13 projected to alpha)",
+    "diagonal_figure6_errors": "diagonal figure6 errors",
+    "diagonal_fallback": "diagonal fallback-table errors",
+}
+COV_LABEL = COV_LABELS.get(_d["cov_mode"], _d["cov_mode"])
 S_z = _d["S_z"]
 
 H0, Om, c_kms = 67.4, 0.315, 299792.458
@@ -260,8 +266,9 @@ def main():
         )
 
     summary = {
-        "data": "DESI DR2 BAO 7 bins, full meas. cov, S(z) fixed",
+        "data": f"DESI DR2 BAO 7 bins, {COV_LABEL}, S(z) fixed",
         "cov_mode": _d.get("cov_mode"),
+        "alpha_source": _d["source"],
         "models": table,
         "reading": [
             "If joint drives sigma_X→0 and (w0,wa) near LCDM, null stochastic is robust.",
@@ -297,7 +304,7 @@ def main():
     ax.bar(names, dls, color=colors[: len(names)])
     ax.axhline(0, color="k", lw=0.8)
     ax.set_ylabel(r"$\Delta\ln\mathcal{L}$ vs $\Lambda$CDM")
-    ax.set_title("DESI DR2 BAO joint model comparison (full meas. cov)")
+    ax.set_title(f"DESI DR2 BAO joint model comparison ({_d['cov_mode']})")
     ax.grid(True, axis="y", alpha=0.3)
     fig.tight_layout()
     fig.savefig(OUT / "joint_w0wa_sigma.png", dpi=150)

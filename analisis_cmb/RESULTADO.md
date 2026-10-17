@@ -50,8 +50,8 @@ Tres definiciones distintas de X en el repo:
 
 Además, el kernel BAO del código (δα_i = S(z_i)·X(z_i), S = ∂ln D_V/∂Ω_Λ con Ω_m = 1 − Ω_Λ compensando punto a punto) no define una cosmología única: cada bin ve un Ω_Λ (y un Ω_m) distinto. Lo que se construye en `analisis_cmb/` es la primera versión física (una sola historia ρ_DE(a), H(a)) del modelo.
 
-Ajustes CPL del repo (no reajustados):
-- `results/eos_cpl_desi_dr2/eos_cpl_summary.json`: w0 = −0.98990, wa = −0.01590, hecho con errores diagonales ("7 bins, diagonal errors"), no con la covarianza completa del perfil OU.
+Ajustes CPL del repo (no reajustados en este análisis; reajustados en `bloque_A/`, 2026-10-17: w0 = −1.00095, wa = +0.01370 en los dos, cov completa y α figure6):
+- `results/eos_cpl_desi_dr2/eos_cpl_summary.json`: w0 = −0.98990, wa = −0.01590, hecho con errores diagonales ("7 bins, diagonal errors") y vector α de fallback hard-coded (no figure6), no con la covarianza completa del perfil OU.
 - `results/joint_w0wa_sigma/joint_w0wa_sigma.json`: w0 = −1.00165, wa = +0.01725. Se contradice: `"data": "DESI DR2 BAO 7 bins, full meas. cov, S(z) fixed"` pero `"cov_mode": "diagonal_figure6_errors"`.
 
 ## 6. Limitaciones

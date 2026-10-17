@@ -1,0 +1,9 @@
+eos_efectiva.py ...
+ou_bao_likelihood.py ...
+VERIFY: OK
+  CPL background near ΛCDM; nested σ not preferred
+  OU/QNM residual amplitude at floor; ω_R → 0
+
+real	2m13.436s
+user	2m16.125s
+sys	0m0.142s

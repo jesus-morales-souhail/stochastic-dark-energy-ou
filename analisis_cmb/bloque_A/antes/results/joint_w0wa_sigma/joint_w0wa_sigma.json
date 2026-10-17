@@ -1,0 +1,63 @@
+{
+  "data": "DESI DR2 BAO 7 bins, full meas. cov, S(z) fixed",
+  "cov_mode": "diagonal_figure6_errors",
+  "models": [
+    {
+      "model": "lcdm",
+      "w0": -1.0,
+      "wa": 0.0,
+      "theta": null,
+      "sigma_X": 0.0,
+      "logL": 24.895484644425657,
+      "k": 0,
+      "dlogL_vs_lcdm": 0.0,
+      "AIC": null,
+      "BIC": null,
+      "dAIC_vs_cpl": null
+    },
+    {
+      "model": "cpl",
+      "w0": -1.0016540106177185,
+      "wa": 0.0172470528926633,
+      "theta": null,
+      "sigma_X": 0.0,
+      "logL": 24.903781270755246,
+      "k": 2,
+      "dlogL_vs_lcdm": 0.008296626329588719,
+      "AIC": -45.80756254151049,
+      "BIC": -45.91574224339987,
+      "dAIC_vs_cpl": 0.0
+    },
+    {
+      "model": "ou_fixed_bg",
+      "w0": -1.0,
+      "wa": 0.0,
+      "theta": 1.890434789657594,
+      "sigma_X": 3.0231475829256456e-10,
+      "logL": 24.895484644425657,
+      "k": 2,
+      "dlogL_vs_lcdm": 0.0,
+      "AIC": -45.790969288851315,
+      "BIC": -45.89914899074069,
+      "dAIC_vs_cpl": 0.016593252659177438
+    },
+    {
+      "model": "joint",
+      "w0": -1.0016539372781668,
+      "wa": 0.017246668539732012,
+      "theta": 0.5550445775759303,
+      "sigma_X": 4.239262752422016e-10,
+      "logL": 24.90378127075592,
+      "k": 4,
+      "dlogL_vs_lcdm": 0.008296626330263734,
+      "AIC": -41.80756254151184,
+      "BIC": -42.02392194529059,
+      "dAIC_vs_cpl": 3.99999999999865
+    }
+  ],
+  "reading": [
+    "If joint drives sigma_X\u21920 and (w0,wa) near LCDM, null stochastic is robust.",
+    "If joint prefers large sigma_X only with exotic (w0,wa), degeneracy warning.",
+    "Compare AIC: joint vs cpl (k=4 vs k=2)."
+  ]
+}

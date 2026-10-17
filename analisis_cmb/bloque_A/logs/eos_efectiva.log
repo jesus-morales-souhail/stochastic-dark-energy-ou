@@ -1,0 +1,46 @@
+eos_efectiva data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+======================================================================
+DESI DR2 BAO — CPL background and nested effective-EoS extension
+======================================================================
+N bins = 7  |  fiducial = flat ΛCDM (w0=-1, wa=0)
+
+Reference ΛCDM (w0=-1, wa=0):
+  chi2 = 4.4902   logL = -2.2451
+
+Pure CPL MLE (multi-start Nelder–Mead):
+  w0   = -1.0009
+  wa   = +0.0137
+  chi2 = 4.4746
+  logL = -2.2373
+  AIC  = 8.475   BIC = 8.366
+
+Nested extension (CPL + σ, θ):
+  w0    = -1.0009
+  wa    = +0.0137
+  sigma = 8.793e-08
+  theta = 4.0714
+  chi2  = 4.4746
+  logL  = -2.2373
+  AIC   = 12.475   BIC = 12.258
+
+Nested comparison:
+  ΔlogL (extension − CPL) = -0.0000
+  ΔAIC  (extension − CPL) = +4.000
+  → Pure CPL preferred (no improvement from σ, θ).
+
+Profile in σ at best pure-CPL (w0, wa), θ = 1:
+  σ = 0.0e+00:  logL = -2.2373  (Δ = +0.0000)
+  σ = 1.0e-05:  logL = -2.2373  (Δ = -0.0000)
+  σ = 1.0e-04:  logL = -2.2373  (Δ = -0.0000)
+  σ = 5.0e-04:  logL = -2.2373  (Δ = -0.0000)
+  σ = 1.0e-03:  logL = -2.2373  (Δ = -0.0000)
+  σ = 5.0e-03:  logL = -2.2373  (Δ = -0.0000)
+  σ = 1.0e-02:  logL = -2.2373  (Δ = -0.0000)
+
+Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/eos_cpl_desi_dr2/eos_cpl_summary.json
+Wrote /home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/results/eos_cpl_desi_dr2/eos_cpl_summary.txt
+======================================================================
+
+real	2m11.779s
+user	2m12.704s
+sys	0m0.100s

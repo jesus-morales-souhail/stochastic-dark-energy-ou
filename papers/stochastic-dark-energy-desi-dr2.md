@@ -427,7 +427,7 @@ Combined with astrophysical bounds from quasar absorption spectroscopy ($\lvert 
 
 ## 8. Status of the Stochastic Model
 
-With only 7 BAO bins and using a diagonal covariance approximation, the model space is highly degenerate. The lag-correlation test lacks individual significance (95% CI ≈ ±1.0). While the MLE drives $\sigma_X \to 0$ and $\omega_R \to 0$ for the specific case of a fixed CPL background, this does not constitute a definitive falsification of stochastic dark energy generically.
+With only 7 BAO bins and the official Gaussian BAO covariance projected to α (block-diagonal across bins), the model space is highly degenerate. The lag-correlation test lacks individual significance (95% CI ≈ ±1.0). While the MLE drives $\sigma_X \to 0$ and $\omega_R \to 0$ for the specific case of a fixed CPL background, this does not constitute a definitive falsification of stochastic dark energy generically.
 
 I summarize the status of the model based on the current analysis:
 
@@ -437,7 +437,7 @@ I summarize the status of the model based on the current analysis:
 | **F2** (QNM frequency) | $\omega_R \to 0$ under free MLE | **Consistent with null.** The fit approaches the $\sigma_X = 0$ limit, making the QNM extension effectively degenerate with the OU/null case. |
 | **F3** (Lag correlations) | Predicted positive lags are absent | **Consistent with null.** The observed alternating pattern is the expected algebraic artifact of whitening with $N=7$ when $\sigma_X = 0$. |
 | **F4** (AIC/BIC) | $\Delta\text{AIC} > 2$ favouring $\Lambda$CDM | **Satisfied:** $\Delta\text{AIC} = +4.00$(H0), $+6.00$(H1). The Occam penalty correctly penalizes the stochastic extension. |
-| **F5** (Degeneracy) | $\sigma_X = 0$ when $w_0, w_a$ are free | **Robust when background is free.** Joint MLE on the same 7 BAO bins with free $\{w_0, w_a, \theta, \sigma_X\}$ yields best-fit near $w_0 \approx -0.99$, $w_a \approx -0.02$ (essentially $\Lambda$CDM) and $\sigma_X \approx 4.5 \times 10^{-5}$ (numerical floor). The null result is therefore not an artifact of fixing the background. However, when the background is fixed to the external CPL values preferred by CMB+SNe, a larger amplitude appears. See Appendix I for details. |
+| **F5** (Degeneracy) | $\sigma_X = 0$ when $w_0, w_a$ are free | **Robust when background is free.** Joint MLE on the same 7 BAO bins with free $\{w_0, w_a, \theta, \sigma_X\}$ yields best-fit near $w_0 \approx -1.001$, $w_a \approx +0.014$ (essentially $\Lambda$CDM) and $\sigma_X \approx 5 \times 10^{-10}$ ($\to 0$), $\Delta\text{AIC} = +4.00$ vs CPL (`results/joint_w0wa_sigma/`, projected covariance). The null result is therefore not an artifact of fixing the background. However, when the background is fixed to the external CPL values preferred by CMB+SNe, a larger amplitude appears. See Appendix I for details. |
 
 **Conclusion.** The stochastic model is not favored by the current DESI DR2 BAO data when the background is allowed to vary, and I place a phenomenological upper limit on its amplitude. A definitive falsification would require a simultaneous fit of the stochastic parameters with the CPL background and, ideally, the $>20$ bins of Euclid DR1. This work provides the necessary pipeline and a reference limit for that future analysis.
 
@@ -919,17 +919,17 @@ In either case, the combined limits exclude a free-rolling quintessence field wi
 
 Section 4's null result fixes the background to $\alpha = 1$, equivalent to $w_0 = -1$, $w_a = 0$, not to the DESI+CMB+SNe CPL best fit quoted in the Abstract. Using the CPL $D_V(z)$ of Sec. 2.1.2 in place of flat $\Lambda$CDM, I re-derived $\alpha_{\rm pred}(w_0, w_a; z_i)$ relative to the same fiducial and re-ran the MLE three ways:
 
-**(a)** Background fixed at $w_0 = -1$, $w_a = 0$ [reproduces Sec. 4.2 exactly]: $\sigma_X \to 5 \times 10^{-5}$, $\theta \to 0.0010$, $\ln L = 27.013$.
+**(a)** Background fixed at $w_0 = -1$, $w_a = 0$ [`results/joint_w0wa_sigma/`, model `ou_fixed_bg`]: $\sigma_X \to 4 \times 10^{-10}$, $\theta = 1.90$ (unconstrained at $\sigma_X \to 0$), $\ln L = 24.8996$.
 
 **(b)** Background fixed at $w_0 = -0.87$, $w_a = -0.41$ [the quoted CPL best fit]: the null result disappears. $\theta = 0.146$, $\sigma_X \approx 9.2 \times 10^{-3}$ — nearly 200 times larger than the reported limit, and of the same order as the DR1-era calibration amplitude. The residuals show the same sign (systematic, not noise), and the OU fit absorbs them readily.
 
-**(c)** Joint fit $\{w_0, w_a, \theta, \sigma_X\}$ free: with only 7 points and 4 parameters, the fit is weakly determined — treat it as qualitative, not as a measurement. The optimum falls near $w_0 \approx -0.99$, $w_a \approx -0.02$ (nearly pure $\Lambda$CDM), with $\sigma_X \approx 4.5 \times 10^{-5}$ — the same numerical floor as (a) — and a log-likelihood improvement of only $(+0.13)$ over the 2-parameter fit, not significant for 2 extra degrees of freedom.
+**(c)** Joint fit $\{w_0, w_a, \theta, \sigma_X\}$ free: with only 7 points and 4 parameters, the fit is weakly determined — treat it as qualitative, not as a measurement. The optimum falls near $w_0 \approx -1.001$, $w_a \approx +0.014$ (nearly pure $\Lambda$CDM), with $\sigma_X \approx 5 \times 10^{-10}$ — $\sigma_X \to 0$ as in (a) — and a log-likelihood improvement of only $(+3 \times 10^{-13})$ over the 2-parameter fit, not significant for 2 extra degrees of freedom.
 
 **Interpretation.** The null result is robust when the BAO data are allowed to choose their own background: the optimum stays near $\Lambda$CDM and does not require $\sigma_X>0$. It is not robust if the background is fixed to the external (CMB+SNe) CPL point quoted in the Abstract; there a non-negligible amplitude reappears.
 
 I interpret this as: the null result is not an artifact of an arbitrary background choice — the data, left free to choose their own background, land close to $\Lambda$CDM and still do not want a stochastic term. It is sensitive to fixing the background at an externally-derived (CMB+SNe-informed) CPL point that this BAO-only dataset does not itself prefer; doing so reintroduces an apparent signal at roughly the DR1-calibration amplitude.
 
-This should be treated as a preliminary, linearized-fiducial check ($S(z)$ held fixed rather than recomputed at each $w_0, w_a$; diagonal DESI covariance) pending a full re-analysis with the real DESI covariance matrix and a proper MCMC sampler (e.g., emcee) to confirm the $w_0 \approx -0.99$ minimum is not a local artifact.
+This should be treated as a preliminary, linearized-fiducial check ($S(z)$ held fixed rather than recomputed at each $w_0, w_a$; DESI Gaussian BAO covariance projected to α) pending a full re-analysis with a proper MCMC sampler (e.g., emcee) to confirm the $w_0 \approx -0.99$ minimum is not a local artifact.
 
 ---
 

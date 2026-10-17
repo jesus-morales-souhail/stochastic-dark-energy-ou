@@ -27,7 +27,7 @@ $$
 \{w_0,\,w_a,\,\theta,\,\sigma_X\}
 $$
 
-with an OU residual kernel on $\alpha_{\mathrm{obs}}-\alpha_{\mathrm{pred}}(w_0,w_a)$. It does **not** vary $\sum m_\nu$. The MLE I already have is $ (w_0,w_a)\approx(-0.99,-0.016)$ and $\sigma_X\to 0$.
+with an OU residual kernel on $\alpha_{\mathrm{obs}}-\alpha_{\mathrm{pred}}(w_0,w_a)$. It does **not** vary $\sum m_\nu$. The MLE I already have is $ (w_0,w_a)\approx(-1.001,+0.014)$ and $\sigma_X\to 0$ ($\approx 5\times10^{-10}$; `results/joint_w0wa_sigma/`, projected covariance).
 
 So:
 

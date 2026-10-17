@@ -73,9 +73,9 @@ This paper and the associated public repository address (1)–(3) using public B
 
 ### 2.1 Dataset
 
-I use **public DESI DR2 BAO summary statistics** (arXiv:2503.14738): isotropic BAO $\alpha$ measurements in seven effective redshift bins, with published measurement uncertainties. The baseline pipeline adopts **diagonal** measurement errors in the residual likelihood. Full off-diagonal BAO covariances are a natural extension for tightening the limit (Section 7); they are not required to establish the *null preference* of the stochastic extension under the kernels tested.
+I use **public DESI DR2 BAO summary statistics** (arXiv:2503.14738): isotropic BAO $\alpha$ measurements in seven effective redshift bins, with published measurement uncertainties. The baseline pipeline adopts the official DESI Gaussian BAO 13×13 covariance projected to isotropic α (block-diagonal across bins) in the residual likelihood. Off-diagonal covariances between bins are absent in the public product; they are not required to establish the *null preference* of the stochastic extension under the kernels tested.
 
-**Important separation:** DESI analyses that combine BAO with CMB+SN often prefer dynamical $w_0$–$w_a$. My BAO-only residual analysis uses a CPL background near $\Lambda$CDM ($ w_0\approx -0.99$, $w_a\approx -0.02$) as the smooth reference for $\alpha=1$ under the fiducial cosmology of the published $\alpha$ products. The stochastic question is about *residuals*, not a re-fit of the full multi-probe DE equation of state.
+**Important separation:** DESI analyses that combine BAO with CMB+SN often prefer dynamical $w_0$–$w_a$. My BAO-only residual analysis uses a CPL background near $\Lambda$CDM ($ w_0\approx -1.001$, $w_a\approx +0.014$; `results/eos_cpl_desi_dr2/`, projected covariance, figure6 α) as the smooth reference for $\alpha=1$ under the fiducial cosmology of the published $\alpha$ products. The stochastic question is about *residuals*, not a re-fit of the full multi-probe DE equation of state.
 
 ### 2.2 Residual process
 

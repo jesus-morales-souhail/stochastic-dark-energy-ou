@@ -25,12 +25,12 @@ Data: DESI DR2 BAO (arXiv:2503.14738) — 7 redshift bins
       Public summary statistics; measurement cov = DESI Gaussian BAO 13x13 projected to alpha (block-diagonal across bins).
 
 Background (CPL, BAO-only):
-  w0 ≈ −0.99
-  wa ≈ −0.02
+  w0 ≈ −1.001
+  wa ≈ +0.014
   (close to flat ΛCDM under the fiducial used for α = 1)
 
 Models tested on residuals:
-- Baseline: ΛCDM (diagonal covariance only)
+- Baseline: ΛCDM (same projected 13x13 covariance)
 - H0: Stationary Ornstein–Uhlenbeck (OU) fluctuations
 - H1: Damped oscillatory QNM kernel
 

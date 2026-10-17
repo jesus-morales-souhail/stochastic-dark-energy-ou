@@ -2,7 +2,7 @@
 """
 CPL background and optional nested effective-EoS extension on DESI DR2 BAO.
 
-Fits free (w0, wa) to the public DESI DR2 BAO alpha vector (full measurement covariance when available),
+Fits free (w0, wa) to the public DESI DR2 BAO alpha vector (covariance as reported by load_alpha_dv: cov_mode),
 then a nested extension with mean-field amplitude σ and rate θ. Uses multi-start
 Nelder–Mead (derivative-free). Outputs go to ``results/eos_cpl_desi_dr2/``.
 
@@ -25,12 +25,18 @@ from desi_dr2_data import load_alpha_dv, measurement_cov
 from scipy.linalg import cho_factor, cho_solve as _cho_solve
 _d_eos = load_alpha_dv(prefer_file=True, use_full_cov=True)
 C_MEAS = measurement_cov(_d_eos)
+COV_LABELS = {
+    "full_gaussian_bao_projected_13x13": "full measurement cov (DESI Gaussian BAO 13x13 projected to alpha)",
+    "diagonal_figure6_errors": "diagonal figure6 errors",
+    "diagonal_fallback": "diagonal fallback-table errors",
+}
+COV_LABEL = COV_LABELS.get(_d_eos["cov_mode"], _d_eos["cov_mode"])
 
 from scipy.integrate import quad
 from scipy.optimize import minimize
 
 # ---------------------------------------------------------------------------
-# Real DESI DR2 BAO data (repo standard; full measurement cov)
+# Real DESI DR2 BAO data (repo standard; covariance from load_alpha_dv, see COV_LABEL)
 # ---------------------------------------------------------------------------
 z_eff = _d_eos["z"]
 alpha_obs = _d_eos["alpha"]
@@ -372,7 +378,9 @@ def main():
     print()
 
     summary = {
-        "data": "DESI DR2 BAO summary statistics (7 bins, full measurement covariance when available)",
+        "data": f"DESI DR2 BAO summary statistics (7 bins, {COV_LABEL})",
+        "cov_mode": _d_eos["cov_mode"],
+        "alpha_source": _d_eos["source"],
         "fiducial": "flat LCDM, Om=0.315, H0=67.4, w0=-1, wa=0",
         "pure_CPL": {
             "w0": cpl["w0"],
@@ -401,7 +409,7 @@ def main():
         "delta_logL_extension_minus_cpl": float(dlogL),
         "delta_AIC_extension_minus_cpl": float(daic),
         "notes": [
-            "BAO-only fit with full measurement covariance (Gaussian BAO projected).",
+            f"BAO-only fit with {COV_LABEL}.",
             "Nested stochastic amplitude is consistent with zero; pure CPL preferred by AIC.",
         ],
     }
@@ -411,7 +419,8 @@ def main():
     lines = [
         "DESI DR2 BAO — CPL background and nested effective-EoS extension",
         "=" * 64,
-        "Data: public DESI DR2 BAO summary statistics (7 bins; full measurement covariance when available).",
+        f"Data: public DESI DR2 BAO summary statistics (7 bins; {COV_LABEL}).",
+        f"alpha source: {_d_eos['source']}",
         "Fiducial distances: flat ΛCDM (Ωm = 0.315, H0 = 67.4, w0 = −1, wa = 0).",
         "",
         "Pure CPL (free w0, wa)",
@@ -440,7 +449,7 @@ def main():
         "  The nested stochastic correction is not favoured (σ consistent with zero;",
         "  positive AIC penalty). Full DESI analyses use the survey covariance matrix",
         "  and multi-probe combinations; these numbers are a transparent BAO-only",
-        "  baseline under the diagonal approximation used in this repository.",
+        f"  baseline with cov_mode = {_d_eos['cov_mode']}.",
         "",
     ]
     out_txt.write_text("\n".join(lines))

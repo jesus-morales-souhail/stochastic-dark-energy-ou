@@ -65,11 +65,11 @@ that is the model, not the measurement noise.
 | `desi_dr2_data.py` | load + project |
 | `desi_dr2_real_bao_test.py` | real $\alpha$ residual scan |
 | `profile_sigma_x_desi.py` | profile $\sigma_X$ |
-| `joint_w0wa_sigma_desi.py` | joint $\{w_0,w_a,\sigma_X\}$ |
+| `joint_w0wa_sigma_desi.py` | joint $\{w_0,w_a,\sigma_X\}$ (results regenerated with $C_\alpha$, 2026-10-17) |
 | `ou_bao_likelihood.py` | OU/QNM comparison |
 | `ou_bao_stochastic_test.py` | alternate OU/QNM |
 | `tachyonic_rank1_mle.py` | rank-1 growth exclusion |
-| `eos_efectiva.py` | CPL + nested extension |
+| `eos_efectiva.py` | CPL + nested extension (results regenerated with $C_\alpha$ and figure6 α, 2026-10-17) |
 
 ## Reproduce
 

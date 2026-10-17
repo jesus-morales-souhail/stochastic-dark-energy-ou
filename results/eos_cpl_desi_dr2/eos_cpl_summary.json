@@ -1,34 +1,36 @@
 {
-  "data": "DESI DR2 BAO summary statistics (7 bins, diagonal errors)",
+  "data": "DESI DR2 BAO summary statistics (7 bins, full measurement cov (DESI Gaussian BAO 13x13 projected to alpha))",
+  "cov_mode": "full_gaussian_bao_projected_13x13",
+  "alpha_source": "data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt",
   "fiducial": "flat LCDM, Om=0.315, H0=67.4, w0=-1, wa=0",
   "pure_CPL": {
-    "w0": -0.9898956968059271,
-    "wa": -0.015902984131323503,
-    "chi2": 1.4115868194458063,
-    "logL": -0.7057934097229032,
-    "AIC": 5.411586819445806,
-    "BIC": 5.303407117556433
+    "w0": -1.0009493383556243,
+    "wa": 0.013702261284299083,
+    "chi2": 4.474584797928804,
+    "logL": -2.237292398964402,
+    "AIC": 8.474584797928804,
+    "BIC": 8.366405096039431
   },
   "lcdm_reference": {
     "w0": -1.0,
     "wa": 0.0,
-    "chi2": 1.6647026678954178,
-    "logL": -0.8323513339477089
+    "chi2": 4.490157819600879,
+    "logL": -2.2450789098004393
   },
   "nested_effective_EoS": {
-    "w0": -0.9898956993021897,
-    "wa": -0.015902976959154023,
-    "sigma": 6.31531450605264e-07,
-    "theta": 1.7338518885924228,
-    "chi2": 1.4115868194458119,
-    "logL": -0.7057934097229059,
-    "AIC": 9.411586819445812,
-    "BIC": 9.195227415667064
+    "w0": -1.0009493414063866,
+    "wa": 0.013702282344774401,
+    "sigma": 8.792607283812291e-08,
+    "theta": 4.071380589658023,
+    "chi2": 4.474584797928832,
+    "logL": -2.237292398964416,
+    "AIC": 12.47458479792883,
+    "BIC": 12.258225394150084
   },
-  "delta_logL_extension_minus_cpl": -2.7755575615628914e-15,
-  "delta_AIC_extension_minus_cpl": 4.000000000000006,
+  "delta_logL_extension_minus_cpl": -1.3766765505351941e-14,
+  "delta_AIC_extension_minus_cpl": 4.000000000000027,
   "notes": [
-    "BAO-only fit with diagonal measurement errors.",
+    "BAO-only fit with full measurement cov (DESI Gaussian BAO 13x13 projected to alpha).",
     "Nested stochastic amplitude is consistent with zero; pure CPL preferred by AIC."
   ]
 }
