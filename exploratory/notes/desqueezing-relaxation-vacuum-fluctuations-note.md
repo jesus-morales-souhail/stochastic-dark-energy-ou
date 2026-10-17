@@ -458,13 +458,13 @@ I thank the DESI collaboration for public BAO data products. Numerical simulatio
 
 | Path | Content |
 |------|---------|
-| `scripts/desqueezing/desqueezing_relax_time.py` | QuTiP scan $t_{1/2}(\gamma,n_{\rm th})$ |
-| `scripts/desqueezing/cosmological_mapping.py` | First-principles Gyr / Sorkin / Euclid tables |
-| `scripts/desqueezing/termico_vs_squeezed_recomendado.py` | Thermal vs squeezed baselines |
-| `results/desqueezing_relax_time/` | Figures and CSV of the half-life law |
-| `results/cosmological_mapping/` | Repo-anchored mapping tables |
+| `exploratory/scripts/desqueezing_relax_time.py` | QuTiP scan $t_{1/2}(\gamma,n_{\rm th})$ |
+| `exploratory/scripts/cosmological_mapping.py` | First-principles Gyr / Sorkin / Euclid tables |
+| `exploratory/scripts/termico_vs_squeezed_recomendado.py` | Thermal vs squeezed baselines |
+| `exploratory/results/desqueezing_relax_time/` | Figures and CSV of the half-life law |
+| `exploratory/results/cosmological_mapping/` | Repo-anchored mapping tables |
 | `README.md` | Index of the GitHub science corpus |
-| `notes/mapping_tables.md` | Compact tables |
+| `exploratory/notes/mapping_tables.md` | Compact tables |
 | `docs/desqueezing-relaxation-vacuum-fluctuations-note.md` | This note |
 
 ## Appendix B — Constants used

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# ARCHIVED 2026-10-17 from scripts/test_desi_dr2_correlations.py
+# Reason: stand-alone DR2 correlation test, not used by the preprint; writes to plots/
 # Lag-correlation test on DESI DR2 BAO residuals (OU kernel)
 
 import numpy as np

@@ -2,7 +2,7 @@
 
 Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
-Related notes: `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamental-vs-emergent.md`, `stochastic-dark-energy-desi-dr2.md`.
+Related notes: `fundamental-vs-emergent-vacuum-relaxation.md`, `sdiff-fundamental-vs-emergent.md`, `papers/stochastic-dark-energy-desi-dr2.md`.
 
 ---
 
@@ -89,7 +89,7 @@ A prior peaked at $\sigma_X\sim 10^{-61}$ is inappropriate: that scale is a UV s
 
 ## 4. Likelihood and model comparison
 
-Gaussian residual likelihood (as in `scripts/ou_bao_stochastic_test.py`):
+Gaussian residual likelihood (as in `scripts/ou_bao_likelihood.py`; DR1 variant archived in `archive/scripts/ou_bao_stochastic_test.py`):
 
 
 $$
@@ -205,13 +205,13 @@ I report $\sigma_X$ and $\theta$ conditional on free smooth DE.
 
 | File | Content |
 |------|---------|
-| `results/euclid_protocol/euclid_forecast_grid.csv` | Residual forecasts over $(\theta,A_0)$ |
-| `figures/euclid_A0_theta_plane.png` | Contours in $(A_0,\theta)$ |
-| `figures/euclid_theta_shape_detectability.png` | Lag-shape $\theta$ thresholds vs $N$ |
-| `scripts/desqueezing/euclid_protocol_forecasts.py` | Regenerates grids and figures |
+| `exploratory/results/euclid_protocol/euclid_forecast_grid.csv` | Residual forecasts over $(\theta,A_0)$ |
+| `exploratory/results/euclid_protocol/euclid_A0_theta_plane.png` | Contours in $(A_0,\theta)$ |
+| `exploratory/results/euclid_protocol/theta_shape_detectability.png` | Lag-shape $\theta$ thresholds vs $N$ |
+| `exploratory/scripts/euclid_protocol_forecasts.py` | Regenerates grids and figures |
 
 ```bash
-python scripts/desqueezing/euclid_protocol_forecasts.py
+python exploratory/scripts/euclid_protocol_forecasts.py
 ```
 
 ---
@@ -234,7 +234,7 @@ These are the only residual **likelihood** products that count as data constrain
 | `scripts/desi_dr2_real_bao_test.py` | Diagonal + OU residual MLE on 7 real bins | `results/desi_dr2_real_bao/` |
 | `scripts/profile_sigma_x_desi.py` | Profile likelihood for $\sigma_X$ | `results/profile_sigma_x/` |
 | `scripts/joint_w0wa_sigma_desi.py` | Joint $\{w_0,w_a,\sigma_X\}$ on real $\alpha$ | `results/joint_w0wa_sigma/` |
-| `scripts/ou_bao_likelihood.py` | Full OU/QNM comparison table | `results/ou_bao_desi_dr2_run.txt` |
+| `scripts/ou_bao_likelihood.py` | Full OU/QNM comparison table | `archive/results/ou_bao_desi_dr2_run.txt` |
 | `scripts/tachyonic_rank1_mle.py` | Rank-1 coherent-growth exclusion | `results/tachyonic_rank1/` |
 
 ```bash
@@ -250,12 +250,12 @@ Working residual ceiling under the OU kernel (this pipeline): $\sigma_X < 2.6\ti
 
 ## 13. What is **not** a DESI claim (retired synthetic Euclid MCMC)
 
-Older folders `results/euclid_mcmc/` and `results/euclid_joint_mcmc/` came from **synthetic** Euclid-like BAO(+SN) vectors. They are **retired**. Do not cite them as DESI or Euclid data.
+Older folders `archive/results/euclid_mcmc/` and `archive/results/euclid_joint_mcmc/` came from **synthetic** Euclid-like BAO(+SN) vectors. They are **retired**. Do not cite them as DESI or Euclid data.
 
-- Stubs that redirect to the real DESI test: `scripts/euclid_mock_mcmc.py`, `scripts/euclid_joint_bao_sne_mcmc.py`
-- Fence: `results/euclid_mcmc/RETIRED.md`, `results/euclid_joint_mcmc/RETIRED.md`
+- Stubs that redirect to the real DESI test: `archive/scripts/euclid_mock_mcmc.py`, `archive/scripts/euclid_joint_bao_sne_mcmc.py`
+- Fence: `archive/results/euclid_mcmc/RETIRED.md`, `archive/results/euclid_joint_mcmc/RETIRED.md`
 
-**Still valid as a protocol (not data):** the forecast grids in §10 (`results/euclid_protocol/`, `scripts/desqueezing/euclid_protocol_forecasts.py`). Those are design forecasts over $(\theta,A_0)$, not likelihoods on measured redshifts.
+**Still valid as a protocol (not data):** the forecast grids in §10 (`exploratory/results/euclid_protocol/`, `exploratory/scripts/euclid_protocol_forecasts.py`). Those are design forecasts over $(\theta,A_0)$, not likelihoods on measured redshifts.
 
 When real Euclid BAO summary statistics are public, replace the retired synthetic MCMC with a loader analogous to `desi_dr2_data.py` and re-run. Until then, empirical residual claims in this repo rest on **DESI DR2 only**.
 

@@ -15,7 +15,7 @@ Per curve (every OU realisation and every reference curve):
 Failures (H0 not bracketed, CAMB error, silent NaN spectra) are flagged per observable and
 counted; nothing is dropped silently. Statistics: estadisticos.py.
 
-The previous version (H0 fixed, HMCode mead2020) is kept in diagnosticos/obsoleto/.
+The previous version (H0 fixed, HMCode mead2020) is kept in archive/analisis_cmb/diagnosticos/obsoleto/.
 
 Usage:
     ./venv/bin/python realizaciones.py --halofit takahashi                 # sigma_X = 2.506e-2

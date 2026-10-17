@@ -11,6 +11,6 @@ Method demos (car–drone pupil, tesseract \(B_4\), wavefront analogies, superos
 Exploratory home:  
 https://github.com/jesus-morales-souhail/stochastic-de-exploratory-notes
 
-I also keep residual DESI, baryon density \(\omega_b\), and VLBI / black-hole imaging as separate problems — see [`scope-and-mixups.md`](scope-and-mixups.md).
+I also keep residual DESI, baryon density \(\omega_b\), and VLBI / black-hole imaging as separate problems — see [`papers/scope-and-mixups.md`](../papers/scope-and-mixups.md).
 
 Claim checklist: [`manuscript/CLAIMS.md`](../manuscript/CLAIMS.md).

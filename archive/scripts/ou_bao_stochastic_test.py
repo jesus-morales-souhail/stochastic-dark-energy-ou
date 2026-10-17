@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# ARCHIVED 2026-10-17 from scripts/ou_bao_stochastic_test.py
+# Reason: DR1 variant with hard-coded data and diagonal cov; the current one is scripts/ou_bao_likelihood.py (DR2, full cov)
 """
 ou_bao_stochastic_test.py
 =========================

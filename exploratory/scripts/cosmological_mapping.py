@@ -15,19 +15,19 @@ import numpy as np
 from scipy.integrate import quad
 import sys as _sys
 from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+_sys.path.insert(0, str(_P(__file__).resolve().parents[2] / "scripts"))
 from desi_bound import desi_sigma_x_bound
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in scripts/desqueezing/)
-RESULTS = os.path.join(ROOT, "results", "cosmological_mapping")
-DOCS = RESULTS  # literal script output; notes/mapping_tables.md is the hand-edited note
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in exploratory/scripts/)
+RESULTS = os.path.join(ROOT, "exploratory", "results", "cosmological_mapping")
+DOCS = RESULTS  # literal script output; exploratory/notes/mapping_tables.md is the hand-edited note
 os.makedirs(RESULTS, exist_ok=True)
 
 # =============================================================================
 # CANONICAL INPUTS — stochastic-dark-energy-ou (resume.txt, papers, scripts)
 # =============================================================================
 
-# Fiducial cosmology (sensitivity_kernel_table.md, ou_bao_stochastic_test.py)
+# Fiducial cosmology (sensitivity_kernel_table.md, archive/scripts/ou_bao_stochastic_test.py)
 H0_KMS = 67.4          # km/s/Mpc
 OM = 0.315             # Omega_m
 OL = 1.0 - OM          # flat LCDM
@@ -40,7 +40,7 @@ S_Z = np.array([-0.284, -0.462, -0.595, -0.719, -0.870, -0.917, -1.070])
 
 # DESI DR2 MLE (resume.txt, stochastic-dark-energy-desi-dr2.md)
 SIGMA_X_LIMIT_95 = desi_sigma_x_bound()
-SIGMA_X_MLE_FLOOR = 5.0e-5  # old run, diagonal cov (results/ou_bao_desi_dr2_run.txt); not the bound
+SIGMA_X_MLE_FLOOR = 5.0e-5  # old run, diagonal cov (archive/results/ou_bao_desi_dr2_run.txt); not the bound
 THETA_MLE_FLOOR = 1.0e-3
 THETA_MIN_OPT = 1.0e-3
 
@@ -48,7 +48,7 @@ THETA_MIN_OPT = 1.0e-3
 THETA_BASE_OLD = 1.2
 SIGMA_OU_OLD = 2.31e-2
 
-# Euclid targets (sdiff-fundamental-vs-emergent.md, main paper)
+# Euclid targets (theory/sdiff-fundamental-vs-emergent.md, main paper)
 SIGMA_X_EUCLID_TARGET = 1.0e-5
 SIGMA_X_EUCLID_DETECT_WINDOW = (0.0, 1.0e-4)  # 0 < sigma_X ≲ 10^{-4}
 

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-ou_bao_stochastic_test.py
-=========================
+ou_bao_likelihood.py
+====================
 Stochastic Dark Energy Network Test: OU and QNM Kernels vs DESI BAO
 
 Author:  Jesús Morales Souhail
@@ -35,7 +35,8 @@ MODELS COMPARED:
 
 USAGE:
   pip install numpy scipy matplotlib
-  python ou_bao_stochastic_test.py
+  python scripts/ou_bao_likelihood.py
+  (DR1 hard-coded predecessor: archive/scripts/ou_bao_stochastic_test.py)
 
 OUTPUTS:
   - Console: model comparison table, fit parameters, lag correlations

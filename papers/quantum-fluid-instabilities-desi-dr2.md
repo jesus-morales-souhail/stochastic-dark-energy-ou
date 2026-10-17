@@ -203,7 +203,7 @@ I thank the DESI collaboration for making the DR2 BAO data publicly available.
 
 ## Addendum: Principle of Late-Time Vacuum Homogeneity
 
-This exclusion is consistent with the broader Principle of Late-Time Vacuum Homogeneity: at observable cosmological scales and with current BAO precision, the dark-energy sector behaves as a homogeneous, non-stochastic background under the tests in this repository. See `principle-of-vacuum-smoothness.md`.
+This exclusion is consistent with the broader Principle of Late-Time Vacuum Homogeneity: at observable cosmological scales and with current BAO precision, the dark-energy sector behaves as a homogeneous, non-stochastic background under the tests in this repository. See `theory/principle-of-vacuum-smoothness.md`.
 
 ## Reproducibility
 

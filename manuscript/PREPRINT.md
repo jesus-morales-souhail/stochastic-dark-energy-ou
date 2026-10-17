@@ -262,7 +262,7 @@ I do not implement a homemade Boltzmann hierarchy. Future work, if amplitudes be
 1. **Summary statistics:** baseline residual analysis uses published BAO $\alpha$ with the official Gaussian BAO covariance projected to $\alpha$ (block-diagonal across bins). Cross-bin covariances, if released, may change the numerical factor in $\sigma_X$ while preserving the null preference if residuals remain consistent with noise.
 2. **Kernel dependence:** bounds are for the OU/QNM residual kernels stated; other residual models need their own covariance and MLE.
 3. **Background degeneracy:** with only seven BAO bins, flexible $w(z)$ can absorb residual variance (Section 3.3). Multi-probe fits are a separate analysis.
-4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.
+4. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`archive/scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint.
 5. **Sorkin seed:** used as motivational UV scale for the amplification discussion, not as a fitted parameter.
 6. **Independent research:** this work has not undergone peer review at the time of writing.
 

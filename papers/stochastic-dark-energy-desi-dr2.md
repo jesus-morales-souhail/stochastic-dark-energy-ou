@@ -540,7 +540,7 @@ This implementation is self-contained and reproduces the kernel values used in t
 All scripts are publicly available in the repository associated with this preprint:
 
 - `ou_bao_likelihood.py`: BAO likelihood, MLE fitting, and lag correlations.
-- `cross_correlation_DESI.py`: HEALPix cross-correlation pipeline.
+- `archive/scripts/cross_correlation_DESI.py` (archived, preliminary): HEALPix cross-correlation pipeline.
 
 **Data sources:**
 

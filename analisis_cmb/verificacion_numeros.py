@@ -42,7 +42,7 @@ for z in (0.5, 1.0, 1.5):
          f"con 1.5e-4: {2 * SX_OLD * rr:.3e}  {MAUS / (2 * SX_OLD * rr):.0f}x  {SAKR / (2 * SX_OLD * rr):.0f}x")
 for eps in (0.1, 0.01):
     show(f"z=0.5, eps={eps}", f"{2 * eps * SX * OL0 / (OM0 * 1.5**3):.3e}")
-# data-pack-option0-internet.md l.83-94: |eta-1| ~ f (Omega_DE/Omega_m) sigma_X, Omega_DE/Omega_m ~ 2, f = 1
+# exploratory/notes/data-pack-option0-internet.md l.83-94: |eta-1| ~ f (Omega_DE/Omega_m) sigma_X, Omega_DE/Omega_m ~ 2, f = 1
 e = 1 * 2 * SX
 show("data-pack: |eta-1| ~ 2 sigma_X; 0.11/.. ; 0.05/..", f"{e:.3e}  {0.11 / e:.2f}x  {0.05 / e:.2f}x",
      "Maus sigma(gamma)=0.11 como en data-pack l.93")
@@ -67,7 +67,7 @@ for sig, name in ((SX, "DESI"), (SX_OLD, "1.5e-4 (old)"), (1e-5, "Euclid")):
          f"{Ne:.3e}  {math.log10(N_BH / Ne):.1f}  " + "  ".join(f"{L:.2e}" for L in Ls))
 
 # ---------------------------------------------------------------- 4. theta_min (euclid-protocol l.137)
-print("\n# 4. theta_min = -ln(1 - s/A0)/dx, dx = 0.94 (euclid-protocol-vacuum-relaxation.md l.137-141)")
+print("\n# 4. theta_min = -ln(1 - s/A0)/dx, dx = 0.94 (theory/euclid-protocol-vacuum-relaxation.md l.137-141)")
 for s, A0 in ((1e-5, 3e-5), (1e-5, 1e-4), (3e-5, 1e-4), (5e-5, 2.5e-2), (5e-5, SX), (5e-5, SX_OLD)):  # 2.5e-2 = value printed at l.148
     show(f"s={s:g}, A0={A0:g}", f"{-math.log1p(-s / A0) / 0.94:.3e}")
 

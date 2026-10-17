@@ -9,14 +9,12 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import sys as _sys
 from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+_sys.path.insert(0, str(_P(__file__).resolve().parents[2] / "scripts"))
 from desi_bound import desi_sigma_x_bound
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-OUT = os.path.join(ROOT, "results", "euclid_protocol")
-FIG = os.path.join(ROOT, "figures")
+OUT = os.path.join(ROOT, "exploratory", "results", "euclid_protocol")
 os.makedirs(OUT, exist_ok=True)
-os.makedirs(FIG, exist_ok=True)
 
 H0, OM = 67.4, 0.315
 T_H0 = 977.8 / H0
@@ -72,7 +70,6 @@ def main():
     ], fontsize=8, loc="lower left")
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "euclid_A0_theta_plane.png"), dpi=160, bbox_inches="tight")
-    fig.savefig(os.path.join(FIG, "euclid_A0_theta_plane.png"), dpi=160, bbox_inches="tight")
     plt.close()
 
     Ns = np.array([7, 10, 15, 20, 30, 40, 50])
@@ -87,7 +84,6 @@ def main():
     ax.legend(fontsize=8); ax.grid(True, alpha=0.3)
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "theta_shape_detectability.png"), dpi=160, bbox_inches="tight")
-    fig.savefig(os.path.join(FIG, "euclid_theta_shape_detectability.png"), dpi=160, bbox_inches="tight")
     plt.close()
     print("Wrote", OUT)
 

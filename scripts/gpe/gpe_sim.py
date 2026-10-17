@@ -1,5 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
+
+OUT = Path(__file__).resolve().parents[2] / "results" / "gpe"
+OUT.mkdir(parents=True, exist_ok=True)
 from matplotlib.animation import FuncAnimation
 
 # ============================================================
@@ -125,7 +129,7 @@ for idx, color in zip(plot_indices, colors):
 ax1.legend()
 ax2.legend()
 plt.tight_layout()
-plt.savefig("gpe_negative_mass_evolution.png", dpi=150)
+plt.savefig(OUT / "gpe_negative_mass_evolution.png", dpi=150)
 plt.show()
 
 # ============================================================
@@ -139,7 +143,7 @@ ax.set_xlabel("Tiempo t")
 ax.set_ylabel("Densidad pico |ψ|²_max")
 ax.set_title("Crecimiento de la densidad pico (inestabilidad dinámica)")
 ax.grid(True, alpha=0.3)
-plt.savefig("gpe_negative_mass_instability.png", dpi=150)
+plt.savefig(OUT / "gpe_negative_mass_instability.png", dpi=150)
 plt.show()
 
 print("Simulación completada.")

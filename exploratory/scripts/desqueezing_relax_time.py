@@ -30,13 +30,13 @@ import csv
 import numpy as np
 import sys as _sys
 from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+_sys.path.insert(0, str(_P(__file__).resolve().parents[2] / "scripts"))
 from desi_bound import desi_sigma_x_bound
 import matplotlib.pyplot as plt
 import qutip as qt
 
-ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in scripts/desqueezing/)
-RESULTS = os.path.join(ROOT, "results", "desqueezing_relax_time")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in exploratory/scripts/)
+RESULTS = os.path.join(ROOT, "exploratory", "results", "desqueezing_relax_time")
 os.makedirs(RESULTS, exist_ok=True)
 
 # -------------------- parámetros base --------------------

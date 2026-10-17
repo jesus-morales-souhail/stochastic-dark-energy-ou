@@ -1,3 +1,5 @@
+# ARCHIVED 2026-10-17 from scripts/cross_correlation_DESI.py
+# Reason: preliminary DESI x SN cross-correlation (N5), outside the claim set; paths depend on the cwd (data/, results/)
 """
 Angular cross-correlation test: galaxy overdensity × dark-energy residual proxy.
 

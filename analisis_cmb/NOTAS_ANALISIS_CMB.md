@@ -14,7 +14,7 @@
 
 | Fichero | Valor que NO hay que usar | Por qué |
 |---|---|---|
-| `results/ou_bao_desi_dr2_run.txt` | θ = 0.001, σ_X = 5e-5, logL(ΛCDM) = 27.013, AIC −50.03 / −48.03 | Ejecución antigua OU+QNM; su logL no coincide con la covarianza completa (24.8996) → casi seguro covarianza diagonal |
+| `archive/results/ou_bao_desi_dr2_run.txt` | θ = 0.001, σ_X = 5e-5, logL(ΛCDM) = 27.013, AIC −50.03 / −48.03 | Ejecución antigua OU+QNM; su logL no coincide con la covarianza completa (24.8996) → casi seguro covarianza diagonal |
 | `papers/resume.txt` (sección 1) | θ = 0.001, σ_X = 5e-5, AIC = −50.03 / −48.03 | Copia los parámetros de la ejecución antigua de arriba (el límite 2.5e-2 que cita sí es el vigente) |
 | `results/desi_dr2_real_bao/desi_dr2_real_bao.txt` (y `.json`) | σ_X 95 % "approx" = 2.175e-2 | Usa covarianza completa pero es una estimación aproximada, no el perfil oficial |
 | `../measurable-stochastic-vacuum/results/r1_lambda_profile/lambda_profile.json` | `lambda_working_from_1p5e-4` | Basado en el antiguo σ_X < 1.5e-4 (objetivo de trabajo, no cota real) |
@@ -43,7 +43,7 @@ Cualquier aparición de σ_X < 1.5e-4 es la cifra antigua (ver `papers/BOUND_COR
 - ⇒ en el código X = δΩ_Λ evaluado localmente en cada z_i (con Ω_m compensando).
 - Los papers dan definiciones distintas: X = δΩ_Λ (`papers/stochastic-dark-energy-desi-dr2.md` l.70),
   X = δρ_DE/ρ_crit,0 sumado a E² (mismo paper, l.562) y X = δρ_Λ/ρ̄_Λ
-  (`papers/unimodular-gravity-vacuum-smoothness.md` l.68).
+  (`theory/unimodular-gravity-vacuum-smoothness.md` l.68).
 
 ## Inconsistencias a corregir en los papers
 
@@ -52,7 +52,7 @@ Tres definiciones distintas de X en el repo:
 1. `papers/stochastic-dark-energy-desi-dr2.md` l.70 — X ≡ δΩ_Λ(x), x = ln a.
 2. `papers/stochastic-dark-energy-desi-dr2.md` l.562 — H² = H0²[Ω_m(1+z)³ + Ω_Λ + X(z)], i.e.
    X = δρ_DE/ρ_crit,0 ⇒ δ ln ρ_DE = X/Ω_Λ0.
-3. `papers/unimodular-gravity-vacuum-smoothness.md` l.68 — X ≡ δρ_Λ/ρ̄_Λ = δ ln ρ_DE.
+3. `theory/unimodular-gravity-vacuum-smoothness.md` l.68 — X ≡ δρ_Λ/ρ̄_Λ = δ ln ρ_DE.
 
 Además, el kernel BAO del código (δα_i = S(z_i)·X(z_i), S = ∂ln D_V/∂Ω_Λ con Ω_m = 1 − Ω_Λ
 compensando punto a punto) no define una cosmología única: cada bin ve un Ω_Λ (y un Ω_m)
@@ -250,7 +250,7 @@ Fuentes: `resultados/sigma_2.506e-02/{resumen.json, tabla.md, banda_delta.txt, o
   corrección no lineal de φφ.
 - **Fallos**: NaN silenciosos en espectros = fallo de esa observable, contados junto a los errores
   de CAMB (`fallos_*.json`). Versión anterior del script (H0 fijo, mead2020):
-  `diagnosticos/obsoleto/realizaciones_H0fijo_mead2020.py`; sus resultados en `resultados/sigma_2.506e-02/`
+  `archive/analisis_cmb/diagnosticos/obsoleto/realizaciones_H0fijo_mead2020.py`; sus resultados en `resultados/sigma_2.506e-02/`
   son **obsoletos**.
 
 ## Resultado σ_X = 2.506e-2, método H0 resuelto + takahashi (2026-10-03)

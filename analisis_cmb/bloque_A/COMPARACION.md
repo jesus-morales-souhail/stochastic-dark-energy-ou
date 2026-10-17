@@ -1,3 +1,5 @@
+> Rutas a fecha del commit d71c4d2, antes de la reorganización del 2026-10-17.
+
 # Bloque A: etiquetas de covarianza, CPL y joint reajustados (2026-10-17)
 
 Bloque A de `analisis_cmb/AUDITORIA.md` → "Orden propuesto de corrección". No se ha tocado nada de B, C ni D.

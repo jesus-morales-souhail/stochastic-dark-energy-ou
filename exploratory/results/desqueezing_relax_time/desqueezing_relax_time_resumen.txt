@@ -28,7 +28,7 @@ Tabla (gamma, n_th, gamma_eff, t_half_a2, t_half_theory):
   γ= 2.40  n_th=0.50  γ_eff= 4.800  t½=0.28883  t½_th=0.28881
   γ= 2.40  n_th=1.00  γ_eff= 7.200  t½=0.28883  t½_th=0.28881
 
-figura: results/desqueezing_relax_time/desqueezing_relax_time.png
-csv:    results/desqueezing_relax_time/t_relax_tabla.csv
-npz:    results/desqueezing_relax_time/t_relax_series.npz
+figura: exploratory/results/desqueezing_relax_time/desqueezing_relax_time.png
+csv:    exploratory/results/desqueezing_relax_time/t_relax_tabla.csv
+npz:    exploratory/results/desqueezing_relax_time/t_relax_series.npz
 memoria repo: docs/MEMORIA_REPO_stochastic-dark-energy-ou.md

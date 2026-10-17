@@ -33,3 +33,8 @@ plots/
 # analisis_cmb (datos descargables y entorno)
 analisis_cmb/datos_planck/
 analisis_cmb/venv/
+
+# reorganización 2026-10-17: binarios en archive/ y exploratory/
+archive/**/*.npz
+archive/**/*.npy
+exploratory/**/*.npz

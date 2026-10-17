@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# ARCHIVED 2026-10-17 from analisis_cmb/diagnosticos/obsoleto/realizaciones_H0fijo_mead2020.py
+# Reason: obsolete CMB diagnostic (fixed H0, HMCode mead2020); superseded by analisis_cmb/realizaciones.py
 """
 200 OU realisations per (theta, Delta, sigma_X) through CAMB; Delta chi^2 against LCDM on Planck bins.
 

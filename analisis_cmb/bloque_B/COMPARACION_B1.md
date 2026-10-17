@@ -1,3 +1,5 @@
+> Rutas a fecha del commit d71c4d2, antes de la reorganización del 2026-10-17.
+
 # Bloque B1: cota = raíz del perfil (2.633e-2), constantes desde el json, resultados regenerados (2026-10-17)
 
 **Decisión del autor:** σ_X < 2.6e-2, raíz refinada del perfil (anotada en AUDITORIA.md, tabla 2a última fila y principio del bloque B). No se han tocado papers/, manuscript/ ni README.

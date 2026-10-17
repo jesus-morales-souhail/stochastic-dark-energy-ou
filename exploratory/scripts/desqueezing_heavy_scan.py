@@ -17,9 +17,8 @@ import qutip as qt
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "results" / "desqueezing_heavy"
+OUT = ROOT / "exploratory" / "results" / "desqueezing_heavy"
 OUT.mkdir(parents=True, exist_ok=True)
-FIG = ROOT / "figures"
 
 N = 100  # Hilbert space (balance cost vs accuracy)
 omega = 2.4
@@ -150,7 +149,6 @@ def main():
     fig.suptitle(f"Heavy desqueezing scan (QuTiP N={N})")
     fig.tight_layout()
     fig.savefig(OUT / "desqueezing_heavy.png", dpi=150)
-    fig.savefig(FIG / "desqueezing_heavy.png", dpi=150)
     plt.close(fig)
 
     text = (

@@ -49,7 +49,7 @@ Tres definiciones distintas de X en el repo:
 
 1. `papers/stochastic-dark-energy-desi-dr2.md` l.70 — X ≡ δΩ_Λ(x), x = ln a.
 2. `papers/stochastic-dark-energy-desi-dr2.md` l.562 — H² = H0²[Ω_m(1+z)³ + Ω_Λ + X(z)], i.e. X = δρ_DE/ρ_crit,0 ⇒ δ ln ρ_DE = X/Ω_Λ0.
-3. `papers/unimodular-gravity-vacuum-smoothness.md` l.68 — X ≡ δρ_Λ/ρ̄_Λ = δ ln ρ_DE.
+3. `theory/unimodular-gravity-vacuum-smoothness.md` l.68 — X ≡ δρ_Λ/ρ̄_Λ = δ ln ρ_DE.
 
 Además, el kernel BAO del código (δα_i = S(z_i)·X(z_i), S = ∂ln D_V/∂Ω_Λ con Ω_m = 1 − Ω_Λ compensando punto a punto) no define una cosmología única: cada bin ve un Ω_Λ (y un Ω_m) distinto. Lo que se construye en `analisis_cmb/` es la primera versión física (una sola historia ρ_DE(a), H(a)) del modelo.
 

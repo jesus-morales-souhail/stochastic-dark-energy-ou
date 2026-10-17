@@ -30,7 +30,7 @@ Related:
   papers/anisotropic-slip-option0.md
   papers/amplification-gap.md
   papers/resume.txt
-  papers/data-pack-option0-internet.md
+  exploratory/notes/data-pack-option0-internet.md
 """
 
 from __future__ import annotations

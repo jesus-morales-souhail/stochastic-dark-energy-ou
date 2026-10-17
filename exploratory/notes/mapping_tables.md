@@ -38,7 +38,7 @@ Fiducial: $H_0=67.4$, $\Omega_m=0.315$, $t_0=13.796 \mathrm{Gyr}$.
 | theta=0.099 (half over recomb path) | recomb | DESI_limit_2.633e-2 | 5.266e-02 | 5.266e+59 |
 | theta=0.099 (half over recomb path) | recomb | Euclid_1e-5 | 2.000e-05 | 2.000e+56 |
 
-DESI rows: `results/cosmological_mapping/table2_A0_required.csv` (DESI bound 2.633e-2 = `sigma_X_95CL_upper_profile` of `results/profile_sigma_x/profile_sigma_x.json`, 2026-10-17).
+DESI rows: `exploratory/results/cosmological_mapping/table2_A0_required.csv` (DESI bound 2.633e-2 = `sigma_X_95CL_upper_profile` of `results/profile_sigma_x/profile_sigma_x.json`, 2026-10-17).
 
 ## Table 3 — Page/scrambling with $S=10^{122}$
 

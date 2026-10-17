@@ -1,3 +1,6 @@
+<!-- ARCHIVED 2026-10-17 from results/euclid_mcmc/RETIRED.md -->
+<!-- Reason: retired synthetic Euclid MCMC (N9) -->
+
 # Retired — synthetic Euclid MCMC
 
 These products were produced with a **synthetic** Euclid-like BAO vector, not with measured DESI or Euclid redshifts.
@@ -11,4 +14,4 @@ Use instead:
 - `scripts/joint_w0wa_sigma_desi.py`
 - `results/desi_dr2_real_bao/`, `results/profile_sigma_x/`, `results/joint_w0wa_sigma/`
 
-Forecast-only protocol (not MCMC on data): `results/euclid_protocol/`.
+Forecast-only protocol (not MCMC on data): `exploratory/results/euclid_protocol/`.

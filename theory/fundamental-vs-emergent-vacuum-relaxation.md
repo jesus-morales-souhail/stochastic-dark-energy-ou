@@ -5,7 +5,7 @@
 **ORCID:** [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818)
 **Repository:** https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou
 **Status:** Technical note
-**Related:** `sdiff-fundamental-vs-emergent.md`, `desqueezing-relaxation-vacuum-fluctuations-note.md`, `stochastic-dark-energy-desi-dr2.md`
+**Related:** `sdiff-fundamental-vs-emergent.md`, `exploratory/notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, `papers/stochastic-dark-energy-desi-dr2.md`
 
 ---
 
@@ -160,14 +160,14 @@ I do not derive SDiff from quantum gravity in this note, nor do I identify a mic
 
 | File | Content |
 |------|---------|
-| `results/sdiff_discrimination/sdiff_discrimination_grid.csv` | Grid over $\theta$ and $A_0$ scenarios |
-| `results/sdiff_discrimination/summary.txt` | Numerical summary |
-| `figures/sdiff_residual_vs_theta.png` | Residual vs $\theta$ |
-| `figures/sdiff_A0_min_for_detection.png` | Minimum $A_0$ for detection |
-| `figures/sdiff_t_half_vs_theta.png` | Half-life vs $\theta$ |
+| `exploratory/results/sdiff_discrimination/sdiff_discrimination_grid.csv` | Grid over $\theta$ and $A_0$ scenarios |
+| `exploratory/results/sdiff_discrimination/summary.txt` | Numerical summary |
+| `exploratory/results/sdiff_discrimination/residual_vs_theta.png` | Residual vs $\theta$ |
+| `exploratory/results/sdiff_discrimination/A0_min_for_detection.png` | Minimum $A_0$ for detection |
+| `exploratory/results/sdiff_discrimination/t_half_vs_theta.png` | Half-life vs $\theta$ |
 
 ```bash
-python scripts/desqueezing/sdiff_discrimination.py
+python exploratory/scripts/sdiff_discrimination.py
 ```
 
 ---
@@ -189,7 +189,7 @@ I specify a Euclid-facing fit with free $\{w_0,w_a,\theta,\sigma_X\}$ in `euclid
 
 [1] Morales Souhail, J., “Constraints on Stochastic Dark Energy from DESI DR2,” this repository (`papers/stochastic-dark-energy-desi-dr2.md`).
 [2] Morales Souhail, J., “SDiff as Fundamental Symmetry vs Emergent Feature,” this repository.
-[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`notes/`).
+[3] Morales Souhail, J., “Desqueezing Relaxation Time…,” this repository (`exploratory/notes/`).
 [4] DESI Collaboration, arXiv:2503.14738 (2025).
 [5] Sorkin, R. D., arXiv:gr-qc/0503057 (2005).
 [6] Bekenstein, J. D., Phys. Rev. D 7, 2333 (1973).

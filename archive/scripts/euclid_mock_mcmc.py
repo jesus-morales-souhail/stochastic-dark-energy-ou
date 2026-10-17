@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# ARCHIVED 2026-10-17 from scripts/euclid_mock_mcmc.py
+# Reason: deprecated stub of the synthetic Euclid MCMC (N9); it only forwarded to scripts/desi_dr2_real_bao_test.py
 """
 DEPRECATED stub (was synthetic Euclid BAO).
 

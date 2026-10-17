@@ -1,3 +1,5 @@
+> Rutas a fecha del commit d71c4d2, antes de la reorganización del 2026-10-17.
+
 # AUDITORÍA del repo stochastic-dark-energy-ou (2026-10-03)
 
 Alcance: todos los ficheros versionados fuera de `analisis_cmb/` (README.md, manuscript/, papers/, notes/, results/, scripts/), más dos notas sobre `analisis_cmb/` al final del punto 3. **No se ha modificado ningún fichero.** Líneas comprobadas con `grep -n` en el estado de `main` = `f12527d`.

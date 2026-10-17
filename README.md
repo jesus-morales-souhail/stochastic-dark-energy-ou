@@ -16,10 +16,10 @@ Method / optics notes only: [stochastic-de-exploratory-notes](https://github.com
 ## Read these first
 
 1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main write-up  
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim and what I do not  
+2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C7) and what I do not (N1–N10)  
 3. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft \(10^{56}\) is not free  
 4. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — wording I allow myself  
-5. [`papers/EXPLORATORY_BOUNDARY.md`](papers/EXPLORATORY_BOUNDARY.md) — what is not part of the paper  
+5. [`theory/EXPLORATORY_BOUNDARY.md`](theory/EXPLORATORY_BOUNDARY.md) — what is not part of the paper  
 6. [`papers/scope-and-mixups.md`](papers/scope-and-mixups.md) — residual \(\sigma_X\) is not \(\omega_b\), not EHT  
 
 ---
@@ -34,25 +34,41 @@ Under the OU/QNM residual kernel on public DESI DR2 BAO, a stochastic residual i
 
 Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure Sorkin seed \(\sim 10^{-61}\) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.
 
-Main long notes: `papers/stochastic-dark-energy-desi-dr2.md`, `papers/quantum-fluid-instabilities-desi-dr2.md`.  
-Geometry / unimodular discussion: `papers/unimodular-gravity-vacuum-smoothness.md` and the short principle `papers/principle-of-vacuum-smoothness.md`.  
-Numbers snapshot: `papers/resume.txt`. Bound history: `papers/BOUND_CORRECTION_SIGMA_X.md`.
+Main long notes: [`papers/stochastic-dark-energy-desi-dr2.md`](papers/stochastic-dark-energy-desi-dr2.md), [`papers/quantum-fluid-instabilities-desi-dr2.md`](papers/quantum-fluid-instabilities-desi-dr2.md).  
+Geometry / unimodular discussion (theory, outside the claim set): [`theory/unimodular-gravity-vacuum-smoothness.md`](theory/unimodular-gravity-vacuum-smoothness.md) and the short principle [`theory/principle-of-vacuum-smoothness.md`](theory/principle-of-vacuum-smoothness.md).  
+Numbers snapshot: [`papers/resume.txt`](papers/resume.txt). Bound history: [`papers/BOUND_CORRECTION_SIGMA_X.md`](papers/BOUND_CORRECTION_SIGMA_X.md).
 
 ---
 
 ## Layout
 
+What supports the preprint (claims C1–C7) lives in `manuscript/`, `papers/`, `scripts/`, `results/` and `figures/`. Everything else is labelled as theory, exploratory or archived.
+
 ```
-manuscript/   preprint and claims
-papers/       technical notes
-scripts/      analysis code
-data/         local DESI products (public provenance)
-results/      numerical outputs
-notes/        working notes
+manuscript/    preprint, claim checklist, cover letter
+papers/        technical notes that support C1–C7
+scripts/       analysis code for the claim set (DESI DR2 BAO, amplification, slip bridge)
+results/       numerical outputs of scripts/
+figures/       the two figures copied there by their scripts (profile_sigma_x, joint_w0wa_sigma)
+theory/        theory-programme notes (unimodular / SDiff, vacuum smoothness, ν–DE, Euclid protocol); not C1–C7
+exploratory/   desqueezing programme: scripts/, results/, notes/; not cited as DESI results
+analisis_cmb/  OU at the DESI ceiling vs Planck 2018 (CMB), everpresent Λ, audit and correction logs
+archive/       retired material (synthetic Euclid MCMC, stubs, DR1 script, orphan figures), kept for history
+data/          local DESI products (public provenance; not versioned)
 ```
 
+Each of `theory/`, `exploratory/`, `archive/` and `analisis_cmb/` has its own README.
+
+---
+
+## Reproduce
+
 ```bash
+pip install -r requirements.txt
 python scripts/profile_sigma_x_desi.py
 python scripts/tachyonic_rank1_mle.py
 python scripts/amplifier_audit.py
 ```
+
+OU / QNM residual likelihood used in the preprint: `python scripts/ou_bao_likelihood.py`.  
+Consistency check across the BAO pipelines: `python scripts/verify_bao_pipelines.py`.

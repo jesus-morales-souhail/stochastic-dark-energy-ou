@@ -15,7 +15,7 @@ Narrative cohesion (how papers fit): see repository README.md
     R3: p95/sigma ~ 2; 0/288 jobs seed→Euclid; all 288 jobs BAO-safe (max p95 2.1e-3)
   Act IV bridge: scripts/slip_bridge.py  (|gamma-1|~3e-2 best case; ~1.5-7x starved)
   External lab optics: separate optics project (NOT this paper)
-Data pack (arXiv links): papers/data-pack-option0-internet.md
+Data pack (arXiv links): exploratory/notes/data-pack-option0-internet.md
 
 ================================================================================
 1. BAO ANALYSIS — ORNSTEIN–UHLENBECK + QNM MODELS (DESI DR2)
@@ -38,7 +38,7 @@ Results:
 
   OU model (H0):
     θ     = 0.001  (≈ boundary, effectively undamped)
-    σ_X   = 5 × 10⁻⁵   (old run, diagonal cov: results/ou_bao_desi_dr2_run.txt)
+    σ_X   = 5 × 10⁻⁵   (old run, diagonal cov: archive/results/ou_bao_desi_dr2_run.txt)
     Δlogℒ vs ΛCDM = 0.00
     AIC = -50.03 | BIC = -50.14
 

@@ -9,14 +9,12 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import sys as _sys
 from pathlib import Path as _P
-_sys.path.insert(0, str(_P(__file__).resolve().parents[1]))
+_sys.path.insert(0, str(_P(__file__).resolve().parents[2] / "scripts"))
 from desi_bound import desi_sigma_x_bound
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-OUT = os.path.join(ROOT, "results", "sdiff_discrimination")
-FIG = os.path.join(ROOT, "figures")
+OUT = os.path.join(ROOT, "exploratory", "results", "sdiff_discrimination")
 os.makedirs(OUT, exist_ok=True)
-os.makedirs(FIG, exist_ok=True)
 
 H0, OM, OL = 67.4, 0.315, 0.685
 T_H0 = 977.8 / H0
@@ -82,7 +80,6 @@ def main():
     ax.grid(True, which="both", alpha=0.3)
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "residual_vs_theta.png"), dpi=160, bbox_inches="tight")
-    fig.savefig(os.path.join(FIG, "sdiff_residual_vs_theta.png"), dpi=160, bbox_inches="tight")
     plt.close()
 
     def A0_min(target, th, dx):
@@ -97,7 +94,6 @@ def main():
     ax.grid(True, which="both", alpha=0.3)
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "A0_min_for_detection.png"), dpi=160, bbox_inches="tight")
-    fig.savefig(os.path.join(FIG, "sdiff_A0_min_for_detection.png"), dpi=160, bbox_inches="tight")
     plt.close()
 
     th2 = np.geomspace(1e-3, 10, 100)
@@ -111,7 +107,6 @@ def main():
     ax.grid(True, which="both", alpha=0.3)
     fig.tight_layout()
     fig.savefig(os.path.join(OUT, "t_half_vs_theta.png"), dpi=160, bbox_inches="tight")
-    fig.savefig(os.path.join(FIG, "sdiff_t_half_vs_theta.png"), dpi=160, bbox_inches="tight")
     plt.close()
     print("Wrote", OUT)
 

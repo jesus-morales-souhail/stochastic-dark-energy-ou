@@ -1,25 +1,34 @@
-# analisis_cmb — OU a varianza máxima DESI frente a Planck 2018
+# analisis_cmb — OU at the DESI maximum variance vs Planck 2018
 
-Pregunta (versión vigente): con σ_X = 2.506e-2 (límite 95 % del perfil DESI DR2 BAO,
-`../results/profile_sigma_x/profile_sigma_x.json`), ¿alguna observable del CMB (TT a l<30,
-C_L^φφ, θ_*) separa la banda 68 % de 200 realizaciones OU de la curva w0-wa más de lo que
-permite Planck 2018? ¿Qué cota sobre σ_X impondría Planck? Método vigente: H0 de cada curva
-resuelto para fijar θ_* al de ΛCDM; observables TT l<30, C_L^φφ y distribución de H0.
+Question (current version): with σ_X at the 95 % limit of the DESI DR2 BAO profile
+(`../results/profile_sigma_x/profile_sigma_x.json`; 2.633e-2 since 2026-10-17, previously the grid
+node 2.506e-2), does any CMB observable (TT at l<30, C_L^φφ, θ_*) separate the 68 % band of 200 OU
+realisations from the w0-wa curve by more than Planck 2018 allows? What bound on σ_X would Planck
+impose? Current method: the H0 of each curve is solved so that θ_* matches ΛCDM; observables TT l<30,
+C_L^φφ and the H0 distribution.
 
-No toca los scripts de ajuste BAO del repo. Todas las decisiones, valores de procedencia y
-problemas abiertos: `NOTAS_ANALISIS_CMB.md`.
+It does not touch the repository's BAO fitting scripts. All decisions, provenance of values and open
+problems: `NOTAS_ANALISIS_CMB.md`. Result: `RESULTADO.md`.
+
+**Scope.** This analysis is not part of the preprint's claim set (C1–C7 in
+[`../manuscript/CLAIMS.md`](../manuscript/CLAIMS.md)); the preprint does not cite it. The working
+documents in this folder (`NOTAS_ANALISIS_CMB.md`, `RESULTADO.md`, the audit and the block reports)
+are in Spanish.
 
 ```
-venv/                 CAMB 2.0.4 (ignorado por git)
-datos_planck/         ficheros del Planck Legacy Archive
+venv/                 CAMB 2.0.4 (ignored by git)
+datos_planck/         files from the Planck Legacy Archive (ignored by git)
 ou_cmb.py             X(ln a) → ρ_DE → w(a) → CAMB (PPF)
-planck_datos.py       carga de errores Planck (TT, bandpowers lensing, θ_*)
-realizacion_unica.py  una realización θ=1 + prueba de convergencia 500/2000 puntos
-diagnosticos/         pruebas de convergencia malla-camino / tabla, banda por Δ; obsoleto/ = versiones viejas
-realizaciones.py      200 realizaciones por (θ, Δ, σ_X), H0 resuelto → resultados/<halofit>/sigma_<σ>/
+planck_datos.py       loads the Planck errors (TT, lensing bandpowers, θ_*)
+realizacion_unica.py  one realisation at θ=1 + convergence test with 500/2000 points
+diagnosticos/         path-grid / table convergence tests, band per Δ
+realizaciones.py      200 realisations per (θ, Δ, σ_X), H0 solved → resultados/<halofit>/sigma_<σ>/
 estadisticos.py       Δχ², percentiles, H0 → resumen.json, tabla.md
-resultados/           salidas (resultados/sigma_2.506e-02/ y tabla.py: método viejo, H0 fijo — obsoletos)
+resultados/           outputs (resultados/sigma_2.506e-02/: old method, fixed H0 — obsolete)
 ```
+
+The old fixed-H0 scripts (formerly `diagnosticos/obsoleto/`) are in
+[`../archive/analisis_cmb/diagnosticos/obsoleto/`](../archive/README.md).
 
 ```bash
 ./venv/bin/python realizacion_unica.py
@@ -27,9 +36,24 @@ resultados/           salidas (resultados/sigma_2.506e-02/ y tabla.py: método v
 ./venv/bin/python estadisticos.py resultados/takahashi/sigma_2.506e-02
 ```
 
-Estado (2026-10-03): análisis terminado; resultado en `RESULTADO.md`.
+Status (2026-10-03): analysis finished; result in `RESULTADO.md` (re-run at σ_X = 2.633e-2 on
+2026-10-17, `resultados/takahashi/sigma_2.633e-02/`).
 
-## Volver a descargar los datos (`datos_planck/` está en .gitignore)
+## Other contents
+
+| Path | Content |
+|:--|:--|
+| `everpresent/` | Everpresent Λ (Ahmed–Dodelson–Greene–Sorkin and follow-ups) against DESI DR2 BAO; `EVERPRESENT_vs_DESI.md` |
+| `oscilador/` | Deterministic oscillating X(ln a) against DESI DR2 BAO and Planck 2018; `oscilador/README.md` |
+| `AUDITORIA.md` | Audit of the numbers across the repository (2026-10-03) |
+| `bloque_A/`, `bloque_B/` | Correction blocks A, B1, B1b, B2: before/after comparisons, snapshots (`antes/`) and logs |
+| `verificacion_numeros.md`, `verificacion_numeros.py` | Re-computation of the flagged numbers |
+| `REORGANIZACION.md`, `REORGANIZACION_CHECK.md` | Repository reorganisation of 2026-10-17 and its checks |
+
+The audit and the block reports quote paths as they were at commit `d71c4d2`, before the
+reorganisation.
+
+## Downloading the data again (`datos_planck/` is in .gitignore)
 
 ```bash
 mkdir -p datos_planck

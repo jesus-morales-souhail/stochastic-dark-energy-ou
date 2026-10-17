@@ -10,8 +10,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import qutip as qt
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RESULTS = os.path.join(ROOT, "results", "termico_vs_squeezed_recomendado")
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repo root (script lives in exploratory/scripts/)
+RESULTS = os.path.join(ROOT, "exploratory", "results", "termico_vs_squeezed_recomendado")
 os.makedirs(RESULTS, exist_ok=True)
 
 # Parámetros fijos

@@ -1,6 +1,8 @@
 # Reorganización del repo — paso 1: inventario y destinos propuestos
 
-Estado: **solo inventario**. No se ha movido ni borrado nada. Base: `git ls-files` en `d71c4d2` (472 ficheros versionados).
+Estado: **solo inventario**. No se ha movido ni borrado nada.
+
+**Ejecutado el 2026-10-17** en los commits «reorganización 1/2» y «2/2», con las decisiones del autor sobre los ⚠: `figures/` conserva `profile_sigma_x.png` y `joint_w0wa_sigma.png` (se quitaron 22 copias, no 24); `cross_correlation_DESI.py` → `archive/scripts/`, con las rutas corregidas; `resume.txt` sigue en `papers/`; `gpe_*.png` → `results/gpe/`. Comprobaciones en [`REORGANIZACION_CHECK.md`](REORGANIZACION_CHECK.md). Las rutas de las tablas de abajo son las de antes de mover. Base: `git ls-files` en `d71c4d2` (472 ficheros versionados).
 
 Leídos antes de clasificar: `README.md`, `manuscript/README.md`, `manuscript/CLAIMS.md` (N5, N6, N9) y `papers/EXPLORATORY_BOUNDARY.md`.
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# ARCHIVED 2026-10-17 from analisis_cmb/diagnosticos/obsoleto/tabla_H0fijo.py
+# Reason: obsolete CMB diagnostic (table for the fixed-H0 run); superseded by analisis_cmb/realizaciones.py
 """Markdown table for one sigma_X from resultados/sigma_<s>/resumen.json -> tabla.md (same folder)."""
 
 from __future__ import annotations

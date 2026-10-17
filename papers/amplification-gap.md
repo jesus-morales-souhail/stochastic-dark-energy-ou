@@ -4,8 +4,8 @@
 **Date:** July 2026
 **Status:** amplification gap — theory bottleneck, not a detection claim.
 **Related:**
-`papers/fundamental-vs-emergent-vacuum-relaxation.md`,
-`notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,
+`theory/fundamental-vs-emergent-vacuum-relaxation.md`,
+`exploratory/notes/desqueezing-relaxation-vacuum-fluctuations-note.md`,
 `papers/anisotropic-slip-option0.md`,
 `papers/resume.txt`,
 `scripts/amplifier_audit.py`,
@@ -23,7 +23,7 @@ I already have a null residual under the OU/QNM kernel and a geometric candidate
 The remaining hole is named elsewhere:
 
 > *This note does not … identify a microphysical amplifier from $10^{-61}$ to $10^{-5}$.*
-> — `fundamental-vs-emergent-vacuum-relaxation.md`
+> — `theory/fundamental-vs-emergent-vacuum-relaxation.md`
 
 Here I fix that gap as a quantitative problem and audit candidate amplifiers. I do not invent a successful mechanism.
 

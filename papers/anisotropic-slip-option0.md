@@ -2,7 +2,7 @@
 
 Jesús Morales Souhail · github.com/jesus-morales-souhail · July 2026
 
-One-page research note (literature + order-of-magnitude) — not a Boltzmann implementation. Related notes: `sdiff-fundamental-vs-emergent.md`, `notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, `papers/resume.txt`.
+One-page research note (literature + order-of-magnitude) — not a Boltzmann implementation. Related notes: `theory/sdiff-fundamental-vs-emergent.md`, `exploratory/notes/desqueezing-relaxation-vacuum-fluctuations-note.md`, `papers/resume.txt`.
 
 ---
 
@@ -206,7 +206,7 @@ That statement links this Option 0 note to the desqueezing / Sorkin-seed discuss
 
 ## 8. References (minimal, to open first)
 
-- Morales Souhail, J. — this repository: `papers/resume.txt`, `papers/stochastic-dark-energy-desi-dr2.md`, `papers/sdiff-fundamental-vs-emergent.md`.
+- Morales Souhail, J. — this repository: `papers/resume.txt`, `papers/stochastic-dark-energy-desi-dr2.md`, `theory/sdiff-fundamental-vs-emergent.md`.
 - DESI Collaboration BAO DR2 public products (arXiv:2503.14738 and companion papers).
 - Clifton, T., Ferreira, P. G., Padilla, A., & Skordis, C. — modified gravity review (degeneracies).
 - DESI full-shape / MG analyses reporting $\mu,\Sigma$ (and any $\gamma_0$ in their MG basis).

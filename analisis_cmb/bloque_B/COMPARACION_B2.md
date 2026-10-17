@@ -1,3 +1,5 @@
+> Rutas a fecha del commit d71c4d2, antes de la reorganización del 2026-10-17.
+
 # Bloque B2: números de los papers alineados con la cota 2.633e-2 (2026-10-17)
 
 **Reglas:**
