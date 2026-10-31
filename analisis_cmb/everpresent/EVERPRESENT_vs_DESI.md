@@ -464,6 +464,17 @@ sensibilidad). Las del criterio (c), ≥ 14 % en z ∈ [800, 1500] y ≥ 10.7 % 
 - **La verosimilitud completa con ρ_DE con signo no se ha corrido.** Es la opción (a) de
   `cmb_real/EXPLORACION.md`, pendiente; la comparación con N_eff no la sustituye.
 
+### 3g. Válvula tanh
+
+- [Z] ec. (2.10): Ω_de = tanh Ω̂ mantiene H² > 0 por construcción. |Ω̂| > 1 en algún punto guardado en
+  el 87.5 % de las 20000 realizaciones.
+- Sin la tanh (Ω_de = Ω̂), que es una modificación nuestra y no un modelo publicado, el 58.7 % llega a
+  H² ≤ 0 y se descarta.
+- De las 5 del criterio (c) que ajustan θ* (3f), 2 se descartan (8163, 11072). Las otras 3 ajustan
+  peor BAO: χ²_c pasa de 9–28 a 63–1209.
+- El criterio (c) con ventana sigue en 0 con y sin válvula; la exclusión no depende de la tanh.
+- Detalle y comprobaciones: [`cmb_real/VALVULA.md`](cmb_real/VALVULA.md).
+
 ### Comparación con [D2]
 
 | modelo | datos | realizaciones | mejor que ΛCDM (A) | Δχ² < 4 (B) | fichero |
@@ -527,6 +538,8 @@ no α.
 - **Discretización.** La fracción de runs que completan depende del paso y del arranque (sección 1).
   Se usa n = 10⁵ y arranque en z ≈ 10⁴. La invariancia en ω_m del Modelo 1 es aproximada porque la
   radiación no se reescala; en el Modelo 2 el error medido es ≤ 0.13 en χ².
+- **Test sin válvula (3g).** Ω_de = Ω̂, sin la tanh de [Z] ec. (2.10), es una modificación nuestra para
+  medir el papel de la tanh, no un modelo publicado.
 - **Modelos fenomenológicos.** Los Modelos 1 y 2 son implementaciones fenomenológicas que sus autores
   presentan como preliminares. [D2] Sec. 6: "both of these models are phenomenological, as we require a
   more developed theory of quantum gravity to inform the correct dynamics for Everpresent Λ"; [D1]
