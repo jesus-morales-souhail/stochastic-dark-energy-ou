@@ -1,0 +1,943 @@
+{
+ "check_bao_m2": {
+  "max_abs_dchi2_vs_npz": 0.0,
+  "nA": 1,
+  "nA_ref": 1,
+  "nB": 1,
+  "nB_ref": 1,
+  "n_cmb": 4569,
+  "n_cmb_ref": 4569
+ },
+ "a": {
+  "abs_gt_1_at_rec": {
+   "n": 5202,
+   "frac": 0.2601
+  },
+  "ge_1_at_rec": {
+   "n": 2616,
+   "frac": 0.1308
+  },
+  "le_-1_at_rec": {
+   "n": 2586,
+   "frac": 0.1293
+  },
+  "abs_gt_1_somewhere_z0_3": {
+   "n": 9619,
+   "frac": 0.48095
+  },
+  "ge_1_somewhere_z0_3": {
+   "n": 4860,
+   "frac": 0.243
+  },
+  "abs_gt_1_somewhere_458": {
+   "n": 17496,
+   "frac": 0.8748
+  },
+  "ge_1_somewhere_458_crash": {
+   "n": 11738,
+   "frac": 0.5869
+  },
+  "ge_1_somewhere_401_z0_3_and_rec": {
+   "n": 6821,
+   "frac": 0.34105
+  },
+  "sigma_Omega_hat": 0.8824,
+  "P_abs_gt_1_gaussian_single_point": 0.2570996718471119
+ },
+ "b_survivors_model2": [
+  {
+   "index": 286,
+   "Omega_hat_rec": 0.1607139893583677,
+   "Omega_de_rec_valve": 0.15934444405961481,
+   "factor_H_rec_valve": 1.0906639441663084,
+   "factor_H_rec_no_valve": 1.0915534531031983,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.662519341965375
+  },
+  {
+   "index": 336,
+   "Omega_hat_rec": 0.18586101331316074,
+   "Omega_de_rec_valve": 0.18375003029955211,
+   "factor_H_rec_valve": 1.106849086368329,
+   "factor_H_rec_no_valve": 1.108283133265551,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8369520917114077
+  },
+  {
+   "index": 1431,
+   "Omega_hat_rec": -0.4867691679541944,
+   "Omega_de_rec_valve": -0.451648402249983,
+   "factor_H_rec_valve": 0.8299831580239828,
+   "factor_H_rec_no_valve": 0.8201215557252667,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2699264971221604
+  },
+  {
+   "index": 1540,
+   "Omega_hat_rec": -1.9569829045714875,
+   "Omega_de_rec_valve": -0.960858938545252,
+   "factor_H_rec_valve": 0.7141292535830381,
+   "factor_H_rec_no_valve": 0.5815346452131565,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.5631802312408757
+  },
+  {
+   "index": 1860,
+   "Omega_hat_rec": -0.4751488668679198,
+   "Omega_de_rec_valve": -0.4423501014803562,
+   "factor_H_rec_valve": 0.8326541583227957,
+   "factor_H_rec_no_valve": 0.8233454218767845,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.1359129187430768
+  },
+  {
+   "index": 1864,
+   "Omega_hat_rec": -1.7481549114854424,
+   "Omega_de_rec_valve": -0.941165179969554,
+   "factor_H_rec_valve": 0.7177426499000618,
+   "factor_H_rec_no_valve": 0.6032250874161033,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.5583465558552727
+  },
+  {
+   "index": 2114,
+   "Omega_hat_rec": 0.023550007569132274,
+   "Omega_de_rec_valve": 0.023545654900907754,
+   "factor_H_rec_valve": 1.011984891781909,
+   "factor_H_rec_no_valve": 1.0119871473145052,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 2.115303888535861
+  },
+  {
+   "index": 2180,
+   "Omega_hat_rec": 0.6244196108938481,
+   "Omega_de_rec_valve": 0.5541977204663195,
+   "factor_H_rec_valve": 1.4977138902254328,
+   "factor_H_rec_no_valve": 1.631730931580614,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8113034989389208
+  },
+  {
+   "index": 2510,
+   "Omega_hat_rec": -1.3536503881005952,
+   "Omega_de_rec_valve": -0.8749121479691799,
+   "factor_H_rec_valve": 0.7303138527553302,
+   "factor_H_rec_no_valve": 0.6518220134740439,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.41027366063309295
+  },
+  {
+   "index": 3249,
+   "Omega_hat_rec": -1.1382384703874457,
+   "Omega_de_rec_valve": -0.8138200828938797,
+   "factor_H_rec_valve": 0.7425110085220067,
+   "factor_H_rec_no_valve": 0.6838674458938133,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.4744102660558817
+  },
+  {
+   "index": 4369,
+   "Omega_hat_rec": -0.020724879735017045,
+   "Omega_de_rec_valve": -0.02072191299019114,
+   "factor_H_rec_valve": 0.9897973365217939,
+   "factor_H_rec_no_valve": 0.9897958980939086,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.368662654734215
+  },
+  {
+   "index": 5329,
+   "Omega_hat_rec": -0.4825887069854043,
+   "Omega_de_rec_valve": -0.4483144224993663,
+   "factor_H_rec_valve": 0.8309379080269973,
+   "factor_H_rec_no_valve": 0.8212769917237246,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.4303285505491414
+  },
+  {
+   "index": 5331,
+   "Omega_hat_rec": 0.4236810581390226,
+   "Omega_de_rec_valve": 0.4000269871273278,
+   "factor_H_rec_valve": 1.291023483241563,
+   "factor_H_rec_no_valve": 1.3172510490639915,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2800203712882996
+  },
+  {
+   "index": 5492,
+   "Omega_hat_rec": 0.07891254699219286,
+   "Omega_de_rec_valve": 0.07874915283164237,
+   "factor_H_rec_valve": 1.041864043099701,
+   "factor_H_rec_no_valve": 1.041956448522908,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.4832347853813996
+  },
+  {
+   "index": 5508,
+   "Omega_hat_rec": -1.0178475637640092,
+   "Omega_de_rec_valve": -0.7689883829340787,
+   "factor_H_rec_valve": 0.7518609161502215,
+   "factor_H_rec_no_valve": 0.7039727081539224,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.6995075838620184
+  },
+  {
+   "index": 5598,
+   "Omega_hat_rec": -0.45731641822189556,
+   "Omega_de_rec_valve": -0.4278944962248637,
+   "factor_H_rec_valve": 0.8368583237918823,
+   "factor_H_rec_no_valve": 0.8283675373942793,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7587647418137379
+  },
+  {
+   "index": 6078,
+   "Omega_hat_rec": 0.1079306627667248,
+   "Omega_de_rec_valve": 0.10751351065597202,
+   "factor_H_rec_valve": 1.058520260014742,
+   "factor_H_rec_no_valve": 1.058767725280622,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2309316719963441
+  },
+  {
+   "index": 6126,
+   "Omega_hat_rec": -0.36999737255191023,
+   "Omega_de_rec_valve": -0.353989414272687,
+   "factor_H_rec_valve": 0.8593940954858003,
+   "factor_H_rec_no_valve": 0.8543584769808574,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2545773500816702
+  },
+  {
+   "index": 6233,
+   "Omega_hat_rec": 0.22275254013392637,
+   "Omega_de_rec_valve": 0.21913999312371515,
+   "factor_H_rec_valve": 1.1316533408507972,
+   "factor_H_rec_no_valve": 1.1342801822433082,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7593508376693181
+  },
+  {
+   "index": 6342,
+   "Omega_hat_rec": 0.48697605988848636,
+   "Omega_de_rec_valve": 0.451813075678559,
+   "factor_H_rec_valve": 1.3506277356005612,
+   "factor_H_rec_no_valve": 1.3961471177678833,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7212832834400106
+  },
+  {
+   "index": 6455,
+   "Omega_hat_rec": -0.13856132253299652,
+   "Omega_de_rec_valve": -0.1376813226803211,
+   "factor_H_rec_valve": 0.9375397408024119,
+   "factor_H_rec_no_valve": 0.9371773561431507,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.6040291332426835
+  },
+  {
+   "index": 6630,
+   "Omega_hat_rec": 0.2980744910114975,
+   "Omega_de_rec_valve": 0.2895495212227769,
+   "factor_H_rec_valve": 1.1864053443336118,
+   "factor_H_rec_no_valve": 1.1935881190864381,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2038264283071576
+  },
+  {
+   "index": 6701,
+   "Omega_hat_rec": 1.31224785934545,
+   "Omega_de_rec_valve": 0.8648430804212314,
+   "factor_H_rec_valve": 2.7200748659071023,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.6674687862972584
+  },
+  {
+   "index": 7339,
+   "Omega_hat_rec": -0.8570626754438011,
+   "Omega_de_rec_valve": -0.6947411918520767,
+   "factor_H_rec_valve": 0.7681540192822306,
+   "factor_H_rec_no_valve": 0.7338152270248645,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.783005782671223
+  },
+  {
+   "index": 7525,
+   "Omega_hat_rec": 0.10825565792716998,
+   "Omega_de_rec_valve": 0.10783473791156183,
+   "factor_H_rec_valve": 1.0587108048449525,
+   "factor_H_rec_no_valve": 1.0589606410217336,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.0988217843948807
+  },
+  {
+   "index": 7907,
+   "Omega_hat_rec": -1.168599979093406,
+   "Omega_de_rec_valve": -0.8238228398613512,
+   "factor_H_rec_valve": 0.7404720580864672,
+   "factor_H_rec_no_valve": 0.6790633246021974,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.495483452256043
+  },
+  {
+   "index": 8163,
+   "Omega_hat_rec": 1.2704384682124479,
+   "Omega_de_rec_valve": 0.8539164465257403,
+   "factor_H_rec_valve": 2.616371066289504,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": true,
+   "max_Omega_hat": 1.3415461137347438
+  },
+  {
+   "index": 8529,
+   "Omega_hat_rec": -0.333123457527055,
+   "Omega_de_rec_valve": -0.32132454398376625,
+   "factor_H_rec_valve": 0.8699519158931699,
+   "factor_H_rec_no_valve": 0.8660935709994881,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.6288182639681026
+  },
+  {
+   "index": 9421,
+   "Omega_hat_rec": -0.996794721999977,
+   "Omega_de_rec_valve": -0.7602447319519886,
+   "factor_H_rec_valve": 0.7537259596224245,
+   "factor_H_rec_no_valve": 0.707674081613381,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.484729578624638
+  },
+  {
+   "index": 9444,
+   "Omega_hat_rec": 0.02022807513574552,
+   "Omega_de_rec_valve": 0.020225316646185647,
+   "factor_H_rec_valve": 1.0102686891635362,
+   "factor_H_rec_no_valve": 1.010270111338228,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.44444087487218026
+  },
+  {
+   "index": 9525,
+   "Omega_hat_rec": -1.0384336094952866,
+   "Omega_de_rec_valve": -0.7772687602829661,
+   "factor_H_rec_valve": 0.7501073939403254,
+   "factor_H_rec_no_valve": 0.700408994141534,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.9317996153241793
+  },
+  {
+   "index": 9526,
+   "Omega_hat_rec": -1.2672435637588941,
+   "Omega_de_rec_valve": -0.8530488169895215,
+   "factor_H_rec_valve": 0.7346095496403674,
+   "factor_H_rec_no_valve": 0.6641266549577673,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.48893499641828264
+  },
+  {
+   "index": 10569,
+   "Omega_hat_rec": -0.8461262914834228,
+   "Omega_de_rec_valve": -0.6890403336039376,
+   "factor_H_rec_valve": 0.7694492661127541,
+   "factor_H_rec_no_valve": 0.7359855646710592,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.9066273689798809
+  },
+  {
+   "index": 10788,
+   "Omega_hat_rec": -1.5390369722472792,
+   "Omega_de_rec_valve": -0.9119584032397724,
+   "factor_H_rec_valve": 0.7232039345960408,
+   "factor_H_rec_no_valve": 0.6275747872708414,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8223310955336179
+  },
+  {
+   "index": 10885,
+   "Omega_hat_rec": -1.1163700275255781,
+   "Omega_de_rec_valve": -0.8063025877563001,
+   "factor_H_rec_valve": 0.7440545005594924,
+   "factor_H_rec_no_valve": 0.6873915653765803,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.5929293563269754
+  },
+  {
+   "index": 11072,
+   "Omega_hat_rec": -1.3211860833466618,
+   "Omega_de_rec_valve": -0.8670785876526681,
+   "factor_H_rec_valve": 0.7318443104076348,
+   "factor_H_rec_no_valve": 0.6563644049420467,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": true,
+   "max_Omega_hat": 1.57493549500271
+  },
+  {
+   "index": 11555,
+   "Omega_hat_rec": -0.19819802289875085,
+   "Omega_de_rec_valve": -0.19564292849887596,
+   "factor_H_rec_valve": 0.9145327241925567,
+   "factor_H_rec_no_valve": 0.9135571072831498,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8958428825941399
+  },
+  {
+   "index": 11561,
+   "Omega_hat_rec": -1.0190195281587822,
+   "Omega_de_rec_valve": -0.7694668827757273,
+   "factor_H_rec_valve": 0.7517592500331337,
+   "factor_H_rec_no_valve": 0.7037683637439482,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.44317375146895255
+  },
+  {
+   "index": 12423,
+   "Omega_hat_rec": -1.3767116224451155,
+   "Omega_de_rec_valve": -0.880212781893491,
+   "factor_H_rec_valve": 0.7292836878156989,
+   "factor_H_rec_no_valve": 0.6486519903454365,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.45777138850273963
+  },
+  {
+   "index": 12909,
+   "Omega_hat_rec": -0.2610642087672418,
+   "Omega_de_rec_valve": -0.25529065335882273,
+   "factor_H_rec_valve": 0.892540336817712,
+   "factor_H_rec_no_valve": 0.8904948252710696,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.6882223605756586
+  },
+  {
+   "index": 13052,
+   "Omega_hat_rec": 0.1896117404638958,
+   "Omega_de_rec_valve": 0.18737160466449626,
+   "factor_H_rec_valve": 1.1093127463238193,
+   "factor_H_rec_no_valve": 1.1108449108280534,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7951504411466664
+  },
+  {
+   "index": 13826,
+   "Omega_hat_rec": 0.2874898733914682,
+   "Omega_de_rec_valve": 0.27982285981526744,
+   "factor_H_rec_valve": 1.1783663553131953,
+   "factor_H_rec_no_valve": 1.1846893366813305,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8994425542172688
+  },
+  {
+   "index": 14006,
+   "Omega_hat_rec": -1.4426948881871926,
+   "Omega_de_rec_valve": -0.8942389152632644,
+   "factor_H_rec_valve": 0.7265786340450229,
+   "factor_H_rec_no_valve": 0.6398311624502511,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7938881852969882
+  },
+  {
+   "index": 14159,
+   "Omega_hat_rec": -0.3386365334200548,
+   "Omega_de_rec_valve": -0.32625960535998144,
+   "factor_H_rec_valve": 0.8683318456668596,
+   "factor_H_rec_no_valve": 0.8643082596681816,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.5577727013674407
+  },
+  {
+   "index": 15180,
+   "Omega_hat_rec": -1.5172237839771643,
+   "Omega_de_rec_valve": -0.9082126288893133,
+   "factor_H_rec_valve": 0.7239134023476305,
+   "factor_H_rec_no_valve": 0.6302880697048612,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.47844750077793646
+  },
+  {
+   "index": 15208,
+   "Omega_hat_rec": 1.6134222980285284,
+   "Omega_de_rec_valve": 0.923664166303816,
+   "factor_H_rec_valve": 3.6193932612251802,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.7500139189339143
+  },
+  {
+   "index": 15266,
+   "Omega_hat_rec": -0.8148886140761087,
+   "Omega_de_rec_valve": -0.6722782379630771,
+   "factor_H_rec_valve": 0.7732959415974784,
+   "factor_H_rec_no_valve": 0.7422923964888265,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.4650674411880038
+  },
+  {
+   "index": 15478,
+   "Omega_hat_rec": -0.6814145447498926,
+   "Omega_de_rec_valve": -0.5924382283418608,
+   "factor_H_rec_valve": 0.7924442210025128,
+   "factor_H_rec_no_valve": 0.7711921497288546,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.4124529293780836
+  },
+  {
+   "index": 15606,
+   "Omega_hat_rec": 1.68904532916442,
+   "Omega_de_rec_valve": 0.9340255064452967,
+   "factor_H_rec_valve": 3.8932470881554635,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.7496173875882717
+  },
+  {
+   "index": 16309,
+   "Omega_hat_rec": -0.17807119393154647,
+   "Omega_de_rec_valve": -0.17621259047583637,
+   "factor_H_rec_valve": 0.9220555537862571,
+   "factor_H_rec_no_valve": 0.9213279186030015,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.5119512489594212
+  },
+  {
+   "index": 16616,
+   "Omega_hat_rec": -1.0245177652190767,
+   "Omega_de_rec_valve": -0.7717002563117162,
+   "factor_H_rec_valve": 0.7512852735072802,
+   "factor_H_rec_no_valve": 0.7028120579630683,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.6628346667229563
+  },
+  {
+   "index": 16813,
+   "Omega_hat_rec": 0.44857336257359176,
+   "Omega_de_rec_valve": 0.42072560205995446,
+   "factor_H_rec_valve": 1.3138864467618612,
+   "factor_H_rec_no_valve": 1.3466543219865554,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8990255453927131
+  },
+  {
+   "index": 17070,
+   "Omega_hat_rec": -0.9734983499491886,
+   "Omega_de_rec_valve": -0.7502375861675019,
+   "factor_H_rec_valve": 0.755877637453858,
+   "factor_H_rec_no_valve": 0.7118387342898735,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.5761858189681061
+  },
+  {
+   "index": 17132,
+   "Omega_hat_rec": -1.2204828218718968,
+   "Omega_de_rec_valve": -0.839796541141421,
+   "factor_H_rec_valve": 0.7372505428127305,
+   "factor_H_rec_no_valve": 0.6710830831475589,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.4666601544728726
+  },
+  {
+   "index": 17148,
+   "Omega_hat_rec": 0.41020840309263845,
+   "Omega_de_rec_valve": 0.3886496186574313,
+   "factor_H_rec_valve": 1.2789539462310158,
+   "factor_H_rec_no_valve": 1.3021191010075512,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.053934573097288
+  },
+  {
+   "index": 17158,
+   "Omega_hat_rec": 1.1860808935693372,
+   "Omega_de_rec_valve": 0.8293594386399614,
+   "factor_H_rec_valve": 2.4207997421697414,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.2116216558861117
+  },
+  {
+   "index": 17299,
+   "Omega_hat_rec": -0.041365904254124876,
+   "Omega_de_rec_valve": -0.04134232613478959,
+   "factor_H_rec_valve": 0.9799484707547358,
+   "factor_H_rec_no_valve": 0.9799373769246622,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.774704589075441
+  },
+  {
+   "index": 17316,
+   "Omega_hat_rec": 0.8458519296304076,
+   "Omega_de_rec_valve": 0.6888962050901873,
+   "factor_H_rec_valve": 1.7928639949442762,
+   "factor_H_rec_no_valve": 2.5470117806772117,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.0014454623449567
+  },
+  {
+   "index": 17497,
+   "Omega_hat_rec": -1.4226013229569585,
+   "Omega_de_rec_valve": -0.89014034204643,
+   "factor_H_rec_valve": 0.7273659626562753,
+   "factor_H_rec_no_valve": 0.6424791302476974,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.929248253588407
+  },
+  {
+   "index": 17590,
+   "Omega_hat_rec": -0.5503095345372901,
+   "Omega_de_rec_valve": -0.5007521650424844,
+   "factor_H_rec_valve": 0.8162919444895378,
+   "factor_H_rec_no_valve": 0.803139139582535,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.47030917863873695
+  },
+  {
+   "index": 17853,
+   "Omega_hat_rec": -0.2844701673567234,
+   "Omega_de_rec_valve": -0.2770372539560624,
+   "factor_H_rec_valve": 0.8849081941081086,
+   "factor_H_rec_no_valve": 0.8823441060935258,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.7350706821042462
+  },
+  {
+   "index": 17886,
+   "Omega_hat_rec": 0.35561502065657796,
+   "Omega_de_rec_valve": 0.34134579396818127,
+   "factor_H_rec_valve": 1.2321718003737585,
+   "factor_H_rec_no_valve": 1.245739673469911,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.6461525884292124
+  },
+  {
+   "index": 17907,
+   "Omega_hat_rec": -0.26842694177589305,
+   "Omega_de_rec_valve": -0.26216049568351724,
+   "factor_H_rec_valve": 0.8901080084175538,
+   "factor_H_rec_no_valve": 0.8879065730035075,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.1480985591457933
+  },
+  {
+   "index": 18324,
+   "Omega_hat_rec": 0.5971306200690412,
+   "Omega_de_rec_valve": 0.5350046344193881,
+   "factor_H_rec_valve": 1.4664784580556103,
+   "factor_H_rec_no_valve": 1.5754980498639233,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": false,
+   "max_Omega_hat": 0.8753066714300721
+  },
+  {
+   "index": 19827,
+   "Omega_hat_rec": -0.03073607299230407,
+   "Omega_de_rec_valve": -0.030726397795642665,
+   "factor_H_rec_valve": 0.9849820147367263,
+   "factor_H_rec_no_valve": 0.9849773918670538,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": false,
+   "max_Omega_hat": 1.1491900984837227
+  }
+ ],
+ "b_criterion_c": [
+  {
+   "index": 1540,
+   "Omega_hat_rec": -1.9569829045714875,
+   "Omega_de_rec_valve": -0.960858938545252,
+   "factor_H_rec_valve": 0.7141292535830381,
+   "factor_H_rec_no_valve": 0.5815346452131565,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.5631802312408757
+  },
+  {
+   "index": 8163,
+   "Omega_hat_rec": 1.2704384682124479,
+   "Omega_de_rec_valve": 0.8539164465257403,
+   "factor_H_rec_valve": 2.616371066289504,
+   "factor_H_rec_no_valve": NaN,
+   "crash_at_rec": true,
+   "crash_anywhere": true,
+   "criterion_c": true,
+   "max_Omega_hat": 1.3415461137347438
+  },
+  {
+   "index": 11072,
+   "Omega_hat_rec": -1.3211860833466618,
+   "Omega_de_rec_valve": -0.8670785876526681,
+   "factor_H_rec_valve": 0.7318443104076348,
+   "factor_H_rec_no_valve": 0.6563644049420467,
+   "crash_at_rec": false,
+   "crash_anywhere": true,
+   "criterion_c": true,
+   "max_Omega_hat": 1.57493549500271
+  },
+  {
+   "index": 12909,
+   "Omega_hat_rec": -0.2610642087672418,
+   "Omega_de_rec_valve": -0.25529065335882273,
+   "factor_H_rec_valve": 0.892540336817712,
+   "factor_H_rec_no_valve": 0.8904948252710696,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.6882223605756586
+  },
+  {
+   "index": 16616,
+   "Omega_hat_rec": -1.0245177652190767,
+   "Omega_de_rec_valve": -0.7717002563117162,
+   "factor_H_rec_valve": 0.7512852735072802,
+   "factor_H_rec_no_valve": 0.7028120579630683,
+   "crash_at_rec": false,
+   "crash_anywhere": false,
+   "criterion_c": true,
+   "max_Omega_hat": 0.6628346667229563
+  }
+ ],
+ "check_rd_real_with_valve": {
+  "rd": true,
+  "wm_rd": true,
+  "chi_a": true,
+  "chi_b": true,
+  "wm_b": true,
+  "chi_c": true,
+  "wm_c": true,
+  "proxy_win": true
+ },
+ "c": {
+  "discarded_crash": 11738,
+  "discarded_frac": 0.5869,
+  "remaining": 8262,
+  "no_valve": {
+   "with_window": {
+    "nA": 0,
+    "nB": 0,
+    "chi2_min": 101.15768140308501,
+    "passing": []
+   },
+   "without_window": {
+    "nA": 6,
+    "nB": 6,
+    "chi2_min": 13.877654275333043,
+    "passing": [
+     {
+      "index": 14006,
+      "chi_c_no_valve": 24.717446492184536,
+      "chi_c_valve": 133.70706519014493,
+      "Omega_hat_rec": -1.4426948881871926,
+      "window_no_valve": false,
+      "in_65_survivors": true
+     },
+     {
+      "index": 14159,
+      "chi_c_no_valve": 16.444032051236718,
+      "chi_c_valve": 84.14340600652213,
+      "Omega_hat_rec": -0.3386365334200548,
+      "window_no_valve": false,
+      "in_65_survivors": true
+     },
+     {
+      "index": 16309,
+      "chi_c_no_valve": 13.925578503592988,
+      "chi_c_valve": 289.67317032556457,
+      "Omega_hat_rec": -0.17807119393154647,
+      "window_no_valve": false,
+      "in_65_survivors": true
+     },
+     {
+      "index": 16725,
+      "chi_c_no_valve": 26.888724319112953,
+      "chi_c_valve": 86.5593497238151,
+      "Omega_hat_rec": -0.4118332791471532,
+      "window_no_valve": false,
+      "in_65_survivors": false
+     },
+     {
+      "index": 16756,
+      "chi_c_no_valve": 19.38639153384429,
+      "chi_c_valve": 281.6813438678655,
+      "Omega_hat_rec": -1.131437014155729,
+      "window_no_valve": false,
+      "in_65_survivors": false
+     },
+     {
+      "index": 17590,
+      "chi_c_no_valve": 13.877654275333043,
+      "chi_c_valve": 93.209888645928,
+      "Omega_hat_rec": -0.5503095345372901,
+      "window_no_valve": false,
+      "in_65_survivors": true
+     }
+    ]
+   },
+   "n_window": 246
+  },
+  "valve_reference": {
+   "with_window": {
+    "nA": 0,
+    "nB": 0
+   },
+   "without_window": {
+    "nA": 6,
+    "nB": 6
+   },
+   "n_window": 444
+  },
+  "c5_no_valve": {
+   "1540": {
+    "crash": false,
+    "chi_c": 1209.1301567884075,
+    "chi_c_valve": 27.90259746700758,
+    "window": false
+   },
+   "8163": {
+    "crash": true,
+    "chi_c": Infinity,
+    "chi_c_valve": 24.701633862554445,
+    "window": false
+   },
+   "11072": {
+    "crash": true,
+    "chi_c": Infinity,
+    "chi_c_valve": 23.923514461450395,
+    "window": false
+   },
+   "12909": {
+    "crash": false,
+    "chi_c": 63.244513586803805,
+    "chi_c_valve": 27.19061188325577,
+    "window": false
+   },
+   "16616": {
+    "crash": false,
+    "chi_c": 500.2570085461193,
+    "chi_c_valve": 9.043786481182906,
+    "window": false
+   }
+  }
+ }
+}
