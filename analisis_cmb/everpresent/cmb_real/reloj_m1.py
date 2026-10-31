@@ -103,8 +103,12 @@ def simpson_rd(a0, b, u, om, orad, a_d):
     return np.where(ok, acc * (bb - a0[None, :]) / 6.0, 0.0)
 
 
-def run_grid(a_grid: np.ndarray, gen, n_real: int, om: float = OM, orad: float = ORAD, sub_rel: float = 0.02) -> dict:
-    """run_das's loop on an arbitrary common grid (observations at the nearest grid point, as run_das)."""
+def run_grid(a_grid: np.ndarray, gen, n_real: int, om: float = OM, orad: float = ORAD, sub_rel: float = 0.02,
+             bgk: float = 0.0) -> dict:
+    """run_das's loop on an arbitrary common grid (observations at the nearest grid point, as run_das).
+    bgk > 0 (reloj_m1_conv.py): the end-of-step death test uses a barrier moved towards the process by
+    bgk * sigma_step, sigma_step = K alpha sqrt(dV) / V (the step's standard deviation of u = K alpha S / V);
+    bgk = 0 is run_das's test."""
     J0 = np.append(AS._j_init_mr(a_grid[0], om, orad), AS._tau_init_mr(a_grid[0], om, orad))
     J = np.repeat(J0[:, None], n_real, axis=1)
     V = 4 * np.pi / 3 * J[3]
@@ -138,7 +142,7 @@ def run_grid(a_grid: np.ndarray, gen, n_real: int, om: float = OM, orad: float =
         dV = np.where(alive & ~died, Vn - V, 0.0)
         Sn = S + xi * np.sqrt(np.maximum(dV, 0.0))
         un = AS.K_DAS * ALPHA * Sn / Vn
-        died |= alive & (om / a1**3 + orad / a1**4 + un <= 0)
+        died |= alive & (om / a1**3 + orad / a1**4 + un <= bgk * AS.K_DAS * ALPHA * np.sqrt(np.maximum(dV, 0.0)) / Vn)
         alive &= ~died
         J = np.where(alive, Jn, J)
         V = np.where(alive, Vn, V)

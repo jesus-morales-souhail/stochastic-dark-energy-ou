@@ -59,8 +59,11 @@ resolución que se usa?
 | (a) a | 10⁵ | **534 (26.7 ± 1.0 %)** | 19 | 32.7 / 40.3 / 48.9 (8.8) | −0.33 / 0.12 / 0.40 (0.52) | 282.2 (0.1453) | 0 |
 | (b) ln a | 10⁵ | **387 (19.4 ± 0.9 %)** | 11652 | 32.7 / 40.1 / 49.9 (10.4) | −0.34 / 0.11 / 0.43 (0.52) | 155.9 (0.1407) | 0 |
 | (c) V | 10⁵ | **357 (17.9 ± 0.9 %)** | 0 | 31.6 / 40.2 / 51.4 (12.2) | −0.43 / 0.12 / 0.46 (0.67) | 469.2 (0.1453) | 0 |
+| (b) ln a | 3 × 10⁵ | **359 (18.0 ± 0.9 %)** | 34957 | 31.5 / 40.0 / 49.0 (9.4) | −0.44 / 0.11 / 0.40 (0.76) | 244.5 (0.1407) | 0 |
+| (b) ln a | 10⁶ | **346 (17.3 ± 0.8 %)** | 116525 | 31.8 / 39.8 / 48.9 (9.4) | −0.42 / 0.10 / 0.40 (0.65) | 264.5 (0.1453) | 0 |
 
 - Los errores son binomiales, ±√(p(1−p)/2000).
+- Las filas de ln a con n = 3 × 10⁵ y 10⁶ salen de `reloj_m1_conv.py` (sección "Convergencia en ln a").
 - Los pasos del reloj V varían por realización: mediana en las supervivientes 8639 (n = 10⁴) y 89638
   (n = 10⁵).
 - **Referencia de §1** (otras semillas, ω_m = 0.14, uniforme en a): n = 10⁶ da 69/300 = 23.0 ± 2.4 %.
@@ -112,3 +115,69 @@ Hubble en todo el recorrido:
 - **Con n = 10⁴, el de Das se separa más de 3 puntos de los otros dos: no se cumplió.** Se separa
   12.0 puntos de ln a (14.3 frente a 26.3 %), pero solo 2.4 de V (16.7 %).
 - **Ningún χ² mínimo baja de 29.84 + 4: se cumplió.** El mínimo es 130.8.
+
+## Convergencia en ln a
+
+**Predicción, escrita antes de correr `reloj_m1_conv.py`:**
+- ln a con n = 10⁶ da 17.2 ± 1.0 %.
+- p∞ = 16 ± 1 %.
+- Las dos estimaciones del continuo coinciden a ±1.5 puntos.
+
+Script `reloj_m1_conv.py`, que importa `reloj_m1.py`; salida `reloj_m1_conv.json`. Mismas 2000
+semillas y α = 0.01.
+
+### Supervivencia con pasos uniformes en ln a
+
+| n | Δln a | sobreviven | H0, p16 / p50 / p84 | Ω_Λ(0), p16 / p50 / p84 | χ²_c mínimo | tiempo |
+|---|---|---|---|---|---|---|
+| 10⁴ | 9.2 × 10⁻⁴ | 525 (26.3 ± 1.0 %) | 31.9 / 39.6 / 49.0 | −0.41 / 0.09 / 0.40 | 139.3 | 5 s |
+| 10⁵ | 9.2 × 10⁻⁵ | 387 (19.4 ± 0.9 %) | 32.7 / 40.1 / 49.9 | −0.34 / 0.11 / 0.43 | 155.9 | 48 s |
+| 3 × 10⁵ | 3.1 × 10⁻⁵ | 359 (18.0 ± 0.9 %) | 31.5 / 40.0 / 49.0 | −0.44 / 0.11 / 0.40 | 244.5 | 139 s |
+| 10⁶ | 9.2 × 10⁻⁶ | **346 (17.3 ± 0.8 %)** | 31.8 / 39.8 / 48.9 | −0.42 / 0.10 / 0.40 | 264.5 | 468 s |
+
+La supervivencia baja de forma monótona al refinar, cada vez más despacio. H0 y Ω_Λ(0) de las
+supervivientes no cambian, y ningún χ²_c baja de 33.84.
+
+### Dos estimaciones del límite continuo
+
+**(i) Ajuste p(Δ) = p∞ + c·√Δ** a los cuatro n de ln a, por mínimos cuadrados con pesos binomiales:
+- **p∞ = 16.2 ± 0.7 %**, con c = 3.30.
+- χ² = 0.02 para 2 grados de libertad; los residuos son < 0.1 puntos.
+- El χ² tan pequeño no indica un ajuste mejor de lo esperable. Las cuatro corridas comparten
+  semillas, así que sus errores están muy correlacionados, y el ajuste los trata como
+  independientes. El ±0.7 es el error binomial de un solo n, que es la incertidumbre honesta de
+  p∞ con 2000 semillas.
+
+**(ii) Corrección de continuidad de Broadie–Glasserman–Kou.**
+- Para una barrera vigilada a tiempos discretos, el run discreto con la barrera acercada al proceso
+  en β·σ_paso, con β = −ζ(1/2)/√(2π) = 0.5826, aproxima la vigilancia continua.
+- Aquí el proceso vigilado es u = KαS/V, con S de Wiener en V, así que σ_paso = Kα√ΔV/V: es la
+  σ_paso = α√ΔV del encargo, pasada a unidades de u.
+- La condición de muerte al final de cada paso pasa a ser ω_m a⁻³ + ω_r a⁻⁴ + u ≤ 0.5826·σ_paso.
+- **Es aproximada:** la barrera −(ω_m a⁻³ + ω_r a⁻⁴) se mueve con el tiempo, u no es un movimiento
+  browniano puro (es S/V) y Λ queda fija entre pasos.
+
+| run con BGK | sobreviven | sin corrección |
+|---|---|---|
+| ln a, n = 10⁵ | **314 (15.7 ± 0.8 %)** | 19.4 % |
+| ln a, n = 10⁴ (comprobación) | 324 (16.2 ± 0.8 %) | 26.3 % |
+
+La corrección BGK lleva n = 10⁴ y n = 10⁵ casi al mismo valor (16.2 y 15.7 %), aunque sin corregir
+difieren 7 puntos. Las dos quedan junto a la extrapolación √Δ.
+
+### Resultado
+
+- **Límite continuo de la supervivencia con α = 0.01: ≈ 16 %**: 16.2 ± 0.7 % por el ajuste √Δ y
+  15.7 ± 0.8 % por BGK con n = 10⁵. Difieren 0.5 puntos.
+- Confirma la estimación de dos puntos del apartado "Por qué difieren" (≈ 16 %).
+- Sin cambiar nada publicado: la fracción de producción (27.6 %, uniforme en a, n = 10⁵) y la de
+  [D1] (32.3 %) quedan unos 11 y 16 puntos por encima del continuo. Esa diferencia es artefacto de
+  la discretización (efecto 1 de "Por qué difieren"), no física del modelo.
+- Los 0 de BAO de la sección 3 cuentan sobre runs completados y no dependen de esa fracción.
+
+### Predicción
+
+- **ln a con n = 10⁶ da 17.2 ± 1.0 %: cumplida.** Da 17.3 ± 0.8 %.
+- **p∞ = 16 ± 1 %: cumplida.** Da 16.2 ± 0.7 %.
+- **Las dos estimaciones del continuo coinciden a ±1.5 puntos: cumplida.** Difieren 0.5 puntos
+  (16.2 frente a 15.7 %).
