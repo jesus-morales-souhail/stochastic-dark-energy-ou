@@ -1,0 +1,24 @@
+alpha 0.01 row 5367 (chunk 0, idx 19735): alive True, 23 s
+   chi2     resim 606.6995965  npz 606.6995965  diff 0.00e+00
+   H0       resim 58.6537044  npz 58.6537044  diff 0.00e+00
+   OmL0     resim 0.5841684741  npz 0.5841684741  diff 0.00e+00
+   Ode_rec  resim 0.5785244905  npz 0.5785244905  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| nan
+alpha 0.01 row 29757 (chunk 5, idx 7692): alive True, 22 s
+   chi2     resim 2081.467926  npz 2081.467926  diff 0.00e+00
+   H0       resim 71.0491625  npz 71.0491625  diff 0.00e+00
+   OmL0     resim 0.7166061782  npz 0.7166061782  diff 0.00e+00
+   Ode_rec  resim 0.5413847288  npz 0.5413847288  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| nan
+alpha 0.01 row 63491 (chunk 11, idx 9957): alive True, 25 s
+   chi2     resim 841.1570751  npz 841.1570751  diff 0.00e+00
+   H0       resim 63.5768341  npz 63.5768341  diff 0.00e+00
+   OmL0     resim 0.6460755967  npz 0.6460755967  diff 0.00e+00
+   Ode_rec  resim -0.2088603356  npz -0.2088603356  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| nan
+alpha 0.01 row 64524 (chunk 11, idx 13734): alive True, 22 s
+   chi2     resim 51.06846566  npz 51.06846566  diff 0.00e+00
+   H0       resim 52.20495335  npz 52.20495335  diff 0.00e+00
+   OmL0     resim 0.4750899594  npz 0.4750899594  diff 0.00e+00
+   Ode_rec  resim 0.06259288999  npz 0.06259288999  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| 0.00e+00

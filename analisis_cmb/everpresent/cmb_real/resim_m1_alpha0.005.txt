@@ -1,0 +1,12 @@
+alpha 0.005 row 51223 (chunk 2, idx 11542): alive True, 23 s
+   chi2     resim 331.1310701  npz 331.1310701  diff 0.00e+00
+   H0       resim 56.61293838  npz 56.61293838  diff 0.00e+00
+   OmL0     resim 0.5536485902  npz 0.5536485902  diff 0.00e+00
+   Ode_rec  resim -0.0897294964  npz -0.0897294964  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| 0.00e+00
+alpha 0.005 row 196680 (chunk 9, idx 17809): alive True, 22 s
+   chi2     resim 910.8382961  npz 910.8382961  diff 0.00e+00
+   H0       resim 56.99519651  npz 56.99519651  diff 0.00e+00
+   OmL0     resim 0.5596157348  npz 0.5596157348  diff 0.00e+00
+   Ode_rec  resim 0.1947236677  npz 0.1947236677  diff 0.00e+00
+   win_ode max|diff| 0.00e+00   rd_part max|diff| 0.00e+00

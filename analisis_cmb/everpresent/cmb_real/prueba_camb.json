@@ -1,0 +1,150 @@
+{
+ "gap": {
+  "lambda_range": [
+   -6.887755278982137,
+   -1.407755278982254
+  ],
+  "n": 275,
+  "seed": 20261031,
+  "z_range": [
+   3.0867714384645453,
+   979.1986733067555
+  ]
+ },
+ "cases": [
+  {
+   "index": 5492,
+   "criterion": "3d_wm_free",
+   "note": "positive on stored points",
+   "omega_m": 0.11245503042205743,
+   "H0": 59.820661149604724,
+   "gap_draws_all_positive_frac": 0.002,
+   "gap_pick": 195,
+   "gap_edge_check": {
+    "mean_at_z~3": 0.07780691861054943,
+    "stored_at_z=3": 0.07795195480126159,
+    "mean_at_z~1000": 0.0727987085656423,
+    "stored_at_z=1000": 0.07320915716561821
+   },
+   "Ode_min": 0.04372184469525932,
+   "Ode_max": 0.9021992683893937,
+   "rho_sign_changes": 0,
+   "camb": [
+    {
+     "label": "w from ln rho",
+     "H0_input": 59.820661149604724,
+     "omega_m": 0.11245503042205743,
+     "w_min": -1.3287274220028849,
+     "w_max": 1.4807943449427512,
+     "w_nonfinite": 0,
+     "t_background_s": 0.48778629302978516,
+     "H_camb_over_H_realisation": {
+      "0": 0.9999999999999998,
+      "0.5": 0.9999839986786696,
+      "1": 0.9999695959866103,
+      "2": 0.9999351802624767,
+      "3": 0.9999097847971404,
+      "10": 0.9997625613971758,
+      "100": 0.9994103941343182,
+      "1000": 0.9981907643043921,
+      "1100": 0.9982343655685251,
+      "3000": 0.9996663726667113,
+      "10000": 0.9998712050959155
+     },
+     "omega_de_camb_z0": 0.6856481877327449,
+     "Ode0_realisation": 0.6856322399094025,
+     "thetastar100_at_H0": 0.6845279056336768,
+     "background": "ok",
+     "t_full_run_s": 8.35883116722107,
+     "TT_l2_29_finite": true,
+     "Clpp_finite": true,
+     "DlTT_l2_10_20_29": [
+      1264.560637778632,
+      1116.7166313967646,
+      1549.878344511065,
+      2227.919653534317
+     ],
+     "thetastar_solve": "CAMBError: Error in Fortran called from calc_background: Universe stops expanding before today (recollapse not supported)",
+     "warnings": []
+    }
+   ]
+  },
+  {
+   "index": 11555,
+   "criterion": "3e_b_rdreal_wm_free",
+   "note": "sign change at z < 3",
+   "omega_m": 0.171875,
+   "H0": 62.527772096103476,
+   "gap_draws_all_positive_frac": 0.0,
+   "gap_pick": 0,
+   "gap_edge_check": {
+    "mean_at_z~3": -0.14978769033874312,
+    "stored_at_z=3": -0.16405813247457254,
+    "mean_at_z~1000": -0.19440995480567835,
+    "stored_at_z=1000": -0.19510251578789928
+   },
+   "Ode_min": -0.707893526723491,
+   "Ode_max": 0.9513515982981918,
+   "rho_sign_changes": 6,
+   "camb": [
+    {
+     "label": "naive: w from ln|rho| (large but finite next to the crossings)",
+     "H0_input": 62.527772096103476,
+     "omega_m": 0.171875,
+     "w_min": -174.05657816927553,
+     "w_max": 178.42454781045603,
+     "w_nonfinite": 0,
+     "t_background_s": 2.701551914215088,
+     "H_camb_over_H_realisation": {
+      "0": 1.0,
+      "0.5": 0.9999866971060287,
+      "1": 0.9999416374577353,
+      "2": 1.2059823574090691,
+      "3": 1.1511069759146646,
+      "10": 0.9999808520874494,
+      "100": 0.9993145107618304,
+      "1000": 1.1755728095380245,
+      "1100": 1.1781158371016651,
+      "3000": 0.9989134791171638,
+      "10000": 1.2664374443488973
+     },
+     "omega_de_camb_z0": 0.5602983673587747,
+     "Ode0_realisation": 0.5602837705498195,
+     "thetastar100_at_H0": 1.2311829755233177,
+     "background": "ok",
+     "t_full_run_s": 78.21655607223511,
+     "TT_l2_29_finite": true,
+     "Clpp_finite": true,
+     "DlTT_l2_10_20_29": [
+      2233.9177134270544,
+      3329.145723431909,
+      4616.471142653231,
+      4999.231758552044
+     ],
+     "thetastar_solve": "CAMBError: Error in Fortran called from calc_background: Universe stops expanding before today (recollapse not supported)",
+     "warnings": []
+    },
+    {
+     "label": "w = +inf next to the crossings",
+     "H0_input": 62.527772096103476,
+     "omega_m": 0.171875,
+     "w_min": -143.55382818284306,
+     "w_max": Infinity,
+     "w_nonfinite": 12,
+     "background": "CAMBError: Error in Fortran called from calc_background: Recfast: Rosenbrock integration failed",
+     "warnings": []
+    },
+    {
+     "label": "w = NaN next to the crossings",
+     "H0_input": 62.527772096103476,
+     "omega_m": 0.171875,
+     "w_min": -143.55382818284306,
+     "w_max": 178.42454781045603,
+     "w_nonfinite": 12,
+     "background": "CAMBError: Error in Fortran called from calc_background: Recfast: Rosenbrock integration failed",
+     "warnings": []
+    }
+   ]
+  }
+ ]
+}

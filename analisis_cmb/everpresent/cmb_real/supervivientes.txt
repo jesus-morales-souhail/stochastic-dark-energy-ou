@@ -1,0 +1,72 @@
+{"n_union": 65, "n_positive_on_sampled_points": 1, "n_Ode0_negative": 0}
+286 Ode0 +0.58 rec +0.16 min03 -0.14 minhi -0.54 pos False {'3e_b_rdreal_wm_free': 31.48, '3d_wm_free': 31.49}
+336 Ode0 +0.68 rec +0.18 min03 +0.09 minhi -0.99 pos False {'3d_wm_free': 30.97}
+1431 Ode0 +0.52 rec -0.45 min03 -0.19 minhi -0.77 pos False {'3e_b_rdreal_wm_free': 24.89}
+1540 Ode0 +0.51 rec -0.96 min03 -0.47 minhi -0.97 pos False {'3e_b_rdreal_wm_free': 15.93, '3e_c_rdreal_wm_2sigma_nowindow': 27.9}
+1860 Ode0 +0.68 rec -0.44 min03 +0.11 minhi -0.64 pos False {'3d_wm_free': 11.18}
+1864 Ode0 +0.51 rec -0.94 min03 -0.64 minhi -0.96 pos False {'3e_b_rdreal_wm_free': 23.08}
+2114 Ode0 +0.70 rec +0.02 min03 +0.13 minhi -0.79 pos False {'3d_wm_free': 22.43}
+2180 Ode0 +0.57 rec +0.55 min03 -0.12 minhi -0.96 pos False {'3e_b_rdreal_wm_free': 10.86, '3d_wm_free': 16.82}
+2510 Ode0 +0.39 rec -0.87 min03 -0.83 minhi -0.91 pos False {'3e_b_rdreal_wm_free': 9.77}
+3249 Ode0 +0.44 rec -0.81 min03 -0.80 minhi -0.93 pos False {'3e_b_rdreal_wm_free': 22.92}
+4369 Ode0 +0.79 rec -0.02 min03 +0.31 minhi -0.72 pos False {'3e_b_rdreal_wm_free': 33.11}
+5329 Ode0 +0.41 rec -0.45 min03 -0.71 minhi -0.98 pos False {'3e_b_rdreal_wm_free': 30.43}
+5331 Ode0 +0.86 rec +0.40 min03 +0.62 minhi -0.65 pos False {'3e_b_rdreal_wm_free': 33.64}
+5492 Ode0 +0.69 rec +0.08 min03 +0.08 minhi +0.07 pos True {'3d_wm_free': 20.72}
+5508 Ode0 +0.57 rec -0.77 min03 -0.20 minhi -0.88 pos False {'3d_wm_free': 26.97}
+5598 Ode0 +0.64 rec -0.43 min03 +0.14 minhi -0.93 pos False {'3d_wm_free': 12.01}
+6078 Ode0 +0.66 rec +0.11 min03 -0.00 minhi -0.81 pos False {'3e_b_rdreal_wm_free': 25.57, '3d_wm_free': 25.55}
+6126 Ode0 +0.61 rec -0.35 min03 -0.15 minhi -0.68 pos False {'3e_b_rdreal_wm_free': 16.19}
+6233 Ode0 +0.64 rec +0.22 min03 -0.10 minhi -0.84 pos False {'3d_wm_free': 26.73}
+6342 Ode0 +0.62 rec +0.45 min03 -0.20 minhi -0.87 pos False {'3e_b_rdreal_wm_free': 33.83}
+6455 Ode0 +0.54 rec -0.14 min03 -0.33 minhi -0.93 pos False {'3e_a_rdreal_wm_fixed': 30.37, '3e_b_rdreal_wm_free': 24.49, '3e_c_rdreal_wm_2sigma_nowindow': 25.48}
+6630 Ode0 +0.72 rec +0.29 min03 +0.03 minhi -0.91 pos False {'3e_b_rdreal_wm_free': 26.56, '3d_wm_free': 26.56}
+6701 Ode0 +0.58 rec +0.86 min03 -0.29 minhi -0.67 pos False {'3d_wm_free': 29.76}
+7339 Ode0 +0.52 rec -0.69 min03 -0.28 minhi -0.92 pos False {'3e_b_rdreal_wm_free': 33.77}
+7525 Ode0 +0.64 rec +0.11 min03 +0.05 minhi -0.45 pos False {'3d_wm_free': 20.49}
+7907 Ode0 +0.42 rec -0.82 min03 -0.51 minhi -0.96 pos False {'3e_b_rdreal_wm_free': 18.12}
+8163 Ode0 +0.79 rec +0.85 min03 +0.37 minhi -0.83 pos False {'3e_b_rdreal_wm_free': 19.18, '3e_c_rdreal_wm_2sigma_nowindow': 24.7}
+8529 Ode0 +0.56 rec -0.32 min03 -0.11 minhi -0.88 pos False {'3e_b_rdreal_wm_free': 21.9, '3d_wm_free': 21.88}
+9421 Ode0 +0.45 rec -0.76 min03 -0.59 minhi -0.83 pos False {'3e_b_rdreal_wm_free': 26.04}
+9444 Ode0 +0.42 rec +0.02 min03 -0.69 minhi -0.97 pos False {'3e_b_rdreal_wm_free': 29.86}
+9525 Ode0 +0.65 rec -0.78 min03 -0.00 minhi -0.93 pos False {'3d_wm_free': 33.34}
+9526 Ode0 +0.37 rec -0.85 min03 -0.86 minhi -0.97 pos False {'3e_b_rdreal_wm_free': 7.89}
+10569 Ode0 +0.50 rec -0.69 min03 -0.35 minhi -0.70 pos False {'3e_b_rdreal_wm_free': 6.76}
+10788 Ode0 +0.68 rec -0.91 min03 -0.06 minhi -0.97 pos False {'3d_wm_free': 20.32}
+10885 Ode0 +0.53 rec -0.81 min03 -0.31 minhi -0.90 pos False {'3e_b_rdreal_wm_free': 28.55}
+11072 Ode0 +0.53 rec -0.87 min03 -0.26 minhi -0.87 pos False {'3e_b_rdreal_wm_free': 11.27, '3e_c_rdreal_wm_2sigma_nowindow': 23.92}
+11555 Ode0 +0.56 rec -0.20 min03 -0.23 minhi -0.71 pos False {'3e_b_rdreal_wm_free': 16.47}
+11561 Ode0 +0.42 rec -0.77 min03 -0.77 minhi -0.87 pos False {'3e_b_rdreal_wm_free': 29.73}
+12423 Ode0 +0.43 rec -0.88 min03 -0.90 minhi -0.89 pos False {'3e_b_rdreal_wm_free': 25.41}
+12909 Ode0 +0.50 rec -0.26 min03 -0.51 minhi -0.79 pos False {'3e_b_rdreal_wm_free': 22.6, '3e_c_rdreal_wm_2sigma_nowindow': 27.19}
+13052 Ode0 +0.66 rec +0.19 min03 +0.11 minhi -0.93 pos False {'3d_wm_free': 9.71}
+13826 Ode0 +0.67 rec +0.28 min03 +0.04 minhi -0.95 pos False {'3d_wm_free': 13.03}
+14006 Ode0 +0.57 rec -0.89 min03 -0.19 minhi -0.91 pos False {'3e_b_rdreal_wm_free': 22.46, '3d_wm_free': 22.47}
+14159 Ode0 +0.51 rec -0.33 min03 -0.35 minhi -0.91 pos False {'3e_b_rdreal_wm_free': 13.26}
+15180 Ode0 +0.44 rec -0.91 min03 -0.45 minhi -0.91 pos False {'3e_b_rdreal_wm_free': 22.63}
+15208 Ode0 +0.59 rec +0.92 min03 -0.13 minhi -0.70 pos False {'3d_wm_free': 7.89}
+15266 Ode0 +0.43 rec -0.67 min03 -0.81 minhi -0.96 pos False {'3e_b_rdreal_wm_free': 19.04}
+15478 Ode0 +0.65 rec -0.59 min03 -0.13 minhi -0.65 pos False {'3d_wm_free': 25.55}
+15606 Ode0 +0.67 rec +0.93 min03 +0.15 minhi -0.62 pos False {'3d_wm_free': 24.49}
+16309 Ode0 +0.47 rec -0.18 min03 -0.45 minhi -0.95 pos False {'3e_b_rdreal_wm_free': 14.56}
+16616 Ode0 +0.48 rec -0.77 min03 -0.48 minhi -0.98 pos False {'3e_a_rdreal_wm_fixed': 10.64, '3e_b_rdreal_wm_free': 9.04, '3e_c_rdreal_wm_2sigma_nowindow': 9.04}
+16813 Ode0 +0.67 rec +0.42 min03 -0.04 minhi -0.47 pos False {'3d_wm_free': 19.39}
+17070 Ode0 +0.52 rec -0.75 min03 -0.58 minhi -0.77 pos False {'3e_b_rdreal_wm_free': 12.08}
+17132 Ode0 +0.60 rec -0.84 min03 -0.10 minhi -0.87 pos False {'3e_b_rdreal_wm_free': 24.54}
+17148 Ode0 +0.78 rec +0.39 min03 +0.32 minhi -0.39 pos False {'3e_b_rdreal_wm_free': 33.07}
+17158 Ode0 +0.81 rec +0.83 min03 +0.46 minhi -0.68 pos False {'3e_b_rdreal_wm_free': 28.72}
+17299 Ode0 +0.65 rec -0.04 min03 -0.09 minhi -0.79 pos False {'3e_b_rdreal_wm_free': 13.09, '3d_wm_free': 13.1}
+17316 Ode0 +0.62 rec +0.69 min03 -0.17 minhi -0.76 pos False {'3e_b_rdreal_wm_free': 29.82, '3d_wm_free': 29.87}
+17497 Ode0 +0.65 rec -0.89 min03 -0.21 minhi -0.95 pos False {'3d_wm_free': 25.66}
+17590 Ode0 +0.44 rec -0.50 min03 -0.42 minhi -0.88 pos False {'3e_b_rdreal_wm_free': 24.04}
+17853 Ode0 +0.63 rec -0.28 min03 -0.18 minhi -0.52 pos False {'3e_b_rdreal_wm_free': 10.47, '3d_wm_free': 10.5}
+17886 Ode0 +0.57 rec +0.34 min03 -0.10 minhi -0.58 pos False {'3d_wm_free': 10.72}
+17907 Ode0 +0.78 rec -0.26 min03 +0.17 minhi -0.55 pos False {'3e_b_rdreal_wm_free': 32.48}
+18324 Ode0 +0.70 rec +0.54 min03 -0.01 minhi -0.96 pos False {'3a_fixed': 22.63, '3e_b_rdreal_wm_free': 11.58, '3d_wm_free': 11.58}
+19827 Ode0 +0.82 rec -0.03 min03 +0.49 minhi -0.83 pos False {'3e_b_rdreal_wm_free': 28.18}
+0.01 5367 0 19735 H0 58.7 OmL0 0.58 {'3d_wm_free': 17.76, '3e_a_rdreal_wm_fixed': 18.1, '3e_b_rdreal_wm_free': 17.76, '3e_c_rdreal_wm_2sigma_nowindow': 17.76}
+0.01 29757 5 7692 H0 71.0 OmL0 0.72 {'3e_b_rdreal_wm_free': 27.32}
+0.01 63491 11 9957 H0 63.6 OmL0 0.65 {'3d_wm_free': 33.25}
+0.01 64524 11 13734 H0 52.2 OmL0 0.48 {'3d_wm_free': 34.4}
+0.005 51223 2 11542 H0 56.6 OmL0 0.55 {'3d_wm_free': 16.27, '3e_b_rdreal_wm_free': 16.27}
+0.005 196680 9 17809 H0 57.0 OmL0 0.56 {'3d_wm_free': 34.19}
