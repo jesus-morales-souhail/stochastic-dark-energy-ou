@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-r_d and LCDM chi^2_BAO for Planck 2018 (ou_cmb.make_params, as in oscilador/), with CAMB, plus a
+r_d, z_*, r_s(z_*), 100 theta_* and LCDM chi^2_BAO for Planck 2018 (ou_cmb.make_params, as in oscilador/), with CAMB, plus a
 check of the analytic distance formula used in bao_sim.py. Run with analisis_cmb/venv/bin/python.
 Writes resultados/rd_planck.json.
 """
@@ -52,6 +52,10 @@ def main() -> None:
     out = {"rdrag_Mpc": rd, "zdrag": r.get_derived_params()["zdrag"], "H0": p.H0, "omega_m_incl_nu": om, "omega_r": orad,
            "chi2_lcdm_camb": float(d1 @ ci @ d1), "chi2_lcdm_analytic": float(d2 @ ci @ d2),
            "max_rel_diff_distances": float(np.max(np.abs(v2 / v1 - 1)))}
+    der = r.get_derived_params()
+    # recombination (last scattering) for the theta_* calculation of cmb_real/theta_star.py
+    out.update(zstar=der["zstar"], rs_zstar_Mpc=der["rstar"], DMstar_Mpc=der["DAstar"] * 1000.0,
+               thetastar100=der["thetastar"])
     rf = float(rd_aubourg(p.ombh2, p.ombh2 + p.omch2, p.omnuh2))
     out["rd_aubourg"] = {"omega_b": p.ombh2, "omega_cb": p.ombh2 + p.omch2, "omega_nu": p.omnuh2,
                          "rd_formula_Mpc": rf, "rel_diff_vs_camb": rf / rd - 1}

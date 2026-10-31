@@ -7,6 +7,10 @@
   "chi2_lcdm_camb": 29.840271401429217,
   "chi2_lcdm_analytic": 29.802050958612373,
   "max_rel_diff_distances": 6.109281235833208e-05,
+  "zstar": 1089.906728619086,
+  "rs_zstar_Mpc": 144.44311841491015,
+  "DMstar_Mpc": 13872.779476773369,
+  "thetastar100": 1.0411981150334395,
   "rd_aubourg": {
     "omega_b": 0.02237,
     "omega_cb": 0.14237,

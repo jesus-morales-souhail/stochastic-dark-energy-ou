@@ -1,0 +1,164 @@
+100 theta_* por superviviente (Planck 2018: 1.0411 +- 0.00031); z_* = 1089.907 (CAMB, Planck 2018)
+Modelo 2: 100 sorteos del hueco z in (3, 1000) por superviviente; Modelo 1: historia completa (1 valor).
+Una fila por (superviviente, criterio con el que pasa). n_sigma_min: distancia minima a Planck en sigmas.
+
+modelo       id criterio                          omega_m      min  mediana      max n_sig_min  f<5s f<10s
+M2          286 3e_b_rdreal_wm_free                0.1059   0.9851   1.0641   1.2222         3  0.01  0.03
+M2          286 3d_wm_free                         0.1679   1.1080   1.1969   1.3752       216  0.00  0.00
+M2          336 3d_wm_free                         0.1506   1.2966   1.4929   1.7035       824  0.00  0.00
+M2         1431 3e_b_rdreal_wm_free                0.1193   1.0841   1.1730   1.3026       139  0.00  0.00
+M2         1540 3e_b_rdreal_wm_free                0.1350   1.0001   1.0682   1.1980         2  0.02  0.06
+M2         1540 3e_c_rdreal_wm_2sigma_nowindow     0.1407   1.0101   1.0788   1.2099         1  0.06  0.09
+M2         1860 3d_wm_free                         0.1253   1.1890   1.2625   1.4429       477  0.00  0.00
+M2         1864 3e_b_rdreal_wm_free                0.2000   1.0735   1.1414   1.2750       105  0.00  0.00
+M2         2114 3d_wm_free                         0.1054   0.5896   0.6273   0.7207      1034  0.00  0.00
+M2         2180 3e_b_rdreal_wm_free                0.1000   1.1095   1.2399   1.3841       220  0.00  0.00
+M2         2180 3d_wm_free                         0.2000   1.3286   1.4852   1.6589       928  0.00  0.00
+M2         2510 3e_b_rdreal_wm_free                0.1765   1.0406   1.0900   1.2030         2  0.01  0.01
+M2         3249 3e_b_rdreal_wm_free                0.1754   1.0578   1.0699   1.1534        54  0.00  0.00
+M2         4369 3e_b_rdreal_wm_free                0.1621   0.8815   0.9360   1.0879        40  0.00  0.00
+M2         5329 3e_b_rdreal_wm_free                0.1754   1.2889   1.4136   1.5626       799  0.00  0.00
+M2         5331 3e_b_rdreal_wm_free                0.1000   0.8358   0.9715   1.2038         1  0.03  0.05
+M2         5492 3d_wm_free                         0.1125   0.6055   0.6317   0.7274      1012  0.00  0.00
+M2         5508 3d_wm_free                         0.2000   1.3569   1.4748   1.6265      1019  0.00  0.00
+M2         5598 3d_wm_free                         0.1193   1.3209   1.4365   1.7253       902  0.00  0.00
+M2         6078 3e_b_rdreal_wm_free                0.1326   0.9344   1.0041   1.1584         4  0.01  0.02
+M2         6078 3d_wm_free                         0.1281   0.9264   0.9955   1.1484         4  0.01  0.02
+M2         6126 3e_b_rdreal_wm_free                0.1094   1.0290   1.1018   1.2013         1  0.01  0.02
+M2         6233 3d_wm_free                         0.1626   0.8357   0.9160   1.0604        18  0.00  0.00
+M2         6342 3e_b_rdreal_wm_free                0.1995   1.0563   1.1228   1.2810        49  0.00  0.00
+M2         6455 3e_a_rdreal_wm_fixed               0.1430   1.0773   1.1645   1.3084       117  0.00  0.00
+M2         6455 3e_b_rdreal_wm_free                0.1469   1.0846   1.1724   1.3173       140  0.00  0.00
+M2         6455 3e_c_rdreal_wm_2sigma_nowindow     0.1453   1.0816   1.1692   1.3137       131  0.00  0.00
+M2         6630 3e_b_rdreal_wm_free                0.1138   0.9864   1.0540   1.2129         0  0.01  0.04
+M2         6630 3d_wm_free                         0.1521   1.0658   1.1389   1.3107        80  0.00  0.00
+M2         6701 3d_wm_free                         0.1990   0.3913   0.4144   0.4646      1860  0.00  0.00
+M2         7339 3e_b_rdreal_wm_free                0.1085   1.0380   1.1489   1.3181         9  0.00  0.01
+M2         7525 3d_wm_free                         0.1617   0.8193   0.9290   1.0321        29  0.00  0.00
+M2         7907 3e_b_rdreal_wm_free                0.1181   0.9930   1.0359   1.2067         2  0.04  0.07
+M2         8163 3e_b_rdreal_wm_free                0.1375   0.9578   1.0793   1.2835         8  0.00  0.02
+M2         8163 3e_c_rdreal_wm_2sigma_nowindow     0.1407   0.9641   1.0865   1.2920         1  0.03  0.03
+M2         8529 3e_b_rdreal_wm_free                0.1346   1.0192   1.0920   1.2147         0  0.02  0.04
+M2         8529 3d_wm_free                         0.1904   1.1114   1.1909   1.3248       227  0.00  0.00
+M2         9421 3e_b_rdreal_wm_free                0.1613   1.0333   1.1012   1.2476         1  0.01  0.01
+M2         9444 3e_b_rdreal_wm_free                0.2000   1.0189   1.0667   1.2227         0  0.06  0.11
+M2         9525 3d_wm_free                         0.1858   1.3105   1.4545   1.6132       869  0.00  0.00
+M2         9526 3e_b_rdreal_wm_free                0.1743   1.0469   1.0659   1.1761        19  0.00  0.00
+M2        10569 3e_b_rdreal_wm_free                0.1860   1.0449   1.0964   1.2226        12  0.00  0.00
+M2        10788 3d_wm_free                         0.1505   1.2705   1.3255   1.4890       740  0.00  0.00
+M2        10885 3e_b_rdreal_wm_free                0.1110   1.0338   1.0689   1.2105         1  0.04  0.06
+M2        11072 3e_b_rdreal_wm_free                0.1520   1.0145   1.0498   1.1848         1  0.04  0.10
+M2        11072 3e_c_rdreal_wm_2sigma_nowindow     0.1453   1.0043   1.0392   1.1729         0  0.02  0.10
+M2        11555 3e_b_rdreal_wm_free                0.1719   1.1565   1.3051   1.4431       372  0.00  0.00
+M2        11561 3e_b_rdreal_wm_free                0.2000   1.1403   1.2425   1.4048       320  0.00  0.00
+M2        12423 3e_b_rdreal_wm_free                0.1983   1.0274   1.0369   1.0858         1  0.08  0.20
+M2        12909 3e_b_rdreal_wm_free                0.1489   1.0082   1.0505   1.1569         2  0.01  0.05
+M2        12909 3e_c_rdreal_wm_2sigma_nowindow     0.1453   1.0022   1.0442   1.1500         1  0.04  0.11
+M2        13052 3d_wm_free                         0.1273   1.2035   1.3349   1.5891       524  0.00  0.00
+M2        13826 3d_wm_free                         0.1525   1.2257   1.3690   1.5570       596  0.00  0.00
+M2        14006 3e_b_rdreal_wm_free                0.1659   1.0103   1.1103   1.2640         8  0.00  0.03
+M2        14006 3d_wm_free                         0.2000   1.0510   1.1550   1.3149        32  0.00  0.00
+M2        14159 3e_b_rdreal_wm_free                0.1598   1.1101   1.2031   1.3888       223  0.00  0.00
+M2        15180 3e_b_rdreal_wm_free                0.1066   1.0096   1.0790   1.2074         0  0.04  0.09
+M2        15208 3d_wm_free                         0.1971   0.5518   0.5879   0.6825      1157  0.00  0.00
+M2        15266 3e_b_rdreal_wm_free                0.1846   1.1032   1.1752   1.3494       200  0.00  0.00
+M2        15478 3d_wm_free                         0.1599   0.7281   0.7481   0.8241       700  0.00  0.00
+M2        15606 3d_wm_free                         0.1174   0.3721   0.4136   0.4634      1863  0.00  0.00
+M2        16309 3e_b_rdreal_wm_free                0.1749   1.2096   1.3761   1.5000       544  0.00  0.00
+M2        16616 3e_a_rdreal_wm_fixed               0.1430   1.0196   1.0873   1.1821         1  0.05  0.05
+M2        16616 3e_b_rdreal_wm_free                0.1410   1.0160   1.0835   1.1780         2  0.02  0.05
+M2        16616 3e_c_rdreal_wm_2sigma_nowindow     0.1410   1.0159   1.0834   1.1779         2  0.02  0.05
+M2        16813 3d_wm_free                         0.1778   0.7195   0.7901   0.8802       519  0.00  0.00
+M2        17070 3e_b_rdreal_wm_free                0.1860   1.0773   1.1531   1.2797       117  0.00  0.00
+M2        17132 3e_b_rdreal_wm_free                0.1323   1.2095   1.3957   1.5197       543  0.00  0.00
+M2        17148 3e_b_rdreal_wm_free                0.1000   0.8724   0.9439   1.0975         9  0.00  0.01
+M2        17158 3e_b_rdreal_wm_free                0.1170   1.0869   1.2197   1.4560       148  0.00  0.00
+M2        17299 3e_b_rdreal_wm_free                0.1000   1.0927   1.2398   1.4325       166  0.00  0.00
+M2        17299 3d_wm_free                         0.1930   1.2911   1.4654   1.6939       806  0.00  0.00
+M2        17316 3e_b_rdreal_wm_free                0.1283   0.9928   1.0547   1.1842         2  0.03  0.07
+M2        17316 3d_wm_free                         0.1773   1.0808   1.1484   1.2896       128  0.00  0.00
+M2        17497 3d_wm_free                         0.1906   1.2141   1.2833   1.4663       558  0.00  0.00
+M2        17590 3e_b_rdreal_wm_free                0.1598   1.1779   1.2987   1.4540       441  0.00  0.00
+M2        17853 3e_b_rdreal_wm_free                0.1230   1.0179   1.1096   1.2435         4  0.01  0.02
+M2        17853 3d_wm_free                         0.1950   1.1334   1.2357   1.3853       298  0.00  0.00
+M2        17886 3d_wm_free                         0.1818   0.9767   1.0783   1.2089         0  0.03  0.08
+M2        17907 3e_b_rdreal_wm_free                0.1870   0.8400   0.9270   1.0871        48  0.00  0.00
+M2        18324 3a_fixed                           0.1430   0.9607   0.9771   1.0756        23  0.00  0.00
+M2        18324 3e_b_rdreal_wm_free                0.1316   0.9393   0.9554   1.0516        34  0.00  0.00
+M2        18324 3d_wm_free                         0.1485   0.9703   0.9869   1.0864        10  0.00  0.00
+M2        19827 3e_b_rdreal_wm_free                0.1000   0.9430   1.0630   1.2657         5  0.01  0.04
+M1      0.01/5367 3d_wm_free                         0.1077   0.8876   0.8876   0.8876       495  0.00  0.00
+M1      0.01/5367 3e_a_rdreal_wm_fixed               0.1430   0.9710   0.9710   0.9710       226  0.00  0.00
+M1      0.01/5367 3e_b_rdreal_wm_free                0.1423   0.9693   0.9693   0.9693       232  0.00  0.00
+M1      0.01/5367 3e_c_rdreal_wm_2sigma_nowindow     0.1423   0.9694   0.9694   0.9694       231  0.00  0.00
+M1      0.01/29757 3e_b_rdreal_wm_free                0.1630   0.9990   0.9990   0.9990       136  0.00  0.00
+M1      0.01/63491 3d_wm_free                         0.1023   1.1367   1.1367   1.1367       308  0.00  0.00
+M1      0.01/64524 3d_wm_free                         0.1365   1.0346   1.0346   1.0346        21  0.00  0.00
+M1      0.005/51223 3d_wm_free                         0.1739   1.1465   1.1465   1.1465       340  0.00  0.00
+M1      0.005/51223 3e_b_rdreal_wm_free                0.1340   1.0597   1.0597   1.0597        60  0.00  0.00
+M1      0.005/196680 3d_wm_free                         0.1972   1.0277   1.0277   1.0277        43  0.00  0.00
+
+Totales: {"n_survivors": 71, "n_any_draw_5sigma": 22, "n_any_draw_10sigma": 25, "passing_10sigma": [{"model": "M2", "id": 286, "criterion": "3e_b_rdreal_wm_free", "draws": [34, 66, 74]}, {"model": "M2", "id": 1540, "criterion": "3e_b_rdreal_wm_free", "draws": [0, 11, 12, 76, 88, 98]}, {"model": "M2", "id": 1540, "criterion": "3e_c_rdreal_wm_2sigma_nowindow", "draws": [2, 21, 34, 39, 43, 46, 67, 74, 91]}, {"model": "M2", "id": 2510, "criterion": "3e_b_rdreal_wm_free", "draws": [23]}, {"model": "M2", "id": 5331, "criterion": "3e_b_rdreal_wm_free", "draws": [5, 26, 69, 74, 82]}, {"model": "M2", "id": 6078, "criterion": "3e_b_rdreal_wm_free", "draws": [8, 93]}, {"model": "M2", "id": 6078, "criterion": "3d_wm_free", "draws": [76, 84]}, {"model": "M2", "id": 6126, "criterion": "3e_b_rdreal_wm_free", "draws": [5, 16]}, {"model": "M2", "id": 6630, "criterion": "3e_b_rdreal_wm_free", "draws": [13, 30, 78, 80]}, {"model": "M2", "id": 7339, "criterion": "3e_b_rdreal_wm_free", "draws": [6]}, {"model": "M2", "id": 7907, "criterion": "3e_b_rdreal_wm_free", "draws": [11, 20, 33, 47, 75, 76, 78]}, {"model": "M2", "id": 8163, "criterion": "3e_b_rdreal_wm_free", "draws": [49, 59]}, {"model": "M2", "id": 8163, "criterion": "3e_c_rdreal_wm_2sigma_nowindow", "draws": [8, 29, 41]}, {"model": "M2", "id": 8529, "criterion": "3e_b_rdreal_wm_free", "draws": [43, 52, 68, 89]}, {"model": "M2", "id": 9421, "criterion": "3e_b_rdreal_wm_free", "draws": [45]}, {"model": "M2", "id": 9444, "criterion": "3e_b_rdreal_wm_free", "draws": [4, 20, 23, 27, 33, 34, 41, 42, 55, 67, 91]}, {"model": "M2", "id": 10885, "criterion": "3e_b_rdreal_wm_free", "draws": [2, 23, 27, 67, 69, 85]}, {"model": "M2", "id": 11072, "criterion": "3e_b_rdreal_wm_free", "draws": [3, 9, 29, 36, 37, 48, 50, 55, 76, 94]}, {"model": "M2", "id": 11072, "criterion": "3e_c_rdreal_wm_2sigma_nowindow", "draws": [1, 10, 21, 25, 26, 61, 64, 82, 84, 96]}, {"model": "M2", "id": 12423, "criterion": "3e_b_rdreal_wm_free", "draws": [3, 5, 13, 16, 17, 21, 25, 37, 38, 52, 61, 65, 66, 71, 72, 73, 83, 89, 98, 99]}, {"model": "M2", "id": 12909, "criterion": "3e_b_rdreal_wm_free", "draws": [11, 38, 53, 60, 99]}, {"model": "M2", "id": 12909, "criterion": "3e_c_rdreal_wm_2sigma_nowindow", "draws": [4, 5, 25, 28, 46, 50, 59, 80, 83, 86, 89]}, {"model": "M2", "id": 14006, "criterion": "3e_b_rdreal_wm_free", "draws": [11, 65, 94]}, {"model": "M2", "id": 15180, "criterion": "3e_b_rdreal_wm_free", "draws": [10, 18, 22, 32, 52, 61, 72, 76, 99]}, {"model": "M2", "id": 16616, "criterion": "3e_a_rdreal_wm_fixed", "draws": [12, 31, 36, 67, 77]}, {"model": "M2", "id": 16616, "criterion": "3e_b_rdreal_wm_free", "draws": [13, 31, 41, 77, 80]}, {"model": "M2", "id": 16616, "criterion": "3e_c_rdreal_wm_2sigma_nowindow", "draws": [13, 31, 41, 77, 80]}, {"model": "M2", "id": 17148, "criterion": "3e_b_rdreal_wm_free", "draws": [35]}, {"model": "M2", "id": 17316, "criterion": "3e_b_rdreal_wm_free", "draws": [9, 34, 48, 68, 70, 75, 82]}, {"model": "M2", "id": 17853, "criterion": "3e_b_rdreal_wm_free", "draws": [93, 94]}, {"model": "M2", "id": 17886, "criterion": "3d_wm_free", "draws": [13, 16, 45, 54, 55, 63, 79, 97]}, {"model": "M2", "id": 19827, "criterion": "3e_b_rdreal_wm_free", "draws": [18, 41, 51, 84]}], "th100_range_all": [0.37214223845525973, 1.725339485073037], "closest_nsigma": 0.04273550374940045, "variant_zstar_hs": {"n_any_draw_5sigma": 23, "n_any_draw_10sigma": 27, "n_3e_c_any_draw_10sigma": 5}, "variant_calibrated": {"n_any_draw_5sigma": 22, "n_any_draw_10sigma": 24, "n_3e_c_any_draw_10sigma": 5}, "variant_process_to_1e8": {"n_any_draw_5sigma": 24, "n_any_draw_10sigma": 26, "n_3e_c_any_draw_10sigma": 5}, "n_3e_c_any_draw_5sigma": 5, "n_3e_c_any_draw_10sigma": 5, "model2_3e_c_expected_fraction_5sigma": 8.5e-06, "model2_3e_c_expected_fraction_10sigma": 1.9e-05, "model2_10sigma_with_window_proxy": [], "n_model1_any_draw_10sigma": 0, "max_abs_dth_process_to_1e8": 0.017638462062496307}
+Escalar z_* con omega_m (Hu-Sugiyama): max |d 100theta_*| = 4.66e-03
+
+Validaciones: {
+ "lcdm_model2_code": {
+  "th100": 1.0414881057932035,
+  "th100_camb": 1.0411981150334395,
+  "rel_th_vs_camb": 0.0002785164087188985,
+  "th_minus_camb_in_planck_sigma": 0.9354540637548119,
+  "rs": 144.44443054077573,
+  "rs_camb": 144.44311841491015,
+  "rel_rs": 9.084031693529226e-06,
+  "dm": 13869.04274156506,
+  "dm_camb": 13872.779476773369,
+  "rel_dm": -0.0002693573565820673,
+  "note": "omega_m incl. massive nu treated as matter, omega_r = photons + 3.046 massless nu; dark energy of LCDM included at z > z_* in r_s up to 1e5"
+ },
+ "model1_code_no_de": {
+  "rel_rs": 1.96271665586778e-10,
+  "rel_dm": 5.417888360170764e-14
+ },
+ "model1_dm_vs_run_row5367": {
+  "z": [
+   0.295,
+   0.51,
+   0.706,
+   0.934,
+   1.321,
+   1.484,
+   2.33
+  ],
+  "rel_diff": [
+   -3.98766892506508e-06,
+   -6.0090897269216015e-06,
+   1.1425412834276116e-05,
+   -9.48554857949091e-06,
+   3.3156528531641527e-06,
+   9.254956557347427e-06,
+   -7.449149900251584e-07
+  ]
+ },
+ "survivor5492_vs_camb": {
+  "gap_pick": 195,
+  "omega_m": 0.11245503042205743,
+  "H0": 59.820661149604724,
+  "ours_at_zstar_planck": {
+   "th100": 0.6978098561376652,
+   "rs": 100.58124150703941,
+   "dm": 14413.846497346773
+  },
+  "camb": {
+   "th100": 0.6845279056336768,
+   "zstar": 1088.1099369853828,
+   "rs": 98.68825024881113,
+   "dm": 14416.979853794868
+  },
+  "ours_at_zstar_camb": {
+   "th100": 0.6989656832139826,
+   "rs": 100.74531342257004,
+   "dm": 14413.484930951565
+  },
+  "note": "CAMB extrapolates the w table beyond z = 1e5 (rho_DE continues); here Omega_de = 0 for z > 1e5"
+ }
+}

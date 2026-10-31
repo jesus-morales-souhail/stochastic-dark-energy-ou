@@ -10,8 +10,9 @@ Scripts y salidas, todos en esta carpeta:
 |---|---|---|
 | `ahmed_sim.py` | Modelo 1: `run()` (forma de [A], pasos en ln a) y `run_das()` (receta de [D1]) | `ahmed_sim.{json,txt}`, `das_model1.{json,txt}` |
 | `profile_desi_everpresent.py` + `desi_dr2_data.py` | perfiles de verosimilitud con kernels lineales (copias de `scripts/`, sin escrituras fuera) | `profile_desi_everpresent.{json,txt}` |
-| `rd_planck.py` (con `analisis_cmb/venv`) | r_d y χ²_BAO de ΛCDM-Planck con CAMB | `rd_planck.json` |
+| `rd_planck.py` (con `analisis_cmb/venv`) | r_d, z\*, r_s(z\*), θ* y χ²_BAO de ΛCDM-Planck con CAMB | `rd_planck.json` |
 | `bao_sim.py` | test por simulación frente a DESI DR2 | `bao_m2.{json,txt}`, `bao_m2_bestfit.npz`, `bao_m2_alphagrid.npz`, `bao_m1_alpha*.{json,txt,npz}` |
+| `cmb_real/theta_star.py` (con `analisis_cmb/venv`) | θ* por superviviente (3f); exploración previa en `cmb_real/EXPLORACION.md` | `cmb_real/theta_star.{json,txt}` |
 
 ---
 
@@ -323,6 +324,114 @@ ninguno de los dos modelos ajusta DESI DR2 tan bien como ΛCDM-Planck, ni con Δ
 - Modelo 2: 0/20000, < 1.5 × 10⁻⁴.
 - Modelo 1: 0/300000 (α = 0.01), < 1.0 × 10⁻⁵; y 0/200000 (α = 0.005), < 1.5 × 10⁻⁵.
 
+### 3f. θ* por realización
+
+Aquí se sustituye el proxy de CMB por el ángulo acústico θ* = r_s(z*)/D_M(z*), calculado con la
+historia de cada realización. No hay que confundirlo con el θ* del proceso OU de la sección 2. Se
+aplica a las 71 supervivientes de 3a, 3d y 3e: las que pasan A o B en algún criterio, más las 3 del
+Modelo 1 a ±1 del umbral de 3d. Son 65 del Modelo 2 y 6 del Modelo 1 (lista en
+`cmb_real/EXPLORACION.md`, sección 1).
+
+Script `cmb_real/theta_star.py`; resultados en `cmb_real/theta_star.{json,txt}`. El txt tiene una
+fila por superviviente y criterio, con 100θ* mínimo / mediana / máximo y la fracción de sorteos a
+< 5σ y < 10σ.
+
+**Por qué θ* y no la verosimilitud.** CAMB y CLASS describen la energía oscura con w(a), así que no
+admiten que ρ_DE cambie de signo (`cmb_real/EXPLORACION.md`, sección 3). Con `set_w_a_table`, CAMB
+corre sin aviso con la historia |ρ_DE|, o falla en Recfast. Tienen ese cambio de signo 70 de las 71
+supervivientes, y también el mejor ajuste de [Z] (su Fig. 1).
+
+**Montaje.**
+- **Historia del Modelo 2.**
+  - Los 458 puntos guardados de Ω̂ (`bao_sim.py`, `rd_real.py`, mismas semillas).
+  - El tramo z ∈ (3, 1000) no se muestreó nunca, porque BAO y r_d no lo necesitan. Se sortea
+    condicionado a esos puntos: N = 100 sorteos por superviviente, 275 puntos con paso 0.02 en λ,
+    semilla `default_rng([20261031, índice])`.
+  - Spline cúbico en λ.
+  - Ω_de = 0 para z > 10⁵, como en `rd_real.py`.
+- **Historia del Modelo 1:** la historia completa de cada run, resimulada desde (bloque, índice).
+  La resimulación es idéntica bit a bit al npz (`cmb_real/resim_m1.py`). Λ = 0 para z > 9999.
+- **ω_m:** el ω_m con el que pasó: el óptimo de 3d, 3e(b) o 3e(c), o el de Planck en 3a y 3e(a).
+- **H(z):** H² = 100²[ω_m(1+z)³ + ω_r(1+z)⁴]/(1 − Ω_de) en el Modelo 2. En el Modelo 1, Λ se
+  reescala con ω_m ([D1] Sec. 4.4).
+- **r_s(z\*):** ∫_{z\*}^{10⁵} c_s/H dz más la cola estándar. Usa c_s y la normalización a CAMB de
+  `rdcalc.py`, las mismas que en 3e.
+- **D_M(z\*):** ∫₀^{z\*} c/H dz.
+- **z\*:** z\* = 1089.907, el valor de CAMB para Planck 2018 (`rd_planck.json` → `zstar`), igual para
+  todas las realizaciones.
+- **Referencia:** 100θ* = 1.04110 ± 0.00031 (Planck 2018, arXiv:1807.06209, Tabla 2,
+  TT,TE,EE+lowE+lensing; comprobado en el TeX, `ms.tex`, fila `100\theta_\ast`).
+
+**Validaciones** (`theta_star.json` → `validations`):
+
+1. **ΛCDM-Planck por el mismo código.**
+   - 100θ* = 1.041488, frente a 1.041198 de CAMB: +0.028 %, que son 0.94σ de Planck.
+   - r_s(z\*) = 144.444 Mpc, frente a 144.443 de CAMB (+9 × 10⁻⁶).
+   - D_M(z\*): −0.027 %. Viene de tratar el neutrino masivo como materia y de la radiación sin masa;
+     es la única fuente del desplazamiento.
+   - El código del Modelo 1 con Λ = 0 reproduce las integrales directas a 2 × 10⁻¹⁰.
+   - Sus D_M en los 7 z de DESI coinciden con los del tiempo conforme del propio run a ≤ 1.1 × 10⁻⁵
+     (run 5367, α = 0.01).
+2. **Superviviente 5492 con el sorteo del hueco usado en `prueba_camb.py`, frente a CAMB.**
+   - Aquí: 0.6978. CAMB: 0.6845, una diferencia del 1.9 %.
+   - D_M coincide a 0.02 %, así que la diferencia está en r_s: 100.58 Mpc aquí frente a 98.69.
+   - El z\* propio de CAMB para esta cosmología es 1088.11; con él, aquí sale 0.6990.
+   - La causa principal es el tramo z > 10⁵. Allí CAMB extrapola la tabla de w y la energía oscura
+     sigue, con Ω_de(10⁵) = 0.88; aquí se pone a cero. Si Ω_de se mantiene en 0.88, la cola de r_s
+     (2.66 Mpc) baja 1.7 Mpc, que explica 1.7 de los 2.1 Mpc de diferencia.
+
+**Sistemáticos por sorteo y efecto en los recuentos** (variantes en `theta_star.json` → `totals`):
+
+| variante | desplazamiento máximo de 100θ* | algún sorteo a < 5σ | a < 10σ | 3e(c) a < 10σ |
+|---|---|---|---|---|
+| nominal (z\* fijo, Ω_de = 0 para z > 10⁵) | — | 22 | 25 | 5 |
+| θ* dividido por el desplazamiento de ΛCDM (validación 1) | 2.9 × 10⁻⁴ (0.94σ) | 22 | 24 | 5 |
+| z\* escalado con ω_m (Hu & Sugiyama 1996) | 4.7 × 10⁻³ (15σ) | 23 | 27 | 5 |
+| Modelo 2: proceso continuado hasta z = 10⁸ (sorteos condicionados) | 1.8 × 10⁻² (57σ) | 24 | 26 | 5 |
+
+Cada sorteo concreto puede moverse decenas de σ. Los recuentos cambian en 2 como mucho, porque los
+sorteos del hueco reparten θ* sobre un intervalo mucho más ancho: en las supervivientes que se
+acercan a Planck, 100θ* va de ≈ 1.00 a ≈ 1.20 entre sorteos.
+
+**Resultado** (71 supervivientes; 100θ* entre 0.37 y 1.73 en el conjunto):
+
+| | supervivientes | con algún sorteo a < 5σ | a < 10σ | de esas, pasan la ventana |
+|---|---|---|---|---|
+| Modelo 2, 3a | 1 | 0 | 0 | — |
+| Modelo 2, 3d | 29 | 2 | 2 | 0 |
+| Modelo 2, 3e(a) | 2 | 1 | 1 | 0 |
+| Modelo 2, 3e(b) | 46 | 20 | 24 | 0 |
+| Modelo 2, 3e(c) sin ventana (ω_m a ±1.6 %) | 6 | **5** | **5** | 0 |
+| **Modelo 2, unión** | **65** | **22** | **25** | **0** |
+| **Modelo 1 (α = 0.01 y 0.005)** | **6** | **0** | **0** | — |
+| **total** | **71** | **22** | **25** | **0** |
+
+- **Modelo 1:** ninguno se acerca. El más cercano está a 21σ: es el run 64524 con α = 0.01,
+  100θ* = 1.0346, que solo está a ±1 del umbral B de 3d. Los runs que pasan A quedan a 60–495σ,
+  según el criterio.
+- **Modelo 2:** con el sorteo adecuado del tramo z ∈ (3, 1000), θ* se puede ajustar. Las 25
+  supervivientes a < 10σ, con los sorteos que lo consiguen, están en `theta_star.json` →
+  `totals.passing_10sigma`. Por ejemplo, 12423 (3e(b)) lo consigue en 20 de 100 sorteos.
+- **Criterio (c) con θ* en vez del proxy de ventana** (r_d propio, ω_m a ±1.6 %, A y θ* a < 5σ):
+  - **5 de 20000** realizaciones del Modelo 2 tienen algún sorteo que pasa: 1540, 8163, 11072, 12909
+    y 16616.
+  - Lo consiguen en el 2–6 % de sus sorteos (a < 10σ, en el 3–11 %).
+  - Como el tramo sin muestrear es aleatorio, la fracción esperada de realizaciones que pasan es
+    **8.5 × 10⁻⁶** a 5σ, y 1.9 × 10⁻⁵ a 10σ.
+  - Las cinco tienen energía oscura de orden uno en la recombinación: Ω_de(1100) = −0.96, +0.85,
+    −0.87, −0.26 y −0.77, y |Ω_de| ≥ 0.79 en algún z ∈ [10³, 10⁵].
+- **θ* y ventana a la vez:** 0 de 71. Ninguna de las 25 que se acercan a θ* pasa la ventana. La única
+  superviviente que pasa la ventana, 11555, queda a ≥ 372σ (100θ* = 1.157–1.443).
+
+**Conclusión de 3f:**
+- θ* sustituye al proxy en el Modelo 1: el resultado es el mismo, 0.
+- En el Modelo 2 no lo sustituye. θ* es un solo número, y el tramo z ∈ (3, 1000), que los datos de
+  BAO no fijan, tiene libertad para ajustarlo.
+- El 0 del criterio (c) para el Modelo 2 descansa en la condición de energía oscura pequeña alrededor
+  de la recombinación, que θ* por sí solo no comprueba.
+- Saber si esas historias, con Ω_de ≈ ±0.8 en z ≈ 1100, son compatibles con los espectros de Planck
+  exige la verosimilitud completa con ρ_DE con signo: opción (a) de `cmb_real/EXPLORACION.md`.
+
 ### Comparación con [D2]
 
 | modelo | datos | realizaciones | mejor que ΛCDM (A) | Δχ² < 4 (B) | fichero |
@@ -341,6 +450,8 @@ ninguno de los dos modelos ajusta DESI DR2 tan bien como ΛCDM-Planck, ni con Δ
 | **Modelo 2, criterio final (c)** | DESI DR2 BAO + ventana CMB, r_d propio, ω_m ±1.6 % | 20000 | **0 (< 1.5 × 10⁻⁴)** | **0** | `rd_real.json` |
 | **Modelo 1, α = 0.01, criterio final (c)** | ídem | 300000 | **0 (< 1.0 × 10⁻⁵)** | **0** | `rd_real.json` |
 | **Modelo 1, α = 0.005, criterio final (c)** | ídem | 200000 | **0 (< 1.5 × 10⁻⁵)** | **0** | `rd_real.json` |
+| Modelo 2, criterio (c) con θ* (< 5σ) en vez de la ventana | DESI DR2 BAO + θ* de cada historia, r_d propio, ω_m ±1.6 % | 20000 × 100 sorteos del tramo z ∈ (3, 1000) | 5 con algún sorteo (fracción esperada 8.5 × 10⁻⁶) | 5 | `cmb_real/theta_star.json` |
+| Modelo 1, ídem | ídem | 500000 | 0 (el más cercano, a 21σ) | 0 | `cmb_real/theta_star.json` |
 
 Diferencia de método: [D2] optimiza Ω_m h², α y M_B por semilla. En 3a–3c los parámetros están fijos
 (Planck para ω_b, ω_c y r_d; α del caso). En 3d se optimiza ω_m por realización (con r_d(ω_m)), pero
@@ -356,9 +467,17 @@ no α.
   1.8 %.
 - **z_d no se recalcula por realización.** Es el de CAMB escalado con ω_m (Eisenstein–Hu); la energía
   oscura cerca de z_d lo movería ligeramente.
-- **CMB solo por proxy.** Se usa |Ω_de| < 0.25 (en z = 1100 en 3a–3d, en la ventana z ∈ [1000, 5000]
-  en 3e) en vez de la verosimilitud de Planck. [D2] Sec. 5 sí usa la verosimilitud: su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor con la
-  energía oscura suprimida en la última dispersión (Sec. 7).
+- **El CMB entra como θ*, no como verosimilitud completa.** θ* se calcula con la historia de cada
+  realización (3f), junto con el proxy |Ω_de| < 0.25 de 3a–3e. No se usa la verosimilitud completa
+  porque CAMB y CLASS no admiten ρ_DE con cambio de signo, y lo tienen 70 de las 71 supervivientes y
+  el propio mejor ajuste de [Z] (`cmb_real/EXPLORACION.md`).
+  - El tramo z ∈ (3, 1000) del Modelo 2, que nunca se había muestreado, se sortea: N = 100 sorteos
+    condicionados por superviviente.
+  - z\* es el de ΛCDM-Planck para todas las realizaciones, y en el Modelo 2 Ω_de = 0 para z > 10⁵.
+    Cada uno de estos supuestos mueve un sorteo concreto hasta 15σ y 57σ respectivamente, pero los
+    recuentos de 3f cambian en 2 como mucho.
+  - [D2] Sec. 5 sí usa la verosimilitud (Modelo 1): su mejor χ² es ∼157 peor que ΛCDM, y ∼20 peor
+    con la energía oscura suprimida en la última dispersión (Sec. 7).
 - **El umbral 0.25 del proxy es generoso.** Planck 2015 XIV (arXiv:1502.01590), Sec. 5.1.5, Tabla 3:
   con la parametrización de energía oscura temprana de Doran & Robbers (2006), ec. (26),
   Ω_de(a) = [Ω_de⁰ − Ω_e(1 − a^{−3w₀})]/[Ω_de⁰ + Ω_m⁰ a^{3w₀}] + Ω_e(1 − a^{−3w₀}), que tiende a una
@@ -399,6 +518,9 @@ no α.
      (< 1.0 × 10⁻⁵ al 95 %) y **0 de 200000** con α = 0.005 (< 1.5 × 10⁻⁵), con los tres criterios
      A, B y A'.
    - El mejor run en ventana tiene χ² = 89.3 con H0 = 51.6 (α = 0.005).
+   - Con θ* calculado con la historia de cada run (3f), ninguno de los 6 runs que pasan A o B en
+     algún criterio se acerca al valor de Planck: el más cercano está a 21σ. Para el Modelo 1, θ* da
+     el mismo 0 que el proxy de ventana.
    - Sin el proxy en ventana, pasan A 1–2 runs por α (3 runs distintos en total, criterios (a), (b) y
      (c) sin ventana), con H0 = 54.8–75.9 en su ω_m óptimo y |Ω_de| = 0.72–1.66 en algún punto de
      z ∈ [1000, 5000] (`rd_real.json`, `rd_real_m1_alpha*.npz`): α = 0.01, run 5367 (χ² = 17.76,
@@ -412,6 +534,13 @@ no α.
      solo punto.
    - Con ω_m libre y sin proxy, el r_d propio deja pasar 37/20000 (1.85 × 10⁻³) en A; con ω_m a
      ±1.6 % y sin proxy, 6/20000. Todas tienen energía oscura de orden uno en la recombinación.
+   - Con θ* en vez del proxy de ventana (3f), el criterio (c) ya no da 0:
+     - 5 de esas 6 tienen algún sorteo del tramo z ∈ (3, 1000) a < 5σ del 100θ* de Planck, en el
+       2–6 % de sus sorteos. La fracción esperada es 8.5 × 10⁻⁶ de las realizaciones.
+     - Las cinco tienen |Ω_de(1100)| = 0.26–0.96.
+     - Con θ* y la ventana a la vez, 0.
+     - El 0 del Modelo 2 depende, por tanto, de exigir energía oscura pequeña en la recombinación,
+       que θ* solo no comprueba.
 
 4. **BAO frente a SN.** DESI DR2 BAO solo, con ω_m libre, deja pasar más realizaciones que SN en [D2],
    no menos: en el Modelo 2 con r_d propio pasan A 37/20000 = 1.85 × 10⁻³ (`rd_real.json` →
@@ -422,6 +551,13 @@ no α.
    oscura cambie r_d. **Lo que excluye es BAO junto con lo que fija el CMB:** ω_m a ±2σ de
    Planck y energía oscura pequeña alrededor de la recombinación. Con esas dos condiciones, 0
    realizaciones en los dos modelos.
+   - Si la segunda condición se sustituye por θ* calculado con cada historia (3f), el Modelo 1 sigue
+     en 0.
+   - En el Modelo 2 pasan 5/20000 con algún sorteo del tramo no muestreado (fracción esperada
+     8.5 × 10⁻⁶): el ángulo acústico se puede ajustar con ese tramo, y la energía oscura en la
+     recombinación sigue siendo de orden uno.
+   - Que esas historias sean o no compatibles con los espectros de Planck requiere la verosimilitud
+     completa.
 
 5. **Cotas lineales.** Como fluctuación pequeña alrededor de ΛCDM, DESI DR2 limita la amplitud a
    α_Zwane < 1.85 × 10⁻² (μ fijo) o < 2.41 × 10⁻² (μ libre, que se va a su borde 0.1), y a
