@@ -1,0 +1,11 @@
+S_DV frente a la tabla S_z: max |dif| = 8.61e-04
+7 alpha_DV por este codigo frente a perfil_fondo.json: max dif relativa = 2.25e-14; casos sin cota coinciden: True
+
+7 alpha_DV: sigma_v = 0.00392, X_hat/sigma_v = +0.020, 6.75 sigma_v = 0.02644, sigma(Omega_m) h r_d libre = 0.0124, h r_d fijo = 0.0038, Omega_m(sigma=0) = 0.2978
+  a_fixed             0.02633    0.02633    0.02101    0.01444     0.0129
+  b_profiled          0.02633    0.02633    0.02129      0.015    0.01327
+  c_marginalised     sin cota   sin cota     0.1398    0.04611    0.02204
+13 numeros: sigma_v = 0.00343, X_hat/sigma_v = +0.031, 6.75 sigma_v = 0.02314, sigma(Omega_m) h r_d libre = 0.0086, h r_d fijo = 0.0033, Omega_m(sigma=0) = 0.2975
+  a_fixed             0.02305    0.02305    0.01833     0.0128     0.0116
+  b_profiled          0.02305    0.02305    0.01849    0.01325    0.01195
+  c_marginalised     sin cota   sin cota     0.1121    0.03774    0.01925
