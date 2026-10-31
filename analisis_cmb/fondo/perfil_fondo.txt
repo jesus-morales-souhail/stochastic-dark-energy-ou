@@ -1,0 +1,10 @@
+fondo de referencia de los alpha (mejor ajuste DESI DR2): Omega_m = 0.29740, h r_d = 101.538 Mpc
+cos(S, d ln alpha / d Omega_m) = 0.999964
+sigma_X = 0, h r_d libre: Omega_m = 0.2978 +- 0.0124 (Fisher), h r_d = 101.51 Mpc
+(a) reproduce 2.633e-2: {'ours': 0.0263282756994459, 'reference': 0.0263282756994459, 'identical': True}
+modo S (theta -> 0): sigma_v condicional = 0.00392, X_hat/sigma_v = +0.020, cota de Occam sqrt(e^3.84 - 1) sigma_v = 0.02644; sigma(Omega_m) con h r_d libre = 0.0124, con h r_d fijo = 0.0038
+
+tratamiento       theta libre  theta=0.001    theta=0.1      theta=1     theta=10
+a_fixed               0.02633      0.02633      0.02101      0.01444       0.0129
+b_profiled            0.02633      0.02633      0.02129        0.015      0.01327
+c_marginalised       sin cota     sin cota       0.1398      0.04611      0.02204

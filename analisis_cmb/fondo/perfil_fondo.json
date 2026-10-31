@@ -1,0 +1,131 @@
+{
+ "reference_background": {
+  "Omega_m": 0.2973976507108333,
+  "h_rd_Mpc": 101.53777208137876,
+  "max_abs_alpha_residual": 0.0002983780245833234,
+  "note": "alpha_DV of figure6 are relative to the DESI DR2 best-fit LCDM (plot_figure6.ipynb)"
+ },
+ "cos_S_dlnalpha_dOm": 0.9999644784663768,
+ "fit_sigma0_hrd_free": {
+  "Omega_m": 0.29781598656714614,
+  "h_rd_Mpc": 101.50930124932412,
+  "sigma_Omega_m_fisher": 0.01243498754987099,
+  "desi_dr2_paper": "Omega_m = 0.2975 +- 0.0086, h r_d = 101.54 +- 0.73 Mpc (DESI only, 13 BAO points; arXiv:2503.14738 Sec. 6, eq. constraints_lcdm_desi)"
+ },
+ "treatments": {
+  "a_fixed": {
+   "theta_free": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.0263282756994459,
+    "crossing": "inside grid",
+    "theta_at_bound": 0.001
+   },
+   "theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.02632827603847809,
+    "crossing": "inside grid"
+   },
+   "theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.021013279538898068,
+    "crossing": "inside grid"
+   },
+   "theta_1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.014442867473168204,
+    "crossing": "inside grid"
+   },
+   "theta_10": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.012901736390088722,
+    "crossing": "inside grid"
+   }
+  },
+  "b_profiled": {
+   "theta_free": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.02633115611426577,
+    "crossing": "inside grid",
+    "theta_at_bound": 0.001
+   },
+   "theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.026331156457579583,
+    "crossing": "inside grid"
+   },
+   "theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.021294578458195754,
+    "crossing": "inside grid"
+   },
+   "theta_1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.014999800502226953,
+    "crossing": "inside grid"
+   },
+   "theta_10": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.013274682872823778,
+    "crossing": "inside grid"
+   }
+  },
+  "c_marginalised": {
+   "theta_free": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "dlnL_rel_at_sigma_1": -1.3227407419364958,
+    "sigma_95": null,
+    "crossing": "no crossing up to sigma_X = 1"
+   },
+   "theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "dlnL_rel_at_sigma_1": -1.3227407419364958,
+    "sigma_95": null,
+    "crossing": "no crossing up to sigma_X = 1"
+   },
+   "theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "dlnL_rel_at_sigma_1": -9.655362072813045,
+    "sigma_95": 0.1397713301839342,
+    "crossing": "beyond the DESI grid (extended to 1)"
+   },
+   "theta_1": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.0461089060338088,
+    "crossing": "inside grid"
+   },
+   "theta_10": {
+    "sigma_at_max": 1e-06,
+    "dlnL_max_minus_at_grid_start": 0.0,
+    "sigma_95": 0.02204016822107931,
+    "crossing": "inside grid"
+   }
+  }
+ },
+ "s_mode": {
+  "sigma_v_conditional": 0.003917944308521094,
+  "X_hat": 7.835639114361344e-05,
+  "X_hat_over_sigma_v": 0.0199993631796136,
+  "occam_bound": 0.026435376410975236,
+  "sigma_Omega_m_marginalised_over_hrd": 0.01243498754987099,
+  "sigma_Omega_m_conditional_hrd_fixed": 0.0037780350892015336
+ },
+ "check_a_reproduces_reference": {
+  "ours": 0.0263282756994459,
+  "reference": 0.0263282756994459,
+  "identical": true
+ }
+}
