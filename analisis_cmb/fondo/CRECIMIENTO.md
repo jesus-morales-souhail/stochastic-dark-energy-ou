@@ -72,3 +72,49 @@ La precisión combinada es del 4.7 % (sección 8 del mismo artículo).
   el doble de lo predicho. Solo con σ₈(0) fijo cae en el rango (1.8 %).
 - **Entre 3 y 5 veces por debajo del error por tramo: cumplida.** Es 3.5 veces en LRG1 (z = 0.5) y 3.5–5.1 en
   los cuatro z pedidos.
+
+## Previsiones por tramo (DESI Y5, Euclid)
+
+**DESI 2016** (DESI Collaboration, arXiv:1611.00036), sección 2.4.3, "Summary of Forecasts": error relativo
+previsto de fσ₈ por tramo, 14 000 deg², con k_max = 0.1 y 0.2 h Mpc⁻¹. Los centros están separados 0.1; el texto
+no da el ancho, así que se lee como Δz = 0.1. La última columna es el mayor cambio de fσ₈ a la cota (de los dos
+signos de δΩ_Λ), calculado con `crecimiento.py` en el centro de cada tramo.
+
+| tabla | z | error, k_max = 0.1 | error, k_max = 0.2 | cambio a la cota | cambio / error (0.1; 0.2) |
+|---|---|---|---|---|---|
+| 2.5 (BGS) | 0.35 | 5.83 % | 2.60 % | 4.50 % | 0.77; 1.73 |
+| 2.5 (BGS) | 0.45 | 6.35 % | 3.77 % | 3.99 % | 0.63; 1.06 |
+| 2.3 | 0.65 | 3.31 % | 1.57 % | 3.13 % | 0.95; 2.00 |
+| 2.3 | 0.75 | 2.10 % | 1.01 % | 2.78 % | 1.32; 2.75 |
+| 2.3 | 0.85 | 2.12 % | 1.01 % | 2.46 % | 1.16; 2.44 |
+| 2.3 | 0.95 | 2.09 % | 0.99 % | 2.18 % | 1.05; 2.21 |
+| 2.3 | 1.05 | 2.23 % | 1.11 % | 1.94 % | 0.87; 1.75 |
+| 2.3 | 1.15 | 2.25 % | 1.14 % | 1.73 % | 0.77; 1.52 |
+| 2.3 | 1.25 | 2.25 % | 1.16 % | 1.55 % | 0.69; 1.33 |
+| 2.3 | 1.35 | 2.90 % | 1.73 % | 1.39 % | 0.48; 0.80 |
+| 2.3 | 1.45 | 3.06 % | 1.87 % | 1.25 % | 0.41; 0.67 |
+| 2.3 | 1.55 | 3.53 % | 2.27 % | 1.12 % | 0.32; 0.49 |
+
+La precisión agregada prevista es ≈ 0.74 % (k_max = 0.1) y ≈ 0.38 % (k_max = 0.2), en la sección 2.4.1.
+
+**Euclid preparation VII** (arXiv:1910.09273): las fσ₈(z_i) de los cuatro tramos espectroscópicos (z = 1.0, 1.2,
+1.4 y 1.65) son parámetros intermedios del Fisher. Se dejan libres en cada tramo y se proyectan sobre los
+parámetros cosmológicos (sección 3.2), y el artículo no da sus errores. Por eso Euclid se cita sin número.
+
+**Lectura:** en 0.75 ≤ z ≤ 1.25 el error previsto para DESI es del 1.0–2.3 % por tramo, y el cambio a la cota es
+0.7–2.8 σ por tramo. Es marginal por tramo y detectable solo combinando tramos con k_max = 0.2.
+
+## Antes / después de la frase (PREPRINT, trabajo futuro)
+
+**Antes:**
+> The growth rate is the velocity-side signature: at the DESI limit the residual shifts $f\sigma_8$ by ≈ 3.8 % at $z = 0.5$, 3.5 times below the DESI DR1 full-shape errors (arXiv:2411.12021, Table 9; cosmology in arXiv:2411.12022); it becomes marginal at the 2–3 % precision of DESI Y5 and Euclid (`analisis_cmb/fondo/CRECIMIENTO.md`).
+
+**Después:**
+> The growth rate is the velocity-side signature: at the DESI limit the residual shifts $f\sigma_8$ by ≈ 3.8 % at $z = 0.5$, 3.5 times below the DESI DR1 full-shape errors (arXiv:2411.12021, Table 9; cosmology in arXiv:2411.12022), with $\Omega_m$ fixed by the CMB (the constant mode is otherwise degenerate with $\Omega_m$, as for the distances); it becomes marginal at the per-bin precision forecast for DESI Y5, 1.0–2.3 % per $\Delta z = 0.1$ bin at $0.75 \le z \le 1.25$ ($k_{\max} = 0.2$–$0.1\,h$ Mpc$^{-1}$; arXiv:1611.00036, Table 2.3), where the shift is 0.7–2.8 σ per bin, while Euclid preparation VII (arXiv:1910.09273) projects the per-bin $f\sigma_8$ onto cosmological parameters without quoting them (`analisis_cmb/fondo/CRECIMIENTO.md`).
+
+(En las citas, el enlace al propio fichero se deja como texto, porque desde aquí apuntaría mal.)
+
+Cambios:
+1. "at the 2–3 % precision of DESI Y5 and Euclid" pasa a ser el error por tramo de DESI 2016 (tabla 2.3) y la
+   nota de que Euclid preparation VII no da errores por tramo.
+2. Se añade la condición de Ω_m fijado por el CMB.
