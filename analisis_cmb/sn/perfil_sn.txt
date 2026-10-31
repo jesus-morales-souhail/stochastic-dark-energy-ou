@@ -1,0 +1,13 @@
+Pantheon+ (m_b_corr, STAT+SYS), 1580 SNe (z_HD > 0.01, sin calibradores), M_B marginalizado, Omega_m libre
+LCDM: Omega_m = 0.3326
+theta libre en (1e-3, 20): sigma_X < 0.11665459397138025  (beyond the DESI grid (extended to 1)); en la cota (lnL, theta, Omega_m) = [2288.087077023301, 0.001, 0.340546886641988]
+  maximo del perfil en sigma_X = 0.00998
+theta = 0.001: sigma_X < 0.11984607169791962  (beyond the DESI grid (extended to 1)); maximo en sigma_X = 1.99e-06
+theta = 0.1: sigma_X < 0.11860658149446043  (beyond the DESI grid (extended to 1)); maximo en sigma_X = 1e-06
+theta = 1.0: sigma_X < 0.09633662245300945  (beyond the DESI grid (extended to 1)); maximo en sigma_X = 1.26e-06
+theta = 10.0: sigma_X < 0.0628859333298904  (beyond the DESI grid (extended to 1)); maximo en sigma_X = 0.00998
+diagnostico theta = 0.001 con Omega_m fijo en 0.3326: sigma_X < 0.11964975480302854
+coseno entre S y d ln D_L / d Omega_m: 0.999966
+diagnostico Omega_m marginalizado (lineal), theta = 0.001: sigma_X < None (Delta lnL en sigma_X = 1: -0.072)
+diagnostico Omega_m marginalizado (lineal), theta = 1.0: sigma_X < 0.1774021175230643 (Delta lnL en sigma_X = 1: -29.448)
+diagnostico Omega_m marginalizado (lineal), theta = 10.0: sigma_X < 0.07312414628039984 (Delta lnL en sigma_X = 1: -106.832)
