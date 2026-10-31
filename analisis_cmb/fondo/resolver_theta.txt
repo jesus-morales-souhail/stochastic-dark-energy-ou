@@ -1,0 +1,15 @@
+S de la definicion frente a la tabla de DESI: max |dif| = 8.61e-04
+sigma_X en que la divergencia alcanza 1.92 (media simetrica | KL(1||2) | KL(2||1) | Jeffreys); y la media simetrica en sigma_X = 1.5e-2 y 2.633e-2
+
+DESI_DR2|background_fixed|0.001_vs_1                   0.0261 |   0.0412 |   0.0224 |   0.0196   sym(1.5e-2) = 0.477, sym(2.633e-2) = 1.96
+DESI_DR2|background_fixed|0.001_vs_10                   0.014 |   0.0169 |   0.0129 |   0.0103   sym(1.5e-2) = 2.24, sym(2.633e-2) = 7.48
+DESI_DR2|background_fixed|1_vs_10                      0.0286 |   0.0431 |   0.0243 |    0.017   sym(1.5e-2) = 0.791, sym(2.633e-2) = 1.74
+DESI_DR2|background_marginalised|0.001_vs_1            0.0323 |   0.0513 |   0.0278 |   0.0245   sym(1.5e-2) = 0.245, sym(2.633e-2) = 1.16
+DESI_DR2|background_marginalised|0.001_vs_10           0.0165 |   0.0239 |   0.0145 |   0.0126   sym(1.5e-2) = 1.51, sym(2.633e-2) = 5.79
+DESI_DR2|background_marginalised|1_vs_10               0.0341 |   0.0942 |   0.0266 |   0.0207   sym(1.5e-2) = 0.539, sym(2.633e-2) = 1.38
+Euclid_like|background_fixed|0.001_vs_1                0.0149 |   0.0215 |    0.013 |   0.0113   sym(1.5e-2) = 1.95, sym(2.633e-2) = 7.21
+Euclid_like|background_fixed|0.001_vs_10               0.0075 |  0.00819 |  0.00715 |  0.00554   sym(1.5e-2) = 9, sym(2.633e-2) = 29.6
+Euclid_like|background_fixed|1_vs_10                   0.0114 |   0.0132 |   0.0106 |   0.0078   sym(1.5e-2) = 2.95, sym(2.633e-2) = 5.97
+Euclid_like|background_marginalised|0.001_vs_1         0.0173 |   0.0242 |   0.0151 |   0.0132   sym(1.5e-2) = 1.33, sym(2.633e-2) = 5.29
+Euclid_like|background_marginalised|0.001_vs_10       0.00863 |   0.0108 |   0.0078 |  0.00673   sym(1.5e-2) = 7.63, sym(2.633e-2) = 26.6
+Euclid_like|background_marginalised|1_vs_10            0.0129 |   0.0172 |   0.0113 |  0.00919   sym(1.5e-2) = 2.5, sym(2.633e-2) = 5.42
