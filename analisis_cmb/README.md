@@ -48,6 +48,7 @@ Status (2026-10-03): analysis finished; result in `RESULTADO.md` (re-run at σ_X
 | `reloj/` | σ_X profile with four stationarity clocks (ln a, cosmic time, conformal time, z): `perfil_reloj.py`, `perfil_reloj.{json,txt}`, `RELOJ.md`; before/after of the related text in `COMPARACION_RELOJ_VALVULA.md` |
 | `fondo/` | The DESI σ_X profile with the background free (`FONDO.md`, `perfil_fondo.py`): the α reference is the DESI DR2 best fit, the θ → 0 limit is the Ω_m direction (ln det term), θ ≥ 1 limits by background treatment; σ_X needed to resolve θ with DESI and a Euclid-like survey (`RESOLVER_THETA.md`, `resolver_theta.py`) |
 | `fondo/TRECE.md` | The same profile with the 13 DESI numbers (D_M, D_H separately, D_V for BGS) instead of the 7 isotropic α (`perfil_13.py`): limits tighter by a factor 1.11–1.25, same meaning |
+| `fondo/CRECIMIENTO.md` | Change of fσ₈(z) at the C2 limit (θ → 0 mode, δΩ_Λ = 2.633e-2 on Planck ΛCDM, growth equation solved; `crecimiento.py`): 3.8 % at z = 0.5, 3.5–5 times below the DESI DR1 full-shape errors per bin |
 | `sn/` | σ_X profile with Pantheon+ (`SN.md`, `perfil_sn.py`, data in `sn/datos/` with sha256); effect of the limit on D_L for standard sirens |
 | `cmb/` | High-ℓ CMB check (`PICOS.md`, `picos.py`): TT, TE, EE distance to ΛCDM over ℓ ∈ [30, 2500], lensing in the troughs, ∝ σ_X² |
 | `oscilador/` | Deterministic oscillating X(ln a) against DESI DR2 BAO and Planck 2018; `oscilador/README.md` |
