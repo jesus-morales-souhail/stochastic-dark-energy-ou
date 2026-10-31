@@ -65,6 +65,14 @@ se discretiza Λ (paso). Arranque a = 10⁻⁴, S_0 = 0, Ω_m h² = 0.14 (`discr
 
 Para el test de la sección 3 se usa n = 10⁵.
 
+La fracción que completa no está convergida en ninguna fila. Con pasos uniformes en ln a baja de
+forma monótona al refinar: 26.3, 19.4, 18.0 y 17.3 % con n = 10⁴, 10⁵, 3×10⁵ y 10⁶ (2000 semillas).
+El límite continuo es ≈ 16 %: 16.2 ± 0.7 % por extrapolación √Δ y 15.7 ± 0.8 % con la corrección de
+continuidad de Broadie–Glasserman–Kou. La fracción de producción (uniforme en a, n = 10⁵) y el 32.3 %
+de [D1] quedan por encima por el primer paso largo con Λ congelada. H0 y Ω_Λ(0) de las supervivientes
+no dependen del reloj, y los recuentos de la sección 3 tampoco
+([`cmb_real/RELOJ_M1.md`](cmb_real/RELOJ_M1.md)).
+
 ---
 
 ## 2. Kernels lineales: cotas a amplitud pequeña
@@ -172,6 +180,14 @@ completado.
 | (iii) mejor χ² | **47.1** (Δχ² = +17.3), H0 = 55.5, Ω_Λ(0) = 0.54, Ω_de(z_rec) = 0.20 | **60.4** (Δχ² = +30.5), H0 = 59.6, Ω_Λ(0) = 0.60, Ω_de(z_rec) = −0.13 |
 
 Los límites "< x al 95 %" con 0 éxitos son la regla de 3 (3/N).
+
+Semillas y runs completados (`bao_m1_alpha*.json`):
+- α = 0.01: 300000 semillas, 82795 completan (27.6 %).
+- α = 0.005: 200000 semillas, 198858 completan (99.4 %).
+
+Los 0 de (i) y sus límites (< 1.0 × 10⁻⁵ y < 1.5 × 10⁻⁵) son **sobre semillas**: las que llegan a
+H² ≤ 0 cuentan como realizaciones que no reproducen el universo. La fracción que completa es
+artefacto de la discretización (§1).
 
 ### 3d. Robustez: ω_m libre por realización
 
