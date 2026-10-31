@@ -43,7 +43,7 @@ Status (2026-10-03): analysis finished; result in `RESULTADO.md` (re-run at σ_X
 
 | Path | Content |
 |:--|:--|
-| `everpresent/` | Everpresent Λ (Ahmed–Dodelson–Greene–Sorkin and follow-ups) against DESI DR2 BAO; `EVERPRESENT_vs_DESI.md` |
+| `everpresent/` | Everpresent Λ (Ahmed–Dodelson–Greene–Sorkin and follow-ups) against DESI DR2 BAO; `EVERPRESENT_vs_DESI.md`. The CMB enters through a recombination proxy and through θ* computed for each realization, with the expansion rate at recombination (§3f, `everpresent/cmb_real/theta_star.py`); the full Planck likelihood with a sign-changing ρ_DE was not run (`everpresent/cmb_real/EXPLORACION.md`) |
 | `oscilador/` | Deterministic oscillating X(ln a) against DESI DR2 BAO and Planck 2018; `oscilador/README.md` |
 | `AUDITORIA.md` | Audit of the numbers across the repository (2026-10-03) |
 | `bloque_A/`, `bloque_B/` | Correction blocks A, B1, B1b, B2: before/after comparisons, snapshots (`antes/`) and logs |

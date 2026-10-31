@@ -423,14 +423,46 @@ acercan a Planck, 100θ* va de ≈ 1.00 a ≈ 1.20 entre sorteos.
 - **θ* y ventana a la vez:** 0 de 71. Ninguna de las 25 que se acercan a θ* pasa la ventana. La única
   superviviente que pasa la ventana, 11555, queda a ≥ 372σ (100θ* = 1.157–1.443).
 
+**Expansión en la recombinación** (`cmb_real/theta_star.json` → `expansion_at_recombination`;
+resumen en `theta_star.txt`). Se compara H(z) con H_ΛCDM(z) en z ∈ [800, 1500] (ΛCDM con el mismo
+ω_m, ω_r y el H0 de Planck) en cada sorteo que deja θ* a < 10σ: 174 sorteos de las 25 supervivientes.
+- En todos, max |H/H_ΛCDM − 1| es al menos del **6.2 %**. El mínimo es el de la superviviente 6078,
+  con Ω_de(1100) = +0.11; la mediana es 27 %.
+- Las 5 del criterio (c) sin ventana:
+
+| índice | ω_m | Ω_de(1100) | 1/√(1 − Ω_de(1100)) | H/H_ΛCDM en z ∈ [800, 1500] | mín. sobre sorteos de max \|H/H_ΛCDM − 1\| |
+|---|---|---|---|---|---|
+| 1540 | 0.1407 | −0.96 | 0.714 | 0.712–0.720 | 28.8 % |
+| 8163 | 0.1407 | +0.85 | 2.616 | 1.988–3.072 | 207 % |
+| 11072 | 0.1453 | −0.87 | 0.732 | 0.731–0.739 | 26.9 % |
+| 12909 | 0.1453 | −0.26 | 0.893 | 0.856–0.909 | 14.4 % |
+| 16616 | 0.1410 | −0.77 | 0.751 | 0.747–0.778 | 25.3 % |
+
+**Sensibilidad de Planck a la tasa de expansión en la recombinación** (analogía de fondo, generosa;
+no es una cota formal):
+- Referencia: N_eff = 2.99 ± 0.17 (68 %), 2.99^{+0.34}_{−0.33} (95 %), con TT,TE,EE+lowE+lensing+BAO
+  (arXiv:1807.06209, resumen, ec. `equ:neff1` y Tabla 4 `tab:grid_1paramext`; comprobado en el TeX).
+  No está en la Tabla 2, que es ΛCDM base. Sin BAO, en la columna de θ*: 2.89^{+0.36}_{−0.38} (95 %).
+- ΔN_eff = 0.34 (2σ) da Δρ_rad/ρ_rad = 0.2271 · 0.34/(1 + 0.2271 · 3.046) = 4.56 %.
+- La radiación es el 24.2 % del total en z = 1090.
+- Así que **ΔH/H = ½ · 0.242 · 0.0456 = 0.55 %**.
+- N_eff también cambia el amortiguamiento de Silk y la fase de los picos, no solo H; por eso la
+  analogía es generosa.
+
+Las historias que ajustan θ* tienen H en la recombinación desviado ≥ 6.2 % (≥ 11 veces esa
+sensibilidad). Las del criterio (c), ≥ 14 % en z ∈ [800, 1500] y ≥ 10.7 % en z = 1100 (≥ 19 veces).
+
 **Conclusión de 3f:**
-- θ* sustituye al proxy en el Modelo 1: el resultado es el mismo, 0.
-- En el Modelo 2 no lo sustituye. θ* es un solo número, y el tramo z ∈ (3, 1000), que los datos de
-  BAO no fijan, tiene libertad para ajustarlo.
-- El 0 del criterio (c) para el Modelo 2 descansa en la condición de energía oscura pequeña alrededor
-  de la recombinación, que θ* por sí solo no comprueba.
-- Saber si esas historias, con Ω_de ≈ ±0.8 en z ≈ 1100, son compatibles con los espectros de Planck
-  exige la verosimilitud completa con ρ_DE con signo: opción (a) de `cmb_real/EXPLORACION.md`.
+- **Modelo 1:** θ* sustituye al proxy y da el mismo 0. El más cercano está a 21σ.
+- **Modelo 2:** θ* solo no lo sustituye. θ* es un solo número, y el tramo z ∈ (3, 1000), que BAO no
+  fija, tiene libertad para ajustarlo. La fracción esperada que pasa (c) con θ* es 8.5 × 10⁻⁶ a 5σ y
+  ≤ 2 × 10⁻⁵ a 10σ.
+- Todas esas historias ajustan θ* con una tasa de expansión en la recombinación que se aleja de ΛCDM
+  al menos un orden de magnitud más que la sensibilidad de Planck por la analogía con N_eff.
+- El 0 del Modelo 2 se mantiene con la condición de recombinación (energía oscura pequeña alrededor
+  de z ≈ 1100), y el argumento de la tasa de expansión la respalda.
+- **La verosimilitud completa con ρ_DE con signo no se ha corrido.** Es la opción (a) de
+  `cmb_real/EXPLORACION.md`, pendiente; la comparación con N_eff no la sustituye.
 
 ### Comparación con [D2]
 
@@ -519,8 +551,9 @@ no α.
      A, B y A'.
    - El mejor run en ventana tiene χ² = 89.3 con H0 = 51.6 (α = 0.005).
    - Con θ* calculado con la historia de cada run (3f), ninguno de los 6 runs que pasan A o B en
-     algún criterio se acerca al valor de Planck: el más cercano está a 21σ. Para el Modelo 1, θ* da
-     el mismo 0 que el proxy de ventana.
+     algún criterio se acerca al valor de Planck: el más cercano está a 21σ (≥ 21σ). Para el
+     Modelo 1, θ* da el mismo 0 que el proxy de ventana, sin necesidad de la condición de
+     recombinación.
    - Sin el proxy en ventana, pasan A 1–2 runs por α (3 runs distintos en total, criterios (a), (b) y
      (c) sin ventana), con H0 = 54.8–75.9 en su ω_m óptimo y |Ω_de| = 0.72–1.66 en algún punto de
      z ∈ [1000, 5000] (`rd_real.json`, `rd_real_m1_alpha*.npz`): α = 0.01, run 5367 (χ² = 17.76,
@@ -537,10 +570,15 @@ no α.
    - Con θ* en vez del proxy de ventana (3f), el criterio (c) ya no da 0:
      - 5 de esas 6 tienen algún sorteo del tramo z ∈ (3, 1000) a < 5σ del 100θ* de Planck, en el
        2–6 % de sus sorteos. La fracción esperada es 8.5 × 10⁻⁶ de las realizaciones.
-     - Las cinco tienen |Ω_de(1100)| = 0.26–0.96.
+     - Las cinco tienen |Ω_de(1100)| = 0.26–0.96, es decir, H en z = 1100 desviado de ΛCDM entre un
+       10.7 % y un 162 % (factor 1/√(1 − Ω_de) entre 0.71 y 2.62).
+     - La sensibilidad de Planck a la tasa de expansión en la recombinación es ≈ 0.55 % (ΔN_eff =
+       0.34 al 95 %; analogía de fondo, generosa, no una cota formal).
      - Con θ* y la ventana a la vez, 0.
-     - El 0 del Modelo 2 depende, por tanto, de exigir energía oscura pequeña en la recombinación,
-       que θ* solo no comprueba.
+     - El 0 del Modelo 2 se mantiene con la condición de recombinación, respaldada por ese argumento.
+       θ* solo admite una fracción esperada ≤ 2 × 10⁻⁵.
+     - La verosimilitud completa con ρ_DE con signo no se ha corrido (opción (a) de
+       `cmb_real/EXPLORACION.md`, pendiente).
 
 4. **BAO frente a SN.** DESI DR2 BAO solo, con ω_m libre, deja pasar más realizaciones que SN en [D2],
    no menos: en el Modelo 2 con r_d propio pasan A 37/20000 = 1.85 × 10⁻³ (`rd_real.json` →
@@ -556,8 +594,10 @@ no α.
    - En el Modelo 2 pasan 5/20000 con algún sorteo del tramo no muestreado (fracción esperada
      8.5 × 10⁻⁶): el ángulo acústico se puede ajustar con ese tramo, y la energía oscura en la
      recombinación sigue siendo de orden uno.
-   - Que esas historias sean o no compatibles con los espectros de Planck requiere la verosimilitud
-     completa.
+   - Esas historias tienen H en la recombinación desviado ≥ 6.2 % de ΛCDM (≥ 10.7 % en z = 1100 en
+     las del criterio (c)), frente a una sensibilidad de Planck de ≈ 0.55 % por la analogía con N_eff.
+     Lo que excluye en el Modelo 2 sigue siendo BAO junto con la condición de recombinación.
+   - La verosimilitud completa con ρ_DE con signo, que lo comprobaría formalmente, no se ha corrido.
 
 5. **Cotas lineales.** Como fluctuación pequeña alrededor de ΛCDM, DESI DR2 limita la amplitud a
    α_Zwane < 1.85 × 10⁻² (μ fijo) o < 2.41 × 10⁻² (μ libre, que se va a su borde 0.1), y a

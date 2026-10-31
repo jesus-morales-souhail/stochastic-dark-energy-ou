@@ -207,6 +207,79 @@ def validations(lam_all, O) -> dict:
     return v
 
 
+def expansion_at_recombination(lam_all, O, S, res) -> tuple[dict, list[str]]:
+    """For every Model 2 survivor and criterion with draws within 10 sigma of Planck's theta_*: H(z)/H_LCDM(z) on
+    z in [800, 1500] in each of those draws (LCDM with the same omega_m, omega_r and Planck's H0), and a background
+    analogy for Planck's sensitivity to the expansion rate at recombination: Delta N_eff = +-0.34 (95 %,
+    N_eff = 2.99 +0.34 -0.33, arXiv:1807.06209 eq. equ:neff1 and Table 4, TT,TE,EE+lowE+lensing+BAO; 2.99 +- 0.17 at
+    68 %, abstract)."""
+    h2 = RDJ["H0"] ** 2 / 1e4
+    zr = np.geomspace(800.0, 1500.0, 301)
+    lr = -np.log1p(zr)
+    sv = {x["index"]: x for x in S["model2"]}
+    rows, crit_c = [], []
+    for r in res["model2"]:
+        j = r["index"]
+        todo = {c: d for c, d in r["by_criterion"].items() if d["draws_10sigma"]}
+        if not todo:
+            continue
+        mean, Ls = P.gap_sampler(lam_all, O[:, j], LAM_GAP)
+        Yg = mean[:, None] + Ls @ np.random.default_rng([GAP_SEED, j]).standard_normal((len(LAM_GAP), N_DRAW))
+        lam = np.concatenate([lam_all, LAM_GAP])
+        o = np.argsort(lam)
+        keep = np.concatenate([[True], np.diff(lam[o]) > 1e-9])
+        for crit, d in todo.items():
+            wm = d["omega_m"]
+            dr = d["draws_10sigma"]
+            Y = np.vstack([np.repeat(O[:, j][:, None], len(dr), axis=1), Yg[:, dr]])[o][keep]
+            ode = np.tanh(CubicSpline(lam[o][keep], Y, axis=0)(lr))
+            base = wm * (1 + zr) ** 3 + ORAD * (1 + zr) ** 4
+            ratio = np.sqrt(base[:, None] / (1.0 - ode)) / np.sqrt(base + h2 - wm - ORAD)[:, None]
+            dev = np.max(np.abs(ratio - 1.0), axis=0)
+            row = {"index": j, "criterion": crit, "omega_m": wm, "draws": dr,
+                   "ratio_min": [float(x) for x in ratio.min(axis=0)], "ratio_max": [float(x) for x in ratio.max(axis=0)],
+                   "max_abs_dev": [float(x) for x in dev], "Ode_1100": sv[j]["Ode_rec"],
+                   "factor_H_1100": float(1.0 / np.sqrt(1.0 - sv[j]["Ode_rec"]))}
+            rows.append(row)
+            if crit == "3e_c_rdreal_wm_2sigma_nowindow":
+                crit_c.append(row)
+    # background analogy (not a formal bound)
+    dneff = 0.34
+    drho = 0.2271 * dneff / (1 + 0.2271 * 3.046)
+    z = 1090.0
+    frad = ORAD * (1 + z) / (OM0 + ORAD * (1 + z))
+    tol = 0.5 * frad * drho
+    alldev = np.concatenate([r_["max_abs_dev"] for r_ in rows])
+    out = {"z_range": [800.0, 1500.0], "lcdm_reference": "same omega_m and omega_r, H0 = 67.36",
+           "rows": rows, "n_rows": len(rows), "n_draws": int(len(alldev)),
+           "min_over_draws_of_max_abs_dev": float(alldev.min()), "median_over_draws_of_max_abs_dev": float(np.median(alldev)),
+           "criterion_c": [{"index": r_["index"], "omega_m": r_["omega_m"], "Ode_1100": r_["Ode_1100"],
+                            "factor_H_1100": r_["factor_H_1100"], "n_draws": len(r_["draws"]),
+                            "ratio_min": float(min(r_["ratio_min"])), "ratio_max": float(max(r_["ratio_max"])),
+                            "min_max_abs_dev": float(min(r_["max_abs_dev"]))} for r_ in crit_c],
+           "planck_sensitivity_analogy": {
+               "label": "sensibilidad de Planck a la tasa de expansion en la recombinacion, analogia de fondo, generosa; "
+                        "no es una cota formal",
+               "N_eff": "2.99 +- 0.17 (68 %), 2.99 +0.34 -0.33 (95 %), TT,TE,EE+lowE+lensing+BAO "
+                        "(arXiv:1807.06209 abstract, eq. equ:neff1, Table 4); without BAO 2.89 +0.36 -0.38 (95 %)",
+               "delta_N_eff": dneff, "delta_rho_rad_over_rho_rad": drho, "z": z, "radiation_fraction": frad,
+               "delta_H_over_H": tol}}
+    lines = ["", "Expansion en la recombinacion (z in [800, 1500]) en los sorteos a < 10 sigma de theta_*:",
+             f"  {len(rows)} filas (superviviente, criterio), {len(alldev)} sorteos; max|H/H_LCDM - 1| sobre z: "
+             f"minimo {alldev.min():.1%}, mediana {np.median(alldev):.1%}",
+             f"  Analogia de fondo (no cota): Delta N_eff = 0.34 -> Delta rho_rad/rho_rad = {drho:.4f}, fraccion de radiacion "
+             f"en z = 1090: {frad:.4f}, Delta H/H = {tol:.2%}",
+             "  Criterio (c): indice, omega_m, Omega_de(1100), 1/sqrt(1 - Omega_de(1100)), H/H_LCDM min-max en [800, 1500], "
+             "min sobre sorteos de max|H/H_LCDM - 1|"]
+    for c in out["criterion_c"]:
+        lines.append(f"  {c['index']:6d} {c['omega_m']:.4f} {c['Ode_1100']:+.2f} {c['factor_H_1100']:.3f} "
+                     f"{c['ratio_min']:.3f}-{c['ratio_max']:.3f} {c['min_max_abs_dev']:.1%}")
+    lines.append("  Todas las filas (indice, criterio, min sobre sorteos de max|H/H_LCDM - 1|):")
+    for r_ in rows:
+        lines.append(f"  {r_['index']:6d} {r_['criterion']:32s} {min(r_['max_abs_dev']):.1%}  (Omega_de(1100) {r_['Ode_1100']:+.2f})")
+    return out, lines
+
+
 def main() -> None:
     S = json.loads((HERE / "supervivientes.json").read_text())
     lam_all, O = P.stored_points()
@@ -301,6 +374,7 @@ def main() -> None:
     tot["max_abs_dth_process_to_1e8"] = max(d["variants"]["max_abs_dth_process_to_1e8"] for m, r in allrows if m == "M2"
                                             for d in r["by_criterion"].values())
     res["totals"] = tot
+    res["expansion_at_recombination"], exp_lines = expansion_at_recombination(lam_all, O, S, res)
     (HERE / "theta_star.json").write_text(json.dumps(res, indent=1), encoding="utf-8")
 
     lines = [f"100 theta_* por superviviente (Planck 2018: {TH_PLANCK} +- {SIG_PLANCK}); z_* = {ZSTAR:.3f} (CAMB, Planck 2018)",
@@ -316,7 +390,7 @@ def main() -> None:
             lines.append(f"{m:7s} {idn:>7s} {crit:32s} {d['omega_m']:8.4f} {fmt(d['th_min'])} {fmt(d['th_med'])} {fmt(d['th_max'])}"
                          f" {ns} {d['frac_5sigma']:5.2f} {d['frac_10sigma']:5.2f}")
     lines += ["", "Totales: " + json.dumps(tot), f"Escalar z_* con omega_m (Hu-Sugiyama): max |d 100theta_*| = {dz_max:.2e}",
-              "", "Validaciones: " + json.dumps(res["validations"], indent=1)]
+              *exp_lines, "", "Validaciones: " + json.dumps(res["validations"], indent=1)]
     (HERE / "theta_star.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines[:8]))
     print(json.dumps(tot, indent=1), f"\nzstar HS max dth {dz_max:.2e}")
