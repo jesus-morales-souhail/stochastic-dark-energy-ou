@@ -3,7 +3,7 @@
 Cambios de texto de este commit. Números de `cmb_real/theta_star.json` → `expansion_at_recombination`; los resultados anteriores de `theta_star.json` no cambian (comprobado: el json sin la clave nueva es idéntico).
 
 Notas:
-- N_eff = 2.99 ± 0.17 no está en la Tabla 2 de arXiv:1807.06209 (ΛCDM base), sino en el resumen, la ec. `equ:neff1` y la Tabla 4 (`tab:grid_1paramext`, 95 %), con BAO. Sin BAO, en la columna de θ*: 2.89^{+0.36}_{−0.38} (95 %).
+- N_eff = 2.99 ± 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/−0.33 (95 %, Table 4, +BAO); 2.89 +0.36/−0.38 (95 %, Table 4, sin BAO); no está en la Tabla 2 de arXiv:1807.06209 (ΛCDM base). El formato de esta nota se corrigió en el commit del reloj, aquí y en 3f.
 - La sensibilidad que sale es ΔH/H ≈ 0.55 %, por debajo del 1 %, no "few-percent". En los textos en inglés va como "≈ 0.6 %".
 - X = 11 %: es el factor en z = 1100 de la menos desviada del criterio (c), 12909, con Ω_de(1100) = −0.26 (1 − 1/√1.26 = 10.7 %). En z ∈ [800, 1500], ≥ 14 %. Sobre todos los sorteos a < 10σ de θ*, ≥ 6.2 %.
 - Conclusión 2 de EVERPRESENT_vs_DESI.md: solo se añade "(≥ 21σ)" y que no necesita la condición de recombinación.
@@ -45,9 +45,9 @@ resumen en `theta_star.txt`). Se compara H(z) con H_ΛCDM(z) en z ∈ [800, 1500
 
 **Sensibilidad de Planck a la tasa de expansión en la recombinación** (analogía de fondo, generosa;
 no es una cota formal):
-- Referencia: N_eff = 2.99 ± 0.17 (68 %), 2.99^{+0.34}_{−0.33} (95 %), con TT,TE,EE+lowE+lensing+BAO
-  (arXiv:1807.06209, resumen, ec. `equ:neff1` y Tabla 4 `tab:grid_1paramext`; comprobado en el TeX).
-  No está en la Tabla 2, que es ΛCDM base. Sin BAO, en la columna de θ*: 2.89^{+0.36}_{−0.38} (95 %).
+- Referencia: N_eff = 2.99 ± 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/−0.33 (95 %, Table 4, +BAO); 2.89 +0.36/−0.38 (95 %, Table 4, sin BAO). Planck 2018 VI es arXiv:1807.06209, y la columna es
+  TT,TE,EE+lowE+lensing; en el TeX, ec. `equ:neff1` y `tab:grid_1paramext` (comprobado). No está en
+  la Tabla 2, que es ΛCDM base.
 - ΔN_eff = 0.34 (2σ) da Δρ_rad/ρ_rad = 0.2271 · 0.34/(1 + 0.2271 · 3.046) = 4.56 %.
 - La radiación es el 24.2 % del total en z = 1090.
 - Así que **ΔH/H = ½ · 0.242 · 0.0456 = 0.55 %**.

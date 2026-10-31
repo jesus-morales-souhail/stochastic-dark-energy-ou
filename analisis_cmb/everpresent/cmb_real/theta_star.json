@@ -7343,7 +7343,7 @@
   ],
   "planck_sensitivity_analogy": {
    "label": "sensibilidad de Planck a la tasa de expansion en la recombinacion, analogia de fondo, generosa; no es una cota formal",
-   "N_eff": "2.99 +- 0.17 (68 %), 2.99 +0.34 -0.33 (95 %), TT,TE,EE+lowE+lensing+BAO (arXiv:1807.06209 abstract, eq. equ:neff1, Table 4); without BAO 2.89 +0.36 -0.38 (95 %)",
+   "N_eff": "2.99 +- 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/-0.33 (95 %, Table 4, +BAO); 2.89 +0.36/-0.38 (95 %, Table 4, sin BAO)",
    "delta_N_eff": 0.34,
    "delta_rho_rad_over_rho_rad": 0.045641587221159484,
    "z": 1090.0,

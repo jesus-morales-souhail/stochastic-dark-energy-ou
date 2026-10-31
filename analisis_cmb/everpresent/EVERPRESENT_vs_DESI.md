@@ -440,9 +440,9 @@ resumen en `theta_star.txt`). Se compara H(z) con H_ΛCDM(z) en z ∈ [800, 1500
 
 **Sensibilidad de Planck a la tasa de expansión en la recombinación** (analogía de fondo, generosa;
 no es una cota formal):
-- Referencia: N_eff = 2.99 ± 0.17 (68 %), 2.99^{+0.34}_{−0.33} (95 %), con TT,TE,EE+lowE+lensing+BAO
-  (arXiv:1807.06209, resumen, ec. `equ:neff1` y Tabla 4 `tab:grid_1paramext`; comprobado en el TeX).
-  No está en la Tabla 2, que es ΛCDM base. Sin BAO, en la columna de θ*: 2.89^{+0.36}_{−0.38} (95 %).
+- Referencia: N_eff = 2.99 ± 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/−0.33 (95 %, Table 4, +BAO); 2.89 +0.36/−0.38 (95 %, Table 4, sin BAO). Planck 2018 VI es arXiv:1807.06209, y la columna es
+  TT,TE,EE+lowE+lensing; en el TeX, ec. `equ:neff1` y `tab:grid_1paramext` (comprobado). No está en
+  la Tabla 2, que es ΛCDM base.
 - ΔN_eff = 0.34 (2σ) da Δρ_rad/ρ_rad = 0.2271 · 0.34/(1 + 0.2271 · 3.046) = 4.56 %.
 - La radiación es el 24.2 % del total en z = 1090.
 - Así que **ΔH/H = ½ · 0.242 · 0.0456 = 0.55 %**.

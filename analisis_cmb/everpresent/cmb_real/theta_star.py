@@ -210,9 +210,9 @@ def validations(lam_all, O) -> dict:
 def expansion_at_recombination(lam_all, O, S, res) -> tuple[dict, list[str]]:
     """For every Model 2 survivor and criterion with draws within 10 sigma of Planck's theta_*: H(z)/H_LCDM(z) on
     z in [800, 1500] in each of those draws (LCDM with the same omega_m, omega_r and Planck's H0), and a background
-    analogy for Planck's sensitivity to the expansion rate at recombination: Delta N_eff = +-0.34 (95 %,
-    N_eff = 2.99 +0.34 -0.33, arXiv:1807.06209 eq. equ:neff1 and Table 4, TT,TE,EE+lowE+lensing+BAO; 2.99 +- 0.17 at
-    68 %, abstract)."""
+    analogy for Planck's sensitivity to the expansion rate at recombination: Delta N_eff = +-0.34 (95 %). N_eff =
+    2.99 +- 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/-0.33 (95 %, Table 4, +BAO); 2.89 +0.36/-0.38 (95 %,
+    Table 4, without BAO); arXiv:1807.06209, TT,TE,EE+lowE+lensing."""
     h2 = RDJ["H0"] ** 2 / 1e4
     zr = np.geomspace(800.0, 1500.0, 301)
     lr = -np.log1p(zr)
@@ -260,8 +260,8 @@ def expansion_at_recombination(lam_all, O, S, res) -> tuple[dict, list[str]]:
            "planck_sensitivity_analogy": {
                "label": "sensibilidad de Planck a la tasa de expansion en la recombinacion, analogia de fondo, generosa; "
                         "no es una cota formal",
-               "N_eff": "2.99 +- 0.17 (68 %), 2.99 +0.34 -0.33 (95 %), TT,TE,EE+lowE+lensing+BAO "
-                        "(arXiv:1807.06209 abstract, eq. equ:neff1, Table 4); without BAO 2.89 +0.36 -0.38 (95 %)",
+               "N_eff": "2.99 +- 0.17 (68 %, abstract Planck 2018 VI); 2.99 +0.34/-0.33 (95 %, Table 4, +BAO); "
+                        "2.89 +0.36/-0.38 (95 %, Table 4, sin BAO)",
                "delta_N_eff": dneff, "delta_rho_rad_over_rho_rad": drho, "z": z, "radiation_fraction": frad,
                "delta_H_over_H": tol}}
     lines = ["", "Expansion en la recombinacion (z in [800, 1500]) en los sorteos a < 10 sigma de theta_*:",

@@ -1,0 +1,18 @@
+z_eff: 0.295, 0.510, 0.706, 0.934, 1.321, 1.484, 2.330
+
+Limite totalmente correlacionado (theta = 1e-12, igual para todo reloj): sigma_X < 2.64407e-02
+theta en la cota en el borde inferior de la busqueda (1e-3): {"a_ln_a": true, "b_cosmic_time": true, "c_conformal_time": true, "d_redshift": true}
+
+reloj               sigma_X 95% vs 2.633e-2 theta cota theta*span  max dlnL
+a_ln_a              2.63283e-02     +0.000%      0.001   0.000944 -1.98e-08
+b_cosmic_time       2.63915e-02     +0.240%      0.001   0.000516 -2.05e-08
+c_conformal_time    2.63227e-02     -0.021%      0.001    0.00102 -1.97e-08
+d_redshift          2.61629e-02     -0.628%      0.001    0.00204 -1.93e-08
+
+Separaciones entre bins consecutivos en orden de z (dx) y extension total:
+a_ln_a             0.1536 0.1220 0.1254 0.1824 0.0679 0.2931   total 0.9445
+b_cosmic_time      0.1234 0.0865 0.0782 0.0951 0.0302 0.1030   total 0.5165
+c_conformal_time   0.1725 0.1388 0.1419 0.2011 0.0725 0.2943   total 1.0212
+d_redshift         0.2150 0.1960 0.2280 0.3870 0.1630 0.8460   total 2.0350
+
+(a) reproduce la referencia: {"ours": 0.0263282756994459, "reference": 0.0263282756994459, "identical": true}
