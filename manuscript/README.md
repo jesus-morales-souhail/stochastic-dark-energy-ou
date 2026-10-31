@@ -28,7 +28,7 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 ## What is *in* the paper
 
 - DESI DR2 BAO residual constraints (OU / QNM)
-- $\sigma_X < 2.6\times 10^{-2}$ (95% CL) under the stated kernel
+- $\sigma_X < 2.6\times 10^{-2}$ (95% CL) under the stated kernel — set by the fully correlated mode, a background shift; the θ ≥ 1 limits on a residual that varies with redshift are in §3.2
 - Tachyonic coherent growth exclusion
 - Everpresent Λ tested directly: both published implementations excluded with the CMB conditions (§4.2)
 - Amplification bottleneck $10^{56}$ + Routes 1–3 numerical verdicts

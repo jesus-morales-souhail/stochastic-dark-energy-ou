@@ -96,6 +96,28 @@ se mide directamente frente al fiducial. Las SN, con Ω_m libre, no pueden hacer
 ¿se volvería también degenerado el modo θ → 0 y pasaría la cota a depender del tratamiento de esos
 parámetros (perfilados o marginalizados)? No se ha corrido, y no cambia nada de C2 por ahora.
 
+## Efecto en D_L a la cota (para las sirenas estándar)
+
+El residuo totalmente correlacionado a la cota cambia ln D_L en S(z) × 2.633 × 10⁻², con la S de
+`perfil_sn.py` (−∂ln D_L/∂Ω_Λ, plano, H0 fijo, Ω_Λ = 0.6847):
+
+| z | S(z) | δln D_L a 2.633 × 10⁻² | a 4.611 × 10⁻² (techo marginalizado con θ = 1) |
+|---|---|---|---|
+| 0.1 | −0.074 | 0.20 % | 0.34 % |
+| 0.5 | −0.341 | 0.90 % | 1.57 % |
+| 1.0 | −0.578 | 1.52 % | 2.66 % |
+| 2.0 | −0.828 | 2.18 % | 3.82 % |
+
+Frente a la precisión actual de las sirenas:
+- GW170817: D_L = 40^{+8}_{−14} Mpc (+20/−35 %; Abbott et al. 2017, PRL 119, 161101,
+  arXiv:1710.05832).
+- Sirenas oscuras de GWTC-3: H0 = 68^{+8}_{−6} km/s/Mpc (+12/−9 %), con el método de catálogo de
+  galaxias y población BBH fija; el resumen avisa que depende de la distribución de masas (Abbott et
+  al. 2023, ApJ 949, 76, arXiv:2111.03604).
+
+Como en las SN, una sirena mide la forma de D_L(z), y el modo θ → 0 es la dirección de Ω_m: quitar
+M_B no rompe esa degeneración.
+
 ## Predicción
 
 - **"SN no acota el modo θ → 0 (degenerado con M_B)": cumplida en el fondo, no en el mecanismo.**

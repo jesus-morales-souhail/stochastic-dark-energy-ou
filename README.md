@@ -33,7 +33,7 @@ Under the OU/QNM residual kernel on public DESI DR2 BAO, a stochastic residual i
 \sigma_X < 2.6\times 10^{-2}.
 \]
 
-Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure horizon-area Sorkin seed \(\sim 10^{-61}\) (not Everpresent Λ, which is a different, order-one model) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.
+This number is reached in the fully correlated limit (\(\theta\to 0\)), a shift of \(\Omega_m\) relative to the DESI best-fit background, not a bound on stochastic variance; for a residual that varies between redshifts (\(\theta\ge 1\)) the limits are \(1.3\)–\(1.5\times 10^{-2}\) (background fixed or profiled) and \(2.2\)–\(4.6\times 10^{-2}\) (marginalised) — see [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) §3.2. Best fit still goes to \(\sigma_X\to 0\). A coherent tachyonic growing mode is excluded when it is active (rank-1 covariance). Soft amplification of a pure horizon-area Sorkin seed \(\sim 10^{-61}\) (not Everpresent Λ, which is a different, order-one model) to Euclid-scale residuals needs \(\sim 10^{56}\) (to the DESI ceiling, \(\sim 10^{59}\)) and is not free — see the amplification note.
 
 Planck 2018 (TT ℓ<30 + lensing) does not distinguish this residual from ΛCDM at the DESI ceiling (p95 Δχ² ≤ 0.067) and adds no bound; its H0 imprint, 0.48 km/s/Mpc, does not explain the H0 tension. A percent-level harmonic residual is equally allowed (58/60) and CMB-invisible. See `analisis_cmb/RESULTADO.md`.
 
