@@ -53,5 +53,5 @@ Exploratory optics / scale–operator pedagogy:
 
 ## Status
 
-**Preprint, v2 (October 2026; v1: July 2026).** Independent research. Version history at the end of `PREPRINT.md`.
+**Preprint, v2.2 (November 2026; v2: October 2026; v1: July 2026).** Independent research. Version history at the end of `PREPRINT.md`.
 
