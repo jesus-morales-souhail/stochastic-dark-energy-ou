@@ -9,7 +9,9 @@ authors:
     affiliation: "Independent researcher"
 version: "2.2.1"
 date-released: "2026-11-11"
-license: "CC-BY-4.0"
+license:
+  - "MIT"
+  - "CC-BY-4.0"
 repository-code: "https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou"
 keywords:
   - "dark energy"
