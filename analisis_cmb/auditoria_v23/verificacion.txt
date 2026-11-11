@@ -1,0 +1,31 @@
+1. taquionico: punto 'representativo' del barrido: tc = 7.4087e-02 Gyr, dlnL = -12.679, amplitud max = 2.74e+03 (en alpha); mejor activo dlnL = -1.06e-07
+   vecinos: tc=0.0663: -30.047 (amp 9.6e+10); tc=0.0688: -24.043 (amp 2.4e+08); tc=0.0714: -18.256 (amp 7.3e+05); tc=0.0741: -12.679 (amp 2.7e+03); tc=0.0769: -7.304 (amp 13); tc=0.0798: -2.131 (amp 0.072); tc=0.0828: -0.002 (amp 0.00049)
+   cociente de amplitud z=2.33 / z=0.295 en ese tc: 8.75e+43 (crece hacia el pasado)
+   modo que crece en tiempo cosmico, cota sobre A_0 (alpha) al 95 % (-1.92 / -1.35): tc=0.1: sin cota / sin cota; tc=0.3: sin cota / sin cota; tc=1: sin cota / sin cota; tc=3: 0.3193 / 0.1763; tc=10: 0.06063 / 0.03348; tc=100: 0.02881 / 0.01591; tc=inf: 0.02644 / 0.0146
+   perfilando tc (tc_free): sin cota (-1.92, tc en la cota = None) / sin cota (-1.35); max dlnL = 7.11e-15; dlnL en A0 = 1: 0.000
+   perfilando tc (tc_ge_1Gyr): sin cota (-1.92, tc en la cota = None) / sin cota (-1.35); max dlnL = -3.13e-13; dlnL en A0 = 1: -0.251
+   OU theta->0: 0.02633 (Occam 0.02644 / 0.0146)
+2. nucleo completo: nodos 897; 7alpha max|sum W + S| = 8.62e-04, cov rel diff theta=0.001: 2.37e-03; 13: 4.13e-08, 9.56e-04
+   7alpha: tratamiento                  theta_free            theta_0.001              theta_0.1                theta_1                theta_3               theta_10
+            a_fixed          0.02633/0.02645(1.00) 0.02633/0.02645(1.00) 0.02101/0.02552(1.21) 0.01444/0.02154(1.49) 0.01287/0.01924(1.49)  0.0129/0.01855(1.44)
+            b_profiled       0.02633/0.02645(1.00) 0.02633/0.02645(1.00) 0.02129/0.02553(1.20)   0.015/0.02161(1.44)  0.0134/0.01933(1.44) 0.01327/0.01857(1.40)
+            c_marginalised   sin cota/sin cota(nan) sin cota/sin cota(nan)  0.1398/sin cota(nan) 0.04611/ 0.4967(10.77) 0.02951/ 0.3185(10.79) 0.02204/ 0.2441(11.07)
+   13: tratamiento                  theta_free            theta_0.001              theta_0.1                theta_1                theta_3               theta_10
+            a_fixed          0.02305/0.02314(1.00) 0.02305/0.02314(1.00) 0.01833/0.02234(1.22)  0.0128/0.01915(1.50) 0.01155/ 0.0177(1.53)  0.0116/0.01802(1.55)
+            b_profiled       0.02305/0.02315(1.00) 0.02305/0.02315(1.00) 0.01849/0.02236(1.21) 0.01325/0.01934(1.46) 0.01202/0.01805(1.50) 0.01195/0.01824(1.53)
+            c_marginalised   sin cota/sin cota(nan) sin cota/sin cota(nan)  0.1121/sin cota(nan) 0.03774/ 0.4751(12.59) 0.02494/ 0.2866(11.49) 0.01925/ 0.2032(10.55)
+3. umbral (7 alpha, local): {"192": {"a_fixed": {"theta_free": 0.026328275699446086, "theta_0.001": 0.02632827603847807, "theta_1": 0.0144428674731681, "theta_10": 0.012901736390088722}, "b_profiled": {"theta_free": 0.02633115611426577, "theta_0.001": 0.026331156457579583, "theta_1": 0.014999800502226615, "theta_10": 0.01327468287282377}, "c_marginalised": {"theta_free": null, "theta_0.001": null, "theta_1": 0.04610890603380875, "theta_10": 0.02204016822107932}}, "135": {"a_fixed": {"theta_free": 0.014580833734269431, "theta_0.001": 0.014580833932399574, "theta_1": 0.010419007847822376, "theta_10": 0.009940039689371329}, "b_profiled": {"theta_free": 0.014579331537070465, "theta_0.001": 0.01457933173757224, "theta_1": 0.010692173208318848, "theta_10": 0.010209777771540203}, "c_marginalised": {"theta_free": null, "theta_0.001": null, "theta_1": 0.03490669843904236, "theta_10": 0.01714247192709943}}}
+   cobertura theta_0.001|192|fixed: sigma_t = 0.02633, cobertura = 0.9945 +- 0.0017
+   cobertura theta_0.001|192|free: sigma_t = 0.02633, cobertura = 0.9915 +- 0.0021
+   cobertura theta_0.001|135|fixed: sigma_t = 0.01458, cobertura = 0.9815 +- 0.0030
+   cobertura theta_0.001|135|free: sigma_t = 0.01458, cobertura = 0.9780 +- 0.0033
+   cobertura theta_1|192|fixed: sigma_t = 0.01444, cobertura = 0.9760 +- 0.0034
+   cobertura theta_1|192|free: sigma_t = 0.02633, cobertura = 0.9910 +- 0.0021
+   cobertura theta_1|135|fixed: sigma_t = 0.01042, cobertura = 0.9530 +- 0.0047
+   cobertura theta_1|135|free: sigma_t = 0.01458, cobertura = 0.9785 +- 0.0032
+   limite con solo ruido theta_free|192: mediana 0.03499 (16-84 %: 0.02714-0.06411)
+   limite con solo ruido theta_free|135: mediana 0.0208 (16-84 %: 0.01529-0.03655)
+   limite con solo ruido theta_0.001|192: mediana 0.03324 (16-84 %: 0.02691-0.06369)
+   limite con solo ruido theta_0.001|135: mediana 0.01837 (16-84 %: 0.01486-0.03532)
+   limite con solo ruido theta_1|192: mediana 0.02063 (16-84 %: 0.01539-0.03259)
+   limite con solo ruido theta_1|135: mediana 0.01526 (16-84 %: 0.01126-0.02504)
