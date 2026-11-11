@@ -8,6 +8,7 @@
 | Affiliation | Independent researcher |
 | Date | v2.2.1, November 2026 (v2.2: November 2026; v2: October 2026; v1: July 2026) |
 | Status | Preprint |
+| DOI | [10.5281/zenodo.24146879](https://doi.org/10.5281/zenodo.24146879) |
 | Code | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 | License | MIT (code); CC BY 4.0 (text) |
 

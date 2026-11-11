@@ -8,6 +8,14 @@ authors:
     orcid: "https://orcid.org/0009-0000-7637-1818"
     affiliation: "Independent researcher"
 version: "2.2.1"
+doi: "10.5281/zenodo.24146878"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24146878"
+    description: "all versions"
+  - type: doi
+    value: "10.5281/zenodo.24146879"
+    description: "v2.2.1"
 date-released: "2026-11-11"
 license:
   - "MIT"

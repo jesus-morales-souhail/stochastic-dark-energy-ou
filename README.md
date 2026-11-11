@@ -1,5 +1,9 @@
 # stochastic-dark-energy-ou
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24146878.svg)](https://doi.org/10.5281/zenodo.24146878)
+
+Cite as: Morales Souhail, J. (2026). Constraints on Stochastic Dark Energy from DESI DR2 BAO (v2.2.1). Zenodo. https://doi.org/10.5281/zenodo.24146879
+
 Jesús Morales Souhail  
 [ORCID 0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) · jmskjym@gmail.com  
 [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
