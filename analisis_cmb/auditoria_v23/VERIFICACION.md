@@ -188,7 +188,7 @@ queda por encima de σ_t; fondo fijo):
 - PREPRINT l. 384 (conclusión 2): "Model kill: coherent tachyonic growth with rank-1 covariance is excluded (Δχ² ≈ +25)".
 - CLAIMS C4 (l. 20): "Coherent tachyonic growth (rank-1 cov) is excluded: ΔlnL ≈ −12.7".
 - COVER_LETTER l. 9 ("a controlled exclusion of a coherent tachyonic growth model") y l. 11 ("a rank-1 coherent growing
-  mode is strongly disfavoured (Δχ² ≈ +25)"); README l. 36 ("A coherent tachyonic growing mode is excluded when it is
+  mode is strongly disfavoured (Δχ² ≈ +25)"); README l. 40 ("A coherent tachyonic growing mode is excluded when it is
   active"); manuscript/README.md l. 32 ("Tachyonic coherent growth exclusion").
 - `results/tachyonic_rank1/` y `scripts/tachyonic_rank1_mle.py` (signo de t, σ₀ fijo, línea 97) tendrían que
   regenerarse con el modo que crece en tiempo cósmico y A₀ libre.
@@ -214,14 +214,14 @@ queda por encima de σ_t; fondo fijo):
   above the θ = 1 limit of 1.44 × 10⁻²; with the background marginalised a narrow window opens (2.8–4.6 × 10⁻²)";
   también el 3.8 % de fσ₈ y el 2.2 % en D_L se calcularon con δΩ_Λ = S-modo, que es el caso θ → 0 y no cambia).
 - CLAIMS C2 ("For a residual varying between redshifts (θ ≥ 1): < 1.5 × 10⁻² …, < 4.6 × 10⁻²") y N14 ("the θ ≥ 1 limits of
-  §3.2 are [bounds on stochastic variance]"); README l. 36 ("for a residual that varies between redshifts (θ ≥ 1) the
+  §3.2 are [bounds on stochastic variance]"); README l. 40 ("for a residual that varies between redshifts (θ ≥ 1) the
   limits are 1.3–1.5 × 10⁻² … and 2.2–4.6 × 10⁻²") y `papers/resume.txt`.
 - `fondo/FONDO.md`, `TRECE.md`, `cuesta/GOF.md`, `cuesta/CUESTA.md`, `fondo/FISHER_DISENO.md`, `RESOLVER_THETA.md`,
   `sn/SN.md` usan el mismo δα_i = S_i X(z_i) y heredan el cambio en θ ≥ 1 (no en θ → 0).
 
 **Punto 3 (umbral):**
 - PREPRINT l. 18 (abstract, "the profile likelihood over θ (ΔlnL = −1.92 …) gives the 95% confidence upper limit") y
-  l. 166 (§3.2); CLAIMS C2 ("95% CL, profile over θ"); README l. 30 ("Profile 95% CL"). O bien se dice que −1.92 es el
+  l. 166 (§3.2); CLAIMS C2 ("95% CL, profile over θ"); README l. 34 ("Profile 95% CL"). O bien se dice que −1.92 es el
   intervalo bilateral y cubre ≥ 97.5 % (97.6–99.5 % por inyección), o bien se pasa a −1.35 (1.46 × 10⁻² con θ libre,
   1.04 × 10⁻² en θ = 1, fondo fijo; 95.3 % en θ = 1) y cambian todos los números derivados de C2. Los números no son
   erróneos con −1.92; su etiqueta ("95 %") es conservadora.
