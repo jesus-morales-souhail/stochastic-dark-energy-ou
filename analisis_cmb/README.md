@@ -54,6 +54,7 @@ Status (2026-10-03): analysis finished; result in `RESULTADO.md` (re-run at σ_X
 | `cmb/` | High-ℓ CMB check (`PICOS.md`, `picos.py`): TT, TE, EE distance to ΛCDM over ℓ ∈ [30, 2500], lensing in the troughs, ∝ σ_X² |
 | `cmb/RAPIDO.md` | Fast residuals θ = 3 and 10 at the θ = 10 limits (`rapido.py`): Planck TT ℓ < 30 + lensing and the high-ℓ distance, smoothing Δ check, amplitude of w_eff; the Takahashi halofit misbehaves for a rapidly oscillating w(a), so every case is also run with linear lensing |
 | `cuesta/` | Does an OU residual mimic the DESI DR2 w₀–wₐ preference? 2000 simulated ΛCDM universes per (σ_X, θ) with the 13 numbers, fitted with ΛCDM and w₀wₐCDM (`CUESTA.md`, `cuesta.py`); bound on σ_X from the goodness of fit of ΛCDM, P(χ² ≤ 10.27) = 5 % (`GOF.md`, `gof.py`) |
+| `escalon/` | How late can dark energy switch on? Deterministic step ρ_DE = Ω_Λ[1 − f s(z)] over (z_t, w), profile in f with the 13 numbers alone and with compressed Planck (θ*, ω_m); 95 % intervals of f, Δχ² against w₀wₐ, look-elsewhere with 2000 noise universes (`ESCALON.md`, `escalon.py`) |
 | `oscilador/` | Deterministic oscillating X(ln a) against DESI DR2 BAO and Planck 2018; `oscilador/README.md` |
 | `AUDITORIA.md` | Audit of the numbers across the repository (2026-10-03) |
 | `bloque_A/`, `bloque_B/` | Correction blocks A, B1, B1b, B2: before/after comparisons, snapshots (`antes/`) and logs |
