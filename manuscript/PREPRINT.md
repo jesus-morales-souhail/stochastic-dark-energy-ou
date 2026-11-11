@@ -6,7 +6,7 @@
 | ORCID | [0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) |
 | Email | jmskjym@gmail.com |
 | Affiliation | Independent researcher |
-| Date | v2.2, November 2026 (v2: October 2026; v1: July 2026) |
+| Date | v2.2.1, November 2026 (v2.2: November 2026; v2: October 2026; v1: July 2026) |
 | Status | Preprint |
 | Code | [stochastic-dark-energy-ou](https://github.com/jesus-morales-souhail/stochastic-dark-energy-ou) |
 | License | MIT (code); CC BY 4.0 (text) |
@@ -397,6 +397,7 @@ Future data (Euclid BAO multi-bin products; full DESI covariances) can tighten $
 - **v2 (October 2026):** bound = root of the profile, 2.6×10⁻² (2.633×10⁻²); all derived numbers regenerated; CPL fits with the official DESI covariance; CMB consistency and harmonic residual (§3.5) and Everpresent Λ (§4.2) added; slip map corrected (π_T = εσ_X ρ_crit,0).
 - **v2.1 (November 2026):** meaning of the σ_X limit stated: the θ → 0 part is the background mode relative to the DESI best fit (Occam term, no bound with the background marginalised), θ ≥ 1 limits by background treatment (§3.2, Pantheon+ cross-check); reference of the α named and the CPL check qualified (§2.1); high-ℓ CMB check (§3.5); derived numbers at the marginalised θ = 1 ceiling (§3.5, §5, §6.2); stationarity clock (§3.2), tanh map of Model 2 and convergence of Model 1 survival (§4.2), θ* per realization (§4.2); outlook on standard sirens and on resolving θ (§9). Before/after: block [F](../analisis_cmb/bloque_F/COMPARACION_F.md).
 - **v2.2 (November 2026):** goodness-of-fit and harmonic-residual checks of the limits (§3.2); a stochastic residual does not mimic the $w_0$–$w_a$ preference of DESI DR2 (§3.3); fast residuals θ = 3, 10 in the CMB and the Takahashi halofit caveat (§3.5, limitation 6); survey design by Fisher, strong-lens time delays and redshift drift (§9); evidence of C2, C8 and C9 extended. Before/after: block [G](../analisis_cmb/bloque_G/COMPARACION_G.md).
+- **v2.2.1 (November 2026):** Zenodo deposit (`.zenodo.json`, `CITATION.cff`); final proofreading of the manuscript files; no change to the analysis or the numbers.
 - Audit and before/after records: [`analisis_cmb/AUDITORIA.md`](../analisis_cmb/AUDITORIA.md); blocks [A](../analisis_cmb/bloque_A/COMPARACION.md), [B1](../analisis_cmb/bloque_B/COMPARACION_B1.md), [B2](../analisis_cmb/bloque_B/COMPARACION_B2.md), [C](../analisis_cmb/bloque_C/COMPARACION_C.md), [D](../analisis_cmb/bloque_D/COMPARACION_D.md), [E](../analisis_cmb/bloque_E/COMPARACION_E.md).
 
 ---
@@ -425,7 +426,7 @@ This work uses publicly released DESI DR2 BAO products and community literature 
 6. Ahmed, M., Dodelson, S., Greene, P. B., & Sorkin, R. D., "Everpresent Λ," Phys. Rev. D 69, 103523 (2004), arXiv:astro-ph/0209274.
 7. Zwane, N., Afshordi, N., & Sorkin, R. D., "Cosmological tests of Everpresent Λ," Class. Quantum Grav. (2018), doi:10.1088/1361-6382/aadc36, arXiv:1703.06265.
 8. Sorkin, R. D., "Is the cosmological 'constant' a nonlocal quantum residue of discreteness of the causal set type?," AIP Conf. Proc. 957, 142 (2007), arXiv:0710.1675.
-9. Morales Souhail, J., this repository and companion notes (October 2026).
+9. Morales Souhail, J., this repository and companion notes (2026).
 10. Abbott, B. P., et al. (LIGO Scientific and Virgo Collaborations), "GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral," Phys. Rev. Lett. 119, 161101 (2017), [arXiv:1710.05832](https://arxiv.org/abs/1710.05832).
 11. Abbott, R., et al. (LIGO, Virgo and KAGRA Collaborations), "Constraints on the Cosmic Expansion History from GWTC-3," Astrophys. J. 949, 76 (2023), [arXiv:2111.03604](https://arxiv.org/abs/2111.03604).
 12. Brout, D., et al., "The Pantheon+ Analysis: Cosmological Constraints," Astrophys. J. 938, 110 (2022), [arXiv:2202.04077](https://arxiv.org/abs/2202.04077).

@@ -7,21 +7,13 @@ Author: Jesús Morales Souhail · [github.com/jesus-morales-souhail](https://git
 
 | File | Role |
 |:-----|:-----|
-| **[PREPRINT.md](PREPRINT.md)** | Main manuscript (English); GitHub math with `$...$` and `
-
-...
-
-` |
+| **[PREPRINT.md](PREPRINT.md)** | Main manuscript (English); GitHub math with `$...$` and `$$...$$` |
 | [CLAIMS.md](CLAIMS.md) | Referee checklist: what I claim and what I do not |
-| [COVER_LETTER.md](COVER_LETTER.md) | Optional journal cover letter draft |
+| [COVER_LETTER.md](COVER_LETTER.md) | Journal cover letter |
 
 ## Rendering notes
 
-- Math uses **GitHub-compatible** delimiters: inline `$...$`, display `
-
-...
-
-`.
+- Math uses **GitHub-compatible** delimiters: inline `$...$`, display `$$...$$`.
 - Relative links point to scripts and results inside this repository.
 - On GitHub, open `PREPRINT.md` in the browser (math renders in GitHub’s viewer).
 
@@ -53,5 +45,5 @@ Exploratory optics / scale–operator pedagogy:
 
 ## Status
 
-**Preprint, v2.2 (November 2026; v2: October 2026; v1: July 2026).** Independent research. Version history at the end of `PREPRINT.md`.
+**Preprint, v2.2.1 (November 2026; v2: October 2026; v1: July 2026).** Independent research. Version history at the end of `PREPRINT.md`.
 

@@ -1,4 +1,4 @@
-# Cover letter draft (optional)
+# Cover letter
 
 **Re:** Constraints on Stochastic Dark Energy from DESI DR2 BAO: A Null Result and the $10^{56}$ Amplification Bottleneck
 **Author:** Jesús Morales Souhail (ORCID 0009-0000-7637-1818)
@@ -8,7 +8,7 @@ Dear Editor,
 
 Please find enclosed a manuscript on *stationary stochastic* dark-energy residuals using public DESI DR2 BAO summary statistics, together with a controlled exclusion of a coherent tachyonic growth model and a quantitative audit of the amplification gap between motivational Planck-scale seeds and BAO residual amplitudes.
 
-The main results are null and exclusionary: the data prefer smooth residual evolution ($\sigma_X < 2.6\times 10^{-2}$ (95% CL) under a stated OU kernel, set by the fully correlated, background-like mode; §3.2 gives the θ ≥ 1 limits on a residual that varies with redshift); a rank-1 coherent growing mode is strongly disfavoured ($\Delta\chi^2\approx +25$); the two published implementations of Everpresent Λ do not fit the same data together with the CMB; a Planck 2018 consistency check shows that the residual at the DESI ceiling is invisible in the CMB and does not explain the H0 tension; and I show that linear free amplifiers of a Sorkin-type seed fail by many decades, with machine scans of three open cards documenting their theoretical price. This is version 2 (October 2026): the bound is now the root of the profile likelihood, every derived number has been regenerated, and the changes from v1 are listed in the manuscript's version history.
+The main results are null and exclusionary: the data prefer smooth residual evolution ($\sigma_X < 2.6\times 10^{-2}$ (95% CL) under a stated OU kernel, set by the fully correlated, background-like mode; §3.2 gives the θ ≥ 1 limits on a residual that varies with redshift); a rank-1 coherent growing mode is strongly disfavoured ($\Delta\chi^2\approx +25$); the two published implementations of Everpresent Λ do not fit the same data together with the CMB; a Planck 2018 consistency check shows that the residual at the DESI ceiling is invisible in the CMB and does not explain the H0 tension; and I show that linear free amplifiers of a Sorkin-type seed fail by many decades, with machine scans of three open cards documenting their theoretical price. This is version 2.2 (November 2026): since v1 the bound is the root of the profile likelihood, every derived number has been regenerated, and the changes are listed in the manuscript's version history.
 
 I have tried to keep the work conservative: data constraints are separated from geometric interpretation; preliminary cross-correlation tests are out of the primary claim set; laboratory-scale optical digressions live in a separate exploratory repository so referees can review a clean cosmological claim spine.
 

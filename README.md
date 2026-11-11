@@ -4,7 +4,7 @@ Jesús Morales Souhail
 [ORCID 0009-0000-7637-1818](https://orcid.org/0009-0000-7637-1818) · jmskjym@gmail.com  
 [github.com/jesus-morales-souhail](https://github.com/jesus-morales-souhail)
 
-July 2026 · independent research
+November 2026 (v2.2.1) · independent research
 
 I use this repository for the **data** side: public DESI DR2 BAO, residual models (OU / QNM), what is excluded, and how large the soft-amplification gap is if you start from a pure Sorkin seed.
 
@@ -16,7 +16,7 @@ Method / optics notes only: [stochastic-de-exploratory-notes](https://github.com
 ## Read these first
 
 1. [`manuscript/PREPRINT.md`](manuscript/PREPRINT.md) — main write-up  
-2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C10) and what I do not (N1–N13)  
+2. [`manuscript/CLAIMS.md`](manuscript/CLAIMS.md) — what I claim (C1–C10) and what I do not (N1–N14)  
 3. [`papers/amplification-gap.md`](papers/amplification-gap.md) — why soft \(10^{56}\) is not free  
 4. [`papers/HONEST_HEADLINES.md`](papers/HONEST_HEADLINES.md) — wording I allow myself  
 5. [`theory/EXPLORATORY_BOUNDARY.md`](theory/EXPLORATORY_BOUNDARY.md) — what is not part of the paper  
@@ -45,7 +45,7 @@ Numbers snapshot: [`papers/resume.txt`](papers/resume.txt). Bound history: [`pap
 
 ## Layout
 
-What supports the preprint (claims C1–C7) lives in `manuscript/`, `papers/`, `scripts/`, `results/` and `figures/`. Everything else is labelled as theory, exploratory or archived.
+What supports the preprint (claims C1–C7) lives in `manuscript/`, `papers/`, `scripts/`, `results/` and `figures/`; the CMB and Everpresent Λ checks (C8–C10) live in `analisis_cmb/`. Everything else is labelled as theory, exploratory or archived.
 
 ```
 manuscript/    preprint, claim checklist, cover letter

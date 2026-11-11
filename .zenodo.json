@@ -1,0 +1,26 @@
+{
+  "title": "Constraints on Stochastic Dark Energy from DESI DR2 BAO: A Null Result and the 10^56 Amplification Bottleneck",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Morales Souhail, Jesús",
+      "orcid": "0009-0000-7637-1818",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "description": "I test whether public DESI DR2 baryon acoustic oscillation (BAO) summary statistics require a stationary stochastic component in the late-time dark-energy sector, on top of a smooth background. Fluctuations are modelled as an Ornstein-Uhlenbeck (OU) process in logarithmic scale factor x = ln a, with a quasi-normal-mode (QNM) oscillatory extension. Using a Gaussian likelihood with an additive residual covariance kernel, the best fit drives the stochastic amplitude to zero, and the profile likelihood over theta (Delta ln L = -1.92, full measurement covariance) gives the 95% confidence upper limit sigma_X < 2.6e-2 under the stated phenomenological kernel and public BAO summary statistics (official Gaussian BAO covariance projected to isotropic alpha in the baseline pipeline). This number is reached in the fully correlated limit of the kernel, which is a shift of Omega_m: it measures consistency with the DESI best-fit background and disappears if Omega_m and h r_d are marginalised. A residual that varies between redshifts (theta >= 1) is bounded at sigma_X < 1.5e-2 with the background fixed or profiled, and < 4.6e-2 with it marginalised. Nested extensions that free {w0, wa, sigma_X, theta} are not preferred over a smooth background (Delta AIC approx. +4).\n\nSeparately, a coherent tachyonic growth model with the correct rank-1 covariance induced by a single growing mode is strongly disfavoured: Delta ln L approx. -12.7 relative to LambdaCDM (Delta chi^2 approx. +25). The two published implementations of Everpresent Lambda, a zero-mean Lambda with order-one fluctuations, do not fit the same BAO data together with the CMB: with r_d computed for each realization, small dark energy around recombination and omega_m within +-2 sigma of Planck, none fits as well as LambdaCDM (0/20000 and 0/500000 realizations). With the acoustic angle theta_* computed for each realization in place of the recombination condition, Model 1 stays at 0 (>= 21 sigma), while Model 2 admits an expected fraction <= 2e-5, all with the expansion rate at recombination off by >= 11% against an approx. 0.6% Planck sensitivity (N_eff analogy); the full CMB likelihood with a sign-changing dark-energy density was not run.\n\nAt the DESI ceiling the OU residual is invisible to Planck 2018 (TT at l < 30 and lensing; 95th percentile of Delta chi^2 <= 0.067), so the CMB gives no leverage on sigma_X, and its only imprint, a scatter sigma(H0) approx. 0.48 km/s/Mpc, is 12 times smaller than the H0 tension. A percent-level harmonic residual is likewise allowed by DESI and invisible in the CMB.\n\nI then quantify an amplification bottleneck: a Sorkin-Bekenstein Poisson seed with horizon-area counting, sigma_0 ~ 1e-61 (four-volume counting gives order-one fluctuations instead: Everpresent Lambda, a different model), lies ~1e56 below Euclid-scale residual amplitudes (~1e-5) and ~1e59 below the DESI residual ceiling measured here (2.6e-2). Audited linear amplifiers are excluded, short by many decades, or redefine the seed. Machine scans of three allowed non-linear cards show that late-time freeze-out alone yields unit gain, a soft double-well avalanche yields gain ~2, and only a local effective count N_eff ~ 1.4e3 (DESI) / 1e10 (Euclid) reaches target amplitudes, by redefining the microphysical seed, not by free amplification.\n\nGravitational slip gamma = Phi/Psi is the correct operator for anisotropic leakage past volume-preserving (SDiff) structure, and with the BAO-bounded residual it is marginal, not starved: full anisotropy gives at most |gamma - 1| approx. 5e-2 at z = 0.5, about 3.4 times below the current measurement (Maus et al.) and at the level of the Sakr et al. forecast floor (approx. 1.0x), falling to 2.4x and 4.7x below that floor at z = 1 and 1.5. The sigma_X -> slip map is an order-of-magnitude estimate: it holds for delta_m approx. 1 (quasi-linear scales) and does not extrapolate to delta_m << 1; epsilon < 1 or z >~ 1 push it below reach.\n\nI claim limits, exclusions, and a map of open hypotheses, not a detection of vacuum discreteness or a new dark-energy fluid.",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "dark energy",
+    "DESI DR2",
+    "BAO",
+    "stochastic dark energy",
+    "Ornstein-Uhlenbeck",
+    "Everpresent Lambda",
+    "cosmological constant"
+  ],
+  "version": "2.2.1",
+  "language": "eng"
+}
