@@ -114,5 +114,5 @@ la marginal −1.92 entre 10000 y 20000 menor del 5 %.
 
 **Conclusión.** La cota por verosimilitud marginal estimada por Monte Carlo con pesos exp(−Δχ²/2) no ha convergido con 20000
 caminos (sube un 8–41 % respecto a 2000 y sigue moviéndose entre 10000 y 20000 en θ = 0.3, 3 y 10), porque la media la
-dominan unos pocos caminos de cola; no sirve como cota de cabecera. La regla del 5 % es estable al 1–4 % entre 2000 y 20000
+dominan unos pocos caminos de cola; no sirve como cota de cabecera. La regla del 5 % es estable al 1–8 % entre 2000 y 20000 (θ = 3: 0.111 → 0.102)
 caminos y es la que se queda: 0.17 / 0.10 / 0.073 en θ = 1 / 3 / 10 con BAO + θ* + ω_m + SN.
