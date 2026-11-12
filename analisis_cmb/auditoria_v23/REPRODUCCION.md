@@ -14,13 +14,13 @@ Contenido de la carpeta:
 - `datos/pantheon_plus/`: copias de `Pantheon+SH0ES.dat` y `Pantheon+SH0ES_STAT+SYS.cov` (release público de Pantheon+SH0ES).
 - `datos/desi_dr2/`: copias de `desi_gaussian_bao_ALL_GCcomb_mean.txt` y `_cov.txt` (compresión gaussiana oficial de DESI DR2).
 - `tablas/rd_rs_zstar_vs_omega_m.csv`: r_d(ω_m), r_s(z*; ω_m) y z*(ω_m) en 361 nodos, exportados de nuestras tablas; y
-  `tablas/constantes.json` (c, Ω_r h², z* de referencia, los dos números de Planck con sus errores, la calibración de θ*, la malla).
+  `tablas/constantes.json` (c, Ω_r h², z* de referencia, los dos números de Planck con sus errores, la calibración de θ*, la malla en u, la malla de σ_X, los ajustes del fiducial y los pasos de diferencias finitas).
 - `MANIFIESTO_SHA256.txt`: sha256 de todos los ficheros anteriores, comprobado contra los ficheros presentes al crearlo.
 
 No contiene ningún script de este proyecto, ninguna ruta a `analisis_cmb/` ni a `auditoria_v23/`, ni ninguna cota, ln Z o máximo
 nuestros (comprobado con grep en los ficheros de texto; en los de datos no se busca).
 
-sha256 de `ESPECIFICACION.md` (versión 1): `960e97881478cd79f47167835f4b76a507d1e80f33bd925ca9ac60ebb2b82596`
+sha256 de `ESPECIFICACION.md` (versión 2, 2026-11-12: fiducial detallado, constantes y mallas solo de constantes.json, sección 'Qué comprueba esta reproducción', tarea aparte de comparación de tablas): `e9db3e095bb2d8fc2535968a4a938a7e4d0b66418625ca476831b61c2a2866db`
 
 Regla fijada: la especificación se escribió antes de que el segundo investigador haga el cálculo y sin darle acceso a nuestros
 scripts; cualquier duda sobre el método se responde por escrito y sin cifras. La reproducción no ha empezado.
