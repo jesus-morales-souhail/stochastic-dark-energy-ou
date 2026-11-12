@@ -21,7 +21,7 @@ import marginal_guiada as MG  # noqa: E402
 import exacto as X  # noqa: E402
 
 DELTAS = (0.0125, 0.025, 0.05, 0.1, 0.2)
-out = {"deltas": list(DELTAS), "n_run": CF.N_RUN, "seed": CF.SEED, "definition": "crossing = sign change of d rho_DE/d ln a between consecutive grid nodes on 0 <= u <= u* (0 < z < z*), rho_DE = Omega_Lambda + Xs - Xs(0)", "thetas": {}}
+out = {"deltas": list(DELTAS), "n_run": CF.N_RUN, "seed": CF.SEED, "definition": "crossing = sign change of d rho_DE/d ln a between consecutive grid nodes on 0 <= u <= u* (0 < z < z*), rho_DE = Omega_Lambda + Xs - Xs(0); histories = the 40 per ceiling that entered CAMB in cmb_final (rho_DE > 0 and H^2 > 0 with the original smoothing)", "thetas": {}}
 Bm, A = MG.build_B(), MG.build_A()
 for ic, (theta, sigma, delta_cf) in enumerate(CF.CELLS):
     key = f"theta_{theta:g}"
@@ -58,10 +58,19 @@ for ic, (theta, sigma, delta_cf) in enumerate(CF.CELLS):
         rho = ol[idx_run][:, None] + Xs - Xs[:, [CF.I0]]
         d = np.diff(rho[:, m], axis=1)  # d rho / du up to sign; crossings of w = -1 are sign changes of d rho/d ln a = -d rho/du
         s = np.sign(d); s[s == 0] = 1
-        ncross = np.sum(s[:, 1:] * s[:, :-1] < 0, axis=1)
+        cross = s[:, 1:] * s[:, :-1] < 0  # crossing between node j and j+1 of the MAIN region (sign change of consecutive slopes)
+        ncross = np.sum(cross, axis=1)
+        rm = rho[:, m]
+        pos_all = (rm > 0).all(axis=1)  # rho_DE > 0 at every node of 0 <= z <= z* with this smoothing
+        # every counted crossing must sit where rho_DE != 0: the three nodes that define the two slopes are all non-zero
+        nz = (rm[:, :-2] != 0) & (rm[:, 1:-1] != 0) & (rm[:, 2:] != 0)
+        n_cross_at_rho_zero = int(np.sum(cross & ~nz))
         rec["per_delta"][f"{delta:g}"] = {"frac_at_least_one": float(np.mean(ncross >= 1)), "n_cross_median": float(np.median(ncross)),
+                                          "frac_rho_positive_all_z": float(np.mean(pos_all)), "n_rho_positive_all_z": int(pos_all.sum()),
+                                          "n_crossings_total": int(ncross.sum()), "n_crossings_at_rho_zero": n_cross_at_rho_zero,
+                                          "all_crossings_where_rho_nonzero": bool(n_cross_at_rho_zero == 0),
                                           "n_cross_p16_p84": [float(np.percentile(ncross, 16)), float(np.percentile(ncross, 84))], "n_cross_min_max": [int(ncross.min()), int(ncross.max())],
                                           "abs_wp1_max_median": float(np.median(np.nanmax(np.abs(-1.0 + np.gradient(np.log(np.where(rho > 0, rho, np.nan)), CF.U_EXT, axis=1)[:, m] / 3.0 + 1.0), axis=1)))}
     out["thetas"][key] = rec
-    print(key, "check", rec.get("check_saved_max_abs_diff"), {k: (v["frac_at_least_one"], v["n_cross_median"]) for k, v in rec["per_delta"].items()}, flush=True)
+    print(key, "check", rec.get("check_saved_max_abs_diff"), {k: (v["frac_at_least_one"], v["n_cross_median"], v["frac_rho_positive_all_z"], v["n_crossings_at_rho_zero"]) for k, v in rec["per_delta"].items()}, flush=True)
 (HERE / "cruces_w.json").write_text(json.dumps(out, indent=1), encoding="utf-8")

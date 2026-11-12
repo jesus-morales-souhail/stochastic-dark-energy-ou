@@ -8,7 +8,7 @@
  ],
  "n_run": 40,
  "seed": 20261119,
- "definition": "crossing = sign change of d rho_DE/d ln a between consecutive grid nodes on 0 <= u <= u* (0 < z < z*), rho_DE = Omega_Lambda + Xs - Xs(0)",
+ "definition": "crossing = sign change of d rho_DE/d ln a between consecutive grid nodes on 0 <= u <= u* (0 < z < z*), rho_DE = Omega_Lambda + Xs - Xs(0); histories = the 40 per ceiling that entered CAMB in cmb_final (rho_DE > 0 and H^2 > 0 with the original smoothing)",
  "thetas": {
   "theta_1": {
    "sigma_X": 0.2874746611895008,
@@ -18,6 +18,11 @@
     "0.0125": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 129.0,
+     "frac_rho_positive_all_z": 0.975,
+     "n_rho_positive_all_z": 39,
+     "n_crossings_total": 5149,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       122.0,
       134.76
@@ -31,6 +36,11 @@
     "0.025": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 67.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 2649,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       61.0,
       71.0
@@ -44,6 +54,11 @@
     "0.05": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 34.5,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 1354,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       30.0,
       37.0
@@ -57,6 +72,11 @@
     "0.1": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 17.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 683,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       14.0,
       20.759999999999998
@@ -70,6 +90,11 @@
     "0.2": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 10.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 389,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       7.0,
       12.759999999999998
@@ -91,6 +116,11 @@
     "0.0125": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 128.5,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 5146,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       121.0,
       137.51999999999998
@@ -104,6 +134,11 @@
     "0.025": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 66.5,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 2689,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       61.24,
       73.75999999999999
@@ -117,6 +152,11 @@
     "0.05": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 36.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 1435,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       30.240000000000002,
       41.0
@@ -130,6 +170,11 @@
     "0.1": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 18.5,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 741,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       16.0,
       21.0
@@ -143,6 +188,11 @@
     "0.2": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 10.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 394,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       8.0,
       12.0
@@ -164,6 +214,11 @@
     "0.0125": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 140.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 5623,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       131.24,
       149.76
@@ -177,6 +232,11 @@
     "0.025": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 74.5,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 2989,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       70.24,
       80.75999999999999
@@ -190,6 +250,11 @@
     "0.05": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 43.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 1711,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       39.0,
       46.76
@@ -203,6 +268,11 @@
     "0.1": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 21.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 869,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       19.0,
       24.759999999999998
@@ -216,6 +286,11 @@
     "0.2": {
      "frac_at_least_one": 1.0,
      "n_cross_median": 12.0,
+     "frac_rho_positive_all_z": 1.0,
+     "n_rho_positive_all_z": 40,
+     "n_crossings_total": 489,
+     "n_crossings_at_rho_zero": 0,
+     "all_crossings_where_rho_nonzero": true,
      "n_cross_p16_p84": [
       10.0,
       13.0
