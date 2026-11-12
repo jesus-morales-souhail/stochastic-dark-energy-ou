@@ -1319,5 +1319,22 @@
    "line": 276,
    "text": "**Relation to Everpresent Λ.** Ahmed, Dodelson, Greene and Sorkin (2004) start from the same unimodular framework — Λ conjugate to the four-volume V_4 — and, adding causal-set discreteness, reach the opposite conclusion: Λ fluctuates, δΛ ∼ V_4^{-1/2}, at the level of the critical density in every epoch (Everpresent Λ; Zwane et al. 2018). The two statements concern different objects. The cancellation in this section acts on the local term V(x) g_μν of the trace-free equations; it says nothing about the global Λ conjugate to V_4, which is the object whose fluctuations Everpresent Λ predicts. Which picture describes our universe is decided empirically, not by this algebra. The order-one version, in its two published implementations, does not fit DESI DR2 BAO together with the CMB: once r_d is computed for each realization, dark energy is small around recombination and ω_m is within ±2σ of Planck, no realization fits as well as ΛCDM (0/20000 and 0/500000; `analisis_cmb/everpresent/EVERPRESENT_vs_DESI.md`). A small stationary version is bounded by σ_X < 2.6×10⁻². In this sense σ_X = 0 is the prediction of the local cancellation for local fluctuations, not a theorem about Λ."
   }
+ ],
+ "fuera_de_git": [
+  {
+   "file": "manuscript/PREPRINT.md",
+   "line": 350,
+   "text": "Start with the README there, then `papers/r1_kernel/NOTE_uniqueness_residual_grain.md` and `papers/core/VERIFIED_RESULTS.md` (`pytest -q`)."
+  },
+  {
+   "file": "README.md",
+   "line": 15,
+   "text": "Theory lives in [measurable-stochastic-vacuum](https://github.com/jesus-morales-souhail/measurable-stochastic-vacuum)."
+  },
+  {
+   "file": "manuscript/PREPRINT.md",
+   "line": 325,
+   "text": "3. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`archive/scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint."
+  }
  ]
 }
