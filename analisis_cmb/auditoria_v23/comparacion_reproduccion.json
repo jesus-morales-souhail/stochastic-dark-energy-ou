@@ -1,0 +1,151 @@
+{
+ "what_is_compared": "ln Z(sigma_X) - ln Z(0), analytic linear marginal, OU theta = 1, convention B, BAO + theta_* + omega_m + Pantheon+, flat priors on (h, omega_m, M); same 10 nodes in the same order; same constants (constantes.json exported from our code)",
+ "reproducer_json_precision": {
+  "lnZ_rel": "full double precision (paso2.json lnZ_rel[*].lnZ_menos_lnZ0)",
+  "cota": "full double precision (paso2.json cota)",
+  "p0": "full double precision (paso1.json p0)"
+ },
+ "nodes": [
+  {
+   "sigma_X": 0.0,
+   "ours_positividad_lin": 0.0,
+   "ours_marginal_guiada": 0.0,
+   "reproducer": 0.0,
+   "diff_reproducer_minus_ours": 0.0,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.01,
+   "ours_positividad_lin": 0.1294999727724644,
+   "ours_marginal_guiada": 0.1294999727724644,
+   "reproducer": 0.12949087087599764,
+   "diff_reproducer_minus_ours": -9.10189646674553e-06,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.03,
+   "ours_positividad_lin": 0.6031284818068343,
+   "ours_marginal_guiada": 0.6031284818068343,
+   "reproducer": 0.6031233291510034,
+   "diff_reproducer_minus_ours": -5.1526558308978565e-06,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.05,
+   "ours_positividad_lin": 0.8725266749420371,
+   "ours_marginal_guiada": 0.8725266749424918,
+   "reproducer": 0.8725620427399008,
+   "diff_reproducer_minus_ours": 3.53677978637279e-05,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.07,
+   "ours_positividad_lin": 1.0308975221773835,
+   "ours_marginal_guiada": 1.0308975221773835,
+   "reproducer": 1.0309748020013103,
+   "diff_reproducer_minus_ours": 7.727982392680133e-05,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.1,
+   "ours_positividad_lin": 1.139384714042535,
+   "ours_marginal_guiada": 1.139384714042535,
+   "reproducer": 1.1395189523423142,
+   "diff_reproducer_minus_ours": 0.00013423829977909918,
+   "abs_diff_lt_1e-4": false
+  },
+  {
+   "sigma_X": 0.15,
+   "ours_positividad_lin": 0.9500645245343549,
+   "ours_marginal_guiada": 0.9500645245343549,
+   "reproducer": 0.9502530273362026,
+   "diff_reproducer_minus_ours": 0.00018850280184778967,
+   "abs_diff_lt_1e-4": false
+  },
+  {
+   "sigma_X": 0.2,
+   "ours_positividad_lin": 0.40009789354735403,
+   "ours_marginal_guiada": 0.40009789354735403,
+   "reproducer": 0.40026099612168764,
+   "diff_reproducer_minus_ours": 0.00016310257433360675,
+   "abs_diff_lt_1e-4": false
+  },
+  {
+   "sigma_X": 0.3,
+   "ours_positividad_lin": -1.157825498567945,
+   "ours_marginal_guiada": -1.1578254985670355,
+   "reproducer": -1.1579119051343696,
+   "diff_reproducer_minus_ours": -8.640656642455724e-05,
+   "abs_diff_lt_1e-4": true
+  },
+  {
+   "sigma_X": 0.4,
+   "ours_positividad_lin": -2.817694761819439,
+   "ours_marginal_guiada": -2.8176947618198938,
+   "reproducer": -2.8181584920807836,
+   "diff_reproducer_minus_ours": -0.00046373026134460815,
+   "abs_diff_lt_1e-4": false
+  }
+ ],
+ "P1_all_nodes_within_1e-4": false,
+ "P1_n_nodes_within_1e-4": 6,
+ "P1_max_abs_diff": 0.00046373026134460815,
+ "bound": {
+  "ours_positividad_lin": 0.27194769579562567,
+  "ours_marginal_guiada": 0.27194769579567446,
+  "reproducer": 0.2719363570360128,
+  "rel_diff": -4.169463388785536e-05,
+  "P2_rel_diff_lt_1e-4": true
+ },
+ "fiducial": {
+  "ours": {
+   "h": 0.6811798073031549,
+   "omega_m": 0.14092328746244953,
+   "M": 23.797874740270636,
+   "chi2_exact_fit": 1406.3271474297123
+  },
+  "reproducer": {
+   "h": 0.6811798064334976,
+   "omega_m": 0.14092328770632676,
+   "M": 23.797874740711453,
+   "chi2": 1406.3271474273733
+  }
+ },
+ "max_lnZ": {
+  "ours_sigma": 0.1,
+  "reproducer_sigma": 0.1
+ },
+ "diagnostic_direct_covariance": {
+  "note": "our ln Z recomputed in this script with C_SN read once from the file (Cs) instead of inv(Ci); the standard pipeline value recomputed here is also given to show the script reproduces positividad_lin.json",
+  "max_abs_diff_C_direct_vs_inv_inv": 3.885780586188048e-16,
+  "lnZ_rel_standard_recomputed": [
+   0.0,
+   0.12949997201212682,
+   0.6031284780524402,
+   0.8725266685319184,
+   1.0308975140610528,
+   1.1393847060944609,
+   0.9500645220364277,
+   0.4000978982585366,
+   -1.157825481888267,
+   -2.8176947370297967
+  ],
+  "lnZ_rel_direct_covariance": [
+   0.0,
+   0.12949997201212682,
+   0.6031284780524402,
+   0.8725266685319184,
+   1.0308975140610528,
+   1.1393847060944609,
+   0.9500645220368824,
+   0.4000978982585366,
+   -1.157825481888267,
+   -2.8176947370297967
+  ],
+  "max_abs_diff_recomputed_vs_positividad_lin": 2.478964233887382e-08,
+  "max_abs_diff_direct_vs_reproducer": 0.000463755050986947,
+  "max_abs_diff_standard_vs_reproducer": 0.000463755050986947,
+  "bound_standard_recomputed": 0.27194769733360474,
+  "bound_direct_covariance": 0.27194769733360474
+ }
+}
