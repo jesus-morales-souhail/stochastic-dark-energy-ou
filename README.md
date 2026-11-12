@@ -1,5 +1,13 @@
 # stochastic-dark-energy-ou
 
+> **Notice (November 2026): version under correction.** An independent audit of
+> v2.2.1 found errors affecting two results: the exclusion of the tachyonic model
+> (claim C4) does not hold, and the bounds on the stochastic amplitude for θ ≥ 1 were
+> computed with a kernel that is only valid for θ → 0. Please do not rely on those
+> numbers. The checks against the real data are in `analisis_cmb/auditoria_v23/`
+> (notes in Spanish) and the list of corrections in `manuscript/ERRATAS_V3.md`. A
+> corrected version 3.0 is in preparation.
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24146878.svg)](https://doi.org/10.5281/zenodo.24146878)
 
 Cite as: Morales Souhail, J. (2026). Constraints on Stochastic Dark Energy from DESI DR2 BAO (v2.2.1). Zenodo. https://doi.org/10.5281/zenodo.24146879
