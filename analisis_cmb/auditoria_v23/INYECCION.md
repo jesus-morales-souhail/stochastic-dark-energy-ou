@@ -37,6 +37,12 @@ su primera prueba.
   5 % (0.169) y la marginal (0.287) a menos de un 10 %; y en 5 universos de cada
   escenario, la versión exacta (como familias.py) reproduce la lineal a menos de un 10 %.
 
+Nota añadida el 2026-11-12 tras la revisión independiente (`REVISION_INYECCION.md`), sin cambiar el texto del prompt: el 0.169 es la
+cota exacta del 5 % de FAMILIAS / MUESTRAS_SN (misma celda OU θ = 1 con Pantheon+, nodos 0.1/0.15/0.2; `muestras_sn.json`, 0.169 con
+remuestreo 0.164–0.173); EXACTO_SN da 0.173 para la misma celda con otra malla de σ, y con ese valor el cociente de la comprobación previa
+sería 0.901: la condición de parada se cumplió al borde. Y la segunda comprobación salió con 3 de 30 universos fuera del 10 % (sección
+"Comprobación exacta").
+
 ## Decisiones fijadas antes de los escenarios
 
 - "La marginal" de las predicciones es la marginal lineal analítica (la misma `lnZ_lin` de MUESTRAS_SN y FAMILIAS: C + σ² A K Aᵀ, priors
@@ -45,7 +51,8 @@ su primera prueba.
   ESS, no se usa para juzgar las predicciones.
 - Regla del 5 % lineal en forma cerrada: χ²_i(σ) − χ²_ΛCDM = −2σ b_i + σ² c_i ≤ 0 ⇔ σ ≤ 2 b_i/c_i, así que la cota es el percentil 95 de
   máx(2 b_i/c_i, 0) sobre los 2000 caminos (sin malla ni descarte por H² ≤ 0; la comprobación exacta sí descarta).
-- "Cotas reales con Pantheon+" de la predicción 1: las exactas 0.169 (5 %, EXACTO_SN) y 0.287 (marginal, MARGINAL_GUIADA); se dan también
+- "Cotas reales con Pantheon+" de la predicción 1: las exactas 0.169 (5 %, FAMILIAS / MUESTRAS_SN; EXACTO_SN da 0.173 con otra malla) y
+  0.287 (marginal, MARGINAL_GUIADA); se dan también
   las lineales con los datos reales.
 - Tensión Δχ² = χ²_min(conjunto, 3 parámetros) − χ²_min(15 filas, h y ω_m) − χ²_min(SN solas, ω_m y M con h fijo), lineal; sin tensión su
   media es 1, así que δ se elige con Δχ² sin ruido = 7.7.
@@ -54,7 +61,7 @@ su primera prueba.
 
 | cota | lineal (aquí) | exacta | cociente |
 |---|---|---|---|
-| 5 % | 0.156 | 0.169 | 0.92 |
+| 5 % | 0.156 | 0.169 (FAMILIAS / MUESTRAS_SN; 0.173 en EXACTO_SN, cociente 0.901) | 0.92 |
 | marginal −1.92 | 0.277 (spline 0.2771, brentq 0.2771; MUESTRAS_SN 0.277) | 0.287 | 0.97 |
 
 Δln L máximo lineal +1.14 en σ_X = 0.104 (MUESTRAS_SN: +1.14 en 0.108); χ²_ΛCDM lineal = exacto = 1406.33; tensión lineal 2.66 (no lineal,
@@ -99,10 +106,12 @@ para estos estadísticos; qué la hace atípica (tensión, temblor u otra cosa) 
 
 ## Comprobación exacta (`exact_check` del json)
 
-30 de 30 universos con cruce del 5 %; cociente exacta/lineal 0.885–1.102; 27 de 30 dentro del 10 %. Fuera: B 0.3 u0 (0.885) y u2
+La comprobación prevista en el montaje ("la versión exacta reproduce la lineal a menos de un 10 %") **no se cumple en 3 de los 30
+universos**: 30 de 30 con cruce del 5 %, cociente exacta/lineal 0.885–1.102, 27 de 30 dentro del 10 %. Fuera: B 0.3 u0 (0.885) y u2
 (0.898), con cotas 1.12 y 1.36 (> 1, donde la lineal ya no vale y la exacta descarta el 45–54 % de los caminos por H² ≤ 0), y C u1
 (1.102, cota 0.31 frente a 0.28). Con cotas < 1 la lineal reproduce la exacta a ±8 % salvo ese caso al 10.2 %. La condición de parada
-del prompt era solo la de los datos reales (cumplida); esta comprobación no detuvo nada y se deja constancia.
+del prompt era solo la de los datos reales (cumplida, al borde: cociente 0.92 con el 0.169 de FAMILIAS / MUESTRAS_SN y 0.901 con el
+0.173 de EXACTO_SN); esta comprobación no detuvo nada y se deja constancia.
 
 ## Predicción, punto por punto
 
@@ -120,8 +129,10 @@ del prompt era solo la de los datos reales (cumplida); esta comprobación no det
 
 ## Respuesta
 
-Con la verdad conocida, la marginal −1.92 da cotas correctas como cota superior (cobertura 95–98 % del σ_true) y el 5 % se queda corto
-cuando hay temblor (cobertura 85–87 % para σ_true ≥ 0.2). Pero ninguna de las dos distingue tensión de temblor: con una tensión tipo
+Con la verdad conocida, la marginal −1.92 da cotas correctas como cota superior: su cobertura nominal unilateral es ≈ 97.5 % (límite
+gaussiano) y la empírica es 95.5–97.5 % del σ_true. La regla del 5 % no es un intervalo de confianza y no tiene cobertura nominal; su
+cobertura empírica es 85–92.5 % (92.5 % con σ_true = 0.1, 86.5 % y 85.0 % con 0.2 y 0.3), así que como cota superior deja fuera el valor
+verdadero más a menudo que la marginal cuando hay temblor; es una comparación empírica, no la violación de un objetivo. Pero ninguna de las dos distingue tensión de temblor: con una tensión tipo
 DES-SN5YR y sin temblor, las dos cotas se aflojan (5 % ×1.71, marginal ×1.50) y la caída de 1.92 "detecta" σ_X > 0 en el 43 % de los
 universos. La hipótesis de MUESTRAS_SN ("la marginal sigue la información y el 5 % mezcla información y tensión") no se sostiene en su
 primera prueba: la marginal también se mueve con la tensión, solo algo menos que el 5 %. Y el escenario de "menos información" no se
