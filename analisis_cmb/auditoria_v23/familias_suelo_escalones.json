@@ -1,0 +1,345 @@
+{
+ "u_max_BAO": 1.2029723039923526,
+ "u_max_SN": 1.1821473524990231,
+ "u_zstar": 6.994764490536918,
+ "by_l": {
+  "l_0.1": {
+   "sigma_0.3": {
+    "P": 0.0,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.0,
+    "frac_survivors_with_first_segment_covering_BAO_SN": null
+   },
+   "sigma_0.5": {
+    "P": 0.0,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.0,
+    "frac_survivors_with_first_segment_covering_BAO_SN": null
+   },
+   "sigma_0.7": {
+    "P": 0.0,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.0,
+    "frac_survivors_with_first_segment_covering_BAO_SN": null
+   },
+   "sigma_1": {
+    "P": 0.0,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.0,
+    "frac_survivors_with_first_segment_covering_BAO_SN": null
+   }
+  },
+  "l_0.3": {
+   "sigma_0.3": {
+    "P": 0.011523046092184368,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.011523046092184368,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0
+   },
+   "sigma_0.5": {
+    "P": 0.004707112970711297,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.004707112970711297,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0
+   },
+   "sigma_0.7": {
+    "P": 0.002905287623474724,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.002905287623474724,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0
+   },
+   "sigma_1": {
+    "P": 0.0,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.0,
+    "frac_survivors_with_first_segment_covering_BAO_SN": null
+   }
+  },
+  "l_1": {
+   "sigma_0.3": {
+    "P": 0.1775887943971986,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.1775887943971986,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0
+   },
+   "sigma_0.5": {
+    "P": 0.12150482968988308,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.12150482968988308,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0,
+    "by_first_step_z": {
+     "z1_in_(0.0,0.5]": {
+      "frac": 0.41,
+      "P_given": 0.04066073697585769,
+      "frac_of_survivors": 0.13389121338912133
+     },
+     "z1_in_(0.5,1.0]": {
+      "frac": 0.2785,
+      "P_given": 0.06642728904847396,
+      "frac_of_survivors": 0.15481171548117154
+     },
+     "z1_in_(1.0,1.5]": {
+      "frac": 0.2235,
+      "P_given": 0.24384787472035793,
+      "frac_of_survivors": 0.4560669456066946
+     },
+     "z1_in_(1.5,2.33]": {
+      "frac": 0.088,
+      "P_given": 0.3465909090909091,
+      "frac_of_survivors": 0.25523012552301255
+     }
+    }
+   },
+   "sigma_0.7": {
+    "P": 0.08021108179419525,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.08021108179419525,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0
+   },
+   "sigma_1": {
+    "P": 0.06391184573002755,
+    "f_first_segment_covers_BAO_SN": 0.0,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.0,
+    "P_given_covers_BAO_SN": null,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": null,
+    "P_given_step_beyond_2": null,
+    "P_given_step_below_1.2": 0.06391184573002755,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.0,
+    "by_first_step_z": {
+     "z1_in_(0.0,0.5]": {
+      "frac": 0.396,
+      "P_given": 0.013824884792626729,
+      "frac_of_survivors": 0.07758620689655173
+     },
+     "z1_in_(0.5,1.0]": {
+      "frac": 0.2925,
+      "P_given": 0.03669724770642202,
+      "frac_of_survivors": 0.1724137931034483
+     },
+     "z1_in_(1.0,1.5]": {
+      "frac": 0.224,
+      "P_given": 0.12612612612612611,
+      "frac_of_survivors": 0.4827586206896552
+     },
+     "z1_in_(1.5,2.33]": {
+      "frac": 0.0875,
+      "P_given": 0.17714285714285713,
+      "frac_of_survivors": 0.2672413793103448
+     }
+    }
+   }
+  },
+  "l_3": {
+   "sigma_0.3": {
+    "P": 0.4,
+    "f_first_segment_covers_BAO_SN": 0.6185,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.3455,
+    "P_given_covers_BAO_SN": 0.5092966855295069,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": 0.5164835164835165,
+    "P_given_step_beyond_2": 0.5036179450072359,
+    "P_given_step_below_1.2": 0.22280471821756226,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.7875
+   },
+   "sigma_0.5": {
+    "P": 0.3668847508807247,
+    "f_first_segment_covers_BAO_SN": 0.603,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.334,
+    "P_given_covers_BAO_SN": 0.49585406301824214,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": 0.4962825278810409,
+    "P_given_step_beyond_2": 0.49550898203592814,
+    "P_given_step_below_1.2": 0.1677336747759283,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.8203017832647462,
+    "by_first_step_z": {
+     "z1_in_(0.0,0.5]": {
+      "frac": 0.135,
+      "P_given": 0.058365758754863814,
+      "frac_of_survivors": 0.0205761316872428
+     },
+     "z1_in_(0.5,1.0]": {
+      "frac": 0.0965,
+      "P_given": 0.06735751295336788,
+      "frac_of_survivors": 0.01783264746227709
+     },
+     "z1_in_(1.0,1.5]": {
+      "frac": 0.073,
+      "P_given": 0.23972602739726026,
+      "frac_of_survivors": 0.04801097393689986
+     },
+     "z1_in_(1.5,2.33]": {
+      "frac": 0.0925,
+      "P_given": 0.3675675675675676,
+      "frac_of_survivors": 0.09327846364883402
+     }
+    }
+   },
+   "sigma_0.7": {
+    "P": 0.3729156139464376,
+    "f_first_segment_covers_BAO_SN": 0.6125,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.3595,
+    "P_given_covers_BAO_SN": 0.5306122448979592,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": 0.5335968379446641,
+    "P_given_step_beyond_2": 0.5285118219749653,
+    "P_given_step_below_1.2": 0.11671087533156499,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.8807588075880759
+   },
+   "sigma_1": {
+    "P": 0.339340885684861,
+    "f_first_segment_covers_BAO_SN": 0.6015,
+    "f_no_step_in_range": 0.0,
+    "f_first_step_beyond_z6.4": 0.3405,
+    "P_given_covers_BAO_SN": 0.5012468827930174,
+    "P_given_no_step": null,
+    "P_given_step_in_(1.2,2)": 0.5057471264367817,
+    "P_given_step_beyond_2": 0.4977973568281938,
+    "P_given_step_below_1.2": 0.07577807848443843,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.9150227617602428,
+    "by_first_step_z": {
+     "z1_in_(0.0,0.5]": {
+      "frac": 0.142,
+      "P_given": 0.02575107296137339,
+      "frac_of_survivors": 0.009104704097116844
+     },
+     "z1_in_(0.5,1.0]": {
+      "frac": 0.0945,
+      "P_given": 0.06521739130434782,
+      "frac_of_survivors": 0.018209408194233688
+     },
+     "z1_in_(1.0,1.5]": {
+      "frac": 0.0615,
+      "P_given": 0.09090909090909091,
+      "frac_of_survivors": 0.01669195751138088
+     },
+     "z1_in_(1.5,2.33]": {
+      "frac": 0.1005,
+      "P_given": 0.13432835820895522,
+      "frac_of_survivors": 0.0409711684370258
+     }
+    }
+   }
+  },
+  "l_10": {
+   "sigma_0.3": {
+    "P": 0.6345,
+    "f_first_segment_covers_BAO_SN": 0.8845,
+    "f_no_step_in_range": 0.3035,
+    "f_first_step_beyond_z6.4": 0.806,
+    "P_given_covers_BAO_SN": 0.6879592990390051,
+    "P_given_no_step": 1.0,
+    "P_given_step_in_(1.2,2)": 0.5605095541401274,
+    "P_given_step_beyond_2": 0.7003722084367245,
+    "P_given_step_below_1.2": 0.22510822510822512,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.959022852639874
+   },
+   "sigma_0.5": {
+    "P": 0.62625250501002,
+    "f_first_segment_covers_BAO_SN": 0.8965,
+    "f_no_step_in_range": 0.3045,
+    "f_first_step_beyond_z6.4": 0.815,
+    "P_given_covers_BAO_SN": 0.6776352481873954,
+    "P_given_no_step": 1.0,
+    "P_given_step_in_(1.2,2)": 0.4785276073619632,
+    "P_given_step_beyond_2": 0.6975460122699386,
+    "P_given_step_below_1.2": 0.1724137931034483,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.972
+   },
+   "sigma_0.7": {
+    "P": 0.6046277665995976,
+    "f_first_segment_covers_BAO_SN": 0.8765,
+    "f_no_step_in_range": 0.2845,
+    "f_first_step_beyond_z6.4": 0.792,
+    "P_given_covers_BAO_SN": 0.6685681688533942,
+    "P_given_no_step": 1.0,
+    "P_given_step_in_(1.2,2)": 0.5384615384615384,
+    "P_given_step_beyond_2": 0.6824494949494949,
+    "P_given_step_below_1.2": 0.1276595744680851,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.9750415973377704
+   },
+   "sigma_1": {
+    "P": 0.6021180030257186,
+    "f_first_segment_covers_BAO_SN": 0.876,
+    "f_no_step_in_range": 0.307,
+    "f_first_step_beyond_z6.4": 0.7935,
+    "P_given_covers_BAO_SN": 0.6712328767123288,
+    "P_given_no_step": 1.0,
+    "P_given_step_in_(1.2,2)": 0.46060606060606063,
+    "P_given_step_beyond_2": 0.6931316950220542,
+    "P_given_step_below_1.2": 0.07792207792207792,
+    "frac_survivors_with_first_segment_covering_BAO_SN": 0.9849246231155779
+   }
+  }
+ }
+}

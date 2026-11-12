@@ -43,7 +43,8 @@ estacionario de media cero y varianza σ_X²:
   funciona. **Jitter usado: 10⁻¹² σ_X² en los cinco ℓ** (muy por debajo del 10⁻⁸ pedido; no se dio la condición de parada).
 - **Escalones**: valor independiente N(0, σ_X²) en tramos de anchura ℓ con desfase φ ~ U(0, ℓ) por camino; K = (1 − |Δu|/ℓ)₊.
   Se sortean primero φ y los valores (independientes de la malla) y después se evalúa el camino en los nodos, así que la malla
-  solo entra por la integración.
+  solo entra por la integración. El diseño de escalones con desfase uniforme al azar por camino venía del prompt; no es una
+  elección de esta nota.
 
 Celdas: ℓ ∈ {0.1, 0.3, 1, 3, 10} × σ_X ∈ {0.02, 0.03, 0.05, 0.07, 0.1, 0.15, 0.2, 0.3, 0.5, 0.7, 1.0}, 2000 caminos por celda,
 semilla por celda y familia ([20261116, familia, ℓ, σ] salvo las celdas OU compartidas). Ajuste por camino: solo la combinación
@@ -120,15 +121,42 @@ Lo que dicen las cotas:
 - Los escalones no acotan en ℓ ≥ 1 por otra razón: el primer escalón está en u = ℓ − φ, es decir, en z = e^{ℓ−φ} − 1, con φ
   uniforme en (0, ℓ); con ℓ = 1 un 8 % de los caminos no cambia hasta z ≈ 1.5 (P = 0.064 en σ_X = 1), con ℓ = 3 el 60 % no cambia
   hasta z > 2.3 y el 33 % hasta z > 6.4 (P = 0.34), y con ℓ = 10 el 88 % no cambia hasta z > 2.3 y el 30 % no cambia nunca en
-  0 ≤ u ≤ 7 (P = 0.60). Un cambio ρ_DE ± ρ_crit,0 en z > 6 es < 1 % de E² y solo θ* lo nota (0.025 % en θ* por unidad de Δρ,
-  ≈ 1σ). En el convenio B esos caminos son ΛCDM en todo el rango de BAO y SN. Con el mismo núcleo pero gaussiano (StepsGauss) la cota vuelve: 0.093 (ℓ = 0.3) y 0.163 (ℓ = 1), parecida al OU
+  0 ≤ u ≤ 7 (P = 0.60). Un cambio ρ_DE ± ρ_crit,0 en z > 2.3 no lo ve ningún dato, ni θ* (con h y ω_m libres): esos caminos dan
+  P = 0.50 ± 0.02 en todo σ_X ≤ 1, como ΛCDM (comprobación numérica en la sección "Suelo de P en los escalones"). Con el mismo núcleo pero gaussiano (StepsGauss) la cota vuelve: 0.093 (ℓ = 0.3) y 0.163 (ℓ = 1), parecida al OU
   (0.111, 0.169), que tiene casi el mismo núcleo a retardos cortos. La no gaussianidad del prior de escalones afloja la cota ×1.7
   en ℓ = 0.3 y la quita en ℓ = 1.
 - **Aviso sobre EXACTO_SN.md**: con σ_X = 0.07 y 0.15 en la malla, las celdas OU (idénticas) dan la cota 5 % de
   BAO + θ* + ω_m + SN en θ = 10 como **0.070**, no 0.081 (−13 %), y en θ = 1 como 0.169, no 0.173 (−2 %); θ = 0.1 queda en 0.476.
   La diferencia es solo la interpolación en ln σ_X entre 0.05 (P = 0.107) y 0.1 (0.024), que con 0.07 (P = 0.049) en medio se
-  corta antes. No se corrige nada aquí; las cifras 0.173 / 0.113 / 0.081 de EXACTO_SN.md, ERRATAS_V3.md y la cabecera de
-  BARRIDO_MAXIMOS.md llevan esa incertidumbre de malla (θ = 3 no se ha repetido: ℓ = 0.3 es θ = 3.33).
+  corta antes. CONVERGENCIA_SN.md ya lo tenía con las celdas 0.07 y 0.15 y N = 20000: 0.170 / 0.102 / 0.073. No se corrige nada;
+  las cifras 0.173 / 0.113 / 0.081 de EXACTO_SN.md y ERRATAS_V3.md llevan ahora una nota de malla junto a cada cita
+  (BARRIDO_MAXIMOS.md no las cita). θ = 3 no se ha repetido aquí (ℓ = 0.3 es θ = 3.33).
+
+### Suelo de P en los escalones (comprobación numérica, `familias_suelo.py`, `familias_suelo_escalones.json`)
+
+Sin ajustes nuevos: los χ² son los de `familias_chi2.npz` y los desfases φ se regeneran de las semillas. Por ℓ, fracción del
+prior cuyo primer tramo cubre todos los datos de BAO y SN (primer escalón en u₁ = ℓ − φ > 1.203, z > 2.33; las SN llegan a
+z = 2.26), fracción sin ningún escalón en 0 ≤ u ≤ 7 (cubre también θ*), y el suelo de P cuando σ_X crece:
+
+| ℓ | cubre BAO + SN | sin escalón en el rango | P(σ_X = 0.5 / 0.7 / 1.0) | P dado que cubre | P dado primer escalón en z ≤ 2.33 | supervivientes que cubren (σ_X = 1) |
+|---|---|---|---|---|---|---|
+| 0.1 | 0 | 0 | 0 / 0 / 0 | — | 0 | — |
+| 0.3 | 0 | 0 | 0.005 / 0.003 / 0 | — | 0.005 / 0.003 / 0 | — |
+| 1 | 0 | 0 | 0.122 / 0.080 / 0.064 | — | 0.122 / 0.080 / 0.064 | 0 |
+| 3 | 0.60–0.62 | 0 | 0.367 / 0.373 / 0.339 | 0.50 / 0.53 / 0.50 | 0.17 / 0.12 / 0.08 | 0.82 / 0.88 / 0.92 |
+| 10 | 0.88–0.90 | 0.28–0.31 | 0.626 / 0.605 / 0.602 | 0.68 / 0.67 / 0.67 (1.00 los sin escalón) | 0.17 / 0.13 / 0.08 | 0.97 / 0.98 / 0.98 |
+
+- **ℓ = 3 y 10: coinciden.** Los caminos cuyo primer tramo cubre BAO y SN dan P = 0.50 ± 0.02 en todo σ_X (como ΛCDM: χ²_min
+  queda por encima o por debajo de χ²_obs a cara o cruz; el cambio en z > 2.3 no lo ve ni θ*), y los que no tienen ningún escalón
+  dan χ²_min = χ²_obs exacto, contado como ≤. El suelo es por tanto ½ × (masa que cubre) + ½ × (masa sin escalón) + el resto:
+  ℓ = 3: 0.5 × 0.60 + 0.08 × 0.40 = 0.33 (medido 0.34); ℓ = 10: 0.5 × (0.88 − 0.31) + 1.0 × 0.31 + 0.08 × 0.12 = 0.60 (medido
+  0.60). El 92–98 % de los supervivientes en σ_X = 1 son caminos que cubren. **El "sin cota" de los escalones en ℓ ≥ 3 lo
+  produce el prior (masa sin cambio sobre los datos del 60 % y el 88 %, mayor que el 5 %), no los datos.**
+- **ℓ = 1: no coinciden.** Ningún camino cubre los datos (u₁ ≤ 1 < 1.2) y el suelo es 0.064. Por z del primer escalón, en
+  σ_X = 1: z₁ ≤ 0.5 (40 % del prior) P = 0.014; 0.5–1 (29 %) 0.037; 1–1.5 (22 %) 0.126; 1.5–2.33 (9 %) 0.177. El 75 % de los
+  supervivientes tiene el primer escalón en z > 1. Aquí el suelo lo sostienen los datos de z > 1 (QSO, Lyα y pocas SN), que
+  ven el cambio pero flojo, no una masa del prior sin cambio; con σ_X > 1 seguiría bajando (0.122 → 0.080 → 0.064 de 0.5 a 1).
+- ℓ ≤ 0.3: todo camino cambia dentro de los datos y P → 0.
 
 ## (b) y (c) Δρ(z) = X(z) − X(0) en la cota
 
@@ -238,16 +266,18 @@ las dos mallas, P por σ igual a ±0.0005. La discretización no cuenta.
 - Qué caminos sobreviven: en las suaves a ℓ = 1, la mayoría de los supervivientes en la cota tiene ρ_DE ≤ 0 en algún z
   (44 % Matérn, 68 % gaussiano); en el OU, 6 %.
 - Los escalones: su prior no gaussiano afloja la cota ×1.7 en ℓ = 0.3 respecto al proceso gaussiano del mismo núcleo y la quita
-  en ℓ ≥ 1, porque en una fracción de los caminos el primer escalón cae donde los datos no llegan (8 % hasta z = 1.5 en ℓ = 1,
-  33 % hasta z = 6.4 en ℓ = 3).
+  en ℓ ≥ 1: en ℓ ≥ 3 porque el 60–88 % del prior no cambia sobre los datos (suelo del prior); en ℓ = 1 porque el 31 % del prior
+  cambia solo en z > 1, donde los datos lo ven flojo (suelo de los datos).
 - El acuerdo lineal/exacta: +2 % (Matérn) a +8 % (OU) donde se puede medir.
 
 ## No se puede decir con estos datos
 
 - Si existe una cifra universal de Δρ a z ≈ 0.5: no la hay entre las familias acotadas, y 7 de las 20 (familia × ℓ) no tienen
   cota por debajo de σ_X = 1, con rms(0.5) en σ_X = 1 de 0.04–0.22 (suaves) y 0.29–0.90 (escalones).
-- La cota de Matérn y gaussiano a ℓ ≥ 3 y de los escalones a ℓ ≥ 1 (más allá de σ_X = 1, donde ρ_DE ≤ 0 es la norma).
+- La cota de Matérn y gaussiano a ℓ ≥ 3 (más allá de σ_X = 1, donde ρ_DE ≤ 0 es la norma); la de los escalones a ℓ ≥ 3 no
+  existe con estos datos (suelo del prior) y a ℓ = 1 está por encima de 1.
 - Si la marginal lineal reproduce la exacta en el gaussiano (sin cota lineal) y en los escalones (ESS = 1 con la guía lineal;
   haría falta otra propuesta, y eso ya no es `marginal_guiada.py`).
 - La cota exacta de los escalones no gaussianos por marginal: la guiada supone prior gaussiano.
-- El aviso sobre EXACTO_SN (θ = 10: 0.081 → 0.070 por la malla de σ) está fuera de esta pregunta; no se ha tocado.
+- El aviso sobre EXACTO_SN (θ = 10: 0.081 → 0.070 por la malla de σ) está fuera de esta pregunta; las cifras históricas no se
+  han tocado, solo se han anotado.

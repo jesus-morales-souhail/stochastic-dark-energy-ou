@@ -14,6 +14,13 @@ Exploración: no cambia `results/`, `figures/` ni ningún paper. Script `exacto_
 `exacto_sn_chi2.npz` (χ²_min de cada realización en las cuatro combinaciones, marca de descarte y de ρ_DE ≤ 0). Tiempo:
 10 min con 16 procesos (las celdas, 4 min; el resto, los techos y las cotas lineales).
 
+**Nota de malla (añadida el 2026-11-12, sin recalcular nada aquí).** La cota del 5 % se obtiene interpolando P(χ²_min ≤ χ²_obs)
+linealmente en ln σ_X entre las celdas, y en BAO + θ* + ω_m + SN las celdas que encierran la cota eran 0.1 / 0.2 (θ = 1 y 3) y
+0.05 / 0.1 (θ = 10), con P cóncava hacia arriba entre ellas: la recta corta tarde. Con las celdas 0.07 y 0.15 en la malla
+(`CONVERGENCIA_SN.md`, mismo montaje, N = 20000) las cotas son **0.170 / 0.102 / 0.073** en θ = 1 / 3 / 10 (−2 %, −10 %, −10 %), y
+las celdas OU de `FAMILIAS.md` (caminos idénticos, N = 2000, con 0.07 y 0.15) dan 0.169 y 0.070 en θ = 1 y 10. Las cifras
+históricas de esta nota (0.173 / 0.113 / 0.081) se dejan como se calcularon; cada cita lleva la marca [con celdas 0.07 y 0.15: …].
+
 ## Montaje
 
 El de `exacto.py` sin cambios: convenio B (ρ_DE = Ω_Λ + X(z) − X(0)), misma malla en u = ln(1+z) con los z de DESI como nodos
@@ -58,13 +65,17 @@ criterio P(χ²_min ≤ χ²_obs) = 5 % interpolando en ln σ_X. Las SN entraron
 | 3 | 0.131 | 0.139 | 0.113 | 0.100 | 0.286 |
 | 10 | 0.082 [0.082] | 0.089 [0.086] | 0.081 [0.080] | 0.075 [0.076] | 0.192 |
 
+Nota de malla: la columna BAO + θ* + ω_m + SN en θ = 1 / 3 / 10 (0.173 / 0.113 / 0.081) es 0.170 / 0.102 / 0.073 con las celdas
+0.07 y 0.15 (`CONVERGENCIA_SN.md`); las demás columnas no se han repetido con esa malla.
+
 - **Con BAO + θ* + ω_m + SN los techos de `EXACTO.md` bajan a menos de la mitad:** 0.43 → 0.17 (θ = 1), 0.29 → 0.11 (θ = 3),
-  0.19 → 0.081 (θ = 10). Y aparecen cotas donde no las había: 0.31 en θ = 0.3 y 0.48 en θ = 0.1.
+  0.19 → 0.081 (θ = 10) [con celdas 0.07 y 0.15: 0.170 / 0.102 / 0.073, CONVERGENCIA_SN.md; ver nota de malla]. Y aparecen cotas donde no las había: 0.31 en θ = 0.3 y 0.48 en θ = 0.1.
 - **SN solas acotan más que BAO solo** (0.47 / 0.28 / 0.20 en θ = 1 / 3 / 10): 0.20 / 0.13 / 0.082, un factor 2.2–2.4. Son
   1580 distancias frente a 13, y su propia M absorbe la parte constante igual que (h, ω_m) la absorbían en BAO.
-- BAO + SN casi no mejora a SN solas (0.19 / 0.14 / 0.089), y el CMB comprimido añade un 10–20 % más (0.17 / 0.11 / 0.081).
+- BAO + SN casi no mejora a SN solas (0.19 / 0.14 / 0.089), y el CMB comprimido añade un 10–20 % más (0.17 / 0.11 / 0.081 [con celdas 0.07 y 0.15: 0.170 / 0.102 / 0.073, CONVERGENCIA_SN.md; ver nota de malla]).
 - **El corte z_HD > 0.023 no afloja la cota: la estrecha un poco** (0.173 → 0.165 en θ = 1, −5 %; 0.081 → 0.075 en θ = 10,
-  −7 %; 0.113 → 0.100 en θ = 3, −12 %). Se pierden 209 SN a z < 0.023, pero cambia también χ²_obs (1406 → 1229),
+  −7 %; 0.113 → 0.100 en θ = 3, −12 %; las de partida son 0.170 / 0.102 / 0.073 con celdas 0.07 y 0.15, `CONVERGENCIA_SN.md`, y el
+  corte z_HD no se ha repetido con esa malla). Se pierden 209 SN a z < 0.023, pero cambia también χ²_obs (1406 → 1229),
   y la cota es la fracción de realizaciones que igualan a ΛCDM, no la varianza: las SN más cercanas, donde el residuo
   X(z) − X(0) es más pequeño, aportaban poco y algo de holgura.
 
@@ -134,6 +145,9 @@ próxima, sin suavizar, sobre toda la malla hasta z*; ρ_DE = Ω_Λ + X − X(0)
 | 10 | BAO + θ* + ω_m + SN | 0.081 | 0.1 | 98 (4.9 %) | 0.0 % | 0.0 % |
 | 10 | BAO + θ* + ω_m + SN, z_HD > 0.023 | 0.075 | 0.1 | 96 (4.8 %) | 0.0 % | 0.0 % |
 
+Nota de malla: los techos 0.173 / 0.113 / 0.081 (θ = 1 / 3 / 10) son 0.170 / 0.102 / 0.073 con las celdas 0.07 y 0.15
+(`CONVERGENCIA_SN.md`); la regeneración en el techo no se ha repetido en ellos.
+
 En los techos de θ = 1, 3 y 10 casi ningún superviviente tiene ρ_DE ≤ 0 (2.4 %, 0, 0): a σ_X ≤ 0.17 el residuo no llega a
 anular Ω_Λ ≈ 0.69. En θ = 0.3 y 0.1, con techos de 0.3–0.5, lo tienen el 15–19 %. Comparado con `CMB_TECHOS.md` (67 / 28 /
 4.4 % en los techos sin SN, tras suavizar y sobre la tabla de CAMB), el problema de representar estos caminos en CAMB
@@ -148,6 +162,9 @@ desaparece en los techos nuevos de θ ≥ 1.
 | 1 | 0.199 / 0.246 / 0.172 / 1.24 | 0.192 / 0.233 / 0.197 / 1.21 | 0.173 / 0.298 / 0.263 / 1.72 |
 | 3 | 0.131 / 0.147 / 0.103 / 1.11 | 0.139 / 0.145 / 0.123 / 1.04 | 0.113 / 0.178 / 0.154 / 1.57 |
 | 10 | 0.082 / 0.092 / 0.066 / 1.12 | 0.089 / 0.104 / 0.090 / 1.17 | 0.081 / 0.119 / 0.101 / 1.48 |
+
+Nota de malla: la exacta de BAO + θ* + ω_m + SN (0.173 / 0.113 / 0.081) es 0.170 / 0.102 / 0.073 con las celdas 0.07 y 0.15
+(`CONVERGENCIA_SN.md`); los cocientes con esa malla serían 1.75 / 1.74 / 1.63 con las mismas lineales.
 
 
 **Cotas lineales con el máximo global (corrección documental, 2026-11-12).** Las cifras de la tabla anterior marcadas aquí como
@@ -174,7 +191,7 @@ predicción "la lineal marginalizada a menos de un factor 1.5 de la exacta" no c
 ## Predicción: qué se cumplió
 
 - **BAO + θ* + ω_m + SN, cota exacta entre 0.06 y 0.20 (θ = 1), 0.05 y 0.15 (θ = 3), 0.04 y 0.13 (θ = 10): cumplida** (0.173,
-  0.113, 0.081).
+  0.113, 0.081; con celdas 0.07 y 0.15: 0.170 / 0.102 / 0.073, `CONVERGENCIA_SN.md`, también dentro de los rangos).
 - **θ = 0.3, aparece cota entre 0.2 y 0.6: cumplida** (0.307). **θ = 0.1, sin cota por debajo de 0.5: no se cumplió, por
   poco** (0.476; P = 4.2 % en σ_X = 0.5).
 - **SN solas acotan más que BAO solo en θ = 1, 3 y 10: cumplida** (0.199 / 0.131 / 0.082 frente a 0.47 / 0.28 / 0.20).
@@ -186,5 +203,6 @@ predicción "la lineal marginalizada a menos de un factor 1.5 de la exacta" no c
   **no para BAO + θ* + ω_m + SN** (1.48 en θ = 10, 1.57–1.84 en θ ≤ 3, sin cota en θ = 0.1). [Con las lineales de máximo global: sin CMB ×1.04–1.20 y con CMB ×1.48–1.82; mismo veredicto.]
 
 **Número para la v3.0 (convenio B, cota exacta, 5 %):** DESI DR2 + ω_m y θ* de Planck + Pantheon+ dejan pasar un temblor OU
-de σ_X < 0.17 (θ = 1), 0.11 (θ = 3), 0.081 (θ = 10), 0.31 (θ = 0.3) y 0.48 (θ = 0.1); las supernovas son lo que más acota, por
+de σ_X < 0.17 (θ = 1), 0.11 (θ = 3), 0.081 (θ = 10) [con celdas 0.07 y 0.15: 0.170 / 0.102 / 0.073 (`CONVERGENCIA_SN.md`), es decir
+0.17 / 0.10 / 0.073], 0.31 (θ = 0.3) y 0.48 (θ = 0.1); las supernovas son lo que más acota, por
 delante de los BAO y del CMB comprimido, y casi toda la cota viene de ellas.
