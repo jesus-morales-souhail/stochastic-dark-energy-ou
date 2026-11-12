@@ -1,0 +1,70 @@
+{
+ "note": "linear bound -1.92: drop from the global maximum of ln Z_lin vs drop from the maximum over perfil_fondo.SIG (sigma <= 0.05), as PF.bound does; EXACTO_SN.md linear values reproduced by the latter with the cmb_fondo A",
+ "sig_grid_max": 0.05,
+ "rows": {
+  "A_canonical|theta_0.3": {
+   "lnZ_max": 1.1687710462101677,
+   "sigma_at_max": 0.1893980774189701,
+   "lnZ_max_clipped": 0.5461170090557061,
+   "bound_global_max": 0.49228378316752963,
+   "bound_clipped_max": 0.5585966670493874,
+   "exacto_sn_linear": 0.566548212069457
+  },
+  "A_canonical|theta_1": {
+   "lnZ_max": 1.1383933109086684,
+   "sigma_at_max": 0.10985619063727563,
+   "lnZ_max_clipped": 0.8725266749424918,
+   "bound_global_max": 0.27729258625044195,
+   "bound_clipped_max": 0.2933702493785518,
+   "exacto_sn_linear": 0.2981850258564115
+  },
+  "A_canonical|theta_3": {
+   "lnZ_max": 0.98004565680003,
+   "sigma_at_max": 0.05714303439661698,
+   "lnZ_max_clipped": 0.9613095429795067,
+   "bound_global_max": 0.17430239137581605,
+   "bound_clipped_max": 0.17503693619214702,
+   "exacto_sn_linear": 0.17784009386637048
+  },
+  "A_canonical|theta_10": {
+   "lnZ_max": 0.5895168693537016,
+   "sigma_at_max": 0.029723644713245515,
+   "lnZ_max_clipped": 0.5903539819455546,
+   "bound_global_max": 0.11796388243358026,
+   "bound_clipped_max": 0.11793864364997728,
+   "exacto_sn_linear": 0.1189704198300398
+  },
+  "A_cmb_fondo|theta_0.3": {
+   "lnZ_max": 1.1153359252457449,
+   "sigma_at_max": 0.1893980774189701,
+   "lnZ_max_clipped": 0.5224583803833411,
+   "bound_global_max": 0.5020106821101881,
+   "bound_clipped_max": 0.5665482117929733,
+   "exacto_sn_linear": 0.566548212069457
+  },
+  "A_cmb_fondo|theta_1": {
+   "lnZ_max": 1.0854458261683249,
+   "sigma_at_max": 0.10985619063727563,
+   "lnZ_max_clipped": 0.8321472977836493,
+   "bound_global_max": 0.2825237605565034,
+   "bound_clipped_max": 0.29818503960258236,
+   "exacto_sn_linear": 0.2981850258564115
+  },
+  "A_cmb_fondo|theta_3": {
+   "lnZ_max": 0.9282600592309791,
+   "sigma_at_max": 0.05714303439661698,
+   "lnZ_max_clipped": 0.9117157780301568,
+   "bound_global_max": 0.17717658284873233,
+   "bound_clipped_max": 0.17784016412460693,
+   "exacto_sn_linear": 0.17784009386637048
+  },
+  "A_cmb_fondo|theta_10": {
+   "lnZ_max": 0.5529288649508999,
+   "sigma_at_max": 0.029723644713245515,
+   "lnZ_max_clipped": 0.5524504028417141,
+   "bound_global_max": 0.1189555144039792,
+   "bound_clipped_max": 0.11897025983088265,
+   "exacto_sn_linear": 0.1189704198300398
+  }
+ }
+}

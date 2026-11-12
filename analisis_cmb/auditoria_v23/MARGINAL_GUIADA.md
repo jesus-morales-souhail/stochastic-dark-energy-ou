@@ -167,17 +167,36 @@ error de Monte Carlo (0.016σ frente a 0.014σ esperado) y la covarianza tambié
 máximo frente a la propia media, 41 % en nodos con |μ| > 0.01, no dice nada: ahí la media es mucho menor que la
 desviación y el cociente lo dominan nodos con μ ≈ 0.
 
-## Cuál es la implementación lineal canónica
+## Comprobación con la otra guía, y de dónde sale el 9–13 %
 
-La de este A (fiducial p₀, malla de `exacto.py` con los nodos exactos de DESI, filas de SN interpoladas, M como parámetro):
-el cálculo exacto guiado la confirma a +0.01–0.21 en ln Z. Difiere un 9–13 % de la de `cmb_fondo.py` / `exacto_sn.py` en
-θ ≤ 1 (0.272 frente a 0.298 en θ = 1; 0.492 frente a 0.567 en θ = 0.3) y un 3 % en θ ≥ 3. El fiducial explica solo una parte:
-reconstruyendo A en la misma malla con Ω_m = 0.3153 (tabla S) en vez de 0.3037 (p₀), la cota pasa de 0.272 a 0.278
-en θ = 1 y de 0.492 a 0.502 en θ = 0.3 (+2 %). El resto viene de cómo `cmb_fondo.py` construye las filas: los BAO en
-el nodo más próximo de una malla uniforme (|δu| ≤ 8 × 10⁻⁴) en lugar de en su z exacto, la fila de θ* en esa misma malla, y
-el escalado de las filas con el ajuste de BAO + CMB sin SN; a θ ≤ 1 la cota la fija la parte de larga correlación del núcleo,
-que es la sensible a esos detalles, y a θ ≥ 3 la parte local, donde las dos implementaciones coinciden. No se ha descompuesto
-más; ninguna cifra ya calculada cambia por esto.
+**La misma marginal exacta con el A de `cmb_fondo.py` / `exacto_sn.py` como guía** (malla uniforme, fiducial de la tabla S, BAO en el
+nodo más próximo, escalado con el ajuste sin SN; el camino, en esa malla, interpolado a la de `exacto.py` para el χ² exacto;
+`marginal_guiada_cf.py` → `marginal_guiada_cf.json`). La identidad vale para cualquier propuesta lineal, así que la cota exacta
+debe salir igual; solo cambian ln Z_lin, la corrección y el ESS:
+
+| θ | lineal con el A de cmb_fondo (ln Z_lin, máx. global) | exacta guiada por ese A, −1.92 (16–84 %) | ESS en la cota | corrección | exacta guiada por el A canónico (16–84 %) | ESS | corrección |
+|---|---|---|---|---|---|---|---|
+| 0.3 | 0.502 | **0.506** (0.501–0.510) | 339 (6.8 %) | +0.100 | **0.500** (0.497–0.503) | 948 | +0.041 |
+| 1 | 0.278 | **0.279** (0.276–0.283) | 384 (7.7 %) | +0.065 | **0.287** (0.282–0.293) | 187 | +0.206 |
+
+Las dos guías dan la misma cota dentro del error de bootstrap: la diferencia es 0.8σ (θ = 0.3) y 1.3σ (θ = 1, 2.8 %),
+con la σ combinada de los dos bootstraps. La guía cambia el reparto entre ln Z_lin y la corrección (+0.21 con el A canónico
+frente a +0.07 con el otro en θ = 1), no el producto. Ambas cotas usan la misma malla de σ_X; el error de interpolar en esa
+malla frente a la raíz exacta es −1.9 % (θ = 1) y −0.1 % (θ = 0.3) en la lineal, comprobado con `brentq` en una malla fina.
+
+**De dónde sale el 9–13 % con `EXACTO_SN.md`, corregido.** No es el A: con el máximo global de ln Z_lin y raíz exacta, el A
+canónico da 0.277 / 0.492 / 0.174 / 0.118 (θ = 1 / 0.3 / 3 / 10) y el de `cmb_fondo.py` 0.283 / 0.502 / 0.177 / 0.119: a un 2 %. Lo que
+difiere es el punto de referencia: `perfil_fondo.bound` mide la caída de 1.92 desde el máximo de la verosimilitud **sobre su
+malla de σ_X, que llega solo a 0.05**, y en las combinaciones con tensión el máximo está más allá: en σ_X = 0.11 (θ = 1,
+ln Z = +1.09 frente a +0.83 en σ_X ≤ 0.05) y 0.19 (θ = 0.3). Midiendo la caída desde ese máximo recortado, con el A de `cmb_fondo.py`,
+salen 0.2982 / 0.5665 / 0.1778 / 0.1190: los valores de `EXACTO_SN.md` (0.2982 / 0.5665 / 0.1778 / 0.1190) a cuatro
+decimales (`marginal_guiada_clip.json`). **Las cotas lineales marginalizadas de `EXACTO_SN.md` con el CMB comprimido, y las de
+`CMB_FONDO.md` en las combinaciones cuyo σ_at_max salía en el borde 0.05, están referidas a un máximo recortado y son un
+6–13 % más flojas de lo debido en θ ≤ 1**; en θ ≥ 3 el máximo está en σ_X ≤ 0.057 y el efecto es < 1 %. Sin CMB (SN solas,
+BAO solo) el máximo está en σ_X = 0 y no hay sesgo. El párrafo anterior de esta nota atribuía la diferencia al fiducial y a
+la construcción de las filas: el fiducial explica un 2 % (0.272 → 0.278 en θ = 1 con Ω_m = 0.3153 en la misma malla,
+`marginal_guiada_check.json`) y el resto es el máximo recortado. Ninguna cifra calculada cambia; cuál de las dos lineales se
+cita, y si se corrigen esas columnas, es decisión aparte.
 
 ## Lectura
 
