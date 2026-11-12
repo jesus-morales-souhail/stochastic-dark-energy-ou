@@ -1,0 +1,21 @@
+{
+ "5pct_linear": 0.1559178296765389,
+ "marg_linear": 0.2771185051376421,
+ "marg_linear_class": "interior",
+ "mc_marg_linear": 0.2608094379897301,
+ "mc_ess_at_bound": 3.4064266935481444,
+ "dlnL_max_linear": 1.1412526549829636,
+ "sigma_max": 0.10407478790042636,
+ "tension_linear": 2.664404969448242,
+ "chi2_lcdm_linear": 1406.3271474297198,
+ "chi2_lcdm_exact": 1406.3271474297196,
+ "ref": {
+  "5pct_exact": 0.169,
+  "marg_exact": 0.287
+ },
+ "muestras_sn_linear_192": 0.277,
+ "5pct_ratio": 0.9225907081452005,
+ "marg_ratio": 0.9655697043123418,
+ "marg_linear_brentq": 0.277118492244475,
+ "ok_within_10pct": true
+}
