@@ -1,0 +1,53 @@
+{
+ "cell": {
+  "theta": 1.0,
+  "sigma_X": 0.3,
+  "n_samples": 5000,
+  "n_nodes_checked": 79
+ },
+ "mean": {
+  "max_abs_err_in_posterior_std": 0.03322031848668566,
+  "rms_err_in_posterior_std": 0.016048332501009826,
+  "expected_rms_mc": 0.01414213562373095,
+  "max_rel_err_vs_mean_where_mean_gt_0.01": 0.407869918328429,
+  "posterior_mean_range": [
+   -0.10753538202180743,
+   0.2334261468811379
+  ],
+  "posterior_std_range": [
+   0.2406142146955304,
+   0.2999994164521668
+  ]
+ },
+ "cov": {
+  "max_rel_err_diag": 0.057099110807470765,
+  "rms_rel_err_diag": 0.021389202276493328,
+  "expected_rms_mc_diag": 0.02,
+  "frobenius_rel_err": 0.03127131008554214,
+  "max_abs_err_corr": 0.03667092000725866
+ },
+ "fiducial_variant": {
+  "note": "linear bound -1.92 with A built at p0 (canonical) and with A built at the S-table fiducial Omega_m = 0.3153 (same grid)",
+  "omega_m_fid_used": 0.1463010696903957,
+  "Omega_m_fid": 0.3153,
+  "Omega_m_p0": 0.303710100212803,
+  "bounds": {
+   "theta_0.3": {
+    "A_p0": 0.49159659905789554,
+    "A_fid_0.3153": 0.5018545549360371
+   },
+   "theta_1": {
+    "A_p0": 0.27194769579567446,
+    "A_fid_0.3153": 0.2781130977976731
+   },
+   "theta_3": {
+    "A_p0": 0.1726954933319466,
+    "A_fid_0.3153": 0.17554843523577082
+   },
+   "theta_10": {
+    "A_p0": 0.11512627112205745,
+    "A_fid_0.3153": 0.11615546481865888
+   }
+  }
+ }
+}

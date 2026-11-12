@@ -120,6 +120,65 @@ Combinación BAO + θ* + ω_m + SN (1595 filas: 13 BAO, θ*, ω_m, 1580 SN), θ 
 | 0.3 | -7.256 | -0.404 | -7.664 | 5 | 25.0 % | 1393.5 | 1393.4 | 17.7 | -59.16 / -15.52 / -5.04 |
 | 0.4 | -10.081 | -2.103 | -12.189 | 2 | 70.2 % | 1391.8 | 1391.9 | 19.9 | -140.16 / -35.13 / -14.16 |
 
+## La identidad y sus normalizaciones
+
+Lo que se calcula en cada celda (σ_X, θ) es la evidencia del modelo exacto con el prior del camino y priores planos en δp:
+
+Z_exacta(σ_X) = ∫ dδp ∫ dx p_ex(d | p₀ + δp, x) π_σ(x) π(δp),
+
+con p_ex(d | ·) = (2π)^{−n/2} |C|^{−1/2} exp(−χ²_exacto/2), π_σ(x) = N(x; 0, σ_X² K_θ) (con su |2πσ_X²K|^{−1/2}) y π(δp) plana.
+El posterior lineal es q(δp, x) = p_lin(d | δp, x) π_σ(x) π(δp) / Z_lineal, con p_lin la misma gaussiana (misma C, mismo
+factor (2π)^{−n/2} |C|^{−1/2}) evaluada en el modelo lineal, y
+
+Z_lineal(σ_X) = ∫ dδp ∫ dx p_lin(d | δp, x) π_σ(x) π(δp) = (2π)^{−n/2} |C|^{−1/2} |2πσ_X²K|^{−1/2} ∫∫ exp(−χ²_lin/2 − xᵀ(σ_X²K)⁻¹x/2)
+             = const · |S|^{−1/2} |BᵀS⁻¹B|^{−1/2} exp(−½[rᵀS⁻¹r − bᵀF⁻¹b]),
+
+con r = d − b₀, S = C + σ_X² A K Aᵀ, F = BᵀS⁻¹B, b = BᵀS⁻¹r, y "const" = (2π)^{(3−n)/2} × el volumen del prior plano de δp,
+independiente de σ_X y de θ (la integral gaussiana en x cancela |2πσ_X²K|^{−1/2} contra |2πσ_X²K|^{1/2} y deja el |S|^{−1/2}
+por el lema de Woodbury; la de δp deja |F|^{−1/2}). Esa expresión, relativa a σ_X = 0 (S = C), es el ln Z_lineal de la tabla.
+Multiplicando y dividiendo por p_lin dentro de la integral de Z_exacta:
+
+Z_exacta = ∫∫ [p_ex / p_lin] p_lin π_σ π dδp dx = Z_lineal ∫∫ [p_ex / p_lin] q dδp dx = Z_lineal · E_q[w],   w = p_ex / p_lin = exp(−(χ²_exacto − χ²_lineal)/2).
+
+No falta ningún determinante ni normalización: el (2π)^{−n/2} |C|^{−1/2} de las dos verosimilitudes se cancela en el
+cociente w, el prior π_σ(x) con su |2πσ_X²K|^{−1/2} y el prior plano de δp son los mismos en el numerador y en el denominador
+(están dentro de q, no de w), y Z_lineal los lleva todos en su expresión analítica. Lo único que exige la identidad es que
+las muestras sigan exactamente q, que es lo que hace Matheron (comprobado abajo), y que w use los dos χ² con la misma C,
+los mismos datos y los mismos (h, ω_m, M), como se hace.
+
+## Matheron en una celda
+
+Celda (θ = 1, σ_X = 0.3), la de la cota exacta; 5000 muestras nuevas (semilla aparte), comparadas en 79 nodos (uno de cada
+50, los siete de DESI y z*) con la media y la covarianza analíticas del posterior lineal de x con δp marginalizado,
+μ = σ_X² K Aᵀ S⁻¹ (r − B δp̂) y Σ = σ_X² K − σ_X⁴ K Aᵀ S⁻¹ A K + σ_X⁴ K Aᵀ S⁻¹ B Σ_p Bᵀ S⁻¹ A K (`marginal_guiada_check.py` →
+`marginal_guiada_check.json`):
+
+| magnitud | error | esperado por Monte Carlo (N = 5000) |
+|---|---|---|
+| media, rms sobre nodos, en unidades de la desviación posterior | 0.016 σ | 0.014 σ |
+| media, máximo | 0.033 σ | — |
+| varianza (diagonal), rms del error relativo | 2.1 % | 2.0 % |
+| varianza (diagonal), máximo del error relativo | 5.7 % | — |
+| covarianza completa, error relativo de Frobenius | 3.1 % | — |
+| correlaciones, máximo error absoluto | 0.037 | — |
+
+La media posterior va de -0.108 a +0.233 y la desviación de 0.241 a 0.300: la media está dentro del
+error de Monte Carlo (0.016σ frente a 0.014σ esperado) y la covarianza también (2.1 % frente a 2.0 %). El error relativo
+máximo frente a la propia media, 41 % en nodos con |μ| > 0.01, no dice nada: ahí la media es mucho menor que la
+desviación y el cociente lo dominan nodos con μ ≈ 0.
+
+## Cuál es la implementación lineal canónica
+
+La de este A (fiducial p₀, malla de `exacto.py` con los nodos exactos de DESI, filas de SN interpoladas, M como parámetro):
+el cálculo exacto guiado la confirma a +0.01–0.21 en ln Z. Difiere un 9–13 % de la de `cmb_fondo.py` / `exacto_sn.py` en
+θ ≤ 1 (0.272 frente a 0.298 en θ = 1; 0.492 frente a 0.567 en θ = 0.3) y un 3 % en θ ≥ 3. El fiducial explica solo una parte:
+reconstruyendo A en la misma malla con Ω_m = 0.3153 (tabla S) en vez de 0.3037 (p₀), la cota pasa de 0.272 a 0.278
+en θ = 1 y de 0.492 a 0.502 en θ = 0.3 (+2 %). El resto viene de cómo `cmb_fondo.py` construye las filas: los BAO en
+el nodo más próximo de una malla uniforme (|δu| ≤ 8 × 10⁻⁴) en lugar de en su z exacto, la fila de θ* en esa misma malla, y
+el escalado de las filas con el ajuste de BAO + CMB sin SN; a θ ≤ 1 la cota la fija la parte de larga correlación del núcleo,
+que es la sensible a esos detalles, y a θ ≥ 3 la parte local, donde las dos implementaciones coinciden. No se ha descompuesto
+más; ninguna cifra ya calculada cambia por esto.
+
 ## Lectura
 
 - **La marginal exacta coincide con la lineal analítica.** Con el mismo A, la corrección ln(Z_ex/Z_lin) en las celdas de
