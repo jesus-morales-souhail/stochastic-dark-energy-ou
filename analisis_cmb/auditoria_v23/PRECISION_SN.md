@@ -13,6 +13,10 @@ Exploración: no cambia `results/`, `figures/` ni ningún paper; **no cambia la 
 esto va al lado. Script `precision_sn.py`; salidas `precision_sn.{json,txt}` y `precision_sn_chi2.npz` (χ²_min de cada
 realización, celda vieja y nueva, y combinación). Tiempo: 2 min (las 15 celdas nuevas, 91 s).
 
+
+> Corrección documental (2026-11-12): las cotas lineales analíticas de `EXACTO_SN.md` citadas aquí (0.298 / 0.178 / 0.119 en θ = 1 / 3 / 10 y 0.567 en θ = 0.3) estaban
+> referidas a un máximo recortado en σ_X ≤ 0.05; con el máximo global son 0.282 / 0.177 / 0.119 y 0.502 (`maximos_globales.json`). Las cifras de esta nota no se recalculan.
+
 ## Montaje
 
 El de `exacto_sn.py` sin cambios, mismas semillas por celda. Añadido:

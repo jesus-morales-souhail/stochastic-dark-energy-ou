@@ -12,6 +12,10 @@ Exploración: no cambia `results/`, `figures/` ni ningún paper; **no cambia las
 `PRECISION_SN.md`**. Script `convergencia_sn.py`; salidas `convergencia_sn.{json,txt}` y `convergencia_sn_chi2.npz`
 (χ²_min de los 20000 caminos de cada celda). Tiempo: 10 min las 44 celdas (16 procesos) y 2 min el análisis.
 
+
+> Corrección documental (2026-11-12): las cotas lineales analíticas de `EXACTO_SN.md` citadas aquí (0.298 / 0.178 / 0.119 en θ = 1 / 3 / 10 y 0.567 en θ = 0.3) estaban
+> referidas a un máximo recortado en σ_X ≤ 0.05; con el máximo global son 0.282 / 0.177 / 0.119 y 0.502 (`maximos_globales.json`). Las cifras de esta nota no se recalculan.
+
 ## Montaje
 
 El de `precision_sn.py` sin cambios: solo BAO + θ* + ω_m + SN (χ²_obs = 1406.327), los cinco θ, N = 20000 caminos por

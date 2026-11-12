@@ -56,6 +56,25 @@ Descartes: ninguno con θ ≤ 0.3 ni con σ_X ≤ 0.2; empiezan en θ = 10 a σ_
 y al 14 % en (θ = 3, 0.7). Todas las cotas quedan por debajo de la primera celda con descartes, salvo θ = 10, donde 0.19 está
 justo bajo la celda 0.3 (0.9 %); contar los descartes como fallo no mueve ningún número.
 
+
+**Cotas lineales con el máximo global (corrección documental, 2026-11-12).** Las columnas "lineal marg." de las dos tablas anteriores
+están referidas a un máximo recortado en σ_X ≤ 0.05 (variante Λ de `CMB_FONDO.md`); estas son las correctas:
+
+| θ | BAO + CMB: lineal −1.92 / −1.35 global (sustituye a) | exacta/lineal global | BAO solo: lineal −1.92 / −1.35 global (sustituye a) | exacta/lineal global |
+|---|---|---|---|---|
+| 0.1 | sin cota / sin cota (sust. sin cota / sin cota) | — | sin cota / sin cota (sust. sin cota / sin cota) | — |
+| 0.3 | 0.867 / 0.736 (sust. sin cota / sin cota) | — | 0.818 / 0.669 (sust. 0.890 / 0.740 (-8.1 %)) | — |
+| 1 | 0.495 / 0.421 (sust. 0.624 / 0.547 (-20.6 %)) | 0.86 | 0.456 / 0.374 (sust. 0.482 / 0.399 (-5.3 %)) | 1.03 |
+| 3 | 0.327 / 0.279 (sust. 0.378 / 0.329 (-13.5 %)) | 0.87 | 0.283 / 0.233 (sust. 0.289 / 0.240 (-2.3 %)) | 0.99 |
+| 10 | 0.254 / 0.217 (sust. 0.269 / 0.232 (-5.6 %)) | 0.76 | 0.203 / 0.169 (sust. 0.204 / 0.170 (-0.5 %)) | 0.97 |
+
+**Por qué cambian:** `perfil_fondo.bound` mide la caída de 1.92 (o 1.35) desde el máximo de la verosimilitud sobre su malla de σ_X, que llega solo a 0.05; en las combinaciones con tensión el máximo está más allá de 0.05, y la cota medida desde ese máximo recortado sale más floja de lo debido. Descubierto en `MARGINAL_GUIADA.md`; recálculo en `maximos_globales.py` → `maximos_globales.json` (los valores históricos se reproducen antes con el máximo recortado). Sin CMB, o donde el máximo está en σ_X → 0 o dentro de la malla, nada cambia. Las cotas del 5 % no dependen de ningún máximo y no cambian.
+
+**Qué cambia en la lectura y en la predicción:** la exacta queda a ×1.14–1.32 de la lineal con el CMB (antes ×1.3–1.5 escrito como
+0.68–0.76 en la columna exacta/lineal) y a 0.97–1.03 sin él; la predicción "a menos de un factor 1.5 de la lineal" pasa de "cumplida, en el borde
+(0.62/0.43 = 1.46)" a cumplida con margen (0.495/0.427 = 1.16). El punto de la lectura "la lineal se aflojaba con el CMB" sigue en pie en menor
+grado: con el máximo global la lineal con CMB es 0.495 frente a 0.456 sin él (θ = 1), mientras la exacta se estrecha (0.43 frente a 0.47).
+
 **Lectura.**
 - Con BAO solo la cota exacta y la lineal marginalizada coinciden al 3 %: la linealización y la marginalización gaussiana
   del fondo son buenas aquí, y la cota es la misma 0.47 / 0.28 / 0.20 (θ = 1 / 3 / 10) de `VERIFICACION.md` y
@@ -74,7 +93,7 @@ justo bajo la celda 0.3 (0.9 %); contar los descartes como fallo no mueve ningú
 ## Predicción: qué se cumplió
 
 - Cota exacta en θ = 1 entre 0.2 y 0.5: **cumplida** (0.43).
-- A menos de un factor 1.5 de la lineal: **cumplida, en el borde** (0.62/0.43 = 1.46).
+- A menos de un factor 1.5 de la lineal: **cumplida, en el borde** (0.62/0.43 = 1.46). [Con la lineal de máximo global, 0.495/0.427 = 1.16: cumplida con margen.]
 - En θ ≤ 0.3 ninguna cota por debajo de 0.7: **cumplida** (P = 5.4 % y 14 % en σ_X = 0.7 para θ = 0.3 y 0.1).
 
 Número para la v3.0 (convenio B, cota exacta): DESI DR2 + ω_m y θ* de Planck dejan pasar al 5 % un temblor OU de

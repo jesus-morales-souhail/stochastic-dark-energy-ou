@@ -149,8 +149,25 @@ desaparece en los techos nuevos de θ ≥ 1.
 | 3 | 0.131 / 0.147 / 0.103 / 1.11 | 0.139 / 0.145 / 0.123 / 1.04 | 0.113 / 0.178 / 0.154 / 1.57 |
 | 10 | 0.082 / 0.092 / 0.066 / 1.12 | 0.089 / 0.104 / 0.090 / 1.17 | 0.081 / 0.119 / 0.101 / 1.48 |
 
-- SN solas y BAO + SN: la lineal queda a ×1.04–1.39 de la exacta (siempre más floja).
-- BAO + θ* + ω_m + SN: ×1.48–1.84 (y sin cota lineal en θ = 0.1, exacta 0.48). Es lo mismo que en `EXACTO.md` con el CMB
+
+**Cotas lineales con el máximo global (corrección documental, 2026-11-12).** Las cifras de la tabla anterior marcadas aquí como
+sustituidas están referidas a un máximo recortado en σ_X ≤ 0.05; estas son las correctas:
+
+| θ | SN solas: −1.92 / −1.35 | BAO + SN: −1.92 / −1.35 (sustituida → global) | BAO + θ* + ω_m + SN: −1.92 / −1.35 (sustituida → global) | exacta (5 %) / lineal global: SN, BAO + SN, BAO + CMB + SN |
+|---|---|---|---|---|
+| 0.1 | 0.772 / 0.540 (igual) | 0.703 / 0.591 (sustituye a 0.833 / 0.725 (-15.6 %)) | 0.864 / 0.754 (sustituye a sin cota / 0.917) | 1.21, 1.18, 1.81 |
+| 0.3 | 0.447 / 0.312 (igual) | 0.409 / 0.344 (sustituye a 0.447 / 0.384 (-8.6 %)) | 0.502 / 0.438 (sustituye a 0.567 / 0.505 (-11.4 %)) | 1.19, 1.16, 1.63 |
+| 1 | 0.246 / 0.172 (igual) | 0.230 / 0.194 (sustituye a 0.233 / 0.197 (-1.3 %)) | 0.282 / 0.246 (sustituye a 0.298 / 0.263 (-5.3 %)) | 1.24, 1.20, 1.63 |
+| 3 | 0.147 / 0.103 (igual) | 0.145 / 0.123 (igual) | 0.177 / 0.154 (igual) | 1.11, 1.04, 1.57 |
+| 10 | 0.092 / 0.066 (igual) | 0.104 / 0.090 (igual) | 0.119 / 0.101 (igual) | 1.12, 1.17, 1.48 |
+
+**Por qué cambian:** `perfil_fondo.bound` mide la caída de 1.92 (o 1.35) desde el máximo de la verosimilitud sobre su malla de σ_X, que llega solo a 0.05; en las combinaciones con tensión el máximo está más allá de 0.05, y la cota medida desde ese máximo recortado sale más floja de lo debido. Descubierto en `MARGINAL_GUIADA.md`; recálculo en `maximos_globales.py` → `maximos_globales.json` (los valores históricos se reproducen antes con el máximo recortado). Sin CMB, o donde el máximo está en σ_X → 0 o dentro de la malla, nada cambia. Las cotas del 5 % no dependen de ningún máximo y no cambian.
+
+**Qué cambia en la lectura y en la predicción:** el cociente lineal/exacta (5 %) pasa a ×1.04–1.24 sin CMB (antes ×1.04–1.39) y a ×1.48–1.81 con el CMB comprimido (antes ×1.48–1.84; en θ = 0.1 ahora hay cota lineal, 0.864, y el cociente es 1.82). El veredicto de la
+predicción "la lineal marginalizada a menos de un factor 1.5 de la exacta" no cambia: cumplida sin CMB, no cumplida con él.
+
+- SN solas y BAO + SN: la lineal queda a ×1.04–1.39 de la exacta (siempre más floja). [Con el máximo global: ×1.04–1.20; ver la tabla corregida.]
+- BAO + θ* + ω_m + SN: ×1.48–1.84 (y sin cota lineal en θ = 0.1, exacta 0.48). [Con el máximo global: ×1.48–1.82, con cota lineal en θ = 0.1; ver la tabla corregida.] Es lo mismo que en `EXACTO.md` con el CMB
   comprimido: el perfil lineal tiene el máximo en σ_X > 0 (absorbe en promedio la tensión DESI–Planck) y la cota se mide desde
   ahí; la exacta cuenta realizaciones concretas y no tiene ese sesgo.
 
@@ -166,7 +183,7 @@ desaparece en los techos nuevos de θ ≥ 1.
 - **Con z_HD > 0.023 la cota se afloja menos de un 30 % en θ = 1 y más de un 30 % en θ = 10: no se cumplió en el sentido.**
   No se afloja en ningún θ: se estrecha un 5 % (θ = 1), 12 % (θ = 3) y 7 % (θ = 10).
 - **La lineal marginalizada (−1.92) a menos de un factor 1.5 de la exacta: cumplida para SN solas y BAO + SN** (1.04–1.39);
-  **no para BAO + θ* + ω_m + SN** (1.48 en θ = 10, 1.57–1.84 en θ ≤ 3, sin cota en θ = 0.1).
+  **no para BAO + θ* + ω_m + SN** (1.48 en θ = 10, 1.57–1.84 en θ ≤ 3, sin cota en θ = 0.1). [Con las lineales de máximo global: sin CMB ×1.04–1.20 y con CMB ×1.48–1.82; mismo veredicto.]
 
 **Número para la v3.0 (convenio B, cota exacta, 5 %):** DESI DR2 + ω_m y θ* de Planck + Pantheon+ dejan pasar un temblor OU
 de σ_X < 0.17 (θ = 1), 0.11 (θ = 3), 0.081 (θ = 10), 0.31 (θ = 0.3) y 0.48 (θ = 0.1); las supernovas son lo que más acota, por

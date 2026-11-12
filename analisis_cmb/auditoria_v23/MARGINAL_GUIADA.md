@@ -219,7 +219,7 @@ cita, y si se corrigen esas columnas, es decisión aparte.
 - **ESS mayor que el 10 % de N en las celdas de las cotas (θ = 1, 3, 10): no se cumplió.** Es el 3.7 %, 4.3 %, 4.6 % (187, 213, 229 de 5000);
   en θ = 0.3, el 19 %. Muy por encima del 1 %, pero por debajo del 10 %.
 - **|ln(Z_ex/Z_lin)| < 0.5 en las celdas de las cotas lineales: cumplida** (+0.04, +0.21, +0.14, +0.01).
-- **Cota exacta a menos del 15 % de la lineal analítica (0.298 / 0.178 / 0.119): cumplida** (-4 %, -0 %, -2 %).
+- **Cota exacta a menos del 15 % de la lineal analítica (0.298 / 0.178 / 0.119): cumplida** [también frente a las lineales de máximo global 0.282 / 0.177 / 0.119: +1.6 %, 0 %, −2.5 %] (-4 %, -0 %, -2 %).
 - **Cota exacta entre 1.4 y 1.9 veces la del 5 % (0.170 / 0.102 / 0.073): cumplida** (×1.69, 1.73, 1.59).
 
 **Conclusión.** La verosimilitud marginal exacta de la combinación BAO + θ* + ω_m + SN es la lineal analítica con una corrección

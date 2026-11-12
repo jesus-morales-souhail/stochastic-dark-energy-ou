@@ -80,6 +80,40 @@ radiación no cambian nada.
 igual que el convenio principal, porque con el fondo marginalizado la diferencia entre los dos convenios, el modo X(0), está en
 el espacio de plantillas.)
 
+
+**Fondo marginalizado con el máximo global (corrección documental, 2026-11-12).** Donde una celda lleva "sust.", la cifra de las
+tablas anteriores está referida a un máximo recortado en σ_X ≤ 0.05 y queda sustituida por esta. Las filas BAO + ω_m y BAO + CMB del
+convenio principal no cambian (máximo en σ_X → 0 o en 0.004, dentro de la malla), así que las predicciones de esta nota no se ven afectadas.
+
+ΔlnL = −1.92:
+
+| datos | θ = 0.001 | 0.1 | 0.3 | 1 | 3 | 10 | θ libre |
+|---|---|---|---|---|---|---|---|
+| BAO | sin cota | sin cota | 0.807 (sust. 0.872 (-7.4 %)) | 0.452 (sust. 0.476 (-4.9 %)) | 0.281 (sust. 0.287 (-2.0 %)) | 0.202 | sin cota |
+| BAO + θ* | sin cota | sin cota | 0.641 (sust. 0.647 (-0.9 %)) | 0.372 (sust. 0.374 (-0.6 %)) | 0.242 | 0.182 | sin cota |
+| BAO + ω_m | 0.042 | 0.043 | 0.044 | 0.049 | 0.061 | 0.064 | 0.065 |
+| BAO + CMB | 0.045 | 0.046 | 0.047 | 0.052 | 0.062 | 0.063 | 0.062 |
+
+ΔlnL = −1.35:
+
+| datos | θ = 0.001 | 0.1 | 0.3 | 1 | 3 | 10 | θ libre |
+|---|---|---|---|---|---|---|---|
+| BAO | sin cota | sin cota | 0.660 (sust. 0.724 (-8.8 %)) | 0.371 (sust. 0.394 (-5.8 %)) | 0.231 (sust. 0.237 (-2.4 %)) | 0.168 (sust. 0.169 (-0.6 %)) | sin cota |
+| BAO + θ* | sin cota | 0.857 (sust. 0.862 (-0.6 %)) | 0.525 (sust. 0.531 (-1.1 %)) | 0.306 (sust. 0.308 (-0.8 %)) | 0.200 | 0.153 | sin cota |
+| BAO + ω_m | 0.023 | 0.023 | 0.023 | 0.024 | 0.025 | 0.028 | 0.029 |
+| BAO + CMB | 0.025 | 0.025 | 0.025 | 0.026 | 0.029 | 0.032 | 0.031 |
+
+Variante "Λ absorbe X(0)", marginalizado (−1.92 y −1.35):
+
+| datos | θ = 0.001 | 0.1 | 0.3 | 1 | 3 | 10 | θ libre |
+|---|---|---|---|---|---|---|---|
+| BAO + CMB, −1.92 | sin cota | sin cota | 0.867 (sust. sin cota) | 0.495 (sust. 0.624 (-20.6 %)) | 0.327 (sust. 0.378 (-13.5 %)) | 0.254 (sust. 0.269 (-5.6 %)) | sin cota |
+| BAO + CMB, −1.35 | sin cota | sin cota | 0.736 (sust. sin cota) | 0.421 (sust. 0.547 (-23.0 %)) | 0.279 (sust. 0.329 (-15.4 %)) | 0.217 (sust. 0.232 (-6.5 %)) | sin cota |
+| BAO, −1.92 | sin cota | sin cota | 0.818 (sust. 0.890 (-8.1 %)) | 0.456 (sust. 0.482 (-5.3 %)) | 0.283 (sust. 0.289 (-2.3 %)) | 0.203 (sust. 0.204 (-0.5 %)) | sin cota |
+| BAO, −1.35 | sin cota | sin cota | 0.669 (sust. 0.740 (-9.5 %)) | 0.374 (sust. 0.399 (-6.3 %)) | 0.233 (sust. 0.240 (-2.7 %)) | 0.169 (sust. 0.170 (-0.6 %)) | sin cota |
+
+**Por qué cambian:** `perfil_fondo.bound` mide la caída de 1.92 (o 1.35) desde el máximo de la verosimilitud sobre su malla de σ_X, que llega solo a 0.05; en las combinaciones con tensión el máximo está más allá de 0.05, y la cota medida desde ese máximo recortado sale más floja de lo debido. Descubierto en `MARGINAL_GUIADA.md`; recálculo en `maximos_globales.py` → `maximos_globales.json` (los valores históricos se reproducen antes con el máximo recortado). Sin CMB, o donde el máximo está en σ_X → 0 o dentro de la malla, nada cambia. Las cotas del 5 % no dependen de ningún máximo y no cambian.
+
 ## Lectura
 
 1. **El CMB sí acota lo que DESI solo no puede, y lo hace ω_m, no θ*.** Con el fondo marginalizado, BAO + ω_m da
@@ -105,7 +139,7 @@ el espacio de plantillas.)
    (−6.6 con un parámetro) y la cuesta w₀wₐ. Las cotas de la tabla se miden desde ese máximo.
 5. **Variante "Λ absorbe X(0)".** Si la parte constante del residuo es Λ (lo natural cuando ω_m es la densidad de materia
    medida por el CMB), un X constante no es observable y la cota con el fondo marginalizado es 0.62 (θ = 1), 0.38 (θ = 3),
-   0.27 (θ = 10), sin cota en θ ≤ 0.3: el CMB no añade nada (BAO solo: 0.48, 0.29, 0.20), porque lo que acota es la parte
+   0.27 (θ = 10), sin cota en θ ≤ 0.3 [sustituidas por las de máximo global: 0.495, 0.327, 0.254, y 0.867 en θ = 0.3]: el CMB no añade nada (BAO solo: 0.48, 0.29, 0.20 [máximo global: 0.456, 0.283, 0.203]), porque lo que acota es la parte
    local, y esa no la ve ni DESI ni Planck comprimido. En esta lectura, los datos de hoy no acotan un residuo estocástico
    de energía oscura por debajo de 0.2–0.6.
 
@@ -121,5 +155,5 @@ el espacio de plantillas.)
 (13 números) más ω_m y θ* de Planck 2018 dan **σ_X < 6 × 10⁻² (95 %, ΔlnL = −1.92, θ libre; 3 × 10⁻² con −1.35; 4.5–6.3 ×
 10⁻² según θ)** en la lectura en la que la parte constante del residuo desplaza la densidad de materia tardía (el convenio
 de la tabla S), siendo ω_m de Planck lo que la fija; en la lectura en la que Λ absorbe la parte constante, estos datos no
-acotan el residuo por debajo de 0.27–0.6 (θ = 10–1) y no hay cota en θ ≤ 0.3. La cota de 2.6 × 10⁻² de BAO solo con el
+acotan el residuo por debajo de 0.27–0.6 (θ = 10–1) y no hay cota en θ ≤ 0.3 [con el máximo global: 0.254–0.495 y 0.867 en θ = 0.3; sustituye a lo anterior]. La cota de 2.6 × 10⁻² de BAO solo con el
 fondo fijo no sobrevive como cota de cabecera: es el término de Occam del modo de Ω_m y desaparece al liberar el fondo.
