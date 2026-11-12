@@ -12,7 +12,8 @@ Thumbs.db
 
 # Local working material (not part of the public release)
 local_archive/
-data/
+data/*
+!data/PROCEDENCIA_DESI_DR2.md
 drafts/
 outreach/
 literature/
