@@ -126,3 +126,12 @@ DES-SN5YR y sin temblor, las dos cotas se aflojan (5 % ×1.71, marginal ×1.50) 
 universos. La hipótesis de MUESTRAS_SN ("la marginal sigue la información y el 5 % mezcla información y tensión") no se sostiene en su
 primera prueba: la marginal también se mueve con la tensión, solo algo menos que el 5 %. Y el escenario de "menos información" no se
 construyó bien (los tramos no quitan información), así que la parte de información queda sin probar.
+
+## Nota sobre "Δln L máximo" (comprobado en el código, nada recalculado)
+
+Es el mismo estadístico que la curva de la marginal: en `inyeccion.py`, `prof = self.lnz_profile(R)` (línea 175) es lnZ_lin(σ) − lnZ_lin(0)
+en la malla GRID (σ = 0 es el primer nodo; la resta está en la línea 161), `"dlnL_max": prof.max(axis=0)` (línea 177) es su máximo,
+`"excl0": prof.max(axis=0) > DROP` (línea 178, DROP = 1.92), y la cota −1.92 sale de `drop_bound(prof[:, j])` (línea 181) sobre ese mismo
+`prof`, con umbral `thr = prof[k0] − DROP` desde el máximo global (línea 207). Por tanto "Δln L máx > 1.92" equivale exactamente a que el
+intervalo de la caída de 1.92 desde el máximo global de la marginal lineal excluya σ_X = 0 (máximo buscado en los nodos de la malla, no en
+el spline; la malla llega a σ = 1.5). La versión Monte Carlo (`mc_dlnL_max`, `mc_excl0`) hace lo mismo sobre su propia curva.
