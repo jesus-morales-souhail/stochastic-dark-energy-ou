@@ -1,0 +1,4222 @@
+{
+ "rows": [
+  {
+   "file": "results/profile_sigma_x/profile_sigma_x.json",
+   "quantity": "sigma_X 95 % (theta free)",
+   "grid": "sigma 1e-6..5e-2 (48), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge of its range",
+   "historical": 0.0263282756994459,
+   "recomputed": {
+    "ext1": 0.026439525495473248,
+    "ext2": 0.02644065283048131
+   },
+   "note": "theta at the bound = 1e-3 (lower edge); extending theta: 0.02633 -> 0.02644 (+0.42 %) -> 0.02644 (+0.43 %); theta->0 supremum 0.02644; max at sigma = 1e-6 where theta is flat (theta_best = 20 there is irrelevant)"
+  },
+  {
+   "file": "results/desi_dr2_real_bao/desi_dr2_real_bao.json",
+   "quantity": "sigma_X_95_profile_upper_approx (old grid node)",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02175257993422772,
+   "recomputed": {
+    "ext1": 0.026439525495473248,
+    "ext2": 0.02644065283048131
+   },
+   "note": "same likelihood as profile_sigma_x; same theta extension"
+  },
+  {
+   "file": "analisis_cmb/everpresent/resultados/profile_desi_everpresent.json",
+   "quantity": "T0_ou_theta_profiled upper95_refined",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.0263282756994459,
+   "recomputed": {
+    "ext1": 0.026439525495473248,
+    "ext2": 0.02644065283048131
+   },
+   "note": "same likelihood as profile_sigma_x; same theta extension"
+  },
+  {
+   "file": "analisis_cmb/reloj/perfil_reloj.json",
+   "quantity": "clock a_ln_a: sigma_X 95 % (theta free)",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.0263282756994459,
+   "recomputed": {
+    "ext1": 0.026439525495473248,
+    "ext2": 0.02644065283048131
+   },
+   "note": "base reproduces 0.02633; ext changes +0.43 %"
+  },
+  {
+   "file": "analisis_cmb/reloj/perfil_reloj.json",
+   "quantity": "clock b_cosmic_time: sigma_X 95 % (theta free)",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.026391459303728097,
+   "recomputed": {
+    "ext1": 0.026440169351654715,
+    "ext2": 0.026440659270268403
+   },
+   "note": "base reproduces 0.02639; ext changes +0.19 %"
+  },
+  {
+   "file": "analisis_cmb/reloj/perfil_reloj.json",
+   "quantity": "clock c_conformal_time: sigma_X 95 % (theta free)",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02632274678713574,
+   "recomputed": {
+    "ext1": 0.026439468766048205,
+    "ext2": 0.026440652263039054
+   },
+   "note": "base reproduces 0.02632; ext changes +0.45 %"
+  },
+  {
+   "file": "analisis_cmb/reloj/perfil_reloj.json",
+   "quantity": "clock d_redshift: sigma_X 95 % (theta free)",
+   "grid": "sigma 1e-6..5e-2, theta (1e-3, 20)",
+   "max_at": "sigma = 1e-6",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02616287471874775,
+   "recomputed": {
+    "ext1": 0.026437793089342118,
+    "ext2": 0.02644063549819182
+   },
+   "note": "base reproduces 0.02616; ext changes +1.06 %"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.0263282756994459,
+   "recomputed": {
+    "base (1e-3, 20)": 0.026328275699446086,
+    "ext1 (1e-5, 200)": 0.026439525495473317,
+    "ext2 (1e-7, 2000)": 0.02644065283048112
+   },
+   "note": "theta free: base 0.026328275699446086 -> ext1 0.026439525495473317 -> ext2 0.02644065283048112"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02632827603847809,
+   "recomputed": {
+    "global_max": 0.02632827603847807
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.021013279538898068,
+   "recomputed": {
+    "global_max": 0.021013279538898068
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.017661160278092287
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.014442867473168204,
+   "recomputed": {
+    "global_max": 0.0144428674731681
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.012872315375342284
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012901736390088722,
+   "recomputed": {
+    "global_max": 0.012901736390088722
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02633115611426577,
+   "recomputed": {
+    "base (1e-3, 20)": 0.02633115611426577,
+    "ext1 (1e-5, 200)": 0.026439426999087835,
+    "ext2 (1e-7, 2000)": 0.02644052544708822
+   },
+   "note": "theta free: base 0.02633115611426577 -> ext1 0.026439426999087835 -> ext2 0.02644052544708822"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.026331156457579583,
+   "recomputed": {
+    "global_max": 0.026331156457579583
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.021294578458195754,
+   "recomputed": {
+    "global_max": 0.021294578458196177
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.018118481052076033
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.014999800502226953,
+   "recomputed": {
+    "global_max": 0.014999800502226615
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.013399049364440734
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.013274682872823778,
+   "recomputed": {
+    "global_max": 0.01327468287282377
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "base (1e-3, 20)": null,
+    "ext1 (1e-5, 200)": null,
+    "ext2 (1e-7, 2000)": null
+   },
+   "note": "theta free: base None -> ext1 None -> ext2 None"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.1397713301839342,
+   "recomputed": {
+    "global_max": 0.1397713301839467
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.08142634290141111
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0461089060338088,
+   "recomputed": {
+    "global_max": 0.04610890603380875
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.02951226105836344
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_fondo.json",
+   "quantity": "c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02204016822107931,
+   "recomputed": {
+    "global_max": 0.02204016822107932
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.023046960120132635,
+   "recomputed": {
+    "base (1e-3, 20)": 0.023046960120132635,
+    "ext1 (1e-5, 200)": 0.02315133581892691,
+    "ext2 (1e-7, 2000)": 0.02315239543221778
+   },
+   "note": "theta free: base 0.023046960120132635 -> ext1 0.02315133581892691 -> ext2 0.02315239543221778"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023046960468017963,
+   "recomputed": {
+    "global_max": 0.023046960468017963
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01832977537429725,
+   "recomputed": {
+    "global_max": 0.01832977537429725
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "a_fixed theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.015484022605809233
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012802726670422992,
+   "recomputed": {
+    "global_max": 0.012802726670422992
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.011552735026125667
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.011598923316319773,
+   "recomputed": {
+    "global_max": 0.011598923316319773
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02304852053452651,
+   "recomputed": {
+    "base (1e-3, 20)": 0.02304852053452651,
+    "ext1 (1e-5, 200)": 0.023153317488662912,
+    "ext2 (1e-7, 2000)": 0.02315438300550139
+   },
+   "note": "theta free: base 0.02304852053452651 -> ext1 0.023153317488662912 -> ext2 0.02315438300550139"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023048520885115054,
+   "recomputed": {
+    "global_max": 0.023048520885115054
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018494547279175193,
+   "recomputed": {
+    "global_max": 0.018494547279175193
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "b_profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.015802846125991536
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.013252620958094714,
+   "recomputed": {
+    "global_max": 0.013252620958094714
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.012023053871620169
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0119450590287133,
+   "recomputed": {
+    "global_max": 0.0119450590287133
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "base (1e-3, 20)": null,
+    "ext1 (1e-5, 200)": null,
+    "ext2 (1e-7, 2000)": null
+   },
+   "note": "theta free: base None -> ext1 None -> ext2 None"
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.11205241964398137,
+   "recomputed": {
+    "global_max": 0.11205241964398605
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "c_marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.06558773642150872
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.037737150757732596,
+   "recomputed": {
+    "global_max": 0.037737150757732596
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json (+ cuesta bounds_13)",
+   "quantity": "c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": "n/a",
+   "recomputed": {
+    "global_max": 0.02493685721388062
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/fondo/perfil_13.json",
+   "quantity": "c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1 for the crossing), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01925441366093774,
+   "recomputed": {
+    "global_max": 0.01925441366093774
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02632827603847807,
+   "recomputed": {
+    "global_max": 0.02632827603847807
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.021013279538898068,
+   "recomputed": {
+    "global_max": 0.021013279538898068
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0144428674731681,
+   "recomputed": {
+    "global_max": 0.0144428674731681
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012872315375342284,
+   "recomputed": {
+    "global_max": 0.012872315375342284
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012901736390088722,
+   "recomputed": {
+    "global_max": 0.012901736390088722
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.026328275699446086,
+   "recomputed": {
+    "global_max": 0.026328275699446086
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.026331156457579583,
+   "recomputed": {
+    "global_max": 0.026331156457579583
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.021294578458196177,
+   "recomputed": {
+    "global_max": 0.021294578458196177
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.014999800502226615,
+   "recomputed": {
+    "global_max": 0.014999800502226615
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.013399049364440734,
+   "recomputed": {
+    "global_max": 0.013399049364440734
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01327468287282377,
+   "recomputed": {
+    "global_max": 0.01327468287282377
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02633115611426577,
+   "recomputed": {
+    "global_max": 0.02633115611426577
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.13977133018393442,
+   "recomputed": {
+    "global_max": 0.1397713301839467
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.04610890603380875,
+   "recomputed": {
+    "global_max": 0.04610890603380875
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02951226105836344,
+   "recomputed": {
+    "global_max": 0.02951226105836344
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02204016822107932,
+   "recomputed": {
+    "global_max": 0.02204016822107932
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha local c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.026449037060677107,
+   "recomputed": {
+    "global_max": 0.026449037060677107
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.025521463346255022,
+   "recomputed": {
+    "global_max": 0.025521463346255022
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02153620986110212,
+   "recomputed": {
+    "global_max": 0.02153620986110212
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.019239101447596708,
+   "recomputed": {
+    "global_max": 0.019239101447596708
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018550248077667145,
+   "recomputed": {
+    "global_max": 0.018550248077667145
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.026449037060677107,
+   "recomputed": {
+    "global_max": 0.026449037060677107
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.026449727448712212,
+   "recomputed": {
+    "global_max": 0.026449727448712212
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.025532561645852058,
+   "recomputed": {
+    "global_max": 0.025532561645852058
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02160656242163663,
+   "recomputed": {
+    "global_max": 0.02160656242163663
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.019327379765138333,
+   "recomputed": {
+    "global_max": 0.019327379765138333
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01857498565673458,
+   "recomputed": {
+    "global_max": 0.01857498565673458
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.026449727448712212,
+   "recomputed": {
+    "global_max": 0.026449727448712212
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.251",
+   "class": "interior",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0998",
+   "class": "interior",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0397",
+   "class": "interior",
+   "historical": 0.4966942624252738,
+   "recomputed": {
+    "global_max": 0.4966942624278513
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0316",
+   "class": "interior",
+   "historical": 0.31849460971893256,
+   "recomputed": {
+    "global_max": 0.3184946097183735
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0316",
+   "class": "interior",
+   "historical": 0.24409344387438528,
+   "recomputed": {
+    "global_max": 0.2440934438716143
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "7alpha full c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0397",
+   "class": "interior; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023046960468017963,
+   "recomputed": {
+    "global_max": 0.023046960468017963
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01832977537429725,
+   "recomputed": {
+    "global_max": 0.01832977537429725
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012802726670422992,
+   "recomputed": {
+    "global_max": 0.012802726670422992
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.011552735026125667,
+   "recomputed": {
+    "global_max": 0.011552735026125667
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.011598923316319773,
+   "recomputed": {
+    "global_max": 0.011598923316319773
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.023046960120132635,
+   "recomputed": {
+    "global_max": 0.023046960120132635
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023048520885115054,
+   "recomputed": {
+    "global_max": 0.023048520885115054
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018494547279175193,
+   "recomputed": {
+    "global_max": 0.018494547279175193
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.013252620958094714,
+   "recomputed": {
+    "global_max": 0.013252620958094714
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.012023053871620169,
+   "recomputed": {
+    "global_max": 0.012023053871620169
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0119450590287133,
+   "recomputed": {
+    "global_max": 0.0119450590287133
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02304852053452651,
+   "recomputed": {
+    "global_max": 0.02304852053452651
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.11205241964398137,
+   "recomputed": {
+    "global_max": 0.11205241964398605
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.037737150757732596,
+   "recomputed": {
+    "global_max": 0.037737150757732596
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02493685721388062,
+   "recomputed": {
+    "global_max": 0.02493685721388062
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01925441366093774,
+   "recomputed": {
+    "global_max": 0.01925441366093774
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 local c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023143141697735785,
+   "recomputed": {
+    "global_max": 0.023143141697735785
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.022339953176598377,
+   "recomputed": {
+    "global_max": 0.022339953176598377
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.019146946077515176,
+   "recomputed": {
+    "global_max": 0.019146946077515176
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.017700603175735782,
+   "recomputed": {
+    "global_max": 0.017700603175735782
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018022698088942114,
+   "recomputed": {
+    "global_max": 0.018022698088942114
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full a_fixed theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.023143141697735785,
+   "recomputed": {
+    "global_max": 0.023143141697735785
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02314523978352037,
+   "recomputed": {
+    "global_max": 0.02314523978352037
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02235800921540384,
+   "recomputed": {
+    "global_max": 0.02235800921540384
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01934033448825433,
+   "recomputed": {
+    "global_max": 0.01934033448825433
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0180502207600734,
+   "recomputed": {
+    "global_max": 0.0180502207600734
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018237098677002402,
+   "recomputed": {
+    "global_max": 0.018237098677002402
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full b_profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02314523978352037,
+   "recomputed": {
+    "global_max": 0.02314523978352037
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.584",
+   "class": "interior",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.316",
+   "class": "interior",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.108",
+   "class": "interior",
+   "historical": 0.4750709754632464,
+   "recomputed": {
+    "global_max": 0.4522373904698735
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0734",
+   "class": "interior",
+   "historical": 0.28658770786967747,
+   "recomputed": {
+    "global_max": 0.28087738509818566
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0583",
+   "class": "interior",
+   "historical": 0.2032150101038346,
+   "recomputed": {
+    "global_max": 0.20225204849663156
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/verificacion.json",
+   "quantity": "13 full c_marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.063",
+   "class": "interior; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "global_max": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/sn/perfil_sn.json",
+   "quantity": "free_theta sigma_95 (Omega_m profiled)",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0100",
+   "class": "interior (lnL +0.026); theta at the bound = 1e-3 (lower edge)",
+   "historical": 0.11665459397138025,
+   "recomputed": {
+    "ext1": 0.11320766367920475,
+    "ext2": 0.11320802099718252
+   },
+   "note": "base reproduces 0.1167; the stored extension profile decreases monotonically beyond 0.05 (max interior)"
+  },
+  {
+   "file": "analisis_cmb/sn/perfil_sn.json",
+   "quantity": "fixed theta = 0.001: sigma_95",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1.99e-06",
+   "class": "sigma->0",
+   "historical": 0.11984607169791962,
+   "recomputed": null,
+   "note": "stored extension profile decreases monotonically beyond 0.05"
+  },
+  {
+   "file": "analisis_cmb/sn/perfil_sn.json",
+   "quantity": "fixed theta = 0.1: sigma_95",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.11860658149446043,
+   "recomputed": null,
+   "note": "stored extension profile decreases monotonically beyond 0.05"
+  },
+  {
+   "file": "analisis_cmb/sn/perfil_sn.json",
+   "quantity": "fixed theta = 1.0: sigma_95",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1.26e-06",
+   "class": "sigma->0",
+   "historical": 0.09633662245300945,
+   "recomputed": null,
+   "note": "stored extension profile decreases monotonically beyond 0.05"
+  },
+  {
+   "file": "analisis_cmb/sn/perfil_sn.json",
+   "quantity": "fixed theta = 10.0: sigma_95",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.00998",
+   "class": "interior",
+   "historical": 0.0628859333298904,
+   "recomputed": null,
+   "note": "stored extension profile decreases monotonically beyond 0.05"
+  },
+  {
+   "file": "analisis_cmb/everpresent/resultados/profile_desi_everpresent.json",
+   "quantity": "Z2_zwane_mu_free upper95_refined (alpha)",
+   "grid": "alpha 1e-6..2 (80), mu [0.1, 10]",
+   "max_at": "alpha = 1e-6",
+   "class": "sigma->0 (alpha); mu at the bound = 0.1 (lower edge of its range)",
+   "historical": 0.024071616658885908,
+   "recomputed": {
+    "ext1": 0.02612014633919946,
+    "ext2": 0.026407313356748292,
+    "ext3 [1e-4, 10]": 0.026437315418034298,
+    "ext4 [1e-5, 10]": 0.026440329244298264,
+    "mu->0": 0.026440664374007772
+   },
+   "note": "base reproduces 0.02407; converges to the rank-1 (mu -> 0) limit"
+  },
+  {
+   "file": "analisis_cmb/everpresent/resultados/profile_desi_everpresent.json",
+   "quantity": "T1_ou_theta1 upper95_refined",
+   "grid": "amp 1e-6..0.05 or 2 (Z1)",
+   "max_at": "amp = 1e-06",
+   "class": "sigma->0; nuisance interior or fixed",
+   "historical": 0.014442867473168204,
+   "recomputed": null,
+   "note": "nuisance at bound 1.0"
+  },
+  {
+   "file": "analisis_cmb/everpresent/resultados/profile_desi_everpresent.json",
+   "quantity": "T2_ou_theta_fit upper95_refined",
+   "grid": "amp 1e-6..0.05 or 2 (Z1)",
+   "max_at": "amp = 1e-06",
+   "class": "sigma->0; nuisance interior or fixed",
+   "historical": 0.01294390794243019,
+   "recomputed": null,
+   "note": "nuisance at bound 2.7197306671361585"
+  },
+  {
+   "file": "analisis_cmb/everpresent/resultados/profile_desi_everpresent.json",
+   "quantity": "Z1_zwane_mu_fixed upper95_refined",
+   "grid": "amp 1e-6..0.05 or 2 (Z1)",
+   "max_at": "amp = 1e-06",
+   "class": "sigma->0; nuisance interior or fixed",
+   "historical": 0.01848823942215161,
+   "recomputed": null,
+   "note": "nuisance at bound 0.9804"
+  },
+  {
+   "file": "analisis_cmb/escalon/escalon.json",
+   "quantity": "(A) zt_1.6|w_0.3: f_best, dchi2, 95 % upper",
+   "grid": "f in [-2, 3] step 0.05",
+   "max_at": "f = 3.000",
+   "class": "upper edge of the f grid (artificial)",
+   "historical": {
+    "f_best": 3.0,
+    "dchi2": -3.1522114708373126,
+    "hi95": 3.0
+   },
+   "recomputed": {
+    "base [-2, 3]": {
+     "f_best": 3.0,
+     "dchi2": -3.1522114708373126,
+     "hi95": 3.0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 3.85705466597058,
+     "dchi2": -3.2806949221869344,
+     "hi95": 3.0
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 3.85705466597058,
+     "dchi2": -3.2806949221869344,
+     "hi95": 9.70590372657985
+    }
+   },
+   "note": "global p-value of ESCALON.md not recomputed with the extended f range"
+  },
+  {
+   "file": "analisis_cmb/escalon/escalon.json",
+   "quantity": "(A) zt_2|w_0.3: f_best, dchi2, 95 % upper",
+   "grid": "f in [-2, 3] step 0.05",
+   "max_at": "f = 1.635",
+   "class": "interior; 95 % upper interval at the edge",
+   "historical": {
+    "f_best": 1.6350043647572672,
+    "dchi2": -0.9581719262054165,
+    "hi95": 3.0
+   },
+   "recomputed": {
+    "base [-2, 3]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 3.0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 5.531320267698628
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 5.531320267698628
+    }
+   },
+   "note": "global p-value of ESCALON.md not recomputed with the extended f range"
+  },
+  {
+   "file": "analisis_cmb/escalon/escalon.json",
+   "quantity": "(B) zt_3|w_0.05: f_best, dchi2, 95 % upper",
+   "grid": "f in [-2, 3] step 0.05",
+   "max_at": "f = 2.715",
+   "class": "interior; 95 % upper interval at the edge",
+   "historical": {
+    "f_best": 2.715405290560483,
+    "dchi2": -6.618905402585277,
+    "hi95": 3.0
+   },
+   "recomputed": {
+    "base [-2, 3]": {
+     "f_best": 2.7154192983733467,
+     "dchi2": -6.618905402497237,
+     "hi95": 3.0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 2.715419298372696,
+     "dchi2": -6.618905402497232,
+     "hi95": 4.63914082701832
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 2.715419298374172,
+     "dchi2": -6.61890540249728,
+     "hi95": 4.639140827018228
+    }
+   },
+   "note": "global p-value of ESCALON.md not recomputed with the extended f range"
+  },
+  {
+   "file": "analisis_cmb/escalon/escalon.json",
+   "quantity": "(B) zt_3|w_0.3: f_best, dchi2, 95 % upper",
+   "grid": "f in [-2, 3] step 0.05",
+   "max_at": "f = 1.914",
+   "class": "interior; 95 % upper interval at the edge",
+   "historical": {
+    "f_best": 1.913752522445605,
+    "dchi2": -6.642194467762495,
+    "hi95": 3.0
+   },
+   "recomputed": {
+    "base [-2, 3]": {
+     "f_best": 1.9137692524157037,
+     "dchi2": -6.642194467503739,
+     "hi95": 3.0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 1.9137692524159906,
+     "dchi2": -6.642194467503792,
+     "hi95": 3.3008429761142377
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 1.913769252416288,
+     "dchi2": -6.642194467503723,
+     "hi95": 3.3008429761142835
+    }
+   },
+   "note": "global p-value of ESCALON.md not recomputed with the extended f range"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.023157563063672622,
+   "recomputed": {
+    "global_max_192": 0.023157563063672622,
+    "global_max_135": 0.012784235079178027
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02237228653023889,
+   "recomputed": {
+    "global_max_192": 0.02237228653023889,
+    "global_max_135": 0.012544881579923714
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02125914828661715,
+   "recomputed": {
+    "global_max_192": 0.02125914828661715,
+    "global_max_135": 0.012152773609696303
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01936247416110229,
+   "recomputed": {
+    "global_max_192": 0.01936247416110229,
+    "global_max_135": 0.011324657947432383
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018079165278672878,
+   "recomputed": {
+    "global_max_192": 0.018079165278672878,
+    "global_max_135": 0.010533810506338451
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.018268493574167658,
+   "recomputed": {
+    "global_max_192": 0.018268493574167658,
+    "global_max_135": 0.010230050457053488
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.023157563063672622,
+   "recomputed": {
+    "global_max_192": 0.023157563063672622,
+    "global_max_135": 0.012784235079178027
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.584",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.316",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.185",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.8720144996447933,
+   "recomputed": {
+    "global_max_192": 0.8072469583587605,
+    "global_max_135": 0.660166122801409
+   },
+   "note": "change -7.4 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.108",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.475756094510471,
+   "recomputed": {
+    "global_max_192": 0.45242081387227917,
+    "global_max_135": 0.37060164138797963
+   },
+   "note": "change -4.9 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0734",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.28675025061607634,
+   "recomputed": {
+    "global_max_192": 0.280910464921692,
+    "global_max_135": 0.2313000519293013
+   },
+   "note": "change -2.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0583",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.20332856080863804,
+   "recomputed": {
+    "global_max_192": 0.20233232453153993,
+    "global_max_135": 0.1683149422914867
+   },
+   "note": "change -0.5 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.063",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.001585145969062185,
+   "recomputed": {
+    "global_max_192": 0.001585145969062185,
+    "global_max_135": 0.0008752502482988939
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0015795240110856813,
+   "recomputed": {
+    "global_max_192": 0.0015795240110856813,
+    "global_max_135": 0.0008723046324646239
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0015694814553858945,
+   "recomputed": {
+    "global_max_192": 0.0015694814553858945,
+    "global_max_135": 0.0008670238172509925
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0015442200637592542,
+   "recomputed": {
+    "global_max_192": 0.0015442200637592542,
+    "global_max_135": 0.000853603778484179
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0015111224389681036,
+   "recomputed": {
+    "global_max_192": 0.0015111224389681036,
+    "global_max_135": 0.0008355283175679281
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0014857006998826765,
+   "recomputed": {
+    "global_max_192": 0.0014857006998826765,
+    "global_max_135": 0.0008208688770320549
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.001585145969062185,
+   "recomputed": {
+    "global_max_192": 0.001585145969062185,
+    "global_max_135": 0.0008752502482988939
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.116",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": 0.8573100644831936
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0998",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.6470247207093853,
+   "recomputed": {
+    "global_max_192": 0.641398099072739,
+    "global_max_135": 0.5249337469497638
+   },
+   "note": "change -0.9 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0734",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.37431342527854006,
+   "recomputed": {
+    "global_max_192": 0.37188418239680915,
+    "global_max_135": 0.30597209883874144
+   },
+   "note": "change -0.6 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0583",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.24215830748253475,
+   "recomputed": {
+    "global_max_192": 0.24161536065241276,
+    "global_max_135": 0.20030488802744192
+   },
+   "note": "change -0.2 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.05",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.1823609556884696,
+   "recomputed": {
+    "global_max_192": 0.1823609556884862,
+    "global_max_135": 0.1526362535501413
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+theta marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.05",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02728808013842927,
+   "recomputed": {
+    "global_max_192": 0.02728808013842927,
+    "global_max_135": 0.014976824202954955
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.02607363631105654,
+   "recomputed": {
+    "global_max_192": 0.02607363631105654,
+    "global_max_135": 0.014615919983867692
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.024441695764451744,
+   "recomputed": {
+    "global_max_192": 0.024441695764451744,
+    "global_max_135": 0.014035902141285118
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.021757918019031156,
+   "recomputed": {
+    "global_max_192": 0.021757918019031156,
+    "global_max_135": 0.012835926070495302
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.01987142246531354,
+   "recomputed": {
+    "global_max_192": 0.01987142246531354,
+    "global_max_135": 0.011704173684856203
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.020533325998343278,
+   "recomputed": {
+    "global_max_192": 0.020533325998343278,
+    "global_max_135": 0.011507748154963481
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.02728808013842927,
+   "recomputed": {
+    "global_max_192": 0.02728808013842927,
+    "global_max_135": 0.014976824202954955
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.042163545221734385,
+   "recomputed": {
+    "global_max_192": 0.042163545221734385,
+    "global_max_135": 0.023301604018483867
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.042802319324936805,
+   "recomputed": {
+    "global_max_192": 0.042802319324936805,
+    "global_max_135": 0.02330013593359951
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.04414179404839621,
+   "recomputed": {
+    "global_max_192": 0.04414179404839621,
+    "global_max_135": 0.0233243767431709
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.04924381670589312,
+   "recomputed": {
+    "global_max_192": 0.04924381670589312,
+    "global_max_135": 0.02360891250954154
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.06076354869549119,
+   "recomputed": {
+    "global_max_192": 0.06076354869533094,
+    "global_max_135": 0.025092990133179085
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.06359707660936527,
+   "recomputed": {
+    "global_max_192": 0.06359707660925482,
+    "global_max_135": 0.028475819090208344
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+omega_m marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": 0.06455725318291276,
+   "recomputed": {
+    "global_max_192": 0.06455725318291282,
+    "global_max_135": 0.028532483633325095
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.04096913066424023,
+   "recomputed": {
+    "global_max_192": 0.04096913066424023,
+    "global_max_135": 0.022961885029133176
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.03626222166545295,
+   "recomputed": {
+    "global_max_192": 0.03626222166545295,
+    "global_max_135": 0.021835199466407714
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.03250071627838955,
+   "recomputed": {
+    "global_max_192": 0.03250071627838955,
+    "global_max_135": 0.020511320437016187
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.028704254212756533,
+   "recomputed": {
+    "global_max_192": 0.028704254212756533,
+    "global_max_135": 0.01875720852622241
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.027857957733943624,
+   "recomputed": {
+    "global_max_192": 0.027857957733943624,
+    "global_max_135": 0.01817212091462303
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior",
+   "historical": 0.031986772124136795,
+   "recomputed": {
+    "global_max_192": 0.031986772124136795,
+    "global_max_135": 0.01999919295114418
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00316",
+   "class": "interior; theta at lower edge",
+   "historical": 0.04096913066424023,
+   "recomputed": {
+    "global_max_192": 0.04096913066424023,
+    "global_max_135": 0.022961885029133176
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.044877339839478635,
+   "recomputed": {
+    "global_max_192": 0.044877339839478635,
+    "global_max_135": 0.025126851501711744
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.04558956427203447,
+   "recomputed": {
+    "global_max_192": 0.04558956427203447,
+    "global_max_135": 0.025229008920580893
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.04706666294544225,
+   "recomputed": {
+    "global_max_192": 0.04706666294544225,
+    "global_max_135": 0.02546051922758031
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.05240213441660267,
+   "recomputed": {
+    "global_max_192": 0.05240213441716074,
+    "global_max_135": 0.026397690934139444
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.06182343774831902,
+   "recomputed": {
+    "global_max_192": 0.06182343774828711,
+    "global_max_135": 0.028937336019360355
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior",
+   "historical": 0.0626424995846571,
+   "recomputed": {
+    "global_max_192": 0.06264249958442598,
+    "global_max_135": 0.03193136972966927
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.00397",
+   "class": "interior; theta at lower edge",
+   "historical": 0.06187867197664103,
+   "recomputed": {
+    "global_max_192": 0.06187867197664002,
+    "global_max_135": 0.030790091418270014
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": 0.5370782541977819
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.11999698402772861,
+   "recomputed": {
+    "global_max_192": 0.11999698402785573,
+    "global_max_135": 0.05468220301903611
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.0719086057116133,
+   "recomputed": {
+    "global_max_192": 0.07190860571155752,
+    "global_max_135": 0.03269178476105082
+   },
+   "note": "change -0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.04413339901675659,
+   "recomputed": {
+    "global_max_192": 0.04413339901675659,
+    "global_max_135": 0.019969936007054486
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.03189804552168414,
+   "recomputed": {
+    "global_max_192": 0.03189804552168414,
+    "global_max_135": 0.014567183212289303
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.025422367145877606,
+   "recomputed": {
+    "global_max_192": 0.025422367145877606,
+    "global_max_135": 0.012304124963024087
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 profiled theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0; theta at lower edge",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": 0.5370782541977819
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.541",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.316",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": 0.8667355593246016,
+    "global_max_135": 0.735777156087084
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.185",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.6237474484290179,
+   "recomputed": {
+    "global_max_192": 0.4954781428272305,
+    "global_max_135": 0.42107739686503065
+   },
+   "note": "change -20.6 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.116",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.3781916014962648,
+   "recomputed": {
+    "global_max_192": 0.3270916006332882,
+    "global_max_135": 0.2786356720514239
+   },
+   "note": "change -13.5 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0856",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.2694160042540215,
+   "recomputed": {
+    "global_max_192": 0.2544207308611027,
+    "global_max_135": 0.21677975991743276
+   },
+   "note": "change -5.6 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO+CMB|Lambda_absorbs_X0 marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.293",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_0.001",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 1",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.341",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.199",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.8897934161101755,
+   "recomputed": {
+    "global_max_192": 0.8179427420148502,
+    "global_max_135": 0.6693966077513351
+   },
+   "note": "change -8.1 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_1.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.116",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.482156135099001,
+   "recomputed": {
+    "global_max_192": 0.4564214891977061,
+    "global_max_135": 0.3742233614539966
+   },
+   "note": "change -5.3 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_3.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0734",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.2894595999767193,
+   "recomputed": {
+    "global_max_192": 0.2829004889926253,
+    "global_max_135": 0.23311059625893635
+   },
+   "note": "change -2.3 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_10.0",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.0583",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.20440798135279487,
+   "recomputed": {
+    "global_max_192": 0.20330560824333008,
+    "global_max_135": 0.1691798174345796
+   },
+   "note": "change -0.5 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/cmb_fondo.json",
+   "quantity": "BAO|Lambda_absorbs_X0 marginalised theta_free",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1), theta (1e-3, 20)",
+   "max_at": "sigma = 0.063",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": null,
+    "global_max_135": null
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear SN theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.772431795082351,
+   "recomputed": {
+    "global_max_192": 0.772432315931116,
+    "global_max_135": 0.5397040752251746
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear SN theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.4466830494334587,
+   "recomputed": {
+    "global_max_192": 0.4466833473485048,
+    "global_max_135": 0.3120964695724724
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear SN theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.24644405766512487,
+   "recomputed": {
+    "global_max_192": 0.24644421628835053,
+    "global_max_135": 0.17224481452396406
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear SN theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.14653586136818073,
+   "recomputed": {
+    "global_max_192": 0.14653594843583165,
+    "global_max_135": 0.10277511185214497
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear SN theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 1e-06",
+   "class": "sigma->0",
+   "historical": 0.09204627783300176,
+   "recomputed": {
+    "global_max_192": 0.09204632748985692,
+    "global_max_135": 0.06584600220166918
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+SN theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.199",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.8326904243891132,
+   "recomputed": {
+    "global_max_192": 0.7030439866026007,
+    "global_max_135": 0.5912140664743578
+   },
+   "note": "change -15.6 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+SN theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.116",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.44721773974911627,
+   "recomputed": {
+    "global_max_192": 0.40858806350112903,
+    "global_max_135": 0.343955812436792
+   },
+   "note": "change -8.6 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+SN theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.068",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.23266754915542082,
+   "recomputed": {
+    "global_max_192": 0.22971967979252017,
+    "global_max_135": 0.1940777112136142
+   },
+   "note": "change -1.3 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+SN theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.0397",
+   "class": "interior",
+   "historical": 0.14473152003559495,
+   "recomputed": {
+    "global_max_192": 0.14473152005000542,
+    "global_max_135": 0.12332333589272487
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+SN theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.0316",
+   "class": "interior",
+   "historical": 0.10426985339141273,
+   "recomputed": {
+    "global_max_192": 0.10426985340005768,
+    "global_max_135": 0.08956070272081675
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+CMB+SN theta_0.1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.341",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": null,
+   "recomputed": {
+    "global_max_192": 0.864301898223107,
+    "global_max_135": 0.7541540495549037
+   },
+   "note": ""
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+CMB+SN theta_0.3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.185",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.566548212069457,
+   "recomputed": {
+    "global_max_192": 0.5021711092111447,
+    "global_max_135": 0.4381008301025408
+   },
+   "note": "change -11.4 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+CMB+SN theta_1",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.108",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.2981850258564115,
+   "recomputed": {
+    "global_max_192": 0.28244329351004677,
+    "global_max_135": 0.24617647330740713
+   },
+   "note": "change -5.3 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+CMB+SN theta_3",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.0583",
+   "class": "upper edge of the historical max grid 0.05 (failure)",
+   "historical": 0.17784009386637048,
+   "recomputed": {
+    "global_max_192": 0.1771386191742978,
+    "global_max_135": 0.15367781524474178
+   },
+   "note": "change -0.4 %"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto_sn.json",
+   "quantity": "linear BAO+CMB+SN theta_10",
+   "grid": "sigma 1e-6..5e-2 (ext. to 1)",
+   "max_at": "sigma = 0.0316",
+   "class": "interior",
+   "historical": 0.1189704198300398,
+   "recomputed": {
+    "global_max_192": 0.11897041984960038,
+    "global_max_135": 0.10091257610579583
+   },
+   "note": "change +0.0 %"
+  },
+  {
+   "file": "analisis_cmb/fondo/fisher_diseno.json",
+   "quantity": "c_equaliser desi_real: A_95 (40 periods)",
+   "grid": "A in [0, 1] (4001)",
+   "max_at": "A_at_max <= 0.0085",
+   "class": "sigma->0 / interior near 0",
+   "historical": "A_95 max 0.085",
+   "recomputed": null,
+   "note": "no A_95 at the edge 1"
+  },
+  {
+   "file": "analisis_cmb/fondo/fisher_diseno.json",
+   "quantity": "c_equaliser desi_expected: A_95 (40 periods)",
+   "grid": "A in [0, 1] (4001)",
+   "max_at": "A_at_max <= 0.0000",
+   "class": "sigma->0 / interior near 0",
+   "historical": "A_95 max 0.066",
+   "recomputed": null,
+   "note": "no A_95 at the edge 1"
+  },
+  {
+   "file": "analisis_cmb/fondo/fisher_diseno.json",
+   "quantity": "c_equaliser survey_N20: A_95 (40 periods)",
+   "grid": "A in [0, 1] (4001)",
+   "max_at": "A_at_max <= 0.0000",
+   "class": "sigma->0 / interior near 0",
+   "historical": "A_95 max 0.087",
+   "recomputed": null,
+   "note": "no A_95 at the edge 1"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/precision_sn.json",
+   "quantity": "marginal MC bounds (4 combos x 5 theta)",
+   "grid": "sigma 0.01..0.7 (12)",
+   "max_at": "lnL max at sigma = 0 (SN) or 0.03-0.2 (others)",
+   "class": "interior / sigma->0; 'sin cota (<= 0.7)' entries are explicit (upper edge = no bound, not a max)",
+   "historical": "see table",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/convergencia_sn.json",
+   "quantity": "marginal MC bounds vs N",
+   "grid": "sigma 0.03..0.4 (0.7 for theta <= 0.3)",
+   "max_at": "lnL max at sigma = 0.03-0.4 (interior)",
+   "class": "interior",
+   "historical": "see table",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/marginal_guiada.json",
+   "quantity": "exact guided marginal bounds",
+   "grid": "sigma 0..0.4 (0.7 for theta = 0.3)",
+   "max_at": "lnZ max at sigma = 0.03-0.2 (interior)",
+   "class": "interior",
+   "historical": "see table",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "analisis_cmb/auditoria_v23/exacto.json / exacto_sn.json",
+   "quantity": "5 % bounds (P crossings)",
+   "grid": "sigma 0.05..0.7 / 0.01..0.7",
+   "max_at": "not a drop from a maximum",
+   "class": "n/a (P crossing; 'sin cota (<= 0.7)' explicit)",
+   "historical": "see tables",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "results/tachyonic_rank1/SUMMARY.json",
+   "quantity": "scan dlnL(t_c)",
+   "grid": "t_c 1e-4..1e4 (500)",
+   "max_at": "plateau dlnL = 0 for t_c >= 0.09 up to the upper edge",
+   "class": "physical edge (no growth = LCDM; amplitude -> 0); redone in VERIFICACION.md",
+   "historical": "-12.7 'representative' (not a bound)",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "results/ou_qnm_mle/ou_qnm_mle.json",
+   "quantity": "MLE (sigma_X, theta, omega_R)",
+   "grid": "ln sigma_X^2 in [-20, -1], theta >= 1e-3, omega_R [0, 10]",
+   "max_at": "sigma_X at the lower bound 4.54e-5",
+   "class": "sigma->0 (physical lower edge); theta, omega_R interior",
+   "historical": "no bound (MLE)",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "results/joint_w0wa_sigma/joint_w0wa_sigma.json",
+   "quantity": "joint fits",
+   "grid": "sigma_X free",
+   "max_at": "sigma_X = 0 at the best fit",
+   "class": "sigma->0",
+   "historical": "no bound",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "analisis_cmb/resultados/takahashi/malla/malla.json",
+   "quantity": "bound = largest sigma with p95(dchi2) < 4",
+   "grid": "sigma 1e-4..2.506e-2 (10)",
+   "max_at": "p95 < 4 on the whole grid",
+   "class": "no bound on the grid (explicit); not a drop from a maximum",
+   "historical": "none",
+   "recomputed": null,
+   "note": "none"
+  },
+  {
+   "file": "analisis_cmb/cuesta/gof.json",
+   "quantity": "GOF bound P(chi2 <= 10.27) = 5 %",
+   "grid": "sigma 0.003..0.15 (16)",
+   "max_at": "not a drop from a maximum",
+   "class": "n/a (P crossing)",
+   "historical": "see GOF.md",
+   "recomputed": null,
+   "note": "none"
+  }
+ ],
+ "details": {
+  "A_profile_sigma_x_theta_range": {
+   "base (1e-3, 20)": {
+    "bound": 0.0263282756994459,
+    "theta_at_bound": 0.001,
+    "sigma_at_max": 1e-06,
+    "theta_at_max": 20.0
+   },
+   "ext1 (1e-5, 200)": {
+    "bound": 0.026439525495473248,
+    "theta_at_bound": 1e-05,
+    "sigma_at_max": 1e-06,
+    "theta_at_max": 200.0
+   },
+   "ext2 (1e-7, 2000)": {
+    "bound": 0.02644065283048131,
+    "theta_at_bound": 1e-07,
+    "sigma_at_max": 1e-06,
+    "theta_at_max": 1999.999940542662
+   },
+   "theta->0 (1e-12)": {
+    "bound": 0.026440664580672395
+   }
+  },
+  "A_reloj": {
+   "a_ln_a": {
+    "base (1e-3, 20)": 0.0263282756994459,
+    "ext1 (1e-5, 200)": 0.026439525495473248,
+    "ext2 (1e-7, 2000)": 0.02644065283048131
+   },
+   "b_cosmic_time": {
+    "base (1e-3, 20)": 0.026391459303728097,
+    "ext1 (1e-5, 200)": 0.026440169351654715,
+    "ext2 (1e-7, 2000)": 0.026440659270268403
+   },
+   "c_conformal_time": {
+    "base (1e-3, 20)": 0.02632274678713574,
+    "ext1 (1e-5, 200)": 0.026439468766048205,
+    "ext2 (1e-7, 2000)": 0.026440652263039054
+   },
+   "d_redshift": {
+    "base (1e-3, 20)": 0.02616287471874775,
+    "ext1 (1e-5, 200)": 0.026437793089342118,
+    "ext2 (1e-7, 2000)": 0.02644063549819182
+   }
+  },
+  "B_fondo_13": {
+   "perfil_fondo (7 alpha)": {
+    "a_fixed|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.026328275699446086,
+      "bound_class": "inside the historical grid"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.026439525495473317,
+      "bound_class": "inside the historical grid"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02644065283048112,
+      "bound_class": "inside the historical grid"
+     }
+    },
+    "a_fixed|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.02632827603847807,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.021013279538898068,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.017661160278092287,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.0144428674731681,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.012872315375342284,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.012901736390088722,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02633115611426577,
+      "bound_class": "inside the historical grid"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.026439426999087835,
+      "bound_class": "inside the historical grid"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02644052544708822,
+      "bound_class": "inside the historical grid"
+     }
+    },
+    "b_profiled|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.026331156457579583,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.021294578458196177,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.018118481052076033,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.014999800502226615,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.013399049364440734,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.01327468287282377,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": null,
+      "bound_class": "none up to 1"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": null,
+      "bound_class": "none up to 1"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": null,
+      "bound_class": "none up to 1"
+     }
+    },
+    "c_marginalised|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": null,
+     "bound_class": "none up to 1"
+    },
+    "c_marginalised|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.1397713301839467,
+     "bound_class": "beyond 0.05 (extension)"
+    },
+    "c_marginalised|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.08142634290141111,
+     "bound_class": "beyond 0.05 (extension)"
+    },
+    "c_marginalised|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.04610890603380875,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.02951226105836344,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.02204016822107932,
+     "bound_class": "inside the historical grid"
+    }
+   },
+   "perfil_13 (13 numbers)": {
+    "a_fixed|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.023046960120132635,
+      "bound_class": "inside the historical grid"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02315133581892691,
+      "bound_class": "inside the historical grid"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02315239543221778,
+      "bound_class": "inside the historical grid"
+     }
+    },
+    "a_fixed|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.023046960468017963,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.01832977537429725,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.015484022605809233,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.012802726670422992,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.011552735026125667,
+     "bound_class": "inside the historical grid"
+    },
+    "a_fixed|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.011598923316319773,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02304852053452651,
+      "bound_class": "inside the historical grid"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.023153317488662912,
+      "bound_class": "inside the historical grid"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": 0.02315438300550139,
+      "bound_class": "inside the historical grid"
+     }
+    },
+    "b_profiled|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.023048520885115054,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.018494547279175193,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.015802846125991536,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.013252620958094714,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.012023053871620169,
+     "bound_class": "inside the historical grid"
+    },
+    "b_profiled|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.0119450590287133,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_free": {
+     "base (1e-3, 20)": {
+      "sigma_at_max": 1e-06,
+      "lnL_max_rel_sigma0": 0.0,
+      "max_class": "sigma->0",
+      "clipped_max_at_0.05": false,
+      "bound": null,
+      "bound_class": "none up to 1"
+     },
+     "ext1 (1e-5, 200)": {
+      "sigma_at_max": 0.4295787814412312,
+      "lnL_max_rel_sigma0": 0.0181177451380492,
+      "max_class": "interior",
+      "clipped_max_at_0.05": true,
+      "bound": null,
+      "bound_class": "none up to 1"
+     },
+     "ext2 (1e-7, 2000)": {
+      "sigma_at_max": 0.5009130066684768,
+      "lnL_max_rel_sigma0": 0.027788788315305624,
+      "max_class": "interior",
+      "clipped_max_at_0.05": true,
+      "bound": null,
+      "bound_class": "none up to 1"
+     }
+    },
+    "c_marginalised|theta_0.001": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": null,
+     "bound_class": "none up to 1"
+    },
+    "c_marginalised|theta_0.1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.11205241964398605,
+     "bound_class": "beyond 0.05 (extension)"
+    },
+    "c_marginalised|theta_0.3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.06558773642150872,
+     "bound_class": "beyond 0.05 (extension)"
+    },
+    "c_marginalised|theta_1": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.037737150757732596,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_3": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.02493685721388062,
+     "bound_class": "inside the historical grid"
+    },
+    "c_marginalised|theta_10": {
+     "sigma_at_max": 1e-06,
+     "lnL_max_rel_sigma0": 0.0,
+     "max_class": "sigma->0",
+     "clipped_max_at_0.05": false,
+     "bound": 0.01925441366093774,
+     "bound_class": "inside the historical grid"
+    }
+   }
+  },
+  "C_verificacion": {
+   "7alpha|local|a_fixed|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02632827603847807,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|a_fixed|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.021013279538898068,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|a_fixed|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.0144428674731681,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|a_fixed|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.012872315375342284,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|a_fixed|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.012901736390088722,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|a_fixed|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026328275699446086,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026331156457579583,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.021294578458196177,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.014999800502226615,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.013399049364440734,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.01327468287282377,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|b_profiled|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02633115611426577,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|c_marginalised|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "7alpha|local|c_marginalised|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.1397713301839467,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "7alpha|local|c_marginalised|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.04610890603380875,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|c_marginalised|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02951226105836344,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|c_marginalised|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02204016822107932,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|local|c_marginalised|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "7alpha|full|a_fixed|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026449037060677107,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|a_fixed|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.025521463346255022,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|a_fixed|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02153620986110212,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|a_fixed|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.019239101447596708,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|a_fixed|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.018550248077667145,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|a_fixed|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026449037060677107,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026449727448712212,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.025532561645852058,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02160656242163663,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.019327379765138333,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.01857498565673458,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|b_profiled|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.026449727448712212,
+    "bound_class": "inside the historical grid"
+   },
+   "7alpha|full|c_marginalised|theta_0.001": {
+    "sigma_at_max": 0.2509138402496535,
+    "lnL_max_rel_sigma0": 0.0004327639469998701,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "7alpha|full|c_marginalised|theta_0.1": {
+    "sigma_at_max": 0.0998177314910329,
+    "lnL_max_rel_sigma0": 0.002780474907833508,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "7alpha|full|c_marginalised|theta_1": {
+    "sigma_at_max": 0.03971841590451588,
+    "lnL_max_rel_sigma0": 0.003861180749225923,
+    "max_class": "interior",
+    "clipped_max_at_0.05": false,
+    "bound": 0.4966942624278513,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "7alpha|full|c_marginalised|theta_3": {
+    "sigma_at_max": 0.03155105123928201,
+    "lnL_max_rel_sigma0": 0.005874745116933866,
+    "max_class": "interior",
+    "clipped_max_at_0.05": false,
+    "bound": 0.3184946097183735,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "7alpha|full|c_marginalised|theta_10": {
+    "sigma_at_max": 0.03155105123928201,
+    "lnL_max_rel_sigma0": 0.013280663264460202,
+    "max_class": "interior",
+    "clipped_max_at_0.05": false,
+    "bound": 0.2440934438716143,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "7alpha|full|c_marginalised|theta_free": {
+    "sigma_at_max": 0.03971841590451588,
+    "lnL_max_rel_sigma0": 0.021804901672219046,
+    "max_class": "interior",
+    "clipped_max_at_0.05": false,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "13|local|a_fixed|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.023046960468017963,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|a_fixed|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.01832977537429725,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|a_fixed|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.012802726670422992,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|a_fixed|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.011552735026125667,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|a_fixed|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.011598923316319773,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|a_fixed|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.023046960120132635,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.023048520885115054,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.018494547279175193,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.013252620958094714,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.012023053871620169,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.0119450590287133,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|b_profiled|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02304852053452651,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|c_marginalised|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "13|local|c_marginalised|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.11205241964398605,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "13|local|c_marginalised|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.037737150757732596,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|c_marginalised|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02493685721388062,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|c_marginalised|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.01925441366093774,
+    "bound_class": "inside the historical grid"
+   },
+   "13|local|c_marginalised|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "13|full|a_fixed|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.023143141697735785,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|a_fixed|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.022339953176598377,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|a_fixed|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.019146946077515176,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|a_fixed|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.017700603175735782,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|a_fixed|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.018022698088942114,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|a_fixed|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.023143141697735785,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_0.001": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02314523978352037,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_0.1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02235800921540384,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_1": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.01934033448825433,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_3": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.0180502207600734,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_10": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.018237098677002402,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|b_profiled|theta_free": {
+    "sigma_at_max": 1e-06,
+    "lnL_max_rel_sigma0": 0.0,
+    "max_class": "sigma->0",
+    "clipped_max_at_0.05": false,
+    "bound": 0.02314523978352037,
+    "bound_class": "inside the historical grid"
+   },
+   "13|full|c_marginalised|theta_0.001": {
+    "sigma_at_max": 0.5840927231271547,
+    "lnL_max_rel_sigma0": 0.049748711953505165,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "13|full|c_marginalised|theta_0.1": {
+    "sigma_at_max": 0.31593944275926183,
+    "lnL_max_rel_sigma0": 0.3001023066952442,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": null,
+    "bound_class": "none up to 1"
+   },
+   "13|full|c_marginalised|theta_1": {
+    "sigma_at_max": 0.1077872617411859,
+    "lnL_max_rel_sigma0": 0.35361767116403087,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": 0.4522373904698735,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "13|full|c_marginalised|theta_3": {
+    "sigma_at_max": 0.07341228158189399,
+    "lnL_max_rel_sigma0": 0.4128917141759487,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": 0.28087738509818566,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "13|full|c_marginalised|theta_10": {
+    "sigma_at_max": 0.058302810602972543,
+    "lnL_max_rel_sigma0": 0.4334068262980679,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": 0.20225204849663156,
+    "bound_class": "beyond 0.05 (extension)"
+   },
+   "13|full|c_marginalised|theta_free": {
+    "sigma_at_max": 0.06295775522882861,
+    "lnL_max_rel_sigma0": 0.44719631968453655,
+    "max_class": "interior",
+    "clipped_max_at_0.05": true,
+    "bound": null,
+    "bound_class": "none up to 1"
+   }
+  },
+  "D_sn": {
+   "base (1e-3, 20)": {
+    "bound": 0.1166640074907622,
+    "lnL_max": 2290.006998447216
+   },
+   "ext1 (1e-5, 200)": {
+    "bound": 0.11320766367920475,
+    "lnL_max": 2290.03656688255
+   },
+   "ext2 (1e-7, 2000)": {
+    "bound": 0.11320802099718252,
+    "lnL_max": 2290.036566867184
+   }
+  },
+  "E_zwane_mu": {
+   "base [0.1, 10]": {
+    "bound": 0.02407161583646514,
+    "mu_at_bound": 0.10000000000000002,
+    "amp_at_max": 1e-06
+   },
+   "ext1 [0.01, 10]": {
+    "bound": 0.02612014633919946,
+    "mu_at_bound": 0.010000000000000004,
+    "amp_at_max": 1e-06
+   },
+   "ext2 [0.001, 10]": {
+    "bound": 0.026407313356748292,
+    "mu_at_bound": 0.0010000000000000002,
+    "amp_at_max": 1e-06
+   },
+   "ext [0.0001, 10]": {
+    "bound": 0.026437315418034298,
+    "mu_at_bound": 0.00010000000000000009
+   },
+   "ext [1e-05, 10]": {
+    "bound": 0.026440329244298264,
+    "mu_at_bound": 9.999999999999997e-06
+   },
+   "mu->0 (rank-1 limit)": {
+    "bound": 0.026440664374007772
+   }
+  },
+  "F_escalon": {
+   "A|zt_1.6|w_0.3": {
+    "base [-2, 3]": {
+     "f_best": 3.0,
+     "dchi2": -3.1522114708373126,
+     "hi95": 3.0,
+     "hi_flag": "borde",
+     "n_H2_le_0": 0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 3.85705466597058,
+     "dchi2": -3.2806949221869344,
+     "hi95": 3.0,
+     "hi_flag": "borde",
+     "n_H2_le_0": 0
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 3.85705466597058,
+     "dchi2": -3.2806949221869344,
+     "hi95": 9.70590372657985,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    }
+   },
+   "A|zt_2|w_0.3": {
+    "base [-2, 3]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 3.0,
+     "hi_flag": "borde",
+     "n_H2_le_0": 0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 5.531320267698628,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 1.634981381877285,
+     "dchi2": -0.9581719261580588,
+     "hi95": 5.531320267698628,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    }
+   },
+   "B|zt_3|w_0.05": {
+    "base [-2, 3]": {
+     "f_best": 2.7154192983733467,
+     "dchi2": -6.618905402497237,
+     "hi95": 3.0,
+     "hi_flag": "borde",
+     "n_H2_le_0": 0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 2.715419298372696,
+     "dchi2": -6.618905402497232,
+     "hi95": 4.63914082701832,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 2.715419298374172,
+     "dchi2": -6.61890540249728,
+     "hi95": 4.639140827018228,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    }
+   },
+   "B|zt_3|w_0.3": {
+    "base [-2, 3]": {
+     "f_best": 1.9137692524157037,
+     "dchi2": -6.642194467503739,
+     "hi95": 3.0,
+     "hi_flag": "borde",
+     "n_H2_le_0": 0
+    },
+    "ext1 [-2, 6]": {
+     "f_best": 1.9137692524159906,
+     "dchi2": -6.642194467503792,
+     "hi95": 3.3008429761142377,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    },
+    "ext2 [-2, 12]": {
+     "f_best": 1.913769252416288,
+     "dchi2": -6.642194467503723,
+     "hi95": 3.3008429761142835,
+     "hi_flag": "",
+     "n_H2_le_0": 0
+    }
+   }
+  }
+ },
+ "runtime_s": 575.5800290107727
+}
