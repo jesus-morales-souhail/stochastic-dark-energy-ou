@@ -93,16 +93,17 @@ la marginal −1.92 entre 10000 y 20000 menor del 5 %.
   del 10 al 40 % en la celda de la cota con N = 20000). Al aumentar N aparecen caminos más raros y mejores, L crece en σ_X
   grande y la cota se afloja. Es el comportamiento típico de una media de exponenciales con cola pesada: la estimación con
   N finito está sesgada hacia abajo y converge despacio.
-- **ESS:** en celdas fijas crece con N, pero no en proporción: de 2000 a 20000 (×10) sube ×1–34
-  según la celda (en las celdas de las cotas, ×5 (θ = 1), ×7 (θ = 3), ×7 (θ = 10)). Un ESS que crece
-  más despacio que N es otra señal de cola pesada: cada vez que se añaden caminos, uno nuevo se lleva una parte del peso.
+- **ESS:** en las celdas de las cotas crece casi en proporción a N: de 2000 a 20000 (×10) sube ×5 (θ = 1, celda 0.3), ×7
+  (θ = 3, celda 0.15) y ×7 (θ = 10, celda 0.1), dentro del factor 2 de ×10; en las celdas vecinas de σ_X mayor es errático
+  (×1.2–3.6, con ESS de 4–7 incluso con 20000 caminos), porque ahí un solo camino se lleva hasta el 40 % del peso. El ESS
+  absoluto en la cota sigue siendo pequeño: 5, 31 y 28 con N = 20000.
 - **Marginal frente al 5 %** con N = 20000: ×1.70, 1.91, 1.69, 1.55 (θ = 0.3, 1, 3, 10), más que el ×1.34–1.40 de N = 2000; y
   el máximo de ln L sigue en σ_X > 0 (0.15, 0.1, 0.07, 0.03) con valores +1.17, +1.14, +1.07, +0.60, estables con N.
 
 ## Predicción: qué se cumplió
 
-- **ESS ∝ N dentro de un factor 2: no se cumplió.** De 2000 a 20000 el ESS sube ×1–34 según la celda; en las celdas de
-  las cotas, ×5, 7, 7 (θ = 1, 3, 10), fuera del factor 2 salvo donde llega a ×5.
+- **ESS ∝ N dentro de un factor 2: cumplida en las celdas de las cotas** (×5 / ×7 / ×7 en θ = 1 / 3 / 10, en el borde en
+  θ = 1); no en las celdas de σ_X mayor (×1.2–3.6).
 - **Marginal −1.92 con N = 20000 a menos del 10 % de la de N = 2000 (0.230 / 0.149 / 0.105): no se cumplió** en θ = 1 y 3
   (+41 %, +16 %); **sí** en θ = 10 (+8 %).
 - **Marginal entre 1.25 y 1.45 veces el 5 %: no se cumplió** (×1.91 / 1.69 / 1.55).
