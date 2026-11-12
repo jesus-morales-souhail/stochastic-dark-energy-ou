@@ -1,0 +1,24 @@
+{
+ "source": "inyeccion.json (per_universe.A, real_check)",
+ "n_universes": 200,
+ "real_linear": {
+  "b5": 0.1559178296765389,
+  "marg": 0.2771185051376421,
+  "dlnL_max": 1.1412526549829636,
+  "tension": 2.664404969448242
+ },
+ "percentile_of_real_in_A": {
+  "b5": 0.97,
+  "marg": 0.975,
+  "dlnL_max": 0.97,
+  "tension": 0.915
+ },
+ "A_p95": {
+  "b5": 0.153013200343563,
+  "marg": 0.22921813590660686,
+  "dlnL_max": 0.8204178101879729,
+  "tension": 4.276628030717449
+ },
+ "percentile_of_exact_5pct_0.169_in_A": 0.995,
+ "percentile_of_exact_marg_0.287_in_A": 0.975
+}
