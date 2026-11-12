@@ -1336,5 +1336,12 @@
    "line": 325,
    "text": "3. **Cross-correlation (DESI galaxies × SN residuals):** an exploratory angular correlation test exists (`archive/scripts/cross_correlation_DESI.py`) but is preliminary (systematics not fully controlled; DR1 weights). It is not part of the primary claim set of this preprint."
   }
+ ],
+ "fila_SN_A": [
+  {
+   "file": "analisis_cmb/auditoria_v23/marginal_guiada.py",
+   "line": 147,
+   "text": "A[15:] = MAG * ((1 - _t)[:, None] * Wdm[_k] + _t[:, None] * Wdm[_k + 1])"
+  }
  ]
 }

@@ -129,3 +129,126 @@ El paso de sensibilidad de las tablas no hizo falta (P3 y P4 cumplidas en todo e
   2–3 %; y que nuestra z* es HS96 reescalada, así que esa comparación solo mide el factor.
 - D9 covarianza de Pantheon+: fila mayor; nuestro `load_sn` hace `reshape(n, n)` del vector leído.
 - D10 constante de ln Z: ninguna; como nosotros.
+
+## P1: la fila SN de A (12-11-2026)
+
+**Predicciones (de Claude, escritas antes de ejecutar, copiadas literales):**
+
+- P5. Nuestra A coincide con el jacobiano numérico del modelo exacto en las filas SN con error relativo < 1e-5, y mejor que la A del reproductor.
+- P6. Con la A que mejor coincida, la cota de θ = 1 cambia menos de 1e-4 relativo respecto a 0.27194769579562567.
+
+**Criterio fijado antes de mirar:** A debe ser el jacobiano exacto, en X = 0 y p₀, del mismo modelo directo que usa la verosimilitud exacta;
+gana la versión que coincida con ese jacobiano. **Criterio de convergencia:** diferencias centrales con h = 10⁻³ y h/10 = 10⁻⁴; convergido si
+en los elementos no despreciables (|A_ij| > 10⁻⁶ · máximo de la columna) la diferencia relativa entre h y h/10 es < 10⁻⁶ (o la absoluta
+< 10⁻¹² si el elemento es menor de 10⁻⁶); se usa h/10. Nada se ha cambiado: ni la cota de cabecera, ni `build_A`, ni el código del
+reproductor; todo en scripts y json nuevos (`jacobiano_sn_check.py/json`, `sensibilidad_fila_sn.py/json`).
+
+**Paso 1, cómo obtiene cada código la distancia de cada supernova:**
+- Modelo directo exacto (el de la verosimilitud exacta): `exacto_sn.py` línea 147, `mu_sn`: `np.interp(sn["uhd"], g.U, dm_u)`, es decir D̃_M
+  interpolada **linealmente en u = ln(1 + z)** entre los dos nodos que encierran u_HD, y μ = 5 log₁₀[(1 + z_hel) D̃_M] + M. `marginal_guiada.py`
+  líneas 66–67 y 85 (`exact_model`) hacen exactamente lo mismo con pesos (1 − t, t). No integra hasta cada z_SN.
+- Nuestra `build_A` (`marginal_guiada.py` líneas 130–131 y 147): calcula ∂ln D̃_M(u_k)/∂X_j en cada nodo (`Wdm`) y **interpola esa derivada**
+  entre los dos nodos: A_SN = MAG·[(1 − t) Wdm_k + t Wdm_{k+1}].
+- Reproductor (`paso2_lineal_lnZ.py` líneas 63–65; `modelo.py` 115–118 y 188): interpola ∂D̃_M (no su logaritmo) y divide por la D̃_M
+  interpolada: A_SN = MAG·[(1 − t) ∂D̃_M,k + t ∂D̃_M,k+1] / D̃_M(u_HD), que es la derivada exacta del modelo lineal a trozos.
+
+**Paso 2, misma magnitud:** las tres cosas están en ∂μ/∂X_j (magnitudes por unidad de X), sobre las mismas 1580 filas en el orden del
+fichero, en el convenio B (X entra como X − X(0); el nodo 0 se perturba moviendo todos los demás en sentido contrario) y en el mismo p₀
+(el nuestro; el del reproductor difiere en 10⁻⁹). No hizo falta ninguna conversión. La A del reproductor se tomó de su `A.npy` (solo lectura,
+carpeta ciega) y además se reconstruyó su fórmula de la línea 65 con nuestros propios arrays: las dos coinciden a 7.9e-10; sus filas 0–14 coinciden
+con las nuestras a 8.2e-09.
+
+**Paso 3, jacobiano numérico** (`jacobiano_sn_check.json`): 46 nodos (los 20 con z ≤ 2.33 de su comprobación, los que rodean a las 10 SN de
+menor z, 10 de z intermedia y 10 de mayor z, y el nodo 0). **Convergencia: 44 de 46 nodos cumplen el criterio; no converge el nodo
+86 (z = 0.1876), con diferencia relativa máxima entre h y h/10 de 1.043e-06 (un 4 % por encima del umbral 10⁻⁶) en alguno de sus 789 elementos
+no despreciables.** Por el criterio fijado se documenta y no se elige h por conveniencia: la comparación de abajo usa h/10 en todos los nodos,
+y la conclusión se sostiene en los 44 nodos convergidos por sí solos (en el nodo 86 la discrepancia de nuestra A, 1.2e-02, es cuatro órdenes mayor
+que la no convergencia).
+
+| nodo | z | elementos no despreciables | convergido (máx. dif. rel. h frente a h/10) | nuestra A: error rel. máx. / mediana | A del reproductor: máx. / mediana |
+|---|---|---|---|---|---|
+| 0 | 0.0000 | 1580 | sí (3.5e-07) | 7.9e-04 / 2.1e-06 | 3.5e-09 / 3.2e-09 |
+| 5 | 0.0100 | 1580 | sí (6.1e-07) | 2.3e-02 / 2.4e-05 | 1.1e-08 / 5.9e-09 |
+| 6 | 0.0121 | 1580 | sí (6.1e-07) | 1.6e-01 / 2.4e-05 | 1.6e-08 / 5.9e-09 |
+| 30 | 0.0618 | 1024 | sí (5.6e-07) | 3.3e-02 / 1.0e-05 | 3.7e-08 / 5.7e-09 |
+| 52 | 0.1096 | 949 | sí (5.1e-07) | 1.6e-02 / 9.1e-06 | 1.2e-08 / 5.4e-09 |
+| 82 | 0.1782 | 826 | sí (4.4e-07) | 8.2e-03 / 7.6e-06 | 1.0e-08 / 5.2e-09 |
+| 84 | 0.1829 | 812 | sí (4.7e-07) | 1.1e-02 / 7.5e-06 | 2.9e-08 / 5.0e-09 |
+| 85 | 0.1853 | 800 | sí (4.4e-07) | 8.6e-03 / 7.4e-06 | 1.3e-08 / 5.0e-09 |
+| 86 | 0.1876 | 789 | NO (1.0e-06) | 1.2e-02 / 7.2e-06 | 1.9e-06 / 5.1e-09 |
+| 87 | 0.1900 | 786 | sí (4.3e-07) | 9.7e-03 / 7.1e-06 | 1.0e-08 / 4.9e-09 |
+| 146 | 0.3364 | 404 | sí (3.1e-07) | 5.0e-03 / 4.1e-06 | 2.3e-08 / 4.5e-09 |
+| 167 | 0.3937 | 312 | sí (2.8e-07) | 2.6e-03 / 3.6e-06 | 1.2e-08 / 4.1e-09 |
+| 198 | 0.4828 | 220 | sí (3.4e-07) | 5.3e-03 / 2.9e-06 | 1.5e-07 / 4.3e-09 |
+| 200 | 0.4887 | 216 | sí (2.3e-07) | 2.2e-04 / 2.8e-06 | 1.3e-08 / 4.4e-09 |
+| 210 | 0.5158 | 196 | sí (2.1e-07) | 3.2e-03 / 2.7e-06 | 1.4e-08 / 3.8e-09 |
+| 211 | 0.5188 | 193 | sí (2.1e-07) | 2.6e-03 / 2.7e-06 | 1.7e-08 / 4.2e-09 |
+| 232 | 0.5839 | 140 | NO (1.6e-06) | 4.5e-03 / 2.1e-06 | 1.8e-06 / 4.0e-09 |
+| 234 | 0.5903 | 133 | sí (2.9e-07) | 4.3e-03 / 2.0e-06 | 1.1e-07 / 3.7e-09 |
+| 257 | 0.6651 | 93 | sí (1.6e-07) | 3.7e-03 / 1.9e-06 | 5.7e-08 / 5.5e-09 |
+| 298 | 0.8038 | 30 | sí (1.1e-07) | 2.1e-06 / 1.2e-06 | 2.1e-08 / 6.0e-09 |
+| 304 | 0.8256 | 30 | sí (1.1e-07) | 2.1e-06 / 1.2e-06 | 1.2e-08 / 5.9e-09 |
+| 310 | 0.8476 | 28 | sí (1.0e-07) | 2.1e-06 / 1.2e-06 | 2.1e-08 / 4.5e-09 |
+| 375 | 1.0999 | 20 | sí (7.0e-08) | 1.5e-06 / 8.1e-07 | 2.6e-08 / 6.5e-09 |
+| 411 | 1.2566 | 17 | sí (6.5e-08) | 1.4e-06 / 8.1e-07 | 4.0e-08 / 7.3e-09 |
+| 433 | 1.3534 | 11 | sí (6.1e-08) | 9.8e-04 / 7.2e-07 | 6.2e-08 / 2.5e-08 |
+| 434 | 1.3581 | 10 | sí (7.0e-08) | 9.7e-04 / 6.3e-07 | 3.3e-08 / 8.3e-09 |
+| 440 | 1.3865 | 9 | sí (4.4e-08) | 6.6e-05 / 7.2e-07 | 6.0e-08 / 1.3e-08 |
+| 441 | 1.3913 | 9 | sí (5.0e-08) | 1.4e-04 / 7.5e-07 | 4.3e-08 / 2.7e-08 |
+| 446 | 1.4154 | 8 | sí (3.3e-08) | 3.0e-04 / 6.2e-07 | 5.0e-08 / 6.8e-09 |
+| 447 | 1.4202 | 8 | sí (7.3e-08) | 1.8e-03 / 6.3e-07 | 9.0e-08 / 1.1e-08 |
+| 472 | 1.5392 | 7 | sí (5.1e-08) | 2.3e-04 / 5.0e-07 | 2.6e-08 / 1.4e-08 |
+| 473 | 1.5442 | 7 | sí (4.2e-08) | 5.5e-04 / 7.4e-07 | 4.3e-08 / 1.7e-08 |
+| 474 | 1.5493 | 6 | sí (6.7e-08) | 1.3e-04 / 6.6e-07 | 4.0e-08 / 2.6e-08 |
+| 486 | 1.6113 | 5 | sí (5.0e-08) | 2.3e-04 / 4.8e-07 | 3.6e-08 / 1.2e-08 |
+| 487 | 1.6165 | 5 | sí (7.0e-08) | 5.4e-04 / 5.3e-07 | 4.7e-08 / 2.0e-08 |
+| 502 | 1.6961 | 4 | sí (8.3e-08) | 2.3e-04 / 5.9e-07 | 7.0e-08 / 2.5e-08 |
+| 503 | 1.7015 | 4 | sí (5.4e-08) | 1.6e-03 / 5.6e-07 | 7.6e-08 / 2.8e-08 |
+| 507 | 1.7232 | 3 | sí (1.2e-08) | 7.4e-07 / 3.3e-07 | 1.0e-08 / 7.0e-09 |
+| 516 | 1.7727 | 3 | sí (4.7e-08) | 7.7e-07 / 3.5e-07 | 2.7e-08 / 1.1e-08 |
+| 521 | 1.8006 | 3 | sí (6.2e-08) | 1.6e-04 / 7.9e-07 | 4.4e-08 / 3.0e-08 |
+| 522 | 1.8062 | 3 | sí (2.4e-07) | 1.6e-03 / 6.8e-07 | 2.2e-07 / 6.2e-08 |
+| 524 | 1.8174 | 2 | sí (2.3e-08) | 7.1e-07 / 5.1e-07 | 3.6e-08 / 3.6e-08 |
+| 540 | 1.9090 | 2 | sí (4.2e-08) | 2.9e-04 / 1.5e-04 | 6.0e-08 / 5.5e-08 |
+| 541 | 1.9148 | 2 | sí (4.3e-08) | 9.4e-04 / 4.7e-04 | 5.6e-08 / 3.6e-08 |
+| 597 | 2.2602 | 1 | sí (6.2e-08) | 1.9e-04 / 1.9e-04 | 5.3e-08 / 5.3e-08 |
+| 598 | 2.2667 | 1 | sí (5.5e-07) | 1.2e-03 / 1.2e-03 | 5.5e-07 / 5.5e-07 |
+
+Agregado: nuestra A, error relativo máximo 0.158 (nodo 6, z = 0.0121, las SN de menor z) y mediana de medianas 1.6e-06;
+A del reproductor, máximo 1.9e-06 y mediana 6.7e-09 (su fórmula reconstruida con nuestros arrays: 1.9e-06 y 6.0e-09).
+**El jacobiano exacto del modelo directo es la A del reproductor; la nuestra no lo es en las filas SN** (interpolar la derivada del logaritmo por
+nodo no es la derivada del logaritmo del interpolado; el error es grande donde ln D̃_M cambia deprisa entre nodos, z ≲ 0.02).
+
+**Paso 4:** no aplica (el modelo directo interpola, no integra hasta cada z_SN; no hay tercera A).
+
+**Paso 5, sensibilidad** (`sensibilidad_fila_sn.json`; misma marginal, prior, malla y regla; Msig = A K Aᵀ sin simetrizar como en `positividad.py`;
+corrido con 16 hilos BLAS, que es con lo que se generó `positividad_lin.json`: con otro número de hilos ln Z cambia en 10⁻⁸ y la cota en
+≤ 6 × 10⁻⁹ por el orden de suma, lo que se comprobó antes de dar por reproducida la referencia):
+
+| σ_X | (a) nuestra A | (b) nuestra A con la fila SN del reproductor | (c) A.npy del reproductor | (b) − (a) |
+|---|---|---|---|---|
+| 0 | +0.000000000 | +0.000000000 | +0.000000000 | +0.00e+00 |
+| 0.01 | +0.129499973 | +0.129490871 | +0.129490871 | -9.10e-06 |
+| 0.03 | +0.603128482 | +0.603123330 | +0.603123330 | -5.15e-06 |
+| 0.05 | +0.872526675 | +0.872562045 | +0.872562044 | +3.54e-05 |
+| 0.07 | +1.030897522 | +1.030974806 | +1.030974804 | +7.73e-05 |
+| 0.1 | +1.139384714 | +1.139518957 | +1.139518955 | +1.34e-04 |
+| 0.15 | +0.950064525 | +0.950253031 | +0.950253030 | +1.89e-04 |
+| 0.2 | +0.400097894 | +0.400260997 | +0.400260999 | +1.63e-04 |
+| 0.3 | -1.157825499 | -1.157911909 | -1.157911902 | -8.64e-05 |
+| 0.4 | -2.817694762 | -2.818158499 | -2.818158489 | -4.64e-04 |
+
+Cotas: (a) 0.27194769579562567 (= referencia, bit a bit); (b) 0.27193635653203496 (-4.17e-05 relativo);
+(c) 0.27193635707638547 (-4.17e-05). Con (b) y (c) la malla de ln Z coincide con la del reproductor a 6.7e-09 y
+2.8e-09: **la fila SN explica toda la diferencia de P1.**
+
+**Conclusión por el criterio fijado:** gana la A del reproductor. P5: **no** (nuestro error máximo 0.158, no < 10⁻⁵, y peor que la del
+reproductor, 1.9e-06). P6: **sí** (la cota cambia -4.17e-05 relativo, 0.27195 → 0.27194). Como la ganadora no es la nuestra, no se
+corrige nada: queda anotada como errata candidata en `manuscript/ERRATAS_V3.md` (fila 129, categoría J) con el impacto medido, pendiente de
+decisión del autor. Impacto no medido: las demás cotas lineales de la auditoría (θ = 0.3, 3, 10; familias; muestras de SN; positividad;
+INYECCION) usan la misma `build_A`.
+
+**Punto a fijar en la especificación v3 (definición exacta de la fila SN de A):** ∂y_SN/∂X_j = (5/ln 10) · [(1 − t) ∂D̃_M(u_k)/∂X_j +
+t ∂D̃_M(u_{k+1})/∂X_j] / D̃_M(u_HD), con D̃_M(u_HD) = (1 − t) D̃_M(u_k) + t D̃_M(u_{k+1}), k el mayor nodo con u_k ≤ u_HD y t = (u_HD − u_k)/(u_{k+1} − u_k):
+la derivada del logaritmo de la D̃_M interpolada (la del reproductor), que es el jacobiano exacto del modelo directo. La frase actual de la
+sección 6.2 ("la derivada se interpola con los mismos pesos") se sustituye por esa fórmula.
