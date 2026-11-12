@@ -29,7 +29,7 @@ Creado el 2026-11-12; revisado el mismo día (niveles, A12/A13/A37/A38/A45/A53/A
 
 - **A10** (nivel 3, supuesto) — Residuo X(u) OU en u = ln(1+z) con ρ_DE = Ω_Λ + X(z) − X(0) (convenio B: Λ absorbe X(0)); el convenio A (X(0) libre, el de la tabla S) solo como sensibilidad — definición ← EXACTO.md (d2a7487), EXACTO_SN.md (7686a0d), CMB_FONDO.md (9504bf7).
 - **A11** (nivel 3, supuesto) — Supuestos declarados: el OU no se deriva de ninguna teoría; PPF para el CMB; conservación de ρ_DE con w efectivo; sin fluctuaciones espaciales — supuestos; sin número — notas CMB_FINAL.md (8b9621a), CMB_TECHOS.md (6587cde).
-- **A12** (nivel 2, deducido) — Las historias del posterior en el techo de θ = 1 cruzan w = −1; la magnitud de |w + 1| depende del suavizado del camino (RAPIDO.md): con gaussiana de Δ = 0.05 en ln a (θ = 1 y 3; 0.0125 en θ = 10), |w + 1| máximo mediano 1.94 (p95 3.90) — número: 1.9379 / 3.8989 ← `cmb_final.json` → cells.theta_1.faithful.abs_wp1_max.p50, .p95; Δ ← CMB_FINAL.md §Montaje — notas CMB_FINAL.md (8b9621a), RAPIDO.md (6ba39cf).
+- **A12** (nivel 2, deducido) — Todas las historias del posterior en los tres techos cruzan w = −1 (cambio de signo de dρ_DE/d ln a en 0 < z < z*) con cualquier suavizado gaussiano Δ = 0.0125–0.2 en ln a: fracción con al menos un cruce 100 % en θ = 1, 3 y 10 para todo Δ; la magnitud de |w + 1| y el número de cruces sí dependen de Δ (mediana de cruces en θ = 1: 129 / 67 / 34 / 17 / 10 para Δ = 0.0125 / 0.025 / 0.05 / 0.1 / 0.2; con Δ = 0.05, |w + 1| máximo mediano 1.94, p95 3.90) — número ← `cruces_w.json` → thetas.theta_1.per_delta.*.frac_at_least_one, .n_cross_median; `cmb_final.json` → cells.theta_1.faithful.abs_wp1_max.p50, .p95 — notas CMB_FINAL.md (8b9621a), RAPIDO.md (6ba39cf), PROPUESTA_V3 §Cierres (cruces_w.py).
 - **A13** (nivel 2, deducido) — En el techo exacto de θ = 1 (0.287) el 44.9 % de las historias del posterior lineal tiene ρ_DE ≤ 0 en algún z (8.3 % en θ = 3 en 0.177, 0 % en θ = 10 en 0.116); en el techo lineal (0.272) la fracción interpolada es 41.1 % — número: 0.4492 / 0.0828 / 0.0 ← `cmb_final.json` → prep.cells.theta_1.frac_rho_le_0_raw, …theta_3…, …theta_10…; 0.4106 ← `positividad_lin.json` → thetas.theta_1.frac_neg_at_lin_ceiling — notas CMB_FINAL.md (8b9621a), POSITIVIDAD.md v3 (33783e1).
 - **A14** (nivel 3, supuesto) — Exigir ρ_DE > 0 es un prior, no una ley: la relatividad general admite ρ_DE < 0 con H² > 0, y H² > 0 no basta para la admisibilidad física — texto fijado ← POSITIVIDAD.md, cabecera (25d7a65).
 
@@ -61,9 +61,9 @@ Creado el 2026-11-12; revisado el mismo día (niveles, A12/A13/A37/A38/A45/A53/A
 - **A32** (nivel 2, deducido) — Comprobación con la marginal exacta guiada: 0.500 / 0.287 / 0.177 / 0.116 (remuestreo 0.282–0.293 en θ = 1), con la inestabilidad de A-método — número ← `marginal_guiada.json` → thetas.*.exact_192, .exact_192_boot_p16_p84 — nota MARGINAL_GUIADA.md (dcdfc82).
 - **A33** (nivel 2, deducido) — Con positividad (ρ_DE > 0 en todo z): 0.461 / 0.263 / 0.174 / 0.116; cambio −6.3 / −3.5 / +0.8 / +0.7 % — número ← `positividad_lin.json` → thetas.*.bound_pos_lin_192, .ratio_pos_over_lin — nota POSITIVIDAD.md v3 (33783e1).
 - **A34** (nivel 2, deducido) — P_prior(ρ_DE > 0 | σ = 0.263, Ω_Λ = 0.696) = 0.732 ± 0.003 — número ← `positividad_lin.json` → prediction_3.P_prior_pos, .err_mc — nota POSITIVIDAD.md v3 (33783e1).
-- **A35** (nivel 2, deducido) — Lo que más acota son las SN: marginal lineal −1.92 con SN solas 0.246 / 0.147 / 0.092 frente a BAO solo 0.482 / 0.289 / 0.204 (θ = 1 / 3 / 10, convenio B): ×1.96 / ×1.98 / ×2.22 más estrechas; con la regla del 5 % (Apéndice A) 0.199 / 0.131 / 0.082 frente a 0.468 / 0.281 / 0.197, ×2.2–2.4 — número ← `exacto_sn.json` → linear.SN.theta_1.192, theta_3, theta_10; bounds.theta_*.SN.exact_5pct; `exacto.json` → bounds.theta_*.BAO.linear_marginalised_192, bounds.theta_*.BAO.exact_5pct — notas EXACTO_SN.md (7686a0d), EXACTO.md (d2a7487); pendiente: confirmar el máximo global de las lineales en `maximos_globales.json` (ebda524).
-- **A36** (nivel 2, deducido) — BAO + θ* + ω_m sin SN, marginal lineal −1.92, convenio B: 0.624 / 0.378 / 0.269 (θ = 1 / 3 / 10); θ → 0 sin cota — número ← `exacto.json` → bounds.theta_1.BAO+CMB.linear_marginalised_192, theta_3, theta_10, theta_0.3 (null) — nota EXACTO.md (d2a7487).
-- **A37** (nivel 2, deducido) — Sensibilidad del convenio A (X(0) libre, el de la tabla S; CMB_FONDO): con fondo marginalizado BAO + ω_m acota θ → 0 en 0.042 y θ = 1 en 0.049; BAO + θ* + ω_m 0.045 / 0.052 / 0.063 (θ → 0 / 1 / 10). En el convenio B el modo θ → 0 no se acota (`cmb_fondo.json` → fits.BAO+CMB|Lambda_absorbs_X0.marginalised.theta_0.001.192 = null) — número ← `cmb_fondo.json` → fits.BAO+omega_m.marginalised.theta_0.001.192 (0.0422), theta_1.0 (0.0492); fits.BAO+CMB.marginalised.theta_0.001.192 (0.0449), theta_1.0 (0.0524), theta_10.0 (0.0626) — nota CMB_FONDO.md (9504bf7); pendiente: máximo global ← `maximos_globales.json` → cmb_fondo (ebda524).
+- **A35** (nivel 2, deducido) — Lo que más acota son las SN: marginal lineal −1.92 con SN solas 0.246 / 0.147 / 0.092 frente a BAO solo 0.456 / 0.283 / 0.203 (θ = 1 / 3 / 10, convenio B, máximo global): ×1.85 / ×1.93 / ×2.21 más estrechas; con la regla del 5 % (Apéndice A) 0.199 / 0.131 / 0.082 frente a 0.468 / 0.281 / 0.197, ×2.1–2.4 — número ← `maximos_globales.json` → exacto_sn.SN.theta_1.192_global, theta_3, theta_10; cmb_fondo.BAO|Lambda_absorbs_X0.marginalised.theta_1.0.192_global, theta_3.0, theta_10.0; `exacto_sn.json` → bounds.theta_*.SN.exact_5pct; `exacto.json` → bounds.theta_*.BAO.exact_5pct — notas BARRIDO_MAXIMOS.md (ebda524, 838c1c9), EXACTO_SN.md (7686a0d), EXACTO.md (d2a7487).
+- **A36** (nivel 2, deducido) — BAO + θ* + ω_m sin SN, marginal lineal −1.92, convenio B, máximo global: 0.495 / 0.327 / 0.254 (θ = 1 / 3 / 10) y 0.867 en θ = 0.3; θ → 0 (0.001) sin cota — número ← `maximos_globales.json` → cmb_fondo.BAO+CMB|Lambda_absorbs_X0.marginalised.theta_1.0.192_global, theta_3.0, theta_10.0, theta_0.3, theta_0.001 (null) — notas BARRIDO_MAXIMOS.md (ebda524), EXACTO.md (d2a7487).
+- **A37** (nivel 2, deducido) — Sensibilidad del convenio A (X(0) libre, el de la tabla S; CMB_FONDO), máximo global: con fondo marginalizado BAO + ω_m acota θ → 0 en 0.042 y θ = 1 en 0.049; BAO + θ* + ω_m 0.045 / 0.052 / 0.063 (θ → 0 / 1 / 10). En el convenio B el modo θ → 0 no se acota (`maximos_globales.json` → cmb_fondo.BAO+CMB|Lambda_absorbs_X0.marginalised.theta_0.001.192_global = null) — número ← `maximos_globales.json` → cmb_fondo.BAO+omega_m.marginalised.theta_0.001.192_global, theta_1.0; cmb_fondo.BAO+CMB.marginalised.theta_0.001.192_global, theta_1.0, theta_10.0 — notas CMB_FONDO.md (9504bf7), BARRIDO_MAXIMOS.md (ebda524).
 - **A38** (nivel 2, deducido) — Familias con el mismo montaje (ℓ = 1, marginal lineal −1.92): OU 0.277, Matérn 3/2 0.737, gaussiano sin cota; núcleo triangular con prior gaussiano 0.268 — número ← `familias.json` → linear.OU|l_1.192, linear.Matern32|l_1.192, linear.Gauss|l_1.192 (null), linear.Steps|l_1.192 (la marginal lineal usa el núcleo triangular con prior gaussiano, es decir la familia StepsGauss) — nota FAMILIAS.md (0fb9ee3).
 - **A39** (nivel 2, deducido) — Los escalones reales (desfase al azar, valores independientes por tramo) no tienen cota con la regla del 5 % en ℓ ≥ 1: el suelo de P es masa del prior sin cambio sobre los datos, no los datos — número: exact_5pct = null ← `familias.json` → bounds.Steps|l_1.exact_5pct, bounds.Steps|l_3.exact_5pct, bounds.Steps|l_10.exact_5pct; fracciones del prior ← `familias_suelo_escalones.json` → by_l — notas FAMILIAS.md (0fb9ee3, e89e217).
 - **A40** (nivel 2, deducido) — No hay cifra universal de Δρ independiente del modelo: la rms de Δρ en la cota entre familias varía ×2.4–3.4 en z ≈ 0.5 y ×1.86 en z = 0.2 (5 %), ×1.18 en z = 0.1 (−1.92) — número ← `familias.json` → universality.5pct.l_0.3_1_3.ratio_vs_z, .ratio_at_z_star; universality.192.l_0.3_1_3.ratio_at_z_star — nota FAMILIAS.md (0fb9ee3).
@@ -96,7 +96,7 @@ Creado el 2026-11-12; revisado el mismo día (niveles, A12/A13/A37/A38/A45/A53/A
 
 ### 8 Discusión física (cruce de w = −1, constante que cambia de signo, sin mecanismo microfísico)
 
-- **A61** (nivel 2, deducido) — Cruce de w = −1: todas las historias admitidas en el techo de θ = 1 cruzan w = −1 (|w + 1| máximo ≥ 1.02 en las 40, con el suavizado Δ = 0.05 de A-cruce; la cifra depende de Δ, el cruce no) — número ← `cmb_final.json` → cells.theta_1.faithful.abs_wp1_max.min — nota CMB_FINAL.md (8b9621a). Cita por verificar: Vikman 2005 (no cruce en un campo escalar único).
+- **A61** (nivel 2, deducido) — Cruce de w = −1: el 100 % de las 40 historias admitidas en cada techo (θ = 1, 3, 10) cruza w = −1 al menos una vez para todo Δ entre 0.0125 y 0.2; el cruce no depende del suavizado, el número de cruces sí (mediana 10–140 de Δ = 0.2 a 0.0125) — número ← `cruces_w.json` → thetas.*.per_delta.*.frac_at_least_one, .n_cross_median — nota PROPUESTA_V3 §Cierres (cruces_w.py). Cita por verificar: Vikman 2005 (no cruce en un campo escalar único).
 - **A62** (nivel 3, supuesto) — Constante que cambia de signo: las historias con ρ_DE < 0 a z alto que el posterior admite son del tipo 'Λ con signo cambiante'; se discute con la literatura (Akarsu et al.) sin afirmar que exista — respaldo: `cmb_final.json` → prep.cells.theta_1.rho_min_over_ol_p05_p50 (−0.633, 0.048) (8b9621a).
 - **A63** (nivel 4, no se puede saber) — No hay mecanismo microfísico que produzca el OU: el modelo es fenomenológico y la amplitud acotada no se conecta con ninguna escala de la teoría — sin número.
 - **A64** (nivel 3, supuesto) — Everpresent Λ no es ese mecanismo con los datos actuales: sus dos implementaciones publicadas no ajustan BAO + condiciones CMB — respaldo: A-Everpresent (rd_real.json).
@@ -111,7 +111,7 @@ Creado el 2026-11-12; revisado el mismo día (niveles, A12/A13/A37/A38/A45/A53/A
 - **A67** (nivel 2, deducido) — Cabe bajo ΛCDM un temblor OU de hasta σ_X ≈ 0.27 (θ = 1) en la densidad de energía oscura relativa a la crítica, 0.17 (θ = 3) y 0.12 (θ = 10); la cobertura ≥ 95 % está validada por inyección solo para OU θ = 1 con Pantheon+, no para θ = 3 ni 10 — números ← A-cabecera y A-cobertura.
 - **A68** (nivel 2, deducido) — Los datos no requieren el temblor: el máximo en σ_X > 0 (+1.1 en Pantheon+, +4.9 en DES-SN5YR) es tensión absorbida que sigue a la calibración — ← A-máximos por muestra.
 - **A69** (nivel 2, deducido) — La positividad de ρ_DE cambia qué historias se admiten (hasta el 45 % del techo de θ = 1), no cuánto σ_X permiten los datos (≤ 6.3 %) — ← A-positividad.
-- **A70** (nivel 2, deducido) — Lo que fija las cotas son las SN (×2–2.2 más estrechas que BAO solo en la marginal lineal) junto con ω_m de Planck, que impide absorber el modo de fondo; el CMB completo (TT ℓ < 30, φφ, picos) no mueve las cotas — ← A-SN frente a BAO (exacto_sn.json, exacto.json), A-convenio A/B (cmb_fondo.json), A-CMB completo (cmb_final.json).
+- **A70** (nivel 2, deducido) — Lo que fija las cotas son las SN (×1.85–2.21 más estrechas que BAO solo en la marginal lineal, máximo global) junto con ω_m de Planck, que impide absorber el modo de fondo; el CMB completo (TT ℓ < 30, φφ, picos) no mueve las cotas — ← A-SN frente a BAO (exacto_sn.json, exacto.json), A-convenio A/B (cmb_fondo.json), A-CMB completo (cmb_final.json).
 
 ### Apéndice A: fe de erratas v2.2.1 → v3.0
 
@@ -134,7 +134,7 @@ La tabla se genera de la lista A1–A72 de arriba (identificador, nivel, número
 - Nivel 1 solo para datos y procedencia; todo número calculado por nosotros es nivel 2 como mínimo. Comprobación: recuento por dos caminos al final de este documento.
 - Las cifras de cabecera son de la marginal lineal −1.92; la exacta guiada solo como comprobación con su inestabilidad declarada (ESS 2 en θ = 3, 0.2); la regla del 5 % solo en el Apéndice A.
 - Convenio dicho en cada cota: convenio B por defecto; las del convenio A (tabla S) etiquetadas como sensibilidad.
-- Toda cifra de |w + 1| lleva el suavizado Δ con el que se calculó (RAPIDO.md: depende de Δ); sin Δ solo se dice que hay cruces de w = −1.
+- Toda cifra de |w + 1| y de número de cruces lleva el suavizado Δ con el que se calculó (RAPIDO.md, cruces_w.json: dependen de Δ); que hay cruces de w = −1 en todas las historias no depende de Δ (100 % para Δ = 0.0125–0.2) y puede decirse sin Δ.
 - Datos: cada fichero de entrada con URL oficial, fecha, sha256 y licencia (`data/PROCEDENCIA_DESI_DR2.md`, `datos/FUENTES.json`); nada se redistribuye sin licencia declarada.
 - Predicciones prerregistradas: cada test cita su predicción escrita antes de calcular y su resultado punto por punto (como las notas); nada se recalcula después de ver los resultados.
 
@@ -177,3 +177,28 @@ Total: 128 filas (= recuento por dos caminos de ERRATAS_V3.md). Además, C8 (Pla
 | 4 (no se puede saber) | 8 | 8 |
 | total | 72 (líneas `- **A<n>**`: 72) | 72 (por sección: 0 → 6, 1 → 3, 2 → 5, 3 → 7, 4 → 8, 5 → 19, 6 → 6, 7 → 6, 8 → 4, 9 → 2, 10 → 4, A → 2) |
 
+
+## Cierres (2026-11-12, después de la revisión)
+
+### Cruces de w = −1 frente al suavizado (predicción escrita antes de calcular)
+
+"la fracción con al menos un cruce es ≥ 90 % para todo Δ ≤ 0.1 en los tres techos; el número de cruces crece al bajar Δ"
+
+Montaje: las 40 historias del posterior por techo ya guardadas para cmb_final (θ = 1, 3, 10; mismas semillas, sin CAMB), suavizado
+gaussiano en ln a con Δ = 0.0125, 0.025, 0.05, 0.1 y 0.2; cruce de w = −1 = cambio de signo de dρ_DE/d ln a en 0 < z < z*; se guardan
+la fracción de historias con al menos un cruce y la mediana del número de cruces (`analisis_cmb/auditoria_v23/cruces_w.json`,
+script `cruces_w.py`).
+
+**Resultado** (`cruces_w.json`, `cruces_w.py`; las historias suavizadas con el Δ de cmb_final se reproducen bit a bit: diferencia máxima 0.0):
+
+| θ | fracción con ≥ 1 cruce, Δ = 0.0125 / 0.025 / 0.05 / 0.1 / 0.2 | mediana de cruces |
+|---|---|---|
+| 1 | 100 % / 100 % / 100 % / 100 % / 100 % | 129 / 67 / 34 / 17 / 10 |
+| 3 | 100 % / 100 % / 100 % / 100 % / 100 % | 128 / 66 / 36 / 18 / 10 |
+| 10 | 100 % / 100 % / 100 % / 100 % / 100 % | 140 / 74 / 43 / 21 / 12 |
+
+Predicción: cumplida en las dos partes (fracción 100 % para todo Δ, incluido 0.2; el número de cruces crece al bajar Δ, de 10–12 a 129–140). A12 y A61 reescritas con esto.
+
+### Pendientes resueltas con `maximos_globales.json` (ebda524)
+
+Las cotas lineales de `exacto.json` (BAO solo y BAO + θ* + ω_m, convenio B) y de `cmb_fondo.json` (convenio A) pasan a las de máximo global de `maximos_globales.json` → cmb_fondo.*.marginalised.theta_*.192_global y exacto_sn.*.theta_*.192_global; ninguna queda pendiente. Cambios: BAO solo 0.482 / 0.289 / 0.204 → 0.456 / 0.283 / 0.203; BAO + θ* + ω_m 0.624 / 0.378 / 0.269 → 0.495 / 0.327 / 0.254; convenio A sin cambio (0.042 / 0.049; 0.045 / 0.052 / 0.063); SN solas sin cambio.

@@ -1,0 +1,233 @@
+{
+ "deltas": [
+  0.0125,
+  0.025,
+  0.05,
+  0.1,
+  0.2
+ ],
+ "n_run": 40,
+ "seed": 20261119,
+ "definition": "crossing = sign change of d rho_DE/d ln a between consecutive grid nodes on 0 <= u <= u* (0 < z < z*), rho_DE = Omega_Lambda + Xs - Xs(0)",
+ "thetas": {
+  "theta_1": {
+   "sigma_X": 0.2874746611895008,
+   "delta_cmb_final": 0.05,
+   "n": 40,
+   "per_delta": {
+    "0.0125": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 129.0,
+     "n_cross_p16_p84": [
+      122.0,
+      134.76
+     ],
+     "n_cross_min_max": [
+      109,
+      144
+     ],
+     "abs_wp1_max_median": 5.776936032164049
+    },
+    "0.025": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 67.0,
+     "n_cross_p16_p84": [
+      61.0,
+      71.0
+     ],
+     "n_cross_min_max": [
+      56,
+      75
+     ],
+     "abs_wp1_max_median": 3.5733325863695597
+    },
+    "0.05": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 34.5,
+     "n_cross_p16_p84": [
+      30.0,
+      37.0
+     ],
+     "n_cross_min_max": [
+      22,
+      42
+     ],
+     "abs_wp1_max_median": 1.9378608579617473
+    },
+    "0.1": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 17.0,
+     "n_cross_p16_p84": [
+      14.0,
+      20.759999999999998
+     ],
+     "n_cross_min_max": [
+      11,
+      23
+     ],
+     "abs_wp1_max_median": 1.0744821119763563
+    },
+    "0.2": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 10.0,
+     "n_cross_p16_p84": [
+      7.0,
+      12.759999999999998
+     ],
+     "n_cross_min_max": [
+      5,
+      14
+     ],
+     "abs_wp1_max_median": 0.5813360596367023
+    }
+   },
+   "check_saved_max_abs_diff": 0.0
+  },
+  "theta_3": {
+   "sigma_X": 0.17731661319722544,
+   "delta_cmb_final": 0.05,
+   "n": 40,
+   "per_delta": {
+    "0.0125": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 128.5,
+     "n_cross_p16_p84": [
+      121.0,
+      137.51999999999998
+     ],
+     "n_cross_min_max": [
+      105,
+      145
+     ],
+     "abs_wp1_max_median": 4.987308218249458
+    },
+    "0.025": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 66.5,
+     "n_cross_p16_p84": [
+      61.24,
+      73.75999999999999
+     ],
+     "n_cross_min_max": [
+      54,
+      88
+     ],
+     "abs_wp1_max_median": 3.0714318980186306
+    },
+    "0.05": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 36.0,
+     "n_cross_p16_p84": [
+      30.240000000000002,
+      41.0
+     ],
+     "n_cross_min_max": [
+      28,
+      46
+     ],
+     "abs_wp1_max_median": 1.7211458734637497
+    },
+    "0.1": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 18.5,
+     "n_cross_p16_p84": [
+      16.0,
+      21.0
+     ],
+     "n_cross_min_max": [
+      12,
+      24
+     ],
+     "abs_wp1_max_median": 0.9353058250471662
+    },
+    "0.2": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 10.0,
+     "n_cross_p16_p84": [
+      8.0,
+      12.0
+     ],
+     "n_cross_min_max": [
+      6,
+      14
+     ],
+     "abs_wp1_max_median": 0.42451915971127596
+    }
+   },
+   "check_saved_max_abs_diff": 0.0
+  },
+  "theta_10": {
+   "sigma_X": 0.11620182135596123,
+   "delta_cmb_final": 0.0125,
+   "n": 40,
+   "per_delta": {
+    "0.0125": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 140.0,
+     "n_cross_p16_p84": [
+      131.24,
+      149.76
+     ],
+     "n_cross_min_max": [
+      122,
+      157
+     ],
+     "abs_wp1_max_median": 3.964507275948888
+    },
+    "0.025": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 74.5,
+     "n_cross_p16_p84": [
+      70.24,
+      80.75999999999999
+     ],
+     "n_cross_min_max": [
+      65,
+      87
+     ],
+     "abs_wp1_max_median": 2.3151985346213637
+    },
+    "0.05": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 43.0,
+     "n_cross_p16_p84": [
+      39.0,
+      46.76
+     ],
+     "n_cross_min_max": [
+      34,
+      49
+     ],
+     "abs_wp1_max_median": 1.2769496485695413
+    },
+    "0.1": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 21.0,
+     "n_cross_p16_p84": [
+      19.0,
+      24.759999999999998
+     ],
+     "n_cross_min_max": [
+      16,
+      31
+     ],
+     "abs_wp1_max_median": 0.5915924908336596
+    },
+    "0.2": {
+     "frac_at_least_one": 1.0,
+     "n_cross_median": 12.0,
+     "n_cross_p16_p84": [
+      10.0,
+      13.0
+     ],
+     "n_cross_min_max": [
+      9,
+      17
+     ],
+     "abs_wp1_max_median": 0.2603134779895768
+    }
+   },
+   "check_saved_max_abs_diff": 0.0
+  }
+ }
+}
