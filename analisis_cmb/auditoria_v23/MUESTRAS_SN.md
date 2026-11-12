@@ -245,3 +245,25 @@ una prueba de calibración (mismas supernovas, nueva calibración y covarianza),
   (líneas 79–84) y en las líneas 85–86 "# Unfortunately, to make this work in cosmosis we need to invert the inverse covariance and
   return that ... sigh ..." / `C = np.linalg.inv(inv_cov)`. `load_dovekie` hace lo mismo: C = inversa de la matriz publicada (simetrizada),
   y el ajuste usa el Cholesky de C, como en las otras muestras.
+
+### 2e. Lectura posterior (añadida el 2026-11-12; solo nota, nada recalculado)
+
+- El p-valor del χ²_min conjunto (≈ 0.999 en Pantheon+, Dovekie y DES-SN5YR) no mide tensión: con ~1600 puntos lo domina la
+  normalización de la covarianza de SN (χ²_min queda ~3σ por debajo de los gdl en las tres), no el desacuerdo con BAO + CMB. La medida
+  de tensión es la columna Δχ² de tensión de la tabla de 2b (2.7, 3.2, 8.7, 4.2), y con ella la predicción de 2b se cumple a medias: el
+  5 % sigue la tensión salvo que DES-SN5YR y Union3 se cruzan (Δχ² 8.7 > 4.2 pero 5 % ×1.53 < ×1.63), y la lineal no la sigue.
+- Lectura de Claude, como hipótesis (formulada después de ver estos resultados; se pone a prueba en `INYECCION.md`): "la marginal sigue
+  la información de los datos y la del 5 % mezcla información y tensión: DES-SN5YR tiene la misma información que Pantheon+ y más
+  tensión (solo se mueve el 5 %); Union3 tiene menos información (solo se mueve todo)". Como medida de información, el error de Ω_m con
+  SN solas de cada muestra, copiado de su artículo (`datos/FUENTES.json`):
+
+| muestra | σ(Ω_m) publicado, SN solas | fuente | Δχ² tensión | 5 % /P+ | −1.92 /P+ |
+|---|---|---|---|---|---|
+| Pantheon+ | ± 0.018 | abstract de arXiv:2202.04077 | 2.7 | 1 | 1 |
+| DES-SN5YR | ± 0.017 | abstract de arXiv:2401.02929 | 8.7 | 1.53 | 1.04 |
+| Dovekie | ± 0.015 | abstract de arXiv:2511.07517 | 3.2 | 1.12 | 0.98 |
+| Union3 | +0.028 / −0.026 | Tabla 5 de arXiv:2311.12098 | 4.2 | 1.63 | 1.39 |
+
+  Con esa medida: DES-SN5YR y Dovekie tienen tanta o más información que Pantheon+ (0.017 y 0.015 frente a 0.018) y solo se mueve el 5 %,
+  según su tensión; Union3 tiene menos (0.027) y se mueven las dos reglas. Es consistente con la hipótesis, pero son cuatro muestras y la
+  hipótesis se escribió después de verlas.
