@@ -107,3 +107,21 @@ pena: Δχ² total mediana negativa en los tres techos, p95 ≤ 0.18, máximo 0.
 bandas de lente φφ (|Δ/σ| ≤ 0.3), no en TT ℓ < 30 ni en los picos (|Δ/σ| ≤ 0.014). Con el borde arreglado las 120 historias son fieles
 en H² y el artefacto de CMB_TECHOS desaparece. Lo que sí aparece es que el techo de θ = 1 (0.287) está poblado en un 45 % por historias
 con ρ_DE ≤ 0 en algún punto (8 % en θ = 3, 0 % en θ = 10), que el CMB con PPF no puede juzgar; para ellas el test no se aplica.
+
+## Pesos exacto/lineal de las 40 historias (añadido después; `cmb_final_pesos.json`, sin recalcular CAMB)
+
+Los 40 pesos por historia no están en `cmb_final.json` (solo sus percentiles en `prep`): se leen de `cmb_final_theta_*.npz`, la salida de
+`prep` que guarda w, χ²_lin y χ²_ex de cada historia corrida, en el mismo orden `idx_run` que `runs` del json (comprobado). Los Δχ²
+totales por historia sí están en `runs`. Cuantiles ponderados: el valor donde la suma acumulada de pesos cruza 0.5 y 0.95; el máximo
+ponderado coincide con el máximo (todos los pesos son > 0).
+
+| techo | w, percentiles 16–84 | w máximo (peso del total) | ESS de las 40 | Δχ² total sin ponderar: mediana / p95 / máx | ponderado: mediana / p95 / máx |
+|---|---|---|---|---|---|
+| θ = 1 | 0.016 – 2.81 | 8.9 (19 % del total) | 11.4 | -0.15 / +0.18 / +0.76 | -0.29 / +0.10 / +0.76 |
+| θ = 3 | 0.033 – 1.35 | 16.4 (35 % del total) | 5.8 | -0.23 / +0.11 / +0.24 | -0.24 / -0.01 / +0.24 |
+| θ = 10 | 0.009 – 1.00 | 3.2 (16 % del total) | 16.1 | -0.23 / +0.03 / +0.13 | -0.22 / +0.13 / +0.13 |
+
+El ESS de las 40 es de 6–16 historias: la media ponderada la dominan unas pocas (en θ = 3 una historia lleva el 35 % del peso). Ponderar
+mueve las medianas y los p95 en menos de 0.3 y no cambia el máximo ni la lectura. Y con 40 historias sin ningún Δχ² > 4, lo que se
+puede decir es que la probabilidad de un caso así queda por debajo de ~7.5 % (regla de 3/N, N = 40), no que sea cero; ponderando por w el
+tamaño efectivo es menor y esa cota es más floja.
