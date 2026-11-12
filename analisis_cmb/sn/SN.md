@@ -18,7 +18,7 @@ Ficheros de PantheonPlusSH0ES/DataRelease, `Pantheon+_Data/4_DISTANCES_AND_COVAR
 | `Pantheon+SH0ES.dat` | 0.58 MB | `1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8` |
 | `Pantheon+SH0ES_STAT+SYS.cov` | 33.3 MB | `abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc` |
 
-Los dos pesan menos de 50 MB, así que están en git y no en `.gitignore`.
+Los dos pesan menos de 50 MB, pero desde el 2026-11-12 no se redistribuyen (el repositorio oficial PantheonPlusSH0ES/DataRelease no declara licencia): están en `.gitignore` y los baja y comprueba `auditoria_v23/descargar_datos.py` (URL y sha256 en `auditoria_v23/datos/FUENTES.json`).
 
 **Uso de los datos:**
 - `m_b_corr` con la covarianza STAT+SYS.

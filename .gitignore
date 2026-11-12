@@ -38,3 +38,13 @@ analisis_cmb/venv/
 archive/**/*.npz
 archive/**/*.npy
 exploratory/**/*.npz
+
+# SN data without an explicit redistribution licence at the official source (Pantheon+, DES-Dovekie, DES-SN5YR README):
+# removed from the repository on 2026-11-12; download and verify with analisis_cmb/auditoria_v23/descargar_datos.py
+analisis_cmb/sn/datos/Pantheon+SH0ES.dat
+analisis_cmb/sn/datos/Pantheon+SH0ES_STAT+SYS.cov
+analisis_cmb/auditoria_v23/datos/dovekie/DES-Dovekie_HD.csv
+analisis_cmb/auditoria_v23/datos/dovekie/STAT+SYS.npz
+analisis_cmb/auditoria_v23/datos/dovekie/DES-Dovekie-SN_Likelihood.py
+analisis_cmb/auditoria_v23/datos/dovekie/README.md
+analisis_cmb/auditoria_v23/datos/des_sn5yr/README.md

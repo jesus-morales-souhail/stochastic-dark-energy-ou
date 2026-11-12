@@ -22,6 +22,20 @@
    "valor": 0.352,
    "error": 0.017,
    "fuente": "abstract de arXiv:2401.02929 (Abbott et al.), flat LCDM, SN solas"
+  },
+  "licencia": {
+   "estado": "CC-BY-4.0 por el registro Zenodo del data release; ficheros de datos conservados en el repositorio",
+   "detalle": "El repositorio GitHub des-science/DES-SN5YR no tiene fichero LICENSE (API de GitHub: license = null, 2026-11-12). El data release en Zenodo (doi:10.5281/zenodo.12720778, 'DES Supernova 5YR Data Release', fichero DES-SN5YR-1.2.zip, 2024-07-11) declara licencia cc-by-4.0 y pide citar DES Collaboration 2024 (arXiv:2401.02929) y Sanchez et al. 2024 (arXiv:2406.05046). Los dos ficheros de datos usados tienen el mismo blob git en las etiquetas v1.2 y 1.3 (DES-SN5YR_HD.csv 15ea34bd5095, STAT+SYS.txt.gz d5aa174d198c; compare v1.2...1.3 solo cambia README y ficheros de pipeline), asi que son los del data release 1.2. No se ha abierto el zip de Zenodo (1.5 GB): se asume que DES-SN5YR-1.2.zip es la etiqueta v1.2 del repositorio. El README.md de 4_DISTANCES_COVMAT en 1.3 difiere del de v1.2 (blob 8712140ed2b2 frente a 0af1040bf664) y no esta cubierto por esa licencia: sacado del repositorio (git rm), lo baja descargar_datos.py.",
+   "atribucion": "DES Collaboration 2024, ApJL 973, L14 (arXiv:2401.02929); Sanchez et al. 2024, ApJ 975, 5 (arXiv:2406.05046); Vincenzi et al. 2024, ApJ 975, 86. Datos: https://doi.org/10.5281/zenodo.12720778 (CC-BY-4.0).",
+   "en_repositorio": [
+    "DES-SN5YR_HD.csv",
+    "STAT+SYS.txt.gz",
+    "FUENTE.json"
+   ],
+   "fuera_del_repositorio": [
+    "README.md"
+   ],
+   "comprobado": "2026-11-12"
   }
  },
  "dovekie": {
@@ -51,6 +65,21 @@
    "valor": 0.33,
    "error": 0.015,
    "fuente": "abstract de arXiv:2511.07517 (Popovic et al.), flat LCDM"
+  },
+  "licencia": {
+   "estado": "sin licencia declarada; ficheros sacados del repositorio",
+   "detalle": "La rama main de des-science/DES-SN5YR no tiene LICENSE (API de GitHub: license = null, 2026-11-12), el README de 4_DISTANCES_COVMAT no dice nada de condiciones de uso y no hay registro Zenodo de Dovekie (el de Zenodo, doi:10.5281/zenodo.12720778, es el release DES-SN5YR 1.2 de 2024; el README de main lo cita como 'legacy'). Los cuatro ficheros se sacan del repositorio (git rm, sin reescribir la historia) y los baja descargar_datos.py comprobando el sha256.",
+   "atribucion": "Popovic et al. 2026, MNRAS (arXiv:2511.07517).",
+   "en_repositorio": [
+    "FUENTE.json"
+   ],
+   "fuera_del_repositorio": [
+    "DES-Dovekie_HD.csv",
+    "STAT+SYS.npz",
+    "DES-Dovekie-SN_Likelihood.py",
+    "README.md"
+   ],
+   "comprobado": "2026-11-12"
   }
  },
  "union3": {
@@ -65,6 +94,10 @@
    "README.md": {
     "url": "https://raw.githubusercontent.com/rubind/union3_release/main/README.md",
     "sha256": "a6e877690ca7cc406550f723b179a71ee092bf99541202d184e4a81d20729319"
+   },
+   "LICENSE": {
+    "url": "https://raw.githubusercontent.com/rubind/union3_release/main/LICENSE",
+    "sha256": "43a299159ed9f4e780486a6c58f8a983ac4902d2c2c6fc9cc952e7f3e3d9189e"
    }
   },
   "convenio": "FITS 23x23 float64: primera fila = z de 22 nodos (0.05 ... 2.2623), primera columna = modulo de distancia por nodo, resto = covarianza inversa 22x22 (modelo 2, spline). Distancias en tramos; se usan en tramos.",
@@ -72,6 +105,19 @@
    "valor": 0.356,
    "error": "+0.028/-0.026",
    "fuente": "Tabla 5 de arXiv:2311.12098 (Rubin et al.), fila 'SNe', flat LCDM"
+  },
+  "licencia": {
+   "estado": "MIT; ficheros conservados en el repositorio con copia de LICENSE",
+   "detalle": "rubind/union3_release tiene LICENSE (MIT, Copyright (c) 2024 David Rubin); copia en datos/union3/LICENSE. El mismo release esta en Zenodo (doi:10.5281/zenodo.15825522, 'rubind/union3_release: Union3 release', licencia mit-license).",
+   "atribucion": "Rubin et al. 2023 (arXiv:2311.12098); https://github.com/rubind/union3_release (MIT).",
+   "en_repositorio": [
+    "mu_mat_union3_cosmo=2_mu.fits",
+    "README.md",
+    "LICENSE",
+    "FUENTE.json"
+   ],
+   "fuera_del_repositorio": [],
+   "comprobado": "2026-11-12"
   }
  },
  "pantheon_plus": {
@@ -80,6 +126,31 @@
    "valor": 0.334,
    "error": 0.018,
    "fuente": "abstract de arXiv:2202.04077, flat LCDM, SN solas"
+  },
+  "repositorio": "https://github.com/PantheonPlusSH0ES/DataRelease, rama main, carpeta Pantheon+_Data/4_DISTANCES_AND_COVAR",
+  "carpeta_local": "analisis_cmb/sn/datos (fuera de auditoria_v23/datos; es la referencia de exacto_sn.py y sn/perfil_sn.py)",
+  "fecha_descarga_utc": "anterior (commit 14a166d); sha256 comprobado contra GitHub el 2026-11-12T14:57Z, identico",
+  "ficheros": {
+   "Pantheon+SH0ES.dat": {
+    "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES.dat",
+    "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8"
+   },
+   "Pantheon+SH0ES_STAT+SYS.cov": {
+    "url": "https://raw.githubusercontent.com/PantheonPlusSH0ES/DataRelease/main/Pantheon%2B_Data/4_DISTANCES_AND_COVAR/Pantheon%2BSH0ES_STAT%2BSYS.cov",
+    "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc"
+   }
+  },
+  "licencia": {
+   "estado": "sin licencia declarada; ficheros sacados del repositorio",
+   "detalle": "PantheonPlusSH0ES/DataRelease no tiene LICENSE (API de GitHub: license = null, 2026-11-12); ni el README raiz ni el de 4_DISTANCES_AND_COVAR dicen nada de condiciones de uso; no hay registro Zenodo. Los dos ficheros se sacan del repositorio (git rm --cached, sin reescribir la historia; las copias locales se conservan) y los baja descargar_datos.py comprobando el sha256.",
+   "atribucion": "Brout et al. 2022, ApJ 938, 110 (arXiv:2202.04077); Scolnic et al. 2022, ApJ 938, 113.",
+   "en_repositorio": [],
+   "fuera_del_repositorio": [
+    "Pantheon+SH0ES.dat",
+    "Pantheon+SH0ES_STAT+SYS.cov"
+   ],
+   "comprobado": "2026-11-12"
   }
- }
+ },
+ "_descarga": "analisis_cmb/auditoria_v23/descargar_datos.py (python3 -I) baja los ficheros marcados fuera_del_repositorio a su carpeta y comprueba el sha256 de todos los listados."
 }

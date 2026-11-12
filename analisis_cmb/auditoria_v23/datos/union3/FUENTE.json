@@ -10,6 +10,10 @@
   "README.md": {
    "url": "https://raw.githubusercontent.com/rubind/union3_release/main/README.md",
    "sha256": "a6e877690ca7cc406550f723b179a71ee092bf99541202d184e4a81d20729319"
+  },
+  "LICENSE": {
+   "url": "https://raw.githubusercontent.com/rubind/union3_release/main/LICENSE",
+   "sha256": "43a299159ed9f4e780486a6c58f8a983ac4902d2c2c6fc9cc952e7f3e3d9189e"
   }
  },
  "convenio": "FITS 23x23 float64: primera fila = z de 22 nodos (0.05 ... 2.2623), primera columna = modulo de distancia por nodo, resto = covarianza inversa 22x22 (modelo 2, spline). Distancias en tramos; se usan en tramos.",
@@ -17,5 +21,18 @@
   "valor": 0.356,
   "error": "+0.028/-0.026",
   "fuente": "Tabla 5 de arXiv:2311.12098 (Rubin et al.), fila 'SNe', flat LCDM"
+ },
+ "licencia": {
+  "estado": "MIT; ficheros conservados en el repositorio con copia de LICENSE",
+  "detalle": "rubind/union3_release tiene LICENSE (MIT, Copyright (c) 2024 David Rubin); copia en datos/union3/LICENSE. El mismo release esta en Zenodo (doi:10.5281/zenodo.15825522, 'rubind/union3_release: Union3 release', licencia mit-license).",
+  "atribucion": "Rubin et al. 2023 (arXiv:2311.12098); https://github.com/rubind/union3_release (MIT).",
+  "en_repositorio": [
+   "mu_mat_union3_cosmo=2_mu.fits",
+   "README.md",
+   "LICENSE",
+   "FUENTE.json"
+  ],
+  "fuera_del_repositorio": [],
+  "comprobado": "2026-11-12"
  }
 }

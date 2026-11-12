@@ -163,3 +163,85 @@ Las cotas de OU y Matérn sobreviven al cambio de muestra: la escala de ℓ y lo
 (×1.0–2.0 según regla y muestra) sigue el grado de tensión de cada muestra con BAO + CMB, no la familia. La cota del gaussiano a
 ℓ = 1 no sobrevive: existe con Pantheon+ y Dovekie y no con DES-SN5YR ni Union3. La coincidencia de Δρ(0.1) se degrada de ×1.24 a
 ×1.4–1.9: no es una cifra universal al nivel de la predicción.
+
+## Cierre (sin nuevas corridas de cotas)
+
+### b. Por qué se separan las dos reglas: predicción escrita antes de calcular
+
+"El aflojamiento del 5 % ordena las muestras igual que el exceso de χ² de ΛCDM; la lineal no."
+
+### 1. Licencias de las muestras (comprobado el 2026-11-12; detalle en `datos/FUENTES.json` y en cada `FUENTE.json`)
+
+| muestra | licencia encontrada | qué se hizo |
+|---|---|---|
+| Union3 | MIT (`LICENSE` en rubind/union3_release; mismo release en Zenodo, doi:10.5281/zenodo.15825522) | se conservan los ficheros; copia de `LICENSE` en `datos/union3/` |
+| DES-SN5YR | el repositorio GitHub no tiene LICENSE; el data release en Zenodo (doi:10.5281/zenodo.12720778, DES-SN5YR-1.2.zip) es CC-BY-4.0 y pide citar DES Collaboration 2024 y Sánchez et al. 2024 | se conservan `DES-SN5YR_HD.csv` y `STAT+SYS.txt.gz`: su blob git es el mismo en las etiquetas v1.2 y 1.3 (entre ambas solo cambian README y ficheros de pipeline), así que son los del release 1.2 (no se ha abierto el zip de 1.5 GB: se asume que es la etiqueta v1.2). El `README.md` de 1.3 difiere del de v1.2 y no está cubierto: sacado del repositorio |
+| Dovekie | ninguna: rama main sin LICENSE, README sin condiciones de uso, sin registro Zenodo (el de Zenodo es el release de 2024) | los cuatro ficheros sacados del repositorio (`git rm`, sin reescribir la historia); los baja `descargar_datos.py` |
+| Pantheon+ | ninguna: PantheonPlusSH0ES/DataRelease sin LICENSE, READMEs sin condiciones de uso, sin Zenodo | `Pantheon+SH0ES.dat` y `Pantheon+SH0ES_STAT+SYS.cov` sacados del repositorio (`git rm --cached`, copias locales conservadas, en `.gitignore`); sha256 locales idénticos a los de GitHub el 2026-11-12; los baja `descargar_datos.py` a `analisis_cmb/sn/datos/` |
+
+`descargar_datos.py` (solo biblioteca estándar, `python3 -I`) baja lo que falte y comprueba el sha256 de los 12 ficheros listados en
+`datos/FUENTES.json`, incluidos los que sí están en el repositorio; `--verify` solo comprueba. Probado: borrado y descarga del README de
+Dovekie, sha256 idéntico.
+
+### 2a. ¿Queda σ_X = 0 fuera del intervalo de la caída de 1.92? (máximo de ln L relativo a σ_X = 0, `linear.*.lnZ_max_rel` del json)
+
+| muestra | Δln L máximo (8 celdas) | celdas con Δln L > 1.92 (σ_X = 0 fuera) |
+|---|---|---|
+| Pantheon+ | +0.59 … +1.50 | 0 de 8 |
+| DES-SN5YR | +4.59 … +5.35 | 8 de 8 |
+| Dovekie | +1.70 … +2.22 | 2 de 8 (Matérn ℓ = 1, +1.95; gaussiano ℓ = 1, +2.22) |
+| Union3 | +3.30 … +3.61 | 8 de 8 |
+
+Por la regla fijada arriba, esto se lee como tensión entre datos absorbida por σ_X > 0, no como detección. Con las mismas supernovas
+recalibradas (Dovekie frente a DES-SN5YR, 1718 en común) el máximo baja de +4.6 … +5.4 a +1.7 … +2.2: la preferencia sigue a la
+calibración.
+
+### 2b. Resultado (script `muestras_sn_lcdm.py`, salida `muestras_sn_lcdm.json`; evaluaciones de χ² en los ajustes ya guardados, ninguna cota nueva)
+
+ΛCDM plano (X = 0) con cada muestra más BAO + θ* + ω_m: 3 parámetros (h, ω_m, M), filas = 15 + n_SN. Se dan el χ²_min (coincide con el
+`chi2_obs` del json), su p-valor, el reparto del χ²_min entre las 15 filas y el bloque SN, y la tensión Δχ² = χ²_min(conjunto) −
+χ²_min(15 filas solas, 17.24 con 13 gdl, p = 0.19) − χ²_min(SN solas, M marginalizada), que con un parámetro compartido (Ω_m) se
+compara con χ² de 1 gdl. Aflojamiento: cociente frente a Pantheon+ de la tabla final (mediana y rango sobre las celdas con cota).
+
+| muestra | n_SN | gdl | χ²_min | χ²_min − gdl | p (χ²_min) | 15 filas / SN en el ajuste conjunto | χ²_min SN solas | Δχ² tensión | p (1 gdl) | 5 % /P+ mediana (rango) | −1.92 /P+ mediana (rango) |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| Pantheon+ | 1580 | 1592 | 1406.33 | −185.7 | 0.9997 | 17.34 / 1388.99 | 1386.40 | 2.68 | 0.101 | 1 | 1 |
+| Dovekie | 1820 | 1832 | 1651.88 | −180.1 | 0.9989 | 17.41 / 1634.46 | 1631.42 | 3.22 | 0.073 | 1.12 (1.02–1.40) | 0.98 (0.85–1.00) |
+| DES-SN5YR | 1829 | 1841 | 1666.05 | −175.0 | 0.9985 | 17.65 / 1648.40 | 1640.08 | 8.73 | 0.003 | 1.53 (1.43–1.93) | 1.04 (0.94–1.06) |
+| Union3 | 22 | 34 | 45.34 | +11.3 | 0.092 | 17.32 / 28.02 | 23.96 | 4.15 | 0.042 | 1.63 (1.62–1.95) | 1.39 (0.97–1.46) |
+
+¿Se cumple? La predicción no fijó qué es "exceso de χ²", así que se dan las dos lecturas:
+
+- Con el χ²_min y su p-valor (lo pedido): el p-valor ordena Pantheon+ > Dovekie > DES-SN5YR > Union3 y la mediana del aflojamiento del
+  5 % ordena igual (1 < 1.12 < 1.53 < 1.63); la lineal no (0.98 < 1 < 1.04 < 1.39: Dovekie queda por debajo de Pantheon+). **Cumplida**,
+  con una salvedad: en las tres muestras grandes el χ²_min queda unos 3σ por debajo de sus gdl (p = 0.9985–0.9997, como es habitual con
+  estas covarianzas) y el orden entre ellas lo marcan diferencias de 0.001 en p, no un exceso.
+- Con la tensión Δχ² (la parte del χ²_min que añade compartir Ω_m con BAO + CMB): ordena Pantheon+ (2.7) < Dovekie (3.2) < Union3 (4.2) <
+  DES-SN5YR (8.7), y el 5 % cambia DES-SN5YR y Union3 de sitio (medianas 1.53 y 1.63, rangos 1.43–1.93 y 1.62–1.95, solapados); la lineal
+  tampoco sigue ese orden. **No cumplida del todo** con esta lectura: el 5 % sigue la tensión salvo entre DES-SN5YR y Union3, que no se
+  distinguen.
+
+Por qué se separan: la regla del 5 % compara el χ²_min de cada camino con el χ²_obs de ΛCDM, y cuanto mayor es la tensión más caminos con
+σ_X > 0 bajan de ese χ²_obs (el máximo de ln L de 2a sube con la tensión: +0.6 … +1.5, +1.7 … +2.2, +3.3 … +3.6, +4.6 … +5.4), así que la
+cota se afloja; la lineal mide la caída de 1.92 desde el máximo, es decir la anchura del perfil, que casi no cambia con la posición del
+máximo (DES-SN5YR ×0.94–1.06 pese a Δχ² = 8.7).
+
+### 2c. Dovekie no es una muestra independiente
+
+DES-SN5YR y Dovekie comparten 1718 supernovas (por CID; `shared_sne.des5yr_vs_dovekie`), el 94 % de las 1829 y de las 1820: Dovekie es
+una prueba de calibración (mismas supernovas, nueva calibración y covarianza), no una muestra independiente. Lo que cambia entre ambas
+(5 % ×1.53 → ×1.12, máximo de ln L +4.6 … +5.4 → +1.7 … +2.2) mide el efecto de la calibración, no una nueva realización de los datos.
+
+### 2d. Dos decisiones de lectura
+
+- **Union3 en 22 tramos con z_hel = z.** El release oficial no publica supernovas sino distancias comprimidas: su README dice de
+  `mu_mat_union3_cosmo=2_mu.fits` "fits file containing compressed distances for Union3+UNITY1.5; the first row is redshift, the first
+  column is distance modulus, the rest of the matrix is the inverse covariance matrix" (22 nodos en z = 0.05 … 2.26). No hay tabla por
+  supernova ni redshift heliocéntrico: el factor (1 + z_hel) de cada supernova ya está dentro del ajuste UNITY que produce los nodos, así
+  que el modelo se evalúa en el z de cada nodo con z_hel = z (el término 5 log₁₀[(1 + z_hel)/(1 + z_HD)] no está definido para un nodo).
+  Con esto se reproducen Ω_m = 0.356 y χ² = 23.96 frente a 24.0 de su Tabla 5.
+- **Dovekie: se invierte el fichero de covarianza.** `DES-Dovekie-SN_Likelihood.py` (rama main, sha256 en `FUENTE.json`) dice en la línea 73
+  "# Covtot_inv is the inverse of stat+sys because it makes no sense to invert covsys", reconstruye la matriz del triángulo superior
+  (líneas 79–84) y en las líneas 85–86 "# Unfortunately, to make this work in cosmosis we need to invert the inverse covariance and
+  return that ... sigh ..." / `C = np.linalg.inv(inv_cov)`. `load_dovekie` hace lo mismo: C = inversa de la matriz publicada (simetrizada),
+  y el ajuste usa el Cholesky de C, como en las otras muestras.

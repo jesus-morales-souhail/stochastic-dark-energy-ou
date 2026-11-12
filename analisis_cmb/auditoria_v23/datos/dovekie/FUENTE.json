@@ -25,5 +25,20 @@
   "valor": 0.33,
   "error": 0.015,
   "fuente": "abstract de arXiv:2511.07517 (Popovic et al.), flat LCDM"
+ },
+ "licencia": {
+  "estado": "sin licencia declarada; ficheros sacados del repositorio",
+  "detalle": "La rama main de des-science/DES-SN5YR no tiene LICENSE (API de GitHub: license = null, 2026-11-12), el README de 4_DISTANCES_COVMAT no dice nada de condiciones de uso y no hay registro Zenodo de Dovekie (el de Zenodo, doi:10.5281/zenodo.12720778, es el release DES-SN5YR 1.2 de 2024; el README de main lo cita como 'legacy'). Los cuatro ficheros se sacan del repositorio (git rm, sin reescribir la historia) y los baja descargar_datos.py comprobando el sha256.",
+  "atribucion": "Popovic et al. 2026, MNRAS (arXiv:2511.07517).",
+  "en_repositorio": [
+   "FUENTE.json"
+  ],
+  "fuera_del_repositorio": [
+   "DES-Dovekie_HD.csv",
+   "STAT+SYS.npz",
+   "DES-Dovekie-SN_Likelihood.py",
+   "README.md"
+  ],
+  "comprobado": "2026-11-12"
  }
 }
