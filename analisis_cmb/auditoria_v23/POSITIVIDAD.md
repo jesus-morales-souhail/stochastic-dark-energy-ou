@@ -137,3 +137,81 @@ Con este método, la positividad solo se puede evaluar en θ = 3 y θ = 10, y en
 θ = 0.3), el peso truncado se concentra en muy pocas muestras (ESS < 1 % de N) y la importancia guiada por el posterior lineal no da una
 cota fiable: haría falta muestrear el posterior truncado directamente. Las dos cotas (con y sin positividad) quedan dadas donde se pueden
 dar; el error que manda en todas es el de muestreo, no el de P.
+
+## Versión 3 (lineal; `positividad_lin.py`, salida `positividad_lin.json`; declarado antes de calcular)
+
+- Hallazgo de la versión 2: la marginal exacta guiada es inestable cuando hay muestras con ρ_DE ≤ 0 (θ = 3, celda 0.2: ESS 2; cota sin
+  positividad 0.177 → 0.212 solo con otras semillas). La cifra de cabecera pasa a ser la marginal lineal analítica: es estable y es la
+  que validó INYECCION (cobertura 95.5–97.5 %). La exacta queda como comprobación, con esta inestabilidad dicha. Que una historia sea
+  positiva no garantiza que la versión lineal sea buena para ella: se comprueba aparte.
+- Método nuevo, declarado antes de ver cotas: Z_pos,lin(σ) = Z_lin(σ) · E_q[ 1(ρ_DE > 0) / P(σ, Ω_Λ) ], con q el posterior lineal
+  (Matheron, sin pesos exacto/lineal), la positividad de cada muestra evaluada con su propio Ω_Λ (sus h y ω_m), y P(σ, Ω_Λ) la
+  probabilidad de positividad del prior del camino a ese Ω_Λ (malla de Ω_Λ de la versión 2, interpolada). No se usa ninguna fracción
+  del prior agrupada sobre Ω_Λ: los priors de (h, ω_m) son planos y no se promedia sobre ellos. 5000 muestras de posterior y 20000
+  caminos de prior por nodo de Ω_Λ.
+- Las tres predicciones originales no cambian; se evalúan contra la marginal lineal sin positividad (θ = 1: 0.272).
+- Celdas: las de la versión 2. Cota: caída de 1.92 desde el máximo global de ln Z_pos,lin. Rango de la cota por bootstrap (200) sobre las
+  muestras del posterior y sobre P (remuestreo conjunto en cada réplica; también se dan los dos por separado). Comprobación de la
+  linealidad en las positivas: en la celda de la cota de θ = 1 y 3, mediana y percentiles 16–84 del cociente exacto/lineal solo entre
+  las muestras con ρ_DE > 0. Se da también la fracción del posterior lineal con ρ_DE ≤ 0 en el techo sin positividad, para compararla
+  con el 44.9 % de CMB_FINAL en θ = 1 (también del posterior lineal, en el techo exacto 0.287).
+- Condición de parada: si en alguna celda de la cota hay menos de 100 muestras positivas del posterior, se para y se informa.
+
+## Resultados de la versión 3 (`positividad_lin.py`, 105 s; `positividad_lin.json`)
+
+Mismas muestras que la versión 2 (mismas semillas): malla de Ω_Λ 0.4278–0.7756, ninguna de las 215000 muestras fuera. La cota lineal sin
+positividad reproduce la de MARGINAL_GUIADA en los cuatro θ (0.492, 0.272, 0.173, 0.115: es analítica). **Condición de parada: no saltó**
+(mínimo de muestras positivas en una celda de la cota: 1964).
+
+| θ | lineal sin positividad | lineal con positividad | cociente | fracción del posterior lineal con ρ_DE > 0 en la cota | P en la cota | rango 16–84 %, bootstrap conjunto | solo muestras | solo P |
+|---|---|---|---|---|---|---|---|---|
+| 0.3 | 0.492 | 0.461 | 0.937 (-6.3 %) | 0.448 | 0.586 ± 0.004 | 0.4590–0.4616 | 0.4592–0.4615 | 0.4601–0.4610 |
+| 1 | 0.272 | 0.263 | 0.965 (-3.5 %) | 0.621 | 0.700 ± 0.003 | 0.2619–0.2631 | 0.2620–0.2631 | 0.2623–0.2627 |
+| 3 | 0.173 | 0.174 | 1.008 (+0.8 %) | 0.896 | 0.867 ± 0.003 | 0.1739–0.1742 | 0.1740–0.1742 | 0.1740–0.1742 |
+| 10 | 0.115 | 0.116 | 1.007 (+0.7 %) | 0.997 | 0.970 ± 0.002 | 0.1159–0.1160 | 0.1159–0.1159 | 0.1159–0.1159 |
+
+Las cotas con positividad se dan con tres cifras (el rango del bootstrap está en la cuarta). Por qué sube en θ = 3 y 10 y baja en θ = 1 y
+0.3: el factor E_q[1(ρ_DE > 0)/P] compara la fracción positiva del posterior con la del prior al mismo Ω_Λ; donde los datos hacen el
+posterior más positivo que el prior (θ = 3, celda 0.2: 81.4 % frente a P = 0.778) el cociente pasa de 1 y la cota se afloja; donde lo hacen menos
+positivo (θ = 1, celda 0.3: 50.0 % frente a 0.605) la cota se estrecha. En ningún caso el efecto pasa del 7 %.
+
+**Fracción del posterior lineal con ρ_DE ≤ 0 en el techo** (interpolada en ln σ entre celdas), sin positividad: en el techo lineal y en el
+exacto de MARGINAL_GUIADA, frente al recuento de CMB_FINAL (posterior lineal muestreado directamente en el techo exacto, otras semillas):
+
+| θ | techo lineal | ρ_DE ≤ 0 | techo exacto | ρ_DE ≤ 0 (interp.) | CMB_FINAL |
+|---|---|---|---|---|---|
+| 0.3 | 0.492 | 59.6 % | 0.500 | 60.7 % | — |
+| 1 | 0.272 | 41.1 % | 0.287 | 46.1 % | 44.9 % |
+| 3 | 0.173 | 9.9 % | 0.177 | 11.4 % | 8.3 % |
+| 10 | 0.115 | 0.3 % | 0.116 | 0.3 % | 0.0 % |
+
+θ = 1: 46.1 % interpolado frente al 44.9 % de CMB_FINAL en 0.287 (entre las celdas 0.2, 13.1 %, y 0.3, 50.0 %): compatible. En θ = 3 la
+interpolación en ln σ entre 1.5 % (0.15) y 18.6 % (0.2) sobreestima frente al 8.3 % medido en 0.177.
+
+**Linealidad entre las positivas** (cociente exacto/lineal w = e^{−(χ²_ex − χ²_lin)/2} solo en las muestras con ρ_DE > 0, en las dos celdas
+que encierran la cota de θ = 1 y θ = 3):
+
+| θ | celda σ_X | positivas (fracción) | P | w mediana (16–84) | ESS de w entre positivas |
+|---|---|---|---|---|---|
+| 1 | 0.2 | 4343 (86.9 %) | 0.895 | 0.70 (0.204–1.55) | 898 |
+| 1 | 0.3 | 2501 (50.0 %) | 0.605 | 0.45 (0.039–1.57) | 46 |
+| 3 | 0.15 | 4923 (98.5 %) | 0.963 | 0.55 (0.097–1.55) | 567 |
+| 3 | 0.2 | 4071 (81.4 %) | 0.778 | 0.33 (0.013–1.47) | 349 |
+
+La mediana de w está en 0.3–0.7 (el χ² exacto queda 0.7–2.2 por encima del lineal en la muestra típica) y el rango 16–84 cubre un factor
+8–100: ser positiva no hace a una historia "lineal". Lo que respalda la cifra lineal no es esa comprobación, sino la cobertura
+95.5–97.5 % de INYECCION; la exacta guiada, con ESS de 46 entre las positivas de la celda 0.3 de θ = 1, queda como comprobación inestable.
+
+## Predicción, punto por punto (contra la marginal lineal sin positividad)
+
+1. **No cumplida.** La cota de θ = 1 baja un 3.5 % (0.272 → 0.263), no entre un 20 y un 40 %.
+2. **Cumplida en magnitud, con el signo al revés.** θ = 3 cambia un +0.8 % (< 10 %) y θ = 10 un +0.7 % (< 2 %): las dos suben en vez de bajar.
+3. **Cumplida por poco.** P_prior(ρ_DE > 0 en todo z | σ = 0.263, Ω_Λ = 0.6962) = 0.732 ± 0.003 (14640 de 20000), por encima del 70 %.
+
+## Respuesta (versión 3)
+
+Exigir ρ_DE > 0 en todo z casi no mueve las cotas de la marginal lineal −1.92: θ = 0.3, 0.492 → 0.461 (−6.3 %); θ = 1, 0.272 →
+0.263 (−3.5 %); θ = 3, 0.173 → 0.174 (+0.8 %); θ = 10, 0.115 → 0.116 (+0.7 %), con errores de bootstrap en la cuarta cifra.
+Eso ocurre aunque en el techo de θ = 1 el 41 % del posterior lineal tiene ρ_DE ≤ 0: la truncación quita esas historias pero la
+normalización por el prior (P = 0.70 en la cota) devuelve casi todo, porque el prior a ese σ tampoco es positivo. El prior de positividad
+cambia qué historias se admiten, no cuánto σ_X permiten los datos.
