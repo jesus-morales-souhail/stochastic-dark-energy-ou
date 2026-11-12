@@ -1,0 +1,106 @@
+{
+ "sample": "Pantheon+ (exacto_sn.load_sn 'all': zHD > 0.01, IS_CALIBRATOR == 0; 1580 SN; data files analisis_cmb/sn/datos/Pantheon+SH0ES.dat and Pantheon+SH0ES_STAT+SYS.cov, sha256 in auditoria_v23/datos/FUENTES.json)",
+ "n_sn": 1580,
+ "covariance": "STAT+SYS 1701x1701 restricted to the 1580 rows (C_SN = inv(sn['Ci']), as muestras_sn.make_linear)",
+ "fiducial": {
+  "h": 0.6811798073031549,
+  "omega_m": 0.14092328746244953,
+  "M": 23.797874740270636,
+  "Omega_m": 0.303710100212803,
+  "source": "LCDM best fit of BAO + theta_* + omega_m + Pantheon+ (exacto_sn.fit_combo, M explicit), convention B, X = 0; the point used by inyeccion.py"
+ },
+ "fixed": "h fixed at the fiducial; Omega_r h^2 = OMR fixed; X = 0",
+ "derivatives": "central finite differences of the exact mu(z) with respect to omega_m at fixed h (step 1e-5; Bm[:, 1] of make_linear); d mu / dM = 1 exactly",
+ "fisher_definition": "F = B' W B with B = [d mu/d omega_m, d mu/dM] (n x 2), W = C_SN^-1; M marginalised analytically with a flat prior: sigma^2(omega_m) = 1/(F_ww - F_wM^2/F_MM) = (F^-1)_ww; sigma(Omega_m) = sigma(omega_m)/h^2",
+ "bins": {
+  "definition": "inyeccion.make_binned: edges = [0.01, geometric midpoints of the 22 Union3 nodes (datos/union3/mu_mat_union3_cosmo=2_mu.fits, first row), max(zHD, last node) + 1e-6]; bins with no SN dropped; GLS compression T = (E'WE)^-1 E'W with E the membership matrix and W = C_SN^-1; C_b = (E'WE)^-1; the model and derivatives are compressed with the same T",
+  "n_bins": 22,
+  "edges": [
+   0.01,
+   0.07071067811865477,
+   0.12247448713915891,
+   0.17320508075688776,
+   0.22360679774997896,
+   0.27386127875258304,
+   0.32403703492039304,
+   0.37416573867739417,
+   0.42426406871192857,
+   0.4743416490252569,
+   0.5244044240850758,
+   0.574456264653803,
+   0.6244997998398399,
+   0.6745368781616021,
+   0.724568837309472,
+   0.7745966692414834,
+   0.8476500201350905,
+   0.9459354527938849,
+   1.0441931890301905,
+   1.1612864831869987,
+   1.3091998624121353,
+   1.773898533840141,
+   2.2622609999999996
+  ],
+  "counts": [
+   579,
+   69,
+   96,
+   147,
+   136,
+   117,
+   104,
+   57,
+   51,
+   38,
+   35,
+   39,
+   22,
+   25,
+   29,
+   8,
+   2,
+   5,
+   2,
+   5,
+   11,
+   3
+  ]
+ },
+ "individual_1580": {
+  "F": [
+   [
+    50430.526767033894,
+    -49714.96593903453
+   ],
+   [
+    -49714.96593903455,
+    70266.4439035032
+   ]
+  ],
+  "sigma2_omega_m_marg": 6.554730401944768e-05,
+  "sigma2_omega_m_inv": 6.554730401944773e-05,
+  "sigma_omega_m": 0.00809612895274326,
+  "sigma_Omega_m": 0.017448330789392237
+ },
+ "binned_22": {
+  "F": [
+   [
+    50264.19934761318,
+    -49714.96593903452
+   ],
+   [
+    -49714.965939034526,
+    70266.44390350318
+   ]
+  ],
+  "sigma2_omega_m_marg": 6.626979816293462e-05,
+  "sigma2_omega_m_inv": 6.626979816293464e-05,
+  "sigma_omega_m": 0.008140626398683005,
+  "sigma_Omega_m": 0.0175442292317925
+ },
+ "ratio_binned_over_individual": 1.005496138487847,
+ "values_quoted_in_INYECCION_md": {
+  "individual": 0.01745,
+  "binned": 0.01754,
+  "note": "computed in-session on 2026-11-12 and only written in the note; this json is the first stored calculation"
+ }
+}
