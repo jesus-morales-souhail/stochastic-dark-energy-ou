@@ -133,3 +133,63 @@ sha256 de `modos_pred.json`: `f44c8b1da3acdb6548d9a1324306dca9c80bcc57c18d0d793f
 3–6. Pendientes de la fase 2.
 7. **No**: los tres primeros λ cambian ×1.91, ×2.17 y ×1.43 (no < 10 %).
 8. **Sí**: la información del primer modo cae un 95 % (> 30 %).
+
+## Parada
+
+Cierre del test sin fase 2 (decidido tras la fase 1; nada se ha recalculado).
+
+### Las dos condiciones que saltaron
+
+**1. Los tres primeros λ difieren más del 20 % entre 20 y 40 tramos** (umbral de la condición: 20 %; medido, hasta 117 %).
+
+| | 20 + 1 tramos | 40 + 1 tramos | λ(40)/λ(20) | solape modo a modo en L²(du) |
+|---|---|---|---|---|
+| λ_1 | 88275 | 1.6895e+05 | 1.91 | 0.67 |
+| λ_2 | 13191 | 28564 | 2.17 | 0.41 |
+| λ_3 | 7291.9 | 10453 | 1.43 | 0.24 |
+| λ_4 | 4507 | 9054 | 2.01 | 0.22 |
+| λ_5 | 3645.7 | 7737.9 | 2.12 | 0.05 |
+| λ_6 | 3603.5 | 6733.4 | 1.87 | 0.70 |
+
+Grupos de λ a menos del 20 % entre sí (en cualquiera de las dos mallas) y ángulos principales entre los subespacios que forman:
+grupo [0]: 48°; grupo [1]: 66°; grupo [2, 3, 4, 5]: 85°, 44°, 42°, 29°. Ni los modos individuales (solapes 0.05–0.70) ni los subespacios (ángulos 29–85°) coinciden entre mallas.
+
+**2. Más de una dirección nula** (λ < 10⁻¹⁰ λ_max).
+
+| nb | nulas | constante | otras | de dónde salen |
+|---|---|---|---|---|
+| 20 | 3 | 1 (solape 1.0000) | 2 | tramos 18–20 (z ≥ 2.48): sin nodo de BAO ni SN, solo entran por la fila de θ*; rango 1 de 3 columnas |
+| 40 | 8 | 1 (solape 1.0000) | 7 | tramos 35–40 (z ≥ 2.36): solo θ*, rango 1 de 6; tramos 31–33 (z 1.93–2.25): solo D_M y D_H de Lyα, una SN en z = 2.26 y θ*, rango 3 de 10 columnas (31–40) |
+
+Las direcciones nulas extra son del rebinado (tramos sin datos que solo entran por integrales), no de los datos; el espacio nulo sin
+marginalizar tiene las mismas 3 y 8 direcciones.
+
+### La causa
+
+En el convenio B el modelo depende de X(z) − X(0). X(0) es un valor puntual, no una integral: la información sobre el primer tramo
+no crece con su anchura, y la normalización F_norm = D^(−1/2) F D^(−1/2) solo es correcta para respuestas integrales (operadores con
+núcleo en L², donde los autovalores convergen al refinar la malla). Con un valor puntual, λ va como 1/anchura en esa dirección y los
+modos se pegan al primer tramo (modo 1: +3.4 en z 0–0.072 con 20 tramos, +5.07 en z 0–0.035 con 40). Fue un fallo de diseño del
+prompt, no un resultado sobre los datos.
+
+### Estado de las ocho predicciones
+
+| # | estado |
+|---|---|
+| 1 | no cumplida por el fallo de diseño: 11 y 17 modos con σ(a_i) < 0.1 en la normalización pedida; no evaluable en sentido físico |
+| 2 | no cumplida por el fallo de diseño: el máximo de \|e₁\| está en el primer tramo (z 0–0.072 y 0–0.035), que se mueve con la malla; no evaluable en sentido físico |
+| 3 | sin evaluar (fase 2 no corrida) |
+| 4 | sin evaluar |
+| 5 | sin evaluar |
+| 6 | sin evaluar |
+| 7 | no cumplida por el fallo de diseño: λ₁…λ₃ cambian ×1.91, ×2.17, ×1.43; no evaluable en sentido físico |
+| 8 | cumplida: λ₁ cae un 94.7 % al marginalizar (h, ω_m, M) (1.674e+06 → 8.828e+04); 95.6 % con 40 tramos |
+
+Que la predicción 8 se cumpla numéricamente no valida el diseño ni es un resultado físico nuevo: solo confirma que el fondo absorbe
+casi toda la información cerca de hoy (el primer modo es el contraste entre X(0) y X en 0.07 ≲ z ≲ 0.5, y (h, ω_m, M) se lo llevan
+en un 95 %).
+
+`familias.json` y `FAMILIAS.md` no se abrieron en ninguna fase; `modos_pred.json` (sha256 arriba) queda como registro de lo predicho.
+
+Un rediseño (variable Y = X − X(0), con Y(0) = 0, tramos hasta z = 2.33 más uno a z*) sería un test nuevo, MODOS_2, con
+predicciones nuevas.
