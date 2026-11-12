@@ -1,0 +1,42 @@
+{
+ "pantheon": {
+  "n_sn": 1580,
+  "Omega_m_fit": 0.3324351844094556,
+  "chi2_rel": 1386.4044660255313,
+  "Omega_m_published": 0.334,
+  "published_error": 0.018,
+  "source": "abstract de arXiv:2202.04077, flat LCDM, SN solas",
+  "diff": -0.0015648155905444439,
+  "within_0.01": true
+ },
+ "des5yr": {
+  "n_sn": 1829,
+  "Omega_m_fit": 0.3517889618472243,
+  "chi2_rel": 1640.0819047689438,
+  "Omega_m_published": 0.352,
+  "published_error": 0.017,
+  "source": "abstract de arXiv:2401.02929 (Abbott et al.), flat LCDM, SN solas",
+  "diff": -0.00021103815277567772,
+  "within_0.01": true
+ },
+ "dovekie": {
+  "n_sn": 1820,
+  "Omega_m_fit": 0.33015166734771806,
+  "chi2_rel": 1631.4187566787004,
+  "Omega_m_published": 0.33,
+  "published_error": 0.015,
+  "source": "abstract de arXiv:2511.07517 (Popovic et al.), flat LCDM",
+  "diff": 0.00015166734771804302,
+  "within_0.01": true
+ },
+ "union3": {
+  "n_sn": 22,
+  "Omega_m_fit": 0.35575810335324354,
+  "chi2_rel": 23.959374415746424,
+  "Omega_m_published": 0.356,
+  "published_error": "+0.028/-0.026",
+  "source": "Tabla 5 de arXiv:2311.12098 (Rubin et al.), fila 'SNe', flat LCDM",
+  "diff": -0.0002418966467564454,
+  "within_0.01": true
+ }
+}

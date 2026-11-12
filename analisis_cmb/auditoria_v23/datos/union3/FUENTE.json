@@ -1,0 +1,21 @@
+{
+ "muestra": "Union3 / UNITY1.5 (Rubin et al. 2023, arXiv:2311.12098)",
+ "fecha_descarga_utc": "2026-11-12T04:57Z",
+ "repositorio": "https://github.com/rubind/union3_release, rama main",
+ "ficheros": {
+  "mu_mat_union3_cosmo=2_mu.fits": {
+   "url": "https://raw.githubusercontent.com/rubind/union3_release/main/mu_mat_union3_cosmo=2_mu.fits",
+   "sha256": "ef98b7dde1025ee7134f3242aaea3f1f0ed3f2b29a718458c550a8e4e24d0349"
+  },
+  "README.md": {
+   "url": "https://raw.githubusercontent.com/rubind/union3_release/main/README.md",
+   "sha256": "a6e877690ca7cc406550f723b179a71ee092bf99541202d184e4a81d20729319"
+  }
+ },
+ "convenio": "FITS 23x23 float64: primera fila = z de 22 nodos (0.05 ... 2.2623), primera columna = modulo de distancia por nodo, resto = covarianza inversa 22x22 (modelo 2, spline). Distancias en tramos; se usan en tramos.",
+ "Omega_m_publicado": {
+  "valor": 0.356,
+  "error": "+0.028/-0.026",
+  "fuente": "Tabla 5 de arXiv:2311.12098 (Rubin et al.), fila 'SNe', flat LCDM"
+ }
+}

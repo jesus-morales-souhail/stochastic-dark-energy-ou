@@ -1,0 +1,25 @@
+{
+ "muestra": "DES-SN5YR (DES Collaboration 2024, arXiv:2401.02929)",
+ "fecha_descarga_utc": "2026-11-12T04:58Z",
+ "repositorio": "https://github.com/des-science/DES-SN5YR, etiqueta 1.3 (27-mar-2025), carpeta 4_DISTANCES_COVMAT",
+ "ficheros": {
+  "DES-SN5YR_HD.csv": {
+   "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/DES-SN5YR_HD.csv",
+   "sha256": "95ab1e9f5460a056de37d2b4e28df73ce0c7fd471baba9fb37f1667f41b7901c"
+  },
+  "STAT+SYS.txt.gz": {
+   "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/STAT+SYS.txt.gz",
+   "sha256": "20bc94a881893235a94fc5a1b1c995f4b35bfae333996c2a0ce2696cb05381f2"
+  },
+  "README.md": {
+   "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/README.md",
+   "sha256": "51608e967635573ae40fbc61d02b3f9d8b37194b21f082b85a62d906a75fc9b2"
+  }
+ },
+ "convenio": "MU con H0 = 70; errores estadisticos en MUERR_FINAL (STATONLY es cero); STAT+SYS.txt.gz = sistematicos (primera linea 1829, luego 1829x1829). C = diag(MUERR_FINAL^2) + SYS. 1829 SNe (1635 DES, 194 de z bajo).",
+ "Omega_m_publicado": {
+  "valor": 0.352,
+  "error": 0.017,
+  "fuente": "abstract de arXiv:2401.02929 (Abbott et al.), flat LCDM, SN solas"
+ }
+}

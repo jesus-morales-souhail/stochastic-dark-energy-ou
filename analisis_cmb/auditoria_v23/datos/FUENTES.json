@@ -1,0 +1,85 @@
+{
+ "des_sn5yr": {
+  "muestra": "DES-SN5YR (DES Collaboration 2024, arXiv:2401.02929)",
+  "fecha_descarga_utc": "2026-11-12T04:58Z",
+  "repositorio": "https://github.com/des-science/DES-SN5YR, etiqueta 1.3 (27-mar-2025), carpeta 4_DISTANCES_COVMAT",
+  "ficheros": {
+   "DES-SN5YR_HD.csv": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/DES-SN5YR_HD.csv",
+    "sha256": "95ab1e9f5460a056de37d2b4e28df73ce0c7fd471baba9fb37f1667f41b7901c"
+   },
+   "STAT+SYS.txt.gz": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/STAT+SYS.txt.gz",
+    "sha256": "20bc94a881893235a94fc5a1b1c995f4b35bfae333996c2a0ce2696cb05381f2"
+   },
+   "README.md": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/1.3/4_DISTANCES_COVMAT/README.md",
+    "sha256": "51608e967635573ae40fbc61d02b3f9d8b37194b21f082b85a62d906a75fc9b2"
+   }
+  },
+  "convenio": "MU con H0 = 70; errores estadisticos en MUERR_FINAL (STATONLY es cero); STAT+SYS.txt.gz = sistematicos (primera linea 1829, luego 1829x1829). C = diag(MUERR_FINAL^2) + SYS. 1829 SNe (1635 DES, 194 de z bajo).",
+  "Omega_m_publicado": {
+   "valor": 0.352,
+   "error": 0.017,
+   "fuente": "abstract de arXiv:2401.02929 (Abbott et al.), flat LCDM, SN solas"
+  }
+ },
+ "dovekie": {
+  "muestra": "DES-Dovekie (Popovic et al. 2026, arXiv:2511.07517)",
+  "fecha_descarga_utc": "2026-11-12T04:57Z",
+  "repositorio": "https://github.com/des-science/DES-SN5YR, rama main, carpeta 4_DISTANCES_COVMAT",
+  "ficheros": {
+   "DES-Dovekie_HD.csv": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/DES-Dovekie_HD.csv",
+    "sha256": "2f57019d783eaa976df80a41b0054171a2d994ee9808d715ce850c2df5720aaf"
+   },
+   "STAT+SYS.npz": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/STAT+SYS.npz",
+    "sha256": "ffd3124b32148b1372bd95fda9299269f0352a9f8eee02d416c610e38495463b"
+   },
+   "DES-Dovekie-SN_Likelihood.py": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/DES-Dovekie-SN_Likelihood.py",
+    "sha256": "78526c0e6013619e3586a5509be504f0bc5f0461d1e55a3d5bec0154353645ff"
+   },
+   "README.md": {
+    "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/main/4_DISTANCES_COVMAT/README.md",
+    "sha256": "7afa1b4c11f465d90eeb0352eb4ca0721f2baa856f545e16ac24af9aa067cf7e"
+   }
+  },
+  "convenio": "Formato SNANA (VARNAMES/SN:); MU con H0 = 70; STAT+SYS.npz = covarianza INVERSA total (stat+sys), triangulo superior en float32, nsn = 1820; la verosimilitud oficial la usa tal cual con M marginalizada analiticamente. 1820 SNe (1623 DES, 197 de z bajo).",
+  "Omega_m_publicado": {
+   "valor": 0.33,
+   "error": 0.015,
+   "fuente": "abstract de arXiv:2511.07517 (Popovic et al.), flat LCDM"
+  }
+ },
+ "union3": {
+  "muestra": "Union3 / UNITY1.5 (Rubin et al. 2023, arXiv:2311.12098)",
+  "fecha_descarga_utc": "2026-11-12T04:57Z",
+  "repositorio": "https://github.com/rubind/union3_release, rama main",
+  "ficheros": {
+   "mu_mat_union3_cosmo=2_mu.fits": {
+    "url": "https://raw.githubusercontent.com/rubind/union3_release/main/mu_mat_union3_cosmo=2_mu.fits",
+    "sha256": "ef98b7dde1025ee7134f3242aaea3f1f0ed3f2b29a718458c550a8e4e24d0349"
+   },
+   "README.md": {
+    "url": "https://raw.githubusercontent.com/rubind/union3_release/main/README.md",
+    "sha256": "a6e877690ca7cc406550f723b179a71ee092bf99541202d184e4a81d20729319"
+   }
+  },
+  "convenio": "FITS 23x23 float64: primera fila = z de 22 nodos (0.05 ... 2.2623), primera columna = modulo de distancia por nodo, resto = covarianza inversa 22x22 (modelo 2, spline). Distancias en tramos; se usan en tramos.",
+  "Omega_m_publicado": {
+   "valor": 0.356,
+   "error": "+0.028/-0.026",
+   "fuente": "Tabla 5 de arXiv:2311.12098 (Rubin et al.), fila 'SNe', flat LCDM"
+  }
+ },
+ "pantheon_plus": {
+  "muestra": "Pantheon+ (Brout et al. 2022, arXiv:2202.04077), referencia: analisis_cmb/sn/datos",
+  "Omega_m_publicado": {
+   "valor": 0.334,
+   "error": 0.018,
+   "fuente": "abstract de arXiv:2202.04077, flat LCDM, SN solas"
+  }
+ }
+}
