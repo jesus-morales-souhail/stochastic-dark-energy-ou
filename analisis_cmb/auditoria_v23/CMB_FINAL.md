@@ -123,5 +123,6 @@ ponderado coincide con el máximo (todos los pesos son > 0).
 
 El ESS de las 40 es de 6–16 historias: la media ponderada la dominan unas pocas (en θ = 3 una historia lleva el 35 % del peso). Ponderar
 mueve las medianas y los p95 en menos de 0.3 y no cambia el máximo ni la lectura. Y con 40 historias sin ningún Δχ² > 4, lo que se
-puede decir es que la probabilidad de un caso así queda por debajo de ~7.5 % (regla de 3/N, N = 40), no que sea cero; ponderando por w el
-tamaño efectivo es menor y esa cota es más floja.
+puede decir es que la probabilidad de un caso así queda por debajo de ~7.5 % (regla de 3/N, N = 40), no que sea cero. Matiz (añadido
+con POSITIVIDAD v2): la regla de 3/N vale para N historias de igual peso; con pesos desiguales es orientativa, y usar el ESS en lugar de N
+no da un límite exacto, solo indica que la cota real es más floja.

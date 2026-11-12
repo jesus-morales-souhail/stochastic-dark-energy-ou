@@ -69,3 +69,71 @@ los mismos 20000 caminos del prior (P(σ, Ω_Λ) = fracción con mín(x − x(0)
 interpolación; la malla solo serviría para la tabla), y (c) añadir una celda de σ_X entre 0.5 y 0.7 para θ = 0.3 o aceptar que esa cota
 no se da. El resto del método (muestreo, pesos, positividad, bootstrap de P) está implementado y corrido; no se cambió nada después de
 ver los resultados.
+
+## Versión 2 (diseño declarado antes de correr y antes de ver ninguna cota)
+
+La versión 1 paró porque la malla de Ω_Λ (± 3σ) deja fuera el 0.27 % de un posterior gaussiano por construcción (fallo de diseño del
+prompt). Las tres predicciones no cambian. Cambios de diseño, declarados antes de ver ninguna cota:
+
+- Malla de Ω_Λ desde el mínimo hasta el máximo de Ω_Λ de TODAS las muestras del posterior de todas las celdas, más un 5 % de margen a
+  cada lado (5 % del recorrido máx − mín), con 15 nodos. Comprobación: ninguna muestra fuera.
+- Interpolación de P(σ, Ω_Λ) comprobada contra el cálculo directo con los mismos 20000 caminos del prior en 5 valores de Ω_Λ entre
+  nodos, en las celdas de la cota; se da la diferencia máxima.
+- Celda nueva σ_X = 0.6 en θ = 0.3.
+- Si en un θ el ESS de la parte truncada es menor que el 1 % de N en la celda de la cota, ese θ se declara "no evaluable con este
+  método" y no se da su cota; los demás θ siguen.
+
+Todo lo demás, igual que la versión 1 (Z_pos con la normalización por muestra, bootstrap de P con 200 repeticiones, tabla, "Predicción"
+punto por punto). Condición de parada: si alguna muestra queda fuera de la malla nueva, se para y se informa. La versión 1 del script
+queda en el historial (commit 25d7a65); `positividad.json` y `positividad_stop.json` se sobrescriben.
+
+## Resultados de la versión 2 (`positividad.py`, 109 s; `positividad.json`)
+
+**Malla de Ω_Λ:** Ω_Λ de las muestras del posterior de las 43 celdas va de 0.4436 a 0.7598; con el 5 % de margen por lado la
+malla de 15 nodos cubre 0.4278–0.7756; **ninguna de las 215000 muestras queda fuera** (condición de parada no saltó).
+Ω_Λ del mejor ajuste ΛCDM: 0.6962. Interpolación de P frente al cálculo directo en 5 valores entre nodos, en las celdas de
+las cotas: diferencia máxima 0.0014 (columna de la tabla).
+
+**Cotas −1.92** (sin positividad: la de MARGINAL_GUIADA, de referencia, y la recalculada aquí con las muestras nuevas; con positividad;
+cociente frente a la referencia / frente a la propia; P en la cota, interpolada en ln σ entre las dos celdas, con el error Monte Carlo mayor
+de las dos; rango 16–84 % de la cota por el bootstrap de P; celdas que encierran la cota con su ESS truncado y sus muestras positivas):
+
+| θ | sin positividad, referencia | sin positividad, aquí | con positividad | cociente ref. / propia | P en la cota | cota, rango 16–84 (bootstrap de P) | celdas | ESS truncado (fracción de N) | muestras positivas | interp. máx. dif. |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 0.3 | 0.500 | 0.507 | no evaluable | — | — | — | 0.4 y 0.5 | 32 (0.65 %) y 329 (6.59 %) | 2720 y 1964 | 0.0006 |
+| 1 | 0.287 | 0.289 | no evaluable | — | — | — | 0.2 y 0.3 | 887 (17.75 %) y 44 (0.89 %) | 4343 y 2501 | 0.0008 |
+| 3 | 0.177 | 0.212 | 0.177 | 1.000 / 0.836 | 0.855 ± 0.003 | 0.1773–0.1774 | 0.15 y 0.2 | 563 (11.26 %) y 342 (6.84 %) | 4923 y 4071 | 0.0014 |
+| 10 | 0.116 | 0.113 | 0.113 | 0.973 / 1.005 | 0.975 ± 0.002 | 0.1131–0.1131 | 0.1 y 0.15 | 725 (14.50 %) y 203 (4.06 %) | 5000 y 4955 | 0.0010 |
+
+- **θ = 0.3 y θ = 1: no evaluables con este método.** El ESS de la parte truncada en una de las dos celdas que encierran la cota es
+  0.65 % de N (σ_X = 0.4, θ = 0.3) y 0.89 % (σ_X = 0.3, θ = 1), por debajo del 1 % fijado. Por la regla no se da su cota (el json
+  conserva el número crudo en `bound_pos_192`, sin valor por esa regla). La celda nueva σ_X = 0.6 de θ = 0.3 no cambia eso: la cota cae
+  entre 0.4 y 0.5, no entre 0.5 y 0.7.
+- **θ = 3:** la cota con positividad, 0.177, coincide con la referencia sin positividad (0.177): cociente 1.000. La "sin positividad,
+  aquí" (0.212) no sirve de comparación emparejada: en la celda σ_X = 0.2 el ESS de los pesos sin truncar es 2 (una muestra domina), y
+  ln Z_exact relativo queda en -0.48 frente a -1.46 de MARGINAL_GUIADA; esa muestra tiene ρ_DE ≤ 0 y la truncación la quita, con lo que
+  ln Z_pos en 0.2 (-1.46) recupera el valor de la referencia. Es decir: en θ = 3 la positividad no estrecha la cota; lo que hace es quitar
+  una muestra atípica del cálculo sin truncar.
+- **θ = 10:** 0.113 con positividad frente a 0.113 sin ella con las mismas muestras (cociente 1.005) y 0.116 de referencia
+  (cociente 0.973). En la cota P = 0.98: casi todos los caminos del prior son positivos y la truncación no actúa.
+- **Error de P frente a error de muestreo:** el bootstrap de P mueve la cota en menos de 0.0005 (cuarto decimal), pero la diferencia entre la
+  cota sin positividad calculada aquí y la de MARGINAL_GUIADA (semillas distintas) es de 3 % en θ = 10 y de 20 % en θ = 3: el error que manda es
+  el de los pesos (ESS de 200–700 en las celdas de la cota, y de 2 en la celda 0.2 de θ = 3), no el de P. Las cotas con positividad se dan con
+  tres cifras por el rango del bootstrap, pero su error real es el de muestreo, del orden del 3 % o más.
+
+## Predicción, punto por punto
+
+1. **Sin evaluar.** θ = 1 no es evaluable con este método (ESS truncado 0.89 % de N en la celda 0.3, por debajo del 1 %).
+2. **θ = 3: cumplida frente a la referencia** (cociente 1.000, baja 0 %; la comparación emparejada no es válida por el ESS = 2 de la celda 0.2).
+   **θ = 10: cumplida en la comparación emparejada** (+0.5 %, es decir no baja) **y no frente a la referencia** (−2.7 %, por encima del 2 %
+   predicho); la diferencia entre las dos comparaciones es el error de muestreo de la cota sin positividad, no la positividad.
+3. **Sin evaluar** (requiere la cota nueva de θ = 1).
+
+## Respuesta
+
+Con este método, la positividad solo se puede evaluar en θ = 3 y θ = 10, y en ninguno de los dos estrecha la cota de la marginal −1.92:
+0.177 frente a 0.177 (θ = 3) y 0.113 frente a 0.113 con las mismas muestras (θ = 10), con P_prior(ρ_DE > 0) en la cota de
+0.86 y 0.98. En θ = 1 y θ = 0.3, donde el prior de positividad sí muerde (P = 0.60 en σ_X = 0.3 para θ = 1, 0.54–0.67 en 0.4–0.5 para
+θ = 0.3), el peso truncado se concentra en muy pocas muestras (ESS < 1 % de N) y la importancia guiada por el posterior lineal no da una
+cota fiable: haría falta muestrear el posterior truncado directamente. Las dos cotas (con y sin positividad) quedan dadas donde se pueden
+dar; el error que manda en todas es el de muestreo, no el de P.
