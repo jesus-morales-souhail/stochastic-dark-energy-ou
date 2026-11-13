@@ -1,0 +1,37 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+sinSN: DR2 d2=7.131 (predictivo 7.131); H1 checks ok=True; eig F_joint=[8.45167429e+00 3.35339512e+01 1.67585008e+05 1.35382490e+07]
+  sinSN rho2=0.6 H0: d2 pct(5/50/95)=[1.4, 4.76, 10.18] gauss_ok=True validation max|dd2|=1.007e-02 (u 4)
+  sinSN rho2=0.6 H1: d2 pct(5/50/95)=[4.92, 12.29, 23.13] gauss_ok=True validation max|dd2|=1.956e-02 (u 19)
+  sinSN rho2=0.6: c0=1.011 c1=-1.575 c1<c0=True power=0.65546 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+  sinSN rho2=0.5 H0: d2 pct(5/50/95)=[0.91, 4.15, 10.04] gauss_ok=True validation max|dd2|=1.595e-02 (u 5)
+  sinSN rho2=0.5 H1: d2 pct(5/50/95)=[5.21, 14.93, 29.57] gauss_ok=True validation max|dd2|=3.360e-02 (u 15)
+  sinSN rho2=0.5: c0=0.765 c1=-1.648 c1<c0=True power=0.76704 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+  sinSN rho2=0.72 H0: d2 pct(5/50/95)=[2.23, 5.45, 10.14] gauss_ok=True validation max|dd2|=7.430e-03 (u 18)
+  sinSN rho2=0.72 H1: d2 pct(5/50/95)=[4.82, 10.14, 17.53] gauss_ok=True validation max|dd2|=1.643e-02 (u 9)
+  sinSN rho2=0.72: c0=1.187 c1=-1.484 c1<c0=True power=0.5001 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+Pantheon+: DR2 d2=7.701 (predictivo 7.701); H1 checks ok=True; eig F_joint=[8.45269366e+00 3.37384272e+01 6.17984742e+04 1.98073873e+05
+ 1.35309587e+07]
+  Pantheon+ rho2=0.6 H0: d2 pct(5/50/95)=[1.61, 5.1, 10.68] gauss_ok=True validation max|dd2|=2.050e-02 (u 7)
+  Pantheon+ rho2=0.6 H1: d2 pct(5/50/95)=[5.54, 13.27, 24.32] gauss_ok=True validation max|dd2|=2.530e-02 (u 2)
+  Pantheon+ rho2=0.6: c0=0.988 c1=-1.570 c1<c0=True power=0.68444 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+  Pantheon+ rho2=0.5 H0: d2 pct(5/50/95)=[1.04, 4.47, 10.39] gauss_ok=True validation max|dd2|=2.318e-02 (u 3)
+  Pantheon+ rho2=0.5 H1: d2 pct(5/50/95)=[5.93, 16.04, 31.31] gauss_ok=True validation max|dd2|=4.409e-02 (u 0)
+  Pantheon+ rho2=0.5: c0=0.671 c1=-1.567 c1<c0=True power=0.79396 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+  Pantheon+ rho2=0.72 H0: d2 pct(5/50/95)=[2.52, 5.91, 10.73] gauss_ok=True validation max|dd2|=1.535e-02 (u 18)
+  Pantheon+ rho2=0.72 H1: d2 pct(5/50/95)=[5.38, 10.94, 18.44] gauss_ok=True validation max|dd2|=1.854e-02 (u 7)
+  Pantheon+ rho2=0.72: c0=1.200 c1=-1.483 c1<c0=True power=0.52122 dens={'H0': 'gaussian', 'H1': 'gaussian'}
+{
+ "P18": {
+  "statement": "rho2 = 0.6, falsa alarma 5 %: potencia para distinguir H0 de H1 en LRG2 entre 0.5 y 0.75 (evaluada en sin SN)",
+  "power_sinSN": 0.65546,
+  "power_Pantheon+": 0.68444,
+  "holds": true
+ },
+ "P19": {
+  "statement": "rho2 = 0.6: mediana de d2_DR3 de LRG2 entre 3 y 6 bajo H0 y entre 9 y 15 bajo H1 (evaluada en sin SN)",
+  "median_H0_sinSN": 4.762103511622435,
+  "median_H1_sinSN": 12.291340223890494,
+  "holds": true
+ }
+}
+escrito pronostico_dr3_lrg2.json 1 s
