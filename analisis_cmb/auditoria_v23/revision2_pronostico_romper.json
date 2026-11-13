@@ -1,0 +1,210 @@
+{
+ "work_dir": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper",
+ "labels_DR2": [
+  "DV_BGS_z0.295",
+  "DM_LRG_z0.510",
+  "DH_LRG_z0.510",
+  "DM_LRG_z0.706",
+  "DH_LRG_z0.706",
+  "DM_LRG+ELG_z0.934",
+  "DH_LRG+ELG_z0.934",
+  "DM_ELG_z1.321",
+  "DH_ELG_z1.321",
+  "DM_QSO_z1.484",
+  "DH_QSO_z1.484",
+  "DH_Lya_z2.33",
+  "DM_Lya_z2.33"
+ ],
+ "attempts": {
+  "1_evaluar_sin_calibrar": {
+   "expected": "negarse: primero calibrar",
+   "outcome": "se neg\u00f3",
+   "detail": "primero calibrar"
+  },
+  "2a_calibrar": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper/pronostico_dr3_lrg2_v2_calibracion_t2.json"
+  },
+  "2b_evaluar": {
+   "expected": "ok, una vez",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "sinSN": "favorece H1",
+    "Pantheon+": "favorece H1"
+   }
+  },
+  "2c_evaluar_otra_vez_mismo_tag": {
+   "expected": "negarse",
+   "outcome": "se neg\u00f3",
+   "detail": "ya existe pronostico_dr3_lrg2_v2_resultado_t2.json: \u039b se calcula una sola vez"
+  },
+  "2d_evaluar_otra_vez_otros_valores_mismo_tag": {
+   "expected": "negarse",
+   "outcome": "se neg\u00f3",
+   "detail": "ya existe pronostico_dr3_lrg2_v2_resultado_t2.json: \u039b se calcula una sola vez"
+  },
+  "3a_calibrar": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper/pronostico_dr3_lrg2_v2_calibracion_t3.json"
+  },
+  "3b_evaluar_con_otra_cov": {
+   "expected": "negarse: covarianza distinta",
+   "outcome": "se neg\u00f3",
+   "detail": "la covarianza no es la usada en la calibraci\u00f3n"
+  },
+  "4a_calibrar": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper/pronostico_dr3_lrg2_v2_calibracion_t4.json"
+  },
+  "4b_manipular_calibracion": {
+   "expected": "\u2014",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "c0 cambiado a 5.0"
+  },
+  "4c_evaluar_tras_manipular": {
+   "expected": "negarse: sha256 de la calibraci\u00f3n",
+   "outcome": "se neg\u00f3",
+   "detail": "la calibraci\u00f3n no coincide con su sha256 registrado"
+  },
+  "5a_reescribir_sha256": {
+   "expected": "\u2014",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "sha256 reescrito"
+  },
+  "5b_evaluar_con_sha_reescrito": {
+   "expected": "se ejecuta (el .sha256 no es un compromiso externo)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "no concluyente"
+  },
+  "6a_calibrar_tag_nuevo": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper/pronostico_dr3_lrg2_v2_calibracion_t6.json"
+  },
+  "6b_evaluar_mismos_datos_otro_tag": {
+   "expected": "se ejecuta (otra etiqueta)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "sinSN": "no concluyente",
+    "Pantheon+": "favorece H1"
+   }
+  },
+  "7a_calibrar_etiquetas_permutadas": {
+   "expected": "negarse: etiquetas",
+   "outcome": "se neg\u00f3",
+   "detail": "etiquetas o orden distintos de DR2: no evaluable sin conversi\u00f3n declarada"
+  },
+  "7b_calibrar_fuera_de_bloque_1e-15": {
+   "expected": "modelo roto por un 1e-15 (umbral != 0)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "modelo roto"
+  },
+  "7c_spread_LRG2_20pct_exacto": {
+   "expected": "l\u00edmite de la regla (0.9/1.1 -> spread 0.2)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "rho2_per_component": [
+     0.6,
+     0.6,
+     0.6,
+     0.54,
+     0.66,
+     0.5999999999999999,
+     0.6,
+     0.5999999999999999,
+     0.6,
+     0.6,
+     0.6,
+     0.6,
+     0.6
+    ],
+    "rho2_per_bin": {
+     "BGS": 0.6,
+     "LRG1": 0.6,
+     "LRG2": 0.6000000000000001,
+     "LRG3+ELG1": 0.5999999999999999,
+     "ELG2": 0.5999999999999999,
+     "QSO": 0.6,
+     "Lya": 0.6
+    },
+    "component_rel_spread": {
+     "BGS": 0.0,
+     "LRG1": 0.0,
+     "LRG2": 0.19999999999999996,
+     "LRG3+ELG1": 1.8503717077085946e-16,
+     "ELG2": 1.8503717077085946e-16,
+     "QSO": 0.0,
+     "Lya": 0.0
+    },
+    "broken": [],
+    "max_abs_offblock_cov3": 0.0,
+    "corr_DM_DH_LRG2": {
+     "DR2": -0.39525761496067274,
+     "DR3": -0.39724884980464137,
+     "change": -0.0019912348439686256
+    },
+    "status": "ok"
+   }
+  },
+  "8a_calibrar_con_script_modificado": {
+   "expected": "se ejecuta; registra OTRO sha256 (no el registrado add948\u2026)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "288d3343f80b3d163e03c0b55879e9a870878a3f7877a5ee17a3df39c5c0ecad"
+  },
+  "8b_evaluar_con_script_modificado": {
+   "expected": "se ejecuta: el script no se compara con el sha registrado",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "sinSN": "favorece H1",
+    "Pantheon+": "favorece H1"
+   }
+  },
+  "8c_evaluar_t8_con_script_original": {
+   "expected": "negarse: el script ha cambiado",
+   "outcome": "se neg\u00f3",
+   "detail": "el script ha cambiado desde la calibraci\u00f3n"
+  },
+  "9_calibrar_solo_covarianza": {
+   "outcome": "por inspecci\u00f3n del c\u00f3digo: calibrar abre solo cov_path (read_dr3_cov); evaluar abre cov, valores y calibraci\u00f3n",
+   "detail": ""
+  },
+  "10_borrar_resultado": {
+   "outcome": "no probado (prohibido borrar): borrar pronostico_dr3_lrg2_v2_resultado_TAG.json permitir\u00eda reevaluar; el script no puede impedirlo",
+   "detail": ""
+  }
+ },
+ "work_files": [
+  "__pycache__",
+  "cov_off.json",
+  "cov_ok.json",
+  "cov_other.json",
+  "cov_perm.json",
+  "cov_spread.json",
+  "pronostico_dr3_lrg2_v2_MODIFICADO.py",
+  "pronostico_dr3_lrg2_v2_calibracion_t2.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t2.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t3.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t3.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t4.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t4.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t6.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t6.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t7b.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t7b.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t7c.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t7c.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t8.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t8.sha256",
+  "pronostico_dr3_lrg2_v2_calibracion_t8b.json",
+  "pronostico_dr3_lrg2_v2_calibracion_t8b.sha256",
+  "pronostico_dr3_lrg2_v2_resultado_t2.json",
+  "pronostico_dr3_lrg2_v2_resultado_t4.json",
+  "pronostico_dr3_lrg2_v2_resultado_t6.json",
+  "pronostico_dr3_lrg2_v2_resultado_t8.json",
+  "vals.json",
+  "vals2.json"
+ ]
+}
