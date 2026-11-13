@@ -40,6 +40,8 @@ Comprobaciones de la URL (2026-11-13):
 - Sin covarianza cruzada publicada entre DESI DR2 LRG2 y eBOSS DR16 LRG (no hay simulaciones comunes publicadas con esa matriz); EBOSS_LRG.md usa una
   familia hipotética ρ_x.
 
-## Valores (completado en el paso 5, después del commit del paso 4)
+## Valores (completado en el paso 5, después del commit del paso 4: `b8d48a5`)
 
-Pendiente.
+Leídos como números por `eboss_lrg_analisis.py resultado` el 2026-11-13 (sha256 del fichero sin cambio): z_eff = 0.698, D_M/r_d = 17.85824 ± 0.3281,
+D_H/r_d = 19.32575 ± 0.5327, coeficiente de correlación -0.3336. Coinciden con el consenso BAO-only de DR16 LRG citado en la literatura
+(D_M/r_d = 17.86 ± 0.33, D_H/r_d = 19.33 ± 0.53), distinto del consenso BAO+RSD del resumen de Bautista et al. (17.65 ± 0.30, 19.77 ± 0.47), que no se usa.
