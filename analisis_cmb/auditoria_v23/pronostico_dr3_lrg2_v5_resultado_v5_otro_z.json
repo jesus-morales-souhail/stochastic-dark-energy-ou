@@ -1,0 +1,46 @@
+{
+ "mode": "evaluar",
+ "version": "v5",
+ "tag": "v5_otro_z",
+ "values_file": "pronostico_dr3_lrg2_v3_falso_dr3_valores.json",
+ "values_sha256": "bd4ad2eebf5c7c7f75fd331f9d2547c1385202cb1222576ea2a63163b51333bd",
+ "script_check": {
+  "registered": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": true,
+  "status": "ok",
+  "reason": null
+ },
+ "principal_combo": "sinSN",
+ "combos": {},
+ "calibration_sha256": "7cdba20e8d349072a50a0bcb6917be68e7a935d303582cfcde7f3f4aef173505",
+ "pairing": {
+  "pair_tolerance_z": 1e-09,
+  "pairs": {
+   "DV_BGS_z0.295": "DV_BGS_z0.295",
+   "DM_LRG_z0.510": "DM_LRG_z0.510",
+   "DH_LRG_z0.510": "DH_LRG_z0.510",
+   "DM_LRG+ELG_z0.934": "DM_LRG+ELG_z0.934",
+   "DH_LRG+ELG_z0.934": "DH_LRG+ELG_z0.934",
+   "DM_ELG_z1.321": "DM_ELG_z1.321",
+   "DH_ELG_z1.321": "DH_ELG_z1.321",
+   "DM_QSO_z1.484": "DM_QSO_z1.484",
+   "DH_QSO_z1.484": "DH_QSO_z1.484",
+   "DH_Lya_z2.33": "DH_Lya_z2.33",
+   "DM_Lya_z2.33": "DM_Lya_z2.33"
+  },
+  "missing_or_other_z": [
+   "DM_LRG_z0.712",
+   "DH_LRG_z0.712"
+  ],
+  "ambiguous": [],
+  "ignored_value_rows": [
+   "DM_LRG_z0.706",
+   "DH_LRG_z0.706"
+  ],
+  "ok": false
+ },
+ "status": "no evaluable",
+ "result_principal": "no evaluable",
+ "reason": "filas de valores sin pareja en la calibraci\u00f3n (trazador, cantidad y z_eff id\u00e9nticos): DM_LRG_z0.712, DH_LRG_z0.712"
+}

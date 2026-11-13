@@ -1,0 +1,50 @@
+{
+ "mode": "calibrar",
+ "version": "v5",
+ "tag": "v5_f4_z0720",
+ "cov_file": "pronostico_dr3_lrg2_v4_falso_z0720_dr3_cov.json",
+ "cov_sha256": "0e4b0fab51bcaae85890c1b969893241c97270e52a18b646b40b0fe0771f9773",
+ "script_check": {
+  "registered": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": true,
+  "status": "ok",
+  "reason": null
+ },
+ "git_head_at_run": "53bcb700333104a670b1ba00cd69410dee22ab1d",
+ "keys_read": [
+  "labels",
+  "cov"
+ ],
+ "principal_combo": "sinSN",
+ "combos": {},
+ "labels": {
+  "tolerance": 0.010000001,
+  "matches": {
+   "DV_BGS_z0.295": "DV_BGS_z0.295",
+   "DM_LRG_z0.510": "DM_LRG_z0.510",
+   "DH_LRG_z0.510": "DH_LRG_z0.510",
+   "DM_LRG+ELG_z0.934": "DM_LRG+ELG_z0.934",
+   "DH_LRG+ELG_z0.934": "DH_LRG+ELG_z0.934",
+   "DM_ELG_z1.321": "DM_ELG_z1.321",
+   "DH_ELG_z1.321": "DH_ELG_z1.321",
+   "DM_QSO_z1.484": "DM_QSO_z1.484",
+   "DH_QSO_z1.484": "DH_QSO_z1.484",
+   "DH_Lya_z2.33": "DH_Lya_z2.33",
+   "DM_Lya_z2.33": "DM_Lya_z2.33"
+  },
+  "unmatched": [
+   "DM_LRG_z0.706",
+   "DH_LRG_z0.706"
+  ],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": [
+   "DM_LRG_z0.720",
+   "DH_LRG_z0.720"
+  ],
+  "ok": false
+ },
+ "status": "no evaluable",
+ "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, |\u0394z| \u2264 0.01 + 1e-9)"
+}

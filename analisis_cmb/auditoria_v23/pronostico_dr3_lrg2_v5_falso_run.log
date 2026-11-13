@@ -1,0 +1,628 @@
+--- v3 falso (0.6 C2) calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.0259644210947707,
+   "c1": -1.5921491815282105,
+   "c1_lt_c0": true,
+   "power": 0.6580625
+  },
+  "Pantheon+": {
+   "c0": 0.9985057993915986,
+   "c1": -1.58537183834615,
+   "c1_lt_c0": true,
+   "power": 0.6804453
+  }
+ },
+ "sha256": "be2e8fe52f91551d0a42a9a00b777900951c5d3ee40c227fd18018c32830eb7d"
+}
+--- v3 falso evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "ignored_value_rows": [],
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.706,
+    0.706
+   ],
+   "r3_fractional": [
+    -0.010382489945859876,
+    -0.03085141004877727
+   ],
+   "d2_DR3": 10.379440906393915,
+   "Lambda": 1.1269400589002032,
+   "Lambda_v4_denominator_m_p3": 1.1371883227682051,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.706,
+    0.706
+   ],
+   "r3_fractional": [
+    -0.011132714804594133,
+    -0.031208564835035257
+   ],
+   "d2_DR3": 11.032642491626959,
+   "Lambda": 1.1692049345415576,
+   "Lambda_v4_denominator_m_p3": 1.181869989234233,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- v3 falso_direccion calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "reason_or_broken": [
+  "LRG2: C2_minus_C3, Cov_e",
+  "rho2_LRG2,eff = 1.685 fuera de [0.4, 0.8]"
+ ],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {},
+ "sha256": "bef6299e7821fc51da530bb884a03b6ac9169966e2db633a46a18da60b271623"
+}
+--- v3 falso_direccion evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "result_principal": "modelo roto",
+ "reason": [
+  "LRG2: C2_minus_C3, Cov_e",
+  "rho2_LRG2,eff = 1.685 fuera de [0.4, 0.8]"
+ ]
+}
+--- v3 falso_corr calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "reason_or_broken": [
+  "correlaci\u00f3n entre bins |r| m\u00e1x 1.00e-03 \u2265 1e-06"
+ ],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {},
+ "sha256": "37bb0624ec3bc030ab54493b25016e9e5060f0765dbdd9e9857369062fa46f42"
+}
+--- v3 falso_corr evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "result_principal": "modelo roto",
+ "reason": [
+  "correlaci\u00f3n entre bins |r| m\u00e1x 1.00e-03 \u2265 1e-06"
+ ]
+}
+--- v3 falso_corr_tol calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.0259644210947707,
+   "c1": -1.5921491815282105,
+   "c1_lt_c0": true,
+   "power": 0.6580625
+  },
+  "Pantheon+": {
+   "c0": 0.9985057993915986,
+   "c1": -1.58537183834615,
+   "c1_lt_c0": true,
+   "power": 0.6804453
+  }
+ },
+ "sha256": "8174366ebe8f3ad34b4d07ee4d061ecf62a219931458d5f29c794d0c5d7e82dc"
+}
+--- v3 falso_corr_tol evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "ignored_value_rows": [],
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.706,
+    0.706
+   ],
+   "r3_fractional": [
+    -0.010382489945859876,
+    -0.03085141004877727
+   ],
+   "d2_DR3": 10.379440906393915,
+   "Lambda": 1.1269400589002032,
+   "Lambda_v4_denominator_m_p3": 1.1371883227682051,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.706,
+    0.706
+   ],
+   "r3_fractional": [
+    -0.011132714804594133,
+    -0.031208564835035257
+   ],
+   "d2_DR3": 11.032642491626959,
+   "Lambda": 1.1692049345415576,
+   "Lambda_v4_denominator_m_p3": 1.181869989234233,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- v4 z0712 calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.006000000000000005,
+  0.006000000000000005,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {
+   "DM_LRG_z0.706": 0.006000000000000005,
+   "DH_LRG_z0.706": 0.006000000000000005
+  },
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "c1_lt_c0": true,
+   "power": 0.6582105
+  },
+  "Pantheon+": {
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "c1_lt_c0": true,
+   "power": 0.6809173
+  }
+ },
+ "sha256": "4631aa15cdb3015e22b3710685ae6bf3790aed357fdb12e624d2290aec489446"
+}
+--- v4 z0712 evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "ignored_value_rows": [],
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.017112121289222335,
+    -0.027347912025430937
+   ],
+   "d2_DR3": 13.046237459066177,
+   "Lambda": 2.4692634088236893,
+   "Lambda_v4_denominator_m_p3": 2.4843427677545318,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.01785308315583964,
+    -0.027702199354315393
+   ],
+   "d2_DR3": 13.867394410061582,
+   "Lambda": 2.595501955563999,
+   "Lambda_v4_denominator_m_p3": 2.6140288888022365,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- v4 z0720 calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "no evaluable",
+ "reason_or_broken": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, |\u0394z| \u2264 0.01 + 1e-9)",
+ "script_check": "ok",
+ "z_shifts": null,
+ "labels": {
+  "unmatched": [
+   "DM_LRG_z0.706",
+   "DH_LRG_z0.706"
+  ],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": [
+   "DM_LRG_z0.720",
+   "DH_LRG_z0.720"
+  ]
+ },
+ "calibracion": {},
+ "sha256": "3d43834dfb16aef7254106fa2feb8fd254955f2ec9ee3619403320a165c79cbd"
+}
+--- v4 z0720 evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "no evaluable",
+ "result_principal": "no evaluable",
+ "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, |\u0394z| \u2264 0.01 + 1e-9)"
+}
+--- sha256 ausente: calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "control de coherencia fallido",
+ "reason_or_broken": "falta el fichero no_existe.sha256",
+ "script_check": "control de coherencia fallido",
+ "z_shifts": null,
+ "labels": null,
+ "calibracion": {},
+ "sha256": "53495f14d486baaf4715e97ce2d1850a370ecc35af3f8266f9b96be60d60c62f"
+}
+--- sha256 ausente: evaluar (con calibración buena v5_f4_z0712 bajo otro tag no existe → usa tag propio)
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "control de coherencia fallido",
+ "result_principal": "control de coherencia fallido",
+ "reason": "falta el fichero no_existe.sha256"
+}
+--- hash alterado: calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "control de coherencia fallido",
+ "reason_or_broken": "el sha256 del script no coincide con el registrado",
+ "script_check": "control de coherencia fallido",
+ "z_shifts": null,
+ "labels": null,
+ "calibracion": {},
+ "sha256": "26a423574f6bc9a518af6a8b8798dbb676ed6cd4b4e7e39c7f2b2dbc5b51d6df"
+}
+--- hash alterado: evaluar sobre la calibración buena v5_f4_z0712 (tag nuevo con calibración copiada no: usa tag v5_hash_alterado)
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "control de coherencia fallido",
+ "result_principal": "control de coherencia fallido",
+ "reason": "el sha256 del script no coincide con el registrado"
+}
+--- valores en z distinto (0.706) con calibración z0.712: calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.006000000000000005,
+  0.006000000000000005,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {
+   "DM_LRG_z0.706": 0.006000000000000005,
+   "DH_LRG_z0.706": 0.006000000000000005
+  },
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "c1_lt_c0": true,
+   "power": 0.6582105
+  },
+  "Pantheon+": {
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "c1_lt_c0": true,
+   "power": 0.6809173
+  }
+ },
+ "sha256": "7cdba20e8d349072a50a0bcb6917be68e7a935d303582cfcde7f3f4aef173505"
+}
+--- valores en z distinto: evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "no evaluable",
+ "result_principal": "no evaluable",
+ "reason": "filas de valores sin pareja en la calibraci\u00f3n (trazador, cantidad y z_eff id\u00e9nticos): DM_LRG_z0.712, DH_LRG_z0.712"
+}
+--- filas reordenadas: calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.006000000000000005,
+  0.006000000000000005,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {
+   "DM_LRG_z0.706": 0.006000000000000005,
+   "DH_LRG_z0.706": 0.006000000000000005
+  },
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "c1_lt_c0": true,
+   "power": 0.6582105
+  },
+  "Pantheon+": {
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "c1_lt_c0": true,
+   "power": 0.6809173
+  }
+ },
+ "sha256": "72b6af1d18dea2532a48ce09a525e33eb160c75276cb3c56ebde4dd890c36cd2"
+}
+--- filas reordenadas: evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "ignored_value_rows": [],
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.017112121289222335,
+    -0.027347912025430937
+   ],
+   "d2_DR3": 13.046237459066177,
+   "Lambda": 2.4692634088236893,
+   "Lambda_v4_denominator_m_p3": 2.4843427677545318,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.01785308315583964,
+    -0.027702199354315393
+   ],
+   "d2_DR3": 13.867394410061582,
+   "Lambda": 2.595501955563999,
+   "Lambda_v4_denominator_m_p3": 2.6140288888022365,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- bin nuevo: calibrar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "script_check": "ok",
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.006000000000000005,
+  0.006000000000000005,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "ambiguous": [],
+  "z_shifts": {
+   "DM_LRG_z0.706": 0.006000000000000005,
+   "DH_LRG_z0.706": 0.006000000000000005
+  },
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "c1_lt_c0": true,
+   "power": 0.6582105
+  },
+  "Pantheon+": {
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "c1_lt_c0": true,
+   "power": 0.6809173
+  }
+ },
+ "sha256": "532b2eada8e4949acbe4f04b35b9a18fe607c2fb6ed60572d3f23d5450305a3f"
+}
+--- bin nuevo: evaluar
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "ignored_value_rows": [
+  "DV_ELG2b_z1.100"
+ ],
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.017112121289222335,
+    -0.027347912025430937
+   ],
+   "d2_DR3": 13.046237459066177,
+   "Lambda": 2.4692634088236893,
+   "Lambda_v4_denominator_m_p3": 2.4843427677545318,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.01785308315583964,
+    -0.027702199354315393
+   ],
+   "d2_DR3": 13.867394410061582,
+   "Lambda": 2.595501955563999,
+   "Lambda_v4_denominator_m_p3": 2.6140288888022365,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- segunda evaluación mismo tag (debe negarse)
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+Traceback (most recent call last):
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v5.py", line 286, in <module>
+    evaluar(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4])
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v5.py", line 162, in evaluar
+    assert not resp.exists(), f"ya existe {resp.name}: Λ se calcula una sola vez (control de coherencia; el compromiso es el orden de los commits públicos)"
+           ^^^^^^^^^^^^^^^^^
+AssertionError: ya existe pronostico_dr3_lrg2_v5_resultado_v5_f4_z0712.json: Λ se calcula una sola vez (control de coherencia; el compromiso es el orden de los commits públicos)

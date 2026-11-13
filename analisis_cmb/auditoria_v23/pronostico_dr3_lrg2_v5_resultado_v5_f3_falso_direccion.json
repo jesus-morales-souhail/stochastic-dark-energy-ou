@@ -1,0 +1,23 @@
+{
+ "mode": "evaluar",
+ "version": "v5",
+ "tag": "v5_f3_falso_direccion",
+ "values_file": "pronostico_dr3_lrg2_v3_falso_dr3_valores.json",
+ "values_sha256": "bd4ad2eebf5c7c7f75fd331f9d2547c1385202cb1222576ea2a63163b51333bd",
+ "script_check": {
+  "registered": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": true,
+  "status": "ok",
+  "reason": null
+ },
+ "principal_combo": "sinSN",
+ "combos": {},
+ "calibration_sha256": "bef6299e7821fc51da530bb884a03b6ac9169966e2db633a46a18da60b271623",
+ "status": "modelo roto",
+ "result_principal": "modelo roto",
+ "reason": [
+  "LRG2: C2_minus_C3, Cov_e",
+  "rho2_LRG2,eff = 1.685 fuera de [0.4, 0.8]"
+ ]
+}

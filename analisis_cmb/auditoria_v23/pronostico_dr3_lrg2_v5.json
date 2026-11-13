@@ -1,0 +1,137 @@
+{
+ "version": "v5 (correcciones de REVISION3_PRONOSTICO_DR3.md; sustituye a v3 y v4 para el registro)",
+ "script_sha256": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+ "git_head_at_run": "53bcb700333104a670b1ba00cd69410dee22ab1d",
+ "z_tolerance_rule_f": 0.010000001,
+ "z_pair_tolerance": 1e-09,
+ "boundary_tests": [
+  {
+   "bin": "LRG2",
+   "z": 0.696,
+   "dz": -0.010000000000000009,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.6965,
+   "dz": -0.009499999999999953,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.706,
+   "dz": 0.0,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.7155,
+   "dz": 0.009500000000000064,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.716,
+   "dz": 0.010000000000000009,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.6959,
+   "dz": -0.010099999999999998,
+   "evaluable": false,
+   "unmatched": [
+    "DM_LRG_z0.706",
+    "DH_LRG_z0.706"
+   ],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.7161,
+   "dz": 0.010099999999999998,
+   "evaluable": false,
+   "unmatched": [
+    "DM_LRG_z0.706",
+    "DH_LRG_z0.706"
+   ],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG2",
+   "z": 0.72,
+   "dz": 0.014000000000000012,
+   "evaluable": false,
+   "unmatched": [
+    "DM_LRG_z0.706",
+    "DH_LRG_z0.706"
+   ],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG1",
+   "z": 0.5,
+   "dz": -0.010000000000000009,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG1",
+   "z": 0.52,
+   "dz": 0.010000000000000009,
+   "evaluable": true,
+   "unmatched": [],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG1",
+   "z": 0.4999,
+   "dz": -0.010099999999999998,
+   "evaluable": false,
+   "unmatched": [
+    "DM_LRG_z0.510",
+    "DH_LRG_z0.510"
+   ],
+   "ambiguous": []
+  },
+  {
+   "bin": "LRG1",
+   "z": 0.5201,
+   "dz": 0.010099999999999998,
+   "evaluable": false,
+   "unmatched": [
+    "DM_LRG_z0.510",
+    "DH_LRG_z0.510"
+   ],
+   "ambiguous": []
+  }
+ ],
+ "v5_vs_v4": {
+  "sinSN": {
+   "d_c0": 0.0,
+   "d_c1": 0.0,
+   "d_power": 0.0,
+   "max_abs_d_a": 0.0,
+   "max_abs_d_Sigma": 0.0
+  },
+  "Pantheon+": {
+   "d_c0": 0.0,
+   "d_c1": 0.0,
+   "d_power": 0.0,
+   "max_abs_d_a": 0.0,
+   "max_abs_d_Sigma": 0.0
+  }
+ },
+ "runtime_s": 6.6324303150177
+}

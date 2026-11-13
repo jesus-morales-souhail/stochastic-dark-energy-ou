@@ -1,0 +1,16 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+frontera LRG2 z=0.696 dz=-0.0100: evaluable
+frontera LRG2 z=0.6965 dz=-0.0095: evaluable
+frontera LRG2 z=0.706 dz=+0.0000: evaluable
+frontera LRG2 z=0.7155 dz=+0.0095: evaluable
+frontera LRG2 z=0.716 dz=+0.0100: evaluable
+frontera LRG2 z=0.6959 dz=-0.0101: no evaluable
+frontera LRG2 z=0.7161 dz=+0.0101: no evaluable
+frontera LRG2 z=0.72 dz=+0.0140: no evaluable
+frontera LRG1 z=0.5 dz=-0.0100: evaluable
+frontera LRG1 z=0.52 dz=+0.0100: evaluable
+frontera LRG1 z=0.4999 dz=-0.0101: no evaluable
+frontera LRG1 z=0.5201 dz=+0.0101: no evaluable
+v5 vs v4 sinSN: {'d_c0': 0.0, 'd_c1': 0.0, 'd_power': 0.0, 'max_abs_d_a': 0.0, 'max_abs_d_Sigma': 0.0}
+v5 vs v4 Pantheon+: {'d_c0': 0.0, 'd_c1': 0.0, 'd_power': 0.0, 'max_abs_d_a': 0.0, 'max_abs_d_Sigma': 0.0}
+escrito pronostico_dr3_lrg2_v5.json 7 s

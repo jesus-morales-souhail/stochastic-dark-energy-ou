@@ -1,0 +1,33 @@
+{
+ "note": "DATOS FALSOS: valores de DR2 (z_eff de LRG2 = 0.712) con las filas en orden inverso; solo para probar el emparejamiento",
+ "labels": [
+  "DM_Lya_z2.33",
+  "DH_Lya_z2.33",
+  "DH_QSO_z1.484",
+  "DM_QSO_z1.484",
+  "DH_ELG_z1.321",
+  "DM_ELG_z1.321",
+  "DH_LRG+ELG_z0.934",
+  "DM_LRG+ELG_z0.934",
+  "DH_LRG_z0.712",
+  "DM_LRG_z0.712",
+  "DH_LRG_z0.510",
+  "DM_LRG_z0.510",
+  "DV_BGS_z0.295"
+ ],
+ "mean": [
+  38.988973961958784,
+  8.631545674846294,
+  12.81699964,
+  30.51190063,
+  14.17602155,
+  27.60085612,
+  17.64149464,
+  21.57563956,
+  19.45534918,
+  17.35069094,
+  21.86294686,
+  13.58758434,
+  7.94167639
+ ]
+}

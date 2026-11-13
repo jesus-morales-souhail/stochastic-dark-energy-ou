@@ -1,0 +1,20 @@
+{
+ "mode": "evaluar",
+ "version": "v5",
+ "tag": "v5_f4_z0720",
+ "values_file": "pronostico_dr3_lrg2_v4_falso_z0720_dr3_valores.json",
+ "values_sha256": "5486e805ef6daf6d4c8ae6258291dbaf9a9d6a6ef69d67dbce0ebb2a0af9819d",
+ "script_check": {
+  "registered": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": true,
+  "status": "ok",
+  "reason": null
+ },
+ "principal_combo": "sinSN",
+ "combos": {},
+ "calibration_sha256": "3d43834dfb16aef7254106fa2feb8fd254955f2ec9ee3619403320a165c79cbd",
+ "status": "no evaluable",
+ "result_principal": "no evaluable",
+ "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, |\u0394z| \u2264 0.01 + 1e-9)"
+}

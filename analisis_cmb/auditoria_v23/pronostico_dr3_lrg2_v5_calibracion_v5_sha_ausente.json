@@ -1,0 +1,23 @@
+{
+ "mode": "calibrar",
+ "version": "v5",
+ "tag": "v5_sha_ausente",
+ "cov_file": "pronostico_dr3_lrg2_v4_falso_z0712_dr3_cov.json",
+ "cov_sha256": "8f0b3d99a184f4a55c74c656d5659163232273bacb22d0998567d3497eda47a7",
+ "script_check": {
+  "registered": null,
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": null,
+  "status": "control de coherencia fallido",
+  "reason": "falta el fichero no_existe.sha256"
+ },
+ "git_head_at_run": "53bcb700333104a670b1ba00cd69410dee22ab1d",
+ "keys_read": [
+  "labels",
+  "cov"
+ ],
+ "principal_combo": "sinSN",
+ "combos": {},
+ "status": "control de coherencia fallido",
+ "reason": "falta el fichero no_existe.sha256"
+}

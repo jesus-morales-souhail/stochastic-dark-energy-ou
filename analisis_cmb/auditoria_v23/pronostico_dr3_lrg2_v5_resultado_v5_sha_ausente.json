@@ -1,0 +1,19 @@
+{
+ "mode": "evaluar",
+ "version": "v5",
+ "tag": "v5_sha_ausente",
+ "values_file": "pronostico_dr3_lrg2_v4_falso_z0712_dr3_valores.json",
+ "values_sha256": "5fb710dcd3a9e5ed20e86dc446edddbb1f82750ab3b258c6c7f1ac76d5be0486",
+ "script_check": {
+  "registered": null,
+  "current": "734a4c8de4ea85df6a911abe9cd67825a5c5ec1ba029c0a43993dde4f48b1839",
+  "match": null,
+  "status": "control de coherencia fallido",
+  "reason": "falta el fichero no_existe.sha256"
+ },
+ "principal_combo": "sinSN",
+ "combos": {},
+ "status": "control de coherencia fallido",
+ "result_principal": "control de coherencia fallido",
+ "reason": "falta el fichero no_existe.sha256"
+}
