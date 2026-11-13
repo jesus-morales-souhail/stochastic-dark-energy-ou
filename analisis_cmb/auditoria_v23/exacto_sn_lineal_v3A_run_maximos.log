@@ -1,0 +1,17 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+maximos v3A SN 0.1 {"sigma_at_max_grid": 1e-06, "lnL_max_minus_sigma0": 0.0, "max_class": "sigma->0", "clipped_max_at_grid_edge_0.05": false, "192_clipped": 0.7724690055762902, "1
+maximos v3A SN 0.3 {"sigma_at_max_grid": 1e-06, "lnL_max_minus_sigma0": 0.0, "max_class": "sigma->0", "clipped_max_at_grid_edge_0.05": false, "192_clipped": 0.4467050247592941, "1
+maximos v3A SN 1.0 {"sigma_at_max_grid": 1e-06, "lnL_max_minus_sigma0": 0.0, "max_class": "sigma->0", "clipped_max_at_grid_edge_0.05": false, "192_clipped": 0.24645694037842103, "
+maximos v3A SN 3.0 {"sigma_at_max_grid": 1e-06, "lnL_max_minus_sigma0": 0.0, "max_class": "sigma->0", "clipped_max_at_grid_edge_0.05": false, "192_clipped": 0.14654415015346264, "
+maximos v3A SN 10.0 {"sigma_at_max_grid": 1e-06, "lnL_max_minus_sigma0": 0.0, "max_class": "sigma->0", "clipped_max_at_grid_edge_0.05": false, "192_clipped": 0.09204875511475193, "
+maximos v3A BAO+SN 0.1 {"sigma_at_max_grid": 0.1992715904003189, "lnL_max_minus_sigma0": 1.0148046712129144, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clipp
+maximos v3A BAO+SN 0.3 {"sigma_at_max_grid": 0.1163930858788012, "lnL_max_minus_sigma0": 1.0130863527992915, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clipp
+maximos v3A BAO+SN 1.0 {"sigma_at_max_grid": 0.06798435448412177, "lnL_max_minus_sigma0": 1.0026386319495941, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clip
+maximos v3A BAO+SN 3.0 {"sigma_at_max_grid": 0.03971841590451588, "lnL_max_minus_sigma0": 0.9428085039603502, "max_class": "interior", "clipped_max_at_grid_edge_0.05": false, "192_cli
+maximos v3A BAO+SN 10.0 {"sigma_at_max_grid": 0.03155105123928201, "lnL_max_minus_sigma0": 0.6917550924226816, "max_class": "interior", "clipped_max_at_grid_edge_0.05": false, "192_cli
+maximos v3A BAO+CMB+SN 0.1 {"sigma_at_max_grid": 0.34116430921009483, "lnL_max_minus_sigma0": 1.113297968904135, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clipp
+maximos v3A BAO+CMB+SN 0.3 {"sigma_at_max_grid": 0.18453792946453307, "lnL_max_minus_sigma0": 1.114028671988308, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clipp
+maximos v3A BAO+CMB+SN 1.0 {"sigma_at_max_grid": 0.1077872617411859, "lnL_max_minus_sigma0": 1.0868922660083626, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_clipp
+maximos v3A BAO+CMB+SN 3.0 {"sigma_at_max_grid": 0.058302810602972543, "lnL_max_minus_sigma0": 0.9293545471659854, "max_class": "interior", "clipped_max_at_grid_edge_0.05": true, "192_cli
+maximos v3A BAO+CMB+SN 10.0 {"sigma_at_max_grid": 0.03155105123928201, "lnL_max_minus_sigma0": 0.552674746086268, "max_class": "interior", "clipped_max_at_grid_edge_0.05": false, "192_clip
+done maximos v3A 499 s

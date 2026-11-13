@@ -267,3 +267,10 @@ una prueba de calibración (mismas supernovas, nueva calibración y covarianza),
   Con esa medida: DES-SN5YR y Dovekie tienen tanta o más información que Pantheon+ (0.017 y 0.015 frente a 0.018) y solo se mueve el 5 %,
   según su tensión; Union3 tiene menos (0.027) y se mueven las dos reglas. Es consistente con la hipótesis, pero son cuatro muestras y la
   hipótesis se escribió después de verlas.
+
+## Addendum (13-11-2026): fila SN de la respuesta lineal (errata 129)
+
+Las cotas lineales (−1.92 y −1.35) y los máximos de ln Z de esta nota se calcularon con la `make_linear` antigua, cuyas filas SN interpolaban la
+derivada por nodo (errata 129 de ERRATAS_V3.md, confirmada). Recalculadas con la fila corregida (`muestras_sn_linear_v3A.json`), las cotas cambian
+≤ 1.5 × 10⁻⁴ relativo y los máximos de ln Z ≤ 3.2 × 10⁻⁴ en valor absoluto; a la precisión de esta nota solo cambia una cifra: Union3, OU θ = 0.3, caída −1.35: 0.602 → 0.603. Las cifras originales no se
+reescriben; el detalle está en `CORRECCION_FILA_SN.md` (§4.3). Todo cálculo nuevo debe usar `respuesta_v3A`.

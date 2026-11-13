@@ -146,3 +146,11 @@ en la malla GRID (σ = 0 es el primer nodo; la resta está en la línea 161), `"
 `prof`, con umbral `thr = prof[k0] − DROP` desde el máximo global (línea 207). Por tanto "Δln L máx > 1.92" equivale exactamente a que el
 intervalo de la caída de 1.92 desde el máximo global de la marginal lineal excluya σ_X = 0 (máximo buscado en los nodos de la malla, no en
 el spline; la malla llega a σ = 1.5). La versión Monte Carlo (`mc_dlnL_max`, `mc_excl0`) hace lo mismo sobre su propia curva.
+
+## Addendum (13-11-2026): fila SN de la respuesta lineal (errata 129)
+
+Todo lo de esta nota usa la A de `muestras_sn.make_linear` antigua (errata 129, confirmada). Recalculado con la fila corregida y las mismas semillas
+(`inyeccion_v3A.json`): las coberturas de la marginal (95.5 / 96.5 / 97.5 %) y de la regla del 5 % no cambian en ningún universo, el 43 % de falsas
+exclusiones del escenario C se mantiene, las medianas de las cotas cambian ≤ 6.5 × 10⁻⁴ relativo; solo cambia, en la tercera decimal, "marginal /A"
+de B 0.2 (3.430 → 3.431) y B 0.3 (4.770 → 4.771), y la comprobación con datos reales pasa de 0.27712 a 0.27709 (sigue siendo 0.2771 y −3 %). Las cifras
+originales no se reescriben; detalle en `CORRECCION_FILA_SN.md` (§4.4). Todo cálculo nuevo debe usar `respuesta_v3A`.

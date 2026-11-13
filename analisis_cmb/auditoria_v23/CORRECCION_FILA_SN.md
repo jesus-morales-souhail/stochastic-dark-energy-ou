@@ -323,9 +323,167 @@ Con 3 decimales en cotas y 1 decimal en porcentajes, **ninguna cifra de PROPUEST
 0.461 / 0.263 / 0.174 / 0.116), las de familias y muestras citadas, las coberturas (95.5 / 96.5 / 97.5 %), el 43 %, el ×1.50 del escenario C, el 41.1 % de
 ρ_DE ≤ 0 en el techo lineal y el 0.732 de P_prior quedan iguales. Cifras que sí cambiarían en sus notas de origen, a su precisión: MUESTRAS_SN.md Union3
 OU θ = 0.3, −1.35: 0.602 → 0.603; INYECCION.md "marginal /A" de B 0.2 y B 0.3 a tres decimales (3.430 → 3.431; 4.770 → 4.771). Pendiente de medir: las cifras
-de `exacto_sn.linear_bounds` / `maximos_globales` (SN solas 0.246 / 0.147 / 0.092 y los cocientes ×1.85 / ×1.98 / ×2.22 de A34) cuando se recalculen con la
+de `exacto_sn.linear_bounds` / `maximos_globales` (SN solas 0.246 / 0.147 / 0.092 y los cocientes ×1.85 / ×1.98 / ×2.22 de A34 [corregido 13-11-2026: es A35 y cita ×1.85 / ×1.93 / ×2.21; error de transcripción de esta nota, no de PROPUESTA_V3]) cuando se recalculen con la
 fila SN corregida.
 
 ## Predicción, punto por punto
 
 P7 sí (1.5e-04). P8 sí (1.4e-04 en cotas, 3.1e-04 en ln Z). P9 sí (0 universos, 0 puntos). P10 sí (5.2e-05 mag).
+
+## 7. Cierre: `exacto_sn.linear_bounds` y `maximos_globales.py` (13-11-2026)
+
+**Predicción (de Claude, escrita antes de ejecutar, copiada literal):**
+
+- P11. Con la A corregida, las cotas de SN solas (0.246 / 0.147 / 0.092) y los cocientes de A34 (×1.85 / ×1.98 / ×2.22) no cambian a la precisión con la que se citan, ni las cifras de A26; los máximos globales siguen en el mismo nodo y su ln Z − ln Z(0) cambia < 1e-3.
+
+**Cómo se hizo.** `exacto_sn.linear_bounds` (l. 272–363) y la parte `exacto_sn` de `maximos_globales.py` (l. 90–178) construyen su propia A en la malla
+uniforme de `cmb_fondo` (fiducial `CF.OM_FID`), no en la de `build_A`, así que no pueden llamar a `build_A_v3` tal cual: el módulo nuevo
+`exacto_sn_lineal_v3A.py` copia las dos rutinas sin cambios y aplica en su malla la **misma definición** de la fila SN de `build_A_v3`
+(derivada del logaritmo de la D̃_M interpolada; modo `v3A`), o la fila antigua (modo `old`, reproducción). Hilos BLAS como los originales:
+1 para `exacto_sn` (su `setdefault`), 16 para `maximos_globales` (importa numpy antes que los módulos que fijan hilos). Salidas:
+`exacto_sn_lineal_v3A_{exacto_sn,maximos}_{old,v3A}.json` (más `_old_omp1` y `_old_omp16` para la prueba de hilos) y la tabla en
+`CORRECCION_FILA_SN_cierre_v3A.json` (`correccion_fila_sn_cierre.py`).
+
+**Paso 1, reproducción con la fila antigua.** `exacto_sn.linear_bounds`: **bit a bit** (diferencia máxima 0.0 en las 30 cotas, χ² y parámetros).
+`maximos_globales` (parte `exacto_sn`): ln Z − ln Z(0) del máximo global reproducido a ≤ 5.7 × 10⁻⁹ y, en SN solas, exactamente (0.0); las cotas
+de BAO + SN y BAO + θ* + ω_m + SN a ≤ 1.5 × 10⁻¹⁰; **pero las raíces de las cotas de SN solas difieren de las originales en hasta 9.4 × 10⁻⁸
+(1.2 × 10⁻⁷ relativo) con 16 hilos y hasta 5.2 × 10⁻⁷ con 1 hilo, por encima del ≤ 10⁻⁸ fijado.** Con ln Z idéntica en los dos recuentos de hilos
+y `exacto_sn.linear_bounds` bit a bit con la misma A, la causa es el orden de suma dentro de `brentq` (evaluaciones de ln Z fuera de la malla
+que difieren en ~10⁻⁹) amplificado por el perfil casi plano de SN solas cerca de la raíz; no es un cambio de método ni de datos. Se deja
+constancia como desviación del criterio y se sigue con esa salvedad:
+
+| entrada | \|16 hilos − original\| cota 192 | \|1 hilo − original\| cota 192 | \|16 h − orig.\| ln Z máx | \|1 h − orig.\| ln Z máx |
+|---|---|---|---|---|
+| SN theta_0.1 | 9.4e-08 | 5.2e-07 | 0.0e+00 | 0.0e+00 |
+| SN theta_0.3 | 5.4e-08 | 3.0e-07 | 0.0e+00 | 0.0e+00 |
+| SN theta_1 | 2.9e-08 | 1.6e-07 | 0.0e+00 | 0.0e+00 |
+| SN theta_3 | 1.6e-08 | 8.7e-08 | 0.0e+00 | 0.0e+00 |
+| SN theta_10 | 9.0e-09 | 5.0e-08 | 0.0e+00 | 0.0e+00 |
+| BAO+SN theta_0.1 | 2.3e-12 | 8.3e-11 | 1.7e-10 | 3.1e-10 |
+| BAO+SN theta_0.3 | 1.0e-12 | 4.6e-11 | 1.7e-10 | 3.1e-10 |
+| BAO+SN theta_1 | 1.7e-13 | 2.2e-11 | 1.6e-10 | 3.3e-10 |
+| BAO+SN theta_3 | 9.0e-13 | 1.3e-11 | 1.3e-10 | 3.0e-10 |
+| BAO+SN theta_10 | 1.5e-12 | 8.6e-12 | 1.1e-10 | 3.8e-10 |
+| BAO+CMB+SN theta_0.1 | 1.3e-10 | 9.5e-11 | 3.9e-10 | 4.9e-10 |
+| BAO+CMB+SN theta_0.3 | 1.3e-10 | 9.6e-11 | 8.9e-10 | 8.7e-10 |
+| BAO+CMB+SN theta_1 | 1.1e-10 | 8.4e-11 | 1.6e-09 | 1.4e-09 |
+| BAO+CMB+SN theta_3 | 1.5e-10 | 1.2e-10 | 4.3e-09 | 3.6e-09 |
+| BAO+CMB+SN theta_10 | 3.1e-11 | 2.0e-11 | 5.7e-09 | 4.6e-09 |
+
+**Paso 2, tabla antiguo / nuevo** (cambio relativo en cotas; para los máximos globales, nodo y ln Z − ln Z(0)):
+
+| fuente | cifra | antiguo | nuevo | cambio |
+|---|---|---|---|---|
+| exacto_sn.linear_bounds | SN theta_0.1 192 | 0.772432 | 0.772469 | +4.76e-05 |
+| exacto_sn.linear_bounds | SN theta_0.1 135 | 0.539704 | 0.539782 | +1.46e-04 |
+| exacto_sn.linear_bounds | SN theta_0.3 192 | 0.446683 | 0.446705 | +4.87e-05 |
+| exacto_sn.linear_bounds | SN theta_0.3 135 | 0.312096 | 0.312142 | +1.47e-04 |
+| exacto_sn.linear_bounds | SN theta_1 192 | 0.246444 | 0.246457 | +5.17e-05 |
+| exacto_sn.linear_bounds | SN theta_1 135 | 0.172245 | 0.172271 | +1.51e-04 |
+| exacto_sn.linear_bounds | SN theta_3 192 | 0.146536 | 0.146544 | +5.61e-05 |
+| exacto_sn.linear_bounds | SN theta_3 135 | 0.102775 | 0.102791 | +1.59e-04 |
+| exacto_sn.linear_bounds | SN theta_10 192 | 0.092046 | 0.092049 | +2.65e-05 |
+| exacto_sn.linear_bounds | SN theta_10 135 | 0.065846 | 0.065856 | +1.48e-04 |
+| exacto_sn.linear_bounds | BAO+SN theta_0.1 192 | 0.832690 | 0.832705 | +1.76e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_0.1 135 | 0.724570 | 0.724600 | +4.23e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_0.3 192 | 0.447218 | 0.447231 | +2.95e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_0.3 135 | 0.384041 | 0.384062 | +5.55e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_1 192 | 0.232668 | 0.232673 | +2.53e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_1 135 | 0.197165 | 0.197175 | +5.05e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_3 192 | 0.144732 | 0.144732 | +1.16e-06 |
+| exacto_sn.linear_bounds | BAO+SN theta_3 135 | 0.123323 | 0.123327 | +2.66e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_10 192 | 0.104270 | 0.104262 | -7.19e-05 |
+| exacto_sn.linear_bounds | BAO+SN theta_10 135 | 0.089561 | 0.089557 | -3.95e-05 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_0.1 192 | None | None | — |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_0.1 135 | 0.917273 | 0.917275 | +2.71e-06 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_0.3 192 | 0.566548 | 0.566541 | -1.29e-05 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_0.3 135 | 0.504526 | 0.504530 | +8.85e-06 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_1 192 | 0.298185 | 0.298179 | -1.92e-05 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_1 135 | 0.262616 | 0.262616 | +3.36e-06 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_3 192 | 0.177840 | 0.177831 | -5.21e-05 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_3 135 | 0.154421 | 0.154417 | -2.84e-05 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_10 192 | 0.118970 | 0.118954 | -1.41e-04 |
+| exacto_sn.linear_bounds | BAO+CMB+SN theta_10 135 | 0.100913 | 0.100902 | -1.05e-04 |
+| maximos_globales exacto_sn | SN theta_0.1 192_global | 0.772432 | 0.772469 | +4.75e-05 |
+| maximos_globales exacto_sn | SN theta_0.1 135_global | 0.539704 | 0.539783 | +1.45e-04 |
+| maximos_globales exacto_sn | SN theta_0.1 192_clipped | 0.772432 | 0.772469 | +4.75e-05 |
+| maximos_globales exacto_sn | SN theta_0.1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 1e-06, +0.000000 | σ = 1e-06, +0.000000 | Δln Z +0.00e+00, mismo nodo: sí |
+| maximos_globales exacto_sn | SN theta_0.3 192_global | 0.446683 | 0.446705 | +4.85e-05 |
+| maximos_globales exacto_sn | SN theta_0.3 135_global | 0.312096 | 0.312142 | +1.47e-04 |
+| maximos_globales exacto_sn | SN theta_0.3 192_clipped | 0.446683 | 0.446705 | +4.85e-05 |
+| maximos_globales exacto_sn | SN theta_0.3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 1e-06, +0.000000 | σ = 1e-06, +0.000000 | Δln Z +0.00e+00, mismo nodo: sí |
+| maximos_globales exacto_sn | SN theta_1 192_global | 0.246444 | 0.246457 | +5.16e-05 |
+| maximos_globales exacto_sn | SN theta_1 135_global | 0.172245 | 0.172271 | +1.51e-04 |
+| maximos_globales exacto_sn | SN theta_1 192_clipped | 0.246444 | 0.246457 | +5.16e-05 |
+| maximos_globales exacto_sn | SN theta_1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 1e-06, +0.000000 | σ = 1e-06, +0.000000 | Δln Z +0.00e+00, mismo nodo: sí |
+| maximos_globales exacto_sn | SN theta_3 192_global | 0.146536 | 0.146544 | +5.60e-05 |
+| maximos_globales exacto_sn | SN theta_3 135_global | 0.102775 | 0.102791 | +1.59e-04 |
+| maximos_globales exacto_sn | SN theta_3 192_clipped | 0.146536 | 0.146544 | +5.60e-05 |
+| maximos_globales exacto_sn | SN theta_3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 1e-06, +0.000000 | σ = 1e-06, +0.000000 | Δln Z +0.00e+00, mismo nodo: sí |
+| maximos_globales exacto_sn | SN theta_10 192_global | 0.092046 | 0.092049 | +2.64e-05 |
+| maximos_globales exacto_sn | SN theta_10 135_global | 0.065846 | 0.065856 | +1.48e-04 |
+| maximos_globales exacto_sn | SN theta_10 192_clipped | 0.092046 | 0.092049 | +2.64e-05 |
+| maximos_globales exacto_sn | SN theta_10 máximo global: nodo σ / ln Z − ln Z(0) | σ = 1e-06, +0.000000 | σ = 1e-06, +0.000000 | Δln Z +0.00e+00, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+SN theta_0.1 192_global | 0.703044 | 0.703062 | +2.52e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.1 135_global | 0.591214 | 0.591242 | +4.78e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.1 192_clipped | 0.832690 | 0.832705 | +1.76e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.199272, +1.014742 | σ = 0.199272, +1.014805 | Δln Z +6.26e-05, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+SN theta_0.3 192_global | 0.408588 | 0.408598 | +2.34e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.3 135_global | 0.343956 | 0.343972 | +4.60e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.3 192_clipped | 0.447218 | 0.447231 | +2.95e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_0.3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.116393, +1.013019 | σ = 0.116393, +1.013086 | Δln Z +6.69e-05, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+SN theta_1 192_global | 0.229720 | 0.229723 | +1.59e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_1 135_global | 0.194078 | 0.194085 | +3.86e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_1 192_clipped | 0.232668 | 0.232673 | +2.53e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.0679844, +1.002552 | σ = 0.0679844, +1.002639 | Δln Z +8.64e-05, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+SN theta_3 192_global | 0.144732 | 0.144732 | +1.16e-06 |
+| maximos_globales exacto_sn | BAO+SN theta_3 135_global | 0.123323 | 0.123327 | +2.66e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_3 192_clipped | 0.144732 | 0.144732 | +1.16e-06 |
+| maximos_globales exacto_sn | BAO+SN theta_3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.0397184, +0.942693 | σ = 0.0397184, +0.942809 | Δln Z +1.16e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+SN theta_10 192_global | 0.104270 | 0.104262 | -7.19e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_10 135_global | 0.089561 | 0.089557 | -3.95e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_10 192_clipped | 0.104270 | 0.104262 | -7.19e-05 |
+| maximos_globales exacto_sn | BAO+SN theta_10 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.0315511, +0.691489 | σ = 0.0315511, +0.691755 | Δln Z +2.66e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.1 192_global | 0.864302 | 0.864279 | -2.65e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.1 135_global | 0.754154 | 0.754148 | -8.40e-06 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.1 192_clipped | None | None | — |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.341164, +1.113129 | σ = 0.341164, +1.113298 | Δln Z +1.69e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.3 192_global | 0.502171 | 0.502158 | -2.55e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.3 135_global | 0.438101 | 0.438098 | -6.70e-06 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.3 192_clipped | 0.566548 | 0.566541 | -1.29e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_0.3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.184538, +1.113878 | σ = 0.184538, +1.114029 | Δln Z +1.51e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_1 192_global | 0.282443 | 0.282433 | -3.51e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_1 135_global | 0.246176 | 0.246173 | -1.60e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_1 192_clipped | 0.298185 | 0.298179 | -1.92e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_1 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.107787, +1.086738 | σ = 0.107787, +1.086892 | Δln Z +1.54e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_3 192_global | 0.177139 | 0.177129 | -5.70e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_3 135_global | 0.153678 | 0.153673 | -3.43e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_3 192_clipped | 0.177840 | 0.177831 | -5.21e-05 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_3 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.0583028, +0.929204 | σ = 0.0583028, +0.929355 | Δln Z +1.50e-04, mismo nodo: sí |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_10 192_global | 0.118970 | 0.118954 | -1.41e-04 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_10 135_global | 0.100913 | 0.100902 | -1.05e-04 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_10 192_clipped | 0.118970 | 0.118954 | -1.41e-04 |
+| maximos_globales exacto_sn | BAO+CMB+SN theta_10 máximo global: nodo σ / ln Z − ln Z(0) | σ = 0.0315511, +0.552450 | σ = 0.0315511, +0.552675 | Δln Z +2.24e-04, mismo nodo: sí |
+
+**Cocientes de A35 (SN solas frente a BAO solo, `maximos_globales` → cmb_fondo.BAO|Lambda_absorbs_X0, sin filas SN, sin cambio):**
+
+| θ | SN solas antiguo → nuevo | BAO solo | cociente antiguo → nuevo | citado antiguo → nuevo |
+|---|---|---|---|---|
+| 1 | 0.246444 → 0.246457 | 0.456421 | ×1.8520 → ×1.8519 | 0.246 / ×1.85 → 0.246 / ×1.85 |
+| 3 | 0.146536 → 0.146544 | 0.282900 | ×1.9306 → ×1.9305 | 0.147 / ×1.93 → 0.147 / ×1.93 |
+| 10 | 0.092046 → 0.092049 | 0.203306 | ×2.2087 → ×2.2087 | 0.092 / ×2.21 → 0.092 / ×2.21 |
+
+**Cifra de A26** (`inyeccion.json` → real_check.marg_linear frente a la exacta 0.287): 0.277119 → 0.277109; citada 0.2771 → 0.2771, −3 % → −3 %.
+
+**Nota sobre el enunciado de P11.** La predicción copia de §6 los cocientes "×1.85 / ×1.98 / ×2.22" y la etiqueta "A34"; PROPUESTA_V3 cita en A35 ×1.85 / ×1.93 / ×2.21
+(`maximos_globales.json`: 1.8520 / 1.9306 / 2.2087). El error era de transcripción de esta nota (§6, corregido entre corchetes) y P11 se evalúa sobre lo que cita PROPUESTA_V3.
+
+**P11: sí.** SN solas 0.246 / 0.147 / 0.092 y cocientes ×1.85 / ×1.93 / ×2.21 sin cambio a su precisión; A26 sin cambio; los 15 máximos globales siguen en el
+mismo nodo y su ln Z − ln Z(0) cambia como mucho 2.7e-04 (< 10⁻³); cambio relativo máximo de cualquier cota 1.6e-04. Ninguna cifra citada a
+tres decimales cambia en estas dos fuentes.
+
+## 8. Regla para lo que sigue
+
+**Todo cálculo nuevo debe usar `respuesta_v3A.build_A_v3` (o, en las rutinas con malla propia, la misma definición de la fila SN).** Los scripts
+antiguos (`marginal_guiada.build_A`, `muestras_sn.make_linear`, `exacto_sn.linear_bounds`, `maximos_globales.py`) se conservan sin tocar por
+trazabilidad de los json históricos; sus cifras quedan marcadas por la errata 129 y su impacto está medido aquí.
