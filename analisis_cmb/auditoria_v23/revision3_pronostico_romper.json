@@ -1,0 +1,501 @@
+{
+ "work_dir": "/tmp/claude-1000/-home-ashpokemon-Proyectos-01-Fisica-y-Cosmologia-stochastic-dark-energy-ou/90a55ce1-6eb3-44f9-90d3-ec9aec734942/scratchpad/romper3b",
+ "attempts": {
+  "0_self_check_sin_fichero_sha256": {
+   "outcome": "informativo",
+   "detail": {
+    "registered": null,
+    "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+    "match": null
+   }
+  },
+  "1_evaluar_sin_calibrar": {
+   "expected": "negarse",
+   "outcome": "se neg\u00f3 (AssertionError)",
+   "detail": "primero calibrar"
+  },
+  "2a_calibrar_z0712": {
+   "expected": "ok, shift +0.006",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.006000000000000005,
+     0.006000000000000005,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": null,
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": null
+    },
+    "c0": {
+     "sinSN": 1.025972340440077,
+     "Pantheon+": 0.9977980081375597
+    }
+   }
+  },
+  "2b_evaluar_valores_z0706_con_cov_z0712_y_sin_sha256_del_script": {
+   "expected": "\u00bfse niega? (etiquetas con z distinto; self_check None)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "script_check": {
+     "registered": null,
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": null
+    },
+    "status": "ok",
+    "result_principal": "favorece H1",
+    "result_secondary_Pantheon+": "favorece H1",
+    "L": {
+     "sinSN": 2.4843427677545318,
+     "Pantheon+": 2.6140288888022365
+    }
+   }
+  },
+  "3_self_check_con_sha256_registrado": {
+   "outcome": "informativo",
+   "detail": {
+    "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+    "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+    "match": true
+   }
+  },
+  "3a_calibrar_z0712_bis": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.006000000000000005,
+     0.006000000000000005,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {
+     "sinSN": 1.025972340440077,
+     "Pantheon+": 0.9977980081375597
+    }
+   }
+  },
+  "3b_evaluar_normal": {
+   "expected": "ok una vez",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "status": "ok",
+    "result_principal": "favorece H1",
+    "result_secondary_Pantheon+": "favorece H1",
+    "L": {
+     "sinSN": 2.4843427677545318,
+     "Pantheon+": 2.6140288888022365
+    }
+   }
+  },
+  "3c_evaluar_otra_vez": {
+   "expected": "negarse",
+   "outcome": "se neg\u00f3 (AssertionError)",
+   "detail": "ya existe pronostico_dr3_lrg2_v4_resultado_a3.json: \u039b se calcula una sola vez (control de coherencia; el compromiso es el orden de los commits p\u00fablicos)"
+  },
+  "3d_calibrar_con_sha256_registrado_incorrecto": {
+   "expected": "calibrar no comprueba (solo registra match False)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.006000000000000005,
+     0.006000000000000005,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "0000000000000000000000000000000000000000000000000000000000000000",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": false
+    },
+    "c0": {
+     "sinSN": 1.025972340440077,
+     "Pantheon+": 0.9977980081375597
+    }
+   }
+  },
+  "3e_evaluar_con_sha256_registrado_incorrecto": {
+   "expected": "negarse",
+   "outcome": "se neg\u00f3 (AssertionError)",
+   "detail": "el script no coincide con el sha256 registrado"
+  },
+  "4a_calibrar": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.006000000000000005,
+     0.006000000000000005,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {
+     "sinSN": 1.025972340440077,
+     "Pantheon+": 0.9977980081375597
+    }
+   }
+  },
+  "4b_evaluar_valores_reordenados": {
+   "expected": "\u00bfse niega con AssertionError (no es 'no evaluable')?",
+   "outcome": "se neg\u00f3 (AssertionError)",
+   "detail": "las etiquetas del fichero de valores no coinciden con las de la covarianza"
+  },
+  "5_calibrar_LRG_duplicado_0.706_y_0.712": {
+   "expected": "no evaluable (ambiguo)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "6_calibrar_LRG2_z0.716": {
+   "expected": "0.716 ok (inclusive); 0.7161 no evaluable",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "6_calibrar_LRG2_z0.7161": {
+   "expected": "0.716 ok (inclusive); 0.7161 no evaluable",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "7_calibrar_LRG1_desplazado_+0.01": {
+   "expected": "ok, shift registrado en LRG1",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "8_calibrar_trazador_renombrado": {
+   "expected": "no evaluable",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "9_calibrar_fichero_con_mean": {
+   "expected": "ok; keys_read = labels, cov",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": [
+    "labels",
+    "cov"
+   ]
+  },
+  "10_calibrar_LRG2_z0.715": {
+   "expected": "0.715 ok; 0.696 deber\u00eda ser ok (\u00b10.01 inclusive)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.009000000000000008,
+     0.009000000000000008,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {
+     "sinSN": 1.0258485206872858,
+     "Pantheon+": 0.9975144607720839
+    }
+   }
+  },
+  "10_calibrar_LRG2_z0.696": {
+   "expected": "0.715 ok; 0.696 deber\u00eda ser ok (\u00b10.01 inclusive)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "no evaluable",
+    "z_shifts": null,
+    "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+    "broken": null,
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {}
+   }
+  },
+  "10c_calibrar_LRG1_desplazado_+0.009": {
+   "expected": "ok, shift +0.009 registrado en LRG1",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.009000000000000008,
+     0.009000000000000008,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {
+     "sinSN": 1.025833598189258,
+     "Pantheon+": 0.99836144686957
+    }
+   }
+  },
+  "10d_aritmetica": {
+   "outcome": "informativo",
+   "detail": {
+    "0.716-0.706": 0.010000000000000009,
+    "0.706-0.696": 0.010000000000000009,
+    "0.52-0.51": 0.010000000000000009,
+    "<=0.01": [
+     false,
+     false
+    ]
+   }
+  },
+  "11a_manipular_calibracion_y_sha": {
+   "expected": "\u2014",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": "c0 = 9 y sha reescrito"
+  },
+  "11b_evaluar_tras_manipular": {
+   "expected": "se ejecuta con c0 = 9 (agujero conocido; compromiso = commits p\u00fablicos)",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "status": "ok",
+    "result_principal": "no concluyente",
+    "result_secondary_Pantheon+": "favorece H1",
+    "L": {
+     "sinSN": 2.4843427677545318,
+     "Pantheon+": 2.6140288888022365
+    }
+   }
+  },
+  "12a_calibrar": {
+   "expected": "ok",
+   "outcome": "EJECUT\u00d3 sin negarse",
+   "detail": {
+    "status": "ok",
+    "z_shifts": [
+     0.0,
+     0.0,
+     0.0,
+     0.006000000000000005,
+     0.006000000000000005,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "reason": null,
+    "broken": [],
+    "script_check": {
+     "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+     "match": true
+    },
+    "c0": {
+     "sinSN": 1.025972340440077,
+     "Pantheon+": 0.9977980081375597
+    }
+   }
+  },
+  "12_evaluar_valores_con_bin_nuevo_delante": {
+   "expected": "\u00bfAssertionError por \u00edndices distintos aunque las etiquetas hom\u00f3logas existan?",
+   "outcome": "se neg\u00f3 (AssertionError)",
+   "detail": "las etiquetas del fichero de valores no coinciden con las de la covarianza"
+  }
+ },
+ "work_files": [
+  "cov_dup.json",
+  "cov_lrg1.json",
+  "cov_lrg1b.json",
+  "cov_ren.json",
+  "cov_with_mean.json",
+  "cov_z0.696.json",
+  "cov_z0.715.json",
+  "cov_z0.716.json",
+  "cov_z0.7161.json",
+  "cov_z0706.json",
+  "cov_z0712.json",
+  "pronostico_dr3_lrg2_v4.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a2.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a2.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a3.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a3.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a3d.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a3d.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a4.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a4.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a5.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a5.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a6a.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a6a.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a6b.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a6b.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a7.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a7.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a8.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a8.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_a9.json",
+  "pronostico_dr3_lrg2_v4_calibracion_a9.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_b10a.json",
+  "pronostico_dr3_lrg2_v4_calibracion_b10a.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_b10b.json",
+  "pronostico_dr3_lrg2_v4_calibracion_b10b.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_b10c.json",
+  "pronostico_dr3_lrg2_v4_calibracion_b10c.sha256",
+  "pronostico_dr3_lrg2_v4_calibracion_b12.json",
+  "pronostico_dr3_lrg2_v4_calibracion_b12.sha256",
+  "pronostico_dr3_lrg2_v4_resultado_a2.json",
+  "pronostico_dr3_lrg2_v4_resultado_a3.json",
+  "pronostico_dr3_lrg2_v4_resultado_a4.json",
+  "val_extra.json",
+  "val_perm.json",
+  "val_z0706.json",
+  "val_z0712.json"
+ ]
+}
