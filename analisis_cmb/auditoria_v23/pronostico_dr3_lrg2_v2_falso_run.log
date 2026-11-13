@@ -1,0 +1,92 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "broken": [],
+ "rho2_per_bin": {
+  "BGS": 0.6,
+  "LRG1": 0.6,
+  "LRG2": 0.6,
+  "LRG3+ELG1": 0.5999999999999999,
+  "ELG2": 0.5999999999999999,
+  "QSO": 0.6,
+  "Lya": 0.6
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.013097055660397,
+   "c1": -1.5990017349707428,
+   "c1_lt_c0": true,
+   "power": 0.65782
+  },
+  "Pantheon+": {
+   "c0": 0.9783520521038187,
+   "c1": -1.572719069589295,
+   "c1_lt_c0": true,
+   "power": 0.68408
+  }
+ },
+ "sha256": "9b0b875573866e551aaa14a307fc14cf2db989c92616165effca6d63b79814fa"
+}
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result": {
+  "sinSN": "favorece H1",
+  "Pantheon+": "favorece H1"
+ },
+ "combos": {
+  "sinSN": {
+   "r3": [
+    -0.18231990059463143,
+    -0.6198249263992075
+   ],
+   "d2_DR3": 10.37944153069132,
+   "Lambda": 1.1269403699731018,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "r3": [
+    -0.19568784389392135,
+    -0.6273041942960802
+   ],
+   "d2_DR3": 11.032642391049855,
+   "Lambda": 1.1692048844442204,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- segunda evaluación (debe negarse):
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+Traceback (most recent call last):
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v2.py", line 385, in <module>
+    evaluar(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4])
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v2.py", line 332, in evaluar
+    assert not resp.exists(), f"ya existe {resp.name}: Λ se calcula una sola vez"
+           ^^^^^^^^^^^^^^^^^
+AssertionError: ya existe pronostico_dr3_lrg2_v2_resultado_falso.json: Λ se calcula una sola vez
+--- caso roto (rho2 = 0.3):
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "broken": [
+  "rho2_LRG2 = 0.300 fuera de [0.4, 0.8]"
+ ],
+ "rho2_per_bin": {
+  "BGS": 0.3,
+  "LRG1": 0.3,
+  "LRG2": 0.3,
+  "LRG3+ELG1": 0.29999999999999993,
+  "ELG2": 0.29999999999999993,
+  "QSO": 0.3,
+  "Lya": 0.3
+ },
+ "calibracion": {},
+ "sha256": "f0ebe1d1807be3b469580d30c853b783584fca5069e050fcc5da4caeec8753f1"
+}
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "result": "modelo roto",
+ "combos": {}
+}

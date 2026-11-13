@@ -1,0 +1,54 @@
+{
+ "mode": "calibrar",
+ "tag": "falso_roto",
+ "cov_file": "pronostico_dr3_lrg2_v2_falso_roto_dr3_cov.json",
+ "cov_sha256": "63d47d838e4c62632b343f06de6b3d285cb357b370689c2effa613572ecf4640",
+ "script_sha256": "add9489055326e38b8f58f4d5f66687aa5058c09ad77b825e5d105c20feded1a",
+ "git_head_at_run": "99f879da13a120497b8a7594dc8486dab0e5fe1d",
+ "rupture_checks": {
+  "rho2_per_component": [
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.29999999999999993,
+   0.3,
+   0.29999999999999993,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.3
+  ],
+  "rho2_per_bin": {
+   "BGS": 0.3,
+   "LRG1": 0.3,
+   "LRG2": 0.3,
+   "LRG3+ELG1": 0.29999999999999993,
+   "ELG2": 0.29999999999999993,
+   "QSO": 0.3,
+   "Lya": 0.3
+  },
+  "component_rel_spread": {
+   "BGS": 0.0,
+   "LRG1": 0.0,
+   "LRG2": 0.0,
+   "LRG3+ELG1": 1.8503717077085946e-16,
+   "ELG2": 1.8503717077085946e-16,
+   "QSO": 0.0,
+   "Lya": 0.0
+  },
+  "broken": [
+   "rho2_LRG2 = 0.300 fuera de [0.4, 0.8]"
+  ],
+  "max_abs_offblock_cov3": 0.0,
+  "corr_DM_DH_LRG2": {
+   "DR2": -0.39525761496067274,
+   "DR3": -0.3952576149606728,
+   "change": -5.551115123125783e-17
+  },
+  "status": "modelo roto"
+ },
+ "combos": {}
+}

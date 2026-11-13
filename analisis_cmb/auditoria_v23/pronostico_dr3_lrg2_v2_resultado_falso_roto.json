@@ -1,0 +1,10 @@
+{
+ "mode": "evaluar",
+ "tag": "falso_roto",
+ "calibration_sha256": "f0ebe1d1807be3b469580d30c853b783584fca5069e050fcc5da4caeec8753f1",
+ "values_file": "pronostico_dr3_lrg2_v2_falso_dr3_valores.json",
+ "values_sha256": "bd4ad2eebf5c7c7f75fd331f9d2547c1385202cb1222576ea2a63163b51333bd",
+ "status": "modelo roto",
+ "combos": {},
+ "result": "modelo roto"
+}
