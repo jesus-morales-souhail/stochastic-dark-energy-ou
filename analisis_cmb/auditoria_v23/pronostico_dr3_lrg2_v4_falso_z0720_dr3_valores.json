@@ -1,0 +1,33 @@
+{
+ "note": "DATOS FALSOS: valores de DR2 sin cambio con z_eff de LRG2 = 0.72; solo para probar el modo evaluaci\u00f3n",
+ "labels": [
+  "DV_BGS_z0.295",
+  "DM_LRG_z0.510",
+  "DH_LRG_z0.510",
+  "DM_LRG_z0.720",
+  "DH_LRG_z0.720",
+  "DM_LRG+ELG_z0.934",
+  "DH_LRG+ELG_z0.934",
+  "DM_ELG_z1.321",
+  "DH_ELG_z1.321",
+  "DM_QSO_z1.484",
+  "DH_QSO_z1.484",
+  "DH_Lya_z2.33",
+  "DM_Lya_z2.33"
+ ],
+ "mean": [
+  7.94167639,
+  13.58758434,
+  21.86294686,
+  17.35069094,
+  19.45534918,
+  21.57563956,
+  17.64149464,
+  27.60085612,
+  14.17602155,
+  30.51190063,
+  12.81699964,
+  8.631545674846294,
+  38.988973961958784
+ ]
+}

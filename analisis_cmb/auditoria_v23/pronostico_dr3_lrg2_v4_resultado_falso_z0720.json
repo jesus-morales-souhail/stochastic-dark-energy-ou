@@ -1,0 +1,16 @@
+{
+ "mode": "evaluar",
+ "tag": "falso_z0720",
+ "calibration_sha256": "f09fde557ac1c8a6e4103599b943426ada88feef5748dd8c61d41e906dcd3dfe",
+ "values_file": "pronostico_dr3_lrg2_v4_falso_z0720_dr3_valores.json",
+ "values_sha256": "5486e805ef6daf6d4c8ae6258291dbaf9a9d6a6ef69d67dbce0ebb2a0af9819d",
+ "script_check": {
+  "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "match": true
+ },
+ "status": "no evaluable",
+ "principal_combo": "sinSN",
+ "combos": {},
+ "result_principal": "no evaluable"
+}

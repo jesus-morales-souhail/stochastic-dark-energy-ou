@@ -1,0 +1,106 @@
+--- calibrar falso_z0712
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "reason_or_broken": [],
+ "z_shifts": [
+  0.0,
+  0.0,
+  0.0,
+  0.006000000000000005,
+  0.006000000000000005,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "labels": {
+  "unmatched": [],
+  "z_shifts": {
+   "DM_LRG_z0.706": 0.006000000000000005,
+   "DH_LRG_z0.706": 0.006000000000000005
+  },
+  "ignored_dr3_rows": []
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "c1_lt_c0": true,
+   "power": 0.6582105
+  },
+  "Pantheon+": {
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "c1_lt_c0": true,
+   "power": 0.6809173
+  }
+ },
+ "sha256": "ce5fcaaac5752deb0e7b6fe0c449820ad235347518e15253a81bbb1fa065f36d"
+}
+--- evaluar falso_z0712
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "combos": {
+  "sinSN": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.01713868643189059,
+    -0.027368734503959956
+   ],
+   "d2_DR3": 13.046237459066175,
+   "Lambda": 2.4843427677545318,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "r3_fractional": [
+    -0.0178848710186448,
+    -0.027726355782880935
+   ],
+   "d2_DR3": 13.867394410061582,
+   "Lambda": 2.6140288888022365,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- calibrar falso_z0720
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "no evaluable",
+ "reason_or_broken": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed",
+ "z_shifts": null,
+ "labels": {
+  "unmatched": [
+   "DM_LRG_z0.706",
+   "DH_LRG_z0.706"
+  ],
+  "z_shifts": {},
+  "ignored_dr3_rows": [
+   "DM_LRG_z0.720",
+   "DH_LRG_z0.720"
+  ]
+ },
+ "calibracion": {},
+ "sha256": "f09fde557ac1c8a6e4103599b943426ada88feef5748dd8c61d41e906dcd3dfe"
+}
+--- evaluar falso_z0720
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "no evaluable",
+ "result_principal": "no evaluable",
+ "combos": {}
+}

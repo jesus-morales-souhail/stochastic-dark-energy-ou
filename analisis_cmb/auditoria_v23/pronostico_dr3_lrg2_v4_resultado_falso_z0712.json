@@ -1,0 +1,76 @@
+{
+ "mode": "evaluar",
+ "tag": "falso_z0712",
+ "calibration_sha256": "ce5fcaaac5752deb0e7b6fe0c449820ad235347518e15253a81bbb1fa065f36d",
+ "values_file": "pronostico_dr3_lrg2_v4_falso_z0712_dr3_valores.json",
+ "values_sha256": "5fb710dcd3a9e5ed20e86dc446edddbb1f82750ab3b258c6c7f1ac76d5be0486",
+ "script_check": {
+  "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "match": true
+ },
+ "status": "ok",
+ "principal_combo": "sinSN",
+ "combos": {
+  "sinSN": {
+   "p3": [
+    0.6809571090195359,
+    0.1409687218693384,
+    0.0
+   ],
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "m3_LRG2": [
+    17.65324435958446,
+    20.002800516676594
+   ],
+   "r3_absolute": [
+    -0.30255341958445925,
+    -0.5474513366765947
+   ],
+   "r3_fractional": [
+    -0.01713868643189059,
+    -0.027368734503959956
+   ],
+   "d2_DR3": 13.046237459066175,
+   "Lambda": 2.4843427677545318,
+   "c0": 1.025972340440077,
+   "c1": -1.5918223397675972,
+   "verdict": "favorece H1",
+   "strong_abs_Lambda_gt_3": false
+  },
+  "Pantheon+": {
+   "p3": [
+    0.68036683942824,
+    0.14113433324335653,
+    23.798262749701827
+   ],
+   "z3_LRG2": [
+    0.712,
+    0.712
+   ],
+   "m3_LRG2": [
+    17.666656818530072,
+    20.01015793826806
+   ],
+   "r3_absolute": [
+    -0.3159658785300721,
+    -0.5548087582680594
+   ],
+   "r3_fractional": [
+    -0.0178848710186448,
+    -0.027726355782880935
+   ],
+   "d2_DR3": 13.867394410061582,
+   "Lambda": 2.6140288888022365,
+   "c0": 0.9977980081375597,
+   "c1": -1.585348553012466,
+   "verdict": "favorece H1",
+   "strong_abs_Lambda_gt_3": false
+  }
+ },
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1"
+}

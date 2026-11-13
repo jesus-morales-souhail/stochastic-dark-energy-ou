@@ -1,0 +1,46 @@
+{
+ "mode": "calibrar",
+ "tag": "falso_z0720",
+ "cov_file": "pronostico_dr3_lrg2_v4_falso_z0720_dr3_cov.json",
+ "cov_sha256": "0e4b0fab51bcaae85890c1b969893241c97270e52a18b646b40b0fe0771f9773",
+ "script_check": {
+  "registered": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "current": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+  "match": true
+ },
+ "git_head_at_run": "6f1628bc129fb16ca7a4a8a9fbfbca4a4fdb749c",
+ "labels": {
+  "matches": {
+   "DV_BGS_z0.295": "DV_BGS_z0.295",
+   "DM_LRG_z0.510": "DM_LRG_z0.510",
+   "DH_LRG_z0.510": "DH_LRG_z0.510",
+   "DM_LRG+ELG_z0.934": "DM_LRG+ELG_z0.934",
+   "DH_LRG+ELG_z0.934": "DH_LRG+ELG_z0.934",
+   "DM_ELG_z1.321": "DM_ELG_z1.321",
+   "DH_ELG_z1.321": "DH_ELG_z1.321",
+   "DM_QSO_z1.484": "DM_QSO_z1.484",
+   "DH_QSO_z1.484": "DH_QSO_z1.484",
+   "DH_Lya_z2.33": "DH_Lya_z2.33",
+   "DM_Lya_z2.33": "DM_Lya_z2.33"
+  },
+  "unmatched": [
+   "DM_LRG_z0.706",
+   "DH_LRG_z0.706"
+  ],
+  "ambiguous": [],
+  "z_shifts": {},
+  "ignored_dr3_rows": [
+   "DM_LRG_z0.720",
+   "DH_LRG_z0.720"
+  ],
+  "ok": false
+ },
+ "keys_read": [
+  "labels",
+  "cov"
+ ],
+ "principal_combo": "sinSN",
+ "combos": {},
+ "status": "no evaluable",
+ "reason": "bins de DR2 sin hom\u00f3logo \u00fanico en DR3 (mismo tipo y trazador, z_eff \u00b1 0.01); LRG2 fuera de 0.706 \u00b1 0.01 cae aqu\u00ed"
+}

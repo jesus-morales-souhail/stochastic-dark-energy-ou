@@ -1,0 +1,21 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+sinSN rho2=0.6 dz=0: a/Sigma vs v3 7.2e-15/2.3e-16; c0/c1/power diff vs v3 -2.4e-14/4.4e-14/0.0e+00  [4 s]
+sinSN rho2=0.5 dz=0: a/Sigma vs v3 6.8e-15/2.8e-16; c0/c1/power diff vs v3 -6.6e-14/-2.3e-14/0.0e+00  [8 s]
+sinSN rho2=0.72 dz=0: a/Sigma vs v3 7.5e-15/1.6e-16; c0/c1/power diff vs v3 -4.3e-14/-1.0e-14/0.0e+00  [12 s]
+Pantheon+ rho2=0.6 dz=0: a/Sigma vs v3 8.9e-15/2.0e-16; c0/c1/power diff vs v3 8.0e-14/1.3e-15/0.0e+00  [16 s]
+Pantheon+ rho2=0.5 dz=0: a/Sigma vs v3 8.4e-15/2.7e-16; c0/c1/power diff vs v3 6.6e-14/1.6e-14/0.0e+00  [20 s]
+Pantheon+ rho2=0.72 dz=0: a/Sigma vs v3 9.4e-15/1.4e-16; c0/c1/power diff vs v3 -1.3e-15/-2.4e-14/0.0e+00  [24 s]
+P24 dz=-0.01: c0 1.0275 (+0.0001) c1 -1.5923 (+0.0021) power 0.6574 (-0.0002)  [28 s]
+P24 dz=-0.005: c0 1.0259 (-0.0015) c1 -1.5937 (+0.0006) power 0.6580 (+0.0005)  [31 s]
+P24 dz=+0.005: c0 1.0275 (+0.0001) c1 -1.5941 (+0.0003) power 0.6578 (+0.0002)  [35 s]
+P24 dz=+0.01: c0 1.0278 (+0.0004) c1 -1.5925 (+0.0019) power 0.6581 (+0.0006)  [39 s]
+{
+ "P24": {
+  "statement": "Desplazar el z_eff de LRG2 en \u00b10.01 (recalculando el modelo y el jacobiano en el nuevo z) cambia c0 y c1 menos de 0.05 y la potencia del caso principal menos de 0.02.",
+  "max_abs_d_c0": 0.0014509333573156091,
+  "max_abs_d_c1": 0.002103778203764506,
+  "max_abs_d_power": 0.0005775000000000086,
+  "holds": true
+ }
+}
+escrito pronostico_dr3_lrg2_v4.json 39 s

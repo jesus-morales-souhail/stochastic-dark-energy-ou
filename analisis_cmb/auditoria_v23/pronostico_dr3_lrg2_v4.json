@@ -1,0 +1,3478 @@
+{
+ "version": "v4 (correcci\u00f3n del redshift: predicci\u00f3n de DR3 en z_eff de DR3, residuos fraccionales)",
+ "script_sha256": "c38e623539a6e7cc64aba9baacc30c14366ca797a335ea519e3b9fb059847e0d",
+ "git_head_at_run": "6f1628bc129fb16ca7a4a8a9fbfbca4a4fdb749c",
+ "assumption_H1_fractional": "mu persistente fraccional, el mismo en z_eff DR2 y z_eff DR3 dentro de \u00b10.01; mu3 = mu2 \u00b7 m(p2, z3)/m(p2, z2) (linealizado en p2)",
+ "shifts_P24": [
+  -0.01,
+  -0.005,
+  0.005,
+  0.01
+ ],
+ "seeds": {
+  "reproduction": "[SEED_BASE, i_comb, i_rho2, i_hyp, 7] (as v3)",
+  "P24": "[SEED_BASE, 0, 600 + i_shift, i_hyp, 7]"
+ },
+ "combos": {
+  "sinSN": {
+   "cases": {
+    "rho2_0.6": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.0034739921220000003
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.473992122e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.002315994748
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.315994748e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0013895968488000007
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3895968488000006e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.013074126178735617,
+          0.11429112234126437
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1429112234126437e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.008716084119157077,
+          0.07619408156084292
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.619408156084293e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.005229650471494245,
+          0.045716448936505755
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.571644893650576e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6000000000000001
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.015476693001432805,
+          0.07082997231856719
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.0829972318567194e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010317795334288539,
+          0.04721998154571147
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.721998154571147e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.006190677200573122,
+          0.028331988927426877
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.833198892742688e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.011966193181682969,
+          0.027988808458317027
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.7988808458317028e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.007977462121121982,
+          0.01865920563887802
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.8659205638878024e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004786477272673187,
+          0.011195523383326812
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1195523383326812e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.022753049342961688,
+          0.07070284577703831
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.070284577703831e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.015168699561974464,
+          0.04713523051802555
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.7135230518025554e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.009101219737184679,
+          0.028281138310815322
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.8281138310815324e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.10496882023942276,
+          0.4058450617605772
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.058450617605772e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.06997921349294851,
+          0.27056337450705154
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.7056337450705154e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.04198752809576908,
+          0.1623380247042309
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.623380247042309e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.004957489413473742,
+          0.17078214962652627
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.7078214962652628e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.0033049929423158283,
+          0.11385476641768418
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1385476641768417e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0019829957653894966,
+          0.0683128598506105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.831285985061051e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6000000000000001
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.56032391786617,
+      20.090651218379634
+     ],
+     "V3k_fractional": [
+      [
+       7.04906844503667e-05,
+       -3.6682517617281196e-05
+      ],
+      [
+       -3.6682517617281196e-05,
+       0.00016754644629569108
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.0074741477251962455,
+        -0.01912782015901186
+       ],
+       "Sigma": [
+        [
+         2.7473667279434432e-05,
+         -1.5028192475438114e-05
+        ],
+        [
+         -1.5028192475438114e-05,
+         6.683860795318214e-05
+        ]
+       ],
+       "linearity_check_max_abs": 2.1163626406917047e-16,
+       "E_d2": 5.145884406898901
+      },
+      "H1": {
+       "a": [
+        -0.011937875893855919,
+        -0.031621774024924026
+       ],
+       "Sigma": [
+        [
+         4.503513131715442e-05,
+         -2.5418384127287026e-05
+        ],
+        [
+         -2.5418384127287026e-05,
+         0.00011120891106496019
+        ]
+       ],
+       "linearity_check_max_abs": 2.0296264668928643e-16,
+       "E_d2": 12.955615340929535
+      }
+     },
+     "hp": {
+      "c0": 1.027373142038469,
+      "c1": -1.594363371044784,
+      "c1_lt_c0": true,
+      "power": 0.6575211,
+      "P_lt_c1_H0": 0.5258119,
+      "inconclusive_H0": 0.4241881,
+      "inconclusive_H1": 0.2924789,
+      "P_gt3_H0": 0.0051317,
+      "P_gt3_H1": 0.3761338,
+      "P_ltm3_H0": 0.115584,
+      "P_ltm3_H1": 0.0041648,
+      "med_d2_H0": 4.763971309421313,
+      "med_d2_H1": 12.320310371440417,
+      "mc_err": {
+       "c0": 0.0013007121335214989,
+       "c1": 0.0012306774559590632,
+       "power": 0.00024632873473380177,
+       "P_lt_c1_H0": 0.0003309649796848262,
+       "inconclusive_H0": 0.00033096497968482865,
+       "inconclusive_H1": 0.00024632873473380285,
+       "P_gt3_H0": 2.2568439122908962e-05,
+       "P_gt3_H1": 8.464577169987418e-05,
+       "P_ltm3_H0": 0.0001230557236015908,
+       "P_ltm3_H1": 2.0402505292787557e-05,
+       "med_d2_H0": 0.0009124307678639435,
+       "med_d2_H1": 0.001216867739248213
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -3.3542645829014406,
+        -1.6815427893770067,
+        1.027373142038469
+       ],
+       "H1": [
+        -1.594363371044784,
+        2.0954625527894293,
+        7.493980661688918
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        1.4169745809742487,
+        4.763971309421313,
+        10.183645136672107
+       ],
+       "H1": [
+        4.938404397148407,
+        12.320310371440417,
+        23.11997592715451
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        0,
+        0,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        0,
+        0,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 7.244205235679146e-15,
+      "max_abs_diff_Sigma_absolute_units": 2.3245294578089215e-16,
+      "diff_hp": {
+       "c0": -2.4424906541753444e-14,
+       "c1": 4.440892098500626e-14,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": -3.108624468950438e-14,
+       "med_d2_H1": 4.760636329592671e-13
+      },
+      "max_abs_diff_hp": 4.760636329592671e-13
+     }
+    },
+    "rho2_0.5": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.002894993435
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.894993435e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.002894993435
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.894993435e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0014474967175000003
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4474967175000003e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.010895105148946344,
+          0.09524260195105365
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.524260195105366e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010895105148946344,
+          0.09524260195105365
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.524260195105366e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.005447552574473172,
+          0.047621300975526824
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.762130097552683e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.012897244167860672,
+          0.05902497693213933
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.902497693213933e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.012897244167860672,
+          0.05902497693213933
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.902497693213933e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.006448622083930334,
+          0.029512488466069665
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.9512488466069666e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.009971827651402476,
+          0.023324007048597523
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3324007048597524e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.009971827651402476,
+          0.023324007048597523
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3324007048597524e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0049859138257012355,
+          0.011662003524298763
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1662003524298764e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.01896087445246808,
+          0.058919038147531924
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.8919038147531925e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.01896087445246808,
+          0.058919038147531924
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.8919038147531925e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.009480437226234041,
+          0.029459519073765962
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.9459519073765962e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.08747401686618564,
+          0.3382042181338144
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.382042181338144e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.08747401686618564,
+          0.3382042181338144
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.382042181338144e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.043737008433092806,
+          0.1691021090669072
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.691021090669072e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.004131241177894785,
+          0.14231845802210524
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4231845802210525e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.004131241177894785,
+          0.14231845802210524
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4231845802210525e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.002065620588947392,
+          0.07115922901105262
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.115922901105263e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.56032391786617,
+      20.090651218379634
+     ],
+     "V3k_fractional": [
+      [
+       5.904687074395434e-05,
+       -3.0419427068079463e-05
+      ],
+      [
+       -3.0419427068079463e-05,
+       0.00013969895536513014
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.006309095123291369,
+        -0.015980037776272174
+       ],
+       "Sigma": [
+        [
+         2.886054901110295e-05,
+         -1.5535182565192655e-05
+        ],
+        [
+         -1.5535182565192655e-05,
+         6.968405859905026e-05
+        ]
+       ],
+       "linearity_check_max_abs": 2.0296264668928643e-16,
+       "E_d2": 4.639073148844213
+      },
+      "H1": {
+       "a": [
+        -0.011937875967039055,
+        -0.031621774061105314
+       ],
+       "Sigma": [
+        [
+         5.647894502356718e-05,
+         -3.168147467648894e-05
+        ],
+        [
+         -3.168147467648894e-05,
+         0.00013905640199551986
+        ]
+       ],
+       "linearity_check_max_abs": 2.0296264668928643e-16,
+       "E_d2": 15.852093914152336
+      }
+     },
+     "hp": {
+      "c0": 0.7559126693318887,
+      "c1": -1.611545000802872,
+      "c1_lt_c0": true,
+      "power": 0.7675076,
+      "P_lt_c1_H0": 0.6458505,
+      "inconclusive_H0": 0.3041495,
+      "inconclusive_H1": 0.1824924,
+      "P_gt3_H0": 0.0048993,
+      "P_gt3_H1": 0.5227879,
+      "P_ltm3_H0": 0.2446425,
+      "P_ltm3_H1": 0.0078516,
+      "med_d2_H0": 4.163054146482412,
+      "med_d2_H1": 14.907473355948621,
+      "mc_err": {
+       "c0": 0.0008577477718547552,
+       "c1": 0.00198913193643961,
+       "power": 0.00012583361589371689,
+       "P_lt_c1_H0": 0.0005634264706044393,
+       "inconclusive_H0": 0.0005634264706044443,
+       "inconclusive_H1": 0.00012583361589372187,
+       "P_gt3_H0": 2.3305721758114854e-05,
+       "P_gt3_H1": 0.00017088264003890547,
+       "P_ltm3_H0": 0.00018654664296094986,
+       "P_ltm3_H1": 2.5121128778602164e-05,
+       "med_d2_H0": 0.0008546240879051707,
+       "med_d2_H1": 0.0031101905604889375
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -3.786197270938463,
+        -2.1604794079701968,
+        0.7559126693318887
+       ],
+       "H1": [
+        -1.611545000802872,
+        3.2102183887767706,
+        10.584394009262901
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        0.9099916823121088,
+        4.163054146482412,
+        9.997632328832882
+       ],
+       "H1": [
+        5.261384823520927,
+        14.907473355948621,
+        29.658832218039713
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        0,
+        1,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        0,
+        1,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 6.841749389252527e-15,
+      "max_abs_diff_Sigma_absolute_units": 2.7929047963226594e-16,
+      "diff_hp": {
+       "c0": -6.583622536027178e-14,
+       "c1": -2.3092638912203256e-14,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": -7.549516567451064e-14,
+       "med_d2_H1": 5.755396159656812e-13
+      },
+      "max_abs_diff_hp": 5.755396159656812e-13
+     }
+    },
+    "rho2_0.72": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.0041687905464
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.1687905464e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.0016211963236000002
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.6211963236000003e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0011672613529920012
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1672613529920012e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.01568895141448274,
+          0.13714934680951724
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3714934680951724e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.006101258883409953,
+          0.05333585709259005
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.333585709259005e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004392906396055167,
+          0.03840181710666485
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.840181710666485e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.7200000000000001
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.018572031601719365,
+          0.08499596678228064
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -8.499596678228065e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.007222456734001977,
+          0.03305398708199803
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.3053987081998035e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0052001688484814195,
+          0.023798870699038584
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3798870699038584e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.014359431818019564,
+          0.033586570149980434
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.3586570149980435e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.005584223484785385,
+          0.013061443947214615
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3061443947214615e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004020640909045475,
+          0.00940423964199452
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.40423964199452e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.7200000000000001
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.027303659211554025,
+          0.08484341493244597
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -8.484341493244598e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010618089693382125,
+          0.032994661362617875
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.2994661362617874e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.007645024579235133,
+          0.02375615618108487
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.375615618108487e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.12596258428730733,
+          0.4870140741126927
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.870140741126927e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.04898544944506396,
+          0.18939436215493605
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.8939436215493606e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.03526952360044602,
+          0.13636394075155395
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3636394075155395e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.005948987296168491,
+          0.2049385795518315
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.049385795518315e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.00231349505962108,
+          0.07969833649237895
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.969833649237896e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0016657164429271767,
+          0.05738280227451284
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.7382802274512845e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.56032391786617,
+      20.090651218379634
+     ],
+     "V3k_fractional": [
+      [
+       8.411353036921964e-05,
+       -4.4252492106267644e-05
+      ],
+      [
+       -4.4252492106267644e-05,
+       0.00020093659169611767
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.008843080491302446,
+        -0.022890751689924486
+       ],
+       "Sigma": [
+        [
+         2.2867572443593748e-05,
+         -1.2727324934993394e-05
+        ],
+        [
+         -1.2727324934993394e-05,
+         5.609211099582299e-05
+        ]
+       ],
+       "linearity_check_max_abs": 2.0816681711721685e-16,
+       "E_d2": 5.74775148614136
+      },
+      "H1": {
+       "a": [
+        -0.01193787581453671,
+        -0.03162177398570607
+       ],
+       "Sigma": [
+        [
+         3.141228539830147e-05,
+         -1.7848409638300412e-05
+        ],
+        [
+         -1.7848409638300412e-05,
+         7.781876566453159e-05
+        ]
+       ],
+       "linearity_check_max_abs": 1.734723475976807e-16,
+       "E_d2": 10.535386096290383
+      }
+     },
+     "hp": {
+      "c0": 1.1971244585272416,
+      "c1": -1.470665345255488,
+      "c1_lt_c0": true,
+      "power": 0.4997001,
+      "P_lt_c1_H0": 0.3899739,
+      "inconclusive_H0": 0.5600261,
+      "inconclusive_H1": 0.4502999,
+      "P_gt3_H0": 0.003911,
+      "P_gt3_H1": 0.1934835,
+      "P_ltm3_H0": 0.0240022,
+      "P_ltm3_H1": 0.0009743,
+      "med_d2_H0": 5.480318992241525,
+      "med_d2_H1": 10.163783264106353,
+      "mc_err": {
+       "c0": 0.0011640551411601177,
+       "c1": 0.0008243727504686276,
+       "power": 0.00027148824611348654,
+       "P_lt_c1_H0": 0.00021943509290904044,
+       "inconclusive_H0": 0.0002194350929090395,
+       "inconclusive_H1": 0.0002714882461134889,
+       "P_gt3_H0": 2.3564096983900464e-05,
+       "P_gt3_H1": 0.0001260595317917493,
+       "P_ltm3_H0": 6.94188254966428e-05,
+       "P_ltm3_H1": 1.1326517558367184e-05,
+       "med_d2_H0": 0.0011919004205190114,
+       "med_d2_H1": 0.0012813701046253511
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -2.761009126688114,
+        -1.145260920264251,
+        1.1971244585272416
+       ],
+       "H1": [
+        -1.470665345255488,
+        1.1957073756154992,
+        4.862732387619284
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        2.2474174956850708,
+        5.480318992241525,
+        10.166549072157574
+       ],
+       "H1": [
+        4.829270772664634,
+        10.163783264106353,
+        17.499723903590088
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        0,
+        2,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        0,
+        2,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 7.521760991835436e-15,
+      "max_abs_diff_Sigma_absolute_units": 1.6219664500383146e-16,
+      "diff_hp": {
+       "c0": -4.3298697960381105e-14,
+       "c1": -1.021405182655144e-14,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": -3.4638958368304884e-14,
+       "med_d2_H1": 3.055333763768431e-13
+      },
+      "max_abs_diff_hp": 3.055333763768431e-13
+     }
+    }
+   }
+  },
+  "Pantheon+": {
+   "cases": {
+    "rho2_0.6": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.0034739921220000003
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.473992122e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.002315994748
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.315994748e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0013895968488000007
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3895968488000006e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.013074126178735617,
+          0.11429112234126437
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1429112234126437e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.008716084119157077,
+          0.07619408156084292
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.619408156084293e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.005229650471494245,
+          0.045716448936505755
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.571644893650576e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6000000000000001
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.015476693001432805,
+          0.07082997231856719
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.0829972318567194e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010317795334288539,
+          0.04721998154571147
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.721998154571147e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.006190677200573122,
+          0.028331988927426877
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.833198892742688e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.011966193181682969,
+          0.027988808458317027
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.7988808458317028e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.007977462121121982,
+          0.01865920563887802
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.8659205638878024e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004786477272673187,
+          0.011195523383326812
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1195523383326812e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.022753049342961688,
+          0.07070284577703831
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.070284577703831e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.015168699561974464,
+          0.04713523051802555
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.7135230518025554e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.009101219737184679,
+          0.028281138310815322
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.8281138310815324e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.10496882023942276,
+          0.4058450617605772
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.058450617605772e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.06997921349294851,
+          0.27056337450705154
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.7056337450705154e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.04198752809576908,
+          0.1623380247042309
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.623380247042309e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.004957489413473742,
+          0.17078214962652627
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.7078214962652628e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.0033049929423158283,
+          0.11385476641768418
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1385476641768417e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0019829957653894966,
+          0.0683128598506105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.831285985061051e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.6000000000000001
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.57772919238754,
+      20.100385866271278
+     ],
+     "V3k_fractional": [
+      [
+       7.01118042562399e-05,
+       -3.675457115912324e-05
+      ],
+      [
+       -3.675457115912324e-05,
+       0.0001673181185724041
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.008090145558451257,
+        -0.019423264637777257
+       ],
+       "Sigma": [
+        [
+         2.7297402414114966e-05,
+         -1.5068617341464553e-05
+        ],
+        [
+         -1.5068617341464553e-05,
+         6.674181942173206e-05
+        ]
+       ],
+       "linearity_check_max_abs": 2.1250362580715887e-16,
+       "E_d2": 5.500124924537145
+      },
+      "H1": {
+       "a": [
+        -0.01291624657246898,
+        -0.03209076221038104
+       ],
+       "Sigma": [
+        [
+         4.471732132853109e-05,
+         -2.54970338235214e-05
+        ],
+        [
+         -2.54970338235214e-05,
+         0.00011104229814550026
+        ]
+       ],
+       "linearity_check_max_abs": 2.0296264668928643e-16,
+       "E_d2": 13.870611378113779
+      }
+     },
+     "hp": {
+      "c0": 0.9999084662325582,
+      "c1": -1.5860821746032332,
+      "c1_lt_c0": true,
+      "power": 0.6801214,
+      "P_lt_c1_H0": 0.5576381,
+      "inconclusive_H0": 0.3923619,
+      "inconclusive_H1": 0.2698786,
+      "P_gt3_H0": 0.0052695,
+      "P_gt3_H1": 0.4019339,
+      "P_ltm3_H0": 0.1535306,
+      "P_ltm3_H1": 0.0051784,
+      "med_d2_H0": 5.115495963312236,
+      "med_d2_H1": 13.241393269030052,
+      "mc_err": {
+       "c0": 0.0013911204682747354,
+       "c1": 0.00059529102224177,
+       "power": 0.00020237477884140593,
+       "P_lt_c1_H0": 0.00018713901250140734,
+       "inconclusive_H0": 0.00018713901250140227,
+       "inconclusive_H1": 0.00020237477884141414,
+       "P_gt3_H0": 1.1178600588227097e-05,
+       "P_gt3_H1": 0.00020174595961808237,
+       "P_ltm3_H0": 0.00012475212757036844,
+       "P_ltm3_H1": 1.7812729530684887e-05,
+       "med_d2_H0": 0.0014550584264729264,
+       "med_d2_H1": 0.0018349075670322853
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -3.543427857862008,
+        -1.790237582913174,
+        0.9999084662325582
+       ],
+       "H1": [
+        -1.5860821746032332,
+        2.2710751920205476,
+        7.825945138290745
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        1.6069595023492966,
+        5.115495963312236,
+        10.698235802869817
+       ],
+       "H1": [
+        5.524009457190258,
+        13.241393269030052,
+        24.35442284893897
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        1,
+        0,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        1,
+        0,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 8.881784197001252e-15,
+      "max_abs_diff_Sigma_absolute_units": 2.0469737016526324e-16,
+      "diff_hp": {
+       "c0": 8.004708007547379e-14,
+       "c1": 1.3322676295501878e-15,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": 9.947598300641403e-14,
+       "med_d2_H1": -3.907985046680551e-13
+      },
+      "max_abs_diff_hp": 3.907985046680551e-13
+     }
+    },
+    "rho2_0.5": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.002894993435
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.894993435e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.002894993435
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.894993435e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0014474967175000003
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4474967175000003e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.010895105148946344,
+          0.09524260195105365
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.524260195105366e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010895105148946344,
+          0.09524260195105365
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.524260195105366e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.005447552574473172,
+          0.047621300975526824
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.762130097552683e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.012897244167860672,
+          0.05902497693213933
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.902497693213933e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.012897244167860672,
+          0.05902497693213933
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.902497693213933e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.006448622083930334,
+          0.029512488466069665
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.9512488466069666e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.009971827651402476,
+          0.023324007048597523
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3324007048597524e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.009971827651402476,
+          0.023324007048597523
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3324007048597524e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0049859138257012355,
+          0.011662003524298763
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1662003524298764e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.01896087445246808,
+          0.058919038147531924
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.8919038147531925e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.01896087445246808,
+          0.058919038147531924
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.8919038147531925e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.009480437226234041,
+          0.029459519073765962
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.9459519073765962e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.08747401686618564,
+          0.3382042181338144
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.382042181338144e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.08747401686618564,
+          0.3382042181338144
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.382042181338144e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.043737008433092806,
+          0.1691021090669072
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.691021090669072e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.004131241177894785,
+          0.14231845802210524
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4231845802210525e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.004131241177894785,
+          0.14231845802210524
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.4231845802210525e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.002065620588947392,
+          0.07115922901105262
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.115922901105263e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.5
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.57772919238754,
+      20.100385866271278
+     ],
+     "V3k_fractional": [
+      [
+       5.874669569486147e-05,
+       -3.047203761096608e-05
+      ],
+      [
+       -3.047203761096608e-05,
+       0.00013951224645085557
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.006831455410044281,
+        -0.016230632890766396
+       ],
+       "Sigma": [
+        [
+         2.8684722123908784e-05,
+         -1.557364039752457e-05
+        ],
+        [
+         -1.557364039752457e-05,
+         6.958495337902554e-05
+        ]
+       ],
+       "linearity_check_max_abs": 2.0383000842727483e-16,
+       "E_d2": 4.937812545835219
+      },
+      "H1": {
+       "a": [
+        -0.012916246351699127,
+        -0.032090762101428014
+       ],
+       "Sigma": [
+        [
+         5.608242988990945e-05,
+         -3.177956737167886e-05
+        ],
+        [
+         -3.177956737167886e-05,
+         0.00013884817026704713
+        ]
+       ],
+       "linearity_check_max_abs": 2.0122792321330962e-16,
+       "E_d2": 16.935803808978047
+      }
+     },
+     "hp": {
+      "c0": 0.7060968578509922,
+      "c1": -1.5726179887049305,
+      "c1_lt_c0": true,
+      "power": 0.7878012,
+      "P_lt_c1_H0": 0.6806133,
+      "inconclusive_H0": 0.2693867,
+      "inconclusive_H1": 0.1621988,
+      "P_gt3_H0": 0.0048915,
+      "P_gt3_H1": 0.5495771,
+      "P_ltm3_H0": 0.2943385,
+      "P_ltm3_H1": 0.0087873,
+      "med_d2_H0": 4.459919661797304,
+      "med_d2_H1": 15.997761145023446,
+      "mc_err": {
+       "c0": 0.0013508838047379106,
+       "c1": 0.0013942293285190504,
+       "power": 0.00017289633695753587,
+       "P_lt_c1_H0": 0.00036075621346770754,
+       "inconclusive_H0": 0.00036075621346770337,
+       "inconclusive_H1": 0.00017289633695753424,
+       "P_gt3_H0": 2.7525846439705078e-05,
+       "P_gt3_H1": 0.00014815640759383394,
+       "P_ltm3_H0": 0.00012572573766381746,
+       "P_ltm3_H1": 2.7132616698152957e-05,
+       "med_d2_H0": 0.0009193380056122915,
+       "med_d2_H1": 0.0026986140796768855
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -4.005743773390061,
+        -2.2962633064046707,
+        0.7060968578509922
+       ],
+       "H1": [
+        -1.5726179887049305,
+        3.4704522477212363,
+        11.05719040665788
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        1.0386743244976344,
+        4.459919661797304,
+        10.467234519551702
+       ],
+       "H1": [
+        5.907992426468653,
+        15.997761145023446,
+        31.17529906857145
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        1,
+        1,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        1,
+        1,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 8.382183835919932e-15,
+      "max_abs_diff_Sigma_absolute_units": 2.654126918244515e-16,
+      "diff_hp": {
+       "c0": 6.59472476627343e-14,
+       "c1": 1.6209256159527285e-14,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": 1.4033219031261979e-13,
+       "med_d2_H1": -5.631051180898794e-13
+      },
+      "max_abs_diff_hp": 5.631051180898794e-13
+     }
+    },
+    "rho2_0.72": {
+     "nesting": {
+      "bins": {
+       "BGS": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00578998687
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.78998687e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.0041687905464
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.1687905464e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.0016211963236000002
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.6211963236000003e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0011672613529920012
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1672613529920012e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "LRG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.021790210297892687,
+          0.1904852039021073
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.904852039021073e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.01568895141448274,
+          0.13714934680951724
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3714934680951724e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.006101258883409953,
+          0.05333585709259005
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.333585709259005e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004392906396055167,
+          0.03840181710666485
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.840181710666485e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.7200000000000001
+       },
+       "LRG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.025794488335721344,
+          0.11804995386427866
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1804995386427867e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.018572031601719365,
+          0.08499596678228064
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -8.499596678228065e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.007222456734001977,
+          0.03305398708199803
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.3053987081998035e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0052001688484814195,
+          0.023798870699038584
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.3798870699038584e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "LRG3+ELG1": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.019943655302804952,
+          0.046648014097195045
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.664801409719505e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.014359431818019564,
+          0.033586570149980434
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.3586570149980435e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.005584223484785385,
+          0.013061443947214615
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3061443947214615e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.004020640909045475,
+          0.00940423964199452
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -9.40423964199452e-13,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.7200000000000001
+       },
+       "ELG2": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.03792174890493616,
+          0.11783807629506385
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.1783807629506385e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.027303659211554025,
+          0.08484341493244597
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -8.484341493244598e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.010618089693382125,
+          0.032994661362617875
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -3.2994661362617874e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.007645024579235133,
+          0.02375615618108487
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.375615618108487e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "QSO": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.17494803373237128,
+          0.6764084362676288
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -6.764084362676288e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.12596258428730733,
+          0.4870140741126927
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -4.870140741126927e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.04898544944506396,
+          0.18939436215493605
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.8939436215493606e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.03526952360044602,
+          0.13636394075155395
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -1.3636394075155395e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       },
+       "Lya": {
+        "C2": {
+         "matrix": "C2",
+         "eigenvalues": [
+          0.00826248235578957,
+          0.2846369160442105
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.846369160442105e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C3": {
+         "matrix": "C3",
+         "eigenvalues": [
+          0.005948987296168491,
+          0.2049385795518315
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -2.049385795518315e-11,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true,
+         "cholesky_ok": true
+        },
+        "C2_minus_C3": {
+         "matrix": "C2 - C3",
+         "eigenvalues": [
+          0.00231349505962108,
+          0.07969833649237895
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -7.969833649237896e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "Cov_e": {
+         "matrix": "Cov(e) = C3 - C3 C2^-1 C3",
+         "eigenvalues": [
+          0.0016657164429271767,
+          0.05738280227451284
+         ],
+         "max_abs_asym": 0.0,
+         "tolerance_neg": -5.7382802274512845e-12,
+         "real_negative": [],
+         "rounding_negative": [],
+         "ok": true
+        },
+        "rho2_eff_trace": 0.72
+       }
+      },
+      "status": "ok",
+      "broken": []
+     },
+     "z3": [
+      0.295,
+      0.51,
+      0.51,
+      0.706,
+      0.706,
+      0.934,
+      0.934,
+      1.321,
+      1.321,
+      1.484,
+      1.484,
+      2.33,
+      2.33
+     ],
+     "z_shifts": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m2_bao3_LRG2": [
+      17.57772919238754,
+      20.100385866271278
+     ],
+     "V3k_fractional": [
+      [
+       8.363880789914525e-05,
+       -4.434847786635047e-05
+      ],
+      [
+       -4.434847786635047e-05,
+       0.00020065806867541823
+      ]
+     ],
+     "exact_fractional": {
+      "H0": {
+       "a": [
+        -0.009569370545323998,
+        -0.023239015488558758
+       ],
+       "Sigma": [
+        [
+         2.2714609852018287e-05,
+         -1.2763534757959473e-05
+        ],
+        [
+         -1.2763534757959473e-05,
+         5.600977335028198e-05
+        ]
+       ],
+       "linearity_check_max_abs": 1.8041124150158794e-16,
+       "E_d2": 6.167594710537089
+      },
+      "H1": {
+       "a": [
+        -0.012916246809726127,
+        -0.0320907623274834
+       ],
+       "Sigma": [
+        [
+         3.11903176856263e-05,
+         -1.790312711629367e-05
+        ],
+        [
+         -1.790312711629367e-05,
+         7.770234804248408e-05
+        ]
+       ],
+       "linearity_check_max_abs": 1.734723475976807e-16,
+       "E_d2": 11.308176597990576
+      }
+     },
+     "hp": {
+      "c0": 1.1968480600398401,
+      "c1": -1.482996021274126,
+      "c1_lt_c0": true,
+      "power": 0.5208026,
+      "P_lt_c1_H0": 0.4148934,
+      "inconclusive_H0": 0.5351066,
+      "inconclusive_H1": 0.4291974,
+      "P_gt3_H0": 0.0042293,
+      "P_gt3_H1": 0.2137421,
+      "P_ltm3_H0": 0.0393888,
+      "P_ltm3_H1": 0.0015039,
+      "med_d2_H0": 5.89904923676244,
+      "med_d2_H1": 10.942779216205093,
+      "mc_err": {
+       "c0": 0.000557744492680703,
+       "c1": 0.000953621402976283,
+       "power": 0.00018872608310577024,
+       "P_lt_c1_H0": 0.0003225189555152793,
+       "inconclusive_H0": 0.0003225189555152812,
+       "inconclusive_H1": 0.0001887260831057655,
+       "P_gt3_H0": 2.613428994847789e-05,
+       "P_gt3_H1": 6.459350672560662e-05,
+       "P_ltm3_H0": 8.138383677911069e-05,
+       "P_ltm3_H1": 1.0615973289759582e-05,
+       "med_d2_H0": 0.0009222012798423253,
+       "med_d2_H1": 0.0014015420789414124
+      },
+      "Lambda_pct_5_50_95": {
+       "H0": [
+        -2.9101544231885774,
+        -1.2205507629806398,
+        1.1968480600398401
+       ],
+       "H1": [
+        -1.482996021274126,
+        1.300272205266904,
+        5.081855582410142
+       ]
+      },
+      "d2_pct_5_50_95": {
+       "H0": [
+        2.5179878356101026,
+        5.89904923676244,
+        10.735837632402005
+       ],
+       "H1": [
+        5.373880807476184,
+        10.942779216205093,
+        18.508609309226994
+       ]
+      },
+      "N": 10000000,
+      "n_blocks": 10,
+      "seeds": {
+       "H0": [
+        20261114,
+        1,
+        2,
+        0,
+        7
+       ],
+       "H1": [
+        20261114,
+        1,
+        2,
+        1,
+        7
+       ]
+      }
+     },
+     "vs_v3": {
+      "max_abs_diff_a_absolute_units": 9.381384558082573e-15,
+      "max_abs_diff_Sigma_absolute_units": 1.4224732503009818e-16,
+      "diff_hp": {
+       "c0": -1.3322676295501878e-15,
+       "c1": -2.4202861936828413e-14,
+       "power": 0.0,
+       "P_lt_c1_H0": 0.0,
+       "med_d2_H0": 1.021405182655144e-13,
+       "med_d2_H1": -3.090860900556436e-13
+      },
+      "max_abs_diff_hp": 3.090860900556436e-13
+     }
+    }
+   }
+  }
+ },
+ "P24": {
+  "dz_-0.01": {
+   "z_LRG2": 0.696,
+   "seeds": {
+    "H0": [
+     20261114,
+     0,
+     600,
+     0,
+     7
+    ],
+    "H1": [
+     20261114,
+     0,
+     600,
+     1,
+     7
+    ]
+   },
+   "c0": 1.0274536744941278,
+   "c1": -1.5922595928410195,
+   "power": 0.6573602,
+   "mc_err": {
+    "c0": 0.001692279415289703,
+    "c1": 0.0006941889164656799,
+    "power": 0.00034676175618939204
+   },
+   "d_c0": 8.0532455658755e-05,
+   "d_c1": 0.002103778203764506,
+   "d_power": -0.00016090000000001936,
+   "med_d2_H0": 4.7628487399250385,
+   "med_d2_H1": 12.318534073384644,
+   "m2_bao3_LRG2": [
+    17.35880959529435,
+    20.212304482948394
+   ],
+   "a_fractional": {
+    "H0": [
+     -0.007549352784526299,
+     -0.019039142037258882
+    ],
+    "H1": [
+     -0.011937875890298323,
+     -0.03162177401859193
+    ]
+   }
+  },
+  "dz_-0.005": {
+   "z_LRG2": 0.701,
+   "seeds": {
+    "H0": [
+     20261114,
+     0,
+     601,
+     0,
+     7
+    ],
+    "H1": [
+     20261114,
+     0,
+     601,
+     1,
+     7
+    ]
+   },
+   "c0": 1.0259222086811535,
+   "c1": -1.5937335436472295,
+   "power": 0.6579761,
+   "mc_err": {
+    "c0": 0.001257421285192438,
+    "c1": 0.000983031990444291,
+    "power": 0.00025122823620497733
+   },
+   "d_c0": -0.0014509333573156091,
+   "d_c1": 0.000629827397554461,
+   "d_power": 0.0004549999999999832,
+   "med_d2_H0": 4.7649242654648765,
+   "med_d2_H1": 12.32610119816696,
+   "m2_bao3_LRG2": [
+    17.45971853367917,
+    20.151381301545687
+   ],
+   "a_fractional": {
+    "H0": [
+     -0.007511504143454287,
+     -0.019083371184596354
+    ],
+    "H1": [
+     -0.0119378758920816,
+     -0.03162177402176782
+    ]
+   }
+  },
+  "dz_+0.005": {
+   "z_LRG2": 0.711,
+   "seeds": {
+    "H0": [
+     20261114,
+     0,
+     602,
+     0,
+     7
+    ],
+    "H1": [
+     20261114,
+     0,
+     602,
+     1,
+     7
+    ]
+   },
+   "c0": 1.027518324330066,
+   "c1": -1.5940743764018732,
+   "power": 0.6577561,
+   "mc_err": {
+    "c0": 0.0010669167438460984,
+    "c1": 0.0010478011187784848,
+    "power": 0.00020725962248134802
+   },
+   "d_c0": 0.00014518229159699025,
+   "d_c1": 0.00028899464291076704,
+   "d_power": 0.00023499999999998522,
+   "med_d2_H0": 4.76272992006567,
+   "med_d2_H1": 12.325987462788405,
+   "m2_bao3_LRG2": [
+    17.660625184447742,
+    20.030114574463724
+   ],
+   "a_fractional": {
+    "H0": [
+     -0.007437263695735654,
+     -0.019172488253495067
+    ],
+    "H1": [
+     -0.011937875895624478,
+     -0.03162177402806066
+    ]
+   }
+  },
+  "dz_+0.01": {
+   "z_LRG2": 0.716,
+   "seeds": {
+    "H0": [
+     20261114,
+     0,
+     603,
+     0,
+     7
+    ],
+    "H1": [
+     20261114,
+     0,
+     603,
+     1,
+     7
+    ]
+   },
+   "c0": 1.0278116158997048,
+   "c1": -1.5925012533706537,
+   "power": 0.6580986,
+   "mc_err": {
+    "c0": 0.0016679680105156532,
+    "c1": 0.0008216642382521335,
+    "power": 0.00025190303249023597
+   },
+   "d_c0": 0.00043847386123574417,
+   "d_c1": 0.001862117674130248,
+   "d_power": 0.0005775000000000086,
+   "med_d2_H0": 4.7639379949116165,
+   "med_d2_H1": 12.329997913737936,
+   "m2_bao3_LRG2": [
+    17.76062521916402,
+    19.969771688766155
+   ],
+   "a_fractional": {
+    "H0": [
+     -0.007400854014580422,
+     -0.019217374759307727
+    ],
+    "H1": [
+     -0.011937875897383744,
+     -0.0316217740311779
+    ]
+   }
+  },
+  "dz_0": {
+   "c0": 1.027373142038469,
+   "c1": -1.594363371044784,
+   "power": 0.6575211,
+   "mc_err": {
+    "c0": 0.0013007121335214989,
+    "c1": 0.0012306774559590632,
+    "power": 0.00024632873473380177
+   }
+  }
+ },
+ "predictions": {
+  "P24": {
+   "statement": "Desplazar el z_eff de LRG2 en \u00b10.01 (recalculando el modelo y el jacobiano en el nuevo z) cambia c0 y c1 menos de 0.05 y la potencia del caso principal menos de 0.02.",
+   "max_abs_d_c0": 0.0014509333573156091,
+   "max_abs_d_c1": 0.002103778203764506,
+   "max_abs_d_power": 0.0005775000000000086,
+   "holds": true
+  }
+ },
+ "runtime_s": 38.94323754310608
+}
