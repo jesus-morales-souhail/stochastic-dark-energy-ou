@@ -1,0 +1,22 @@
+{
+ "n_sn": 1580,
+ "p0": {
+  "h": 0.6811798073031549,
+  "omega_m": 0.14092328746244953
+ },
+ "max_abs_dmu_mag": 5.231056977983428e-05,
+ "median_abs_dmu_mag": 9.739509733153184e-07,
+ "p95_abs_dmu_mag": 2.673597801097216e-05,
+ "worst_case": {
+  "zHD": 0.01096,
+  "dmu_mag": 5.231056977983428e-05,
+  "u_offset_from_node_in_du": 0.45114991958013456
+ },
+ "trapezoid_grid_vs_quad_at_three_BAO_nodes_rel": [
+  -2.9557598824059284e-07,
+  -3.2437080366154447e-07,
+  -3.1862939753324326e-07
+ ],
+ "P10_max_lt_1e-3_mag": true,
+ "definition": "mu_interp - mu_direct, M dropped; direct = quad of (1+z)/E(u) in u, rel tol 1e-12"
+}

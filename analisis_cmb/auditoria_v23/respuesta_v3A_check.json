@@ -1,0 +1,10 @@
+{
+ "max_abs_diff_vs_reproducer_Anpy_all_rows": 8.150441210830195e-09,
+ "max_abs_diff_vs_reproducer_Anpy_SN_rows": 7.883051988955003e-10,
+ "max_rel_err_vs_numerical_jacobian_converged_nodes": 5.529487696664318e-07,
+ "n_converged_nodes": 44,
+ "rows_sum_max_abs": 1.3322676295501878e-15,
+ "max_abs_diff_rows_0_15_vs_old_build_A": 1.7763568394002505e-15,
+ "max_abs_diff_SN_rows_vs_old_build_A": 0.004089788880681858,
+ "passes": true
+}
