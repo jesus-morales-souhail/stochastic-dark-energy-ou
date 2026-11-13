@@ -1,0 +1,14 @@
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+sinSN rho_x=0.0: checks ok; P(p<0.05|H1)=0.3310 P(p<0.05|H0)=0.0523; d2 median H0 1.41 H1 3.98
+sinSN rho_x=0.3: checks ok; P(p<0.05|H1)=0.2703 P(p<0.05|H0)=0.0961; d2 median H0 1.88 H1 3.57
+sinSN rho_x=0.5: checks ok; P(p<0.05|H1)=0.2228 P(p<0.05|H0)=0.1624; d2 median H0 2.76 H1 3.34
+Pantheon+ rho_x=0.0: checks ok; P(p<0.05|H1)=0.3449 P(p<0.05|H0)=0.0528; d2 median H0 1.40 H1 4.14
+Pantheon+ rho_x=0.3: checks ok; P(p<0.05|H1)=0.2910 P(p<0.05|H0)=0.0995; d2 median H0 1.93 H1 3.77
+Pantheon+ rho_x=0.5: checks ok; P(p<0.05|H1)=0.2412 P(p<0.05|H0)=0.1783; d2 median H0 2.92 H1 3.52
+{
+ "statement": "Bajo H1 (desv\u00edo de LRG2 real, con el tama\u00f1o y la incertidumbre estimados en DESI), la probabilidad de que eBOSS d\u00e9 p local < 0.05 frente a \u039bCDM es < 0.4. (Se eval\u00faa con \u03c1_x = 0; los dem\u00e1s \u03c1_x son sensibilidad, no nuevas predicciones.)",
+ "power_sinSN_rho0": 0.33101,
+ "power_Pantheon+_rho0": 0.34493,
+ "holds": true
+}
+escrito eboss_lrg_potencia.json
