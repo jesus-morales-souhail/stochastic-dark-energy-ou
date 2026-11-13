@@ -1,0 +1,197 @@
+--- calibrar falso
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "broken": [],
+ "rho2_eff_trace": {
+  "BGS": 0.6,
+  "LRG1": 0.6000000000000001,
+  "LRG2": 0.6,
+  "LRG3+ELG1": 0.6,
+  "ELG2": 0.6,
+  "QSO": 0.6,
+  "Lya": 0.6000000000000001
+ },
+ "script_check": {
+  "registered": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "current": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "match": true
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025964421094797,
+   "c1": -1.5921491815282571,
+   "c1_lt_c0": true,
+   "power": 0.6580625
+  },
+  "Pantheon+": {
+   "c0": 0.998505799391549,
+   "c1": -1.58537183834617,
+   "c1_lt_c0": true,
+   "power": 0.6804453
+  }
+ },
+ "sha256": "45ba94fb4a8aeaad1599a9f2ba2ff12afb280f5959dee12c3593d1992a284c7c"
+}
+--- calibrar falso_direccion
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "broken": [
+  "LRG2: C2_minus_C3, Cov_e",
+  "rho2_LRG2,eff = 1.685 fuera de [0.4, 0.8]"
+ ],
+ "rho2_eff_trace": {
+  "BGS": 0.6,
+  "LRG1": 0.6000000000000001,
+  "LRG2": 1.684900290989484,
+  "LRG3+ELG1": 0.6,
+  "ELG2": 0.6,
+  "QSO": 0.6,
+  "Lya": 0.6000000000000001
+ },
+ "script_check": {
+  "registered": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "current": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "match": true
+ },
+ "calibracion": {},
+ "sha256": "c644c9c2618e6904e60a8ac48a3e070deb19c326a2a260a80a8ef6fdc62578b9"
+}
+--- calibrar falso_corr
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "broken": [
+  "correlaci\u00f3n entre bins |r| m\u00e1x 1.00e-03 \u2265 1e-06"
+ ],
+ "rho2_eff_trace": {
+  "BGS": 0.6,
+  "LRG1": 0.6000000000000001,
+  "LRG2": 0.6,
+  "LRG3+ELG1": 0.6,
+  "ELG2": 0.6,
+  "QSO": 0.6,
+  "Lya": 0.6000000000000001
+ },
+ "script_check": {
+  "registered": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "current": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "match": true
+ },
+ "calibracion": {},
+ "sha256": "2afb53623433b9d3a925d4a9d3cddc175003fafef5474b9b77649ada80939d1b"
+}
+--- calibrar falso_corr_tol
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "broken": [],
+ "rho2_eff_trace": {
+  "BGS": 0.6,
+  "LRG1": 0.6000000000000001,
+  "LRG2": 0.6,
+  "LRG3+ELG1": 0.6,
+  "ELG2": 0.6,
+  "QSO": 0.6,
+  "Lya": 0.6000000000000001
+ },
+ "script_check": {
+  "registered": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "current": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "match": true
+ },
+ "calibracion": {
+  "sinSN": {
+   "c0": 1.025964421094797,
+   "c1": -1.5921491815282571,
+   "c1_lt_c0": true,
+   "power": 0.6580625
+  },
+  "Pantheon+": {
+   "c0": 0.998505799391549,
+   "c1": -1.58537183834617,
+   "c1_lt_c0": true,
+   "power": 0.6804453
+  }
+ },
+ "sha256": "c9da7af9b765db764b98b429217c203722ac497c0d7d667a5d17d0b444ce9ff7"
+}
+--- evaluar falso
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "combos": {
+  "sinSN": {
+   "r3": [
+    -0.18231990059463143,
+    -0.6198249263992075
+   ],
+   "d2_DR3": 10.379441530691315,
+   "Lambda": 1.1269403699731275,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "r3": [
+    -0.19568784389392135,
+    -0.6273041942960802
+   ],
+   "d2_DR3": 11.03264239104986,
+   "Lambda": 1.1692048844442455,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- evaluar falso_direccion
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "result_principal": "modelo roto",
+ "combos": {}
+}
+--- evaluar falso_corr
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "modelo roto",
+ "result_principal": "modelo roto",
+ "combos": {}
+}
+--- evaluar falso_corr_tol
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+{
+ "status": "ok",
+ "result_principal": "favorece H1",
+ "result_secondary_Pantheon+": "favorece H1",
+ "combos": {
+  "sinSN": {
+   "r3": [
+    -0.18231990059463143,
+    -0.6198249263992075
+   ],
+   "d2_DR3": 10.379441530691315,
+   "Lambda": 1.1269403699731275,
+   "verdict": "favorece H1"
+  },
+  "Pantheon+": {
+   "r3": [
+    -0.19568784389392135,
+    -0.6273041942960802
+   ],
+   "d2_DR3": 11.03264239104986,
+   "Lambda": 1.1692048844442455,
+   "verdict": "favorece H1"
+  }
+ }
+}
+--- segunda evaluación falso (debe negarse)
+profile_sigma_x data: data/desi_dr2_local/dr2_data/dr2-bao-zenodo/figure6/DESI_DR2_alpha_DV_over_rs.txt cov_mode: full_gaussian_bao_projected_13x13
+Traceback (most recent call last):
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v3.py", line 487, in <module>
+    evaluar(Path(sys.argv[2]), Path(sys.argv[3]), sys.argv[4])
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ashpokemon/Proyectos/01_Fisica_y_Cosmologia/stochastic-dark-energy-ou/analisis_cmb/auditoria_v23/pronostico_dr3_lrg2_v3.py", line 417, in evaluar
+    assert not resp.exists(), f"ya existe {resp.name}: Λ se calcula una sola vez (control de coherencia; el compromiso es el orden de los commits públicos)"
+           ^^^^^^^^^^^^^^^^^
+AssertionError: ya existe pronostico_dr3_lrg2_v3_resultado_falso.json: Λ se calcula una sola vez (control de coherencia; el compromiso es el orden de los commits públicos)

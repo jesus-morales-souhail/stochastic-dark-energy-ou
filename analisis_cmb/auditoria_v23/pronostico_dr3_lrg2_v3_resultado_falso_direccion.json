@@ -1,0 +1,16 @@
+{
+ "mode": "evaluar",
+ "tag": "falso_direccion",
+ "calibration_sha256": "c644c9c2618e6904e60a8ac48a3e070deb19c326a2a260a80a8ef6fdc62578b9",
+ "values_file": "pronostico_dr3_lrg2_v3_falso_dr3_valores.json",
+ "values_sha256": "bd4ad2eebf5c7c7f75fd331f9d2547c1385202cb1222576ea2a63163b51333bd",
+ "script_check": {
+  "registered": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "current": "4625081d0b9ad3363c6f1d670b6c03c31e97ae3b7486a88a08e3291a9cd462d2",
+  "match": true
+ },
+ "status": "modelo roto",
+ "principal_combo": "sinSN",
+ "combos": {},
+ "result_principal": "modelo roto"
+}
